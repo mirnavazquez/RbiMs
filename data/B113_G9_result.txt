@@ -1,0 +1,329 @@
+# gene name                                                                       KO     thrshld  score   E-value KO definition
+#-------------------------------------------------------------------------------- ------ ------- ------ --------- ---------------------
+* B113_G9_Unknown-B113_Guay9_scaffold_06971_1_B113_G9_Idunnarchaeota.fna_1_2      K14656  112.07  159.9   1.9e-48 FAD synthetase [EC:2.7.7.2]
+* B113_G9_Unknown-B113_Guay9_scaffold_06971_1_B113_G9_Idunnarchaeota.fna_1_3      K07732   95.73  141.5   1.5e-42 riboflavin kinase, archaea type [EC:2.7.1.161]
+* B113_G9_Unknown-B113_Guay9_scaffold_06971_1_B113_G9_Idunnarchaeota.fna_1_6      K15449  185.77  405.4  2.4e-122 tRNA wybutosine-synthesizing protein 1 [EC:4.1.3.44]
+* B113_G9_Unknown-B113_Guay9_scaffold_06971_1_B113_G9_Idunnarchaeota.fna_1_7      K03433  193.97  197.3   1.7e-59 proteasome beta subunit [EC:3.4.25.1]
+* B113_G9_Unknown-B113_Guay9_scaffold_06971_1_B113_G9_Idunnarchaeota.fna_1_8      K06943  127.70  340.9  7.7e-103 nucleolar GTP-binding protein
+* B113_G9_Unknown-B113_Guay9_scaffold_06971_1_B113_G9_Idunnarchaeota.fna_1_9      K00952  103.97  241.8   3.5e-73 nicotinamide-nucleotide adenylyltransferase [EC:2.7.7.1]
+* B113_G9_Unknown-B113_Guay9_scaffold_06971_1_B113_G9_Idunnarchaeota.fna_1_10     K00830  415.80  417.5  3.9e-126 alanine-glyoxylate transaminase / serine-glyoxylate transaminase / serine-pyruvate transaminase [EC:2.6.1.44 2.6.1.45 2.6.1.51]
+* B113_G9_Unknown-B113_Guay9_scaffold_06971_1_B113_G9_Idunnarchaeota.fna_1_12     K09730   92.57  150.3   1.4e-45 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_06971_1_B113_G9_Idunnarchaeota.fna_1_13     K00096  176.20  392.8  1.2e-118 glycerol-1-phosphate dehydrogenase [NAD(P)+] [EC:1.1.1.261]
+* B113_G9_Unknown-B113_Guay9_scaffold_06971_1_B113_G9_Idunnarchaeota.fna_1_14     K03433  193.97  252.3   3.2e-76 proteasome beta subunit [EC:3.4.25.1]
+* B113_G9_Unknown-B113_Guay9_scaffold_17578_4_B113_G9_Idunnarchaeota.fna_4_3      K07725   73.67  168.7   6.2e-51 CRISPR-associated protein Csa3
+* B113_G9_Unknown-B113_Guay9_scaffold_17578_4_B113_G9_Idunnarchaeota.fna_4_6      K03926   35.07  124.3   3.1e-37 periplasmic divalent cation tolerance protein
+* B113_G9_Unknown-B113_Guay9_scaffold_17578_4_B113_G9_Idunnarchaeota.fna_4_8      K06983  235.87  262.9   1.4e-79 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_21389_5_B113_G9_Idunnarchaeota.fna_5_1      K02962   33.40   38.4   3.8e-11 small subunit ribosomal protein S17e
+* B113_G9_Unknown-B113_Guay9_scaffold_21389_5_B113_G9_Idunnarchaeota.fna_5_2      K23370  109.43  139.7   5.2e-42 L-serine kinase (ADP) [EC:2.7.1.226]
+* B113_G9_Unknown-B113_Guay9_scaffold_21389_5_B113_G9_Idunnarchaeota.fna_5_3      K07101  123.57  146.2   4.7e-44 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_21389_5_B113_G9_Idunnarchaeota.fna_5_3      K00769  111.20  114.9   1.4e-34 xanthine phosphoribosyltransferase [EC:2.4.2.22]
+* B113_G9_Unknown-B113_Guay9_scaffold_21389_5_B113_G9_Idunnarchaeota.fna_5_4      K09119   62.70   85.7   1.7e-25 KEOPS complex subunit Cgi121
+* B113_G9_Unknown-B113_Guay9_scaffold_21389_5_B113_G9_Idunnarchaeota.fna_5_5      K07566   98.77  162.7   7.1e-49 L-threonylcarbamoyladenylate synthase [EC:2.7.7.87]
+* B113_G9_Unknown-B113_Guay9_scaffold_21389_5_B113_G9_Idunnarchaeota.fna_5_6      K02003  300.27  326.2   2.1e-98 putative ABC transport system ATP-binding protein
+* B113_G9_Unknown-B113_Guay9_scaffold_21389_5_B113_G9_Idunnarchaeota.fna_5_8      K06174  241.83  794.5  6.9e-240 ATP-binding cassette, sub-family E, member 1
+* B113_G9_Unknown-B113_Guay9_scaffold_21955_6_B113_G9_Idunnarchaeota.fna_6_1      K00772  299.17  336.2  8.9e-102 5'-methylthioadenosine phosphorylase [EC:2.4.2.28]
+* B113_G9_Unknown-B113_Guay9_scaffold_21955_6_B113_G9_Idunnarchaeota.fna_6_3      K01889  105.17  284.4     1e-85 phenylalanyl-tRNA synthetase alpha chain [EC:6.1.1.20]
+* B113_G9_Unknown-B113_Guay9_scaffold_21955_6_B113_G9_Idunnarchaeota.fna_6_4      K01890  110.10  363.9  9.2e-110 phenylalanyl-tRNA synthetase beta chain [EC:6.1.1.20]
+* B113_G9_Unknown-B113_Guay9_scaffold_22812_7_B113_G9_Idunnarchaeota.fna_7_4      K02923   29.63   60.3   1.3e-17 large subunit ribosomal protein L38e
+* B113_G9_Unknown-B113_Guay9_scaffold_22812_7_B113_G9_Idunnarchaeota.fna_7_6      K01902  366.93  503.7  2.1e-152 succinyl-CoA synthetase alpha subunit [EC:6.2.1.5]
+* B113_G9_Unknown-B113_Guay9_scaffold_22812_7_B113_G9_Idunnarchaeota.fna_7_7      K01903  487.73  508.7  4.7e-154 succinyl-CoA synthetase beta subunit [EC:6.2.1.5]
+* B113_G9_Unknown-B113_Guay9_scaffold_22948_8_B113_G9_Idunnarchaeota.fna_8_1      K10725  188.70  387.1  5.1e-117 archaeal cell division control protein 6
+* B113_G9_Unknown-B113_Guay9_scaffold_22948_8_B113_G9_Idunnarchaeota.fna_8_3      K02323  344.60  438.1  1.9e-132 DNA polymerase II small subunit [EC:2.7.7.7]
+* B113_G9_Unknown-B113_Guay9_scaffold_22948_8_B113_G9_Idunnarchaeota.fna_8_4      K00757  120.07  174.8   1.7e-52 uridine phosphorylase [EC:2.4.2.3]
+* B113_G9_Unknown-B113_Guay9_scaffold_22948_8_B113_G9_Idunnarchaeota.fna_8_5      K09721   79.33   92.0   8.2e-28 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_22948_8_B113_G9_Idunnarchaeota.fna_8_6      K07143   60.97   72.8   1.2e-21 UPF0148 protein
+* B113_G9_Unknown-B113_Guay9_scaffold_22948_8_B113_G9_Idunnarchaeota.fna_8_7      K06885  291.83  304.3     1e-91 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_22951_9_B113_G9_Idunnarchaeota.fna_9_2      K07332  385.67  602.2  6.3e-182 archaeal flagellar protein FlaI
+* B113_G9_Unknown-B113_Guay9_scaffold_24163_10_B113_G9_Idunnarchaeota.fna_10_3    K02121   96.00  108.9   1.5e-32 V/A-type H+/Na+-transporting ATPase subunit E
+* B113_G9_Unknown-B113_Guay9_scaffold_24163_10_B113_G9_Idunnarchaeota.fna_10_5    K00610  109.20  196.0   1.4e-59 aspartate carbamoyltransferase regulatory subunit
+* B113_G9_Unknown-B113_Guay9_scaffold_24163_10_B113_G9_Idunnarchaeota.fna_10_6    K00609  229.53  375.4  1.5e-113 aspartate carbamoyltransferase catalytic subunit [EC:2.1.3.2]
+* B113_G9_Unknown-B113_Guay9_scaffold_24163_10_B113_G9_Idunnarchaeota.fna_10_8    K00180  139.07  230.6   1.7e-69 indolepyruvate ferredoxin oxidoreductase, beta subunit [EC:1.2.7.8]
+* B113_G9_Unknown-B113_Guay9_scaffold_27031_11_B113_G9_Idunnarchaeota.fna_11_1    K00948   63.93  222.5   4.6e-67 ribose-phosphate pyrophosphokinase [EC:2.7.6.1]
+* B113_G9_Unknown-B113_Guay9_scaffold_27031_11_B113_G9_Idunnarchaeota.fna_11_2    K04069  115.70  286.1     2e-86 pyruvate formate lyase activating enzyme [EC:1.97.1.4]
+* B113_G9_Unknown-B113_Guay9_scaffold_27031_11_B113_G9_Idunnarchaeota.fna_11_3    K04070  137.00  315.7   1.6e-95 putative pyruvate formate lyase activating enzyme [EC:1.97.1.4]
+* B113_G9_Unknown-B113_Guay9_scaffold_27031_11_B113_G9_Idunnarchaeota.fna_11_5    K01953  106.77  189.4   5.8e-57 asparagine synthase (glutamine-hydrolysing) [EC:6.3.5.4]
+* B113_G9_Unknown-B113_Guay9_scaffold_27301_12_B113_G9_Idunnarchaeota.fna_12_2    K03726  475.50  867.4  4.9e-262 helicase [EC:3.6.4.-]
+* B113_G9_Unknown-B113_Guay9_scaffold_27457_13_B113_G9_Idunnarchaeota.fna_13_2    K10848   73.77  106.1   6.2e-32 DNA excision repair protein ERCC-4 [EC:3.1.-.-]
+* B113_G9_Unknown-B113_Guay9_scaffold_27457_13_B113_G9_Idunnarchaeota.fna_13_4    K09120   92.80  108.1   1.7e-32 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_27508_14_B113_G9_Idunnarchaeota.fna_14_4    K20608  368.17  439.2  3.6e-133 tetrahedral aminopeptidase [EC:3.4.11.-]
+* B113_G9_Unknown-B113_Guay9_scaffold_27508_14_B113_G9_Idunnarchaeota.fna_14_5    K08482  131.23  186.5   3.5e-56 circadian clock protein KaiC
+* B113_G9_Unknown-B113_Guay9_scaffold_27860_15_B113_G9_Idunnarchaeota.fna_15_2    K06934   38.30  120.8   2.6e-36 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_27860_15_B113_G9_Idunnarchaeota.fna_15_5    K03457  189.37  230.5   1.3e-69 nucleobase:cation symporter-1, NCS1 family
+* B113_G9_Unknown-B113_Guay9_scaffold_27860_15_B113_G9_Idunnarchaeota.fna_15_6    K21219  365.80  618.4    3e-187 hydroxymethylpyrimidine kinase / phosphomethylpyrimidine kinase / thiamine-phosphate diphosphorylase [EC:2.7.1.49 2.7.4.7 2.5.1.3]
+* B113_G9_Unknown-B113_Guay9_scaffold_27860_15_B113_G9_Idunnarchaeota.fna_15_6    K00941  308.73  386.1  1.7e-116 hydroxymethylpyrimidine/phosphomethylpyrimidine kinase [EC:2.7.1.49 2.7.4.7]
+* B113_G9_Unknown-B113_Guay9_scaffold_28731_16_B113_G9_Idunnarchaeota.fna_16_2    K02003  300.27  336.5  1.5e-101 putative ABC transport system ATP-binding protein
+* B113_G9_Unknown-B113_Guay9_scaffold_28731_16_B113_G9_Idunnarchaeota.fna_16_4    K06953   88.00  144.5     2e-43 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_28731_16_B113_G9_Idunnarchaeota.fna_16_5    K07137  126.60  375.7  1.7e-113 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_28731_16_B113_G9_Idunnarchaeota.fna_16_6    K07731  157.43  275.6   1.1e-83 putative transcriptional regulator
+* B113_G9_Unknown-B113_Guay9_scaffold_29538_17_B113_G9_Idunnarchaeota.fna_17_4    K01079  120.63  169.8   5.4e-51 phosphoserine phosphatase [EC:3.1.3.3]
+* B113_G9_Unknown-B113_Guay9_scaffold_29538_17_B113_G9_Idunnarchaeota.fna_17_5    K01883  388.07  570.6  2.3e-172 cysteinyl-tRNA synthetase [EC:6.1.1.16]
+* B113_G9_Unknown-B113_Guay9_scaffold_29766_18_B113_G9_Idunnarchaeota.fna_18_2    K01872  194.43  499.2  1.3e-150 alanyl-tRNA synthetase [EC:6.1.1.7]
+* B113_G9_Unknown-B113_Guay9_scaffold_29766_18_B113_G9_Idunnarchaeota.fna_18_2    K07050  200.80  340.0  1.1e-102 misacylated tRNA(Ala) deacylase [EC:3.1.1.-]
+* B113_G9_Unknown-B113_Guay9_scaffold_29766_18_B113_G9_Idunnarchaeota.fna_18_3    K02869   79.90  129.0   4.4e-39 large subunit ribosomal protein L12
+* B113_G9_Unknown-B113_Guay9_scaffold_29766_18_B113_G9_Idunnarchaeota.fna_18_4    K02864   51.83   66.8   1.1e-19 large subunit ribosomal protein L10
+* B113_G9_Unknown-B113_Guay9_scaffold_29766_18_B113_G9_Idunnarchaeota.fna_18_5    K02863   92.00  114.6   2.6e-34 large subunit ribosomal protein L1
+* B113_G9_Unknown-B113_Guay9_scaffold_30990_19_B113_G9_Idunnarchaeota.fna_19_2    K15429  176.33  211.7     1e-63 tRNA (guanine37-N1)-methyltransferase [EC:2.1.1.228]
+* B113_G9_Unknown-B113_Guay9_scaffold_30990_19_B113_G9_Idunnarchaeota.fna_19_8    K07462   64.13   88.8   1.3e-26 single-stranded-DNA-specific exonuclease [EC:3.1.-.-]
+* B113_G9_Unknown-B113_Guay9_scaffold_31876_20_B113_G9_Idunnarchaeota.fna_20_2    K04796   80.23   82.3     8e-25 small nuclear ribonucleoprotein
+* B113_G9_Unknown-B113_Guay9_scaffold_31876_20_B113_G9_Idunnarchaeota.fna_20_3    K01494   82.67  112.4   9.3e-34 dCTP deaminase [EC:3.5.4.13]
+* B113_G9_Unknown-B113_Guay9_scaffold_31876_20_B113_G9_Idunnarchaeota.fna_20_5    K07503   78.87  237.0   1.1e-71 endonuclease [EC:3.1.-.-]
+* B113_G9_Unknown-B113_Guay9_scaffold_32366_21_B113_G9_Idunnarchaeota.fna_21_2    K00789   21.00   33.2   1.4e-09 S-adenosylmethionine synthetase [EC:2.5.1.6]
+* B113_G9_Unknown-B113_Guay9_scaffold_32366_21_B113_G9_Idunnarchaeota.fna_21_4    K01868  191.70  252.7   3.7e-76 threonyl-tRNA synthetase [EC:6.1.1.3]
+* B113_G9_Unknown-B113_Guay9_scaffold_32791_22_B113_G9_Idunnarchaeota.fna_22_1    K12574  138.27  171.3   1.4e-51 ribonuclease J [EC:3.1.-.-]
+* B113_G9_Unknown-B113_Guay9_scaffold_32791_22_B113_G9_Idunnarchaeota.fna_22_2    K07129  224.50  371.3  2.6e-112 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_33309_23_B113_G9_Idunnarchaeota.fna_23_4    K01170   88.77  167.2   1.7e-50 tRNA-intron endonuclease, archaea type [EC:4.6.1.16]
+* B113_G9_Unknown-B113_Guay9_scaffold_33309_23_B113_G9_Idunnarchaeota.fna_23_5    K07220   54.77   60.2   8.2e-18 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_33309_23_B113_G9_Idunnarchaeota.fna_23_6    K01880  301.70  723.2  4.4e-218 glycyl-tRNA synthetase [EC:6.1.1.14]
+* B113_G9_Unknown-B113_Guay9_scaffold_33309_23_B113_G9_Idunnarchaeota.fna_23_7    K02003  300.27  365.4  2.6e-110 putative ABC transport system ATP-binding protein
+* B113_G9_Unknown-B113_Guay9_scaffold_33564_24_B113_G9_Idunnarchaeota.fna_24_3    K18779  325.30  482.9    5e-146 7-cyano-7-deazaguanine tRNA-ribosyltransferase [EC:2.4.2.48]
+* B113_G9_Unknown-B113_Guay9_scaffold_36861_25_B113_G9_Idunnarchaeota.fna_25_1    K07098   93.43  203.0   2.9e-61 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_36861_25_B113_G9_Idunnarchaeota.fna_25_2    K09022   73.20  203.1   3.1e-61 2-iminobutanoate/2-iminopropanoate deaminase [EC:3.5.99.10]
+* B113_G9_Unknown-B113_Guay9_scaffold_36861_25_B113_G9_Idunnarchaeota.fna_25_4    K01607   19.30   42.1   3.4e-12 4-carboxymuconolactone decarboxylase [EC:4.1.1.44]
+* B113_G9_Unknown-B113_Guay9_scaffold_36861_25_B113_G9_Idunnarchaeota.fna_25_7    K04487  283.70  571.9  5.5e-173 cysteine desulfurase [EC:2.8.1.7]
+* B113_G9_Unknown-B113_Guay9_scaffold_37269_26_B113_G9_Idunnarchaeota.fna_26_2    K06153   40.87  163.8   2.9e-49 undecaprenyl-diphosphatase [EC:3.6.1.27]
+* B113_G9_Unknown-B113_Guay9_scaffold_37269_26_B113_G9_Idunnarchaeota.fna_26_3    K12234  169.90  232.8   4.2e-70 coenzyme F420-0:L-glutamate ligase / coenzyme F420-1:gamma-L-glutamate ligase [EC:6.3.2.31 6.3.2.34]
+* B113_G9_Unknown-B113_Guay9_scaffold_39912_27_B113_G9_Idunnarchaeota.fna_27_2    K03547  120.63  203.0   4.2e-61 DNA repair protein SbcD/Mre11
+* B113_G9_Unknown-B113_Guay9_scaffold_39912_27_B113_G9_Idunnarchaeota.fna_27_3    K06915  111.63  255.2   6.5e-77 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_40413_28_B113_G9_Idunnarchaeota.fna_28_2    K09150  166.87  492.6  8.9e-149 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_40413_28_B113_G9_Idunnarchaeota.fna_28_4    K01939   95.03  293.6   1.3e-88 adenylosuccinate synthase [EC:6.3.4.4]
+* B113_G9_Unknown-B113_Guay9_scaffold_40695_29_B113_G9_Idunnarchaeota.fna_29_4    K19710  130.30  228.0   5.2e-69 ATP adenylyltransferase [EC:2.7.7.53]
+* B113_G9_Unknown-B113_Guay9_scaffold_40695_29_B113_G9_Idunnarchaeota.fna_29_5    K06994  258.67  488.4  2.3e-147 putative drug exporter of the RND superfamily
+* B113_G9_Unknown-B113_Guay9_scaffold_41041_30_B113_G9_Idunnarchaeota.fna_30_1    K02004   48.50   83.3   5.1e-25 putative ABC transport system permease protein
+* B113_G9_Unknown-B113_Guay9_scaffold_41041_30_B113_G9_Idunnarchaeota.fna_30_2    K17830  248.03  347.5  4.5e-105 digeranylgeranylglycerophospholipid reductase [EC:1.3.1.101 1.3.7.11]
+* B113_G9_Unknown-B113_Guay9_scaffold_41041_30_B113_G9_Idunnarchaeota.fna_30_4    K00809  138.47  339.8  1.8e-102 deoxyhypusine synthase [EC:2.5.1.46]
+* B113_G9_Unknown-B113_Guay9_scaffold_41205_31_B113_G9_Idunnarchaeota.fna_31_4    K22447  590.37  797.2  3.3e-241 archaeal chaperonin
+* B113_G9_Unknown-B113_Guay9_scaffold_41205_31_B113_G9_Idunnarchaeota.fna_31_5    K24450   56.77   95.4   8.8e-29 DNA-binding protein
+* B113_G9_Unknown-B113_Guay9_scaffold_41688_32_B113_G9_Idunnarchaeota.fna_32_4    K04069  115.70  218.7   5.8e-66 pyruvate formate lyase activating enzyme [EC:1.97.1.4]
+* B113_G9_Unknown-B113_Guay9_scaffold_42368_34_B113_G9_Idunnarchaeota.fna_34_2    K03789  101.77  141.0   3.3e-42 [ribosomal protein S18]-alanine N-acetyltransferase [EC:2.3.1.266]
+* B113_G9_Unknown-B113_Guay9_scaffold_42368_34_B113_G9_Idunnarchaeota.fna_34_3    K00762   90.70  185.2   7.7e-56 orotate phosphoribosyltransferase [EC:2.4.2.10]
+* B113_G9_Unknown-B113_Guay9_scaffold_42368_34_B113_G9_Idunnarchaeota.fna_34_4    K03120   36.53  183.7     3e-55 transcription initiation factor TFIID TATA-box-binding protein
+* B113_G9_Unknown-B113_Guay9_scaffold_42873_35_B113_G9_Idunnarchaeota.fna_35_2    K01945  157.53  361.4  2.9e-109 phosphoribosylamine---glycine ligase [EC:6.3.4.13]
+* B113_G9_Unknown-B113_Guay9_scaffold_42873_35_B113_G9_Idunnarchaeota.fna_35_3    K04069  115.70  124.8   1.8e-37 pyruvate formate lyase activating enzyme [EC:1.97.1.4]
+* B113_G9_Unknown-B113_Guay9_scaffold_43649_36_B113_G9_Idunnarchaeota.fna_36_2    K03170  759.20 1279.2         0 reverse gyrase [EC:5.6.2.2 3.6.4.12]
+* B113_G9_Unknown-B113_Guay9_scaffold_45206_38_B113_G9_Idunnarchaeota.fna_38_1    K02966   47.20   48.6   3.5e-14 small subunit ribosomal protein S19e
+* B113_G9_Unknown-B113_Guay9_scaffold_45206_38_B113_G9_Idunnarchaeota.fna_38_2    K09735   85.53  129.4   3.8e-39 GTP-dependent dephospho-CoA kinase [EC:2.7.1.-]
+* B113_G9_Unknown-B113_Guay9_scaffold_45206_38_B113_G9_Idunnarchaeota.fna_38_3    K03050   59.13   92.5   4.7e-28 DNA-directed RNA polymerase subunit E" [EC:2.7.7.6]
+* B113_G9_Unknown-B113_Guay9_scaffold_45206_38_B113_G9_Idunnarchaeota.fna_38_4    K07158   75.60   80.0   7.1e-24 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_45680_40_B113_G9_Idunnarchaeota.fna_40_3    K04795  277.10  305.0     1e-92 fibrillarin-like pre-rRNA processing protein
+* B113_G9_Unknown-B113_Guay9_scaffold_45680_40_B113_G9_Idunnarchaeota.fna_40_5    K17828  267.87  280.4   1.5e-84 dihydroorotate dehydrogenase (NAD+) catalytic subunit [EC:1.3.1.14]
+* B113_G9_Unknown-B113_Guay9_scaffold_45767_41_B113_G9_Idunnarchaeota.fna_41_1    K09903   92.93   99.9   5.9e-30 uridylate kinase [EC:2.7.4.22]
+* B113_G9_Unknown-B113_Guay9_scaffold_45767_41_B113_G9_Idunnarchaeota.fna_41_2    K03265   78.37  353.0  1.4e-106 peptide chain release factor subunit 1
+* B113_G9_Unknown-B113_Guay9_scaffold_45767_41_B113_G9_Idunnarchaeota.fna_41_5    K06897  102.80  234.1   1.4e-70 7,8-dihydropterin-6-yl-methyl-4-(beta-D-ribofuranosyl)aminobenzene 5'-phosphate synthase [EC:2.5.1.105]
+* B113_G9_Unknown-B113_Guay9_scaffold_46213_42_B113_G9_Idunnarchaeota.fna_42_3    K07332  385.67  391.3  4.1e-118 archaeal flagellar protein FlaI
+* B113_G9_Unknown-B113_Guay9_scaffold_49010_43_B113_G9_Idunnarchaeota.fna_43_2    K04801  374.10  443.3    2e-134 replication factor C small subunit
+* B113_G9_Unknown-B113_Guay9_scaffold_49167_44_B113_G9_Idunnarchaeota.fna_44_2    K00763  124.97  231.1   1.2e-69 nicotinate phosphoribosyltransferase [EC:6.3.4.21]
+* B113_G9_Unknown-B113_Guay9_scaffold_49167_44_B113_G9_Idunnarchaeota.fna_44_5    K06982  141.03  267.7   5.2e-81 pantoate kinase [EC:2.7.1.169]
+* B113_G9_Unknown-B113_Guay9_scaffold_49167_44_B113_G9_Idunnarchaeota.fna_44_6    K09722  229.33  370.9  1.2e-112 4-phosphopantoate---beta-alanine ligase [EC:6.3.2.36]
+* B113_G9_Unknown-B113_Guay9_scaffold_49344_45_B113_G9_Idunnarchaeota.fna_45_3    K18678  100.10  115.1   2.2e-34 phytol kinase [EC:2.7.1.182]
+* B113_G9_Unknown-B113_Guay9_scaffold_49344_45_B113_G9_Idunnarchaeota.fna_45_5    K18237  290.37  302.0     2e-91 ribose 1,5-bisphosphate isomerase [EC:5.3.1.29]
+* B113_G9_Unknown-B113_Guay9_scaffold_50096_46_B113_G9_Idunnarchaeota.fna_46_3    K09143   55.93   66.8   8.2e-20 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_50675_47_B113_G9_Idunnarchaeota.fna_47_1    K02987   93.20  139.6     5e-42 small subunit ribosomal protein S4e
+* B113_G9_Unknown-B113_Guay9_scaffold_50675_47_B113_G9_Idunnarchaeota.fna_47_2    K02931  105.57  121.0   2.3e-36 large subunit ribosomal protein L5
+* B113_G9_Unknown-B113_Guay9_scaffold_50675_47_B113_G9_Idunnarchaeota.fna_47_4    K02994   92.83   95.1   1.8e-28 small subunit ribosomal protein S8
+* B113_G9_Unknown-B113_Guay9_scaffold_50675_47_B113_G9_Idunnarchaeota.fna_47_5    K02912   94.97  145.1   8.7e-44 large subunit ribosomal protein L32e
+* B113_G9_Unknown-B113_Guay9_scaffold_50675_47_B113_G9_Idunnarchaeota.fna_47_6    K02885   60.10  123.4   5.8e-37 large subunit ribosomal protein L19e
+* B113_G9_Unknown-B113_Guay9_scaffold_50675_47_B113_G9_Idunnarchaeota.fna_47_7    K02881   42.67   64.9   4.7e-19 large subunit ribosomal protein L18
+* B113_G9_Unknown-B113_Guay9_scaffold_50675_47_B113_G9_Idunnarchaeota.fna_47_8    K02907   42.57   60.8   7.7e-18 large subunit ribosomal protein L30
+* B113_G9_Unknown-B113_Guay9_scaffold_50866_48_B113_G9_Idunnarchaeota.fna_48_2    K03053   98.03  101.1   9.6e-31 DNA-directed RNA polymerase subunit H [EC:2.7.7.6]
+* B113_G9_Unknown-B113_Guay9_scaffold_50896_49_B113_G9_Idunnarchaeota.fna_49_5    K18700   77.77  152.2   6.6e-46 fluoroacetyl-CoA thioesterase [EC:3.1.2.29]
+* B113_G9_Unknown-B113_Guay9_scaffold_51684_50_B113_G9_Idunnarchaeota.fna_50_3    K09726  178.57  203.1   3.3e-61 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_51948_51_B113_G9_Idunnarchaeota.fna_51_4    K03243  222.60  783.7  2.2e-236 translation initiation factor 5B
+* B113_G9_Unknown-B113_Guay9_scaffold_51948_51_B113_G9_Idunnarchaeota.fna_51_5    K02896   33.27   78.1   4.1e-23 large subunit ribosomal protein L24e
+* B113_G9_Unknown-B113_Guay9_scaffold_51948_51_B113_G9_Idunnarchaeota.fna_51_6    K02979   53.97   73.7   7.9e-22 small subunit ribosomal protein S28e
+* B113_G9_Unknown-B113_Guay9_scaffold_52818_52_B113_G9_Idunnarchaeota.fna_52_3    K02319  554.83  766.1  2.2e-231 DNA polymerase, archaea type [EC:2.7.7.7]
+* B113_G9_Unknown-B113_Guay9_scaffold_53535_53_B113_G9_Idunnarchaeota.fna_53_2    K17884  168.37  183.5   2.3e-55 archaetidylinositol phosphate synthase [EC:2.7.8.39]
+* B113_G9_Unknown-B113_Guay9_scaffold_53535_53_B113_G9_Idunnarchaeota.fna_53_4    K04566  327.40  388.1  3.3e-117 lysyl-tRNA synthetase, class I [EC:6.1.1.6]
+* B113_G9_Unknown-B113_Guay9_scaffold_53535_53_B113_G9_Idunnarchaeota.fna_53_5    K02976   51.40   61.4   4.5e-18 small subunit ribosomal protein S26e
+* B113_G9_Unknown-B113_Guay9_scaffold_54234_54_B113_G9_Idunnarchaeota.fna_54_1    K18882  109.20  129.7   6.9e-39 DNA primase large subunit
+* B113_G9_Unknown-B113_Guay9_scaffold_54234_54_B113_G9_Idunnarchaeota.fna_54_2    K04802   61.67  198.8   5.6e-60 proliferating cell nuclear antigen
+* B113_G9_Unknown-B113_Guay9_scaffold_54234_54_B113_G9_Idunnarchaeota.fna_54_3    K03057   89.30  125.5   8.9e-38 transcription factor S
+* B113_G9_Unknown-B113_Guay9_scaffold_54234_54_B113_G9_Idunnarchaeota.fna_54_5    K07573   71.03  119.5   6.1e-36 exosome complex component CSL4
+* B113_G9_Unknown-B113_Guay9_scaffold_54867_56_B113_G9_Idunnarchaeota.fna_56_2    K02031  407.63  490.0  6.3e-148 peptide/nickel transport system ATP-binding protein
+* B113_G9_Unknown-B113_Guay9_scaffold_54867_56_B113_G9_Idunnarchaeota.fna_56_2    K02032  376.90  410.3  7.1e-124 peptide/nickel transport system ATP-binding protein
+* B113_G9_Unknown-B113_Guay9_scaffold_54867_56_B113_G9_Idunnarchaeota.fna_56_3    K02034  256.67  386.5  1.3e-116 peptide/nickel transport system permease protein
+* B113_G9_Unknown-B113_Guay9_scaffold_54867_56_B113_G9_Idunnarchaeota.fna_56_4    K02033  214.27  255.2   5.8e-77 peptide/nickel transport system permease protein
+* B113_G9_Unknown-B113_Guay9_scaffold_55116_57_B113_G9_Idunnarchaeota.fna_57_1    K05772  115.10  272.1   1.5e-82 tungstate transport system substrate-binding protein
+* B113_G9_Unknown-B113_Guay9_scaffold_55116_57_B113_G9_Idunnarchaeota.fna_57_2    K03638  153.87  158.8   8.5e-48 molybdopterin adenylyltransferase [EC:2.7.7.75]
+* B113_G9_Unknown-B113_Guay9_scaffold_55116_57_B113_G9_Idunnarchaeota.fna_57_3    K03637   43.70  185.9   4.6e-56 cyclic pyranopterin monophosphate synthase [EC:4.6.1.17]
+* B113_G9_Unknown-B113_Guay9_scaffold_55116_57_B113_G9_Idunnarchaeota.fna_57_4    K03639  134.93  247.3   1.5e-74 GTP 3',8-cyclase [EC:4.1.99.22]
+* B113_G9_Unknown-B113_Guay9_scaffold_55499_58_B113_G9_Idunnarchaeota.fna_58_4    K00945   56.00   67.6   4.7e-20 CMP/dCMP kinase [EC:2.7.4.25]
+* B113_G9_Unknown-B113_Guay9_scaffold_55499_58_B113_G9_Idunnarchaeota.fna_58_5    K02875   34.03   59.9   1.3e-17 large subunit ribosomal protein L14e
+* B113_G9_Unknown-B113_Guay9_scaffold_55499_58_B113_G9_Idunnarchaeota.fna_58_7    K11131  240.90  359.2  1.6e-108 H/ACA ribonucleoprotein complex subunit 4 [EC:5.4.99.-]
+* B113_G9_Unknown-B113_Guay9_scaffold_55499_58_B113_G9_Idunnarchaeota.fna_58_9    K04759  118.60  124.6   1.7e-37 ferrous iron transport protein B
+* B113_G9_Unknown-B113_Guay9_scaffold_55521_59_B113_G9_Idunnarchaeota.fna_59_2    K01990  250.27  310.1   1.6e-93 ABC-2 type transport system ATP-binding protein
+* B113_G9_Unknown-B113_Guay9_scaffold_55521_59_B113_G9_Idunnarchaeota.fna_59_3    K10773  135.20  202.6   4.7e-61 endonuclease III [EC:4.2.99.18]
+* B113_G9_Unknown-B113_Guay9_scaffold_56653_60_B113_G9_Idunnarchaeota.fna_60_3    K04655  163.37  377.4  5.5e-114 hydrogenase expression/formation protein HypE
+* B113_G9_Unknown-B113_Guay9_scaffold_56653_60_B113_G9_Idunnarchaeota.fna_60_4    K04653   31.93  112.7   7.7e-34 hydrogenase expression/formation protein HypC
+* B113_G9_Unknown-B113_Guay9_scaffold_56676_61_B113_G9_Idunnarchaeota.fna_61_3    K00600   89.30  234.8     9e-71 glycine hydroxymethyltransferase [EC:2.1.2.1]
+* B113_G9_Unknown-B113_Guay9_scaffold_57251_62_B113_G9_Idunnarchaeota.fna_62_2    K02004   48.50   54.4   2.9e-16 putative ABC transport system permease protein
+* B113_G9_Unknown-B113_Guay9_scaffold_57438_63_B113_G9_Idunnarchaeota.fna_63_2    K10848   73.77   85.2   1.3e-25 DNA excision repair protein ERCC-4 [EC:3.1.-.-]
+* B113_G9_Unknown-B113_Guay9_scaffold_57438_63_B113_G9_Idunnarchaeota.fna_63_6    K09726  178.57  274.4     8e-83 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_57668_64_B113_G9_Idunnarchaeota.fna_64_2    K01873  587.73  719.5  3.2e-217 valyl-tRNA synthetase [EC:6.1.1.9]
+* B113_G9_Unknown-B113_Guay9_scaffold_57840_65_B113_G9_Idunnarchaeota.fna_65_1    K03330  481.13  657.1  1.3e-198 glutamyl-tRNA(Gln) amidotransferase subunit E [EC:6.3.5.7]
+* B113_G9_Unknown-B113_Guay9_scaffold_57840_65_B113_G9_Idunnarchaeota.fna_65_2    K09482  392.40  568.6    3e-172 glutamyl-tRNA(Gln) amidotransferase subunit D [EC:6.3.5.7]
+* B113_G9_Unknown-B113_Guay9_scaffold_57840_65_B113_G9_Idunnarchaeota.fna_65_2    K01424  153.30  257.5   1.4e-77 L-asparaginase [EC:3.5.1.1]
+* B113_G9_Unknown-B113_Guay9_scaffold_57840_65_B113_G9_Idunnarchaeota.fna_65_3    K07739  297.90  484.9  2.2e-146 elongator complex protein 3 [EC:2.3.1.48]
+* B113_G9_Unknown-B113_Guay9_scaffold_60313_66_B113_G9_Idunnarchaeota.fna_66_1    K00171  102.80  121.7   8.7e-37 pyruvate ferredoxin oxidoreductase delta subunit [EC:1.2.7.1]
+* B113_G9_Unknown-B113_Guay9_scaffold_60313_66_B113_G9_Idunnarchaeota.fna_66_2    K00169  299.80  495.8    5e-150 pyruvate ferredoxin oxidoreductase alpha subunit [EC:1.2.7.1]
+* B113_G9_Unknown-B113_Guay9_scaffold_60313_66_B113_G9_Idunnarchaeota.fna_66_3    K00170  309.47  414.4  1.2e-125 pyruvate ferredoxin oxidoreductase beta subunit [EC:1.2.7.1]
+* B113_G9_Unknown-B113_Guay9_scaffold_60313_66_B113_G9_Idunnarchaeota.fna_66_4    K09481   28.47   35.4   5.6e-10 protein transport protein SEC61 subunit beta
+* B113_G9_Unknown-B113_Guay9_scaffold_60662_67_B113_G9_Idunnarchaeota.fna_67_2    K06915  111.63  159.9   4.5e-48 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_62018_68_B113_G9_Idunnarchaeota.fna_68_4    K03622   52.87  110.9   9.8e-34 archaea-specific DNA-binding protein
+* B113_G9_Unknown-B113_Guay9_scaffold_62071_69_B113_G9_Idunnarchaeota.fna_69_3    K13525  799.27 1041.9         0 transitional endoplasmic reticulum ATPase
+* B113_G9_Unknown-B113_Guay9_scaffold_62071_69_B113_G9_Idunnarchaeota.fna_69_4    K07580   55.50   70.8   3.2e-21 Zn-ribbon RNA-binding protein
+* B113_G9_Unknown-B113_Guay9_scaffold_62338_70_B113_G9_Idunnarchaeota.fna_70_2    K00058  324.80  435.9  8.6e-132 D-3-phosphoglycerate dehydrogenase / 2-oxoglutarate reductase [EC:1.1.1.95 1.1.1.399]
+* B113_G9_Unknown-B113_Guay9_scaffold_63602_71_B113_G9_Idunnarchaeota.fna_71_1    K03124  164.20  207.4   1.6e-62 transcription initiation factor TFIIB
+* B113_G9_Unknown-B113_Guay9_scaffold_63602_71_B113_G9_Idunnarchaeota.fna_71_2    K07569   48.73   68.7   1.9e-20 RNA-binding protein
+* B113_G9_Unknown-B113_Guay9_scaffold_63602_71_B113_G9_Idunnarchaeota.fna_71_3    K02995   52.37   78.7   1.9e-23 small subunit ribosomal protein S8e
+* B113_G9_Unknown-B113_Guay9_scaffold_63602_71_B113_G9_Idunnarchaeota.fna_71_4    K03105   28.10   88.5   2.5e-26 signal recognition particle subunit SRP19
+* B113_G9_Unknown-B113_Guay9_scaffold_63602_71_B113_G9_Idunnarchaeota.fna_71_5    K16874  421.90  492.2  4.9e-149 2,5-furandicarboxylate decarboxylase 1
+* B113_G9_Unknown-B113_Guay9_scaffold_64142_73_B113_G9_Idunnarchaeota.fna_73_1    K01611   15.37   34.8   6.4e-10 S-adenosylmethionine decarboxylase [EC:4.1.1.50]
+* B113_G9_Unknown-B113_Guay9_scaffold_64142_73_B113_G9_Idunnarchaeota.fna_73_2    K00797  101.77  241.4   7.5e-73 spermidine synthase [EC:2.5.1.16]
+* B113_G9_Unknown-B113_Guay9_scaffold_64142_73_B113_G9_Idunnarchaeota.fna_73_4    K06937  150.17  417.9  2.9e-126 7,8-dihydro-6-hydroxymethylpterin dimethyltransferase [EC:2.1.1.-]
+* B113_G9_Unknown-B113_Guay9_scaffold_64483_74_B113_G9_Idunnarchaeota.fna_74_1    K23997  302.57  424.4  3.9e-128 ADP-dependent NAD(P)H-hydrate dehydratase / NAD(P)H-hydrate epimerase [EC:4.2.1.136 5.1.99.6]
+* B113_G9_Unknown-B113_Guay9_scaffold_64483_74_B113_G9_Idunnarchaeota.fna_74_3    K09732   80.63   89.7   3.9e-27 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_65665_76_B113_G9_Idunnarchaeota.fna_76_1    K02437   38.20  144.3   2.7e-43 glycine cleavage system H protein
+* B113_G9_Unknown-B113_Guay9_scaffold_65665_76_B113_G9_Idunnarchaeota.fna_76_2    K07151  248.70  481.7  2.2e-145 dolichyl-diphosphooligosaccharide---protein glycosyltransferase [EC:2.4.99.18]
+* B113_G9_Unknown-B113_Guay9_scaffold_65665_76_B113_G9_Idunnarchaeota.fna_76_3    K11130   28.67   35.1   5.1e-10 H/ACA ribonucleoprotein complex subunit 3
+* B113_G9_Unknown-B113_Guay9_scaffold_65665_76_B113_G9_Idunnarchaeota.fna_76_4    K03237  106.23  151.6   1.3e-45 translation initiation factor 2 subunit 1
+* B113_G9_Unknown-B113_Guay9_scaffold_66703_77_B113_G9_Idunnarchaeota.fna_77_4    K01622  108.40  633.1  1.5e-191 fructose 1,6-bisphosphate aldolase/phosphatase [EC:4.1.2.13 3.1.3.11]
+* B113_G9_Unknown-B113_Guay9_scaffold_66703_77_B113_G9_Idunnarchaeota.fna_77_5    K06174  241.83  257.3   1.6e-77 ATP-binding cassette, sub-family E, member 1
+* B113_G9_Unknown-B113_Guay9_scaffold_66916_78_B113_G9_Idunnarchaeota.fna_78_3    K07317  141.20  145.9   9.1e-44 adenine-specific DNA-methyltransferase [EC:2.1.1.72]
+* B113_G9_Unknown-B113_Guay9_scaffold_67648_79_B113_G9_Idunnarchaeota.fna_79_3    K09165   36.47   86.2   1.3e-25 dodecin
+* B113_G9_Unknown-B113_Guay9_scaffold_67825_80_B113_G9_Idunnarchaeota.fna_80_2    K07483   32.83   36.2   2.6e-10 transposase
+* B113_G9_Unknown-B113_Guay9_scaffold_67825_80_B113_G9_Idunnarchaeota.fna_80_4    K06963   42.77   69.8   1.4e-20 tRNA acetyltransferase TAN1
+* B113_G9_Unknown-B113_Guay9_scaffold_67882_82_B113_G9_Idunnarchaeota.fna_82_1    K01470   69.97  154.7   1.7e-46 creatinine amidohydrolase [EC:3.5.2.10]
+* B113_G9_Unknown-B113_Guay9_scaffold_68618_84_B113_G9_Idunnarchaeota.fna_84_1    K00573   86.27  238.6   5.5e-72 protein-L-isoaspartate(D-aspartate) O-methyltransferase [EC:2.1.1.77]
+* B113_G9_Unknown-B113_Guay9_scaffold_68618_84_B113_G9_Idunnarchaeota.fna_84_2    K04799  265.37  412.3  1.5e-124 flap endonuclease-1 [EC:3.-.-.-]
+* B113_G9_Unknown-B113_Guay9_scaffold_69745_85_B113_G9_Idunnarchaeota.fna_85_2    K04797   57.90   58.9   2.4e-17 prefoldin alpha subunit
+* B113_G9_Unknown-B113_Guay9_scaffold_69745_85_B113_G9_Idunnarchaeota.fna_85_3    K03110  295.33  331.8  3.2e-100 fused signal recognition particle receptor
+* B113_G9_Unknown-B113_Guay9_scaffold_69745_85_B113_G9_Idunnarchaeota.fna_85_4    K00611  323.07  433.2  5.2e-131 ornithine carbamoyltransferase [EC:2.1.3.3]
+* B113_G9_Unknown-B113_Guay9_scaffold_69745_85_B113_G9_Idunnarchaeota.fna_85_5    K07342   29.70   42.2   3.1e-12 protein transport protein SEC61 subunit gamma and related proteins
+* B113_G9_Unknown-B113_Guay9_scaffold_70259_86_B113_G9_Idunnarchaeota.fna_86_1    K03975   60.10   97.8   3.3e-29 membrane-associated protein
+* B113_G9_Unknown-B113_Guay9_scaffold_70259_86_B113_G9_Idunnarchaeota.fna_86_2    K03709  117.37  131.3   2.3e-39 DtxR family transcriptional regulator, Mn-dependent transcriptional regulator
+* B113_G9_Unknown-B113_Guay9_scaffold_70871_88_B113_G9_Idunnarchaeota.fna_88_2    K07025  118.73  140.3   5.8e-42 putative hydrolase of the HAD superfamily
+* B113_G9_Unknown-B113_Guay9_scaffold_70871_88_B113_G9_Idunnarchaeota.fna_88_3    K07025  118.73  121.1   3.9e-36 putative hydrolase of the HAD superfamily
+* B113_G9_Unknown-B113_Guay9_scaffold_70871_88_B113_G9_Idunnarchaeota.fna_88_3    K01091  114.87  119.3   8.5e-36 phosphoglycolate phosphatase [EC:3.1.3.18]
+* B113_G9_Unknown-B113_Guay9_scaffold_70871_88_B113_G9_Idunnarchaeota.fna_88_5    K21636  137.80  274.0   1.1e-82 ribonucleoside-triphosphate reductase (formate) [EC:1.1.98.6]
+* B113_G9_Unknown-B113_Guay9_scaffold_71010_89_B113_G9_Idunnarchaeota.fna_89_2    K09716  120.73  251.0     1e-75 D-aminoacyl-tRNA deacylase [EC:3.1.1.96]
+* B113_G9_Unknown-B113_Guay9_scaffold_71010_89_B113_G9_Idunnarchaeota.fna_89_4    K03574   66.40   83.3   8.6e-25 8-oxo-dGTP diphosphatase [EC:3.6.1.55]
+* B113_G9_Unknown-B113_Guay9_scaffold_72122_90_B113_G9_Idunnarchaeota.fna_90_2    K07403  123.17  317.5   7.7e-96 membrane-bound serine protease (ClpP class)
+* B113_G9_Unknown-B113_Guay9_scaffold_72214_91_B113_G9_Idunnarchaeota.fna_91_3    K02994   92.83  113.1     5e-34 small subunit ribosomal protein S8
+* B113_G9_Unknown-B113_Guay9_scaffold_72214_91_B113_G9_Idunnarchaeota.fna_91_4    K02933  114.27  146.7   5.2e-44 large subunit ribosomal protein L6
+* B113_G9_Unknown-B113_Guay9_scaffold_72214_91_B113_G9_Idunnarchaeota.fna_91_5    K02912   94.97  176.4   2.2e-53 large subunit ribosomal protein L32e
+* B113_G9_Unknown-B113_Guay9_scaffold_72214_91_B113_G9_Idunnarchaeota.fna_91_6    K02885   60.10  116.0     1e-34 large subunit ribosomal protein L19e
+* B113_G9_Unknown-B113_Guay9_scaffold_73024_92_B113_G9_Idunnarchaeota.fna_92_2    K01923  167.53  209.8   3.3e-63 phosphoribosylaminoimidazole-succinocarboxamide synthase [EC:6.3.2.6]
+* B113_G9_Unknown-B113_Guay9_scaffold_73024_92_B113_G9_Idunnarchaeota.fna_92_3    K23264   41.57   52.7     2e-15 phosphoribosylformylglycinamidine synthase subunit PurS [EC:6.3.5.3]
+* B113_G9_Unknown-B113_Guay9_scaffold_73024_92_B113_G9_Idunnarchaeota.fna_92_4    K23265  213.47  341.0  3.9e-103 phosphoribosylformylglycinamidine synthase subunit PurQ / glutaminase [EC:6.3.5.3 3.5.1.2]
+* B113_G9_Unknown-B113_Guay9_scaffold_74480_94_B113_G9_Idunnarchaeota.fna_94_3    K06869  167.23  224.6   6.6e-68 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_74802_95_B113_G9_Idunnarchaeota.fna_95_2    K02004   48.50  160.5     2e-48 putative ABC transport system permease protein
+* B113_G9_Unknown-B113_Guay9_scaffold_76347_96_B113_G9_Idunnarchaeota.fna_96_2    K07108   73.50   91.2   2.1e-27 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_76347_96_B113_G9_Idunnarchaeota.fna_96_3    K09013  164.17  209.6   2.4e-63 Fe-S cluster assembly ATP-binding protein
+* B113_G9_Unknown-B113_Guay9_scaffold_76347_96_B113_G9_Idunnarchaeota.fna_96_5    K01912  130.73  196.3   5.6e-59 phenylacetate-CoA ligase [EC:6.2.1.30]
+* B113_G9_Unknown-B113_Guay9_scaffold_76835_97_B113_G9_Idunnarchaeota.fna_97_1    K00796  258.43  286.7   2.1e-86 dihydropteroate synthase [EC:2.5.1.15]
+* B113_G9_Unknown-B113_Guay9_scaffold_76835_97_B113_G9_Idunnarchaeota.fna_97_2    K19664   87.43  174.4   9.5e-53 CDP-2,3-bis-(O-geranylgeranyl)-sn-glycerol synthase [EC:2.7.7.67]
+* B113_G9_Unknown-B113_Guay9_scaffold_76835_97_B113_G9_Idunnarchaeota.fna_97_3    K13051  282.33  389.7  1.1e-117 L-asparaginase / beta-aspartyl-peptidase [EC:3.5.1.1 3.4.19.5]
+* B113_G9_Unknown-B113_Guay9_scaffold_79053_99_B113_G9_Idunnarchaeota.fna_99_1    K09738   71.47  156.5   1.7e-47 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_79053_99_B113_G9_Idunnarchaeota.fna_99_2    K03325  129.20  174.2   2.3e-52 arsenite transporter
+* B113_G9_Unknown-B113_Guay9_scaffold_79053_99_B113_G9_Idunnarchaeota.fna_99_3    K00946  140.20  207.9   1.3e-62 thiamine-monophosphate kinase [EC:2.7.4.16]
+* B113_G9_Unknown-B113_Guay9_scaffold_79166_100_B113_G9_Idunnarchaeota.fna_100_3  K01251   71.87  546.9  1.6e-165 adenosylhomocysteinase [EC:3.3.1.1]
+* B113_G9_Unknown-B113_Guay9_scaffold_79166_100_B113_G9_Idunnarchaeota.fna_100_4  K00021  210.03  236.1   2.6e-71 hydroxymethylglutaryl-CoA reductase (NADPH) [EC:1.1.1.34]
+* B113_G9_Unknown-B113_Guay9_scaffold_80220_101_B113_G9_Idunnarchaeota.fna_101_4  K07013   69.07  103.0     1e-30 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_81137_103_B113_G9_Idunnarchaeota.fna_103_1  K06929   74.80   77.7   4.7e-23 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_81137_103_B113_G9_Idunnarchaeota.fna_103_2  K07096   79.10  206.5     2e-62 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_81137_103_B113_G9_Idunnarchaeota.fna_103_3  K01069  120.57  125.8   1.1e-37 hydroxyacylglutathione hydrolase [EC:3.1.2.6]
+* B113_G9_Unknown-B113_Guay9_scaffold_81308_105_B113_G9_Idunnarchaeota.fna_105_1  K03170  759.20 1149.0         0 reverse gyrase [EC:5.6.2.2 3.6.4.12]
+* B113_G9_Unknown-B113_Guay9_scaffold_81567_106_B113_G9_Idunnarchaeota.fna_106_1  K07151  248.70  260.7   1.3e-78 dolichyl-diphosphooligosaccharide---protein glycosyltransferase [EC:2.4.99.18]
+* B113_G9_Unknown-B113_Guay9_scaffold_81773_107_B113_G9_Idunnarchaeota.fna_107_3  K18855  294.57  354.1  3.9e-107 UDP-N-acetylglucosamine 3-dehydrogenase [EC:1.1.1.374]
+* B113_G9_Unknown-B113_Guay9_scaffold_81773_107_B113_G9_Idunnarchaeota.fna_107_4  K22736   35.83   71.5   3.7e-21 vacuolar iron transporter family protein
+* B113_G9_Unknown-B113_Guay9_scaffold_81823_108_B113_G9_Idunnarchaeota.fna_108_4  K03973   31.93  110.1   6.4e-33 phage shock protein C
+* B113_G9_Unknown-B113_Guay9_scaffold_84647_110_B113_G9_Idunnarchaeota.fna_110_3  K00784   73.63  279.0     3e-84 ribonuclease Z [EC:3.1.26.11]
+* B113_G9_Unknown-B113_Guay9_scaffold_84647_110_B113_G9_Idunnarchaeota.fna_110_4  K07446  152.27  254.2   1.2e-76 tRNA (guanine10-N2)-dimethyltransferase [EC:2.1.1.213]
+* B113_G9_Unknown-B113_Guay9_scaffold_85748_113_B113_G9_Idunnarchaeota.fna_113_3  K17993  379.03  385.0  2.8e-116 sulfhydrogenase subunit alpha [EC:1.12.1.3 1.12.1.5]
+* B113_G9_Unknown-B113_Guay9_scaffold_85894_114_B113_G9_Idunnarchaeota.fna_114_2  K01990  250.27  320.2   1.4e-96 ABC-2 type transport system ATP-binding protein
+* B113_G9_Unknown-B113_Guay9_scaffold_85894_114_B113_G9_Idunnarchaeota.fna_114_2  K10822  138.23  138.8   8.4e-42 nonpolar-amino-acid-transporting ATPase [EC:7.4.2.2]
+* B113_G9_Unknown-B113_Guay9_scaffold_85894_114_B113_G9_Idunnarchaeota.fna_114_3  K01992   19.00   20.7   8.5e-06 ABC-2 type transport system permease protein
+* B113_G9_Unknown-B113_Guay9_scaffold_86451_115_B113_G9_Idunnarchaeota.fna_115_4  K03552   42.17  108.5   1.3e-32 holliday junction resolvase Hjr [EC:3.1.22.4]
+* B113_G9_Unknown-B113_Guay9_scaffold_86636_116_B113_G9_Idunnarchaeota.fna_116_2  K06990  192.60  258.7   6.2e-78 MEMO1 family protein
+* B113_G9_Unknown-B113_Guay9_scaffold_86636_116_B113_G9_Idunnarchaeota.fna_116_3  K00869  156.37  328.8   2.3e-99 mevalonate kinase [EC:2.7.1.36]
+* B113_G9_Unknown-B113_Guay9_scaffold_86636_116_B113_G9_Idunnarchaeota.fna_116_4  K06981  116.20  183.1   3.9e-55 isopentenyl phosphate kinase [EC:2.7.4.26]
+* B113_G9_Unknown-B113_Guay9_scaffold_86743_117_B113_G9_Idunnarchaeota.fna_117_2  K03057   89.30  113.8   3.5e-34 transcription factor S
+* B113_G9_Unknown-B113_Guay9_scaffold_86743_117_B113_G9_Idunnarchaeota.fna_117_3  K04802   61.67  193.4   2.4e-58 proliferating cell nuclear antigen
+* B113_G9_Unknown-B113_Guay9_scaffold_86743_117_B113_G9_Idunnarchaeota.fna_117_4  K18882  109.20  284.6   6.3e-86 DNA primase large subunit
+* B113_G9_Unknown-B113_Guay9_scaffold_86781_118_B113_G9_Idunnarchaeota.fna_118_2  K01867  150.53  246.1   3.2e-74 tryptophanyl-tRNA synthetase [EC:6.1.1.2]
+* B113_G9_Unknown-B113_Guay9_scaffold_86781_118_B113_G9_Idunnarchaeota.fna_118_3  K03738  267.83  373.8  1.1e-112 aldehyde:ferredoxin oxidoreductase [EC:1.2.7.5]
+* B113_G9_Unknown-B113_Guay9_scaffold_86781_118_B113_G9_Idunnarchaeota.fna_118_3  K08093  169.50  239.0   2.9e-72 3-hexulose-6-phosphate synthase [EC:4.1.2.43]
+* B113_G9_Unknown-B113_Guay9_scaffold_88372_120_B113_G9_Idunnarchaeota.fna_120_2  K00283  501.47  698.2  2.5e-211 glycine dehydrogenase subunit 2 [EC:1.4.4.2]
+* B113_G9_Unknown-B113_Guay9_scaffold_88372_120_B113_G9_Idunnarchaeota.fna_120_3  K00282  415.17  478.9  6.3e-145 glycine dehydrogenase subunit 1 [EC:1.4.4.2]
+* B113_G9_Unknown-B113_Guay9_scaffold_88526_121_B113_G9_Idunnarchaeota.fna_121_5  K00605  315.47  396.1  1.2e-119 aminomethyltransferase [EC:2.1.2.10]
+* B113_G9_Unknown-B113_Guay9_scaffold_88897_122_B113_G9_Idunnarchaeota.fna_122_1  K01874  203.73  394.4  4.7e-119 methionyl-tRNA synthetase [EC:6.1.1.10]
+* B113_G9_Unknown-B113_Guay9_scaffold_88897_122_B113_G9_Idunnarchaeota.fna_122_3  K01905  573.40  580.0  1.7e-175 acetate---CoA ligase (ADP-forming) subunit alpha [EC:6.2.1.13]
+* B113_G9_Unknown-B113_Guay9_scaffold_89245_123_B113_G9_Idunnarchaeota.fna_123_2  K22469  310.77  406.6  6.5e-123 probable ribonuclease FAU-1 [EC:3.1.26.-]
+* B113_G9_Unknown-B113_Guay9_scaffold_89251_124_B113_G9_Idunnarchaeota.fna_124_1  K06001  406.27  595.8  6.6e-180 tryptophan synthase beta chain [EC:4.2.1.20]
+* B113_G9_Unknown-B113_Guay9_scaffold_89251_124_B113_G9_Idunnarchaeota.fna_124_2  K07103  124.07  144.8   9.4e-44 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_89488_127_B113_G9_Idunnarchaeota.fna_127_2  K06928   70.30  166.0   4.1e-50 nucleoside-triphosphatase [EC:3.6.1.15]
+* B113_G9_Unknown-B113_Guay9_scaffold_91020_128_B113_G9_Idunnarchaeota.fna_128_3  K14088  230.07  245.4   6.9e-75 ech hydrogenase subunit C
+* B113_G9_Unknown-B113_Guay9_scaffold_91020_128_B113_G9_Idunnarchaeota.fna_128_3  K18023  211.03  215.0   1.3e-65 membrane-bound hydrogenase subunit mbhJ [EC:1.12.7.2]
+* B113_G9_Unknown-B113_Guay9_scaffold_91950_130_B113_G9_Idunnarchaeota.fna_130_3  K12234  169.90  312.6   2.5e-94 coenzyme F420-0:L-glutamate ligase / coenzyme F420-1:gamma-L-glutamate ligase [EC:6.3.2.31 6.3.2.34]
+* B113_G9_Unknown-B113_Guay9_scaffold_92257_131_B113_G9_Idunnarchaeota.fna_131_2  K03719  129.53  162.7   5.6e-49 Lrp/AsnC family transcriptional regulator, leucine-responsive regulatory protein
+* B113_G9_Unknown-B113_Guay9_scaffold_92919_135_B113_G9_Idunnarchaeota.fna_135_1  K01893  373.23  457.3  3.3e-138 asparaginyl-tRNA synthetase [EC:6.1.1.22]
+* B113_G9_Unknown-B113_Guay9_scaffold_93247_136_B113_G9_Idunnarchaeota.fna_136_2  K22227  363.73  393.1  5.4e-119 AdoMet-dependent heme synthase [EC:1.3.98.6]
+* B113_G9_Unknown-B113_Guay9_scaffold_93247_136_B113_G9_Idunnarchaeota.fna_136_3  K10947   61.17   92.4   1.8e-27 PadR family transcriptional regulator, regulatory protein PadR
+* B113_G9_Unknown-B113_Guay9_scaffold_93880_138_B113_G9_Idunnarchaeota.fna_138_2  K22206  223.83  237.9   6.2e-72 XRE family transcriptional regulator, thiamine biosynthesis regulator
+* B113_G9_Unknown-B113_Guay9_scaffold_93902_139_B113_G9_Idunnarchaeota.fna_139_2  K01754  251.97  473.7  5.2e-143 threonine dehydratase [EC:4.3.1.19]
+* B113_G9_Unknown-B113_Guay9_scaffold_94073_140_B113_G9_Idunnarchaeota.fna_140_1  K18676  170.33  191.7   1.1e-57 glucosamine kinase [EC:2.7.1.8]
+* B113_G9_Unknown-B113_Guay9_scaffold_94073_140_B113_G9_Idunnarchaeota.fna_140_2  K10773  135.20  173.7   2.6e-52 endonuclease III [EC:4.2.99.18]
+* B113_G9_Unknown-B113_Guay9_scaffold_94073_140_B113_G9_Idunnarchaeota.fna_140_2  K07457  165.50  166.1     5e-50 endonuclease III related protein
+* B113_G9_Unknown-B113_Guay9_scaffold_94073_140_B113_G9_Idunnarchaeota.fna_140_3  K01507   18.07  185.7   6.5e-56 inorganic pyrophosphatase [EC:3.6.1.1]
+* B113_G9_Unknown-B113_Guay9_scaffold_95039_142_B113_G9_Idunnarchaeota.fna_142_2  K03709  117.37  122.4   1.1e-36 DtxR family transcriptional regulator, Mn-dependent transcriptional regulator
+* B113_G9_Unknown-B113_Guay9_scaffold_95135_143_B113_G9_Idunnarchaeota.fna_143_1  K07407   81.40  172.8   6.9e-52 alpha-galactosidase [EC:3.2.1.22]
+* B113_G9_Unknown-B113_Guay9_scaffold_95202_144_B113_G9_Idunnarchaeota.fna_144_2  K06971   69.83  336.3  7.7e-102 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_95437_145_B113_G9_Idunnarchaeota.fna_145_1  K07333  100.80  126.0   7.2e-38 archaeal flagellar protein FlaJ
+* B113_G9_Unknown-B113_Guay9_scaffold_95437_145_B113_G9_Idunnarchaeota.fna_145_2  K08963  429.93  471.4    2e-142 methylthioribose-1-phosphate isomerase [EC:5.3.1.23]
+* B113_G9_Unknown-B113_Guay9_scaffold_95437_145_B113_G9_Idunnarchaeota.fna_145_3  K04654  156.03  366.1  8.9e-111 hydrogenase expression/formation protein HypD
+* B113_G9_Unknown-B113_Guay9_scaffold_95620_146_B113_G9_Idunnarchaeota.fna_146_2  K03167  329.33  578.7  7.1e-175 DNA topoisomerase VI subunit B [EC:5.6.2.2]
+* B113_G9_Unknown-B113_Guay9_scaffold_95620_146_B113_G9_Idunnarchaeota.fna_146_3  K06961   66.13   96.1     1e-28 ribosomal RNA assembly protein
+* B113_G9_Unknown-B113_Guay9_scaffold_95649_147_B113_G9_Idunnarchaeota.fna_147_2  K11130   28.67   43.0     2e-12 H/ACA ribonucleoprotein complex subunit 3
+* B113_G9_Unknown-B113_Guay9_scaffold_95649_147_B113_G9_Idunnarchaeota.fna_147_3  K03237  106.23  214.0   1.6e-64 translation initiation factor 2 subunit 1
+* B113_G9_Unknown-B113_Guay9_scaffold_95649_147_B113_G9_Idunnarchaeota.fna_147_4  K02978   33.27   65.8   1.5e-19 small subunit ribosomal protein S27e
+* B113_G9_Unknown-B113_Guay9_scaffold_95649_147_B113_G9_Idunnarchaeota.fna_147_5  K02929   31.40   87.8   4.5e-26 large subunit ribosomal protein L44e
+* B113_G9_Unknown-B113_Guay9_scaffold_96670_148_B113_G9_Idunnarchaeota.fna_148_1  K04656  149.40  396.7    8e-120 hydrogenase maturation protein HypF
+* B113_G9_Unknown-B113_Guay9_scaffold_96670_148_B113_G9_Idunnarchaeota.fna_148_1  K01512   74.83   78.8   2.9e-23 acylphosphatase [EC:3.6.1.7]
+* B113_G9_Unknown-B113_Guay9_scaffold_96670_148_B113_G9_Idunnarchaeota.fna_148_3  K07244  168.87  243.7   1.6e-73 mgtE-like transporter
+* B113_G9_Unknown-B113_Guay9_scaffold_97308_149_B113_G9_Idunnarchaeota.fna_149_4  K17105  211.67  215.6   4.1e-65 geranylgeranylglycerol-phosphate geranylgeranyltransferase [EC:2.5.1.42]
+* B113_G9_Unknown-B113_Guay9_scaffold_97447_150_B113_G9_Idunnarchaeota.fna_150_3  K07220   54.77  106.1   9.7e-32 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_97980_151_B113_G9_Idunnarchaeota.fna_151_1  K00927  107.70  279.7   2.2e-84 phosphoglycerate kinase [EC:2.7.2.3]
+* B113_G9_Unknown-B113_Guay9_scaffold_98153_152_B113_G9_Idunnarchaeota.fna_152_2  K03058  100.33  128.1   4.5e-39 DNA-directed RNA polymerase subunit N [EC:2.7.7.6]
+* B113_G9_Unknown-B113_Guay9_scaffold_98153_152_B113_G9_Idunnarchaeota.fna_152_3  K02996  106.83  128.2     2e-38 small subunit ribosomal protein S9
+* B113_G9_Unknown-B113_Guay9_scaffold_98153_152_B113_G9_Idunnarchaeota.fna_152_4  K02871   76.90   76.9   8.7e-23 large subunit ribosomal protein L13
+* B113_G9_Unknown-B113_Guay9_scaffold_98153_152_B113_G9_Idunnarchaeota.fna_152_5  K02883   44.83   97.8     3e-29 large subunit ribosomal protein L18e
+* B113_G9_Unknown-B113_Guay9_scaffold_101058_153_B113_G9_Idunnarchaeota.fna_153_3 K12234  169.90  240.9   1.4e-72 coenzyme F420-0:L-glutamate ligase / coenzyme F420-1:gamma-L-glutamate ligase [EC:6.3.2.31 6.3.2.34]
+* B113_G9_Unknown-B113_Guay9_scaffold_101256_154_B113_G9_Idunnarchaeota.fna_154_2 K04796   80.23   90.5   2.4e-27 small nuclear ribonucleoprotein
+* B113_G9_Unknown-B113_Guay9_scaffold_101256_154_B113_G9_Idunnarchaeota.fna_154_3 K02922   52.20   81.9   2.4e-24 large subunit ribosomal protein L37e
+* B113_G9_Unknown-B113_Guay9_scaffold_102433_156_B113_G9_Idunnarchaeota.fna_156_1 K01937  118.67  465.9  1.2e-140 CTP synthase [EC:6.3.4.2]
+* B113_G9_Unknown-B113_Guay9_scaffold_102681_157_B113_G9_Idunnarchaeota.fna_157_1 K16150  288.27  309.4   2.6e-93 glycogen synthase [EC:2.4.1.11]
+* B113_G9_Unknown-B113_Guay9_scaffold_102681_157_B113_G9_Idunnarchaeota.fna_157_2 K00965   90.60  201.0     2e-60 UDPglucose--hexose-1-phosphate uridylyltransferase [EC:2.7.7.12]
+* B113_G9_Unknown-B113_Guay9_scaffold_102827_159_B113_G9_Idunnarchaeota.fna_159_1 K07332  385.67  599.3  4.9e-181 archaeal flagellar protein FlaI
+* B113_G9_Unknown-B113_Guay9_scaffold_102827_159_B113_G9_Idunnarchaeota.fna_159_2 K07333  100.80  143.1   4.7e-43 archaeal flagellar protein FlaJ
+* B113_G9_Unknown-B113_Guay9_scaffold_103626_160_B113_G9_Idunnarchaeota.fna_160_2 K03593  121.83  369.6  1.2e-111 ATP-binding protein involved in chromosome partitioning
+* B113_G9_Unknown-B113_Guay9_scaffold_104652_161_B113_G9_Idunnarchaeota.fna_161_2 K02319  554.83  775.2  4.1e-234 DNA polymerase, archaea type [EC:2.7.7.7]
+* B113_G9_Unknown-B113_Guay9_scaffold_104819_162_B113_G9_Idunnarchaeota.fna_162_1 K02984   89.13   99.2   1.2e-29 small subunit ribosomal protein S3Ae
+* B113_G9_Unknown-B113_Guay9_scaffold_104819_162_B113_G9_Idunnarchaeota.fna_162_3 K07462   64.13  174.3   1.9e-52 single-stranded-DNA-specific exonuclease [EC:3.1.-.-]
+* B113_G9_Unknown-B113_Guay9_scaffold_104819_162_B113_G9_Idunnarchaeota.fna_162_4 K02956   22.23   23.8   1.6e-06 small subunit ribosomal protein S15
+* B113_G9_Unknown-B113_Guay9_scaffold_105101_163_B113_G9_Idunnarchaeota.fna_163_3 K01439  270.47  280.6   1.3e-84 succinyl-diaminopimelate desuccinylase [EC:3.5.1.18]
+* B113_G9_Unknown-B113_Guay9_scaffold_106147_164_B113_G9_Idunnarchaeota.fna_164_1 K09116  109.97  162.4   6.6e-49 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_106147_164_B113_G9_Idunnarchaeota.fna_164_2 K03049  177.20  234.5     3e-71 DNA-directed RNA polymerase subunit E' [EC:2.7.7.6]
+* B113_G9_Unknown-B113_Guay9_scaffold_106147_164_B113_G9_Idunnarchaeota.fna_164_3 K07442   95.97  302.1     3e-91 tRNA (adenine57-N1/adenine58-N1)-methyltransferase catalytic subunit [EC:2.1.1.219 2.1.1.220]
+* B113_G9_Unknown-B113_Guay9_scaffold_106504_166_B113_G9_Idunnarchaeota.fna_166_1 K01939   95.03  183.5   2.8e-55 adenylosuccinate synthase [EC:6.3.4.4]
+* B113_G9_Unknown-B113_Guay9_scaffold_106504_166_B113_G9_Idunnarchaeota.fna_166_3 K01756  293.90  389.5  1.4e-117 adenylosuccinate lyase [EC:4.3.2.2]
+* B113_G9_Unknown-B113_Guay9_scaffold_106682_167_B113_G9_Idunnarchaeota.fna_167_3 K09741   43.97   86.1   6.4e-26 KEOPS complex subunit Pcc1
+* B113_G9_Unknown-B113_Guay9_scaffold_106682_167_B113_G9_Idunnarchaeota.fna_167_5 K02921   27.37   58.0   6.1e-17 large subunit ribosomal protein L37Ae
+* B113_G9_Unknown-B113_Guay9_scaffold_107572_169_B113_G9_Idunnarchaeota.fna_169_2 K03390  126.97  127.2   3.4e-38 heterodisulfide reductase subunit C2 [EC:1.8.7.3 1.8.98.4 1.8.98.5 1.8.98.6]
+* B113_G9_Unknown-B113_Guay9_scaffold_107572_169_B113_G9_Idunnarchaeota.fna_169_4 K14126  614.83  644.3  5.4e-195 F420-non-reducing hydrogenase large subunit [EC:1.12.99.- 1.8.98.5]
+* B113_G9_Unknown-B113_Guay9_scaffold_109287_170_B113_G9_Idunnarchaeota.fna_170_3 K01588  120.13  191.6   8.1e-58 5-(carboxyamino)imidazole ribonucleotide mutase [EC:5.4.99.18]
+* B113_G9_Unknown-B113_Guay9_scaffold_109533_171_B113_G9_Idunnarchaeota.fna_171_1 K09116  109.97  184.3   1.4e-55 uncharacterized protein
+* B113_G9_Unknown-B113_Guay9_scaffold_109650_172_B113_G9_Idunnarchaeota.fna_172_1 K07325   50.77  111.7   1.6e-33 archaeal flagellin FlaB
+* B113_G9_Unknown-B113_Guay9_scaffold_109650_172_B113_G9_Idunnarchaeota.fna_172_3 K07330   75.50  115.1   1.4e-34 archaeal flagellar protein FlaG
+* B113_G9_Unknown-B113_Guay9_scaffold_111287_174_B113_G9_Idunnarchaeota.fna_174_1 K03531  139.83  242.7   2.8e-73 cell division protein FtsZ
+* B113_G9_Unknown-B113_Guay9_scaffold_111287_174_B113_G9_Idunnarchaeota.fna_174_4 K07060   80.80  135.9   4.5e-41 endoribonuclease Nob1 [EC:3.1.-.-]
+* B113_G9_Unknown-B113_Guay9_scaffold_111287_174_B113_G9_Idunnarchaeota.fna_174_5 K00858   38.97   75.4   1.8e-22 NAD+ kinase [EC:2.7.1.23]
