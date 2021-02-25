@@ -22,6 +22,5 @@ read_ko<-function(ko_result){
 
 }
   
-a<-read_ko("data/B113_G9_result.txt")
-
+a<-read_ko("data/KEGG_bins.txt")
 
