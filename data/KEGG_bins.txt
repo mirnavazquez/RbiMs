@@ -1797,6 +1797,6 @@
 * Bin_2_scaffold_76267_5    K08602  158.57  597.9  4.4e-180 oligoendopeptidase F [EC:3.4.24.-]
 * Bin_2_scaffold_78123_2    K09022   72.77   80.9   1.8e-23 2-iminobutanoate/2-iminopropanoate deaminase [EC:3.5.99.10]
 * Bin_2_scaffold_78123_3    K03892   86.37   90.5     2e-26 ArsR family transcriptional regulator, arsenate/arsenite/antimonite-responsive transcriptional repressor
-* Bin_2_scaffold_78123_5    K02863   91.40  278.9   7.9e-84 large subunit ribosomal protein L1
+* Bin_2_scaffold_78123_5    K01007  364.93 1198.9         0 pyruvate, water dikinase [EC:2.7.9.2]
 * Bin_2_scaffold_78123_6    K19064  243.80  365.5  4.5e-110 lysine 6-dehydrogenase [EC:1.4.1.18]
 * Bin_2_scaffold_78123_7    K03110  293.27  406.7  1.7e-122 fused signal recognition particle receptor

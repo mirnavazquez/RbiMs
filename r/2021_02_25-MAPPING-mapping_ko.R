@@ -3,6 +3,7 @@ library(tibble)
 library(dplyr)
 library(stringr)
 library(tidyr)
+library(janitor)
 
 mapping_ko<-function(ko_abundance_table){
   #########################  KEGG links ############################
@@ -58,20 +59,19 @@ mapping_ko<-function(ko_abundance_table){
   ###################################################################
   ko_abundance_table %>%
   left_join(KO_master, by="KO") %>%
+    select(KO, Bin_name, Abundance) %>%
+    distinct() %>%
+  left_join(KO_master, by="KO") %>%
     select(Module, Module_description, Pathway, 
          Pathway_description, KO, Abundance, Genes, 
-         Gene_description, Enzyme,Bin_name, 
-         Scaffold_name) %>%
-    distinct()%>%
+         Gene_description, Enzyme,Bin_name) %>%
+    distinct() %>%
     pivot_wider(names_from = Bin_name, 
-                values_from = Abundance, values_fill = 0)
+                values_from = Abundance, values_fill = 0) 
 }
 
 
-b<-mapping_ko(a)
-
-
-
+kegg_mapped<-mapping_ko(kegg_read)
 
 
 
