@@ -1,6 +1,5 @@
-#' @title get_pca_metabolism obtains PCA data of KO pathways 
-#' @description Reads a table object created with the get_unique function
-#' and identifies the most important KO pathways.
+#' @title Obtains PCA data of KO pathways 
+#' @description Identifies the most important KO pathways in each Bin.
 #' @param ko_table is a table object created with the get_unique function
 #' and contains unique KOs.
 #' @details This function is part of a package used for 

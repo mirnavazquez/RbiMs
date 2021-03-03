@@ -1,9 +1,9 @@
-#' @title mapping_ko 
-#' @description It reads an object created with read_ko and maps each KO
-#' to the KEGG database.
-#' @param ko_abundance_table an object created with read_ko.
-#' @details This function is part of a package used for 
-#' the analysis of bins metabolism.
+#' @title Maps KOs to the KEGG database
+#' @description Reads a table object created with the read_ko function 
+#' and maps each KO to the KEGG database.
+#' @param ko_abundance_table is a table object containing the KO abundance 
+#' for each Bin.
+#' @details This function is part of a package used for the analysis of bins metabolism.
 #' @import KEGGREST tibble dplyr stringr tidyr janitor
 #' @examples
 #' mapping_ko(kegg_read)
@@ -60,7 +60,7 @@ mapping_ko<-function(ko_abundance_table){
   rm(module_link, pathway_link, enzyme_link, modules_list, 
     pathway_list, ko_list)
   ###################################################################
-  ko_abundance_table %>%
+  final_table <- ko_abundance_table %>%
   left_join(KO_master, by="KO") %>%
     select(KO, Bin_name, Abundance) %>%
     distinct() %>%
@@ -71,6 +71,7 @@ mapping_ko<-function(ko_abundance_table){
     distinct() %>%
     pivot_wider(names_from = Bin_name, 
                 values_from = Abundance, values_fill = 0) 
+  return(final_table)
 }
 
 
