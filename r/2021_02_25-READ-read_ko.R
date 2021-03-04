@@ -28,6 +28,7 @@ read_ko<-function(ko_result){
   
   final_table <- left_join(KO_raw, KO_abundance, by=c("Bin_name", "KO")) %>%
     distinct()
+  
   return(final_table)
 }
   
