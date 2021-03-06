@@ -65,7 +65,7 @@ head(ko_subsett)
 
 Now lets plot the subset. The plot_bubble_percentage will calculate the relative abundance of certain module or pathway in certain bin. The functions allow to color code acording to any metadata information.
 
-```{r fig.height=5, fig.width=7}
+```{r fig.height=5, fig.width=10}
 plot_bubble_percentage(raw_ko_output, metadata, "Bin_name", Module_description, "Percentage", "Clades")
 ```
 
