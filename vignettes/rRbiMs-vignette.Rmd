@@ -9,11 +9,9 @@ vignette: >
 
 ### rRbiMs
 
-Mirna Vázquez Rosas Landa1, Valerie de Anda Torres1, Sahil Shan1, and Brett Baker1
+*Mirna Vázquez Rosas Landa1, Valerie de Anda Torres1, Sahil Shan1, and Brett Baker1
 1Marine Science Institute, The University of Texas at Austin 750 Channel View Drive, Port Aransas, TX 78373
 
-
-Although microorganisms play a crucial role in the biogeochemical cycles and ecosystems, most of their diversity is still unknown. Understanding the metabolic potential of novel microbial genomes is an essential first step to access this diversity. Most annotation pipelines use predefined databases to add functional annotation. However, they don't allow the user to add metadata information, making it challenging to explore the metabolism based on a specific scientific question. 
 
 Our motivation to build rRbiMs is to create a workflow that helps researchers to explore metabolism data in a reproducible manner. It includes a custom-curated database that can be easily accessed by the user. rRbiMs key advantages are that 1) allows to incorporate different databases outputs, 2) it is based on modules that allow the user not to use the whole pipeline, and 3) it facilitates the incorporation of user’s metadata such as taxonomy and sampling data information, allowing to answer user-driven specific questions. 
 
@@ -22,33 +20,27 @@ The standard pipeline consists of four steps: read, mapping, sub-setting, and gr
 
 ### KEGG-based annotation analysis
 
-Read the KofamKOALA/KofamScan output.
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-```
-
+Load the package:
 ```{r setup}
-devtools::load_all()
+library(rRbiMs)
 ```
 
-
+Read the KofamKOALA/KofamScan output.
 ```{r}
-raw_ko_output<-read_ko("../data/KEGG_bins.txt")
-class(raw_ko_output)
+raw_ko_output<-read_ko("KEGG_bins.txt")
 ```
 
+Mapped the KO abundance to the main KEGG-based databases.
 ```{r}
 raw_ko_output<-mapping_ko(raw_ko_output)
-class(raw_ko_output)
 ```
 
+Here you can performed analysis using your metadata information. In this case, which KO are only present in the bins found in the water column?
 ```{r}
 ko_subsett<-get_unique(raw_ko_output, metadata, Sample_site, "Water_column")
 ```
+
+Now lets plot the subset. The plot_bubble_percentage will calculate the relative abundance of certain module or pathway in certain bin.
 
 ```{r}
 plot_bubble_percentage(raw_ko_output, metadata, "Bin_name", Pathway, "Percentage", "Clades")
