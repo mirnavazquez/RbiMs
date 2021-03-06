@@ -1,13 +1,15 @@
 # rRbiMs
 
-R tools for reconstructing metabolisms.
+r tools for Reconstructing bin Metabolisms.
 
-Install the package like this:
+## Quick install
 
-``install.packages("devtools")``
+In R terminal
 
-``library(devtools)``
-
-``install_github("mirnavazquez/RbiMs")``
+```
+install.packages("devtools")
+library(devtools)
+install_github("mirnavazquez/RbiMs")
+```
   
 
