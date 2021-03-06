@@ -14,4 +14,4 @@ install_github("mirnavazquez/RbiMs")
   
 ## Overview 
 
-![](rRbiMs-2.png)
+![](inst/rRbiMs-2.png)
