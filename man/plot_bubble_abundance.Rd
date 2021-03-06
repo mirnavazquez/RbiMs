@@ -23,7 +23,7 @@ and contains the most important KO pathways in each Bin.}
 
 \item{y_axis}{is a string of the y axis label.}
 
-\item{size_bubble}{is a variable in tabble_ko specifying the size of bubbles in the bubble plot.}
+\item{size_bubble}{is a column name in tabble_ko specifying the size of bubbles in the bubble plot.}
 
 \item{metadata_feature}{is a string of the column name in the metadata file.}
 }
@@ -35,5 +35,5 @@ This function is part of a package used for
 the analysis of bins metabolism.
 }
 \examples{
-plot_bubble_abundance(Kegg_subset, metadata, "Bin_name", Module, "Abundance", "Clades")
+plot_bubble_abundance(Kegg_subset, metadata, "Bin_name", "Abundance", Module, "Clades")
 }

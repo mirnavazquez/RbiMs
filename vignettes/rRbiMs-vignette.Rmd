@@ -1,0 +1,60 @@
+---
+title: "rRbiMs-vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{rRbiMs-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+### rRbiMs
+
+Mirna Vázquez Rosas Landa1, Valerie de Anda Torres1, Sahil Shan1, and Brett Baker1
+1Marine Science Institute, The University of Texas at Austin 750 Channel View Drive, Port Aransas, TX 78373
+
+
+Although microorganisms play a crucial role in the biogeochemical cycles and ecosystems, most of their diversity is still unknown. Understanding the metabolic potential of novel microbial genomes is an essential first step to access this diversity. Most annotation pipelines use predefined databases to add functional annotation. However, they don't allow the user to add metadata information, making it challenging to explore the metabolism based on a specific scientific question. 
+
+Our motivation to build rRbiMs is to create a workflow that helps researchers to explore metabolism data in a reproducible manner. It includes a custom-curated database that can be easily accessed by the user. rRbiMs key advantages are that 1) allows to incorporate different databases outputs, 2) it is based on modules that allow the user not to use the whole pipeline, and 3) it facilitates the incorporation of user’s metadata such as taxonomy and sampling data information, allowing to answer user-driven specific questions. 
+
+The standard pipeline consists of four steps: read, mapping, sub-setting, and graphic plotting. In a typical workflow, the read and mapping steps utilize the output from KEGG to create a profile-abundance matrix organized by pathways. After mapping, the metadata can be added and used within the sub-setting step, which also allows multivariate analysis. Finally, the plot steps allow the generation of publication-quality figures and the exploration of data through custom visualization. rRbiMs is a user-friendly R workflow that allows the research community to perform reproducible and accurate microbial metabolism analyses.
+
+
+### KEGG-based annotation analysis
+
+Read the KofamKOALA/KofamScan output.
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+devtools::load_all()
+```
+
+
+```{r}
+raw_ko_output<-read_ko("../data/KEGG_bins.txt")
+class(raw_ko_output)
+```
+
+```{r}
+raw_ko_output<-mapping_ko(raw_ko_output)
+class(raw_ko_output)
+```
+
+```{r}
+ko_subsett<-get_unique(raw_ko_output, metadata, Sample_site, "Water_column")
+```
+
+```{r}
+plot_bubble_percentage(raw_ko_output, metadata, "Bin_name", Pathway, "Percentage", "Clades")
+```
+
+
+
+
+

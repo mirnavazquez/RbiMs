@@ -30,7 +30,7 @@ plot_heatmap_abundance<-function(tabble_ko,
     distinct(KO, .keep_all = T) %>%
     column_to_rownames("KO") %>%
     arrange({{ plot_ano_enquo }})
-  ################ Row metadata ##############
+  ################ Col metadata ##############
   metadata_column<- tabble_ko %>% 
     pivot_longer(cols = -c(Module, Module_description, Pathway, 
                            Pathway_description, Genes, 
@@ -44,7 +44,7 @@ plot_heatmap_abundance<-function(tabble_ko,
     column_to_rownames("Bin_name") %>%
     arrange({{ plot_medata_enquo }})
   
-  #######  Reorder the names of rows ##############################
+  #######  Reorder the names of rows and cols ##############################
   sub_samp_ordered <- metabolism.wide[rownames(metadata_hydro_path),]
   sub_samp_ordered_2 <- sub_samp_ordered[,rownames(metadata_column)]
 
