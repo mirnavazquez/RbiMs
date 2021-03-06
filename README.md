@@ -4,7 +4,7 @@ r tools for Reconstructing bin Metabolisms.
 
 ## Quick install
 
-In R terminal
+In R terminal:
 
 ```
 install.packages("devtools")
