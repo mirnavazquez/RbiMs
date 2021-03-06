@@ -12,4 +12,6 @@ library(devtools)
 install_github("mirnavazquez/RbiMs")
 ```
   
+## Overview 
 
+![](rRbiMs-2.png)
