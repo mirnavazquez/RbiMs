@@ -1,8 +1,8 @@
 ---
-title: "rRbiMs-vignette"
+title: "r tools for Reconstructing bin Metabolisms (rRbiMs)"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{rRbiMs-vignette}
+  %\VignetteIndexEntry{r tools for Reconstructing bin Metabolisms (rRbiMs)}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
