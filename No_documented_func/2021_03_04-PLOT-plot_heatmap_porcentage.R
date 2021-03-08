@@ -10,6 +10,7 @@ plot_heatmap_percentage<-function(tabble_ko,
   row_feature_enquo <- enquo(row_feature)
   col_feature_enquo <- enquo(col_feature)
   metadata_feature_label <- as_label(metadata_feature_enquo)
+  row_feature_label <- as_label(row_feature_enquo)
   #################### Transform from wide to long ####################
   Kegg_long<- tabble_ko %>%
     pivot_longer(cols = -c(Module, Module_description, Pathway, 
@@ -63,20 +64,15 @@ plot_heatmap_percentage<-function(tabble_ko,
     rename_all(
       list( ~ stringr::str_replace_all(., ".x", ""))
     ) %>%
-    column_to_rownames(metadata_feature_enquo)
-  
-  return(Table_with_percentage)
-}
-
-plot_heatmap_percentage(subset_mapped, metadata, Pathway, Modules,Clades)
+    column_to_rownames(metadata_feature_label)
 
     ################ Row metadata ##############
     metadata_hydro_path<- tabble_ko %>%
       select({{metadata_feature_enquo}}, {{row_feature_enquo}}) %>%
       drop_na() %>%
-      distinct(Pathway_description, .keep_all = T) %>%
-      column_to_rownames(metadata_feature_enquo) %>%
-      arrange(!!col_feature_enquo)
+      distinct(.data[[metadata_feature_enquo]], .keep_all = T) %>%
+      column_to_rownames(metadata_feature_label) %>%
+      arrange(!!row_feature_enquo)
     ################ Col metadata ##############
     metadata_column<- tabble_ko %>% 
       pivot_longer(cols = -c(Module, Module_description, Pathway, 
@@ -86,11 +82,11 @@ plot_heatmap_percentage(subset_mapped, metadata, Pathway, Modules,Clades)
                    names_to="Bin_name") %>%
       distinct() %>%
       left_join(other_data, by="Bin_name") %>%
-      select( Bin_name, {{row_feature_enquo}}) %>%
+      select( Bin_name, {{col_feature_enquo}}) %>%
       drop_na() %>%
       distinct(Bin_name, .keep_all = T) %>%
       column_to_rownames("Bin_name") %>%
-      arrange(!!row_feature_enquo)
+      arrange(!!col_feature_enquo)
     
     #######  Reorder the names of rows and cols ##############################
     sub_samp_ordered <- Table_with_percentage[rownames(metadata_hydro_path),]
@@ -102,9 +98,12 @@ plot_heatmap_percentage(subset_mapped, metadata, Pathway, Modules,Clades)
                                        annotation_col = metadata_column,
                                        cluster_rows = F,
                                        cluster_cols = F)
+    
     return(metabolism.wide_pheatmap)
 }
-    
+
+plot_heatmap_percentage(ko_subsett, metadata, Pathway, Module, Clades)
+
   
   
   
