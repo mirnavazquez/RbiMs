@@ -9,9 +9,9 @@
 #' @param metadata_feature is a string of the column name in the metadata file.
 #' @details This function is part of a package used for 
 #' the analysis of bins metabolism.
-#' @import dplyr ggplot2
+#' @import dplyr ggplot2 rlang
 #' @examples
-#' plot_bubble_abundance(Kegg_subset, metadata, "Bin_name", "Abundance", Module, "Clades")
+#' plot_bubble_abundance(ko_bin_mapp, metadata, "Bin_name", "Abundance", Module, "Clades")
 #' @export
 plot_bubble_abundance<-function(tabble_ko,
                                 other_data,
@@ -24,15 +24,17 @@ plot_bubble_abundance<-function(tabble_ko,
   met_features_x <- as_label(met_features)
   other_features_x <- as_label(metadata_feature)
   ######################## Parsing the table ########################
+  data_to_select<-c("Module", "Module_description", "Pathway", 
+                    "Pathway_description", "Genes", 
+                    "Gene_description", "Enzyme", "Cycle", "Pathway_cycle",
+                    "Detail_cycle")
     kegg_longer<-tabble_ko %>%
-    pivot_longer(cols = -c(Module, Module_description, Pathway, 
-                           Pathway_description, Genes, 
-                           Gene_description, Enzyme, KO),  
+    pivot_longer(cols = -data_to_select,  
                  names_to = "Bin_name", 
                  values_to = "Abundance") %>%
     distinct() %>%
     mutate_at('Abundance', as.integer) %>%
-    select(all_of(met_features_x), Bin_name, Abundance) %>%
+    select(all_of(met_features_x), .data$Bin_name, .data$Abundance) %>%
     distinct() %>%
     drop_na() %>%
     left_join(other_data, by="Bin_name") %>%

@@ -1,5 +1,5 @@
 Package: rRbiMs
-Title: R tools to uncover Bin MetaboliSm.
+Title: R tools for reconstruncting bin Metabolisms
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Mirna",
@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "mirnavrl@austin.utexas.edu",
            comment = c(ORCID = "0000-0002-6928-7930"))
-Description: A package used for the analysis of microbial metabolism.
+Description: rRbiMs is a package used for the analysis of microbial metabolism. rRbiMs reads different database outputs and includes a new custom-curated database that the user can easily access. Its module-based design allows the user to choose between running the whole pipeline or just part of it. Finally, a key feature is that it facilitates the incorporation of metadata such as taxonomy and sampling data, allowing the user to answer specific questions of biological relevance.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -17,3 +17,18 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+Imports: 
+    KEGGREST,
+    dplyr,
+    factoextra,
+    ggplot2,
+    janitor,
+    pheatmap,
+    readr,
+    stringr,
+    tibble,
+    tidyr,
+    rlang
+    
+    
+

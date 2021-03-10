@@ -7,9 +7,9 @@
 #' @param interest_feature is a string of the metadata feature of interest found under the 
 #' type_of_interest_feature value column.
 #' @details This function is part of a package used for the analysis of bins metabolism.
-#' @import dplyr
+#' @import dplyr rlang
 #' @examples
-#' get_unique(kegg_mapped, metadata, Sample_site, "Water_column")
+#' get_unique(ko_bin_mapp, metadata, Sample_site, "Water_column")
 #' @export
 get_unique<-function(mapped_ko_table, 
                      other_data,
@@ -19,10 +19,12 @@ get_unique<-function(mapped_ko_table,
   all_features <- enquo(type_of_interest_feature)
   all_features_x <- as_label(all_features)
   ############################# Parse the mapped ko table ###################
+  data_to_select<-c("Module", "Module_description", "Pathway", 
+                    "Pathway_description", "Genes", 
+                    "Gene_description", "Enzyme", "Cycle", "Pathway_cycle",
+                    "Detail_cycle")
   mapped_ko_table_KO<-mapped_ko_table %>%
-    select(-c(Module, Module_description, Pathway, 
-              Pathway_description, Genes, 
-              Gene_description, Enzyme)) %>%
+    select(-all_of(data_to_select)) %>%
     distinct() %>%
     column_to_rownames("KO") 
   ############################# Transpose the table ########################
@@ -55,6 +57,6 @@ get_unique<-function(mapped_ko_table,
   }
   ########################## Extract the values #############################
   final_table <- mapped_ko_table %>%
-    filter(KO %in% uniquePFAMs)
+    filter(.data$KO %in% uniquePFAMs)
   return(final_table)
 }

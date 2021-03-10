@@ -6,9 +6,9 @@
 #' @param plot_ano is a column name of the KO module of interest in tabble_ko.
 #' @param plot_medata is the column of interest in the metadata file.
 #' @details This function is part of a package used for the analysis of bins metabolism.
-#' @import pheatmap
+#' @import pheatmap rlang
 #' @examples
-#' plot_heatmap_abundance(kegg_map, metadata, Module, Sample_site)
+#' plot_heatmap_abundance(ko_bin_mapp, metadata, Module, Sample_site)
 #' @export
 plot_heatmap_abundance<-function(tabble_ko, 
                                  other_data,
@@ -36,20 +36,22 @@ plot_heatmap_abundance<-function(tabble_ko,
   metadata_hydro_path<- tabble_ko %>%
     select( "KO", {{ plot_ano_enquo }}) %>%
     drop_na() %>%
-    distinct(KO, .keep_all = T) %>%
+    distinct(.data$KO, .keep_all = T) %>%
     column_to_rownames("KO") %>%
     arrange({{ plot_ano_enquo }})
   ################ Row metadata ##############
+  data_to_select<-c("Module", "Module_description", "Pathway", 
+                    "Pathway_description", "Genes", 
+                    "Gene_description", "Enzyme", "Cycle", "Pathway_cycle",
+                    "Detail_cycle")
   metadata_column<- tabble_ko %>% 
-    pivot_longer(cols = -c(Module, Module_description, Pathway, 
-                           Pathway_description, Genes, 
-                           Gene_description, Enzyme, KO), values_to = "Abundance",
+    pivot_longer(cols = -data_to_select, values_to = "Abundance",
                  names_to="Bin_name") %>%
     distinct() %>%
     left_join(other_data, by="Bin_name") %>%
     select( "Bin_name", {{ plot_medata_enquo }}) %>%
     drop_na() %>%
-    distinct(Bin_name, .keep_all = T) %>%
+    distinct(.data$Bin_name, .keep_all = T) %>%
     column_to_rownames("Bin_name") %>%
     arrange({{ plot_medata_enquo }})
   

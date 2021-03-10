@@ -8,9 +8,9 @@
 #' @param size_bubble is a variable in tabble_ko specifying the size of bubbles in the bubble plot. 
 #' @param metadata_feature is a string of the column name in the metadata file.
 #' @details This function is part of a package used for the analysis of bins metabolism.
-#' @import ggplot2 dplyr
+#' @import ggplot2 dplyr rlang
 #' @examples
-#' plot_bubble_percentage(kegg_map, metadata, "Bin_name", Module, "Percentage", "Clades")
+#' plot_bubble_percentage(ko_bin_mapp, metadata, "Bin_name", Module, "Percentage", "Clades")
 #' @export
 plot_bubble_percentage<-function(tabble_ko,
                                 other_data, 
@@ -23,32 +23,34 @@ plot_bubble_percentage<-function(tabble_ko,
   met_features_y <- as_label(y_axis_features)
   other_features_x <- as_label(metadata_feature)
   #################### Transform from wide to long ####################
+  data_to_select<-c("Module", "Module_description", "Pathway", 
+                    "Pathway_description", "Genes", 
+                    "Gene_description", "Enzyme", "Cycle", "Pathway_cycle",
+                    "Detail_cycle")
   Kegg_long<- tabble_ko %>%
-  pivot_longer(cols = -c(Module, Module_description, Pathway, 
-            Pathway_description, Genes, 
-            Gene_description, Enzyme, KO), values_to = "Abundance",
+  pivot_longer(cols = -data_to_select, values_to = "Abundance",
             names_to="Bin_name") %>%
   distinct()
   ######### Count the total number of genes per metabolism ########
   metabolism_counts_totals<-Kegg_long %>%
-    select(all_of(met_features_y), KO) %>%
+    select(all_of(met_features_y), .data$KO) %>%
     distinct() %>%
     count(!!y_axis_features, sort=T) %>%
     rename(Abundance_metabolism=n)
   ## Count the total number of genes per metabolism in each genome ##
   metabolism_counts_genome<-Kegg_long %>%
-    select(all_of(met_features_y), Bin_name, KO, Abundance) %>%
+    select(all_of(met_features_y), .data$Bin_name, .data$KO, .data$Abundance) %>%
     distinct() %>%
-    filter(Abundance != "0") %>%
-    group_by(Bin_name) %>%
+    filter(.data$Abundance != "0") %>%
+    group_by(.data$Bin_name) %>%
     count(!!y_axis_features) %>%
     rename(Abundance_metabolism_genome=n)
   ############### Join and calculate the percentage #################
   Table_with_percentage<- left_join(
     metabolism_counts_genome, metabolism_counts_totals, 
     by=met_features_y) %>%
-    mutate(Percentage = (Abundance_metabolism_genome * 100) / Abundance_metabolism ) %>%
-    select(all_of(met_features_y), Bin_name, Percentage) %>%
+    mutate(Percentage = (.data$Abundance_metabolism_genome * 100) / .data$Abundance_metabolism ) %>%
+    select(all_of(met_features_y), .data$Bin_name, .data$Percentage) %>%
     distinct() %>%
     drop_na() %>%
     left_join(other_data, by="Bin_name")
