@@ -1,12 +1,11 @@
-#' @title Visualize Bin abundance data
-#' @description Creates a bubble plot of each Bin's abundance.
-#' @param tabble_ko is a table object from the get_pca_metabolism function
-#' and contains the most important KO pathways in each Bin. 
-#' @param other_data is a table object containing metadata information. 
-#' @param x_axis is a string of the x axis label.
-#' @param y_axis is a string of the y axis label. 
-#' @param size_bubble is a column name in tabble_ko specifying the size of bubbles in the bubble plot. 
-#' @param metadata_feature is a string of the column name in the metadata file.
+#' @title Bubble plot of KO/Pathways/Modules abundance within each Bin.
+#' @description Creates a bubble plot of KO/Pathways/Modules abundance within each bin. It uses the metadata information to color bubbles.
+#' @param tabble_ko a data frame object, created with the mapping_ko or get_subset_* functions.
+#' @param other_data a data frame object containing metadata information. 
+#' @param x_axis a string, it determined the x axis label.
+#' @param y_axis a string, it determined the y axis label.
+#' @param size_bubble the Abundance string. It specifies the size of bubbles in the bubble plot. 
+#' @param metadata_feature  a string column name of the metadata object, used for color.
 #' @details This function is part of a package used for 
 #' the analysis of bins metabolism.
 #' @import dplyr ggplot2 rlang

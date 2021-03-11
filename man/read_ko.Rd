@@ -2,17 +2,16 @@
 % Please edit documentation in R/2021_02_25-READ-read_ko.R
 \name{read_ko}
 \alias{read_ko}
-\title{Reads the output of KofamScan or KofamKoala}
+\title{Read the output of KofamScan or KofamKoala}
 \usage{
 read_ko(ko_result)
 }
 \arguments{
-\item{ko_result}{is a string of the KEGG output table file.
-Contigs are expected to be named similar to bin_scaffoldXX.}
+\item{ko_result}{a data frame with 5 columns. Contigs are expected to be named similar to bin_scaffoldXX.}
 }
 \description{
-Calculates the abundance of each KO within the
-Bins of KofamScan or KofamKoala data.
+read_ko() calculates the abundance of each KO within the
+Bins based on the KofamScan or KofamKoala output.
 }
 \details{
 This function is part of a package used for the analysis of bins metabolism.

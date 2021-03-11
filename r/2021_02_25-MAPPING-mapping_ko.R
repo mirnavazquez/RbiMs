@@ -1,7 +1,7 @@
 #' @title Maps KOs to the KEGG database
 #' @description Reads a table object created with the read_ko function 
 #' and maps each KO to the KEGG database.
-#' @param ko_abundance_table is a table object containing the KO abundance 
+#' @param ko_abundance_table a data frame object with four columns containing the KO abundance 
 #' for each Bin.
 #' @details This function is part of a package used for the analysis of bins metabolism.
 #' @import KEGGREST tibble dplyr stringr tidyr janitor rlang

@@ -2,22 +2,21 @@
 % Please edit documentation in R/2021_02_25-PLOT-plot_heatmap_abundace.R
 \name{plot_heatmap_abundance}
 \alias{plot_heatmap_abundance}
-\title{Visualize bin abundance as a heatmap}
+\title{Heatmap plot of KO abundance within each Bin.}
 \usage{
 plot_heatmap_abundance(tabble_ko, other_data, plot_ano, plot_medata)
 }
 \arguments{
-\item{tabble_ko}{is a table object from the get_pca_metabolism function
-and contains the most important KO pathways in each Bin.}
+\item{tabble_ko}{a data frame object, created with the mapping_ko or get_subset_* functions.}
 
-\item{other_data}{is a table object containing metadata information.}
+\item{other_data}{a data frame object containing metadata information.}
 
-\item{plot_ano}{is a column name of the KO of interest in tabble_ko.}
+\item{plot_ano}{is a column name indicating the annotation if rows. This column name comes from the mapping_ko or get_subset_* object.}
 
-\item{plot_medata}{is the column of interest in the metadata file.}
+\item{plot_medata}{is a column name indicating the annotation if cols. This column name comes from the metadata object.}
 }
 \description{
-Creates a heatmap of each Bin's abundance.
+Creates a heatmap of KO abundance.
 }
 \details{
 This function is part of a package used for the analysis of bins metabolism.

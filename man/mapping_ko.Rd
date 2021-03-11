@@ -7,7 +7,7 @@
 mapping_ko(ko_abundance_table)
 }
 \arguments{
-\item{ko_abundance_table}{is a table object containing the KO abundance
+\item{ko_abundance_table}{a data frame object with four columns containing the KO abundance
 for each Bin.}
 }
 \description{

@@ -1,8 +1,7 @@
-#' @title Reads the output of KofamScan or KofamKoala
-#' @description Calculates the abundance of each KO within the 
-#' Bins of KofamScan or KofamKoala data.
-#' @param ko_result is a string of the KEGG output table file. 
-#' Contigs are expected to be named similar to bin_scaffoldXX.
+#' @title Read the output of KofamScan or KofamKoala
+#' @description read_ko() calculates the abundance of each KO within the 
+#' Bins based on the KofamScan or KofamKoala output.
+#' @param ko_result a data frame with 5 columns. Contigs are expected to be named similar to bin_scaffoldXX.
 #' @details This function is part of a package used for the analysis of bins metabolism.
 #' @import dplyr tidyr readr stringr rlang
 #' @examples

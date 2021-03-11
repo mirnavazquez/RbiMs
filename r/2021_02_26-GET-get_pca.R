@@ -1,14 +1,13 @@
-#' @title Obtains PCA data of KO pathways 
-#' @description Identifies the most important KO pathways in each Bin.
-#' @param ko_table is a table object created with the get_unique function
-#' and contains unique KOs.
+#' @title Obtains PCA data of KO pathways. 
+#' @description Identifies the most important KO pathways in the whole databse.
+#' @param ko_table a data frame object, created with the mapping_ko or get_subset_* functions. 
 #' @details This function is part of a package used for 
 #' the analysis of bins metabolism.
 #' @import dplyr factoextra rlang tibble
 #' @examples
-#' get_pca_metabolism(ko_bin_mapp)
+#' get_subset_pca(ko_bin_mapp)
 #' @export
-get_pca_metabolism<-function(ko_table){
+get_subset_pca<-function(ko_table){
 ##################### Read the input table ########################
   data_to_select<-c("Module", "Module_description", "Pathway", 
                     "Pathway_description", "Genes", 

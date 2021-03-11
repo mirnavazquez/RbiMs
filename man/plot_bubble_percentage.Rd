@@ -2,7 +2,7 @@
 % Please edit documentation in R/2021_02_25-PLOT-plot_bubble_percentage.R
 \name{plot_bubble_percentage}
 \alias{plot_bubble_percentage}
-\title{Visualize bin abundance as a percentage}
+\title{Bubble plot of KO/Pathways/Modules and its relative abundance within each Bin.}
 \usage{
 plot_bubble_percentage(
   tabble_ko,
@@ -14,21 +14,20 @@ plot_bubble_percentage(
 )
 }
 \arguments{
-\item{tabble_ko}{is a table object from the get_pca_metabolism function
-and contains the most important KO pathways in each Bin.}
+\item{tabble_ko}{a data frame object, created with the mapping_ko or get_subset_* functions.}
 
-\item{other_data}{is a table object containing metadata information.}
+\item{other_data}{a data frame object containing metadata information.}
 
-\item{x_axis}{is a string of the x axis label.}
+\item{x_axis}{a string, it determined the x axis label.}
 
-\item{y_axis}{is a string of the y axis label.}
+\item{y_axis}{a string, it determined the y axis label.}
 
-\item{size_bubble}{is a variable in tabble_ko specifying the size of bubbles in the bubble plot.}
+\item{size_bubble}{the Percentage string. It specifies the size of bubbles in the bubble plot.}
 
-\item{metadata_feature}{is a string of the column name in the metadata file.}
+\item{metadata_feature}{a string column name of the metadata object, used for color.}
 }
 \description{
-Creates a bubble plot of each Bin's abundance by percentage.
+Creates a bubble plot of KO/Pathways/Modules relative abundance within each bin. It uses the metadata information to color bubbles.
 }
 \details{
 This function is part of a package used for the analysis of bins metabolism.

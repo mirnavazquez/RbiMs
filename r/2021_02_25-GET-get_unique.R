@@ -1,17 +1,17 @@
-#' @title Identifies unique KOs in the data
-#' @description reads the output of the mapping_ko function 
-#' to filter out KOs that are not mapped to a unique protein family.
-#' @param mapped_ko_table is the output table from the mapping_ko function. 
-#' @param other_data is a table that contains the necessary metadata. 
-#' @param type_of_interest_feature is the metadata column name containing different features. 
-#' @param interest_feature is a string of the metadata feature of interest found under the 
-#' type_of_interest_feature value column.
+#' @title Subsets the mapped KO table based on metadata to identify 
+#' KOs only present in a specific metadata group (i.e. KOs only present in Deltas and absent in the rest of database).
+#' @description reads the output of the mapping_ko function to filter out KOs 
+#' based on metadata and identify KOs only present in a particular metadata group.
+#' @param mapped_ko_table a data frame object. The output table from the mapping_ko function. 
+#' @param other_data a data frame object that contains the metadata (i.e. Taxonomy, sampling site). 
+#' @param type_of_interest_feature is a metadata column name. This feature is going to be used for subsetting.  
+#' @param interest_feature a string of the metadata feature of interest. It is found under the type_of_interest_feature value column.
 #' @details This function is part of a package used for the analysis of bins metabolism.
 #' @import dplyr rlang
 #' @examples
-#' get_unique(ko_bin_mapp, metadata, Sample_site, "Water_column")
+#' get_subset_unique(ko_bin_mapp, metadata, Sample_site, "Water_column")
 #' @export
-get_unique<-function(mapped_ko_table, 
+get_subset_unique<-function(mapped_ko_table, 
                      other_data,
                      type_of_interest_feature, 
                      interest_feature){

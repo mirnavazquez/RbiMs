@@ -1,10 +1,9 @@
-#' @title Visualize bin abundance as a heatmap
-#' @description Creates a heatmap of each Bin's abundance.
-#' @param tabble_ko is a table object from the get_pca_metabolism function
-#' and contains the most important KO pathways in each Bin.
-#' @param other_data is a table object containing metadata information. 
-#' @param plot_ano is a column name of the KO of interest in tabble_ko.
-#' @param plot_medata is the column of interest in the metadata file.
+#' @title Heatmap plot of KO abundance within each Bin.
+#' @description Creates a heatmap of KO abundance.
+#' @param tabble_ko a data frame object, created with the mapping_ko or get_subset_* functions.
+#' @param other_data a data frame object containing metadata information.
+#' @param plot_ano is a column name indicating the annotation if rows. This column name comes from the mapping_ko or get_subset_* object.
+#' @param plot_medata is a column name indicating the annotation if cols. This column name comes from the metadata object.
 #' @details This function is part of a package used for the analysis of bins metabolism.
 #' @import pheatmap rlang
 #' @examples
