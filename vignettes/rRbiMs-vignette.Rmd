@@ -1,0 +1,56 @@
+---
+title: "r tools for Reconstructing bin Metabolisms (rRbiMs)"
+author: "Mirna Vázquez Rosas Landa, Valerie de Anda Torres, Sahil Shan, and Brett Baker"
+date: "`r Sys.Date()`"
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+vignette: >
+  %\VignetteIndexEntry{r tools for Reconstructing bin Metabolisms (rRbiMs)}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+Our motivation to build rRbiMs is to create a workflow that helps researchers to explore metabolism data in a reproducible manner. It includes a custom-curated database that can be easily accessed by the user. rRbiMs key advantages are that 1) allows to incorporate different databases outputs, 2) it is based on modules that allow the user not to use the whole pipeline, and 3) it facilitates the incorporation of user’s metadata such as taxonomy and sampling data information, allowing to answer user-driven specific questions. 
+
+The standard pipeline consists of four steps: read, mapping, sub-setting, and graphic plotting. In a typical workflow, the read and mapping steps utilize the output from KEGG to create a profile-abundance matrix organized by pathways. After mapping, the metadata can be added and used within the sub-setting step, which also allows multivariate analysis. Finally, the plot steps allow the generation of publication-quality figures and the exploration of data through custom visualization. rRbiMs is a user-friendly R workflow that allows the research community to perform reproducible and accurate microbial metabolism analyses.
+
+## KEGG-based annotation analysis
+
+```{r load package, eval=FALSE}
+library(rRbiMs)
+```
+
+Read the KofamKOALA/KofamScan output.
+```{r eval=FALSE}
+ko_bin_table<-read_ko("KEGG_bins.txt")
+```
+
+The read_ko function will create a table that contains the abundance of each KO within each bin. 
+
+Now we will use the function mapping_ko to map the KO ids to the main KEGG-based database.
+```{r, eval=FALSE}
+ko_bin_mapp<-mapping_ko(ko_bin_table)
+```
+
+Here you can performed analysis using your metadata information. 
+```{r, eval=FALSE}
+metadata<-read_excel("metadata.xlsx")
+```
+
+In this case, which KO are only present in the bins found in the water column?
+```{r, eval=FALSE}
+ko_subsett<-get_unique(ko_bin_mapp, metadata, Sample_site, "Water_column")
+```
+
+Now lets plot the subset. The plot_bubble_percentage will calculate the relative abundance of certain module or pathway in certain bin. The functions allow to color code according to any metadata information.
+
+```{r, eval=FALSE}
+plot_bubble_percentage(ko_bin_mapp, metadata, Bin_name, Pathway, Percentage, Clades)
+```
+
+
+
+
+
