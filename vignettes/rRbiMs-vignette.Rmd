@@ -1,5 +1,5 @@
 ---
-title: "r tools for Reconstructing bin Metabolisms (rRbiMs)"
+title: "rRbiMs"
 author: "Mirna Vázquez Rosas Landa, Valerie de Anda Torres, Sahil Shan, and Brett Baker"
 date: "`r Sys.Date()`"
 output:
@@ -7,48 +7,130 @@ output:
     theme: cayman
     highlight: github
 vignette: >
-  %\VignetteIndexEntry{r tools for Reconstructing bin Metabolisms (rRbiMs)}
+  %\VignetteIndexEntry{rRbiMs}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
-Our motivation to build rRbiMs is to create a workflow that helps researchers to explore metabolism data in a reproducible manner. It includes a custom-curated database that can be easily accessed by the user. rRbiMs key advantages are that 1) allows to incorporate different databases outputs, 2) it is based on modules that allow the user not to use the whole pipeline, and 3) it facilitates the incorporation of user’s metadata such as taxonomy and sampling data information, allowing to answer user-driven specific questions. 
+rRbiMs is a user-friendly R workflow to infer metabolic potentials from unannotated genomes in an accurate and reproducible manner.
 
-The standard pipeline consists of four steps: read, mapping, sub-setting, and graphic plotting. In a typical workflow, the read and mapping steps utilize the output from KEGG to create a profile-abundance matrix organized by pathways. After mapping, the metadata can be added and used within the sub-setting step, which also allows multivariate analysis. Finally, the plot steps allow the generation of publication-quality figures and the exploration of data through custom visualization. rRbiMs is a user-friendly R workflow that allows the research community to perform reproducible and accurate microbial metabolism analyses.
+Most annotation pipelines use predefined databases to add the functional annotation. However, they do not allow the user to add metadata information, making it challenging to explore the metabolism based on a specific scientific question. Our motivation to build the package rRbiMs is to create a workflow that helps researchers to explore metabolism data in a reproducible manner. rRbiMs reads different database outputs and includes a new custom-curated database that the user can easily access. Its module-based design allows the user to choose between running the whole pipeline or just part of it. A key feature is that it facilitates the incorporation of metadata such as taxonomy and sampling data, allowing the user to answer specific questions of biological relevance.
 
-## KEGG-based annotation analysis
+The standard pipeline consists of four steps: read, mapping, sub-setting, and graphic plotting. In a typical workflow, the read and mapping steps utilize the output from KEGG to create a profile-abundance matrix organized by pathways. After mapping, the metadata can be added and used within the sub-setting step, which also allows multivariate analysis. Finally, the plot steps allow the generation of publication-quality figures and the exploration of data through custom visualization.
+
+## KEGG-based profile
 
 ```{r load package, eval=FALSE}
 library(rRbiMs)
 ```
 
 Read the KofamKOALA/KofamScan output.
+
+The function that rRbiMs use to read the input table is `read_ko`. And it reads the raw output from the  KofamKOALA/KofamScan programs. 
+
+```{r eval=FALSE}
+?read_ko
+```
+
+`rRbiMs` contains external data that allow us to test this function. You can load the file from here (https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/KEGG_bins.txt) and try. 
+
 ```{r eval=FALSE}
 ko_bin_table<-read_ko("KEGG_bins.txt")
 ```
 
 The read_ko function will create a table that contains the abundance of each KO within each bin. 
 
-Now we will use the function mapping_ko to map the KO ids to the main KEGG-based database.
+```{r eval=FALSE}
+head(ko_bin_table)
+```
+
+Now we will use the function mapping_ko to map the KO ids to the main KEGG-based database. For now it just includes the KEGG database and DiTing database (https://github.com/xuechunxu/DiTing).
+
+```{r eval=FALSE}
+?mapping_ko
+```
+
 ```{r, eval=FALSE}
 ko_bin_mapp<-mapping_ko(ko_bin_table)
 ```
 
-Here you can performed analysis using your metadata information. 
+This will create a profile-abundance matrix organized by pathways.
+
+```{r, eval=FALSE}
+head(ko_bin_mapp)
+```
+
+## Profile subsetting 
+
+Currently there are two functions to help you understand the profile, `get_subset_pca` and `get_subset_unique`.  The first function makes a principal component analysis to identify the most important KO in the data set, while the second function use the metadata information to identify KO that are only present in certain group of bins. 
+
+First, lets load the metadata. 
+
+To read the metadata we will use the function `read_excel` from the package `readxl`, if you dont have it install it, please do. Then you can download the file from here: https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/metadata.xlsx, and try.
+
 ```{r, eval=FALSE}
 metadata<-read_excel("metadata.xlsx")
 ```
 
-In this case, which KO are only present in the bins found in the water column?
-```{r, eval=FALSE}
-ko_subsett<-get_unique(ko_bin_mapp, metadata, Sample_site, "Water_column")
-```
+Now lets consider a case where we have bins from two sampling sites, water column and sediments and we want to know which KO are only present in the bins found in the water column?
 
-Now lets plot the subset. The plot_bubble_percentage will calculate the relative abundance of certain module or pathway in certain bin. The functions allow to color code according to any metadata information.
+To do so we can use the function `get_subset_unique` and the metadata information like this: 
 
 ```{r, eval=FALSE}
-plot_bubble_percentage(ko_bin_mapp, metadata, Bin_name, Pathway, Percentage, Clades)
+?get_subset_unique
 ```
+
+```{r, eval=FALSE}
+ko_subsett<-get_subset_unique(ko_bin_mapp, metadata, Sample_site, "Water_column")
+```
+
+If you check the dimention of this new object and compare it with the original mapping object, you may be able to see the difference. 
+
+```{r, eval=FALSE}
+dim(ko_subsett)     
+dim(ko_bin_mapp)  
+```
+
+## Profile plots 
+
+`rRbiMs` for now support two types of analysis for visualization, `Raw abundance` and `Relative abundance`, this two analysis can be plot in `bubble plots` or `heatmaps`.
+
+You can use the funtion colnames to know what type of arguments you can use within the functios.
+
+```{r, eval=FALSE}
+colnames(ko_bin_mapp)
+colnames(metadata)
+```
+
+
+The `Raw abundance` analysis show the abundance of each metabolism in an specific genome. 
+
+```{r, eval=FALSE}
+plot_bubble_abundance(ko_bin_mapp, metadata, Bin_name, Cycle, Genus)
+```
+
+While `Relative abundance` analysis normalize each metabolism by the number of KO componing an specific metabolism.
+
+```{r, eval=FALSE}
+plot_bubble_percentage(ko_bin_mapp, metadata, Bin_name, Cycle, Genus)
+```
+
+The heatmap functions work similar, but they allow to show better the metadata.
+
+```{r, eval=FALSE}
+plot_heatmap_percentage(ko_bin_mapp, metadata, KO, Cycle, Species) 
+```
+
+In the case of the abundance function, you will be always looking at the abundance of KO and the with the annotation you will be able to see how is this KO related to other categories of metabolism. 
+
+```{r, eval=FALSE}
+plot_heatmap_abundance(ko_bin_mapp, metadata, Cycle, Species)
+```
+
+
+
+
+
 
 
 
