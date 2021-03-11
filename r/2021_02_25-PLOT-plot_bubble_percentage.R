@@ -4,23 +4,20 @@
 #' @param other_data a data frame object containing metadata information. 
 #' @param x_axis a string, it determined the x axis label.
 #' @param y_axis a string, it determined the y axis label. 
-#' @param size_bubble the Percentage string. It specifies the size of bubbles in the bubble plot.  
 #' @param metadata_feature a string column name of the metadata object, used for color.
 #' @details This function is part of a package used for the analysis of bins metabolism.
 #' @import ggplot2 dplyr rlang
 #' @examples
-#' plot_bubble_percentage(ko_bin_mapp, metadata, Bin_name, Pathway, Percentage, Clades)
+#' plot_bubble_percentage(ko_bin_mapp, metadata, Bin_name, Module, Clades)
 #' @export
 plot_bubble_percentage<-function(tabble_ko,
                                  other_data, 
                                  x_axis,
                                  y_axis,
-                                 size_bubble, 
                                  metadata_feature){
   ############################ quoting ##############################
   x_axis_enquo <- enquo(x_axis)
   y_axis_enquo <- enquo(y_axis)
-  size_bubble_enquo <- enquo(size_bubble)
   metadata_feature_enquo <- enquo(metadata_feature)
   y_axis_label <- as_label(y_axis_enquo)
   #################### Transform from wide to long ####################
@@ -59,7 +56,7 @@ plot_bubble_percentage<-function(tabble_ko,
   Table_with_percentage_plot<-ggplot(Table_with_percentage,
                                      aes(x= !!x_axis_enquo, 
                                          y= !! y_axis_enquo, 
-                                         size= !!size_bubble_enquo,
+                                         size= .data$Percentage,
                                          color= !!metadata_feature_enquo)) +
     geom_point(alpha=0.5) +
     scale_size(range = c(1,5)) +
