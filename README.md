@@ -7,9 +7,14 @@ r tools for Reconstructing bin Metabolisms.
 In R terminal:
 
 ```
-install.packages("devtools")
+if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+BiocManager::install(c("KEGGREST", "devtools"))
+```
+
+```
 library(devtools)
 install_github("mirnavazquez/RbiMs")
+library(rRbiMs)
 ```
   
 ## Overview 
