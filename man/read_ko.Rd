@@ -18,5 +18,7 @@ Bins of KofamScan or KofamKoala data.
 This function is part of a package used for the analysis of bins metabolism.
 }
 \examples{
-read_ko("data/KEGG_bins.txt")
+\dontrun{
+read_ko("KEGG_bins.txt")
+}
 }

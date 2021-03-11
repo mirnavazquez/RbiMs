@@ -6,7 +6,9 @@
 #' @details This function is part of a package used for the analysis of bins metabolism.
 #' @import dplyr tidyr readr stringr rlang
 #' @examples
-#' read_ko("data/KEGG_bins.txt")
+#' \dontrun{
+#' read_ko("KEGG_bins.txt")
+#' }
 #' @export
 read_ko<-function(ko_result){
   KO_raw<-suppressWarnings(read_table2(ko_result, col_names = F) %>%

@@ -14,6 +14,9 @@ plot_bubble_percentage(
 )
 }
 \arguments{
+\item{tabble_ko}{is a table object from the get_pca_metabolism function
+and contains the most important KO pathways in each Bin.}
+
 \item{other_data}{is a table object containing metadata information.}
 
 \item{x_axis}{is a string of the x axis label.}
@@ -26,12 +29,10 @@ plot_bubble_percentage(
 }
 \description{
 Creates a bubble plot of each Bin's abundance by percentage.
-#' @param tabble_ko is a table object from the get_pca_metabolism function
-and contains the most important KO pathways in each Bin.
 }
 \details{
 This function is part of a package used for the analysis of bins metabolism.
 }
 \examples{
-plot_bubble_percentage(ko_bin_mapp, metadata, "Bin_name", Module, "Percentage", "Clades")
+plot_bubble_percentage(ko_bin_mapp, metadata, Bin_name, Pathway, Percentage, Clades)
 }

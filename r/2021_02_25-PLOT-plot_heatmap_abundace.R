@@ -3,7 +3,7 @@
 #' @param tabble_ko is a table object from the get_pca_metabolism function
 #' and contains the most important KO pathways in each Bin.
 #' @param other_data is a table object containing metadata information. 
-#' @param plot_ano is a column name of the KO module of interest in tabble_ko.
+#' @param plot_ano is a column name of the KO of interest in tabble_ko.
 #' @param plot_medata is the column of interest in the metadata file.
 #' @details This function is part of a package used for the analysis of bins metabolism.
 #' @import pheatmap rlang
@@ -22,7 +22,8 @@ plot_heatmap_abundance<-function(tabble_ko,
   tabble_ko_colnames<-colnames(tabble_ko)
   paths<-c("Module", "Module_description", "Pathway", 
            "Pathway_description", "Genes", 
-           "Gene_description", "Enzyme", "KO")
+           "Gene_description", "Enzyme", "KO", "Cycle", "Pathway_cycle",
+           "Detail_cycle")
   tabble_ko_colnames_2 <- tabble_ko_colnames[tabble_ko_colnames %in% paths]
   tabble_ko_colnames_3 <- tabble_ko_colnames_2[!tabble_ko_colnames_2 %in% "KO"]
   both_paths<-c("KO", plot_ano_label)
@@ -43,7 +44,7 @@ plot_heatmap_abundance<-function(tabble_ko,
   data_to_select<-c("Module", "Module_description", "Pathway", 
                     "Pathway_description", "Genes", 
                     "Gene_description", "Enzyme", "Cycle", "Pathway_cycle",
-                    "Detail_cycle")
+                    "Detail_cycle", "KO")
   metadata_column<- tabble_ko %>% 
     pivot_longer(cols = -data_to_select, values_to = "Abundance",
                  names_to="Bin_name") %>%
@@ -54,11 +55,10 @@ plot_heatmap_abundance<-function(tabble_ko,
     distinct(.data$Bin_name, .keep_all = T) %>%
     column_to_rownames("Bin_name") %>%
     arrange({{ plot_medata_enquo }})
-  
   #######  Reorder the names of rows ##############################
   sub_samp_ordered <- metabolism.wide[rownames(metadata_hydro_path),]
   sub_samp_ordered_2 <- sub_samp_ordered[,rownames(metadata_column)]
-
+  
   metabolism.wide_pheatmap<-pheatmap(sub_samp_ordered_2, 
                                      scale = "row",
                                      annotation_row = metadata_hydro_path,
@@ -68,4 +68,3 @@ plot_heatmap_abundance<-function(tabble_ko,
   
   return(metabolism.wide_pheatmap)
 }
-

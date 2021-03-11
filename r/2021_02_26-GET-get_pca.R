@@ -27,9 +27,10 @@ get_pca_metabolism<-function(ko_table){
   #################### Extract PCA infromation ####################
   contribution_Metabolism<-as.data.frame(pca_information$cos2)
   ##### Warning if the contribution <=0.98 ########################
-  if(contribution_Metabolism$Dim.1 <= 0.98) 
-    warning("Contribution of Dim.1 is less than 0.98. Your output
-            will be the same as input")
+  if_else(contribution_Metabolism$Dim.1 <= 0.98, 
+  warning("Contribution of Dim.1 is less than 0.98. Your output will be the same as input"), 
+  message("Contribution of Dim.1 is higher or equal to 0.98"))
+  
   ##### Create subsets of the first components ####################
   subset1_pathways<-subset(contribution_Metabolism, 
                          .data$Dim.1 >= 0.98)

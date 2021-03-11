@@ -12,7 +12,7 @@ and contains the most important KO pathways in each Bin.}
 
 \item{other_data}{is a table object containing metadata information.}
 
-\item{plot_ano}{is a column name of the KO module of interest in tabble_ko.}
+\item{plot_ano}{is a column name of the KO of interest in tabble_ko.}
 
 \item{plot_medata}{is the column of interest in the metadata file.}
 }

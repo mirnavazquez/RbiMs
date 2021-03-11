@@ -39,16 +39,16 @@ mapping_ko<-function(ko_abundance_table){
     rename(Pathway_description = .data$value) %>%
     rename(Pathway = .data$name ) %>%
     mutate(Pathway=str_remove_all(.data$Pathway, "path:")) 
-  ko_list<-keggList("ko") %>%
-    enframe() %>%
-    rename(KO_description = .data$value) %>%
-    rename(KO = .data$name ) %>%
-    separate(.data$KO_description, 
-           c("Genes", "Gene_description"), sep="; ") %>%
-    mutate(KO=str_remove_all(.data$KO, "ko:"))
+  ko_list<-suppressWarnings(keggList("ko") %>%
+                              enframe() %>%
+                              rename(KO_description = .data$value) %>%
+                              rename(KO = .data$name ) %>%
+                              separate(.data$KO_description, 
+                                       c("Genes", "Gene_description"), sep="; ") %>%
+                              mutate(KO=str_remove_all(.data$KO, "ko:")))
   #########################  KO master #############################
   data_to_select<-c("Module", "Module_description", "Pathway", 
-   "Pathway_description", "KO", "Genes", "Gene_description", "Enzyme") 
+                    "Pathway_description", "KO", "Genes", "Gene_description", "Enzyme") 
   KO_master<-left_join(ko_list, pathway_link, by="KO") %>%
     left_join(pathway_list, by="Pathway") %>%
     left_join(module_link, by="KO") %>%
@@ -58,36 +58,31 @@ mapping_ko<-function(ko_abundance_table){
     distinct()
   ######################  Remove data ##############################
   rm(module_link, pathway_link, enzyme_link, modules_list, 
-    pathway_list, ko_list, data_to_select)
+     pathway_list, ko_list, data_to_select)
   ######################  Add DiTing ###############################
-  DiTing_cycles<-read_delim(
+  DiTing_cycles<-suppressMessages(read_delim(
     "https://raw.githubusercontent.com/xuechunxu/DiTing/master/table/KO_affilated_to_biogeochemical_cycle.tab", 
     delim="\t") %>%
-    fill(.data$Cycle) %>%
-    fill(.data$Pathway) %>%
-    rename(Pathway_cycle = .data$Pathway) %>%
-    rename(KO = .data$k_number) %>%
-    rename(Detail_cycle = .data$Detail)
+      fill(.data$Cycle) %>%
+      fill(.data$Pathway) %>%
+      rename(Pathway_cycle = .data$Pathway) %>%
+      rename(KO = .data$k_number) %>%
+      rename(Detail_cycle = .data$Detail))
   #####################  Combine datasets ###########################
   KO_master_DiTing<-left_join(KO_master, DiTing_cycles, by="KO")
   ###################################################################
   data_to_select<-c("Module", "Module_description", "Pathway", 
-                    "Pathway_description", "Genes", 
-                    "Gene_description", "Enzyme", "Cycle", "Pathway_cycle",
-                    "Detail_cycle")
+                    "Pathway_description", "Cycle", "Pathway_cycle",
+                    "Detail_cycle", "Genes", "Gene_description", 
+                    "Enzyme", "Bin_name", "Abundance")
   final_table <- ko_abundance_table %>%
-  left_join(KO_master_DiTing, by="KO") %>%
+    left_join(KO_master_DiTing, by="KO") %>%
     select(.data$KO, .data$Bin_name, .data$Abundance) %>%
     distinct() %>%
-  left_join(KO_master_DiTing, by="KO") %>%
+    left_join(KO_master_DiTing, by="KO") %>%
     select(all_of(data_to_select)) %>%
     distinct() %>%
     pivot_wider(names_from = .data$Bin_name, 
                 values_from = .data$Abundance, values_fill = 0) 
   return(final_table)
 }
-
-
-
-
-

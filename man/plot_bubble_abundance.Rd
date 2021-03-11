@@ -35,5 +35,5 @@ This function is part of a package used for
 the analysis of bins metabolism.
 }
 \examples{
-plot_bubble_abundance(ko_bin_mapp, metadata, "Bin_name", "Abundance", Module, "Clades")
+plot_bubble_abundance(ko_bin_mapp, metadata, Bin_name, Pathway, Abundance, Clades)   
 }

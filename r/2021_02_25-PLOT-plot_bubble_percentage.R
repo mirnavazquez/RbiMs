@@ -1,6 +1,6 @@
 #' @title Visualize bin abundance as a percentage
 #' @description Creates a bubble plot of each Bin's abundance by percentage.
-#' #' @param tabble_ko is a table object from the get_pca_metabolism function
+#' @param tabble_ko is a table object from the get_pca_metabolism function
 #' and contains the most important KO pathways in each Bin. 
 #' @param other_data is a table object containing metadata information. 
 #' @param x_axis is a string of the x axis label.
@@ -10,56 +10,58 @@
 #' @details This function is part of a package used for the analysis of bins metabolism.
 #' @import ggplot2 dplyr rlang
 #' @examples
-#' plot_bubble_percentage(ko_bin_mapp, metadata, "Bin_name", Module, "Percentage", "Clades")
+#' plot_bubble_percentage(ko_bin_mapp, metadata, Bin_name, Pathway, Percentage, Clades)
 #' @export
 plot_bubble_percentage<-function(tabble_ko,
-                                other_data, 
-                                x_axis,
-                                y_axis,
-                                size_bubble, 
-                                metadata_feature){
+                                 other_data, 
+                                 x_axis,
+                                 y_axis,
+                                 size_bubble, 
+                                 metadata_feature){
   ############################ quoting ##############################
-  y_axis_features <- enquo(y_axis)
-  met_features_y <- as_label(y_axis_features)
-  other_features_x <- as_label(metadata_feature)
+  x_axis_enquo <- enquo(x_axis)
+  y_axis_enquo <- enquo(y_axis)
+  size_bubble_enquo <- enquo(size_bubble)
+  metadata_feature_enquo <- enquo(metadata_feature)
+  y_axis_label <- as_label(y_axis_enquo)
   #################### Transform from wide to long ####################
   data_to_select<-c("Module", "Module_description", "Pathway", 
                     "Pathway_description", "Genes", 
                     "Gene_description", "Enzyme", "Cycle", "Pathway_cycle",
-                    "Detail_cycle")
+                    "Detail_cycle", "KO")
   Kegg_long<- tabble_ko %>%
-  pivot_longer(cols = -data_to_select, values_to = "Abundance",
-            names_to="Bin_name") %>%
-  distinct()
+    pivot_longer(cols = -data_to_select, values_to = "Abundance",
+                 names_to="Bin_name") %>%
+    distinct()
   ######### Count the total number of genes per metabolism ########
   metabolism_counts_totals<-Kegg_long %>%
-    select(all_of(met_features_y), .data$KO) %>%
+    select({{y_axis_enquo}}, .data$KO) %>%
     distinct() %>%
-    count(!!y_axis_features, sort=T) %>%
+    count(!!y_axis_enquo, sort=T) %>%
     rename(Abundance_metabolism=n)
   ## Count the total number of genes per metabolism in each genome ##
   metabolism_counts_genome<-Kegg_long %>%
-    select(all_of(met_features_y), .data$Bin_name, .data$KO, .data$Abundance) %>%
+    select({{y_axis_enquo}}, .data$Bin_name, .data$KO, .data$Abundance) %>%
     distinct() %>%
     filter(.data$Abundance != "0") %>%
     group_by(.data$Bin_name) %>%
-    count(!!y_axis_features) %>%
+    count(!!y_axis_enquo) %>%
     rename(Abundance_metabolism_genome=n)
   ############### Join and calculate the percentage #################
   Table_with_percentage<- left_join(
     metabolism_counts_genome, metabolism_counts_totals, 
-    by=met_features_y) %>%
+    by=y_axis_label) %>%
     mutate(Percentage = (.data$Abundance_metabolism_genome * 100) / .data$Abundance_metabolism ) %>%
-    select(all_of(met_features_y), .data$Bin_name, .data$Percentage) %>%
+    select({{y_axis_enquo}}, .data$Bin_name, .data$Percentage) %>%
     distinct() %>%
     drop_na() %>%
     left_join(other_data, by="Bin_name")
   ################################ Plot #############################
   Table_with_percentage_plot<-ggplot(Table_with_percentage,
-                                     aes_string(x=x_axis,
-                                                y=met_features_y,
-                                                size=size_bubble,
-                                                color=metadata_feature)) +
+                                     aes(x= !!x_axis_enquo, 
+                                         y= !! y_axis_enquo, 
+                                         size= !!size_bubble_enquo,
+                                         color= !!metadata_feature_enquo)) +
     geom_point(alpha=0.5) +
     scale_size(range = c(1,5)) +
     theme_linedraw() +
@@ -67,8 +69,7 @@ plot_bubble_percentage<-function(tabble_ko,
                                      angle = 45, 
                                      hjust = 1, 
                                      vjust = 1),
-        axis.text.y = element_text(size=5))
-
+          axis.text.y = element_text(size=5))
+  
   return(Table_with_percentage_plot)
 }
-
