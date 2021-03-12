@@ -74,7 +74,7 @@ mapping_ko<-function(ko_abundance_table){
   data_to_select<-c("Module", "Module_description", "Pathway", 
                     "Pathway_description", "Cycle", "Pathway_cycle",
                     "Detail_cycle", "Genes", "Gene_description", 
-                    "Enzyme", "Bin_name", "Abundance")
+                    "Enzyme", "Bin_name", "Abundance", "KO")
   final_table <- ko_abundance_table %>%
     left_join(KO_master_DiTing, by="KO") %>%
     select(.data$KO, .data$Bin_name, .data$Abundance) %>%
