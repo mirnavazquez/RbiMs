@@ -16,7 +16,7 @@ read_ko<-function(ko_result){
     rename(Bin_name = .data$X2) %>%
     rename(KO = .data$X3) %>%
     separate(.data$Bin_name, c("Bin_name", "Scaffold_name"), 
-             sep = "[_|-][s|S]caffold") %>%
+             sep = "[_|-][s|S]caffold|-S") %>%
     mutate(Scaffold_name = paste0( "scaffold", .data$Scaffold_name), 
            .data$Scaffold_name))
   
