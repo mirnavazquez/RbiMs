@@ -1,3 +1,9 @@
+#' Main Rbims
+#'
+#' @format Home made database of intresting pathways
+#' @source \url{https://sites.utexas.edu/baker-lab/}
+"rbims"
+
 #' Output of read_ko
 #' 
 #' A dataset containing the output of read_ko.

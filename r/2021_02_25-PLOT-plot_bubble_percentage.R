@@ -24,7 +24,7 @@ plot_bubble_percentage<-function(tabble_ko,
   data_to_select<-c("Module", "Module_description", "Pathway", 
                     "Pathway_description", "Genes", 
                     "Gene_description", "Enzyme", "Cycle", "Pathway_cycle",
-                    "Detail_cycle", "KO")
+                    "Detail_cycle", "KO", "rbims_pathway", "rbims_sub_pathway")
   Kegg_long<- tabble_ko %>%
     pivot_longer(cols = -data_to_select, values_to = "Abundance",
                  names_to="Bin_name") %>%

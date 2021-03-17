@@ -70,19 +70,25 @@ mapping_ko<-function(ko_abundance_table){
       rename(Detail_cycle = .data$Detail))
   #####################  Combine datasets ###########################
   KO_master_DiTing<-left_join(KO_master, DiTing_cycles, by="KO")
+  #####################  Read RbiMs and Join ###########################
+  rbims<-rbims
+  #####################  Combine datasets ###########################
+  KO_master_DiTing_rbims<-left_join(KO_master_DiTing, rbims, by="KO")
   ###################################################################
-  data_to_select<-c("Module", "Module_description", "Pathway", 
-                    "Pathway_description", "Cycle", "Pathway_cycle",
-                    "Detail_cycle", "Genes", "Gene_description", 
-                    "Enzyme", "Bin_name", "Abundance", "KO")
-  final_table <- ko_abundance_table %>%
-    left_join(KO_master_DiTing, by="KO") %>%
-    select(.data$KO, .data$Bin_name, .data$Abundance) %>%
-    distinct() %>%
-    left_join(KO_master_DiTing, by="KO") %>%
-    select(all_of(data_to_select)) %>%
-    distinct() %>%
-    pivot_wider(names_from = .data$Bin_name, 
-                values_from = .data$Abundance, values_fill = 0) 
+    data_to_select<-c("Module", "Module_description", "Pathway", 
+                      "Pathway_description", "Cycle", "Pathway_cycle",
+                      "Detail_cycle", "Genes", "Gene_description", 
+                      "Enzyme", "Bin_name", "Abundance", "KO",
+                      "rbims_pathway", "rbims_sub_pathway")
+    final_table <- ko_abundance_table %>%
+      left_join(KO_master_DiTing_rbims, by="KO") %>%
+      select(.data$KO, .data$Bin_name, .data$Abundance) %>%
+      distinct() %>%
+      left_join(KO_master_DiTing_rbims, by="KO") %>%
+      select(all_of(data_to_select)) %>%
+      distinct() %>%
+      pivot_wider(names_from = .data$Bin_name, 
+                  values_from = .data$Abundance, values_fill = 0) 
+  
   return(final_table)
 }

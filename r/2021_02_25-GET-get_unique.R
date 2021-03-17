@@ -22,7 +22,7 @@ get_subset_unique<-function(mapped_ko_table,
   data_to_select<-c("Module", "Module_description", "Pathway", 
                     "Pathway_description", "Genes", 
                     "Gene_description", "Enzyme", "Cycle", "Pathway_cycle",
-                    "Detail_cycle")
+                    "Detail_cycle",  "rbims_pathway", "rbims_sub_pathway")
   mapped_ko_table_KO<-mapped_ko_table %>%
     select(-all_of(data_to_select)) %>%
     distinct() %>%

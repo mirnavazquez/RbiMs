@@ -25,7 +25,7 @@ plot_heatmap_percentage<-function(tabble_ko,
   data_to_select<-c("Module", "Module_description", "Pathway", 
                     "Pathway_description", "Genes", 
                     "Gene_description", "Enzyme", "KO", "Cycle", "Pathway_cycle",
-                    "Detail_cycle")
+                    "Detail_cycle", "rbims_pathway", "rbims_sub_pathway")
   Kegg_long<- tabble_ko %>%
     pivot_longer(cols = -data_to_select, 
                  values_to = "Abundance",
@@ -50,7 +50,7 @@ plot_heatmap_percentage<-function(tabble_ko,
   paths<-c("Module", "Module_description", "Pathway", 
            "Pathway_description", "Genes", 
            "Gene_description", "Enzyme", "KO", "Cycle", "Pathway_cycle",
-           "Detail_cycle")
+           "Detail_cycle", "rbims_pathway", "rbims_sub_pathway")
   tabble_ko_colnames_2 <- tabble_ko_colnames[tabble_ko_colnames %in%
                                                paths]
   tabble_ko_colnames_3 <- tabble_ko_colnames_2[!tabble_ko_colnames_2 %in%
@@ -89,7 +89,7 @@ plot_heatmap_percentage<-function(tabble_ko,
   data_to_select<-c("Module", "Module_description", "Pathway", 
                     "Pathway_description", "Genes", 
                     "Gene_description", "Enzyme", "KO", "Cycle", "Pathway_cycle",
-                    "Detail_cycle")
+                    "Detail_cycle", "rbims_pathway", "rbims_sub_pathway")
   metadata_column<- tabble_ko %>% 
     pivot_longer(cols = -data_to_select, 
                  values_to = "Abundance",
