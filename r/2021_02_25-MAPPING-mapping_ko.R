@@ -73,7 +73,11 @@ mapping_ko<-function(ko_abundance_table){
   #####################  Read RbiMs and Join ###########################
   rbims<-rbims
   #####################  Combine datasets ###########################
-  KO_master_DiTing_rbims<-left_join(KO_master_DiTing, rbims, by="KO")
+  KO_master_DiTing_rbims<-left_join(KO_master_DiTing, rbims, by="KO") %>%
+    mutate(Genes = case_when(
+      Genes == "alkT" ~ "rubB, alkT",
+      TRUE ~ as.character(Genes)
+    ))
   ###################################################################
     data_to_select<-c("Module", "Module_description", "Pathway", 
                       "Pathway_description", "Cycle", "Pathway_cycle",
