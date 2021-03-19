@@ -4,7 +4,15 @@
 \alias{plot_bubble_percentage}
 \title{Bubble plot of KO/Pathways/Modules and its relative abundance within each Bin.}
 \usage{
-plot_bubble_percentage(tabble_ko, other_data, x_axis, y_axis, metadata_feature)
+plot_bubble_percentage(
+  tabble_ko,
+  other_data,
+  x_axis,
+  y_axis,
+  metadata_feature,
+  order_bins = NULL,
+  order_metabolism = NULL
+)
 }
 \arguments{
 \item{tabble_ko}{a data frame object, created with the mapping_ko or get_subset_* functions.}
@@ -16,6 +24,10 @@ plot_bubble_percentage(tabble_ko, other_data, x_axis, y_axis, metadata_feature)
 \item{y_axis}{a string, it determined the y axis label.}
 
 \item{metadata_feature}{a string column name of the metadata object, used for color.}
+
+\item{order_bins}{a character vector indicating the bin order.}
+
+\item{order_metabolism}{a character vector indicaton metabolism order.}
 }
 \description{
 Creates a bubble plot of KO/Pathways/Modules relative abundance within each bin. It uses the metadata information to color bubbles.
