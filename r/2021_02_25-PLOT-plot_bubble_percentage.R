@@ -7,18 +7,20 @@
 #' @param metadata_feature a string column name of the metadata object, used for color.
 #' @param order_bins a character vector indicating the bin order.
 #' @param order_metabolism a character vector indicaton metabolism order.
+#' @param color_bin a character vector of colors to use.
 #' @details This function is part of a package used for the analysis of bins metabolism.
-#' @import ggplot2 dplyr rlang
+#' @import ggplot2 dplyr rlang pals
 #' @examples
 #' plot_bubble_percentage(ko_bin_mapp, metadata, Bin_name, Module, Clades)
 #' @export
 plot_bubble_percentage<-function(tabble_ko,
-                                  other_data,
-                                  x_axis,
-                                  y_axis,
-                                  metadata_feature,
-                                  order_bins=NULL,
-                                  order_metabolism=NULL){
+                                 other_data,
+                                 x_axis,
+                                 y_axis,
+                                 metadata_feature=NULL,
+                                 order_bins=NULL,
+                                 order_metabolism=NULL,
+                                 color_bin=NULL){
   #################################################################
   ######################## Enquoting ##############################
   #################################################################
@@ -40,6 +42,11 @@ plot_bubble_percentage<-function(tabble_ko,
   
   
   metadata_feature_enquo <- enquo(metadata_feature)
+  
+  if(is.null(color_bin) == T){
+    color_bin<-as.vector(cols25(20))
+  }
+  
   #################################################################
   ####### Transform from wide to long #############################
   #################################################################
@@ -89,6 +96,14 @@ plot_bubble_percentage<-function(tabble_ko,
   #################################################################
   ####################### Pot Normal / upsite #####################
   #################################################################
+  rm(x_axis_enquo, y_axis_enquo, x_axis_label, y_axis_label)
+  x_axis_enquo <- enquo(x_axis)
+  y_axis_enquo <- enquo(y_axis)
+  
+  x_axis_label <- as_label(x_axis_enquo)
+  y_axis_label <- as_label(y_axis_enquo)
+  
+  
   if(x_axis_label == "Bin_name") {
     if(is.null(order_bins) == T && is.null(order_metabolism) == T ){
       Table_with_percentage_plot<-ggplot(Table_with_percentage,
@@ -98,6 +113,7 @@ plot_bubble_percentage<-function(tabble_ko,
                                              color= !!metadata_feature_enquo)) +
         geom_point(alpha=0.5) +
         scale_size(range = c(1,5)) +
+        scale_color_manual(values = color_bin) +
         theme_linedraw() +
         theme(axis.text.x = element_text(size=6, 
                                          angle = 45, 
@@ -113,6 +129,7 @@ plot_bubble_percentage<-function(tabble_ko,
                                              color= !!metadata_feature_enquo)) +
         geom_point(alpha=0.5) +
         scale_size(range = c(1,5)) +
+        scale_color_manual(values = color_bin) +
         theme_linedraw() +
         theme(axis.text.x = element_text(size=6, 
                                          angle = 45, 
@@ -127,6 +144,7 @@ plot_bubble_percentage<-function(tabble_ko,
                                              color= !!metadata_feature_enquo)) +
         geom_point(alpha=0.5) +
         scale_size(range = c(1,5)) +
+        scale_color_manual(values = color_bin) +
         theme_linedraw() +
         theme(axis.text.x = element_text(size=6, 
                                          angle = 45, 
@@ -141,6 +159,7 @@ plot_bubble_percentage<-function(tabble_ko,
                                              color= !!metadata_feature_enquo)) +
         geom_point(alpha=0.5) +
         scale_size(range = c(1,5)) +
+        scale_color_manual(values = color_bin) +
         theme_linedraw() +
         theme(axis.text.x = element_text(size=6, 
                                          angle = 45, 
@@ -158,6 +177,7 @@ plot_bubble_percentage<-function(tabble_ko,
                                              color= !!metadata_feature_enquo)) +
         geom_point(alpha=0.5) +
         scale_size(range = c(1,5)) +
+        scale_color_manual(values = color_bin) +
         theme_linedraw() +
         theme(axis.text.x = element_text(size=6, 
                                          angle = 45, 
@@ -172,6 +192,7 @@ plot_bubble_percentage<-function(tabble_ko,
                                              color= !!metadata_feature_enquo)) +
         geom_point(alpha=0.5) +
         scale_size(range = c(1,5)) +
+        scale_color_manual(values = color_bin) +
         theme_linedraw() +
         theme(axis.text.x = element_text(size=6, 
                                          angle = 45, 
@@ -186,6 +207,7 @@ plot_bubble_percentage<-function(tabble_ko,
                                              color= !!metadata_feature_enquo)) +
         geom_point(alpha=0.5) +
         scale_size(range = c(1,5)) +
+        scale_color_manual(values = color_bin) +
         theme_linedraw() +
         theme(axis.text.x = element_text(size=6, 
                                          angle = 45, 
@@ -200,6 +222,7 @@ plot_bubble_percentage<-function(tabble_ko,
                                              color= !!metadata_feature_enquo)) +
         geom_point(alpha=0.5) +
         scale_size(range = c(1,5)) +
+        scale_color_manual(values = color_bin) +
         theme_linedraw() +
         theme(axis.text.x = element_text(size=6, 
                                          angle = 45, 

@@ -9,9 +9,10 @@ plot_bubble_percentage(
   other_data,
   x_axis,
   y_axis,
-  metadata_feature,
+  metadata_feature = NULL,
   order_bins = NULL,
-  order_metabolism = NULL
+  order_metabolism = NULL,
+  color_bin = NULL
 )
 }
 \arguments{
@@ -28,6 +29,8 @@ plot_bubble_percentage(
 \item{order_bins}{a character vector indicating the bin order.}
 
 \item{order_metabolism}{a character vector indicaton metabolism order.}
+
+\item{color_bin}{a character vector of colors to use.}
 }
 \description{
 Creates a bubble plot of KO/Pathways/Modules relative abundance within each bin. It uses the metadata information to color bubbles.

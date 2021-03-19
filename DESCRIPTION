@@ -28,7 +28,8 @@ Imports:
     stringr,
     tibble,
     tidyr,
-    rlang
+    rlang,
+    pals
     
     
 
