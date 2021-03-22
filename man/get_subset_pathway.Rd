@@ -11,7 +11,7 @@ get_subset_pathway(mapped_ko_table, type_of_interest_feature, interest_feature)
 
 \item{type_of_interest_feature}{is a mapped_ko column name. This feature is going to be used for subsetting.}
 
-\item{interest_feature}{a string of the mapped_ko feature of interest. It is found under the type_of_interest_feature value column.}
+\item{interest_feature}{a character vector of the mapped_ko feature of interest. It is found under the type_of_interest_feature value column.}
 }
 \description{
 reads the output of the mapping_ko function to filter out KOs
