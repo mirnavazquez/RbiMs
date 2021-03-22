@@ -6,8 +6,9 @@
 #' @param y_axis a string, it determined the y axis label. 
 #' @param metadata_feature a string column name of the metadata object, used for color.
 #' @param order_bins a character vector indicating the bin order.
-#' @param order_metabolism a character vector indicaton metabolism order.
+#' @param order_metabolism a character vector indicating metabolism order.
 #' @param color_bin a character vector of colors to use.
+#' @param range_size a numeric vector indicating the range size of the dots.
 #' @details This function is part of a package used for the analysis of bins metabolism.
 #' @import ggplot2 dplyr rlang pals
 #' @examples
@@ -20,36 +21,30 @@ plot_bubble_percentage<-function(tabble_ko,
                                  metadata_feature=NULL,
                                  order_bins=NULL,
                                  order_metabolism=NULL,
-                                 color_bin=NULL){
-  #################################################################
-  ######################## Enquoting ##############################
-  #################################################################
+                                 color_bin=NULL,
+                                 range_size=NULL){
+  #--------------------------Enquoting-------------------------####
   x_axis_enquo <- enquo(x_axis)
   y_axis_enquo <- enquo(y_axis)
-  
   x_axis_label <- as_label(x_axis_enquo)
   y_axis_label <- as_label(y_axis_enquo)
-  
+  metadata_feature_enquo <- enquo(metadata_feature)
+  #--------------------------Cheking axis----------------------####
   if( x_axis_label  != "Bin_name") {
-    
     y_axis_enquo<-enquo(x_axis) 
     x_axis_enquo<-enquo(y_axis)
-    
     x_axis_label<-as_label(x_axis_enquo)
     y_axis_label<-as_label(y_axis_enquo)
-    
   } 
-  
-  
-  metadata_feature_enquo <- enquo(metadata_feature)
-  
+  #--------------------------Checking the color----------------####
   if(is.null(color_bin) == T){
     color_bin<-as.vector(cols25(20))
   }
-  
-  #################################################################
-  ####### Transform from wide to long #############################
-  #################################################################
+  #--------------------------Checking the size-----------------####
+  if(is.null(range_size) == T){
+    range_size<-c(1,5)
+  }
+  #--------------------------Transform from wide to long ------####
   data_to_select<-c("Module", "Module_description", "Pathway", 
                     "Pathway_description", "Genes", 
                     "Gene_description", "Enzyme", "Cycle", 
@@ -61,17 +56,13 @@ plot_bubble_percentage<-function(tabble_ko,
                  values_to = "Abundance",
                  names_to="Bin_name") %>%
     distinct()
-  #################################################################
-  ####### Count the total number of genes per metabolism ##########
-  #################################################################
+  #-------Count the total number of genes per metabolism------ ####
   metabolism_counts_totals<-Kegg_long %>%
     select({{y_axis_enquo}}, .data$KO) %>%
     distinct() %>%
     count(!!y_axis_enquo, sort=T) %>%
     rename(Abundance_metabolism=n)
-  #################################################################
-  #Count the total number of genes per metabolism in each genome ##
-  #################################################################
+  #Count the total number of genes per metabolism in genome----####
   metabolism_counts_genome<-Kegg_long %>%
     select({{y_axis_enquo}}, .data$Bin_name, .data$KO, 
            .data$Abundance) %>%
@@ -80,9 +71,7 @@ plot_bubble_percentage<-function(tabble_ko,
     group_by(.data$Bin_name) %>%
     count(!!y_axis_enquo) %>%
     rename(Abundance_metabolism_genome=n)
-  #################################################################
-  ############### Join and calculate the percentage ###############
-  #################################################################
+  #---------------Join and calculate the percentage-----------####
   Table_with_percentage<- left_join(
     metabolism_counts_genome, metabolism_counts_totals, 
     by=y_axis_label) %>%
@@ -93,144 +82,60 @@ plot_bubble_percentage<-function(tabble_ko,
     distinct() %>%
     drop_na() %>%
     left_join(other_data, by="Bin_name")
-  #################################################################
-  ####################### Pot Normal / upsite #####################
-  #################################################################
+  #---------------Checking the order Bin----------------------####
+  if(is.null(order_metabolism) == T){
+    order_metabolism<-Table_with_percentage %>%
+      ungroup() %>%
+      select({{y_axis_enquo}}) %>%
+      distinct() %>%
+      pull()
+  }
+  #----------------Checking the order Bin----------------------####
+  if(is.null(order_bins) == T){
+    order_bins<-sort(unique(Table_with_percentage$Bin_name))
+  }
+  #---------------------------Normal / upsite------------------####
   rm(x_axis_enquo, y_axis_enquo, x_axis_label, y_axis_label)
   x_axis_enquo <- enquo(x_axis)
   y_axis_enquo <- enquo(y_axis)
-  
   x_axis_label <- as_label(x_axis_enquo)
   y_axis_label <- as_label(y_axis_enquo)
-  
-  
+  #---------------------------Plot-----------------------------####
   if(x_axis_label == "Bin_name") {
-    if(is.null(order_bins) == T && is.null(order_metabolism) == T ){
-      Table_with_percentage_plot<-ggplot(Table_with_percentage,
-                                         aes(x= !!x_axis_enquo, 
-                                             y= !!y_axis_enquo, 
-                                             size= .data$Percentage,
-                                             color= !!metadata_feature_enquo)) +
-        geom_point(alpha=0.5) +
-        scale_size(range = c(1,5)) +
-        scale_color_manual(values = color_bin) +
-        theme_linedraw() +
-        theme(axis.text.x = element_text(size=6, 
-                                         angle = 45, 
-                                         hjust = 1, 
-                                         vjust = 1),
-              axis.text.y = element_text(size=5))
-    } else if (is.null(order_bins) == F && is.null(order_metabolism) == T) {
-      Table_with_percentage_plot<-ggplot(Table_with_percentage,
-                                         aes(x= factor(!!x_axis_enquo, 
-                                                       levels = order_bins),
-                                             y= !!y_axis_enquo, 
-                                             size= .data$Percentage,
-                                             color= !!metadata_feature_enquo)) +
-        geom_point(alpha=0.5) +
-        scale_size(range = c(1,5)) +
-        scale_color_manual(values = color_bin) +
-        theme_linedraw() +
-        theme(axis.text.x = element_text(size=6, 
-                                         angle = 45, 
-                                         hjust = 1, 
-                                         vjust = 1),
-              axis.text.y = element_text(size=5))   
-    } else if(is.null(order_bins) == F && is.null(order_metabolism) == F) {
-      Table_with_percentage_plot<-ggplot(Table_with_percentage,
-                                         aes(x= factor(!!x_axis_enquo, levels = !!order_bins),
-                                             y= factor(!!y_axis_enquo, levels = !!order_metabolism),
-                                             size= .data$Percentage,
-                                             color= !!metadata_feature_enquo)) +
-        geom_point(alpha=0.5) +
-        scale_size(range = c(1,5)) +
-        scale_color_manual(values = color_bin) +
-        theme_linedraw() +
-        theme(axis.text.x = element_text(size=6, 
-                                         angle = 45, 
-                                         hjust = 1, 
-                                         vjust = 1),
-              axis.text.y = element_text(size=5))
-    } else if(is.null(order_bins) == T && is.null(order_metabolism) == F){
-      Table_with_percentage_plot<-ggplot(Table_with_percentage,
-                                         aes(x= !!x_axis_enquo,
-                                             y= factor(!!y_axis_enquo, levels = !!order_metabolism),
-                                             size= .data$Percentage,
-                                             color= !!metadata_feature_enquo)) +
-        geom_point(alpha=0.5) +
-        scale_size(range = c(1,5)) +
-        scale_color_manual(values = color_bin) +
-        theme_linedraw() +
-        theme(axis.text.x = element_text(size=6, 
-                                         angle = 45, 
-                                         hjust = 1, 
-                                         vjust = 1),
-              axis.text.y = element_text(size=5))
-    }
-    
+    plot_porcentage<-ggplot(Table_with_percentage,
+                            aes(x= factor(!!x_axis_enquo, 
+                                          levels = !!order_bins),
+                                y= factor(!!y_axis_enquo, 
+                                          levels = !!order_metabolism),
+                                size= .data$Percentage,
+                                color= !!metadata_feature_enquo)) +
+      geom_point(alpha=0.5) +
+      scale_size(range =range_size) +
+      scale_color_manual(values = color_bin) +
+      theme_linedraw() +
+      theme(axis.text.x = element_text(size=6, 
+                                       angle = 45, 
+                                       hjust = 1, 
+                                       vjust = 1),
+            axis.text.y = element_text(size=5))
   } else if (x_axis_label != "Bin_name" ) {
-    if(is.null(order_bins) == T && is.null(order_metabolism) == T ){
-      Table_with_percentage_plot<-ggplot(Table_with_percentage,
-                                         aes(x= !!x_axis_enquo, 
-                                             y= !!y_axis_enquo, 
-                                             size= .data$Percentage,
-                                             color= !!metadata_feature_enquo)) +
-        geom_point(alpha=0.5) +
-        scale_size(range = c(1,5)) +
-        scale_color_manual(values = color_bin) +
-        theme_linedraw() +
-        theme(axis.text.x = element_text(size=6, 
-                                         angle = 45, 
-                                         hjust = 1, 
-                                         vjust = 1),
-              axis.text.y = element_text(size=5))
-    } else if (is.null(order_bins) == F && is.null(order_metabolism) == T) {
-      Table_with_percentage_plot<-ggplot(Table_with_percentage,
-                                         aes(x= factor(!!x_axis_enquo, levels = !!order_bins),
-                                             y= !!y_axis_enquo, 
-                                             size= .data$Percentage,
-                                             color= !!metadata_feature_enquo)) +
-        geom_point(alpha=0.5) +
-        scale_size(range = c(1,5)) +
-        scale_color_manual(values = color_bin) +
-        theme_linedraw() +
-        theme(axis.text.x = element_text(size=6, 
-                                         angle = 45, 
-                                         hjust = 1, 
-                                         vjust = 1),
-              axis.text.y = element_text(size=5))    
-    } else if(is.null(order_bins) == F && is.null(order_metabolism) == F) {
-      Table_with_percentage_plot<-ggplot(Table_with_percentage,
-                                         aes(x= factor(!!x_axis_enquo, levels = !!order_bins),
-                                             y= factor(!!y_axis_enquo, levels = !!order_metabolism),
-                                             size= .data$Percentage,
-                                             color= !!metadata_feature_enquo)) +
-        geom_point(alpha=0.5) +
-        scale_size(range = c(1,5)) +
-        scale_color_manual(values = color_bin) +
-        theme_linedraw() +
-        theme(axis.text.x = element_text(size=6, 
-                                         angle = 45, 
-                                         hjust = 1, 
-                                         vjust = 1),
-              axis.text.y = element_text(size=5))
-    } else if(is.null(order_bins) == T && is.null(order_metabolism) == F){
-      Table_with_percentage_plot<-ggplot(Table_with_percentage,
-                                         aes(x= !!x_axis_enquo,
-                                             y= factor(!!y_axis_enquo, levels = !!order_metabolism),
-                                             size= .data$Percentage,
-                                             color= !!metadata_feature_enquo)) +
-        geom_point(alpha=0.5) +
-        scale_size(range = c(1,5)) +
-        scale_color_manual(values = color_bin) +
-        theme_linedraw() +
-        theme(axis.text.x = element_text(size=6, 
-                                         angle = 45, 
-                                         hjust = 1, 
-                                         vjust = 1),
-              axis.text.y = element_text(size=5))
-    }
+    plot_porcentage<-ggplot(Table_with_percentage,
+                            aes(x= factor(!!x_axis_enquo, 
+                                          levels = !!order_metabolism),
+                                y= factor(!!y_axis_enquo, 
+                                          levels = !!order_bins),
+                                size= .data$Percentage,
+                                color= !!metadata_feature_enquo)) +
+      geom_point(alpha=0.5) +
+      scale_size(range = c(1,5)) +
+      scale_color_manual(values = color_bin) +
+      theme_linedraw() +
+      theme(axis.text.x = element_text(size=6, 
+                                       angle = 45, 
+                                       hjust = 1, 
+                                       vjust = 1),
+            axis.text.y = element_text(size=5))
   }
   
-  return(Table_with_percentage_plot)
+  return(plot_porcentage)
 }
