@@ -2,9 +2,9 @@
 #' in a specific metadata group.
 #' @description reads the output of the mapping_ko function to pull out KOs 
 #' based on metadata. This function identifies the KOs that are only present 
-#' in a particular metadata group (i.e. KOs only present in binX and 
-#' absent in the rest of bins). And retrieves a tibble object which 
-#' is a sub-set of the mapped_ko table
+#' in a particular metadata group (i.e. KOs only present in soil and 
+#' absent in the rest of the environments). And retrieves a tibble object which 
+#' is a sub-set of the mapped_ko table.
 #' @param tibble_ko_mapp a tibble object. The output table from 
 #' the mapping_ko function. 
 #' @param data_experiment a data frame object that contains the metadata 
