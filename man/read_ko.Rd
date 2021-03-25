@@ -4,17 +4,20 @@
 \alias{read_ko}
 \title{Read the output of KofamScan or KofamKoala}
 \usage{
-read_ko(ko_result)
+read_ko(data_ko)
 }
 \arguments{
-\item{ko_result}{a data frame with 5 columns. Contigs are expected to be named similar to bin_scaffoldXX.}
+\item{data_ko}{a data frame with 5 columns. The contigs are expected to
+indicate in their names the bin name and then the scaffold name divided
+by an "_", similar to bin_scaffoldXX.}
 }
 \description{
 read_ko() calculates the abundance of each KO within the
-Bins based on the KofamScan or KofamKoala output.
+bins based on the KofamScan or KofamKoala output.
 }
 \details{
-This function is part of a package used for the analysis of bins metabolism.
+This function is part of a package used for the analysis
+of bins metabolism.
 }
 \examples{
 \dontrun{
