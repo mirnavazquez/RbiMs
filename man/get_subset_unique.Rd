@@ -2,31 +2,38 @@
 % Please edit documentation in R/2021_02_25-GET-get_unique.R
 \name{get_subset_unique}
 \alias{get_subset_unique}
-\title{Subsets the mapped KO table based on metadata to identify
-KOs only present in a specific metadata group (i.e. KOs only present in Deltas and absent in the rest of database).}
+\title{Mapped KO table sub-setting. Finding the KOs only present
+in a specific metadata group.}
 \usage{
 get_subset_unique(
-  mapped_ko_table,
-  other_data,
-  type_of_interest_feature,
-  interest_feature
+  tibble_ko_mapp,
+  data_experiment,
+  experiment_col,
+  experiment_col_element
 )
 }
 \arguments{
-\item{mapped_ko_table}{a data frame object. The output table from the mapping_ko function.}
+\item{tibble_ko_mapp}{a tibble object. The output table from
+the mapping_ko function.}
 
-\item{other_data}{a data frame object that contains the metadata (i.e. Taxonomy, sampling site).}
+\item{data_experiment}{a data frame object that contains the metadata
+(i.e. taxonomy, sampling site).}
 
-\item{type_of_interest_feature}{is a metadata column name. This feature is going to be used for subsetting.}
+\item{experiment_col}{a metadata column name.
+This feature is going to be used for sub-setting.}
 
-\item{interest_feature}{a string of the metadata feature of interest. It is found under the type_of_interest_feature value column.}
+\item{experiment_col_element}{a string of the metadata feature of interest.
+It is found under the experiment_col column.}
 }
 \description{
-reads the output of the mapping_ko function to filter out KOs
-based on metadata and identify KOs only present in a particular metadata group.
+reads the output of the mapping_ko function to pull out KOs
+based on metadata. This function identifies the KOs that are only present
+in a particular metadata group (i.e. KOs only present in binX and
+absent in the rest of bins). And retrieves a sub-set of the mapped_ko table.
 }
 \details{
-This function is part of a package used for the analysis of bins metabolism.
+This function is part of a package used for the analysis
+of bins metabolism.
 }
 \examples{
 get_subset_unique(ko_bin_mapp, metadata, Sample_site, "Water_column")
