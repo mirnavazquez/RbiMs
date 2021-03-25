@@ -4,18 +4,19 @@
 \alias{mapping_ko}
 \title{Maps KOs to the KEGG database}
 \usage{
-mapping_ko(ko_abundance_table)
+mapping_ko(tibble_ko)
 }
 \arguments{
-\item{ko_abundance_table}{a data frame object with four columns containing the KO abundance
-for each Bin.}
+\item{tibble_ko}{a data frame object with four columns containing
+the KO abundance for each bin.}
 }
 \description{
 Reads a table object created with the read_ko function
 and maps each KO to the KEGG database.
 }
 \details{
-This function is part of a package used for the analysis of bins metabolism.
+This function is part of a package used for the analysis of bins
+metabolism.
 }
 \examples{
 mapping_ko(ko_bin_table)

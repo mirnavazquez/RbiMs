@@ -1,15 +1,16 @@
 #' @title Maps KOs to the KEGG database
 #' @description Reads a table object created with the read_ko function 
 #' and maps each KO to the KEGG database.
-#' @param ko_abundance_table a data frame object with four columns containing the KO abundance 
-#' for each Bin.
-#' @details This function is part of a package used for the analysis of bins metabolism.
+#' @param tibble_ko a data frame object with four columns containing 
+#' the KO abundance for each bin.
+#' @details This function is part of a package used for the analysis of bins 
+#' metabolism.
 #' @import KEGGREST tibble dplyr stringr tidyr janitor rlang
 #' @examples
 #' mapping_ko(ko_bin_table)
 #' @export
-mapping_ko<-function(ko_abundance_table){
-  #########################  KEGG links ############################
+mapping_ko<-function(tibble_ko){
+  # KEGG links ------------------------------------------------------------####
   module_link<- KEGGREST::keggLink("ko", "module") %>%
     enframe() %>%
     rename(KO = .data$value) %>%
@@ -28,7 +29,7 @@ mapping_ko<-function(ko_abundance_table){
     rename(KO = .data$value) %>%
     rename(Enzyme = .data$name ) %>%
     mutate(KO=str_remove_all(.data$KO, "ko:")) 
-  #########################  KEGG lists ############################
+  # KEGG lists ------------------------------------------------------------####
   modules_list<-KEGGREST::keggList("module") %>%
     enframe() %>%
     rename(Module_description = .data$value) %>%
@@ -44,11 +45,13 @@ mapping_ko<-function(ko_abundance_table){
                               rename(KO_description = .data$value) %>%
                               rename(KO = .data$name ) %>%
                               separate(.data$KO_description, 
-                                       c("Genes", "Gene_description"), sep="; ") %>%
+                                       c("Genes", "Gene_description"), 
+                                       sep="; ") %>%
                               mutate(KO=str_remove_all(.data$KO, "ko:")))
-  #########################  KO master #############################
+  # KO master -------------------------------------------------------------####
   data_to_select<-c("Module", "Module_description", "Pathway", 
-                    "Pathway_description", "KO", "Genes", "Gene_description", "Enzyme") 
+                    "Pathway_description", "KO", "Genes", 
+                    "Gene_description", "Enzyme") 
   KO_master<-left_join(ko_list, pathway_link, by="KO") %>%
     left_join(pathway_list, by="Pathway") %>%
     left_join(module_link, by="KO") %>%
@@ -56,10 +59,10 @@ mapping_ko<-function(ko_abundance_table){
     left_join(enzyme_link, by="KO") %>%
     select(all_of(data_to_select)) %>%
     distinct()
-  ######################  Remove data ##############################
+  # Remove data -----------------------------------------------------------####
   rm(module_link, pathway_link, enzyme_link, modules_list, 
      pathway_list, ko_list, data_to_select)
-  ######################  Add DiTing ###############################
+  # Add DiTing ------------------------------------------------------------####
   DiTing_cycles<-suppressMessages(read_delim(
     "https://raw.githubusercontent.com/xuechunxu/DiTing/master/table/KO_affilated_to_biogeochemical_cycle.tab", 
     delim="\t") %>%
@@ -68,23 +71,23 @@ mapping_ko<-function(ko_abundance_table){
       rename(Pathway_cycle = .data$Pathway) %>%
       rename(KO = .data$k_number) %>%
       rename(Detail_cycle = .data$Detail))
-  #####################  Combine datasets ###########################
+  # Combine data-sets ------------------------------------------------------####
   KO_master_DiTing<-left_join(KO_master, DiTing_cycles, by="KO")
-  #####################  Read RbiMs and Join ###########################
+  # Read RbiMs ------------------------------------------------------------####
   rbims<-rbims
-  #####################  Combine datasets ###########################
+  # Combine data-sets -----------------------------------------------------####
   KO_master_DiTing_rbims<-left_join(KO_master_DiTing, rbims, by="KO") %>%
     mutate(Genes = case_when(
       Genes == "alkT" ~ "rubB, alkT",
       TRUE ~ as.character(Genes)
     ))
-  ###################################################################
+  # Write tibble ----------------------------------------------------------####
     data_to_select<-c("Module", "Module_description", "Pathway", 
                       "Pathway_description", "Cycle", "Pathway_cycle",
                       "Detail_cycle", "Genes", "Gene_description", 
                       "Enzyme", "Bin_name", "Abundance", "KO",
                       "rbims_pathway", "rbims_sub_pathway")
-    final_table <- ko_abundance_table %>%
+    final_table <- tibble_ko %>%
       left_join(KO_master_DiTing_rbims, by="KO") %>%
       select(.data$KO, .data$Bin_name, .data$Abundance) %>%
       distinct() %>%
