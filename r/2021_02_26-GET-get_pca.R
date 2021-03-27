@@ -1,49 +1,56 @@
-#' @title Obtains PCA data of KO pathways. 
-#' @description Identifies the most important KO pathways in the whole databse.
-#' @param ko_table a data frame object, created with the mapping_ko or get_subset_* functions. 
+#' @title Metabolism PCA. 
+#' @description Identifies the most important KO pathways in the whole database.
+#' @param tibble_ko_map a tibble object, created with 
+#' the mapping_ko or get_subset_* functions. 
+#' @param cos2_val a numeric vector from 0 to 1 indicating the proportion of
+#' contribution used as cut off. Default is 0.98. 
+#' See \link[factoextra]{get_pca}
 #' @details This function is part of a package used for 
 #' the analysis of bins metabolism.
 #' @import dplyr factoextra rlang tibble
 #' @examples
 #' get_subset_pca(ko_bin_mapp)
 #' @export
-get_subset_pca<-function(ko_table){
-##################### Read the input table ########################
+get_subset_pca<-function(tibble_ko_map,
+                         cos2_val=NULL){
+  # Read data -------------------------------------------------------------####
   data_to_select<-c("Module", "Module_description", "Pathway", 
                     "Pathway_description", "Genes", 
                     "Gene_description", "Enzyme", "Cycle", "Pathway_cycle",
-                    "Detail_cycle")
-  wide_ko<-ko_table %>%
+                    "Detail_cycle", "rbims_pathway", "rbims_sub_pathway")
+  wide_ko<-tibble_ko_map %>%
     dplyr::select(-all_of(data_to_select)) %>%
     dplyr::distinct() %>%
     tibble::column_to_rownames("KO") 
-  ################## Calculate the distance #######################
+  # Distance --------------------------------------------------------------####
   wider_dist<-stats::dist(wide_ko)
-  #################### Calculate the distance #####################
+  # PCA -------------------------------------------------------------------####
   df_pca <- stats::prcomp(wider_dist, center = T, scale = T)
-  #################### Extract PCA infromation ####################
+  # Extract PCA contribution ----------------------------------------------####
   pca_information<-factoextra::get_pca(df_pca)
-  #################### Extract PCA infromation ####################
   contribution_Metabolism<-as.data.frame(pca_information$cos2)
-  ##### Warning if the contribution <=0.98 ########################
-  if_else(contribution_Metabolism$Dim.1 <= 0.98, 
-  warning("Contribution of Dim.1 is less than 0.98. Your output will be the same as input"), 
-  message("Contribution of Dim.1 is higher or equal to 0.98"))
-  
-  ##### Create subsets of the first components ####################
+  # Warning if the contribution <=0.98 ------------------------------------####
+  if (all(contribution_Metabolism$Dim.1 <= 0.97)){
+    warning("Contribution of the first dimention is less or equal to 0.97")
+  }else { 
+    message("Contribution of the first dimention is higher than 0.97")
+  } 
+  # Extract PC1,2 ---------------------------------------------------------####
+  if(is.null(cos2_val) == T){
+    cos2_val <- 0.98
+  }
+  # Extract PC1,2 ---------------------------------------------------------####
   subset1_pathways<-subset(contribution_Metabolism, 
-                         .data$Dim.1 >= 0.98)
+                           contribution_Metabolism$Dim.1 >= cos2_val)
   subset2_pathways<-subset(contribution_Metabolism, 
-                         .data$Dim.2  >= 0.98)
-  subset_098<-rbind(subset1_pathways, 
-                  subset2_pathways)
-  KO_important_paths<- subset(wide_ko, 
-                      rownames(wide_ko) %in% rownames(subset_098))
-  KO_important_paths_2<-rownames_to_column(KO_important_paths,
-                                         var = "ko")
-  return(KO_important_paths_2)
+                           contribution_Metabolism$Dim.2 >= cos2_val)
+  subset1<-c(rownames(subset1_pathways), rownames(subset2_pathways))
+  # Write tibble ----------------------------------------------------------####
+  Final_table<-tibble_ko_map %>%
+    filter(.data$KO %in% subset1)
+  
+  return(Final_table)
 }
-
 
 
 

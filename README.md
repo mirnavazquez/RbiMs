@@ -1,6 +1,6 @@
-# rRbiMs
+# Rbims
 
-r tools for Reconstructing bin Metabolisms.
+R tools for reconstructing bin metabolisms.
 
 ## Quick install
 
@@ -14,7 +14,7 @@ BiocManager::install(c("KEGGREST", "devtools"))
 ```
 library(devtools)
 install_github("mirnavazquez/RbiMs")
-library(rRbiMs)
+library(rbims)
 ```
   
 ## Overview 

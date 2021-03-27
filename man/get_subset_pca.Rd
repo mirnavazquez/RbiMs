@@ -2,15 +2,20 @@
 % Please edit documentation in R/2021_02_26-GET-get_pca.R
 \name{get_subset_pca}
 \alias{get_subset_pca}
-\title{Obtains PCA data of KO pathways.}
+\title{Metabolism PCA.}
 \usage{
-get_subset_pca(ko_table)
+get_subset_pca(tibble_ko_map, cos2_val = NULL)
 }
 \arguments{
-\item{ko_table}{a data frame object, created with the mapping_ko or get_subset_* functions.}
+\item{tibble_ko_map}{a tibble object, created with
+the mapping_ko or get_subset_* functions.}
+
+\item{cos2_val}{a numeric vector from 0 to 1 indicating the proportion of
+contribution used as cut off. Default is 0.98.
+See \link[factoextra]{get_pca}}
 }
 \description{
-Identifies the most important KO pathways in the whole databse.
+Identifies the most important KO pathways in the whole database.
 }
 \details{
 This function is part of a package used for
