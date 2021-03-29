@@ -4,26 +4,43 @@
 \alias{plot_bubble_abundance}
 \title{Bubble plot of KO/Pathways/Modules abundance within each Bin.}
 \usage{
-plot_bubble_abundance(tabble_ko, other_data, x_axis, y_axis, metadata_feature)
+plot_bubble_abundance(tibble_ko, x_axis, y_axis, 
+data_experiment=NULL, color_character=NULL, 
+order_bins=NULL, order_metabolism=NULL, 
+color_pallet=NULL, range_size=NULL)
 }
 \arguments{
-\item{tabble_ko}{a data frame object, created with the mapping_ko or get_subset_* functions.}
-
-\item{other_data}{a data frame object containing metadata information.}
+\item{tibble_ko}{a data frame object, created with
+the mapping_ko or get_subset_* functions.}
 
 \item{x_axis}{a string, it determined the x axis label.}
 
 \item{y_axis}{a string, it determined the y axis label.}
 
-\item{metadata_feature}{a string column name of the metadata object, used for color.}
+\item{data_experiment}{optional. a data frame object
+containing metadata information.}
+
+\item{color_character}{optional. a string column name of the metadata
+or metabolism object, used for color.}
+
+\item{order_bins}{optional. a character vector indicating the bin order.}
+
+\item{order_metabolism}{optional. a character vector
+indicating metabolism order.}
+
+\item{color_pallet}{optional. a character vector of colors to use.}
+
+\item{range_size}{optional. a numeric vector indicating
+the range size of the dots.}
 }
 \description{
-Creates a bubble plot of KO/Pathways/Modules abundance within each bin. It uses the metadata information to color bubbles.
+Creates a bubble plot of KO/Pathways/Modules abundance
+within each bin. It uses the metadata information to color bubbles.
 }
 \details{
 This function is part of a package used for
 the analysis of bins metabolism.
 }
 \examples{
-plot_bubble_abundance(ko_bin_mapp, metadata, Bin_name, Pathway, Clades)   
+plot_bubble_abundance(ko_bin_mapp, Bin_name, Pathway)    
 }

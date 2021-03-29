@@ -6,8 +6,9 @@
 within each bin.}
 \usage{
 plot_bubble_percentage(tibble_ko, x_axis, y_axis, 
-data_experiment=NULL, color_character=NULL, order_bins=NULL,
-order_metabolism=NULL, color_pallet=NULL, range_size=NULL)
+data_experiment=NULL, color_character=NULL, 
+order_bins=NULL, order_metabolism=NULL, 
+color_pallet=NULL, range_size=NULL)
 }
 \arguments{
 \item{tibble_ko}{a tibble object, created with the mapping_ko

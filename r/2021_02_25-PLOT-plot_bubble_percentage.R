@@ -4,8 +4,9 @@
 #' abundance within each bin. 
 #' It uses the metadata information to color bubbles.
 #' @usage plot_bubble_percentage(tibble_ko, x_axis, y_axis, 
-#' data_experiment=NULL, color_character=NULL, order_bins=NULL,
-#' order_metabolism=NULL, color_pallet=NULL, range_size=NULL)
+#' data_experiment=NULL, color_character=NULL, 
+#' order_bins=NULL, order_metabolism=NULL, 
+#' color_pallet=NULL, range_size=NULL)
 #' @param tibble_ko a tibble object, created with the mapping_ko 
 #' or get_subset_* functions. 
 #' @param x_axis a string, a column name of the metabolism table. 
@@ -100,7 +101,7 @@ plot_bubble_percentage<-function(tibble_ko,
     Table_with_percentage<-Table_with_percentage %>%
       left_join(data_experiment, by="Bin_name")
   }
-  # Checking the order Bin ------------------------------------------------####
+  # Checking the order ---------------------------------------------------####
   if(is.null(order_metabolism) == T){
     order_metabolism<-Table_with_percentage %>%
       ungroup() %>%
@@ -108,7 +109,7 @@ plot_bubble_percentage<-function(tibble_ko,
       distinct() %>%
       pull()
   }
-  # Checking the order Bin ------------------------------------------------####
+  # Checking the order ---------------------------------------------------####
   if(is.null(order_bins) == T){
     order_bins<-sort(unique(Table_with_percentage$Bin_name))
   }
