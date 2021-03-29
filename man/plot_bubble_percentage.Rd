@@ -2,45 +2,48 @@
 % Please edit documentation in R/2021_02_25-PLOT-plot_bubble_percentage.R
 \name{plot_bubble_percentage}
 \alias{plot_bubble_percentage}
-\title{Bubble plot of KO/Pathways/Modules and its relative abundance within each Bin.}
+\title{Bubble plot of KO/Pathways/Modules and its relative abundance
+within each bin.}
 \usage{
-plot_bubble_percentage(
-  tabble_ko,
-  other_data,
-  x_axis,
-  y_axis,
-  metadata_feature = NULL,
-  order_bins = NULL,
-  order_metabolism = NULL,
-  color_bin = NULL,
-  range_size = NULL
-)
+plot_bubble_percentage(tibble_ko, x_axis, y_axis, 
+data_experiment=NULL, color_character=NULL, order_bins=NULL,
+order_metabolism=NULL, color_pallet=NULL, range_size=NULL)
 }
 \arguments{
-\item{tabble_ko}{a data frame object, created with the mapping_ko or get_subset_* functions.}
+\item{tibble_ko}{a tibble object, created with the mapping_ko
+or get_subset_* functions.}
 
-\item{other_data}{a data frame object containing metadata information.}
+\item{x_axis}{a string, a column name of the metabolism table.
+It determined the x axis label.}
 
-\item{x_axis}{a string, it determined the x axis label.}
+\item{y_axis}{a string, a column name of the metabolism table.
+It determined the y axis label.}
 
-\item{y_axis}{a string, it determined the y axis label.}
+\item{data_experiment}{optional. a data frame object
+containing metadata information.}
 
-\item{metadata_feature}{a string column name of the metadata object, used for color.}
+\item{color_character}{optional. a string column name of the metadata
+or metabolism object, used for color.}
 
-\item{order_bins}{a character vector indicating the bin order.}
+\item{order_bins}{optional. a character vector indicating the bin order.}
 
-\item{order_metabolism}{a character vector indicating metabolism order.}
+\item{order_metabolism}{optional. a character vector
+indicating metabolism order.}
 
-\item{color_bin}{a character vector of colors to use.}
+\item{color_pallet}{optional. a character vector of colors to use.}
 
-\item{range_size}{a numeric vector indicating the range size of the dots.}
+\item{range_size}{optional. a numeric vector indicating
+the range size of the dots.}
 }
 \description{
-Creates a bubble plot of KO/Pathways/Modules relative abundance within each bin. It uses the metadata information to color bubbles.
+Creates a bubble plot of KO/Pathways/Modules relative
+abundance within each bin.
+It uses the metadata information to color bubbles.
 }
 \details{
-This function is part of a package used for the analysis of bins metabolism.
+This function is part of a package used for
+the analysis of bins metabolism.
 }
 \examples{
-plot_bubble_percentage(ko_bin_mapp, metadata, Bin_name, Module, Clades)
+plot_bubble_percentage(ko_bin_mapp, Bin_name, Module, metadata, Clades)
 }
