@@ -1,4 +1,4 @@
-  <!-- badges: start -->
+ <!-- badges: start -->
   [![R-CMD-check](https://github.com/mirnavazquez/RbiMs/workflows/R-CMD-check/badge.svg)](https://github.com/mirnavazquez/RbiMs/actions)
   <!-- badges: end -->
   
