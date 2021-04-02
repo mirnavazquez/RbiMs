@@ -33,5 +33,6 @@ Imports:
     tidyr,
     rlang,
     pals,
-    magrittr
+    magrittr,
+    prettydoc
 Language: en-US
