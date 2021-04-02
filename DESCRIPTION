@@ -18,6 +18,8 @@ Suggests:
     rmarkdown,
     spelling
 VignetteBuilder: knitr
+biocViews:
+  KEGGREST
 Imports: 
     KEGGREST,
     dplyr,
