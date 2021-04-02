@@ -2,12 +2,16 @@
 % Please edit documentation in R/2021_02_25-READ-read_ko.R
 \name{read_ko}
 \alias{read_ko}
-\title{Read the output of KofamScan or KofamKoala}
+\title{Read the output of KofamScan/KofamKoala or KAAS}
 \usage{
-read_ko(data_ko)
+read_ko(data_kofam=NULL, data_kaas=NULL)
 }
 \arguments{
-\item{data_ko}{a data frame with 5 columns. The contigs are expected to
+\item{data_kofam}{a data frame with 5 columns. The contigs are expected to
+indicate in their names the bin name and then the scaffold name divided
+by an "_", similar to bin_scaffoldXX.}
+
+\item{data_kaas}{a data frame with 2 columns. The contigs are expected to
 indicate in their names the bin name and then the scaffold name divided
 by an "_", similar to bin_scaffoldXX.}
 }

@@ -8,7 +8,7 @@ Authors@R:
            email = "mirnavrl@gmail.com",
            comment = c(ORCID = "0000-0002-6928-7930"))
 Description: rbims is a package used for the analysis of microbial metabolism. rbims reads different database outputs and includes a new custom-curated database that the user can easily access. Its module-based design allows the user to choose between running the whole pipeline or just part of it. Finally, a key feature is that it facilitates the incorporation of metadata such as taxonomy and sampling data, allowing the user to answer specific questions of biological relevance.
-License: Apache License (>= 2)
+License: GPL (>= 3) + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
