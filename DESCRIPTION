@@ -19,8 +19,8 @@ Suggests:
     spelling
 VignetteBuilder: knitr
 biocViews:
-  KEGGREST
-Imports: 
+    KEGGREST
+Imports:
     KEGGREST,
     dplyr,
     factoextra,
