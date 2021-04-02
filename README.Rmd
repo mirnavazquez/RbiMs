@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# rbims
+# **Rbims**  <img src="man/figures/Logo-rRbiMs.png"  width="150" height="150" align="right" />
 
 <!-- badges: start -->
 <!-- badges: end -->

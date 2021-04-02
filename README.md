@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# rbims
+# **Rbims** <img src="man/figures/Logo-rRbiMs.png"  width="150" height="150" align="right" />
 
 <!-- badges: start -->
 <!-- badges: end -->
