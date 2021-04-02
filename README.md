@@ -1,6 +1,10 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/mirnavazquez/RbiMs/workflows/R-CMD-check/badge.svg)](https://github.com/mirnavazquez/RbiMs/actions)
+<!-- badges: end -->
+
 # **Rbims** <img src="man/figures/Logo-rRbiMs.png"  width="150" height="150" align="right" />
 
 <!-- badges: start -->

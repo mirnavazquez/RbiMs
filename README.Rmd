@@ -2,6 +2,7 @@
 output: github_document
 ---
 
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
@@ -12,6 +13,10 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
+
+  <!-- badges: start -->
+  [![R-CMD-check](https://github.com/mirnavazquez/RbiMs/workflows/R-CMD-check/badge.svg)](https://github.com/mirnavazquez/RbiMs/actions)
+  <!-- badges: end -->
 
 # **Rbims**  <img src="man/figures/Logo-rRbiMs.png"  width="150" height="150" align="right" />
 
