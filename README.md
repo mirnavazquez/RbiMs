@@ -37,9 +37,4 @@ library(rbims)
 -   Kanehisa, M., Furumichi, M., Sato, Y., Ishiguro-Watanabe, M., and
     Tanabe, M.; KEGG: integrating viruses and cellular organisms.
     Nucleic Acids Res. 49, D545-D551 (2021).
--   Rawlings, N.D., Waller, M., Barrett, A.J. & Bateman, A. (2014)
-    MEROPS: the database of proteolytic enzymes, their substrates and
-    inhibitors. Nucleic Acids Res 42, D503-D509.
 -   [DiTing](https://github.com/xuechunxu/DiTing) cycles definition.
-
-
