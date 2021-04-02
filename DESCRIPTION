@@ -1,5 +1,5 @@
 Package: rbims
-Title: rbims: R tools for reconstruncting bin Metabolisms
+Title: Rbims: R Tools for Reconstruncting Bin Metabolisms
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Mirna",
