@@ -40,3 +40,4 @@ library(rbims)
 -   Rawlings, N.D., Waller, M., Barrett, A.J. & Bateman, A. (2014)
     MEROPS: the database of proteolytic enzymes, their substrates and
     inhibitors. Nucleic Acids Res 42, D503-D509.
+-   [DiTing](https://github.com/xuechunxu/DiTing) cycles definition.
