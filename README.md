@@ -32,7 +32,10 @@ library(rbims)
 
 ## Overview
 
-![](inst/rRbiMs-3.png) \#\# Quick Example
+![](inst/rRbiMs-3.png) 
+
+
+## Quick Example
 
 Read the kofamScan output and the metadata file. The metadata file is a
 tab-separated file containing the name of your bins and any extra
