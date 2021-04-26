@@ -32,41 +32,47 @@ library(rbims)
 
 ## Overview
 
-![](inst/rRbiMs-3.png)
+![](inst/rRbiMs-3.png) \#\# Quick Example
 
-##  Quick Example
+Read the kofamScan output and the metadata file. The metadata file is a
+tab-separated file containing the name of your bins and any extra
+information you would like to use for visualization.
 
-Read the kofamScan output and the metadata file. The metadata file is a tab-separated file containing the name of your bins and any extra information you would like to use for visualization.
-
-```r 
+``` r
 ko_bin_table<-read_ko(data_kofam = "all.kofam.txt")
 metadata <-read.table("metadata.txt", sep = "\t")
 ```
 
-Then map the KO to the rest of the features of the KEGG database and rbims database.
+Then map the KO to the rest of the features of the KEGG database and
+rbims database.
 
-```r 
+``` r
 ko_bin_mapp<-mapping_ko(ko_bin_table)
 ```
 
-Let's say that you are interested in the genes associated with the biofilm formation in Vibrio Cholerae.
+Let’s say that you are interested in the genes associated with the
+biofilm formation in Vibrio Cholerae.
 
-- One first thing could be to create a vector containing the name of the KEGG pathway associated with the biofilm formation in Vibrio Cholerae.
+-   One first thing could be to create a vector containing the name of
+    the KEGG pathway associated with the biofilm formation in Vibrio
+    Cholerae.
 
-```r 
+``` r
 Biofilm_Vibrio<-c("map05111")
 ```
 
-- Now, let's extract the profile associated with that metabolic pathway.
+-   Now, let’s extract the profile associated with that metabolic
+    pathway.
 
-```r 
+``` r
 Biofilm_Vibrio_subset<-ko_bin_mapp%>%
   drop_na(Pathway) %>%
   get_subset_pathway(Pathway, Biofilm_Vibrio) 
 ```
-- Now, let's create a plot. 
 
-```r 
+-   Now, let’s create a plot.
+
+``` r
 plot_bubble_percentage(tibble_ko = Biofilm_Vibrio_subset, 
                        data_experiment = metadata,
                        x_axis = Bin_name, 
@@ -75,19 +81,19 @@ plot_bubble_percentage(tibble_ko = Biofilm_Vibrio_subset,
                        range_size = c(5,6))
 ```
 
-##  Order axis
+### Order axis
 
-Let's say that you want to order by bin names.
+Let’s say that you want to order by bin names.
 
-- Create a vector containing the order.
+-   Create a vector containing the order.
 
-```r 
+``` r
 order_taxa<-c("Bin_1", "Bin_2", "Bin_10", "Bin_113")
 ```
 
-- Now plot, using the order_bins argument
+-   Now plot, using the order\_bins argument.
 
-```r 
+``` r
 plot_bubble_percentage(tibble_ko = Biofilm_Vibrio_subset, 
                        data_experiment = metadata,
                        x_axis = Bin_name, 
@@ -97,7 +103,7 @@ plot_bubble_percentage(tibble_ko = Biofilm_Vibrio_subset,
                        range_size = c(5,6))
 ```
 
-##  References
+## References
 
 -   Kanehisa, M. and Goto, S.; KEGG: Kyoto Encyclopedia of Genes and
     Genomes. Nucleic Acids Res. 28, 27-30 (2000).

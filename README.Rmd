@@ -96,7 +96,7 @@ Let's say that you want to order by bin names.
 order_taxa<-c("Bin_1", "Bin_2", "Bin_10", "Bin_113")
 ```
 
-- Now plot, using the order_bins argument
+- Now plot, using the order_bins argument.
 
 ```r 
 plot_bubble_percentage(tibble_ko = Biofilm_Vibrio_subset, 
