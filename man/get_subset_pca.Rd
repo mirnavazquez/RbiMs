@@ -4,23 +4,29 @@
 \alias{get_subset_pca}
 \title{Metabolism PCA.}
 \usage{
-get_subset_pca(tibble_ko_map, cos2_val = NULL)
+get_subset_pca(tibble_rbims, cos2_val=NULL, 
+analysis=c("KEGG", "PFAM", "INTERPRO"))
 }
 \arguments{
-\item{tibble_ko_map}{a tibble object, created with
-the mapping_ko or get_subset_* functions.}
+\item{tibble_rbims}{a tibble object, created with
+the read_interpro, mapping_ko or get_subset_* functions.}
 
 \item{cos2_val}{a numeric vector from 0 to 1 indicating the proportion of
 contribution used as cut off. Default is 0.98.
-See \link[factoextra]{get_pca}}
+See \link[factoextra]{get_pca}.}
+
+\item{analysis}{a character, indicating from which input do you want to
+get the abundance profile. Valid options are "KEGG", "PFAM" or "INTERPRO".}
 }
 \description{
-Identifies the most important KO pathways in the whole database.
+Identifies the most important KO pathways or protein
+domains in the whole database. And print back a profile of the protein
+domains that have higher contributions.
 }
 \details{
 This function is part of a package used for
 the analysis of bins metabolism.
 }
 \examples{
-get_subset_pca(ko_bin_mapp)
+get_subset_pca(ko_bin_mapp, analysis="KEGG")
 }

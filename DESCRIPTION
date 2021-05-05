@@ -34,5 +34,7 @@ Imports:
     rlang,
     pals,
     magrittr,
-    prettydoc
+    prettydoc,
+    ComplexHeatmap,
+    stats
 Language: en-US

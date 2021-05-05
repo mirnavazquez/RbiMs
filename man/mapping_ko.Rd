@@ -2,13 +2,20 @@
 % Please edit documentation in R/2021_02_25-MAPPING-mapping_ko.R
 \name{mapping_ko}
 \alias{mapping_ko}
-\title{Maps KOs to the KEGG database}
+\title{Maps KOs to the KEGG database.}
 \usage{
-mapping_ko(tibble_ko)
+mapping_ko(tibble_ko=NULL, tibble_interpro=NULL)
 }
 \arguments{
 \item{tibble_ko}{a data frame object with four columns containing
-the KO abundance for each bin.}
+the KO abundance for each bin. Output of read_ko.}
+
+\item{tibble_interpro}{a data frame with three columns. The first column
+refers to contigs. They are expected to indicate in their names
+the bin name follow by the scaffold name divided by an "_":
+bin_scaffoldXX. The second column is the KEGG pathway to which
+such scaffold belong, and the third is the enzymes.
+Output of read_interpro.}
 }
 \description{
 Reads a table object created with the read_ko function

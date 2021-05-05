@@ -2,24 +2,31 @@
 % Please edit documentation in R/2021_03_04-GET-get_subseting_pathway.R
 \name{get_subset_pathway}
 \alias{get_subset_pathway}
-\title{Subsets the mapped KO table based on pathways}
+\title{Subsets the mapped KO table based on pathways.}
 \usage{
-get_subset_pathway(mapped_ko_table, type_of_interest_feature, interest_feature)
+get_subset_pathway(mapped_ko_table, type_of_interest_feature,
+interest_feature)
 }
 \arguments{
-\item{mapped_ko_table}{a data frame object. The output table from the mapping_ko function.}
+\item{mapped_ko_table}{a data frame object. The output table from
+the mapping_ko function.}
 
-\item{type_of_interest_feature}{is a mapped_ko column name. This feature is going to be used for subsetting.}
+\item{type_of_interest_feature}{is a mapped_ko column name. This feature
+is going to be used for subsetting.}
 
-\item{interest_feature}{a character vector of the mapped_ko feature of interest. It is found under the type_of_interest_feature value column.}
+\item{interest_feature}{a character vector of the mapped_ko
+feature of interest. It is found under the type_of_interest_feature
+value column.}
 }
 \description{
 reads the output of the mapping_ko function to filter out KOs
 based on pathways.
 }
 \details{
-This function is part of a package used for the analysis of bins metabolism.
+This function is part of a package used for the analysis of
+bins metabolism.
 }
 \examples{
-get_subset_pathway(ko_bin_mapp, rbims_pathway, "Hexadecane")
+get_subset_pathway(mapped_ko_table=ko_bin_mapp, 
+type_of_interest_feature=rbims_pathway, interest_feature="Hexadecane")
 }

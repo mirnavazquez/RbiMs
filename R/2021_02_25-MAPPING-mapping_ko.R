@@ -1,15 +1,23 @@
-#' @title Maps KOs to the KEGG database
+#' @title Maps KOs to the KEGG database.
 #' @description Reads a table object created with the read_ko function 
 #' and maps each KO to the KEGG database.
+#' @usage mapping_ko(tibble_ko=NULL, tibble_interpro=NULL)
 #' @param tibble_ko a data frame object with four columns containing 
-#' the KO abundance for each bin.
+#' the KO abundance for each bin. Output of read_ko.
+#' @param tibble_interpro a data frame with three columns. The first column  
+#' refers to contigs. They are expected to indicate in their names
+#' the bin name follow by the scaffold name divided by an "_": 
+#' bin_scaffoldXX. The second column is the KEGG pathway to which
+#' such scaffold belong, and the third is the enzymes. 
+#' Output of read_interpro.
 #' @details This function is part of a package used for the analysis of bins 
 #' metabolism.
 #' @import KEGGREST tibble dplyr stringr tidyr janitor rlang
 #' @examples
 #' mapping_ko(ko_bin_table)
 #' @export
-mapping_ko<-function(tibble_ko){
+mapping_ko<-function(tibble_ko=NULL, 
+                     tibble_interpro=NULL ){
   # KEGG links ------------------------------------------------------------####
   module_link<- KEGGREST::keggLink("ko", "module") %>%
     enframe() %>%
@@ -71,7 +79,7 @@ mapping_ko<-function(tibble_ko){
       rename(Pathway_cycle = .data$Pathway) %>%
       rename(KO = .data$k_number) %>%
       rename(Detail_cycle = .data$Detail))
-  # Combine data-sets ------------------------------------------------------####
+  # Combine data-sets -----------------------------------------------------####
   KO_master_DiTing<-left_join(KO_master, DiTing_cycles, by="KO")
   # Read RbiMs ------------------------------------------------------------####
   rbims<-rbims
@@ -81,21 +89,32 @@ mapping_ko<-function(tibble_ko){
       Genes == "alkT" ~ "rubB, alkT",
       TRUE ~ as.character(Genes)
     ))
+  # Data to select --------------------------------------------------------####
+  data_to_select<-c("Module", "Module_description", "Pathway", 
+                    "Pathway_description", "Cycle", "Pathway_cycle",
+                    "Detail_cycle", "Genes", "Gene_description", 
+                    "Enzyme", "Bin_name", "Abundance", "KO",
+                    "rbims_pathway", "rbims_sub_pathway")
+  
+  if(is.null(tibble_interpro) == F){
+    output_interpro <- tibble_interpro %>%
+      left_join(KO_master_DiTing_rbims, by=c("Pathway", "Enzyme"))
+    Interpro_ko<-read_ko(data_kofam=NULL, data_kaas=NULL, output_interpro)
+    table_to_ko<- Interpro_ko
+  }
+  if(is.null(tibble_ko) == F){
+    table_to_ko<- tibble_ko
+  }
   # Write tibble ----------------------------------------------------------####
-    data_to_select<-c("Module", "Module_description", "Pathway", 
-                      "Pathway_description", "Cycle", "Pathway_cycle",
-                      "Detail_cycle", "Genes", "Gene_description", 
-                      "Enzyme", "Bin_name", "Abundance", "KO",
-                      "rbims_pathway", "rbims_sub_pathway")
-    final_table <- tibble_ko %>%
-      left_join(KO_master_DiTing_rbims, by="KO") %>%
-      select(.data$KO, .data$Bin_name, .data$Abundance) %>%
-      distinct() %>%
-      left_join(KO_master_DiTing_rbims, by="KO") %>%
-      select(all_of(data_to_select)) %>%
-      distinct() %>%
-      pivot_wider(names_from = .data$Bin_name, 
-                  values_from = .data$Abundance, values_fill = 0) 
+  final_table <- table_to_ko %>%
+    left_join(KO_master_DiTing_rbims, by="KO") %>%
+    select(.data$KO, .data$Bin_name, .data$Abundance) %>%
+    distinct() %>%
+    left_join(KO_master_DiTing_rbims, by="KO") %>%
+    select(all_of(data_to_select)) %>%
+    distinct() %>%
+    pivot_wider(names_from = .data$Bin_name, 
+                values_from = .data$Abundance, values_fill = 0)
   
   return(final_table)
 }

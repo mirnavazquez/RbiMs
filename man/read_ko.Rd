@@ -2,21 +2,24 @@
 % Please edit documentation in R/2021_02_25-READ-read_ko.R
 \name{read_ko}
 \alias{read_ko}
-\title{Read the output of KofamScan/KofamKoala or KAAS}
+\title{Read the output of KofamScan/KofamKoala or KAAS.}
 \usage{
-read_ko(data_kofam=NULL, data_kaas=NULL)
+read_ko(data_kofam=NULL, data_kaas=NULL, data_interpro=NULL)
 }
 \arguments{
-\item{data_kofam}{a data frame with 5 columns. The contigs are expected to
-indicate in their names the bin name and then the scaffold name divided
-by an "_", similar to bin_scaffoldXX.}
+\item{data_kofam}{a data frame with 5 columns. Contigs are expected to
+indicate in their names the bin name follow by the scaffold name
+divided by an "_": bin_scaffoldXX.}
 
-\item{data_kaas}{a data frame with 2 columns. The contigs are expected to
-indicate in their names the bin name and then the scaffold name divided
-by an "_", similar to bin_scaffoldXX.}
+\item{data_kaas}{a data frame with 2 columns. Contigs are expected to
+indicate in their names the bin name follow by the scaffold name
+divided by an "_": bin_scaffoldXX.}
+
+\item{data_interpro}{a data frame output of read_interpro. This
+argument is used within mapping_KO.}
 }
 \description{
-read_ko() calculates the abundance of each KO within the
+read_ko calculates the abundance of each KO within the
 bins based on the KofamScan or KofamKoala output.
 }
 \details{
