@@ -2,5 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
+.DS_Store
 inst/doc
+inst/.DS_Store
 man/
+man/.DS_Store
