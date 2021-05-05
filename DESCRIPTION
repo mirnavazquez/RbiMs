@@ -36,5 +36,6 @@ Imports:
     magrittr,
     prettydoc,
     ComplexHeatmap,
-    stats
+    stats,
+    Cairo
 Language: en-US
