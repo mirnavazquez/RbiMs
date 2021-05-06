@@ -36,9 +36,9 @@
 #' the analysis of bins metabolism.
 #' @import pheatmap rlang dplyr tidyr tibble
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' plot_heatmap(tibble_ko=ko_bin_mapp, y_axis=Pathway,
-#' analysis="KEGG", data_experiment = metadata, 
+#' analysis="INTERPRO", data_experiment = metadata, 
 #' calc="Binary", order_y=Module, order_x=Clades)
 #' }
 #' @export
