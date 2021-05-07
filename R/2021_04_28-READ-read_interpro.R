@@ -70,6 +70,8 @@ read_interpro<-function(data_interpro,
     
     if(isTRUE(profile)){
       interpro<-table_interpro %>%
+      select(-.data$Scaffold_name) %>%
+        distinct() %>%
         pivot_wider(names_from= "Bin_name", values_from="Abundance", 
                     values_fill = 0)
     } else{
@@ -93,6 +95,8 @@ read_interpro<-function(data_interpro,
     
     if(isTRUE(profile)){
       interpro<-table_interpro %>%
+        select(-.data$Scaffold_name) %>%
+        distinct() %>%
         pivot_wider(names_from= "Bin_name", values_from="Abundance", 
                     values_fill = 0)
     } else{

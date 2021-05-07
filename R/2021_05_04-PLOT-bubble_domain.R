@@ -70,7 +70,7 @@ bubble_domain<-function(tibble_ko,
   }
   # Checking the size -----------------------------------------------------####
   if(is.null(range_size) == T){
-    range_size<-c(1,5)
+    range_size<-c(1,10)
   }
   # Checking the xlabs ----------------------------------------------------####
   if(isTRUE(x_labs) == T){
@@ -96,11 +96,11 @@ bubble_domain<-function(tibble_ko,
   bubble<-tibble_ko %>%
     select(-.data$domain_name) %>%
     pivot_longer(cols = -{{y_axis_enquo}}, names_to="Bin_name", 
-                 values_to = "Presence_absence") %>%
-    mutate_at('Presence_absence', as.integer) %>%
-    mutate(Presence_absence = case_when(
-      .data$Presence_absence == 0 ~ NA_integer_,
-      TRUE ~ as.integer(Presence_absence)
+                 values_to = "Abundance") %>%
+    mutate_at('Abundance', as.integer) %>%
+    mutate(Abundance = case_when(
+      .data$Abundance == 0 ~ NA_integer_,
+      TRUE ~ as.integer(Abundance)
     )) 
   # Join data experiment --------------------------------------------------####
   if(is.null(data_experiment) == F){
@@ -136,7 +136,7 @@ bubble_domain<-function(tibble_ko,
                                       levels = !!order_bins),
                             y= factor(!!y_axis_enquo, 
                                       levels = !!order_metabolism),
-                            size= .data$Presence_absence,
+                            size= .data$Abundance,
                             color= !!color_character_enquo)) +
       geom_point(alpha=0.5) +
       scale_size(range =range_size) +
@@ -155,10 +155,10 @@ bubble_domain<-function(tibble_ko,
                                       levels = !!order_metabolism),
                             y= factor(!!y_axis_enquo, 
                                       levels = !!order_bins),
-                            size= .data$Presence_absence,
+                            size= .data$Abundance,
                             color= !!color_character_enquo)) +
       geom_point(alpha=0.5) +
-      scale_size(range = c(1,5)) +
+      scale_size(range = range_size) +
       scale_color_manual(values = color_pallet) +
       theme_linedraw() +
       theme(axis.text.x = element_text(size=text_x, 

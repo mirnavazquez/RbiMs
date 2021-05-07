@@ -22,7 +22,7 @@ calc_abundance<-function(tabla_toabundance,
   if( analysis == "PFAM") {
     KO_raw <- KO_raw %>% 
       rename(tmp = .data$pfam) %>%
-      select(-.data$Scaffold_name)%>%
+      #select(-.data$Scaffold_name)%>%
       distinct()
   } else if ( analysis == "KEGG") {
     KO_raw <- KO_raw %>% 
@@ -30,7 +30,7 @@ calc_abundance<-function(tabla_toabundance,
   } else if ( analysis == "INTERPRO"){
     KO_raw <- KO_raw %>% 
       rename(tmp = .data$Interpro) %>%
-      select(-.data$Scaffold_name)%>%
+      #select(-.data$Scaffold_name)%>%
       distinct()
   }
   # Calculate abundance ---------------------------------------------------####
