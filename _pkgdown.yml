@@ -1,0 +1,8 @@
+template:
+  params:
+    bootswatch: cerulean
+    ganalytics: UA-000000-01
+  opengraph:
+    twitter:
+      creator: "@MirnaVRL"
+      card: summary_large_image
