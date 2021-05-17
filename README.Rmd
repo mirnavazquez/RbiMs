@@ -47,7 +47,7 @@ library(rbims)
 ![](inst/rRbiMs-3.png)
 ## Quick Example
 
-Read the kofamScan output and the metadata file. The metadata file is a tab-separated file containing the name of your bins and any extra information you would like to use for visualization.
+The first thing to do would be read the kofamScan output and the metadata file. The metadata file is a tab-separated file containing the name of your bins and any extra information you would like to use for visualization.
 
 ```r 
 ko_bin_table<-read_ko(data_kofam = "all.kofam.txt")
@@ -75,15 +75,17 @@ Biofilm_Vibrio_subset<-ko_bin_mapp%>%
   drop_na(Pathway) %>%
   get_subset_pathway(Pathway, Biofilm_Vibrio) 
 ```
-- Now, let's create a plot. 
+- Now, let's create a plot of presence and absence of the different KO associated to that pathway. Besides presence and absence, it is possible to plot abundance or the percentage of genes within certain pathways (See ?plot_bubble, calc argument). 
 
 ```r 
-plot_bubble_percentage(tibble_ko = Biofilm_Vibrio_subset, 
-                       data_experiment = metadata,
-                       x_axis = Bin_name, 
-                       y_axis = Genes,
-                       color_character=Genus,
-                       range_size = c(5,6))
+plot_bubble(tibble_ko = Biofilm_Vibrio_subset,
+            x_axis = Bin_name, 
+            y_axis = KO,
+            analysis="KEGG",
+            data_experiment = metadata,
+            calc="Binary",
+            color_character = Phylum,
+            range_size = c(1,10)) 
 ```
 
 ###  Order axis
@@ -99,13 +101,15 @@ order_taxa<-c("Bin_1", "Bin_2", "Bin_10", "Bin_113")
 - Now plot, using the order_bins argument.
 
 ```r 
-plot_bubble_percentage(tibble_ko = Biofilm_Vibrio_subset, 
-                       data_experiment = metadata,
-                       x_axis = Bin_name, 
-                       y_axis = Genes,
-                       order_bins=order_taxa,
-                       color_character=Genus,
-                       range_size = c(5,6))
+plot_bubble(tibble_ko = Biofilm_Vibrio_subset,
+            data_experiment = metadata,
+            x_axis = Bin_name,
+            y_axis = Genes,
+            analysis="KEGG",
+            calc="Binary",
+            order_bins=order_taxa,
+            color_character=Genus,
+            range_size = c(5,6))
 ```
 
 ##  References
