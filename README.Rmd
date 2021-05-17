@@ -88,6 +88,9 @@ plot_bubble(tibble_ko = Biofilm_Vibrio_subset,
             range_size = c(1,10)) 
 ```
 
+![](inst/Example_bubble.png) 
+
+
 ###  Order axis
 
 Let's say that you want to order by bin names.
@@ -111,6 +114,16 @@ plot_bubble(tibble_ko = Biofilm_Vibrio_subset,
             color_character=Genus,
             range_size = c(5,6))
 ```
+
+![](inst/Example_bubble_order.png) 
+
+```r 
+plot_heatmap(tibble_ko=Biofilm_Vibrio_subset, 
+             y_axis=Genes, 
+             calc="Binary")
+```
+
+![](inst/example_heatmap.png) 
 
 ##  References
 

@@ -132,9 +132,7 @@ heatmap_ko<-function(tibble_ko,
       column_to_rownames(y_axis_label) %>%
       arrange(!!order_y_enquo)
     
-  } else if (quo_is_null(order_y_enquo) == T){
-    metabolism_order<-NULL
-  }
+  } 
   # Checking the split ----------------------------------------------------####
   if(split_y == FALSE){
     split_y<-NULL
@@ -168,32 +166,44 @@ heatmap_ko<-function(tibble_ko,
       distinct(.data$Bin_name, .keep_all = T) %>%
       column_to_rownames("Bin_name") %>%
       arrange(!!order_x_enquo)
-  } else if (quo_is_null(order_x_enquo) == T){
-    experiment_order <- NULL
-  }
+  } 
+  
   # Order table -----------------------------------------------------------####
   if(quo_is_null(order_x_enquo) == F || quo_is_null(order_y_enquo)== F ){
     sub_samp_ordered <- table_final[rownames(metabolism_order),]
     sub_samp_ordered_2 <- sub_samp_ordered[,rownames(experiment_order)]
-  } else if (quo_is_null(order_x_enquo) == T || quo_is_null(order_y_enquo)== T ) {
-    sub_samp_ordered_2 <- table_final
+  } 
+  # Plot ------------------------------------------------------------------####
+  if(quo_is_null(order_x_enquo) == F || quo_is_null(order_y_enquo)== F ) {
+    plot_heat<-suppressWarnings(
+      ComplexHeatmap::pheatmap(sub_samp_ordered_2, 
+                               scale = scale_option,
+                               annotation_row = metabolism_order,
+                               annotation_col = experiment_order,
+                               cluster_rows = F,
+                               cluster_cols = F,
+                               row_split = split_y,
+                               column_split = select(experiment_order, 
+                                                     {{order_x_enquo}}),
+                               main = "Pathway heatmap",
+                               fontsize=7,
+                               angle_col="0",
+                               col = color_pallet)
+    )
   }
   # Plot ------------------------------------------------------------------####
-  plot_heat<-suppressWarnings(
-    ComplexHeatmap::pheatmap(sub_samp_ordered_2, 
-                             scale = scale_option,
-                             annotation_row = metabolism_order,
-                             annotation_col = experiment_order,
-                             cluster_rows = F,
-                             cluster_cols = F,
-                             row_split = split_y,
-                             column_split = select(experiment_order, 
-                                                   {{order_x_enquo}}),
-                             main = "Pathway heatmap",
-                             fontsize=7,
-                             angle_col="0",
-                             col = color_pallet)
-  )
+  if(quo_is_null(order_x_enquo) == T || quo_is_null(order_y_enquo)== T ) {
+    plot_heat<-suppressWarnings(ComplexHeatmap::pheatmap(table_final, 
+                                                         scale = NULL,
+                                                         cluster_rows = T,
+                                                         cluster_cols = T,
+                                                         main = "Pathway heatmap",
+                                                         fontsize=7,
+                                                         angle_col="0",
+                                                         col = color_pallet)
+    )
+    
+  }
   
   return(plot_heat)
 }
