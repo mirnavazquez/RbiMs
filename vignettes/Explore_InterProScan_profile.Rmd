@@ -1,0 +1,67 @@
+---
+title: "Explore InterProScan profile"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Explore InterProScan profile}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(rbims)
+```
+
+In this example we will explore the PFAM data within the InterProScan output.
+
+First I will read the InterProScan output in a long format and extract the PFAM abundance information.
+
+```{r, eval=FALSE}
+interpro_pfam_long<-read_interpro("Interpro_test.tsv", database="PFAM", profile = F)
+```
+
+You can use the subsetting functions to create subsets. Here we are going to extract the most important PFAMs, we need to use as input the not profile output from read_interpro. 
+
+The function `get_subset_pca` calculates a PCA over the data to find the PFAM that better explain variation within the data.
+
+```{r, eval=FALSE}
+important_PFAMs<-get_subset_pca(tibble_rbims=interpro_pfam_profile, 
+               cos2_val=0.95,
+               analysis="PFAM")
+```
+
+```{r, eval=FALSE }
+head(important_PFAMs)
+```
+
+Lets plot the results.
+
+**plot_heatmap** can help to explore the results. We can perform two types of analysis, if we set the distance option as **TRUE** we can get a plot to show how the samples could cluster based on the protein domains.
+
+```{r, eval=FALSE}
+plot_heatmap(important_PFAMs, y_axis=PFAM, analysis = "INTERPRO", distance = T)
+```
+
+If we set that to **FALSE** we observed the presence and absence of the domains across the genome samples.
+
+```{r, eval=FALSE}
+plot_heatmap(important_PFAMs, y_axis=PFAM, analysis = "INTERPRO", distance = F)
+```
+
+We can also visualize using a bubble plot. 
+
+```{r, eval=FALSE}
+plot_bubble(input_data, y_axis=PFAM, x_axis=Bin_name, analysis = "INTERPRO", data_experiment = metadata, color_character = Clades)
+```
+
+
+
+
+
+

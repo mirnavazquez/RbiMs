@@ -1,8 +1,48 @@
 template:
   params:
-    bootswatch: cerulean
+    bootswatch: flatly
     ganalytics: UA-000000-01
   opengraph:
     twitter:
       creator: "@MirnaVRL"
       card: summary_large_image
+reference:
+  - title: KEGG analysis
+    desc: Functions used for KEGG
+    contents:
+      - '`read_ko`'
+      - '`mapping_ko`'
+  - title: InterProScan analysis
+    desc: Functions used for InterProScan analysis
+    contents:
+      - '`read_interpro`'
+  - title: Manipulate KEGG/InterproScan profile
+    desc: Functions used to manipulate the KEGG/InterproScan profile
+    contents:
+      - '`get_subset_unique`'
+      - '`get_subset_pca`'
+      - '`get_subset_pathway`'
+      - '`calc_binary`'
+      - '`calc_percentage`'
+  - title: Plot KEGG/InterproScan profile
+    desc: Functions used to plot the KEGG/InterproScan profile
+    contents:
+      - '`plot_bubble`'
+      - '`plot_heatmap`'
+left:
+    - icon: fa-home
+      href: index.html
+    - text: "How To"
+      menu: 
+      -  text: Installation
+         href: articles/Installation.html
+      -  text: Create KEGG profile
+         href: articles/Create_KEGG_profile.html
+      -  text: Create InterProScan profile
+         href: articles/Create_Interpro_profile.html
+      -  text: Explore KEGG profile
+         href: articles/Explore_KEGG_profile.html
+      -  text: Explore InterProScan profile
+         href: articles/Explore_InterProScan_profile.html
+         
+         

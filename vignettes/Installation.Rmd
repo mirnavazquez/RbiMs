@@ -1,0 +1,35 @@
+---
+title: "Installation"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Installation}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Quick install
+
+We are actively developing rbims, so for now it is not available at CRAN or Biocondiuctor, however you can access to the development version from
+[GitHub](https://github.com/mirnavazquez/RbiMs) like this:
+
+Install devtools in the case you dont have it.
+
+```{r install devtools, eval=FALSE}
+install.packages("devtools")
+```
+
+Install rbims.
+
+```{r install rbims, eval=FALSE}
+library(devtools)
+install_github("mirnavazquez/RbiMs")
+library(rbims)
+```
+

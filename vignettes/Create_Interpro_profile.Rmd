@@ -1,0 +1,54 @@
+---
+title: "Create Interpro profile"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Create Interpro profile}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, include=FALSE}
+library(rbims)
+```
+
+A common practice to get other annotations of genomes and reconstructed genomes is to use [InterProScan](https://interproscan-docs.readthedocs.io/en/latest/). Here are some functions to explore that information.
+
+The function to use that information is `read_interpro`. This functio can parse the information of the PFAM, INTEPRO and KEGG ids. The KEGG analysis is just possible if [InterProScan](https://interproscan-docs.readthedocs.io/en/latest/) was run with the -pa option. As well tow output options are possible a wide profile or a long table. 
+
+
+- The `database` argumen indicate which database will be parse, in this example I will explore the PFAM output. 
+
+- The output format is control with the `profile` argument. When **profile = T** then a wide output is obtained.
+
+```{r, eval=FALSE}
+interpro_pfam_profile<-read_interpro("Interpro_test.tsv", database="PFAM", profile = T)
+```
+
+```{r, eval=FALSE}
+head(interpro_pfam_profile)
+```
+
+Or print a long table **profile = F**. 
+
+```{r, eval=FALSE}
+interpro_pfam_long<-read_interpro("Interpro_test.tsv", database="PFAM", profile = F)
+```
+
+```{r, eval=FALSE}
+head(interpro_pfam_long)
+```
+
+
+
+
+
+
+
+

@@ -1,0 +1,500 @@
+Bin_10-scaffold_441_c1_24	39226d3e1b71ccdfa45220beec64c058	318	Pfam	PF03595	Voltage-dependent anion channel	13	305	4.3E-52	T	02-04-2021	IPR004695	Voltage-dependent anion channel	GO:0016021|GO:0055085	
+Bin_10-scaffold_441_c1_24	39226d3e1b71ccdfa45220beec64c058	318	Gene3D	G3DSA:1.50.10.150		8	316	1.1E-87	T	02-04-2021	IPR038665	Voltage-dependent anion channel superfamily		
+Bin_10-scaffold_441_c1_24	39226d3e1b71ccdfa45220beec64c058	318	CDD	cd09323	TDT_SLAC1_like	13	305	2.81472E-106	T	02-04-2021
+Bin_12-scaffold_69_c1_124	39226d3e1b71ccdfa45220beec64c058	318	Pfam	PF03595	Voltage-dependent anion channel	13	305	4.3E-52	T	02-04-2021	IPR004695	Voltage-dependent anion channel	GO:0016021|GO:0055085	
+Bin_12-scaffold_69_c1_124	39226d3e1b71ccdfa45220beec64c058	318	Gene3D	G3DSA:1.50.10.150		8	316	1.1E-87	T	02-04-2021	IPR038665	Voltage-dependent anion channel superfamily		
+Bin_12-scaffold_69_c1_124	39226d3e1b71ccdfa45220beec64c058	318	CDD	cd09323	TDT_SLAC1_like	13	305	2.81472E-106	T	02-04-2021
+Bin_56-scaffold_71_c1_69	39226d3e1b71ccdfa45220beec64c058	318	Pfam	PF03595	Voltage-dependent anion channel	13	305	4.3E-52	T	02-04-2021	IPR004695	Voltage-dependent anion channel	GO:0016021|GO:0055085	
+Bin_56-scaffold_71_c1_69	39226d3e1b71ccdfa45220beec64c058	318	Gene3D	G3DSA:1.50.10.150		8	316	1.1E-87	T	02-04-2021	IPR038665	Voltage-dependent anion channel superfamily		
+Bin_56-scaffold_71_c1_69	39226d3e1b71ccdfa45220beec64c058	318	CDD	cd09323	TDT_SLAC1_like	13	305	2.81472E-106	T	02-04-2021
+Bin_113-scaffold_145_c1_85	d90135e04b661f13cd84e226ab484620	224	Pfam	PF00440	Bacterial regulatory proteins, tetR family	38	84	7.4E-14	T	02-04-2021	IPR001647	DNA-binding HTH domain, TetR-type	GO:0003677	
+Bin_113-scaffold_145_c1_85	d90135e04b661f13cd84e226ab484620	224	Pfam	PF13305	WHG domain	115	195	1.0E-7	T	02-04-2021	IPR025996	WHG domain		
+Bin_113-scaffold_145_c1_85	d90135e04b661f13cd84e226ab484620	224	ProSiteProfiles	PS50977	TetR-type HTH domain profile.	32	92	20.527	T	02-04-2021	IPR001647	DNA-binding HTH domain, TetR-type	GO:0003677	
+Bin_113-scaffold_145_c1_85	d90135e04b661f13cd84e226ab484620	224	SUPERFAMILY	SSF46689		30	96	2.21E-15	T	02-04-2021	IPR009057	Homeobox-like domain superfamily	GO:0003677	
+Bin_113-scaffold_145_c1_85	d90135e04b661f13cd84e226ab484620	224	SUPERFAMILY	SSF48498		114	192	7.41E-11	T	02-04-2021	IPR036271	Tetracyclin repressor-like, C-terminal domain superfamily		
+Bin_113-scaffold_145_c1_85	d90135e04b661f13cd84e226ab484620	224	PRINTS	PR00455	TetR bacterial regulatory protein HTH signature	38	51	3.7E-8	T	02-04-2021	IPR001647	DNA-binding HTH domain, TetR-type	GO:0003677	
+Bin_113-scaffold_145_c1_85	d90135e04b661f13cd84e226ab484620	224	PRINTS	PR00455	TetR bacterial regulatory protein HTH signature	59	82	3.7E-8	T	02-04-2021	IPR001647	DNA-binding HTH domain, TetR-type	GO:0003677	
+Bin_113-scaffold_145_c1_85	d90135e04b661f13cd84e226ab484620	224	Gene3D	G3DSA:1.10.357.10		25	211	5.9E-33	T	02-04-2021
+Bin_1-scaffold_146_c1_1	d90135e04b661f13cd84e226ab484620	224	Pfam	PF00440	Bacterial regulatory proteins, tetR family	38	84	7.4E-14	T	02-04-2021	IPR001647	DNA-binding HTH domain, TetR-type	GO:0003677	
+Bin_1-scaffold_146_c1_1	d90135e04b661f13cd84e226ab484620	224	Pfam	PF13305	WHG domain	115	195	1.0E-7	T	02-04-2021	IPR025996	WHG domain		
+Bin_1-scaffold_146_c1_1	d90135e04b661f13cd84e226ab484620	224	ProSiteProfiles	PS50977	TetR-type HTH domain profile.	32	92	20.527	T	02-04-2021	IPR001647	DNA-binding HTH domain, TetR-type	GO:0003677	
+Bin_1-scaffold_146_c1_1	d90135e04b661f13cd84e226ab484620	224	SUPERFAMILY	SSF46689		30	96	2.21E-15	T	02-04-2021	IPR009057	Homeobox-like domain superfamily	GO:0003677	
+Bin_1-scaffold_146_c1_1	d90135e04b661f13cd84e226ab484620	224	SUPERFAMILY	SSF48498		114	192	7.41E-11	T	02-04-2021	IPR036271	Tetracyclin repressor-like, C-terminal domain superfamily		
+Bin_1-scaffold_146_c1_1	d90135e04b661f13cd84e226ab484620	224	PRINTS	PR00455	TetR bacterial regulatory protein HTH signature	38	51	3.7E-8	T	02-04-2021	IPR001647	DNA-binding HTH domain, TetR-type	GO:0003677	
+Bin_1-scaffold_146_c1_1	d90135e04b661f13cd84e226ab484620	224	PRINTS	PR00455	TetR bacterial regulatory protein HTH signature	59	82	3.7E-8	T	02-04-2021	IPR001647	DNA-binding HTH domain, TetR-type	GO:0003677	
+Bin_1-scaffold_146_c1_1	d90135e04b661f13cd84e226ab484620	224	Gene3D	G3DSA:1.10.357.10		25	211	5.9E-33	T	02-04-2021
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	SUPERFAMILY	SSF57783		763	825	2.21E-16	T	02-04-2021
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	MobiDBLite	mobidb-lite	consensus disorder prediction	371	391	-	T	02-04-2021
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Gene3D	G3DSA:2.20.25.10		827	885	3.0E-27	T	02-04-2021
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	CDD	cd00186	TOP1Ac	172	588	1.21691E-160	T	02-04-2021	IPR013497	DNA topoisomerase, type IA, central	GO:0003677|GO:0003916|GO:0006265	
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	ProSitePatterns	PS00396	Prokaryotic DNA topoisomerase I active site.	321	335	-	T	02-04-2021	IPR023406	DNA topoisomerase, type IA, active site	GO:0003917	
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Pfam	PF01131	DNA topoisomerase	169	577	4.3E-125	T	02-04-2021	IPR013497	DNA topoisomerase, type IA, central	GO:0003677|GO:0003916|GO:0006265	
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Gene3D	G3DSA:3.30.65.10		604	654	3.7E-5	T	02-04-2021
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Gene3D	G3DSA:3.30.65.10		764	826	1.1E-23	T	02-04-2021
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Gene3D	G3DSA:3.30.65.10		718	763	3.1E-5	T	02-04-2021
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	MobiDBLite	mobidb-lite	consensus disorder prediction	37	64	-	T	02-04-2021
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Gene3D	G3DSA:1.10.460.10		176	584	4.7E-157	T	02-04-2021	IPR013824	DNA topoisomerase, type IA, central region, subdomain 1		
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Hamap	MF_00952	DNA topoisomerase 1 [topA].	3	751	54.515	T	02-04-2021	IPR028612	DNA topoisomerase I, type IA	GO:0003677|GO:0003916|GO:0006265	
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Pfam	PF08272	Topoisomerase I zinc-ribbon-like	843	882	2.1E-21	T	02-04-2021	IPR013263	DNA topoisomerase I, zinc ribbon-like, bacterial-type	GO:0003677|GO:0003917|GO:0006265	
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Pfam	PF08272	Topoisomerase I zinc-ribbon-like	777	812	7.5E-12	T	02-04-2021	IPR013263	DNA topoisomerase I, zinc ribbon-like, bacterial-type	GO:0003677|GO:0003917|GO:0006265	
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Gene3D	G3DSA:2.70.20.10		224	486	4.7E-157	T	02-04-2021	IPR013825	DNA topoisomerase, type IA, central region, subdomain 2		
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	SUPERFAMILY	SSF57783		828	883	5.1E-21	T	02-04-2021
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	SMART	SM00437		284	540	2.1E-113	T	02-04-2021	IPR003602	DNA topoisomerase, type IA, DNA-binding domain	GO:0003677|GO:0003916|GO:0006265	
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	SUPERFAMILY	SSF57783		721	761	3.91E-6	T	02-04-2021
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	MobiDBLite	mobidb-lite	consensus disorder prediction	374	391	-	T	02-04-2021
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Pfam	PF01751	Toprim domain	5	153	3.0E-29	T	02-04-2021	IPR006171	TOPRIM  domain		
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	SMART	SM00436		144	232	1.5E-45	T	02-04-2021	IPR003601	DNA topoisomerase, type IA, domain 2	GO:0003677|GO:0003916|GO:0006265	
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Gene3D	G3DSA:1.10.290.10		292	416	4.7E-157	T	02-04-2021	IPR013826	DNA topoisomerase, type IA, central region, subdomain 3		
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	TIGRFAM	TIGR01051	topA_bact: DNA topoisomerase I	5	648	1.8E-235	T	02-04-2021	IPR005733	DNA topoisomerase I, bacterial-type	GO:0003677|GO:0003917|GO:0006265	
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	PRINTS	PR00417	Prokaryotic DNA topoisomerase I signature	326	335	4.8E-35	T	02-04-2021	IPR013497	DNA topoisomerase, type IA, central	GO:0003677|GO:0003916|GO:0006265	
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	PRINTS	PR00417	Prokaryotic DNA topoisomerase I signature	503	517	4.8E-35	T	02-04-2021	IPR013497	DNA topoisomerase, type IA, central	GO:0003677|GO:0003916|GO:0006265	
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	PRINTS	PR00417	Prokaryotic DNA topoisomerase I signature	402	418	4.8E-35	T	02-04-2021	IPR013497	DNA topoisomerase, type IA, central	GO:0003677|GO:0003916|GO:0006265	
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	PRINTS	PR00417	Prokaryotic DNA topoisomerase I signature	117	130	4.8E-35	T	02-04-2021	IPR013497	DNA topoisomerase, type IA, central	GO:0003677|GO:0003916|GO:0006265	
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	PRINTS	PR00417	Prokaryotic DNA topoisomerase I signature	202	220	4.8E-35	T	02-04-2021	IPR013497	DNA topoisomerase, type IA, central	GO:0003677|GO:0003916|GO:0006265	
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	SMART	SM00493		3	143	4.8E-24	T	02-04-2021	IPR006171	TOPRIM  domain		
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Gene3D	G3DSA:3.40.50.140		1	174	7.8E-65	T	02-04-2021
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	MobiDBLite	mobidb-lite	consensus disorder prediction	883	909	-	T	02-04-2021
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	MobiDBLite	mobidb-lite	consensus disorder prediction	890	909	-	T	02-04-2021
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	SUPERFAMILY	SSF56712		3	626	6.41E-194	T	02-04-2021	IPR023405	DNA topoisomerase, type IA, core domain		
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	MobiDBLite	mobidb-lite	consensus disorder prediction	47	64	-	T	02-04-2021
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Pfam	PF01396	Topoisomerase DNA binding C4 zinc finger	614	639	2.2E-7	T	02-04-2021	IPR013498	DNA topoisomerase, type IA, zn finger	GO:0003677|GO:0003916|GO:0005694|GO:0006265	Reactome: R-HSA-5685938|Reactome: R-HSA-5685942|Reactome: R-HSA-5693554|Reactome: R-HSA-5693568|Reactome: R-HSA-5693579|Reactome: R-HSA-5693607|Reactome: R-HSA-5693616|Reactome: R-HSA-6804756|Reactome: R-HSA-69473|Reactome: R-HSA-912446
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Pfam	PF01396	Topoisomerase DNA binding C4 zinc finger	729	763	2.4E-7	T	02-04-2021	IPR013498	DNA topoisomerase, type IA, zn finger	GO:0003677|GO:0003916|GO:0005694|GO:0006265	Reactome: R-HSA-5685938|Reactome: R-HSA-5685942|Reactome: R-HSA-5693554|Reactome: R-HSA-5693568|Reactome: R-HSA-5693579|Reactome: R-HSA-5693607|Reactome: R-HSA-5693616|Reactome: R-HSA-6804756|Reactome: R-HSA-69473|Reactome: R-HSA-912446
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	ProSiteProfiles	PS50880	Toprim domain profile.	3	153	25.943	T	02-04-2021	IPR006171	TOPRIM  domain		
+Bin_2-scaffold_42_c1_56	f4bb9e0659ff5bf48708c8b8abfb6ade	909	CDD	cd03363	TOPRIM_TopoIA_TopoI	3	165	4.89446E-56	T	02-04-2021	IPR034149	DNA topoisomerase 1, TOPRIM domain		
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	SUPERFAMILY	SSF57783		763	825	2.21E-16	T	02-04-2021
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	MobiDBLite	mobidb-lite	consensus disorder prediction	371	391	-	T	02-04-2021
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Gene3D	G3DSA:2.20.25.10		827	885	3.0E-27	T	02-04-2021
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	CDD	cd00186	TOP1Ac	172	588	1.21691E-160	T	02-04-2021	IPR013497	DNA topoisomerase, type IA, central	GO:0003677|GO:0003916|GO:0006265	
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	ProSitePatterns	PS00396	Prokaryotic DNA topoisomerase I active site.	321	335	-	T	02-04-2021	IPR023406	DNA topoisomerase, type IA, active site	GO:0003917	
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Pfam	PF01131	DNA topoisomerase	169	577	4.3E-125	T	02-04-2021	IPR013497	DNA topoisomerase, type IA, central	GO:0003677|GO:0003916|GO:0006265	
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Gene3D	G3DSA:3.30.65.10		604	654	3.7E-5	T	02-04-2021
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Gene3D	G3DSA:3.30.65.10		764	826	1.1E-23	T	02-04-2021
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Gene3D	G3DSA:3.30.65.10		718	763	3.1E-5	T	02-04-2021
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	MobiDBLite	mobidb-lite	consensus disorder prediction	37	64	-	T	02-04-2021
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Gene3D	G3DSA:1.10.460.10		176	584	4.7E-157	T	02-04-2021	IPR013824	DNA topoisomerase, type IA, central region, subdomain 1		
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Hamap	MF_00952	DNA topoisomerase 1 [topA].	3	751	54.515	T	02-04-2021	IPR028612	DNA topoisomerase I, type IA	GO:0003677|GO:0003916|GO:0006265	
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Pfam	PF08272	Topoisomerase I zinc-ribbon-like	843	882	2.1E-21	T	02-04-2021	IPR013263	DNA topoisomerase I, zinc ribbon-like, bacterial-type	GO:0003677|GO:0003917|GO:0006265	
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Pfam	PF08272	Topoisomerase I zinc-ribbon-like	777	812	7.5E-12	T	02-04-2021	IPR013263	DNA topoisomerase I, zinc ribbon-like, bacterial-type	GO:0003677|GO:0003917|GO:0006265	
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Gene3D	G3DSA:2.70.20.10		224	486	4.7E-157	T	02-04-2021	IPR013825	DNA topoisomerase, type IA, central region, subdomain 2		
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	SUPERFAMILY	SSF57783		828	883	5.1E-21	T	02-04-2021
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	SMART	SM00437		284	540	2.1E-113	T	02-04-2021	IPR003602	DNA topoisomerase, type IA, DNA-binding domain	GO:0003677|GO:0003916|GO:0006265	
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	SUPERFAMILY	SSF57783		721	761	3.91E-6	T	02-04-2021
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	MobiDBLite	mobidb-lite	consensus disorder prediction	374	391	-	T	02-04-2021
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Pfam	PF01751	Toprim domain	5	153	3.0E-29	T	02-04-2021	IPR006171	TOPRIM  domain		
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	SMART	SM00436		144	232	1.5E-45	T	02-04-2021	IPR003601	DNA topoisomerase, type IA, domain 2	GO:0003677|GO:0003916|GO:0006265	
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Gene3D	G3DSA:1.10.290.10		292	416	4.7E-157	T	02-04-2021	IPR013826	DNA topoisomerase, type IA, central region, subdomain 3		
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	TIGRFAM	TIGR01051	topA_bact: DNA topoisomerase I	5	648	1.8E-235	T	02-04-2021	IPR005733	DNA topoisomerase I, bacterial-type	GO:0003677|GO:0003917|GO:0006265	
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	PRINTS	PR00417	Prokaryotic DNA topoisomerase I signature	326	335	4.8E-35	T	02-04-2021	IPR013497	DNA topoisomerase, type IA, central	GO:0003677|GO:0003916|GO:0006265	
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	PRINTS	PR00417	Prokaryotic DNA topoisomerase I signature	503	517	4.8E-35	T	02-04-2021	IPR013497	DNA topoisomerase, type IA, central	GO:0003677|GO:0003916|GO:0006265	
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	PRINTS	PR00417	Prokaryotic DNA topoisomerase I signature	402	418	4.8E-35	T	02-04-2021	IPR013497	DNA topoisomerase, type IA, central	GO:0003677|GO:0003916|GO:0006265	
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	PRINTS	PR00417	Prokaryotic DNA topoisomerase I signature	117	130	4.8E-35	T	02-04-2021	IPR013497	DNA topoisomerase, type IA, central	GO:0003677|GO:0003916|GO:0006265	
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	PRINTS	PR00417	Prokaryotic DNA topoisomerase I signature	202	220	4.8E-35	T	02-04-2021	IPR013497	DNA topoisomerase, type IA, central	GO:0003677|GO:0003916|GO:0006265	
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	SMART	SM00493		3	143	4.8E-24	T	02-04-2021	IPR006171	TOPRIM  domain		
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Gene3D	G3DSA:3.40.50.140		1	174	7.8E-65	T	02-04-2021
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	MobiDBLite	mobidb-lite	consensus disorder prediction	883	909	-	T	02-04-2021
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	MobiDBLite	mobidb-lite	consensus disorder prediction	890	909	-	T	02-04-2021
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	SUPERFAMILY	SSF56712		3	626	6.41E-194	T	02-04-2021	IPR023405	DNA topoisomerase, type IA, core domain		
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	MobiDBLite	mobidb-lite	consensus disorder prediction	47	64	-	T	02-04-2021
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Pfam	PF01396	Topoisomerase DNA binding C4 zinc finger	614	639	2.2E-7	T	02-04-2021	IPR013498	DNA topoisomerase, type IA, zn finger	GO:0003677|GO:0003916|GO:0005694|GO:0006265	Reactome: R-HSA-5685938|Reactome: R-HSA-5685942|Reactome: R-HSA-5693554|Reactome: R-HSA-5693568|Reactome: R-HSA-5693579|Reactome: R-HSA-5693607|Reactome: R-HSA-5693616|Reactome: R-HSA-6804756|Reactome: R-HSA-69473|Reactome: R-HSA-912446
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	Pfam	PF01396	Topoisomerase DNA binding C4 zinc finger	729	763	2.4E-7	T	02-04-2021	IPR013498	DNA topoisomerase, type IA, zn finger	GO:0003677|GO:0003916|GO:0005694|GO:0006265	Reactome: R-HSA-5685938|Reactome: R-HSA-5685942|Reactome: R-HSA-5693554|Reactome: R-HSA-5693568|Reactome: R-HSA-5693579|Reactome: R-HSA-5693607|Reactome: R-HSA-5693616|Reactome: R-HSA-6804756|Reactome: R-HSA-69473|Reactome: R-HSA-912446
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	ProSiteProfiles	PS50880	Toprim domain profile.	3	153	25.943	T	02-04-2021	IPR006171	TOPRIM  domain		
+Bin_10-scaffold_42_c1_180	f4bb9e0659ff5bf48708c8b8abfb6ade	909	CDD	cd03363	TOPRIM_TopoIA_TopoI	3	165	4.89446E-56	T	02-04-2021	IPR034149	DNA topoisomerase 1, TOPRIM domain		
+Bin_1-scaffold_301_c1_13	2772693a84ccb2fce726328ff28b57fe	254	Pfam	PF13448	Domain of unknown function (DUF4114)	139	226	3.2E-7	T	02-04-2021	IPR025193	Domain of unknown function DUF4114		
+Bin_1-scaffold_301_c1_13	2772693a84ccb2fce726328ff28b57fe	254	SUPERFAMILY	SSF69318		32	199	3.01E-5	T	02-04-2021
+Bin_1-scaffold_301_c1_13	2772693a84ccb2fce726328ff28b57fe	254	Pfam	PF07589	PEP-CTERM motif	229	251	1.7E-4	T	02-04-2021	IPR013424	PEP-CTERM protein-sorting domain		
+Bin_1-scaffold_301_c1_13	2772693a84ccb2fce726328ff28b57fe	254	TIGRFAM	TIGR02595	PEP_exosort: PEP-CTERM protein-sorting domain	230	252	2.7E-4	T	02-04-2021	IPR013424	PEP-CTERM protein-sorting domain		
+Bin_113-scaffold_330_c1_13	2772693a84ccb2fce726328ff28b57fe	254	Pfam	PF13448	Domain of unknown function (DUF4114)	139	226	3.2E-7	T	02-04-2021	IPR025193	Domain of unknown function DUF4114		
+Bin_113-scaffold_330_c1_13	2772693a84ccb2fce726328ff28b57fe	254	SUPERFAMILY	SSF69318		32	199	3.01E-5	T	02-04-2021
+Bin_113-scaffold_330_c1_13	2772693a84ccb2fce726328ff28b57fe	254	Pfam	PF07589	PEP-CTERM motif	229	251	1.7E-4	T	02-04-2021	IPR013424	PEP-CTERM protein-sorting domain		
+Bin_113-scaffold_330_c1_13	2772693a84ccb2fce726328ff28b57fe	254	TIGRFAM	TIGR02595	PEP_exosort: PEP-CTERM protein-sorting domain	230	252	2.7E-4	T	02-04-2021	IPR013424	PEP-CTERM protein-sorting domain		
+Bin_12-scaffold_4307_c1_2	2772693a84ccb2fce726328ff28b57fe	254	Pfam	PF13448	Domain of unknown function (DUF4114)	139	226	3.2E-7	T	02-04-2021	IPR025193	Domain of unknown function DUF4114		
+Bin_12-scaffold_4307_c1_2	2772693a84ccb2fce726328ff28b57fe	254	SUPERFAMILY	SSF69318		32	199	3.01E-5	T	02-04-2021
+Bin_12-scaffold_4307_c1_2	2772693a84ccb2fce726328ff28b57fe	254	Pfam	PF07589	PEP-CTERM motif	229	251	1.7E-4	T	02-04-2021	IPR013424	PEP-CTERM protein-sorting domain		
+Bin_12-scaffold_4307_c1_2	2772693a84ccb2fce726328ff28b57fe	254	TIGRFAM	TIGR02595	PEP_exosort: PEP-CTERM protein-sorting domain	230	252	2.7E-4	T	02-04-2021	IPR013424	PEP-CTERM protein-sorting domain		
+Bin_56-scaffold_17_c1_62	4f8d1aa4a72f004f986f31cb5616dd3b	277	PIRSF	PIRSF005902		5	277	2.7E-68	T	02-04-2021	IPR001130	TatD family	GO:0016788	
+Bin_56-scaffold_17_c1_62	4f8d1aa4a72f004f986f31cb5616dd3b	277	MobiDBLite	mobidb-lite	consensus disorder prediction	1	20	-	T	02-04-2021
+Bin_56-scaffold_17_c1_62	4f8d1aa4a72f004f986f31cb5616dd3b	277	SUPERFAMILY	SSF51556		20	277	5.96E-81	T	02-04-2021	IPR032466	Metal-dependent hydrolase		
+Bin_56-scaffold_17_c1_62	4f8d1aa4a72f004f986f31cb5616dd3b	277	Pfam	PF01026	TatD related DNase	22	276	4.4E-64	T	02-04-2021	IPR001130	TatD family	GO:0016788	
+Bin_56-scaffold_17_c1_62	4f8d1aa4a72f004f986f31cb5616dd3b	277	ProSitePatterns	PS01090	TatD deoxyribonuclease family signature 2.	142	152	-	T	02-04-2021	IPR018228	Deoxyribonuclease, TatD-related, conserved site	GO:0016888	
+Bin_56-scaffold_17_c1_62	4f8d1aa4a72f004f986f31cb5616dd3b	277	Gene3D	G3DSA:3.20.20.140		19	277	6.6E-93	T	02-04-2021
+Bin_56-scaffold_17_c1_62	4f8d1aa4a72f004f986f31cb5616dd3b	277	ProSitePatterns	PS01091	TatD deoxyribonuclease family signature 3.	208	224	-	T	02-04-2021	IPR018228	Deoxyribonuclease, TatD-related, conserved site	GO:0016888	
+Bin_56-scaffold_17_c1_62	4f8d1aa4a72f004f986f31cb5616dd3b	277	CDD	cd01310	TatD_DNAse	22	277	3.56797E-96	T	02-04-2021	IPR001130	TatD family	GO:0016788	
+Bin_113-scaffold_66_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	SMART	SM01130		3	292	4.0E-109	T	02-04-2021	IPR002220	DapA-like	GO:0016829	
+Bin_113-scaffold_66_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	ProSitePatterns	PS00666	Dihydrodipicolinate synthase signature 2.	135	166	-	T	02-04-2021	IPR020625	Schiff base-forming aldolase, active site	GO:0016829	KEGG: 00261+4.3.3.7|KEGG: 00300+4.3.3.7|MetaCyc: PWY-2941|MetaCyc: PWY-2942|MetaCyc: PWY-5097|Reactome: R-HSA-389661
+Bin_113-scaffold_66_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	Hamap	MF_00418	4-hydroxy-tetrahydrodipicolinate synthase [dapA].	3	290	54.744	T	02-04-2021	IPR005263	4-hydroxy-tetrahydrodipicolinate synthase, DapA	GO:0008840|GO:0009089	KEGG: 00261+4.3.3.7|KEGG: 00300+4.3.3.7|MetaCyc: PWY-2941|MetaCyc: PWY-2942|MetaCyc: PWY-5097
+Bin_113-scaffold_66_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	Gene3D	G3DSA:3.20.20.70		1	293	3.3E-92	T	02-04-2021	IPR013785	Aldolase-type TIM barrel	GO:0003824	
+Bin_113-scaffold_66_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	SUPERFAMILY	SSF51569		3	290	1.78E-89	T	02-04-2021
+Bin_113-scaffold_66_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	PIRSF	PIRSF001365		1	293	1.3E-82	T	02-04-2021	IPR002220	DapA-like	GO:0016829	
+Bin_113-scaffold_66_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	CDD	cd00950	DHDPS	4	286	2.34606E-128	T	02-04-2021	IPR005263	4-hydroxy-tetrahydrodipicolinate synthase, DapA	GO:0008840|GO:0009089	KEGG: 00261+4.3.3.7|KEGG: 00300+4.3.3.7|MetaCyc: PWY-2941|MetaCyc: PWY-2942|MetaCyc: PWY-5097
+Bin_113-scaffold_66_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	Pfam	PF00701	Dihydrodipicolinate synthetase family	4	290	1.4E-79	T	02-04-2021	IPR002220	DapA-like	GO:0016829	
+Bin_113-scaffold_66_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	PRINTS	PR00146	Dihydrodipicolinate synthase signature	37	58	4.4E-25	T	02-04-2021	IPR002220	DapA-like	GO:0016829	
+Bin_113-scaffold_66_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	PRINTS	PR00146	Dihydrodipicolinate synthase signature	73	91	4.4E-25	T	02-04-2021	IPR002220	DapA-like	GO:0016829	
+Bin_113-scaffold_66_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	PRINTS	PR00146	Dihydrodipicolinate synthase signature	130	147	4.4E-25	T	02-04-2021	IPR002220	DapA-like	GO:0016829	
+Bin_113-scaffold_66_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	PRINTS	PR00146	Dihydrodipicolinate synthase signature	105	121	4.4E-25	T	02-04-2021	IPR002220	DapA-like	GO:0016829	
+Bin_113-scaffold_66_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	TIGRFAM	TIGR00674	dapA: 4-hydroxy-tetrahydrodipicolinate synthase	7	290	6.3E-89	T	02-04-2021	IPR005263	4-hydroxy-tetrahydrodipicolinate synthase, DapA	GO:0008840|GO:0009089	KEGG: 00261+4.3.3.7|KEGG: 00300+4.3.3.7|MetaCyc: PWY-2941|MetaCyc: PWY-2942|MetaCyc: PWY-5097
+Bin_1-scaffold_21_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	SMART	SM01130		3	292	4.0E-109	T	02-04-2021	IPR002220	DapA-like	GO:0016829	
+Bin_1-scaffold_21_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	ProSitePatterns	PS00666	Dihydrodipicolinate synthase signature 2.	135	166	-	T	02-04-2021	IPR020625	Schiff base-forming aldolase, active site	GO:0016829	KEGG: 00261+4.3.3.7|KEGG: 00300+4.3.3.7|MetaCyc: PWY-2941|MetaCyc: PWY-2942|MetaCyc: PWY-5097|Reactome: R-HSA-389661
+Bin_1-scaffold_21_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	Hamap	MF_00418	4-hydroxy-tetrahydrodipicolinate synthase [dapA].	3	290	54.744	T	02-04-2021	IPR005263	4-hydroxy-tetrahydrodipicolinate synthase, DapA	GO:0008840|GO:0009089	KEGG: 00261+4.3.3.7|KEGG: 00300+4.3.3.7|MetaCyc: PWY-2941|MetaCyc: PWY-2942|MetaCyc: PWY-5097
+Bin_1-scaffold_21_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	Gene3D	G3DSA:3.20.20.70		1	293	3.3E-92	T	02-04-2021	IPR013785	Aldolase-type TIM barrel	GO:0003824	
+Bin_1-scaffold_21_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	SUPERFAMILY	SSF51569		3	290	1.78E-89	T	02-04-2021
+Bin_1-scaffold_21_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	PIRSF	PIRSF001365		1	293	1.3E-82	T	02-04-2021	IPR002220	DapA-like	GO:0016829	
+Bin_1-scaffold_21_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	CDD	cd00950	DHDPS	4	286	2.34606E-128	T	02-04-2021	IPR005263	4-hydroxy-tetrahydrodipicolinate synthase, DapA	GO:0008840|GO:0009089	KEGG: 00261+4.3.3.7|KEGG: 00300+4.3.3.7|MetaCyc: PWY-2941|MetaCyc: PWY-2942|MetaCyc: PWY-5097
+Bin_1-scaffold_21_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	Pfam	PF00701	Dihydrodipicolinate synthetase family	4	290	1.4E-79	T	02-04-2021	IPR002220	DapA-like	GO:0016829	
+Bin_1-scaffold_21_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	PRINTS	PR00146	Dihydrodipicolinate synthase signature	37	58	4.4E-25	T	02-04-2021	IPR002220	DapA-like	GO:0016829	
+Bin_1-scaffold_21_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	PRINTS	PR00146	Dihydrodipicolinate synthase signature	73	91	4.4E-25	T	02-04-2021	IPR002220	DapA-like	GO:0016829	
+Bin_1-scaffold_21_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	PRINTS	PR00146	Dihydrodipicolinate synthase signature	130	147	4.4E-25	T	02-04-2021	IPR002220	DapA-like	GO:0016829	
+Bin_1-scaffold_21_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	PRINTS	PR00146	Dihydrodipicolinate synthase signature	105	121	4.4E-25	T	02-04-2021	IPR002220	DapA-like	GO:0016829	
+Bin_1-scaffold_21_c1_109	9880a6f5edfa9c2977bcf39d739cbba3	293	TIGRFAM	TIGR00674	dapA: 4-hydroxy-tetrahydrodipicolinate synthase	7	290	6.3E-89	T	02-04-2021	IPR005263	4-hydroxy-tetrahydrodipicolinate synthase, DapA	GO:0008840|GO:0009089	KEGG: 00261+4.3.3.7|KEGG: 00300+4.3.3.7|MetaCyc: PWY-2941|MetaCyc: PWY-2942|MetaCyc: PWY-5097
+Bin_2-scaffold_3_c1_159	91981ac73034f2c7cd0a0fd39fbfbc8e	532	SUPERFAMILY	SSF68923		8	214	6.45E-83	T	02-04-2021	IPR008210	Phosphoenolpyruvate carboxykinase, N-terminal	GO:0004611|GO:0006094|GO:0017076	Reactome: R-HSA-70263
+Bin_2-scaffold_3_c1_159	91981ac73034f2c7cd0a0fd39fbfbc8e	532	Gene3D	G3DSA:2.170.8.10		42	335	5.5E-215	T	02-04-2021
+Bin_2-scaffold_3_c1_159	91981ac73034f2c7cd0a0fd39fbfbc8e	532	CDD	cd00484	PEPCK_ATP	22	528	0.0	T	02-04-2021	IPR001272	Phosphoenolpyruvate carboxykinase, ATP-utilising	GO:0004612|GO:0005524|GO:0006094	KEGG: 00010+4.1.1.49|KEGG: 00020+4.1.1.49|KEGG: 00620+4.1.1.49|KEGG: 00710+4.1.1.49|MetaCyc: PWY-561|MetaCyc: PWY-7117
+Bin_2-scaffold_3_c1_159	91981ac73034f2c7cd0a0fd39fbfbc8e	532	Gene3D	G3DSA:3.90.228.20		216	518	5.5E-215	T	02-04-2021	IPR013035	Phosphoenolpyruvate carboxykinase, C-terminal	GO:0004611|GO:0006094|GO:0017076	Reactome: R-HSA-70263
+Bin_2-scaffold_3_c1_159	91981ac73034f2c7cd0a0fd39fbfbc8e	532	Gene3D	G3DSA:3.40.449.10		32	215	5.5E-215	T	02-04-2021	IPR008210	Phosphoenolpyruvate carboxykinase, N-terminal	GO:0004611|GO:0006094|GO:0017076	Reactome: R-HSA-70263
+Bin_2-scaffold_3_c1_159	91981ac73034f2c7cd0a0fd39fbfbc8e	532	SUPERFAMILY	SSF53795		215	528	4.81E-129	T	02-04-2021
+Bin_2-scaffold_3_c1_159	91981ac73034f2c7cd0a0fd39fbfbc8e	532	Pfam	PF01293	Phosphoenolpyruvate carboxykinase	22	485	3.5E-212	T	02-04-2021	IPR001272	Phosphoenolpyruvate carboxykinase, ATP-utilising	GO:0004612|GO:0005524|GO:0006094	KEGG: 00010+4.1.1.49|KEGG: 00020+4.1.1.49|KEGG: 00620+4.1.1.49|KEGG: 00710+4.1.1.49|MetaCyc: PWY-561|MetaCyc: PWY-7117
+Bin_2-scaffold_3_c1_159	91981ac73034f2c7cd0a0fd39fbfbc8e	532	TIGRFAM	TIGR00224	pckA: phosphoenolpyruvate carboxykinase (ATP)	7	528	1.6E-206	T	02-04-2021	IPR001272	Phosphoenolpyruvate carboxykinase, ATP-utilising	GO:0004612|GO:0005524|GO:0006094	KEGG: 00010+4.1.1.49|KEGG: 00020+4.1.1.49|KEGG: 00620+4.1.1.49|KEGG: 00710+4.1.1.49|MetaCyc: PWY-561|MetaCyc: PWY-7117
+Bin_2-scaffold_3_c1_159	91981ac73034f2c7cd0a0fd39fbfbc8e	532	PIRSF	PIRSF006294		4	531	1.1E-221	T	02-04-2021	IPR001272	Phosphoenolpyruvate carboxykinase, ATP-utilising	GO:0004612|GO:0005524|GO:0006094	KEGG: 00010+4.1.1.49|KEGG: 00020+4.1.1.49|KEGG: 00620+4.1.1.49|KEGG: 00710+4.1.1.49|MetaCyc: PWY-561|MetaCyc: PWY-7117
+Bin_2-scaffold_3_c1_159	91981ac73034f2c7cd0a0fd39fbfbc8e	532	Hamap	MF_00453	Phosphoenolpyruvate carboxykinase (ATP) [pckA].	16	530	52.956	T	02-04-2021	IPR001272	Phosphoenolpyruvate carboxykinase, ATP-utilising	GO:0004612|GO:0005524|GO:0006094	KEGG: 00010+4.1.1.49|KEGG: 00020+4.1.1.49|KEGG: 00620+4.1.1.49|KEGG: 00710+4.1.1.49|MetaCyc: PWY-561|MetaCyc: PWY-7117
+Bin_10-scaffold_12_c1_150	91981ac73034f2c7cd0a0fd39fbfbc8e	532	SUPERFAMILY	SSF68923		8	214	6.45E-83	T	02-04-2021	IPR008210	Phosphoenolpyruvate carboxykinase, N-terminal	GO:0004611|GO:0006094|GO:0017076	Reactome: R-HSA-70263
+Bin_10-scaffold_12_c1_150	91981ac73034f2c7cd0a0fd39fbfbc8e	532	Gene3D	G3DSA:2.170.8.10		42	335	5.5E-215	T	02-04-2021
+Bin_10-scaffold_12_c1_150	91981ac73034f2c7cd0a0fd39fbfbc8e	532	CDD	cd00484	PEPCK_ATP	22	528	0.0	T	02-04-2021	IPR001272	Phosphoenolpyruvate carboxykinase, ATP-utilising	GO:0004612|GO:0005524|GO:0006094	KEGG: 00010+4.1.1.49|KEGG: 00020+4.1.1.49|KEGG: 00620+4.1.1.49|KEGG: 00710+4.1.1.49|MetaCyc: PWY-561|MetaCyc: PWY-7117
+Bin_10-scaffold_12_c1_150	91981ac73034f2c7cd0a0fd39fbfbc8e	532	Gene3D	G3DSA:3.90.228.20		216	518	5.5E-215	T	02-04-2021	IPR013035	Phosphoenolpyruvate carboxykinase, C-terminal	GO:0004611|GO:0006094|GO:0017076	Reactome: R-HSA-70263
+Bin_10-scaffold_12_c1_150	91981ac73034f2c7cd0a0fd39fbfbc8e	532	Gene3D	G3DSA:3.40.449.10		32	215	5.5E-215	T	02-04-2021	IPR008210	Phosphoenolpyruvate carboxykinase, N-terminal	GO:0004611|GO:0006094|GO:0017076	Reactome: R-HSA-70263
+Bin_10-scaffold_12_c1_150	91981ac73034f2c7cd0a0fd39fbfbc8e	532	SUPERFAMILY	SSF53795		215	528	4.81E-129	T	02-04-2021
+Bin_10-scaffold_12_c1_150	91981ac73034f2c7cd0a0fd39fbfbc8e	532	Pfam	PF01293	Phosphoenolpyruvate carboxykinase	22	485	3.5E-212	T	02-04-2021	IPR001272	Phosphoenolpyruvate carboxykinase, ATP-utilising	GO:0004612|GO:0005524|GO:0006094	KEGG: 00010+4.1.1.49|KEGG: 00020+4.1.1.49|KEGG: 00620+4.1.1.49|KEGG: 00710+4.1.1.49|MetaCyc: PWY-561|MetaCyc: PWY-7117
+Bin_10-scaffold_12_c1_150	91981ac73034f2c7cd0a0fd39fbfbc8e	532	TIGRFAM	TIGR00224	pckA: phosphoenolpyruvate carboxykinase (ATP)	7	528	1.6E-206	T	02-04-2021	IPR001272	Phosphoenolpyruvate carboxykinase, ATP-utilising	GO:0004612|GO:0005524|GO:0006094	KEGG: 00010+4.1.1.49|KEGG: 00020+4.1.1.49|KEGG: 00620+4.1.1.49|KEGG: 00710+4.1.1.49|MetaCyc: PWY-561|MetaCyc: PWY-7117
+Bin_10-scaffold_12_c1_150	91981ac73034f2c7cd0a0fd39fbfbc8e	532	PIRSF	PIRSF006294		4	531	1.1E-221	T	02-04-2021	IPR001272	Phosphoenolpyruvate carboxykinase, ATP-utilising	GO:0004612|GO:0005524|GO:0006094	KEGG: 00010+4.1.1.49|KEGG: 00020+4.1.1.49|KEGG: 00620+4.1.1.49|KEGG: 00710+4.1.1.49|MetaCyc: PWY-561|MetaCyc: PWY-7117
+Bin_10-scaffold_12_c1_150	91981ac73034f2c7cd0a0fd39fbfbc8e	532	Hamap	MF_00453	Phosphoenolpyruvate carboxykinase (ATP) [pckA].	16	530	52.956	T	02-04-2021	IPR001272	Phosphoenolpyruvate carboxykinase, ATP-utilising	GO:0004612|GO:0005524|GO:0006094	KEGG: 00010+4.1.1.49|KEGG: 00020+4.1.1.49|KEGG: 00620+4.1.1.49|KEGG: 00710+4.1.1.49|MetaCyc: PWY-561|MetaCyc: PWY-7117
+Bin_10-scaffold_107_c2_32	eeaf7d344117d37cb0f7d382f9644d78	181	Pfam	PF00156	Phosphoribosyl transferase domain	16	162	1.2E-26	T	02-04-2021	IPR000836	Phosphoribosyltransferase domain	GO:0009116	
+Bin_10-scaffold_107_c2_32	eeaf7d344117d37cb0f7d382f9644d78	181	TIGRFAM	TIGR01203	HGPRTase: hypoxanthine phosphoribosyltransferase	10	175	3.5E-65	T	02-04-2021	IPR005904	Hypoxanthine phosphoribosyl transferase	GO:0004422|GO:0005737|GO:0006166	KEGG: 00230+2.4.2.8|KEGG: 00983+2.4.2.8|MetaCyc: PWY-6599|MetaCyc: PWY-6609|MetaCyc: PWY-6610|MetaCyc: PWY-6620
+Bin_10-scaffold_107_c2_32	eeaf7d344117d37cb0f7d382f9644d78	181	CDD	cd06223	PRTases_typeI	21	144	4.09537E-22	T	02-04-2021	IPR000836	Phosphoribosyltransferase domain	GO:0009116	
+Bin_10-scaffold_107_c2_32	eeaf7d344117d37cb0f7d382f9644d78	181	Gene3D	G3DSA:3.40.50.2020		4	180	4.6E-61	T	02-04-2021
+Bin_10-scaffold_107_c2_32	eeaf7d344117d37cb0f7d382f9644d78	181	SUPERFAMILY	SSF53271		4	177	7.08E-54	T	02-04-2021	IPR029057	Phosphoribosyltransferase-like		
+Bin_56-scaffold_60_c1_58	eeaf7d344117d37cb0f7d382f9644d78	181	Pfam	PF00156	Phosphoribosyl transferase domain	16	162	1.2E-26	T	02-04-2021	IPR000836	Phosphoribosyltransferase domain	GO:0009116	
+Bin_56-scaffold_60_c1_58	eeaf7d344117d37cb0f7d382f9644d78	181	TIGRFAM	TIGR01203	HGPRTase: hypoxanthine phosphoribosyltransferase	10	175	3.5E-65	T	02-04-2021	IPR005904	Hypoxanthine phosphoribosyl transferase	GO:0004422|GO:0005737|GO:0006166	KEGG: 00230+2.4.2.8|KEGG: 00983+2.4.2.8|MetaCyc: PWY-6599|MetaCyc: PWY-6609|MetaCyc: PWY-6610|MetaCyc: PWY-6620
+Bin_56-scaffold_60_c1_58	eeaf7d344117d37cb0f7d382f9644d78	181	CDD	cd06223	PRTases_typeI	21	144	4.09537E-22	T	02-04-2021	IPR000836	Phosphoribosyltransferase domain	GO:0009116	
+Bin_56-scaffold_60_c1_58	eeaf7d344117d37cb0f7d382f9644d78	181	Gene3D	G3DSA:3.40.50.2020		4	180	4.6E-61	T	02-04-2021
+Bin_56-scaffold_60_c1_58	eeaf7d344117d37cb0f7d382f9644d78	181	SUPERFAMILY	SSF53271		4	177	7.08E-54	T	02-04-2021	IPR029057	Phosphoribosyltransferase-like		
+Bin_12-scaffold_62_c1_149	eeaf7d344117d37cb0f7d382f9644d78	181	Pfam	PF00156	Phosphoribosyl transferase domain	16	162	1.2E-26	T	02-04-2021	IPR000836	Phosphoribosyltransferase domain	GO:0009116	
+Bin_12-scaffold_62_c1_149	eeaf7d344117d37cb0f7d382f9644d78	181	TIGRFAM	TIGR01203	HGPRTase: hypoxanthine phosphoribosyltransferase	10	175	3.5E-65	T	02-04-2021	IPR005904	Hypoxanthine phosphoribosyl transferase	GO:0004422|GO:0005737|GO:0006166	KEGG: 00230+2.4.2.8|KEGG: 00983+2.4.2.8|MetaCyc: PWY-6599|MetaCyc: PWY-6609|MetaCyc: PWY-6610|MetaCyc: PWY-6620
+Bin_12-scaffold_62_c1_149	eeaf7d344117d37cb0f7d382f9644d78	181	CDD	cd06223	PRTases_typeI	21	144	4.09537E-22	T	02-04-2021	IPR000836	Phosphoribosyltransferase domain	GO:0009116	
+Bin_12-scaffold_62_c1_149	eeaf7d344117d37cb0f7d382f9644d78	181	Gene3D	G3DSA:3.40.50.2020		4	180	4.6E-61	T	02-04-2021
+Bin_12-scaffold_62_c1_149	eeaf7d344117d37cb0f7d382f9644d78	181	SUPERFAMILY	SSF53271		4	177	7.08E-54	T	02-04-2021	IPR029057	Phosphoribosyltransferase-like		
+Bin_56-scaffold_179_c1_32	eeaf7d344117d37cb0f7d382f9644d78	181	Pfam	PF00156	Phosphoribosyl transferase domain	16	162	1.2E-26	T	02-04-2021	IPR000836	Phosphoribosyltransferase domain	GO:0009116	
+Bin_56-scaffold_179_c1_32	eeaf7d344117d37cb0f7d382f9644d78	181	TIGRFAM	TIGR01203	HGPRTase: hypoxanthine phosphoribosyltransferase	10	175	3.5E-65	T	02-04-2021	IPR005904	Hypoxanthine phosphoribosyl transferase	GO:0004422|GO:0005737|GO:0006166	KEGG: 00230+2.4.2.8|KEGG: 00983+2.4.2.8|MetaCyc: PWY-6599|MetaCyc: PWY-6609|MetaCyc: PWY-6610|MetaCyc: PWY-6620
+Bin_56-scaffold_179_c1_32	eeaf7d344117d37cb0f7d382f9644d78	181	CDD	cd06223	PRTases_typeI	21	144	4.09537E-22	T	02-04-2021	IPR000836	Phosphoribosyltransferase domain	GO:0009116	
+Bin_56-scaffold_179_c1_32	eeaf7d344117d37cb0f7d382f9644d78	181	Gene3D	G3DSA:3.40.50.2020		4	180	4.6E-61	T	02-04-2021
+Bin_56-scaffold_179_c1_32	eeaf7d344117d37cb0f7d382f9644d78	181	SUPERFAMILY	SSF53271		4	177	7.08E-54	T	02-04-2021	IPR029057	Phosphoribosyltransferase-like		
+Bin_10-scaffold_286_c1_25	5fa8674bf087aee22e9c18af4b5bd57f	370	ProSiteProfiles	PS50994	Integrase catalytic domain profile.	118	290	17.395	T	02-04-2021	IPR001584	Integrase, catalytic core	GO:0015074	
+Bin_10-scaffold_286_c1_25	5fa8674bf087aee22e9c18af4b5bd57f	370	MobiDBLite	mobidb-lite	consensus disorder prediction	34	54	-	T	02-04-2021
+Bin_10-scaffold_286_c1_25	5fa8674bf087aee22e9c18af4b5bd57f	370	SUPERFAMILY	SSF46689		11	103	6.09E-7	T	02-04-2021	IPR009057	Homeobox-like domain superfamily	GO:0003677	
+Bin_10-scaffold_286_c1_25	5fa8674bf087aee22e9c18af4b5bd57f	370	Pfam	PF00665	Integrase core domain	129	242	2.7E-19	T	02-04-2021	IPR001584	Integrase, catalytic core	GO:0015074	
+Bin_10-scaffold_286_c1_25	5fa8674bf087aee22e9c18af4b5bd57f	370	Gene3D	G3DSA:3.30.420.10		123	302	1.5E-11	T	02-04-2021	IPR036397	Ribonuclease H superfamily	GO:0003676	
+Bin_10-scaffold_286_c1_25	5fa8674bf087aee22e9c18af4b5bd57f	370	SUPERFAMILY	SSF53098		128	292	1.52E-40	T	02-04-2021	IPR012337	Ribonuclease H-like superfamily		
+Bin_2-scaffold_192_c1_33	5fa8674bf087aee22e9c18af4b5bd57f	370	ProSiteProfiles	PS50994	Integrase catalytic domain profile.	118	290	17.395	T	02-04-2021	IPR001584	Integrase, catalytic core	GO:0015074	
+Bin_2-scaffold_192_c1_33	5fa8674bf087aee22e9c18af4b5bd57f	370	MobiDBLite	mobidb-lite	consensus disorder prediction	34	54	-	T	02-04-2021
+Bin_2-scaffold_192_c1_33	5fa8674bf087aee22e9c18af4b5bd57f	370	SUPERFAMILY	SSF46689		11	103	6.09E-7	T	02-04-2021	IPR009057	Homeobox-like domain superfamily	GO:0003677	
+Bin_2-scaffold_192_c1_33	5fa8674bf087aee22e9c18af4b5bd57f	370	Pfam	PF00665	Integrase core domain	129	242	2.7E-19	T	02-04-2021	IPR001584	Integrase, catalytic core	GO:0015074	
+Bin_2-scaffold_192_c1_33	5fa8674bf087aee22e9c18af4b5bd57f	370	Gene3D	G3DSA:3.30.420.10		123	302	1.5E-11	T	02-04-2021	IPR036397	Ribonuclease H superfamily	GO:0003676	
+Bin_2-scaffold_192_c1_33	5fa8674bf087aee22e9c18af4b5bd57f	370	SUPERFAMILY	SSF53098		128	292	1.52E-40	T	02-04-2021	IPR012337	Ribonuclease H-like superfamily		
+Bin_10-scaffold_286_c1_30	5fa8674bf087aee22e9c18af4b5bd57f	370	ProSiteProfiles	PS50994	Integrase catalytic domain profile.	118	290	17.395	T	02-04-2021	IPR001584	Integrase, catalytic core	GO:0015074	
+Bin_10-scaffold_286_c1_30	5fa8674bf087aee22e9c18af4b5bd57f	370	MobiDBLite	mobidb-lite	consensus disorder prediction	34	54	-	T	02-04-2021
+Bin_10-scaffold_286_c1_30	5fa8674bf087aee22e9c18af4b5bd57f	370	SUPERFAMILY	SSF46689		11	103	6.09E-7	T	02-04-2021	IPR009057	Homeobox-like domain superfamily	GO:0003677	
+Bin_10-scaffold_286_c1_30	5fa8674bf087aee22e9c18af4b5bd57f	370	Pfam	PF00665	Integrase core domain	129	242	2.7E-19	T	02-04-2021	IPR001584	Integrase, catalytic core	GO:0015074	
+Bin_10-scaffold_286_c1_30	5fa8674bf087aee22e9c18af4b5bd57f	370	Gene3D	G3DSA:3.30.420.10		123	302	1.5E-11	T	02-04-2021	IPR036397	Ribonuclease H superfamily	GO:0003676	
+Bin_10-scaffold_286_c1_30	5fa8674bf087aee22e9c18af4b5bd57f	370	SUPERFAMILY	SSF53098		128	292	1.52E-40	T	02-04-2021	IPR012337	Ribonuclease H-like superfamily		
+Bin_2-scaffold_192_c1_28	5fa8674bf087aee22e9c18af4b5bd57f	370	ProSiteProfiles	PS50994	Integrase catalytic domain profile.	118	290	17.395	T	02-04-2021	IPR001584	Integrase, catalytic core	GO:0015074	
+Bin_2-scaffold_192_c1_28	5fa8674bf087aee22e9c18af4b5bd57f	370	MobiDBLite	mobidb-lite	consensus disorder prediction	34	54	-	T	02-04-2021
+Bin_2-scaffold_192_c1_28	5fa8674bf087aee22e9c18af4b5bd57f	370	SUPERFAMILY	SSF46689		11	103	6.09E-7	T	02-04-2021	IPR009057	Homeobox-like domain superfamily	GO:0003677	
+Bin_2-scaffold_192_c1_28	5fa8674bf087aee22e9c18af4b5bd57f	370	Pfam	PF00665	Integrase core domain	129	242	2.7E-19	T	02-04-2021	IPR001584	Integrase, catalytic core	GO:0015074	
+Bin_2-scaffold_192_c1_28	5fa8674bf087aee22e9c18af4b5bd57f	370	Gene3D	G3DSA:3.30.420.10		123	302	1.5E-11	T	02-04-2021	IPR036397	Ribonuclease H superfamily	GO:0003676	
+Bin_2-scaffold_192_c1_28	5fa8674bf087aee22e9c18af4b5bd57f	370	SUPERFAMILY	SSF53098		128	292	1.52E-40	T	02-04-2021	IPR012337	Ribonuclease H-like superfamily		
+Bin_113-scaffold_65_c1_124	56fa607e8cc625b1587ea5b423b687d4	213	SUPERFAMILY	SSF52172		9	134	3.13E-34	T	02-04-2021	IPR011006	CheY-like superfamily		
+Bin_113-scaffold_65_c1_124	56fa607e8cc625b1587ea5b423b687d4	213	ProSiteProfiles	PS50110	Response regulatory domain profile.	9	125	42.186	T	02-04-2021	IPR001789	Signal transduction response regulator, receiver domain	GO:0000160	
+Bin_113-scaffold_65_c1_124	56fa607e8cc625b1587ea5b423b687d4	213	SMART	SM00421		150	207	2.2E-17	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_113-scaffold_65_c1_124	56fa607e8cc625b1587ea5b423b687d4	213	SUPERFAMILY	SSF46894		143	212	5.44E-18	T	02-04-2021	IPR016032	Signal transduction response regulator, C-terminal effector	GO:0003677|GO:0006355	
+Bin_113-scaffold_65_c1_124	56fa607e8cc625b1587ea5b423b687d4	213	CDD	cd00156	REC	11	125	4.54614E-34	T	02-04-2021	IPR001789	Signal transduction response regulator, receiver domain	GO:0000160	
+Bin_113-scaffold_65_c1_124	56fa607e8cc625b1587ea5b423b687d4	213	PRINTS	PR00038	LuxR bacterial regulatory protein HTH signature	167	183	5.3E-12	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_113-scaffold_65_c1_124	56fa607e8cc625b1587ea5b423b687d4	213	PRINTS	PR00038	LuxR bacterial regulatory protein HTH signature	183	195	5.3E-12	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_113-scaffold_65_c1_124	56fa607e8cc625b1587ea5b423b687d4	213	PRINTS	PR00038	LuxR bacterial regulatory protein HTH signature	153	167	5.3E-12	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_113-scaffold_65_c1_124	56fa607e8cc625b1587ea5b423b687d4	213	Pfam	PF00196	Bacterial regulatory proteins, luxR family	152	207	5.0E-16	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_113-scaffold_65_c1_124	56fa607e8cc625b1587ea5b423b687d4	213	Gene3D	G3DSA:3.40.50.12740		8	213	2.4E-64	T	02-04-2021
+Bin_113-scaffold_65_c1_124	56fa607e8cc625b1587ea5b423b687d4	213	SMART	SM00448		8	121	3.1E-31	T	02-04-2021	IPR001789	Signal transduction response regulator, receiver domain	GO:0000160	
+Bin_113-scaffold_65_c1_124	56fa607e8cc625b1587ea5b423b687d4	213	ProSitePatterns	PS00622	LuxR-type HTH domain signature.	167	194	-	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_113-scaffold_65_c1_124	56fa607e8cc625b1587ea5b423b687d4	213	Pfam	PF00072	Response regulator receiver domain	10	122	4.3E-29	T	02-04-2021	IPR001789	Signal transduction response regulator, receiver domain	GO:0000160	
+Bin_113-scaffold_65_c1_124	56fa607e8cc625b1587ea5b423b687d4	213	CDD	cd06170	LuxR_C_like	153	207	3.03157E-15	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_113-scaffold_65_c1_124	56fa607e8cc625b1587ea5b423b687d4	213	ProSiteProfiles	PS50043	LuxR-type HTH domain profile.	145	211	21.206	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_1-scaffold_38_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	SUPERFAMILY	SSF52172		9	134	3.13E-34	T	02-04-2021	IPR011006	CheY-like superfamily		
+Bin_1-scaffold_38_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	ProSiteProfiles	PS50110	Response regulatory domain profile.	9	125	42.186	T	02-04-2021	IPR001789	Signal transduction response regulator, receiver domain	GO:0000160	
+Bin_1-scaffold_38_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	SMART	SM00421		150	207	2.2E-17	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_1-scaffold_38_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	SUPERFAMILY	SSF46894		143	212	5.44E-18	T	02-04-2021	IPR016032	Signal transduction response regulator, C-terminal effector	GO:0003677|GO:0006355	
+Bin_1-scaffold_38_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	CDD	cd00156	REC	11	125	4.54614E-34	T	02-04-2021	IPR001789	Signal transduction response regulator, receiver domain	GO:0000160	
+Bin_1-scaffold_38_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	PRINTS	PR00038	LuxR bacterial regulatory protein HTH signature	167	183	5.3E-12	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_1-scaffold_38_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	PRINTS	PR00038	LuxR bacterial regulatory protein HTH signature	183	195	5.3E-12	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_1-scaffold_38_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	PRINTS	PR00038	LuxR bacterial regulatory protein HTH signature	153	167	5.3E-12	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_1-scaffold_38_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	Pfam	PF00196	Bacterial regulatory proteins, luxR family	152	207	5.0E-16	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_1-scaffold_38_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	Gene3D	G3DSA:3.40.50.12740		8	213	2.4E-64	T	02-04-2021
+Bin_1-scaffold_38_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	SMART	SM00448		8	121	3.1E-31	T	02-04-2021	IPR001789	Signal transduction response regulator, receiver domain	GO:0000160	
+Bin_1-scaffold_38_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	ProSitePatterns	PS00622	LuxR-type HTH domain signature.	167	194	-	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_1-scaffold_38_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	Pfam	PF00072	Response regulator receiver domain	10	122	4.3E-29	T	02-04-2021	IPR001789	Signal transduction response regulator, receiver domain	GO:0000160	
+Bin_1-scaffold_38_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	CDD	cd06170	LuxR_C_like	153	207	3.03157E-15	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_1-scaffold_38_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	ProSiteProfiles	PS50043	LuxR-type HTH domain profile.	145	211	21.206	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_2-scaffold_65_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	SUPERFAMILY	SSF52172		9	134	3.13E-34	T	02-04-2021	IPR011006	CheY-like superfamily		
+Bin_2-scaffold_65_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	ProSiteProfiles	PS50110	Response regulatory domain profile.	9	125	42.186	T	02-04-2021	IPR001789	Signal transduction response regulator, receiver domain	GO:0000160	
+Bin_2-scaffold_65_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	SMART	SM00421		150	207	2.2E-17	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_2-scaffold_65_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	SUPERFAMILY	SSF46894		143	212	5.44E-18	T	02-04-2021	IPR016032	Signal transduction response regulator, C-terminal effector	GO:0003677|GO:0006355	
+Bin_2-scaffold_65_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	CDD	cd00156	REC	11	125	4.54614E-34	T	02-04-2021	IPR001789	Signal transduction response regulator, receiver domain	GO:0000160	
+Bin_2-scaffold_65_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	PRINTS	PR00038	LuxR bacterial regulatory protein HTH signature	167	183	5.3E-12	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_2-scaffold_65_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	PRINTS	PR00038	LuxR bacterial regulatory protein HTH signature	183	195	5.3E-12	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_2-scaffold_65_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	PRINTS	PR00038	LuxR bacterial regulatory protein HTH signature	153	167	5.3E-12	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_2-scaffold_65_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	Pfam	PF00196	Bacterial regulatory proteins, luxR family	152	207	5.0E-16	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_2-scaffold_65_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	Gene3D	G3DSA:3.40.50.12740		8	213	2.4E-64	T	02-04-2021
+Bin_2-scaffold_65_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	SMART	SM00448		8	121	3.1E-31	T	02-04-2021	IPR001789	Signal transduction response regulator, receiver domain	GO:0000160	
+Bin_2-scaffold_65_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	ProSitePatterns	PS00622	LuxR-type HTH domain signature.	167	194	-	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_2-scaffold_65_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	Pfam	PF00072	Response regulator receiver domain	10	122	4.3E-29	T	02-04-2021	IPR001789	Signal transduction response regulator, receiver domain	GO:0000160	
+Bin_2-scaffold_65_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	CDD	cd06170	LuxR_C_like	153	207	3.03157E-15	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_2-scaffold_65_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	ProSiteProfiles	PS50043	LuxR-type HTH domain profile.	145	211	21.206	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_10-scaffold_60_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	SUPERFAMILY	SSF52172		9	134	3.13E-34	T	02-04-2021	IPR011006	CheY-like superfamily		
+Bin_10-scaffold_60_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	ProSiteProfiles	PS50110	Response regulatory domain profile.	9	125	42.186	T	02-04-2021	IPR001789	Signal transduction response regulator, receiver domain	GO:0000160	
+Bin_10-scaffold_60_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	SMART	SM00421		150	207	2.2E-17	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_10-scaffold_60_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	SUPERFAMILY	SSF46894		143	212	5.44E-18	T	02-04-2021	IPR016032	Signal transduction response regulator, C-terminal effector	GO:0003677|GO:0006355	
+Bin_10-scaffold_60_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	CDD	cd00156	REC	11	125	4.54614E-34	T	02-04-2021	IPR001789	Signal transduction response regulator, receiver domain	GO:0000160	
+Bin_10-scaffold_60_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	PRINTS	PR00038	LuxR bacterial regulatory protein HTH signature	167	183	5.3E-12	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_10-scaffold_60_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	PRINTS	PR00038	LuxR bacterial regulatory protein HTH signature	183	195	5.3E-12	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_10-scaffold_60_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	PRINTS	PR00038	LuxR bacterial regulatory protein HTH signature	153	167	5.3E-12	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_10-scaffold_60_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	Pfam	PF00196	Bacterial regulatory proteins, luxR family	152	207	5.0E-16	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_10-scaffold_60_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	Gene3D	G3DSA:3.40.50.12740		8	213	2.4E-64	T	02-04-2021
+Bin_10-scaffold_60_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	SMART	SM00448		8	121	3.1E-31	T	02-04-2021	IPR001789	Signal transduction response regulator, receiver domain	GO:0000160	
+Bin_10-scaffold_60_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	ProSitePatterns	PS00622	LuxR-type HTH domain signature.	167	194	-	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_10-scaffold_60_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	Pfam	PF00072	Response regulator receiver domain	10	122	4.3E-29	T	02-04-2021	IPR001789	Signal transduction response regulator, receiver domain	GO:0000160	
+Bin_10-scaffold_60_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	CDD	cd06170	LuxR_C_like	153	207	3.03157E-15	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_10-scaffold_60_c1_83	56fa607e8cc625b1587ea5b423b687d4	213	ProSiteProfiles	PS50043	LuxR-type HTH domain profile.	145	211	21.206	T	02-04-2021	IPR000792	Transcription regulator LuxR, C-terminal	GO:0006355	
+Bin_12-scaffold_22_c1_103	90d7f619b8f6fedd8491cc5b82b33c84	358	ProSitePatterns	PS00041	Bacterial regulatory proteins, araC family signature.	302	347	-	T	02-04-2021	IPR018062	HTH domain AraC-type, conserved site	GO:0003700|GO:0006355|GO:0043565	
+Bin_12-scaffold_22_c1_103	90d7f619b8f6fedd8491cc5b82b33c84	358	Pfam	PF12833	Helix-turn-helix domain	292	352	1.3E-15	T	02-04-2021	IPR018060	DNA binding HTH domain, AraC-type	GO:0003700|GO:0006355|GO:0043565	
+Bin_12-scaffold_22_c1_103	90d7f619b8f6fedd8491cc5b82b33c84	358	ProSiteProfiles	PS01124	Bacterial regulatory proteins, araC family DNA-binding domain profile.	244	353	20.482	T	02-04-2021	IPR018060	DNA binding HTH domain, AraC-type	GO:0003700|GO:0006355|GO:0043565	
+Bin_12-scaffold_22_c1_103	90d7f619b8f6fedd8491cc5b82b33c84	358	PRINTS	PR00032	AraC bacterial regulatory protein HTH signature	335	351	4.5E-5	T	02-04-2021	IPR020449	Transcription regulator HTH, AraC- type	GO:0003700|GO:0006355	
+Bin_12-scaffold_22_c1_103	90d7f619b8f6fedd8491cc5b82b33c84	358	PRINTS	PR00032	AraC bacterial regulatory protein HTH signature	320	335	4.5E-5	T	02-04-2021	IPR020449	Transcription regulator HTH, AraC- type	GO:0003700|GO:0006355	
+Bin_12-scaffold_22_c1_103	90d7f619b8f6fedd8491cc5b82b33c84	358	Gene3D	G3DSA:1.10.10.60		243	358	4.4E-20	T	02-04-2021
+Bin_12-scaffold_22_c1_103	90d7f619b8f6fedd8491cc5b82b33c84	358	SMART	SM00342		264	351	4.0E-15	T	02-04-2021	IPR018060	DNA binding HTH domain, AraC-type	GO:0003700|GO:0006355|GO:0043565	
+Bin_12-scaffold_22_c1_103	90d7f619b8f6fedd8491cc5b82b33c84	358	SUPERFAMILY	SSF46689		302	353	5.38E-12	T	02-04-2021	IPR009057	Homeobox-like domain superfamily	GO:0003677	
+Bin_56-scaffold_234_c1_2	04c26a482766edf01fbecf409990c944	956	SUPERFAMILY	SSF52374		4	650	1.87E-128	T	02-04-2021
+Bin_56-scaffold_234_c1_2	04c26a482766edf01fbecf409990c944	956	ProSitePatterns	PS00178	Aminoacyl-transfer RNA synthetases class-I signature.	43	54	-	T	02-04-2021	IPR001412	Aminoacyl-tRNA synthetase, class I, conserved site	GO:0000166|GO:0004812|GO:0005524|GO:0006418	
+Bin_56-scaffold_234_c1_2	04c26a482766edf01fbecf409990c944	956	Gene3D	G3DSA:1.10.730.10		2	818	1.4E-281	T	02-04-2021
+Bin_56-scaffold_234_c1_2	04c26a482766edf01fbecf409990c944	956	PRINTS	PR00986	Valyl-tRNA synthetase signature	380	393	2.1E-34	T	02-04-2021	IPR002303	Valine-tRNA ligase	GO:0000166|GO:0004832|GO:0005524|GO:0006438	KEGG: 00970+6.1.1.9
+Bin_56-scaffold_234_c1_2	04c26a482766edf01fbecf409990c944	956	PRINTS	PR00986	Valyl-tRNA synthetase signature	552	570	2.1E-34	T	02-04-2021	IPR002303	Valine-tRNA ligase	GO:0000166|GO:0004832|GO:0005524|GO:0006438	KEGG: 00970+6.1.1.9
+Bin_56-scaffold_234_c1_2	04c26a482766edf01fbecf409990c944	956	PRINTS	PR00986	Valyl-tRNA synthetase signature	36	47	2.1E-34	T	02-04-2021	IPR002303	Valine-tRNA ligase	GO:0000166|GO:0004832|GO:0005524|GO:0006438	KEGG: 00970+6.1.1.9
+Bin_56-scaffold_234_c1_2	04c26a482766edf01fbecf409990c944	956	PRINTS	PR00986	Valyl-tRNA synthetase signature	257	274	2.1E-34	T	02-04-2021	IPR002303	Valine-tRNA ligase	GO:0000166|GO:0004832|GO:0005524|GO:0006438	KEGG: 00970+6.1.1.9
+Bin_56-scaffold_234_c1_2	04c26a482766edf01fbecf409990c944	956	PRINTS	PR00986	Valyl-tRNA synthetase signature	521	542	2.1E-34	T	02-04-2021	IPR002303	Valine-tRNA ligase	GO:0000166|GO:0004832|GO:0005524|GO:0006438	KEGG: 00970+6.1.1.9
+Bin_56-scaffold_234_c1_2	04c26a482766edf01fbecf409990c944	956	SUPERFAMILY	SSF50677		199	373	1.28E-50	T	02-04-2021	IPR009008	Valyl/Leucyl/Isoleucyl-tRNA synthetase, editing domain	GO:0002161|GO:0006418	
+Bin_56-scaffold_234_c1_2	04c26a482766edf01fbecf409990c944	956	Pfam	PF10458	Valyl tRNA synthetase tRNA binding arm	889	953	1.2E-16	T	02-04-2021	IPR019499	Valyl-tRNA synthetase,  tRNA-binding arm	GO:0000166|GO:0004832|GO:0005524|GO:0005737|GO:0006438	KEGG: 00970+6.1.1.9
+Bin_56-scaffold_234_c1_2	04c26a482766edf01fbecf409990c944	956	CDD	cd07962	Anticodon_Ia_Val	639	772	4.72355E-64	T	02-04-2021	IPR033705	Valyl tRNA synthetase, anticodon-binding domain		KEGG: 00970+6.1.1.9
+Bin_56-scaffold_234_c1_2	04c26a482766edf01fbecf409990c944	956	Pfam	PF00133	tRNA synthetases class I (I, L, M and V)	15	639	2.2E-195	T	02-04-2021	IPR002300	Aminoacyl-tRNA synthetase, class Ia	GO:0000166|GO:0004812|GO:0005524|GO:0006418	
+Bin_56-scaffold_234_c1_2	04c26a482766edf01fbecf409990c944	956	Pfam	PF08264	Anticodon-binding domain of tRNA	682	829	1.1E-44	T	02-04-2021	IPR013155	Methionyl/Valyl/Leucyl/Isoleucyl-tRNA synthetase, anticodon-binding	GO:0004812|GO:0006418	
+Bin_56-scaffold_234_c1_2	04c26a482766edf01fbecf409990c944	956	CDD	cd00817	ValRS_core	36	639	0.0	T	02-04-2021
+Bin_56-scaffold_234_c1_2	04c26a482766edf01fbecf409990c944	956	Coils	Coil		887	914	-	T	02-04-2021
+Bin_56-scaffold_234_c1_2	04c26a482766edf01fbecf409990c944	956	Gene3D	G3DSA:1.10.287.380		882	953	1.3E-16	T	02-04-2021	IPR037118	Valyl-tRNA synthetase, tRNA-binding arm superfamily	GO:0000166|GO:0004832|GO:0005524|GO:0005737|GO:0006438	KEGG: 00970+6.1.1.9|Reactome: R-HSA-379716
+Bin_56-scaffold_234_c1_2	04c26a482766edf01fbecf409990c944	956	Gene3D	G3DSA:3.40.50.620		22	601	1.4E-281	T	02-04-2021	IPR014729	Rossmann-like alpha/beta/alpha sandwich fold		
+Bin_56-scaffold_234_c1_2	04c26a482766edf01fbecf409990c944	956	SUPERFAMILY	SSF46589		889	953	4.71E-15	T	02-04-2021	IPR010978	Class I and II aminoacyl-tRNA synthetase, tRNA-binding arm	GO:0000166	
+Bin_56-scaffold_234_c1_2	04c26a482766edf01fbecf409990c944	956	Coils	Coil		929	949	-	T	02-04-2021
+Bin_56-scaffold_234_c1_2	04c26a482766edf01fbecf409990c944	956	Gene3D	G3DSA:3.90.740.10		183	376	1.4E-281	T	02-04-2021	IPR009008	Valyl/Leucyl/Isoleucyl-tRNA synthetase, editing domain	GO:0002161|GO:0006418	
+Bin_56-scaffold_234_c1_2	04c26a482766edf01fbecf409990c944	956	TIGRFAM	TIGR00422	valS: valine--tRNA ligase	4	935	0.0	T	02-04-2021	IPR002303	Valine-tRNA ligase	GO:0000166|GO:0004832|GO:0005524|GO:0006438	KEGG: 00970+6.1.1.9
+Bin_56-scaffold_234_c1_2	04c26a482766edf01fbecf409990c944	956	SUPERFAMILY	SSF47323		653	903	7.29E-57	T	02-04-2021	IPR009080	Aminoacyl-tRNA synthetase, class Ia, anticodon-binding	GO:0000166|GO:0004812|GO:0005524|GO:0006418	
+Bin_56-scaffold_234_c1_2	04c26a482766edf01fbecf409990c944	956	Hamap	MF_02004	Valine--tRNA ligase [valS].	2	954	15.365	T	02-04-2021	IPR002303	Valine-tRNA ligase	GO:0000166|GO:0004832|GO:0005524|GO:0006438	KEGG: 00970+6.1.1.9
+Bin_113-scaffold_49_c1_1	8199d848575e5be63b3e01c39b5df5ae	939	Pfam	PF16078	2-oxoglutarate dehydrogenase N-terminus	12	50	3.1E-18	T	02-04-2021	IPR032106	2-oxoglutarate dehydrogenase E1 component, N-terminal domain		KEGG: 00020+1.2.4.2|KEGG: 00310+1.2.4.2|KEGG: 00380+1.2.4.2|MetaCyc: PWY-5084
+Bin_113-scaffold_49_c1_1	8199d848575e5be63b3e01c39b5df5ae	939	Gene3D	G3DSA:3.40.50.11610		727	933	2.0E-170	T	02-04-2021
+Bin_113-scaffold_49_c1_1	8199d848575e5be63b3e01c39b5df5ae	939	SUPERFAMILY	SSF52518		126	549	1.11E-85	T	02-04-2021	IPR029061	Thiamin diphosphate-binding fold		
+Bin_113-scaffold_49_c1_1	8199d848575e5be63b3e01c39b5df5ae	939	Gene3D	G3DSA:3.40.50.12470		560	806	2.0E-170	T	02-04-2021
+Bin_113-scaffold_49_c1_1	8199d848575e5be63b3e01c39b5df5ae	939	CDD	cd02016	TPP_E1_OGDC_like	221	480	1.59309E-159	T	02-04-2021
+Bin_113-scaffold_49_c1_1	8199d848575e5be63b3e01c39b5df5ae	939	Pfam	PF00676	Dehydrogenase E1 component	220	521	5.1E-51	T	02-04-2021	IPR001017	Dehydrogenase, E1 component	GO:0016624	Reactome: R-HSA-389661
+Bin_113-scaffold_49_c1_1	8199d848575e5be63b3e01c39b5df5ae	939	PIRSF	PIRSF000157		1	938	0.0	T	02-04-2021	IPR011603	2-oxoglutarate dehydrogenase E1 component	GO:0004591|GO:0006099|GO:0030976|GO:0055114	KEGG: 00020+1.2.4.2|KEGG: 00310+1.2.4.2|KEGG: 00380+1.2.4.2|MetaCyc: PWY-5084
+Bin_113-scaffold_49_c1_1	8199d848575e5be63b3e01c39b5df5ae	939	Gene3D	G3DSA:1.10.287.1150		90	171	4.6E-26	T	02-04-2021
+Bin_113-scaffold_49_c1_1	8199d848575e5be63b3e01c39b5df5ae	939	Pfam	PF02779	Transketolase, pyrimidine binding domain	597	791	1.5E-64	T	02-04-2021	IPR005475	Transketolase-like, pyrimidine-binding domain		
+Bin_113-scaffold_49_c1_1	8199d848575e5be63b3e01c39b5df5ae	939	TIGRFAM	TIGR00239	2oxo_dh_E1: oxoglutarate dehydrogenase (succinyl-transferring), E1 component	15	936	0.0	T	02-04-2021	IPR011603	2-oxoglutarate dehydrogenase E1 component	GO:0004591|GO:0006099|GO:0030976|GO:0055114	KEGG: 00020+1.2.4.2|KEGG: 00310+1.2.4.2|KEGG: 00380+1.2.4.2|MetaCyc: PWY-5084
+Bin_113-scaffold_49_c1_1	8199d848575e5be63b3e01c39b5df5ae	939	SMART	SM00861		597	790	2.8E-61	T	02-04-2021	IPR005475	Transketolase-like, pyrimidine-binding domain		
+Bin_113-scaffold_49_c1_1	8199d848575e5be63b3e01c39b5df5ae	939	Pfam	PF16870	2-oxoglutarate dehydrogenase C-terminal	794	936	3.4E-53	T	02-04-2021	IPR031717	Multifunctional 2-oxoglutarate metabolism enzyme, C-terminal		KEGG: 00020+1.2.4.2|KEGG: 00310+1.2.4.2|KEGG: 00380+1.2.4.2|MetaCyc: PWY-5084
+Bin_113-scaffold_49_c1_1	8199d848575e5be63b3e01c39b5df5ae	939	SUPERFAMILY	SSF52518		580	797	1.18E-51	T	02-04-2021	IPR029061	Thiamin diphosphate-binding fold		
+Bin_113-scaffold_49_c1_1	8199d848575e5be63b3e01c39b5df5ae	939	Gene3D	G3DSA:3.40.50.970		172	537	2.0E-145	T	02-04-2021
+Bin_1-scaffold_56_c1_32	8199d848575e5be63b3e01c39b5df5ae	939	Pfam	PF16078	2-oxoglutarate dehydrogenase N-terminus	12	50	3.1E-18	T	02-04-2021	IPR032106	2-oxoglutarate dehydrogenase E1 component, N-terminal domain		KEGG: 00020+1.2.4.2|KEGG: 00310+1.2.4.2|KEGG: 00380+1.2.4.2|MetaCyc: PWY-5084
+Bin_1-scaffold_56_c1_32	8199d848575e5be63b3e01c39b5df5ae	939	Gene3D	G3DSA:3.40.50.11610		727	933	2.0E-170	T	02-04-2021
+Bin_1-scaffold_56_c1_32	8199d848575e5be63b3e01c39b5df5ae	939	SUPERFAMILY	SSF52518		126	549	1.11E-85	T	02-04-2021	IPR029061	Thiamin diphosphate-binding fold		
+Bin_1-scaffold_56_c1_32	8199d848575e5be63b3e01c39b5df5ae	939	Gene3D	G3DSA:3.40.50.12470		560	806	2.0E-170	T	02-04-2021
+Bin_1-scaffold_56_c1_32	8199d848575e5be63b3e01c39b5df5ae	939	CDD	cd02016	TPP_E1_OGDC_like	221	480	1.59309E-159	T	02-04-2021
+Bin_1-scaffold_56_c1_32	8199d848575e5be63b3e01c39b5df5ae	939	Pfam	PF00676	Dehydrogenase E1 component	220	521	5.1E-51	T	02-04-2021	IPR001017	Dehydrogenase, E1 component	GO:0016624	Reactome: R-HSA-389661
+Bin_1-scaffold_56_c1_32	8199d848575e5be63b3e01c39b5df5ae	939	PIRSF	PIRSF000157		1	938	0.0	T	02-04-2021	IPR011603	2-oxoglutarate dehydrogenase E1 component	GO:0004591|GO:0006099|GO:0030976|GO:0055114	KEGG: 00020+1.2.4.2|KEGG: 00310+1.2.4.2|KEGG: 00380+1.2.4.2|MetaCyc: PWY-5084
+Bin_1-scaffold_56_c1_32	8199d848575e5be63b3e01c39b5df5ae	939	Gene3D	G3DSA:1.10.287.1150		90	171	4.6E-26	T	02-04-2021
+Bin_1-scaffold_56_c1_32	8199d848575e5be63b3e01c39b5df5ae	939	Pfam	PF02779	Transketolase, pyrimidine binding domain	597	791	1.5E-64	T	02-04-2021	IPR005475	Transketolase-like, pyrimidine-binding domain		
+Bin_1-scaffold_56_c1_32	8199d848575e5be63b3e01c39b5df5ae	939	TIGRFAM	TIGR00239	2oxo_dh_E1: oxoglutarate dehydrogenase (succinyl-transferring), E1 component	15	936	0.0	T	02-04-2021	IPR011603	2-oxoglutarate dehydrogenase E1 component	GO:0004591|GO:0006099|GO:0030976|GO:0055114	KEGG: 00020+1.2.4.2|KEGG: 00310+1.2.4.2|KEGG: 00380+1.2.4.2|MetaCyc: PWY-5084
+Bin_1-scaffold_56_c1_32	8199d848575e5be63b3e01c39b5df5ae	939	SMART	SM00861		597	790	2.8E-61	T	02-04-2021	IPR005475	Transketolase-like, pyrimidine-binding domain		
+Bin_1-scaffold_56_c1_32	8199d848575e5be63b3e01c39b5df5ae	939	Pfam	PF16870	2-oxoglutarate dehydrogenase C-terminal	794	936	3.4E-53	T	02-04-2021	IPR031717	Multifunctional 2-oxoglutarate metabolism enzyme, C-terminal		KEGG: 00020+1.2.4.2|KEGG: 00310+1.2.4.2|KEGG: 00380+1.2.4.2|MetaCyc: PWY-5084
+Bin_1-scaffold_56_c1_32	8199d848575e5be63b3e01c39b5df5ae	939	SUPERFAMILY	SSF52518		580	797	1.18E-51	T	02-04-2021	IPR029061	Thiamin diphosphate-binding fold		
+Bin_1-scaffold_56_c1_32	8199d848575e5be63b3e01c39b5df5ae	939	Gene3D	G3DSA:3.40.50.970		172	537	2.0E-145	T	02-04-2021
+Bin_12-scaffold_873_c1_6	56e12688872752ecdef3b530a441524f	310	Gene3D	G3DSA:3.40.50.150		1	306	5.9E-60	T	02-04-2021
+Bin_12-scaffold_873_c1_6	56e12688872752ecdef3b530a441524f	310	PIRSF	PIRSF018249		1	305	6.4E-68	T	02-04-2021	IPR016718	rRNA (guanine-N1-)-methyltransferase A, predicted	GO:0008168	
+Bin_12-scaffold_873_c1_6	56e12688872752ecdef3b530a441524f	310	SUPERFAMILY	SSF53335		1	286	5.1E-23	T	02-04-2021	IPR029063	S-adenosyl-L-methionine-dependent methyltransferase		
+Bin_12-scaffold_873_c1_6	56e12688872752ecdef3b530a441524f	310	Pfam	PF08241	Methyltransferase domain	127	205	1.7E-8	T	02-04-2021	IPR013216	Methyltransferase type 11	GO:0008168	
+Bin_113-scaffold_138_c1_50	56e12688872752ecdef3b530a441524f	310	Gene3D	G3DSA:3.40.50.150		1	306	5.9E-60	T	02-04-2021
+Bin_113-scaffold_138_c1_50	56e12688872752ecdef3b530a441524f	310	PIRSF	PIRSF018249		1	305	6.4E-68	T	02-04-2021	IPR016718	rRNA (guanine-N1-)-methyltransferase A, predicted	GO:0008168	
+Bin_113-scaffold_138_c1_50	56e12688872752ecdef3b530a441524f	310	SUPERFAMILY	SSF53335		1	286	5.1E-23	T	02-04-2021	IPR029063	S-adenosyl-L-methionine-dependent methyltransferase		
+Bin_113-scaffold_138_c1_50	56e12688872752ecdef3b530a441524f	310	Pfam	PF08241	Methyltransferase domain	127	205	1.7E-8	T	02-04-2021	IPR013216	Methyltransferase type 11	GO:0008168	
+Bin_1-scaffold_142_c1_50	56e12688872752ecdef3b530a441524f	310	Gene3D	G3DSA:3.40.50.150		1	306	5.9E-60	T	02-04-2021
+Bin_1-scaffold_142_c1_50	56e12688872752ecdef3b530a441524f	310	PIRSF	PIRSF018249		1	305	6.4E-68	T	02-04-2021	IPR016718	rRNA (guanine-N1-)-methyltransferase A, predicted	GO:0008168	
+Bin_1-scaffold_142_c1_50	56e12688872752ecdef3b530a441524f	310	SUPERFAMILY	SSF53335		1	286	5.1E-23	T	02-04-2021	IPR029063	S-adenosyl-L-methionine-dependent methyltransferase		
+Bin_1-scaffold_142_c1_50	56e12688872752ecdef3b530a441524f	310	Pfam	PF08241	Methyltransferase domain	127	205	1.7E-8	T	02-04-2021	IPR013216	Methyltransferase type 11	GO:0008168	
+Bin_113-scaffold_358_c1_15	41ef7c35a2898a4159c69dcd4a7adc6c	217	ProSiteProfiles	PS50944	DtxR-type HTH domain profile.	1	64	19.066	T	02-04-2021	IPR022687	DTXR-type HTH domain	GO:0003677	
+Bin_113-scaffold_358_c1_15	41ef7c35a2898a4159c69dcd4a7adc6c	217	SMART	SM00899		144	217	1.5E-6	T	02-04-2021	IPR007167	Ferrous iron transporter FeoA domain	GO:0046914	
+Bin_113-scaffold_358_c1_15	41ef7c35a2898a4159c69dcd4a7adc6c	217	SUPERFAMILY	SSF46785		3	62	1.67E-11	T	02-04-2021	IPR036390	Winged helix DNA-binding domain superfamily		
+Bin_113-scaffold_358_c1_15	41ef7c35a2898a4159c69dcd4a7adc6c	217	Gene3D	G3DSA:1.10.60.10		73	139	4.7E-27	T	02-04-2021	IPR036421	Iron dependent repressor, metal binding and dimerisation domain superfamily	GO:0046914|GO:0046983	
+Bin_113-scaffold_358_c1_15	41ef7c35a2898a4159c69dcd4a7adc6c	217	Pfam	PF01325	Iron dependent repressor, N-terminal DNA binding domain	6	61	2.1E-16	T	02-04-2021	IPR022687	DTXR-type HTH domain	GO:0003677	
+Bin_113-scaffold_358_c1_15	41ef7c35a2898a4159c69dcd4a7adc6c	217	SUPERFAMILY	SSF47979		64	137	1.2E-26	T	02-04-2021	IPR036421	Iron dependent repressor, metal binding and dimerisation domain superfamily	GO:0046914|GO:0046983	
+Bin_113-scaffold_358_c1_15	41ef7c35a2898a4159c69dcd4a7adc6c	217	Gene3D	G3DSA:2.30.30.90		145	217	7.4E-7	T	02-04-2021	IPR038157	Ferrous iron transporter, core domain		
+Bin_113-scaffold_358_c1_15	41ef7c35a2898a4159c69dcd4a7adc6c	217	Pfam	PF04023	FeoA domain	145	215	3.5E-9	T	02-04-2021	IPR007167	Ferrous iron transporter FeoA domain	GO:0046914	
+Bin_113-scaffold_358_c1_15	41ef7c35a2898a4159c69dcd4a7adc6c	217	SMART	SM00529		25	124	1.5E-35	T	02-04-2021	IPR022689	Iron dependent repressor	GO:0003700|GO:0006355|GO:0046914	
+Bin_113-scaffold_358_c1_15	41ef7c35a2898a4159c69dcd4a7adc6c	217	Gene3D	G3DSA:1.10.10.10		2	71	1.3E-20	T	02-04-2021	IPR036388	Winged helix-like DNA-binding domain superfamily		
+Bin_113-scaffold_358_c1_15	41ef7c35a2898a4159c69dcd4a7adc6c	217	Pfam	PF02742	Iron dependent repressor, metal binding and dimerisation domain	64	133	3.5E-29	T	02-04-2021	IPR001367	Iron dependent repressor, metal binding and dimerisation domain	GO:0046914|GO:0046983	
+Bin_1-scaffold_4_c1_15	41ef7c35a2898a4159c69dcd4a7adc6c	217	ProSiteProfiles	PS50944	DtxR-type HTH domain profile.	1	64	19.066	T	02-04-2021	IPR022687	DTXR-type HTH domain	GO:0003677	
+Bin_1-scaffold_4_c1_15	41ef7c35a2898a4159c69dcd4a7adc6c	217	SMART	SM00899		144	217	1.5E-6	T	02-04-2021	IPR007167	Ferrous iron transporter FeoA domain	GO:0046914	
+Bin_1-scaffold_4_c1_15	41ef7c35a2898a4159c69dcd4a7adc6c	217	SUPERFAMILY	SSF46785		3	62	1.67E-11	T	02-04-2021	IPR036390	Winged helix DNA-binding domain superfamily		
+Bin_1-scaffold_4_c1_15	41ef7c35a2898a4159c69dcd4a7adc6c	217	Gene3D	G3DSA:1.10.60.10		73	139	4.7E-27	T	02-04-2021	IPR036421	Iron dependent repressor, metal binding and dimerisation domain superfamily	GO:0046914|GO:0046983	
+Bin_1-scaffold_4_c1_15	41ef7c35a2898a4159c69dcd4a7adc6c	217	Pfam	PF01325	Iron dependent repressor, N-terminal DNA binding domain	6	61	2.1E-16	T	02-04-2021	IPR022687	DTXR-type HTH domain	GO:0003677	
+Bin_1-scaffold_4_c1_15	41ef7c35a2898a4159c69dcd4a7adc6c	217	SUPERFAMILY	SSF47979		64	137	1.2E-26	T	02-04-2021	IPR036421	Iron dependent repressor, metal binding and dimerisation domain superfamily	GO:0046914|GO:0046983	
+Bin_1-scaffold_4_c1_15	41ef7c35a2898a4159c69dcd4a7adc6c	217	Gene3D	G3DSA:2.30.30.90		145	217	7.4E-7	T	02-04-2021	IPR038157	Ferrous iron transporter, core domain		
+Bin_1-scaffold_4_c1_15	41ef7c35a2898a4159c69dcd4a7adc6c	217	Pfam	PF04023	FeoA domain	145	215	3.5E-9	T	02-04-2021	IPR007167	Ferrous iron transporter FeoA domain	GO:0046914	
+Bin_1-scaffold_4_c1_15	41ef7c35a2898a4159c69dcd4a7adc6c	217	SMART	SM00529		25	124	1.5E-35	T	02-04-2021	IPR022689	Iron dependent repressor	GO:0003700|GO:0006355|GO:0046914	
+Bin_1-scaffold_4_c1_15	41ef7c35a2898a4159c69dcd4a7adc6c	217	Gene3D	G3DSA:1.10.10.10		2	71	1.3E-20	T	02-04-2021	IPR036388	Winged helix-like DNA-binding domain superfamily		
+Bin_1-scaffold_4_c1_15	41ef7c35a2898a4159c69dcd4a7adc6c	217	Pfam	PF02742	Iron dependent repressor, metal binding and dimerisation domain	64	133	3.5E-29	T	02-04-2021	IPR001367	Iron dependent repressor, metal binding and dimerisation domain	GO:0046914|GO:0046983	
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	Gene3D	G3DSA:2.40.50.140		573	683	1.8E-35	T	02-04-2021
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	SUPERFAMILY	SSF47323		391	594	1.16E-39	T	02-04-2021	IPR009080	Aminoacyl-tRNA synthetase, class Ia, anticodon-binding	GO:0000166|GO:0004812|GO:0005524|GO:0006418	
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	SUPERFAMILY	SSF50249		575	680	2.45E-28	T	02-04-2021	IPR012340	Nucleic acid-binding, OB-fold		
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	Gene3D	G3DSA:3.40.50.620		6	381	6.2E-161	T	02-04-2021	IPR014729	Rossmann-like alpha/beta/alpha sandwich fold		
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	Hamap	MF_00098	Methionine--tRNA ligase [metG].	3	555	40.744	T	02-04-2021	IPR023458	Methionine-tRNA ligase, type 1	GO:0004825	KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10|Reactome: R-HSA-2408517|Reactome: R-HSA-379716
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	Pfam	PF09334	tRNA synthetases class I (M)	6	398	2.5E-159	T	02-04-2021	IPR015413	Methionyl/Leucyl tRNA synthetase	GO:0000166|GO:0004812|GO:0005524|GO:0006418	
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	CDD	cd07957	Anticodon_Ia_Met	383	510	1.0873E-42	T	02-04-2021
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	Gene3D	G3DSA:1.10.730.10		382	558	6.2E-43	T	02-04-2021
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	PRINTS	PR01041	Methionyl-tRNA synthetase signature	291	306	2.7E-28	T	02-04-2021	IPR033911	Methioninyl-tRNA synthetase core domain	GO:0004825|GO:0006431	KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	PRINTS	PR01041	Methionyl-tRNA synthetase signature	386	397	2.7E-28	T	02-04-2021	IPR033911	Methioninyl-tRNA synthetase core domain	GO:0004825|GO:0006431	KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	PRINTS	PR01041	Methionyl-tRNA synthetase signature	253	264	2.7E-28	T	02-04-2021	IPR033911	Methioninyl-tRNA synthetase core domain	GO:0004825|GO:0006431	KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	PRINTS	PR01041	Methionyl-tRNA synthetase signature	88	99	2.7E-28	T	02-04-2021	IPR033911	Methioninyl-tRNA synthetase core domain	GO:0004825|GO:0006431	KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	PRINTS	PR01041	Methionyl-tRNA synthetase signature	7	20	2.7E-28	T	02-04-2021	IPR033911	Methioninyl-tRNA synthetase core domain	GO:0004825|GO:0006431	KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	PRINTS	PR01041	Methionyl-tRNA synthetase signature	40	54	2.7E-28	T	02-04-2021	IPR033911	Methioninyl-tRNA synthetase core domain	GO:0004825|GO:0006431	KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	SUPERFAMILY	SSF52374		3	386	4.86E-97	T	02-04-2021
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	ProSiteProfiles	PS50886	tRNA-binding domain profile.	581	683	29.638	T	02-04-2021	IPR002547	tRNA-binding domain	GO:0000049	Reactome: R-HSA-379716
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	Gene3D	G3DSA:2.20.28.20		140	174	6.2E-161	T	02-04-2021	IPR029038	Methionyl-tRNA synthetase, Zn-domain		KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10|Reactome: R-HSA-2408517|Reactome: R-HSA-379716
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	TIGRFAM	TIGR00399	metG_C_term: methionine--tRNA ligase, beta subunit	557	682	3.3E-38	T	02-04-2021	IPR004495	Methionyl-tRNA synthetase, beta subunit, C-terminal	GO:0000166|GO:0004825|GO:0005524|GO:0005737|GO:0006431	KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	Pfam	PF08264	Anticodon-binding domain of tRNA	435	507	6.8E-6	T	02-04-2021	IPR013155	Methionyl/Valyl/Leucyl/Isoleucyl-tRNA synthetase, anticodon-binding	GO:0004812|GO:0006418	
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	SUPERFAMILY	SSF57770		140	174	1.15E-11	T	02-04-2021	IPR029038	Methionyl-tRNA synthetase, Zn-domain		KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10|Reactome: R-HSA-2408517|Reactome: R-HSA-379716
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	Pfam	PF01588	Putative tRNA binding domain	587	674	1.0E-23	T	02-04-2021	IPR002547	tRNA-binding domain	GO:0000049	Reactome: R-HSA-379716
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	CDD	cd00814	MetRS_core	4	374	4.5579E-145	T	02-04-2021	IPR033911	Methioninyl-tRNA synthetase core domain	GO:0004825|GO:0006431	KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	CDD	cd02800	tRNA_bind_EcMetRS_like	577	682	1.50203E-44	T	02-04-2021	IPR004495	Methionyl-tRNA synthetase, beta subunit, C-terminal	GO:0000166|GO:0004825|GO:0005524|GO:0005737|GO:0006431	KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	ProSitePatterns	PS00178	Aminoacyl-transfer RNA synthetases class-I signature.	12	23	-	T	02-04-2021	IPR001412	Aminoacyl-tRNA synthetase, class I, conserved site	GO:0000166|GO:0004812|GO:0005524|GO:0006418	
+Bin_113-scaffold_81_c1_53	c2049b56c1ace13dd2742b196af38aa2	683	TIGRFAM	TIGR00398	metG: methionine--tRNA ligase	6	545	1.8E-167	T	02-04-2021	IPR014758	Methionyl-tRNA synthetase	GO:0000166|GO:0004825|GO:0005524|GO:0005737|GO:0006431	KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	Gene3D	G3DSA:2.40.50.140		573	683	1.8E-35	T	02-04-2021
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	SUPERFAMILY	SSF47323		391	594	1.16E-39	T	02-04-2021	IPR009080	Aminoacyl-tRNA synthetase, class Ia, anticodon-binding	GO:0000166|GO:0004812|GO:0005524|GO:0006418	
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	SUPERFAMILY	SSF50249		575	680	2.45E-28	T	02-04-2021	IPR012340	Nucleic acid-binding, OB-fold		
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	Gene3D	G3DSA:3.40.50.620		6	381	6.2E-161	T	02-04-2021	IPR014729	Rossmann-like alpha/beta/alpha sandwich fold		
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	Hamap	MF_00098	Methionine--tRNA ligase [metG].	3	555	40.744	T	02-04-2021	IPR023458	Methionine-tRNA ligase, type 1	GO:0004825	KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10|Reactome: R-HSA-2408517|Reactome: R-HSA-379716
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	Pfam	PF09334	tRNA synthetases class I (M)	6	398	2.5E-159	T	02-04-2021	IPR015413	Methionyl/Leucyl tRNA synthetase	GO:0000166|GO:0004812|GO:0005524|GO:0006418	
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	CDD	cd07957	Anticodon_Ia_Met	383	510	1.0873E-42	T	02-04-2021
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	Gene3D	G3DSA:1.10.730.10		382	558	6.2E-43	T	02-04-2021
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	PRINTS	PR01041	Methionyl-tRNA synthetase signature	291	306	2.7E-28	T	02-04-2021	IPR033911	Methioninyl-tRNA synthetase core domain	GO:0004825|GO:0006431	KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	PRINTS	PR01041	Methionyl-tRNA synthetase signature	386	397	2.7E-28	T	02-04-2021	IPR033911	Methioninyl-tRNA synthetase core domain	GO:0004825|GO:0006431	KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	PRINTS	PR01041	Methionyl-tRNA synthetase signature	253	264	2.7E-28	T	02-04-2021	IPR033911	Methioninyl-tRNA synthetase core domain	GO:0004825|GO:0006431	KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	PRINTS	PR01041	Methionyl-tRNA synthetase signature	88	99	2.7E-28	T	02-04-2021	IPR033911	Methioninyl-tRNA synthetase core domain	GO:0004825|GO:0006431	KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	PRINTS	PR01041	Methionyl-tRNA synthetase signature	7	20	2.7E-28	T	02-04-2021	IPR033911	Methioninyl-tRNA synthetase core domain	GO:0004825|GO:0006431	KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	PRINTS	PR01041	Methionyl-tRNA synthetase signature	40	54	2.7E-28	T	02-04-2021	IPR033911	Methioninyl-tRNA synthetase core domain	GO:0004825|GO:0006431	KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	SUPERFAMILY	SSF52374		3	386	4.86E-97	T	02-04-2021
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	ProSiteProfiles	PS50886	tRNA-binding domain profile.	581	683	29.638	T	02-04-2021	IPR002547	tRNA-binding domain	GO:0000049	Reactome: R-HSA-379716
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	Gene3D	G3DSA:2.20.28.20		140	174	6.2E-161	T	02-04-2021	IPR029038	Methionyl-tRNA synthetase, Zn-domain		KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10|Reactome: R-HSA-2408517|Reactome: R-HSA-379716
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	TIGRFAM	TIGR00399	metG_C_term: methionine--tRNA ligase, beta subunit	557	682	3.3E-38	T	02-04-2021	IPR004495	Methionyl-tRNA synthetase, beta subunit, C-terminal	GO:0000166|GO:0004825|GO:0005524|GO:0005737|GO:0006431	KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	Pfam	PF08264	Anticodon-binding domain of tRNA	435	507	6.8E-6	T	02-04-2021	IPR013155	Methionyl/Valyl/Leucyl/Isoleucyl-tRNA synthetase, anticodon-binding	GO:0004812|GO:0006418	
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	SUPERFAMILY	SSF57770		140	174	1.15E-11	T	02-04-2021	IPR029038	Methionyl-tRNA synthetase, Zn-domain		KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10|Reactome: R-HSA-2408517|Reactome: R-HSA-379716
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	Pfam	PF01588	Putative tRNA binding domain	587	674	1.0E-23	T	02-04-2021	IPR002547	tRNA-binding domain	GO:0000049	Reactome: R-HSA-379716
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	CDD	cd00814	MetRS_core	4	374	4.5579E-145	T	02-04-2021	IPR033911	Methioninyl-tRNA synthetase core domain	GO:0004825|GO:0006431	KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	CDD	cd02800	tRNA_bind_EcMetRS_like	577	682	1.50203E-44	T	02-04-2021	IPR004495	Methionyl-tRNA synthetase, beta subunit, C-terminal	GO:0000166|GO:0004825|GO:0005524|GO:0005737|GO:0006431	KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	ProSitePatterns	PS00178	Aminoacyl-transfer RNA synthetases class-I signature.	12	23	-	T	02-04-2021	IPR001412	Aminoacyl-tRNA synthetase, class I, conserved site	GO:0000166|GO:0004812|GO:0005524|GO:0006418	
+Bin_1-scaffold_4_c1_379	c2049b56c1ace13dd2742b196af38aa2	683	TIGRFAM	TIGR00398	metG: methionine--tRNA ligase	6	545	1.8E-167	T	02-04-2021	IPR014758	Methionyl-tRNA synthetase	GO:0000166|GO:0004825|GO:0005524|GO:0005737|GO:0006431	KEGG: 00450+6.1.1.10|KEGG: 00970+6.1.1.10
+Bin_2-scaffold_4_c1_295	da2a985ae21dbda7e5aa7bf7e643a1cc	398	Pfam	PF07690	Major Facilitator Superfamily	25	359	1.6E-32	T	02-04-2021	IPR011701	Major facilitator superfamily	GO:0016021|GO:0055085	
+Bin_2-scaffold_4_c1_295	da2a985ae21dbda7e5aa7bf7e643a1cc	398	CDD	cd06174	MFS	22	392	7.80861E-16	T	02-04-2021	IPR020846	Major facilitator superfamily domain		
+Bin_2-scaffold_4_c1_295	da2a985ae21dbda7e5aa7bf7e643a1cc	398	Gene3D	G3DSA:1.20.1250.20		15	200	1.5E-23	T	02-04-2021
+Bin_2-scaffold_4_c1_295	da2a985ae21dbda7e5aa7bf7e643a1cc	398	Gene3D	G3DSA:1.20.1250.20		218	396	1.2E-16	T	02-04-2021
+Bin_2-scaffold_4_c1_295	da2a985ae21dbda7e5aa7bf7e643a1cc	398	SUPERFAMILY	SSF103473		10	395	7.46E-52	T	02-04-2021	IPR036259	MFS transporter superfamily		
+Bin_2-scaffold_4_c1_295	da2a985ae21dbda7e5aa7bf7e643a1cc	398	ProSiteProfiles	PS50850	Major facilitator superfamily (MFS) profile.	21	398	20.587	T	02-04-2021	IPR020846	Major facilitator superfamily domain		
+Bin_10-scaffold_5_c1_378	da2a985ae21dbda7e5aa7bf7e643a1cc	398	Pfam	PF07690	Major Facilitator Superfamily	25	359	1.6E-32	T	02-04-2021	IPR011701	Major facilitator superfamily	GO:0016021|GO:0055085	
+Bin_10-scaffold_5_c1_378	da2a985ae21dbda7e5aa7bf7e643a1cc	398	CDD	cd06174	MFS	22	392	7.80861E-16	T	02-04-2021	IPR020846	Major facilitator superfamily domain		
+Bin_10-scaffold_5_c1_378	da2a985ae21dbda7e5aa7bf7e643a1cc	398	Gene3D	G3DSA:1.20.1250.20		15	200	1.5E-23	T	02-04-2021
+Bin_10-scaffold_5_c1_378	da2a985ae21dbda7e5aa7bf7e643a1cc	398	Gene3D	G3DSA:1.20.1250.20		218	396	1.2E-16	T	02-04-2021
+Bin_10-scaffold_5_c1_378	da2a985ae21dbda7e5aa7bf7e643a1cc	398	SUPERFAMILY	SSF103473		10	395	7.46E-52	T	02-04-2021	IPR036259	MFS transporter superfamily		
+Bin_10-scaffold_5_c1_378	da2a985ae21dbda7e5aa7bf7e643a1cc	398	ProSiteProfiles	PS50850	Major facilitator superfamily (MFS) profile.	21	398	20.587	T	02-04-2021	IPR020846	Major facilitator superfamily domain		
+Bin_10-scaffold_10_c1_251	573d9140ee0fe5dffba8fdd276dbc828	356	SUPERFAMILY	SSF111337		1	352	6.28E-126	T	02-04-2021	IPR036100	S-adenosylmethionine:tRNA ribosyltransferase-isomerase,  QueA superfamily	GO:0008616|GO:0016740|GO:0016853	MetaCyc: PWY-6700
+Bin_10-scaffold_10_c1_251	573d9140ee0fe5dffba8fdd276dbc828	356	Gene3D	G3DSA:2.40.10.240		66	173	2.3E-108	T	02-04-2021
+Bin_10-scaffold_10_c1_251	573d9140ee0fe5dffba8fdd276dbc828	356	TIGRFAM	TIGR00113	queA: S-adenosylmethionine:tRNA ribosyltransferase-isomerase	1	351	5.4E-112	T	02-04-2021	IPR003699	S-adenosylmethionine:tRNA ribosyltransferase-isomerase,  QueA	GO:0008616|GO:0016740|GO:0016853	MetaCyc: PWY-6700
+Bin_10-scaffold_10_c1_251	573d9140ee0fe5dffba8fdd276dbc828	356	Gene3D	G3DSA:3.40.1780.10		14	350	2.3E-108	T	02-04-2021
+Bin_10-scaffold_10_c1_251	573d9140ee0fe5dffba8fdd276dbc828	356	Pfam	PF02547	Queuosine biosynthesis protein	3	351	3.5E-125	T	02-04-2021	IPR003699	S-adenosylmethionine:tRNA ribosyltransferase-isomerase,  QueA	GO:0008616|GO:0016740|GO:0016853	MetaCyc: PWY-6700
+Bin_10-scaffold_10_c1_251	573d9140ee0fe5dffba8fdd276dbc828	356	Hamap	MF_00113	S-adenosylmethionine:tRNA ribosyltransferase-isomerase [queA].	1	352	43.938	T	02-04-2021	IPR003699	S-adenosylmethionine:tRNA ribosyltransferase-isomerase,  QueA	GO:0008616|GO:0016740|GO:0016853	MetaCyc: PWY-6700
+Bin_2-scaffold_12_c2_265	573d9140ee0fe5dffba8fdd276dbc828	356	SUPERFAMILY	SSF111337		1	352	6.28E-126	T	02-04-2021	IPR036100	S-adenosylmethionine:tRNA ribosyltransferase-isomerase,  QueA superfamily	GO:0008616|GO:0016740|GO:0016853	MetaCyc: PWY-6700
+Bin_2-scaffold_12_c2_265	573d9140ee0fe5dffba8fdd276dbc828	356	Gene3D	G3DSA:2.40.10.240		66	173	2.3E-108	T	02-04-2021
+Bin_2-scaffold_12_c2_265	573d9140ee0fe5dffba8fdd276dbc828	356	TIGRFAM	TIGR00113	queA: S-adenosylmethionine:tRNA ribosyltransferase-isomerase	1	351	5.4E-112	T	02-04-2021	IPR003699	S-adenosylmethionine:tRNA ribosyltransferase-isomerase,  QueA	GO:0008616|GO:0016740|GO:0016853	MetaCyc: PWY-6700
+Bin_2-scaffold_12_c2_265	573d9140ee0fe5dffba8fdd276dbc828	356	Gene3D	G3DSA:3.40.1780.10		14	350	2.3E-108	T	02-04-2021
+Bin_2-scaffold_12_c2_265	573d9140ee0fe5dffba8fdd276dbc828	356	Pfam	PF02547	Queuosine biosynthesis protein	3	351	3.5E-125	T	02-04-2021	IPR003699	S-adenosylmethionine:tRNA ribosyltransferase-isomerase,  QueA	GO:0008616|GO:0016740|GO:0016853	MetaCyc: PWY-6700
+Bin_2-scaffold_12_c2_265	573d9140ee0fe5dffba8fdd276dbc828	356	Hamap	MF_00113	S-adenosylmethionine:tRNA ribosyltransferase-isomerase [queA].	1	352	43.938	T	02-04-2021	IPR003699	S-adenosylmethionine:tRNA ribosyltransferase-isomerase,  QueA	GO:0008616|GO:0016740|GO:0016853	MetaCyc: PWY-6700
+Bin_113-scaffold_37_c2_78	57525a0a7c771506f238888c73bcaa81	205	SUPERFAMILY	SSF52540		9	197	1.04E-57	T	02-04-2021	IPR027417	P-loop containing nucleoside triphosphate hydrolase		
+Bin_113-scaffold_37_c2_78	57525a0a7c771506f238888c73bcaa81	205	Hamap	MF_00328	Guanylate kinase [gmk].	9	195	33.683	T	02-04-2021	IPR017665	Guanylate kinase	GO:0004385|GO:0006163	KEGG: 00230+2.7.4.8|MetaCyc: PWY-7221|Reactome: R-HSA-2161541|Reactome: R-HSA-499943
+Bin_113-scaffold_37_c2_78	57525a0a7c771506f238888c73bcaa81	205	SMART	SM00072		10	194	2.2E-46	T	02-04-2021	IPR008145	Guanylate kinase/L-type calcium channel beta subunit		
+Bin_113-scaffold_37_c2_78	57525a0a7c771506f238888c73bcaa81	205	ProSitePatterns	PS00856	Guanylate kinase-like signature.	46	63	-	T	02-04-2021	IPR020590	Guanylate kinase, conserved site		KEGG: 00230+2.7.4.8|MetaCyc: PWY-7221
+Bin_113-scaffold_37_c2_78	57525a0a7c771506f238888c73bcaa81	205	TIGRFAM	TIGR03263	guanyl_kin: guanylate kinase	11	191	1.8E-64	T	02-04-2021	IPR017665	Guanylate kinase	GO:0004385|GO:0006163	KEGG: 00230+2.7.4.8|MetaCyc: PWY-7221|Reactome: R-HSA-2161541|Reactome: R-HSA-499943
+Bin_113-scaffold_37_c2_78	57525a0a7c771506f238888c73bcaa81	205	Pfam	PF00625	Guanylate kinase	11	191	4.6E-46	T	02-04-2021	IPR008145	Guanylate kinase/L-type calcium channel beta subunit		
+Bin_113-scaffold_37_c2_78	57525a0a7c771506f238888c73bcaa81	205	Gene3D	G3DSA:3.30.63.10		43	103	9.0E-59	T	02-04-2021
+Bin_113-scaffold_37_c2_78	57525a0a7c771506f238888c73bcaa81	205	CDD	cd00071	GMPK	13	186	2.73206E-51	T	02-04-2021
+Bin_113-scaffold_37_c2_78	57525a0a7c771506f238888c73bcaa81	205	Gene3D	G3DSA:3.40.50.300		15	190	9.0E-59	T	02-04-2021
+Bin_113-scaffold_37_c2_78	57525a0a7c771506f238888c73bcaa81	205	ProSiteProfiles	PS50052	Guanylate kinase-like domain profile.	11	192	33.599	T	02-04-2021	IPR008144	Guanylate kinase-like domain		
+Bin_1-scaffold_4_c1_140	57525a0a7c771506f238888c73bcaa81	205	SUPERFAMILY	SSF52540		9	197	1.04E-57	T	02-04-2021	IPR027417	P-loop containing nucleoside triphosphate hydrolase		
+Bin_1-scaffold_4_c1_140	57525a0a7c771506f238888c73bcaa81	205	Hamap	MF_00328	Guanylate kinase [gmk].	9	195	33.683	T	02-04-2021	IPR017665	Guanylate kinase	GO:0004385|GO:0006163	KEGG: 00230+2.7.4.8|MetaCyc: PWY-7221|Reactome: R-HSA-2161541|Reactome: R-HSA-499943
+Bin_1-scaffold_4_c1_140	57525a0a7c771506f238888c73bcaa81	205	SMART	SM00072		10	194	2.2E-46	T	02-04-2021	IPR008145	Guanylate kinase/L-type calcium channel beta subunit		
+Bin_1-scaffold_4_c1_140	57525a0a7c771506f238888c73bcaa81	205	ProSitePatterns	PS00856	Guanylate kinase-like signature.	46	63	-	T	02-04-2021	IPR020590	Guanylate kinase, conserved site		KEGG: 00230+2.7.4.8|MetaCyc: PWY-7221
+Bin_1-scaffold_4_c1_140	57525a0a7c771506f238888c73bcaa81	205	TIGRFAM	TIGR03263	guanyl_kin: guanylate kinase	11	191	1.8E-64	T	02-04-2021	IPR017665	Guanylate kinase	GO:0004385|GO:0006163	KEGG: 00230+2.7.4.8|MetaCyc: PWY-7221|Reactome: R-HSA-2161541|Reactome: R-HSA-499943
+Bin_1-scaffold_4_c1_140	57525a0a7c771506f238888c73bcaa81	205	Pfam	PF00625	Guanylate kinase	11	191	4.6E-46	T	02-04-2021	IPR008145	Guanylate kinase/L-type calcium channel beta subunit		
+Bin_1-scaffold_4_c1_140	57525a0a7c771506f238888c73bcaa81	205	Gene3D	G3DSA:3.30.63.10		43	103	9.0E-59	T	02-04-2021
+Bin_1-scaffold_4_c1_140	57525a0a7c771506f238888c73bcaa81	205	CDD	cd00071	GMPK	13	186	2.73206E-51	T	02-04-2021
+Bin_1-scaffold_4_c1_140	57525a0a7c771506f238888c73bcaa81	205	Gene3D	G3DSA:3.40.50.300		15	190	9.0E-59	T	02-04-2021
+Bin_1-scaffold_4_c1_140	57525a0a7c771506f238888c73bcaa81	205	ProSiteProfiles	PS50052	Guanylate kinase-like domain profile.	11	192	33.599	T	02-04-2021	IPR008144	Guanylate kinase-like domain		
+Bin_1-scaffold_125_c1_83	0b558b87f639145d623f01b0632dcb68	883	Gene3D	G3DSA:3.30.70.260		700	776	3.7E-5	T	02-04-2021
+Bin_1-scaffold_125_c1_83	0b558b87f639145d623f01b0632dcb68	883	SUPERFAMILY	SSF81301		38	166	6.84E-16	T	02-04-2021
+Bin_1-scaffold_125_c1_83	0b558b87f639145d623f01b0632dcb68	883	SUPERFAMILY	SSF81593		195	313	2.35E-5	T	02-04-2021
+Bin_1-scaffold_125_c1_83	0b558b87f639145d623f01b0632dcb68	883	CDD	cd04899	ACT_ACR-UUR-like_2	805	874	9.89397E-23	T	02-04-2021
+Bin_1-scaffold_125_c1_83	0b558b87f639145d623f01b0632dcb68	883	CDD	cd04900	ACT_UUR-like_1	697	769	6.33563E-25	T	02-04-2021
+Bin_1-scaffold_125_c1_83	0b558b87f639145d623f01b0632dcb68	883	SUPERFAMILY	SSF55021		696	764	1.21E-8	T	02-04-2021
+Bin_1-scaffold_125_c1_83	0b558b87f639145d623f01b0632dcb68	883	ProSiteProfiles	PS51831	HD domain profile.	452	567	18.354	T	02-04-2021	IPR003607	HD/PDEase domain		
+Bin_1-scaffold_125_c1_83	0b558b87f639145d623f01b0632dcb68	883	SUPERFAMILY	SSF109604		417	541	2.51E-14	T	02-04-2021
+Bin_1-scaffold_125_c1_83	0b558b87f639145d623f01b0632dcb68	883	Pfam	PF01966	HD domain	478	558	3.5E-11	T	02-04-2021	IPR006674	HD domain		
+Bin_1-scaffold_125_c1_83	0b558b87f639145d623f01b0632dcb68	883	PIRSF	PIRSF006288		14	880	2.6E-278	T	02-04-2021	IPR010043	Bifunctional uridylyltransferase/uridylyl-removing enzyme	GO:0006807|GO:0008773	
+Bin_1-scaffold_125_c1_83	0b558b87f639145d623f01b0632dcb68	883	MobiDBLite	mobidb-lite	consensus disorder prediction	764	783	-	T	02-04-2021
+Bin_1-scaffold_125_c1_83	0b558b87f639145d623f01b0632dcb68	883	Pfam	PF01909	Nucleotidyltransferase domain	71	123	3.9E-6	T	02-04-2021	IPR002934	Polymerase, nucleotidyl transferase domain	GO:0016779	
+Bin_1-scaffold_125_c1_83	0b558b87f639145d623f01b0632dcb68	883	CDD	cd00077	HDc	450	601	1.82612E-4	T	02-04-2021	IPR003607	HD/PDEase domain		
+Bin_1-scaffold_125_c1_83	0b558b87f639145d623f01b0632dcb68	883	ProSiteProfiles	PS51671	ACT domain profile.	806	883	11.71	T	02-04-2021	IPR002912	ACT domain		
+Bin_1-scaffold_125_c1_83	0b558b87f639145d623f01b0632dcb68	883	TIGRFAM	TIGR01693	UTase_glnD: protein-P-II uridylyltransferase	37	872	3.4E-259	T	02-04-2021	IPR010043	Bifunctional uridylyltransferase/uridylyl-removing enzyme	GO:0006807|GO:0008773	
+Bin_1-scaffold_125_c1_83	0b558b87f639145d623f01b0632dcb68	883	MobiDBLite	mobidb-lite	consensus disorder prediction	769	783	-	T	02-04-2021
+Bin_1-scaffold_125_c1_83	0b558b87f639145d623f01b0632dcb68	883	SMART	SM00471		448	594	2.7E-6	T	02-04-2021	IPR003607	HD/PDEase domain		
+Bin_1-scaffold_125_c1_83	0b558b87f639145d623f01b0632dcb68	883	Gene3D	G3DSA:1.10.3210.10		441	548	5.6E-9	T	02-04-2021
+Bin_1-scaffold_125_c1_83	0b558b87f639145d623f01b0632dcb68	883	Pfam	PF08335	GlnD PII-uridylyltransferase	178	316	1.5E-33	T	02-04-2021	IPR013546	PII-uridylyltransferase/Glutamine-synthetase adenylyltransferase	GO:0016779	
+Bin_1-scaffold_125_c1_83	0b558b87f639145d623f01b0632dcb68	883	CDD	cd05401	NT_GlnE_GlnD_like	41	166	8.22011E-20	T	02-04-2021
+Bin_1-scaffold_125_c1_83	0b558b87f639145d623f01b0632dcb68	883	SUPERFAMILY	SSF55021		802	859	8.74E-6	T	02-04-2021
+Bin_1-scaffold_125_c1_83	0b558b87f639145d623f01b0632dcb68	883	Hamap	MF_00277	Bifunctional uridylyltransferase/uridylyl-removing enzyme [glnD].	1	883	263.937	T	02-04-2021	IPR010043	Bifunctional uridylyltransferase/uridylyl-removing enzyme	GO:0006807|GO:0008773	
+Bin_1-scaffold_125_c1_83	0b558b87f639145d623f01b0632dcb68	883	ProSiteProfiles	PS51671	ACT domain profile.	699	776	13.798	T	02-04-2021	IPR002912	ACT domain		
+Bin_113-scaffold_86_c1_133	0b558b87f639145d623f01b0632dcb68	883	Gene3D	G3DSA:3.30.70.260		700	776	3.7E-5	T	02-04-2021
+Bin_113-scaffold_86_c1_133	0b558b87f639145d623f01b0632dcb68	883	SUPERFAMILY	SSF81301		38	166	6.84E-16	T	02-04-2021
+Bin_113-scaffold_86_c1_133	0b558b87f639145d623f01b0632dcb68	883	SUPERFAMILY	SSF81593		195	313	2.35E-5	T	02-04-2021
+Bin_113-scaffold_86_c1_133	0b558b87f639145d623f01b0632dcb68	883	CDD	cd04899	ACT_ACR-UUR-like_2	805	874	9.89397E-23	T	02-04-2021
+Bin_113-scaffold_86_c1_133	0b558b87f639145d623f01b0632dcb68	883	CDD	cd04900	ACT_UUR-like_1	697	769	6.33563E-25	T	02-04-2021
+Bin_113-scaffold_86_c1_133	0b558b87f639145d623f01b0632dcb68	883	SUPERFAMILY	SSF55021		696	764	1.21E-8	T	02-04-2021
+Bin_113-scaffold_86_c1_133	0b558b87f639145d623f01b0632dcb68	883	ProSiteProfiles	PS51831	HD domain profile.	452	567	18.354	T	02-04-2021	IPR003607	HD/PDEase domain		
+Bin_113-scaffold_86_c1_133	0b558b87f639145d623f01b0632dcb68	883	SUPERFAMILY	SSF109604		417	541	2.51E-14	T	02-04-2021
+Bin_113-scaffold_86_c1_133	0b558b87f639145d623f01b0632dcb68	883	Pfam	PF01966	HD domain	478	558	3.5E-11	T	02-04-2021	IPR006674	HD domain		
+Bin_113-scaffold_86_c1_133	0b558b87f639145d623f01b0632dcb68	883	PIRSF	PIRSF006288		14	880	2.6E-278	T	02-04-2021	IPR010043	Bifunctional uridylyltransferase/uridylyl-removing enzyme	GO:0006807|GO:0008773	
+Bin_113-scaffold_86_c1_133	0b558b87f639145d623f01b0632dcb68	883	MobiDBLite	mobidb-lite	consensus disorder prediction	764	783	-	T	02-04-2021
+Bin_113-scaffold_86_c1_133	0b558b87f639145d623f01b0632dcb68	883	Pfam	PF01909	Nucleotidyltransferase domain	71	123	3.9E-6	T	02-04-2021	IPR002934	Polymerase, nucleotidyl transferase domain	GO:0016779	
+Bin_113-scaffold_86_c1_133	0b558b87f639145d623f01b0632dcb68	883	CDD	cd00077	HDc	450	601	1.82612E-4	T	02-04-2021	IPR003607	HD/PDEase domain		
+Bin_113-scaffold_86_c1_133	0b558b87f639145d623f01b0632dcb68	883	ProSiteProfiles	PS51671	ACT domain profile.	806	883	11.71	T	02-04-2021	IPR002912	ACT domain		
+Bin_113-scaffold_86_c1_133	0b558b87f639145d623f01b0632dcb68	883	TIGRFAM	TIGR01693	UTase_glnD: protein-P-II uridylyltransferase	37	872	3.4E-259	T	02-04-2021	IPR010043	Bifunctional uridylyltransferase/uridylyl-removing enzyme	GO:0006807|GO:0008773	
+Bin_113-scaffold_86_c1_133	0b558b87f639145d623f01b0632dcb68	883	MobiDBLite	mobidb-lite	consensus disorder prediction	769	783	-	T	02-04-2021
+Bin_113-scaffold_86_c1_133	0b558b87f639145d623f01b0632dcb68	883	SMART	SM00471		448	594	2.7E-6	T	02-04-2021	IPR003607	HD/PDEase domain		
+Bin_113-scaffold_86_c1_133	0b558b87f639145d623f01b0632dcb68	883	Gene3D	G3DSA:1.10.3210.10		441	548	5.6E-9	T	02-04-2021
+Bin_113-scaffold_86_c1_133	0b558b87f639145d623f01b0632dcb68	883	Pfam	PF08335	GlnD PII-uridylyltransferase	178	316	1.5E-33	T	02-04-2021	IPR013546	PII-uridylyltransferase/Glutamine-synthetase adenylyltransferase	GO:0016779	
