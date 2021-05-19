@@ -10,7 +10,8 @@ vignette: >
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  fig.width=7, fig.height=7
 )
 ```
 
@@ -30,7 +31,7 @@ You can use the subsetting functions to create subsets. Here we are going to ext
 
 The function `get_subset_pca` calculates a PCA over the data to find the PFAM that better explain variation within the data.
 
-```{r, eval=FALSE}
+```{r}
 important_PFAMs<-get_subset_pca(tibble_rbims=interpro_pfam_profile, 
                cos2_val=0.95,
                analysis="PFAM")
@@ -44,20 +45,20 @@ Lets plot the results.
 
 **plot_heatmap** can help to explore the results. We can perform two types of analysis, if we set the distance option as **TRUE** we can get a plot to show how the samples could cluster based on the protein domains.
 
-```{r, eval=FALSE}
+```{r}
 plot_heatmap(important_PFAMs, y_axis=PFAM, analysis = "INTERPRO", distance = T)
 ```
 
 If we set that to **FALSE** we observed the presence and absence of the domains across the genome samples.
 
-```{r, eval=FALSE}
+```{r}
 plot_heatmap(important_PFAMs, y_axis=PFAM, analysis = "INTERPRO", distance = F)
 ```
 
 We can also visualize using a bubble plot. 
 
-```{r, eval=FALSE}
-plot_bubble(input_data, y_axis=PFAM, x_axis=Bin_name, analysis = "INTERPRO", data_experiment = metadata, color_character = Clades)
+```{r}
+plot_bubble(important_PFAMs, y_axis=PFAM, x_axis=Bin_name, analysis = "INTERPRO", data_experiment = metadata, color_character = Clades)
 ```
 
 
