@@ -39,3 +39,5 @@ Imports:
     stats,
     Cairo
 Language: en-US
+URL: https://github.com/mirnavazquez/RbiMs
+BugReports: https://github.com/mirnavazquez/RbiMs/issues
