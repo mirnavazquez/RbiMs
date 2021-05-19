@@ -32,7 +32,7 @@ library(rbims)
 
 ## Overview
 
-<img src="inst/rRbiMs-3.png"  width="1000" height="400" align="center" />
+<img src="man/figures/rRbiMs-3.png"  width="800" height="400" align="center" />
 
 ## Visit the website
 

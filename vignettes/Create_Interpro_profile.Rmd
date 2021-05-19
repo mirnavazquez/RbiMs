@@ -31,7 +31,7 @@ The function to use that information is `read_interpro`. This functio can parse 
 interpro_pfam_profile<-read_interpro("Interpro_test.tsv", database="PFAM", profile = T)
 ```
 
-```{r, eval=FALSE}
+```{r}
 head(interpro_pfam_profile)
 ```
 
@@ -41,7 +41,7 @@ Or print a long table **profile = F**.
 interpro_pfam_long<-read_interpro("Interpro_test.tsv", database="PFAM", profile = F)
 ```
 
-```{r, eval=FALSE}
+```{r}
 head(interpro_pfam_long)
 ```
 

@@ -25,6 +25,8 @@ Install devtools in the case you dont have it.
 install.packages("devtools")
 ```
 
+If you are in a MAC system, you would need to download [XQuartz](https://www.xquartz.org/), you can read more about it [here](https://stackoverflow.com/questions/38952427/include-cairo-r-on-a-mac). 
+
 Install rbims.
 
 ```{r install rbims, eval=FALSE}

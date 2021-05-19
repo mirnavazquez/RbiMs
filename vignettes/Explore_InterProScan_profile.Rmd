@@ -37,7 +37,7 @@ important_PFAMs<-get_subset_pca(tibble_rbims=interpro_pfam_profile,
                analysis="PFAM")
 ```
 
-```{r, eval=FALSE }
+```{r}
 head(important_PFAMs)
 ```
 
