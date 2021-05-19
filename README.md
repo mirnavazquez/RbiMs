@@ -34,7 +34,7 @@ library(rbims)
 
 <img src="man/figures/rRbiMs-3.png"  width="800" height="400" align="center" />
 
-## Visit the website
+## Visit the [website](https://mirnavazquez.github.io/RbiMs/) for more detail. 
 
 ## References
 
