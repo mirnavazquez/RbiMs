@@ -1,0 +1,11 @@
+pandoc: '2.13'
+pkgdown: 1.6.1
+pkgdown_sha: ~
+articles:
+  Create_Interpro_profile: Create_Interpro_profile.html
+  Create_KEGG_profile: Create_KEGG_profile.html
+  Explore_InterProScan_profile: Explore_InterProScan_profile.html
+  Explore_KEGG_profile: Explore_KEGG_profile.html
+  Installation: Installation.html
+last_built: 2021-05-19T00:33Z
+
