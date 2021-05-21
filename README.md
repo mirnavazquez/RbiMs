@@ -14,15 +14,15 @@ R tools for reconstructing bin metabolisms.
 
 ## Quick install
 
+We are actively developing rbims, so for now it is not available at CRAN or Bioconductor, however you can access to the development version from [GitHub](https://github.com/mirnavazquez/RbiMs).
+
 In R terminal:
 
 ``` r
-if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
-BiocManager::install(c("KEGGREST", "devtools"))
+install.packages("devtools")
 ```
 
-And the development version from
-[GitHub](https://github.com/mirnavazquez/RbiMs) with:
+If you are in a MAC system, you will need to download [XQuartz](https://www.xquartz.org/), you can read more about it [here](https://stackoverflow.com/questions/38952427/include-cairo-r-on-a-mac). 
 
 ``` r
 library(devtools)
@@ -35,6 +35,13 @@ library(rbims)
 <img src="man/figures/rRbiMs-3.png"  width="800" height="400" align="center" />
 
 ## Visit the [website](https://mirnavazquez.github.io/RbiMs/) for more detail. 
+
+## Contributions
+
+- Mirna Vázquez Rosas Landa - wrote the code. 
+- Valerie De Anda - Cuarted the rbims database of metabolism. 
+- Sahil Shah - Helped with function documentation.
+
 
 ## References
 
