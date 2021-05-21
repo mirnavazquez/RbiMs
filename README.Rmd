@@ -35,7 +35,7 @@ In R terminal:
 install.packages("devtools")
 ```
 
-If you are in a MAC system, you will need to download [XQuartz](https://www.xquartz.org/), you can read more about it [here](https://stackoverflow.com/questions/38952427/include-cairo-r-on-a-mac). 
+If you are in a MAC system, you will need to download [XQuartz](https://www.xquartz.org/), you can read more about it [here](https://stackoverflow.com/questions/38952427/include-cairo-r-on-a-mac). As well if you are in ubuntu you need to install libcairo2-dev, you can read more about it [here](https://stackoverflow.com/questions/51940792/r-cairo-package-installation-failed-in-ubuntu-18-04).
 
 ``` r
 library(devtools)

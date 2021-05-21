@@ -14,7 +14,9 @@ R tools for reconstructing bin metabolisms.
 
 ## Quick install
 
-We are actively developing rbims, so for now it is not available at CRAN or Bioconductor, however you can access to the development version from [GitHub](https://github.com/mirnavazquez/RbiMs).
+We are actively developing rbims, so for now it is not available at CRAN
+or Bioconductor, however you can access to the development version from
+[GitHub](https://github.com/mirnavazquez/RbiMs).
 
 In R terminal:
 
@@ -22,7 +24,12 @@ In R terminal:
 install.packages("devtools")
 ```
 
-If you are in a MAC system, you will need to download [XQuartz](https://www.xquartz.org/), you can read more about it [here](https://stackoverflow.com/questions/38952427/include-cairo-r-on-a-mac). 
+If you are in a MAC system, you will need to download
+[XQuartz](https://www.xquartz.org/), you can read more about it
+[here](https://stackoverflow.com/questions/38952427/include-cairo-r-on-a-mac).
+As well if you are in ubuntu you need to install libcairo2-dev, you can
+read more about it
+[here](https://stackoverflow.com/questions/51940792/r-cairo-package-installation-failed-in-ubuntu-18-04).
 
 ``` r
 library(devtools)
@@ -34,14 +41,13 @@ library(rbims)
 
 <img src="man/figures/rRbiMs-3.png"  width="800" height="400" align="center" />
 
-## Visit the [website](https://mirnavazquez.github.io/RbiMs/) for more detail. 
+## Visit the [website](https://mirnavazquez.github.io/RbiMs/) for more detail.
 
 ## Contributions
 
-- Mirna Vázquez Rosas Landa - wrote the code. 
-- Valerie De Anda - Cuarted the rbims database of metabolism. 
-- Sahil Shah - Helped with function documentation.
-
+-   Mirna Vázquez Rosas Landa - wrote the code.
+-   Valerie De Anda - Cuarted the rbims database of metabolism.
+-   Sahil Shah - Helped with function documentation.
 
 ## References
 
