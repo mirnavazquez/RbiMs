@@ -169,12 +169,18 @@ heatmap_ko<-function(tibble_ko,
   } 
   
   # Order table -----------------------------------------------------------####
-  if(quo_is_null(order_x_enquo) == F || quo_is_null(order_y_enquo)== F ){
+  if(quo_is_null(order_x_enquo) == F && quo_is_null(order_y_enquo)== F ){
     sub_samp_ordered <- table_final[rownames(metabolism_order),]
     sub_samp_ordered_2 <- sub_samp_ordered[,rownames(experiment_order)]
   } 
+  if(quo_is_null(order_x_enquo) == T && quo_is_null(order_y_enquo)== F ){
+    sub_samp_ordered <- table_final[rownames(metabolism_order),]
+  }
+  if(quo_is_null(order_x_enquo) == F && quo_is_null(order_y_enquo)== T ){
+    sub_samp_ordered_2 <- table_final[,rownames(experiment_order)]
+  } 
   # Plot ------------------------------------------------------------------####
-  if(quo_is_null(order_x_enquo) == F || quo_is_null(order_y_enquo)== F ) {
+  if(quo_is_null(order_x_enquo) == F && quo_is_null(order_y_enquo)== F ) {
     plot_heat<-suppressWarnings(
       ComplexHeatmap::pheatmap(sub_samp_ordered_2, 
                                scale = scale_option,
@@ -192,7 +198,38 @@ heatmap_ko<-function(tibble_ko,
     )
   }
   # Plot ------------------------------------------------------------------####
-  if(quo_is_null(order_x_enquo) == T || quo_is_null(order_y_enquo)== T ) {
+  if(quo_is_null(order_x_enquo) == T && quo_is_null(order_y_enquo)== F ) {
+    plot_heat<-suppressWarnings(
+      ComplexHeatmap::pheatmap(sub_samp_ordered, 
+                               scale = scale_option,
+                               annotation_row = metabolism_order,
+                               cluster_rows = F,
+                               cluster_cols = T,
+                               row_split = split_y,
+                               main = "Pathway heatmap",
+                               fontsize=7,
+                               angle_col="0",
+                               col = color_pallet)
+    )
+  }
+  # Plot ------------------------------------------------------------------####
+  if(quo_is_null(order_x_enquo) == F && quo_is_null(order_y_enquo)== T ) {
+    plot_heat<-suppressWarnings(
+      ComplexHeatmap::pheatmap(sub_samp_ordered_2, 
+                               scale = scale_option,
+                               annotation_col = experiment_order,
+                               cluster_rows = T,
+                               cluster_cols = F,
+                               column_split = select(experiment_order, 
+                                                     {{order_x_enquo}}),
+                               main = "Pathway heatmap",
+                               fontsize=7,
+                               angle_col="0",
+                               col = color_pallet)
+    )
+  }
+  # Plot ------------------------------------------------------------------####
+  if(quo_is_null(order_x_enquo) == T && quo_is_null(order_y_enquo)== T ) {
     plot_heat<-suppressWarnings(ComplexHeatmap::pheatmap(table_final, 
                                                          scale = NULL,
                                                          cluster_rows = T,

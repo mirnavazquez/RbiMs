@@ -111,11 +111,11 @@
 <div id="quick-install" class="section level2">
 <h2 class="hasAnchor">
 <a href="#quick-install" class="anchor"></a>Quick install</h2>
+<p>We are actively developing rbims, so for now it is not available at CRAN or Bioconductor, however you can access to the development version from <a href="https://github.com/mirnavazquez/RbiMs">GitHub</a>.</p>
 <p>In R terminal:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html">requireNamespace</a></span><span class="op">(</span><span class="st">"BiocManager"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span>
-<span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html">install</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"KEGGREST"</span>, <span class="st">"devtools"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<p>And the development version from <a href="https://github.com/mirnavazquez/RbiMs">GitHub</a> with:</p>
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></code></pre></div>
+<p>If you are in a MAC system, you will need to download <a href="https://www.xquartz.org/">XQuartz</a>, you can read more about it <a href="https://stackoverflow.com/questions/38952427/include-cairo-r-on-a-mac">here</a>. As well if you are in ubuntu you need to install libcairo2-dev, you can read more about it <a href="https://stackoverflow.com/questions/51940792/r-cairo-package-installation-failed-in-ubuntu-18-04">here</a>.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/">devtools</a></span><span class="op">)</span>
 <span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"mirnavazquez/RbiMs"</span><span class="op">)</span>
@@ -129,6 +129,15 @@
 <div id="visit-the-website-for-more-detail" class="section level2">
 <h2 class="hasAnchor">
 <a href="#visit-the-website-for-more-detail" class="anchor"></a>Visit the <a href="https://mirnavazquez.github.io/RbiMs/">website</a> for more detail.</h2>
+</div>
+<div id="contributions" class="section level2">
+<h2 class="hasAnchor">
+<a href="#contributions" class="anchor"></a>Contributions</h2>
+<ul>
+<li>Mirna Vázquez Rosas Landa - wrote the code.</li>
+<li>Valerie De Anda - Cuarted the rbims database of metabolism.</li>
+<li>Sahil Shah - Helped with function documentation.</li>
+</ul>
 </div>
 <div id="references" class="section level2">
 <h2 class="hasAnchor">

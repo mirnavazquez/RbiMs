@@ -15,34 +15,60 @@ knitr::opts_chunk$set(
 )
 ```
 
+First load the rbims package.
+
 ```{r setup}
 library(rbims)
 ```
 
-The first thing to do would be read the kofamScan output and the
-metadata file. The metadata file is a tab-separated file containing the
-name of your bins and any extra information you would like to use for
+The second thing to do would be read the
+metadata file and the [KofamKOALA/KofamScan](https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/KEGG_bins.txt) output. The metadata file is a tab-separated file containing the name of your bins and any extra information you would like to use for
 visualization.
+
+# Read metadata
+
+The metadata file contains external information of each bin, like sample site or taxonomy. This information can be used in downstream analysis, the name of the bins at the first column is mandatory.
+
+The table can be read in a variety of formats (csv, tsv, txt, xlsx), you will just need to use the corresponding function to read the type of  file that you have. In this case, the example table of rbims is in excel format, therefore, to read the metadata we will use the function `read_excel` from the package `readxl`. You can download the metadata example file [metadata](https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/metadata.xlsx) and try.
 
 
 ```{r, eval=FALSE}
-ko_bin_table<-read_ko(data_kofam = "all.kofam.txt")
-metadata <-read.table("metadata.txt", sep = "\t")
+library(readxl)
+metadata<-read_excel("metadata.xlsx")
 ```
 
-Then map the KO to the rest of the features of the KEGG database and
-rbims database.
+If you followed the create KEGG profile tutorial you can go directly to case example of exploring and specific pathway.
+
+# Read the KEGG results
+
+```{r, eval=FALSE}
+ko_bin_table<-read_ko(data_kofam ="KEGG_bins.txt")
+```
+
+# Map to the KEGG database
+
+Then map the KO to the rest of the features of the KEGG and rbims database.
 
 ```{r, eval=FALSE}
 ko_bin_mapp<-mapping_ko(ko_bin_table)
 ```
+
+# Metabolism subsetting
+
+To explore the metabolism table rbims has three functions to subset the table:
+
+- [get_subset_pathway](https://mirnavazquez.github.io/RbiMs/reference/get_subset_pathway.html)
+- [get_subset_pca](https://mirnavazquez.github.io/RbiMs/reference/get_subset_pca.html)
+- [get_subset_unique](https://mirnavazquez.github.io/RbiMs/reference/get_subset_unique.html)
+
+# Example of exploring an specific KEGG pathway
 
 Let’s say that you are interested in the genes associated with the
 biofilm formation in Vibrio Cholerae.
 
 -   One first thing could be to create a vector containing the name of
     the KEGG pathway associated with the biofilm formation in Vibrio
-    Cholerae.
+    Cholerae [map05111](https://www.kegg.jp/pathway/map05111).
 
 ```{r}
 Biofilm_Vibrio<-c("map05111")
@@ -59,9 +85,9 @@ Biofilm_Vibrio_subset<-ko_bin_mapp%>%
 ```
 
 -   Now, let’s create a plot of presence and absence of the different KO
-    associated to that pathway. Besides presence and absence, it is
-    possible to plot abundance or the percentage of genes within certain
-    pathways (See ?plot\_bubble, calc argument).
+associated to that pathway. Besides presence and absence, it is
+possible to plot abundance or the percentage of genes within certain
+pathways (See ?plot\_bubble, calc argument).
     
 ```{r}
 plot_bubble(tibble_ko = Biofilm_Vibrio_subset,
@@ -74,7 +100,7 @@ plot_bubble(tibble_ko = Biofilm_Vibrio_subset,
             range_size = c(1,10)) 
 ```
 
-### Order axis
+## Order axis
 
 Let’s say that you want to order by bin names.
 
@@ -98,13 +124,84 @@ plot_bubble(tibble_ko = Biofilm_Vibrio_subset,
             range_size = c(5,6))
 ```
 
-You can also visualize the data with the a heatmap.
+-   The same way that we created a vector containing the KEGG pathway ID in which we are interested, we could create a vector with KOs IDs of interest or KEGG modules.
+
+Here I will extract the information of some KO related to Carbon fixation metabolism.
 
 ```{r}
-plot_heatmap(tibble_ko=Biofilm_Vibrio_subset, 
+Carbon_fixation<-c("K01007", "K00626", "K01902", "K01595", "K01903", "K00170", "K00169", "K00171", "K00172", "K00241")
+```
+
+-   Now, let’s extract the profile associated with that metabolic
+    pathway.
+
+```{r}
+library(tidyr)
+Carbon_fixation_subset<-ko_bin_mapp%>%
+  drop_na(KO) %>%
+  get_subset_pathway(KO, Carbon_fixation) 
+```
+
+We can visualize the data with the a [heatmap](https://mirnavazquez.github.io/RbiMs/reference/plot_heatmap.html).
+
+```{r}
+plot_heatmap(tibble_ko=Carbon_fixation_subset, 
              y_axis=Genes,
              analysis = "KEGG",
              calc="Binary")
+```
+
+## The calc argument
+
+In this example we will use the energy metabolism to explore the rest of the functions.
+
+- Create a vector with the metabolism of interest.
+
+```{r}
+Other_energy<-c("Fermentation", "Carbon fixation", "Methane metabolism", 
+                "Sulfur metabolism", "Nitrogen metabolism")
+```
+
+- Use get_subset_pathway to subset the table using the cycles and the information of the energy metabolism.
+
+```{r}
+Energy_metabolisms<-ko_bin_mapp %>%
+  drop_na(Cycle) %>%
+  get_subset_pathway(Cycle, Other_energy)
+```
+
+- Plot the information using the [plot_heatmap](https://mirnavazquez.github.io/RbiMs/reference/plot_heatmap.html) function.
+
+```{r}
+plot_heatmap(tibble_ko=Energy_metabolisms, 
+             y_axis=Pathway_cycle,
+             order_y = Cycle,
+             analysis = "KEGG",
+             calc="Percentage")
+```
+
+- The split argument allows to divide the rows according to certain value of the metadata. 
+
+```{r}
+plot_heatmap(tibble_ko=Energy_metabolisms, 
+             y_axis=Pathway_cycle,
+             order_y = Cycle,
+             split_y = TRUE,
+             analysis = "KEGG",
+             calc="Percentage")
+```
+
+- The order_x argument allows you to add annotation info from the metadata for the columns. 
+
+```{r}
+plot_heatmap(tibble_ko=Energy_metabolisms,
+             data_experiment = metadata,
+             y_axis=Pathway_cycle,
+             order_y = Cycle,
+             order_x = Clades,
+             split_y = TRUE,
+             analysis = "KEGG",
+             calc="Percentage")
 ```
 
 

@@ -110,25 +110,56 @@
 
     
     
+<p>First load the rbims package.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/mirnavazquez/RbiMs">rbims</a></span><span class="op">)</span></code></pre></div>
-<p>The first thing to do would be read the kofamScan output and the metadata file. The metadata file is a tab-separated file containing the name of your bins and any extra information you would like to use for visualization.</p>
+<p>The second thing to do would be read the metadata file and the <a href="https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/KEGG_bins.txt">KofamKOALA/KofamScan</a> output. The metadata file is a tab-separated file containing the name of your bins and any extra information you would like to use for visualization.</p>
+<div id="read-metadata" class="section level1">
+<h1 class="hasAnchor">
+<a href="#read-metadata" class="anchor"></a>Read metadata</h1>
+<p>The metadata file contains external information of each bin, like sample site or taxonomy. This information can be used in downstream analysis, the name of the bins at the first column is mandatory.</p>
+<p>The table can be read in a variety of formats (csv, tsv, txt, xlsx), you will just need to use the corresponding function to read the type of file that you have. In this case, the example table of rbims is in excel format, therefore, to read the metadata we will use the function <code>read_excel</code> from the package <code>readxl</code>. You can download the metadata example file <a href="https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/metadata.xlsx">metadata</a> and try.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">ko_bin_table</span><span class="op">&lt;-</span><span class="fu"><a href="../reference/read_ko.html">read_ko</a></span><span class="op">(</span>data_kofam <span class="op">=</span> <span class="st">"all.kofam.txt"</span><span class="op">)</span>
-<span class="va">metadata</span> <span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.table</a></span><span class="op">(</span><span class="st">"metadata.txt"</span>, sep <span class="op">=</span> <span class="st">"\t"</span><span class="op">)</span></code></pre></div>
-<p>Then map the KO to the rest of the features of the KEGG database and rbims database.</p>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readxl.tidyverse.org">readxl</a></span><span class="op">)</span>
+<span class="va">metadata</span><span class="op">&lt;-</span><span class="fu"><a href="https://readxl.tidyverse.org/reference/read_excel.html">read_excel</a></span><span class="op">(</span><span class="st">"metadata.xlsx"</span><span class="op">)</span></code></pre></div>
+<p>If you followed the create KEGG profile tutorial you can go directly to case example of exploring and specific pathway.</p>
+</div>
+<div id="read-the-kegg-results" class="section level1">
+<h1 class="hasAnchor">
+<a href="#read-the-kegg-results" class="anchor"></a>Read the KEGG results</h1>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">ko_bin_table</span><span class="op">&lt;-</span><span class="fu"><a href="../reference/read_ko.html">read_ko</a></span><span class="op">(</span>data_kofam <span class="op">=</span><span class="st">"KEGG_bins.txt"</span><span class="op">)</span></code></pre></div>
+</div>
+<div id="map-to-the-kegg-database" class="section level1">
+<h1 class="hasAnchor">
+<a href="#map-to-the-kegg-database" class="anchor"></a>Map to the KEGG database</h1>
+<p>Then map the KO to the rest of the features of the KEGG and rbims database.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">ko_bin_mapp</span><span class="op">&lt;-</span><span class="fu"><a href="../reference/mapping_ko.html">mapping_ko</a></span><span class="op">(</span><span class="va">ko_bin_table</span><span class="op">)</span></code></pre></div>
+</div>
+<div id="metabolism-subsetting" class="section level1">
+<h1 class="hasAnchor">
+<a href="#metabolism-subsetting" class="anchor"></a>Metabolism subsetting</h1>
+<p>To explore the metabolism table rbims has three functions to subset the table:</p>
+<ul>
+<li><a href="https://mirnavazquez.github.io/RbiMs/reference/get_subset_pathway.html">get_subset_pathway</a></li>
+<li><a href="https://mirnavazquez.github.io/RbiMs/reference/get_subset_pca.html">get_subset_pca</a></li>
+<li><a href="https://mirnavazquez.github.io/RbiMs/reference/get_subset_unique.html">get_subset_unique</a></li>
+</ul>
+</div>
+<div id="example-of-exploring-an-specific-kegg-pathway" class="section level1">
+<h1 class="hasAnchor">
+<a href="#example-of-exploring-an-specific-kegg-pathway" class="anchor"></a>Example of exploring an specific KEGG pathway</h1>
 <p>Let’s say that you are interested in the genes associated with the biofilm formation in Vibrio Cholerae.</p>
 <ul>
-<li>One first thing could be to create a vector containing the name of the KEGG pathway associated with the biofilm formation in Vibrio Cholerae.</li>
+<li>One first thing could be to create a vector containing the name of the KEGG pathway associated with the biofilm formation in Vibrio Cholerae <a href="https://www.kegg.jp/pathway/map05111">map05111</a>.</li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">Biofilm_Vibrio</span><span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"map05111"</span><span class="op">)</span></code></pre></div>
 <ul>
 <li>Now, let’s extract the profile associated with that metabolic pathway.</li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyr.tidyverse.org">tidyr</a></span><span class="op">)</span>
 <span class="va">Biofilm_Vibrio_subset</span><span class="op">&lt;-</span><span class="va">ko_bin_mapp</span><span class="op">%&gt;%</span>
   <span class="fu"><a href="https://tidyr.tidyverse.org/reference/drop_na.html">drop_na</a></span><span class="op">(</span><span class="va">Pathway</span><span class="op">)</span> <span class="op">%&gt;%</span>
@@ -136,7 +167,7 @@
 <ul>
 <li>Now, let’s create a plot of presence and absence of the different KO associated to that pathway. Besides presence and absence, it is possible to plot abundance or the percentage of genes within certain pathways (See ?plot_bubble, calc argument).</li>
 </ul>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/plot_bubble.html">plot_bubble</a></span><span class="op">(</span>tibble_ko <span class="op">=</span> <span class="va">Biofilm_Vibrio_subset</span>,
             x_axis <span class="op">=</span> <span class="va">Bin_name</span>, 
             y_axis <span class="op">=</span> <span class="va">KO</span>,
@@ -146,20 +177,20 @@
             color_character <span class="op">=</span> <span class="va">Order</span>,
             range_size <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">10</span><span class="op">)</span><span class="op">)</span> 
 <span class="co">#&gt; Warning: Removed 66 rows containing missing values (geom_point).</span></code></pre></div>
-<p><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-6-1.png" width="672"></p>
-<div id="order-axis" class="section level3">
-<h3 class="hasAnchor">
-<a href="#order-axis" class="anchor"></a>Order axis</h3>
+<p><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-7-1.png" width="672"></p>
+<div id="order-axis" class="section level2">
+<h2 class="hasAnchor">
+<a href="#order-axis" class="anchor"></a>Order axis</h2>
 <p>Let’s say that you want to order by bin names.</p>
 <ul>
 <li>Create a vector containing the order.</li>
 </ul>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">order_taxa</span><span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Bin_1"</span>, <span class="st">"Bin_2"</span>, <span class="st">"Bin_10"</span>, <span class="st">"Bin_113"</span>, <span class="st">"Bin_12"</span>, <span class="st">"Bin_56"</span><span class="op">)</span></code></pre></div>
 <ul>
 <li>Now plot, using the order_bins argument.</li>
 </ul>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/plot_bubble.html">plot_bubble</a></span><span class="op">(</span>tibble_ko <span class="op">=</span> <span class="va">Biofilm_Vibrio_subset</span>,
             data_experiment <span class="op">=</span> <span class="va">metadata</span>,
             x_axis <span class="op">=</span> <span class="va">Bin_name</span>,
@@ -170,20 +201,89 @@
             color_character<span class="op">=</span><span class="va">Genus</span>,
             range_size <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5</span>,<span class="fl">6</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt; Warning: Removed 66 rows containing missing values (geom_point).</span></code></pre></div>
-<p><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-8-1.png" width="672"></p>
-<p>You can also visualize the data with the a heatmap.</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/plot_heatmap.html">plot_heatmap</a></span><span class="op">(</span>tibble_ko<span class="op">=</span><span class="va">Biofilm_Vibrio_subset</span>, 
+<p><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-9-1.png" width="672"></p>
+<ul>
+<li>The same way that we created a vector containing the KEGG pathway ID in which we are interested, we could create a vector with KOs IDs of interest or KEGG modules.</li>
+</ul>
+<p>Here I will extract the information of some KO related to Carbon fixation metabolism.</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">Carbon_fixation</span><span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"K01007"</span>, <span class="st">"K00626"</span>, <span class="st">"K01902"</span>, <span class="st">"K01595"</span>, <span class="st">"K01903"</span>, <span class="st">"K00170"</span>, <span class="st">"K00169"</span>, <span class="st">"K00171"</span>, <span class="st">"K00172"</span>, <span class="st">"K00241"</span><span class="op">)</span></code></pre></div>
+<ul>
+<li>Now, let’s extract the profile associated with that metabolic pathway.</li>
+</ul>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyr.tidyverse.org">tidyr</a></span><span class="op">)</span>
+<span class="va">Carbon_fixation_subset</span><span class="op">&lt;-</span><span class="va">ko_bin_mapp</span><span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/drop_na.html">drop_na</a></span><span class="op">(</span><span class="va">KO</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="../reference/get_subset_pathway.html">get_subset_pathway</a></span><span class="op">(</span><span class="va">KO</span>, <span class="va">Carbon_fixation</span><span class="op">)</span> </code></pre></div>
+<p>We can visualize the data with the a <a href="https://mirnavazquez.github.io/RbiMs/reference/plot_heatmap.html">heatmap</a>.</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/plot_heatmap.html">plot_heatmap</a></span><span class="op">(</span>tibble_ko<span class="op">=</span><span class="va">Carbon_fixation_subset</span>, 
              y_axis<span class="op">=</span><span class="va">Genes</span>,
              analysis <span class="op">=</span> <span class="st">"KEGG"</span>,
              calc<span class="op">=</span><span class="st">"Binary"</span><span class="op">)</span></code></pre></div>
-<p><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-9-1.png" width="672"></p>
+<p><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-12-1.png" width="672"></p>
+</div>
+<div id="the-calc-argument" class="section level2">
+<h2 class="hasAnchor">
+<a href="#the-calc-argument" class="anchor"></a>The calc argument</h2>
+<p>In this example we will use the energy metabolism to explore the rest of the functions.</p>
+<ul>
+<li>Create a vector with the metabolism of interest.</li>
+</ul>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">Other_energy</span><span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Fermentation"</span>, <span class="st">"Carbon fixation"</span>, <span class="st">"Methane metabolism"</span>, 
+                <span class="st">"Sulfur metabolism"</span>, <span class="st">"Nitrogen metabolism"</span><span class="op">)</span></code></pre></div>
+<ul>
+<li>Use get_subset_pathway to subset the table using the cycles and the information of the energy metabolism.</li>
+</ul>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">Energy_metabolisms</span><span class="op">&lt;-</span><span class="va">ko_bin_mapp</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/drop_na.html">drop_na</a></span><span class="op">(</span><span class="va">Cycle</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="../reference/get_subset_pathway.html">get_subset_pathway</a></span><span class="op">(</span><span class="va">Cycle</span>, <span class="va">Other_energy</span><span class="op">)</span></code></pre></div>
+<ul>
+<li>Plot the information using the <a href="https://mirnavazquez.github.io/RbiMs/reference/plot_heatmap.html">plot_heatmap</a> function.</li>
+</ul>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/plot_heatmap.html">plot_heatmap</a></span><span class="op">(</span>tibble_ko<span class="op">=</span><span class="va">Energy_metabolisms</span>, 
+             y_axis<span class="op">=</span><span class="va">Pathway_cycle</span>,
+             order_y <span class="op">=</span> <span class="va">Cycle</span>,
+             analysis <span class="op">=</span> <span class="st">"KEGG"</span>,
+             calc<span class="op">=</span><span class="st">"Percentage"</span><span class="op">)</span></code></pre></div>
+<p><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-15-1.png" width="672"></p>
+<ul>
+<li>The split argument allows to divide the rows according to certain value of the metadata.</li>
+</ul>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/plot_heatmap.html">plot_heatmap</a></span><span class="op">(</span>tibble_ko<span class="op">=</span><span class="va">Energy_metabolisms</span>, 
+             y_axis<span class="op">=</span><span class="va">Pathway_cycle</span>,
+             order_y <span class="op">=</span> <span class="va">Cycle</span>,
+             split_y <span class="op">=</span> <span class="cn">TRUE</span>,
+             analysis <span class="op">=</span> <span class="st">"KEGG"</span>,
+             calc<span class="op">=</span><span class="st">"Percentage"</span><span class="op">)</span></code></pre></div>
+<p><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-16-1.png" width="672"></p>
+<ul>
+<li>The order_x argument allows you to add annotation info from the metadata for the columns.</li>
+</ul>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/plot_heatmap.html">plot_heatmap</a></span><span class="op">(</span>tibble_ko<span class="op">=</span><span class="va">Energy_metabolisms</span>,
+             data_experiment <span class="op">=</span> <span class="va">metadata</span>,
+             y_axis<span class="op">=</span><span class="va">Pathway_cycle</span>,
+             order_y <span class="op">=</span> <span class="va">Cycle</span>,
+             order_x <span class="op">=</span> <span class="va">Clades</span>,
+             split_y <span class="op">=</span> <span class="cn">TRUE</span>,
+             analysis <span class="op">=</span> <span class="st">"KEGG"</span>,
+             calc<span class="op">=</span><span class="st">"Percentage"</span><span class="op">)</span></code></pre></div>
+<p><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-17-1.png" width="672"></p>
+</div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-      </div>
+        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
+    </nav>
+</div>
 
 </div>
 
