@@ -37,6 +37,10 @@ library(readxl)
 metadata<-read_excel("metadata.xlsx")
 ```
 
+```{r}
+head(metadata)
+```
+
 If you followed the create KEGG profile tutorial you can go directly to case example of exploring and specific pathway.
 
 # Read the KEGG results
@@ -82,6 +86,10 @@ library(tidyr)
 Biofilm_Vibrio_subset<-ko_bin_mapp%>%
   drop_na(Pathway) %>%
   get_subset_pathway(Pathway, Biofilm_Vibrio) 
+```
+
+```{r}
+head(Biofilm_Vibrio_subset)
 ```
 
 -   Now, let’s create a plot of presence and absence of the different KO
@@ -142,6 +150,10 @@ Carbon_fixation_subset<-ko_bin_mapp%>%
   get_subset_pathway(KO, Carbon_fixation) 
 ```
 
+```{r}
+head(Carbon_fixation_subset)
+```
+
 We can visualize the data with the a [heatmap](https://mirnavazquez.github.io/RbiMs/reference/plot_heatmap.html).
 
 ```{r}
@@ -168,6 +180,10 @@ Other_energy<-c("Fermentation", "Carbon fixation", "Methane metabolism",
 Energy_metabolisms<-ko_bin_mapp %>%
   drop_na(Cycle) %>%
   get_subset_pathway(Cycle, Other_energy)
+```
+
+```{r}
+head(Energy_metabolisms)
 ```
 
 - Plot the information using the [plot_heatmap](https://mirnavazquez.github.io/RbiMs/reference/plot_heatmap.html) function.
