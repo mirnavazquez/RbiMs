@@ -110,14 +110,17 @@
 
     
     
+<p>First, load the rbims package.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/mirnavazquez/RbiMs">rbims</a></span><span class="op">)</span></code></pre></div>
-<p>In this example we will explore the PFAM data within the InterProScan output.</p>
+<div id="example-with-pfam-database" class="section level1">
+<h1 class="hasAnchor">
+<a href="#example-with-pfam-database" class="anchor"></a>Example with PFAM database</h1>
 <p>First I will read the InterProScan output in a long format and extract the PFAM abundance information.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">interpro_pfam_long</span><span class="op">&lt;-</span><span class="fu"><a href="../reference/read_interpro.html">read_interpro</a></span><span class="op">(</span><span class="st">"Interpro_test.tsv"</span>, database<span class="op">=</span><span class="st">"PFAM"</span>, profile <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></code></pre></div>
-<p>You can use the subsetting functions to create subsets. Here we are going to extract the most important PFAMs, we need to use as input the not profile output from read_interpro.</p>
-<p>The function <code>get_subset_pca</code> calculates a PCA over the data to find the PFAM that better explain variation within the data.</p>
+<code class="sourceCode R"><span class="va">interpro_pfam_long</span><span class="op">&lt;-</span><span class="fu"><a href="../reference/read_interpro.html">read_interpro</a></span><span class="op">(</span>data_interpro <span class="op">=</span> <span class="st">"Interpro_test.tsv"</span>, database<span class="op">=</span><span class="st">"PFAM"</span>, profile <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></code></pre></div>
+<p>You can use the <a href="https://mirnavazquez.github.io/RbiMs/articles/Explore_KEGG_profile.html#metabolism-subsetting-1">subsetting functions</a> to create subsets of the InterPro profile table. Here we will extract the most important PFAMs, and we need to use them as input the not profile output from read_interpro.</p>
+<p>The function <a href="https://mirnavazquez.github.io/RbiMs/reference/get_subset_pca.html">get_subset_pca</a> calculates a PCA over the data to find the PFAM that explains variation within the data.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">important_PFAMs</span><span class="op">&lt;-</span><span class="fu"><a href="../reference/get_subset_pca.html">get_subset_pca</a></span><span class="op">(</span>tibble_rbims<span class="op">=</span><span class="va">interpro_pfam_profile</span>, 
                cos2_val<span class="op">=</span><span class="fl">0.95</span>,
@@ -135,25 +138,125 @@
 <span class="co">#&gt; 4 PF16078 2-oxoglutarate dehydrogenase…      0      0      0       1     1     0</span>
 <span class="co">#&gt; 5 PF00676 Dehydrogenase E1 component         0      0      0       1     1     0</span>
 <span class="co">#&gt; 6 PF02779 Transketolase, pyrimidine bi…      0      0      0       1     1     0</span></code></pre></div>
-<p>Lets plot the results.</p>
-<p><strong>plot_heatmap</strong> can help to explore the results. We can perform two types of analysis, if we set the distance option as <strong>TRUE</strong> we can get a plot to show how the samples could cluster based on the protein domains.</p>
+<div id="the-distance-argument" class="section level2">
+<h2 class="hasAnchor">
+<a href="#the-distance-argument" class="anchor"></a>The distance argument</h2>
+<p>Let’s plot the results.</p>
+<p><a href="https://mirnavazquez.github.io/RbiMs/reference/plot_heatmap.html">plot_heatmap</a> can help to explore the results. We can perform two types of analysis; if we set the distance option as <strong>TRUE</strong>, we can plot to show how the samples could cluster based on the protein domains.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/plot_heatmap.html">plot_heatmap</a></span><span class="op">(</span><span class="va">important_PFAMs</span>, y_axis<span class="op">=</span><span class="va">PFAM</span>, analysis <span class="op">=</span> <span class="st">"INTERPRO"</span>, distance <span class="op">=</span> <span class="cn">T</span><span class="op">)</span></code></pre></div>
 <p><img src="Explore_InterProScan_profile_files/figure-html/unnamed-chunk-5-1.png" width="672"></p>
-<p>If we set that to <strong>FALSE</strong> we observed the presence and absence of the domains across the genome samples.</p>
+<p>If we set that to <strong>FALSE</strong>, we observed the presence and absence of the domains across the genome samples.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/plot_heatmap.html">plot_heatmap</a></span><span class="op">(</span><span class="va">important_PFAMs</span>, y_axis<span class="op">=</span><span class="va">PFAM</span>, analysis <span class="op">=</span> <span class="st">"INTERPRO"</span>, distance <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></code></pre></div>
 <p><img src="Explore_InterProScan_profile_files/figure-html/unnamed-chunk-6-1.png" width="672"></p>
-<p>We can also visualize using a bubble plot.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/plot_bubble.html">plot_bubble</a></span><span class="op">(</span><span class="va">important_PFAMs</span>, y_axis<span class="op">=</span><span class="va">PFAM</span>, x_axis<span class="op">=</span><span class="va">Bin_name</span>, analysis <span class="op">=</span> <span class="st">"INTERPRO"</span>, data_experiment <span class="op">=</span> <span class="va">metadata</span>, color_character <span class="op">=</span> <span class="va">Clades</span><span class="op">)</span>
-<span class="co">#&gt; Warning: Removed 64 rows containing missing values (geom_point).</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="../reference/plot_heatmap.html">plot_heatmap</a></span><span class="op">(</span><span class="va">important_PFAMs</span>, y_axis<span class="op">=</span><span class="va">PFAM</span>, analysis <span class="op">=</span> <span class="st">"INTERPRO"</span>, distance <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></code></pre></div>
 <p><img src="Explore_InterProScan_profile_files/figure-html/unnamed-chunk-7-1.png" width="672"></p>
+<p>We can also visualize using a bubble plot.</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/plot_bubble.html">plot_bubble</a></span><span class="op">(</span><span class="va">important_PFAMs</span>, 
+            y_axis<span class="op">=</span><span class="va">PFAM</span>, 
+            x_axis<span class="op">=</span><span class="va">Bin_name</span>, 
+            analysis <span class="op">=</span> <span class="st">"INTERPRO"</span>, 
+            data_experiment <span class="op">=</span> <span class="va">metadata</span>, 
+            color_character <span class="op">=</span> <span class="va">Clades</span><span class="op">)</span>
+<span class="co">#&gt; Warning: Removed 64 rows containing missing values (geom_point).</span></code></pre></div>
+<p><img src="Explore_InterProScan_profile_files/figure-html/unnamed-chunk-8-1.png" width="672"></p>
+</div>
+</div>
+<div id="example-the-interpro-database" class="section level1">
+<h1 class="hasAnchor">
+<a href="#example-the-interpro-database" class="anchor"></a>Example the INTERPRO database</h1>
+<p>First I will read the InterProScan output in a wide format and extract the PFAM abundance information.</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">interpro_INTERPRO_profile</span><span class="op">&lt;-</span><span class="fu"><a href="../reference/read_interpro.html">read_interpro</a></span><span class="op">(</span>data_interpro <span class="op">=</span> <span class="st">"Interpro_test.tsv"</span>, database<span class="op">=</span><span class="st">"INTERPRO"</span>, profile <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">interpro_INTERPRO_profile</span><span class="op">)</span></code></pre></div>
+<p>We are going to look for the InterProScan IDs that conform the <code>DNA topoisomerase 1</code>. For that we will create a vector of the IDs associated to that enzyme.</p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">DNA_topoisomerase_1</span><span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"IPR013497"</span>, <span class="st">"IPR023406"</span>, <span class="st">"IPR013824"</span><span class="op">)</span></code></pre></div>
+<p>With the function <a href="https://mirnavazquez.github.io/RbiMs/reference/get_subset_pathway.html">get_subset_pathway</a> we can crate a subset of the INTERPRO table.</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">DNA_tipo_INTERPRO</span><span class="op">&lt;-</span><span class="fu"><a href="../reference/get_subset_pathway.html">get_subset_pathway</a></span><span class="op">(</span><span class="va">interpro_INTERPRO_profile</span>, type_of_interest_feature<span class="op">=</span><span class="va">INTERPRO</span>,
+                   interest_feature<span class="op">=</span><span class="va">DNA_topoisomerase_1</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">DNA_tipo_INTERPRO</span><span class="op">)</span>
+<span class="co">#&gt; # A tibble: 3 x 8</span>
+<span class="co">#&gt;   INTERPRO  domain_name                 Bin_10 Bin_12 Bin_56 Bin_113 Bin_1 Bin_2</span>
+<span class="co">#&gt;   &lt;chr&gt;     &lt;chr&gt;                        &lt;int&gt;  &lt;int&gt;  &lt;int&gt;   &lt;int&gt; &lt;int&gt; &lt;int&gt;</span>
+<span class="co">#&gt; 1 IPR013497 DNA topoisomerase, type IA…      1      0      0       0     0     1</span>
+<span class="co">#&gt; 2 IPR023406 DNA topoisomerase, type IA…      1      0      0       0     0     1</span>
+<span class="co">#&gt; 3 IPR013824 DNA topoisomerase, type IA…      1      0      0       0     0     1</span></code></pre></div>
+<p>We can create a bubble plot to visualize the distribution of these enzymes across the bins.</p>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/plot_bubble.html">plot_bubble</a></span><span class="op">(</span><span class="va">DNA_tipo_INTERPRO</span>, 
+            y_axis<span class="op">=</span><span class="va">INTERPRO</span>,
+            x_axis<span class="op">=</span><span class="va">Bin_name</span>,
+            analysis <span class="op">=</span> <span class="st">"INTERPRO"</span>, 
+            data_experiment <span class="op">=</span> <span class="va">metadata</span>, 
+            color_character <span class="op">=</span> <span class="va">Sample_site</span><span class="op">)</span>
+<span class="co">#&gt; Warning: Removed 12 rows containing missing values (geom_point).</span></code></pre></div>
+<p><img src="Explore_InterProScan_profile_files/figure-html/unnamed-chunk-14-1.png" width="672"></p>
+</div>
+<div id="example-the-kegg-database" class="section level1">
+<h1 class="hasAnchor">
+<a href="#example-the-kegg-database" class="anchor"></a>Example the KEGG database</h1>
+<p>First, I will read the InterProScan output in a long format and extract the KEGG information. When you use the <code>KEGG</code> option, the profile option is disabled.</p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">interpro_KEGG_long</span><span class="op">&lt;-</span><span class="fu"><a href="../reference/read_interpro.html">read_interpro</a></span><span class="op">(</span>data_interpro <span class="op">=</span> <span class="st">"Interpro_test.tsv"</span>, database<span class="op">=</span><span class="st">"KEGG"</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">interpro_KEGG_long</span><span class="op">)</span>
+<span class="co">#&gt; # A tibble: 6 x 3</span>
+<span class="co">#&gt;   Scaffold_full_name         Pathway  Enzyme     </span>
+<span class="co">#&gt;   &lt;chr&gt;                      &lt;chr&gt;    &lt;chr&gt;      </span>
+<span class="co">#&gt; 1 Bin_113-scaffold_66_c1_109 map00261 ec:4.3.3.7 </span>
+<span class="co">#&gt; 2 Bin_113-scaffold_66_c1_109 map00300 ec:4.3.3.7 </span>
+<span class="co">#&gt; 3 Bin_1-scaffold_21_c1_109   map00261 ec:4.3.3.7 </span>
+<span class="co">#&gt; 4 Bin_1-scaffold_21_c1_109   map00300 ec:4.3.3.7 </span>
+<span class="co">#&gt; 5 Bin_2-scaffold_3_c1_159    map00010 ec:4.1.1.49</span>
+<span class="co">#&gt; 6 Bin_2-scaffold_3_c1_159    map00020 ec:4.1.1.49</span></code></pre></div>
+<div id="mapping-interpro-to-kegg-database" class="section level2">
+<h2 class="hasAnchor">
+<a href="#mapping-interpro-to-kegg-database" class="anchor"></a>Mapping INTERPRO to KEGG database</h2>
+<p>We can use the <a href="https://mirnavazquez.github.io/RbiMs/reference/mapping_ko.html">mapping_ko</a> function here to get the extended KEGG table.</p>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">interpro_map</span><span class="op">&lt;-</span><span class="fu"><a href="../reference/mapping_ko.html">mapping_ko</a></span><span class="op">(</span>tibble_interpro <span class="op">=</span> <span class="va">interpro_KEGG_long</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">interpro_map</span><span class="op">)</span>
+<span class="co">#&gt; # A tibble: 6 x 19</span>
+<span class="co">#&gt;   Module Module_description        Pathway Pathway_descript… Cycle Pathway_cycle</span>
+<span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;                     &lt;chr&gt;   &lt;chr&gt;             &lt;chr&gt; &lt;chr&gt;        </span>
+<span class="co">#&gt; 1 M00016 Lysine biosynthesis, suc… map002… Monobactam biosy… &lt;NA&gt;  &lt;NA&gt;         </span>
+<span class="co">#&gt; 2 M00525 Lysine biosynthesis, ace… map002… Monobactam biosy… &lt;NA&gt;  &lt;NA&gt;         </span>
+<span class="co">#&gt; 3 M00526 Lysine biosynthesis, DAP… map002… Monobactam biosy… &lt;NA&gt;  &lt;NA&gt;         </span>
+<span class="co">#&gt; 4 M00527 Lysine biosynthesis, DAP… map002… Monobactam biosy… &lt;NA&gt;  &lt;NA&gt;         </span>
+<span class="co">#&gt; 5 M00016 Lysine biosynthesis, suc… map003… Lysine biosynthe… &lt;NA&gt;  &lt;NA&gt;         </span>
+<span class="co">#&gt; 6 M00525 Lysine biosynthesis, ace… map003… Lysine biosynthe… &lt;NA&gt;  &lt;NA&gt;         </span>
+<span class="co">#&gt; # … with 13 more variables: Detail_cycle &lt;chr&gt;, Genes &lt;chr&gt;,</span>
+<span class="co">#&gt; #   Gene_description &lt;chr&gt;, Enzyme &lt;chr&gt;, KO &lt;chr&gt;, rbims_pathway &lt;chr&gt;,</span>
+<span class="co">#&gt; #   rbims_sub_pathway &lt;chr&gt;, Bin_113 &lt;int&gt;, Bin_1 &lt;int&gt;, Bin_2 &lt;int&gt;,</span>
+<span class="co">#&gt; #   Bin_10 &lt;int&gt;, Bin_56 &lt;int&gt;, Bin_12 &lt;int&gt;</span></code></pre></div>
+<p>We can plot all the KOs and the Modules to which they belong. An important thing here is that we will set <code>analysis = "KEGG"</code> despite this workflow started with the InterProScan output in analysis.</p>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/plot_heatmap.html">plot_heatmap</a></span><span class="op">(</span>tibble_ko<span class="op">=</span><span class="va">interpro_map</span>,
+             data_experiment <span class="op">=</span> <span class="va">metadata</span>,
+             y_axis<span class="op">=</span><span class="va">KO</span>,
+             order_y <span class="op">=</span> <span class="va">Module</span>,
+             order_x <span class="op">=</span> <span class="va">Sample_site</span>,
+             split_y <span class="op">=</span> <span class="cn">TRUE</span>,
+             analysis <span class="op">=</span> <span class="st">"KEGG"</span>,
+             calc<span class="op">=</span><span class="st">"Percentage"</span><span class="op">)</span></code></pre></div>
+<p><img src="Explore_InterProScan_profile_files/figure-html/unnamed-chunk-19-1.png" width="672"></p>
+</div>
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-      </div>
+        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
+    </nav>
+</div>
 
 </div>
 

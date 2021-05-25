@@ -110,15 +110,18 @@
 
     
     
-<p>A common practice to get other annotations of genomes and reconstructed genomes is to use <a href="https://interproscan-docs.readthedocs.io/en/latest/">InterProScan</a>. Here are some functions to explore that information.</p>
-<p>The function to use that information is <code>read_interpro</code>. This functio can parse the information of the PFAM, INTEPRO and KEGG ids. The KEGG analysis is just possible if <a href="https://interproscan-docs.readthedocs.io/en/latest/">InterProScan</a> was run with the -pa option. As well tow output options are possible a wide profile or a long table.</p>
-<ul>
-<li><p>The <code>database</code> argumen indicate which database will be parse, in this example I will explore the PFAM output.</p></li>
-<li><p>The output format is control with the <code>profile</code> argument. When <strong>profile = T</strong> then a wide output is obtained.</p></li>
-</ul>
+<p>A common practice to annotate the genes of a new genome or reconstructed genome is to use <a href="https://interproscan-docs.readthedocs.io/en/latest/">InterProScan</a>. Here are some functions to explore that information.</p>
+<p>First, load the rbims package.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">interpro_pfam_profile</span><span class="op">&lt;-</span><span class="fu"><a href="../reference/read_interpro.html">read_interpro</a></span><span class="op">(</span><span class="st">"Interpro_test.tsv"</span>, database<span class="op">=</span><span class="st">"PFAM"</span>, profile <span class="op">=</span> <span class="cn">T</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/mirnavazquez/RbiMs">rbims</a></span><span class="op">)</span></code></pre></div>
+<p>The function to use that information is <code>read_interpro</code>. This function can parse the information of the PFAM, INTERPRO, and KEGG ids. The KEGG analysis is just possible if <a href="https://interproscan-docs.readthedocs.io/en/latest/">InterProScan</a> was run with the -pa option. As well tow output options are possible a wide profile or a long table.</p>
+<ul>
+<li><p>The <code>database</code> argument will parse the database. In this example, I will explore the PFAM output.</p></li>
+<li><p>The output format is chosen with the <code>profile</code> argument. When <strong>profile = T</strong>, then a wide output is obtained.</p></li>
+</ul>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">interpro_pfam_profile</span><span class="op">&lt;-</span><span class="fu"><a href="../reference/read_interpro.html">read_interpro</a></span><span class="op">(</span>data_interpro <span class="op">=</span> <span class="st">"Interpro_test.tsv"</span>, database<span class="op">=</span><span class="st">"PFAM"</span>, profile <span class="op">=</span> <span class="cn">T</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">interpro_pfam_profile</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 6 x 8</span>
 <span class="co">#&gt;   PFAM    domain_name                   Bin_10 Bin_12 Bin_56 Bin_113 Bin_1 Bin_2</span>
@@ -130,9 +133,9 @@
 <span class="co">#&gt; 5 PF08272 Topoisomerase I zinc-ribbon-…      1      0      0       0     0     1</span>
 <span class="co">#&gt; 6 PF01751 Toprim domain                      1      0      0       0     0     1</span></code></pre></div>
 <p>Or print a long table <strong>profile = F</strong>.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">interpro_pfam_long</span><span class="op">&lt;-</span><span class="fu"><a href="../reference/read_interpro.html">read_interpro</a></span><span class="op">(</span><span class="st">"Interpro_test.tsv"</span>, database<span class="op">=</span><span class="st">"PFAM"</span>, profile <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></code></pre></div>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">interpro_pfam_long</span><span class="op">&lt;-</span><span class="fu"><a href="../reference/read_interpro.html">read_interpro</a></span><span class="op">(</span><span class="st">"Interpro_test.tsv"</span>, database<span class="op">=</span><span class="st">"PFAM"</span>, profile <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">interpro_pfam_long</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 6 x 5</span>
 <span class="co">#&gt;   Bin_name Scaffold_name     PFAM    domain_name                       Abundance</span>
@@ -143,6 +146,9 @@
 <span class="co">#&gt; 4 Bin_113  scaffold_145_c1_… PF00440 Bacterial regulatory proteins, t…         1</span>
 <span class="co">#&gt; 5 Bin_113  scaffold_145_c1_… PF13305 WHG domain                                1</span>
 <span class="co">#&gt; 6 Bin_1    scaffold_146_c1_1 PF00440 Bacterial regulatory proteins, t…         1</span></code></pre></div>
+<p>You can export this table in a table like this.</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/write.table.html">write.table</a></span><span class="op">(</span><span class="va">interpro_pfam_long</span>, <span class="st">"Interpro.tsv"</span>, quote <span class="op">=</span> <span class="cn">F</span>, sep <span class="op">=</span> <span class="st">"\t"</span>, row.names <span class="op">=</span> <span class="cn">F</span>, col.names <span class="op">=</span> <span class="cn">T</span><span class="op">)</span></code></pre></div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

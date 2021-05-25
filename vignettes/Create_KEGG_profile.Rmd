@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-First load the rbims package.
+First, load the rbims package.
 
 ```{r setup}
 library(rbims)
