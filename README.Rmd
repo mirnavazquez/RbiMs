@@ -52,7 +52,7 @@ library(rbims)
 ## Contributions
 
 - Mirna Vázquez Rosas Landa - wrote the code. 
-- Valerie De Anda - Cuarted the rbims database of metabolism. 
+- Valerie De Anda and Pedro Leão  - Cuarted the rbims database of metabolism. 
 - Sahil Shah - Helped with function documentation.
 
 
