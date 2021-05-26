@@ -59,7 +59,7 @@ heatmap_domain<-function(tibble_ko,
   }
   # Plot ------------------------------------------------------------------####
   plot_heat<-pheatmap::pheatmap(heatmap_domain_table, 
-                                angle_col="0", 
+                                angle_col="45", 
                                 scale = scale_option,
                                 main = "Protein domain heatmap",
                                 col = color_pallet,
