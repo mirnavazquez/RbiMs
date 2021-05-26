@@ -224,7 +224,7 @@ heatmap_ko<-function(tibble_ko,
                                                      {{order_x_enquo}}),
                                main = "Pathway heatmap",
                                fontsize=7,
-                               angle_col="0",
+                               angle_col="45",
                                col = color_pallet)
     )
   }
@@ -236,7 +236,7 @@ heatmap_ko<-function(tibble_ko,
                                                          cluster_cols = T,
                                                          main = "Pathway heatmap",
                                                          fontsize=7,
-                                                         angle_col="0",
+                                                         angle_col="45",
                                                          col = color_pallet)
     )
     
