@@ -28,6 +28,7 @@ read_ko<-function(data_kofam=NULL,
     table_Kofam<-suppressWarnings(
       suppressMessages(
         read_table2(data_kofam, col_names = F) %>%
+          filter(str_detect(.data$X1, '\\*')) %>%
           filter(!str_detect(.data$X1, '#')) %>%
           select(.data$X2, .data$X3) %>%
           rename(Bin_name = .data$X2) %>%
