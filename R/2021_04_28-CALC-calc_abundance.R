@@ -1,6 +1,6 @@
 #' @title Calculate abundance.
 #' @description Calculate the abundance of certain entry, based on the
-#' number of times it appearse.
+#' number of times it appears.
 #' @usage calc_abundance(tabla_toabundance, 
 #' analysis=c("KEGG", "PFAM", "INTERPRO"))
 #' @param tabla_toabundance a data frame object with the values to be 
