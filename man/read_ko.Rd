@@ -7,12 +7,13 @@
 read_ko(data_kofam=NULL, data_kaas=NULL, data_interpro=NULL)
 }
 \arguments{
-\item{data_kofam}{a data frame with 5 columns. Contigs are expected to
-indicate in their names the bin name follow by the scaffold name
-divided by an "_": bin_scaffoldXX.}
+\item{data_kofam}{a path where KofamScan/KofamKoala output data are. They
+should have the extension .txt and it is recommended all files in the path
+are the ones that need to be read. Output data should have 5 columns with the
+bin names followed by the scaffold name divided by an “_”: bin_scaffoldXX.}
 
 \item{data_kaas}{a data frame with 2 columns. Contigs are expected to
-indicate in their names the bin name follow by the scaffold name
+indicate in their names the bin name followed by the scaffold name
 divided by an "_": bin_scaffoldXX.}
 
 \item{data_interpro}{a data frame output of read_interpro. This
@@ -28,6 +29,6 @@ of bins metabolism.
 }
 \examples{
 \dontrun{
-read_ko("KEGG_bins.txt")
+read_ko("C:/Users/bins")
 }
 }

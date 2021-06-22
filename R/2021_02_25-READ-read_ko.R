@@ -13,8 +13,9 @@
 #' argument is used within mapping_KO.
 #' @details This function is part of a package used for the analysis 
 #' of bins metabolism.
-#' @import dplyr tidyr readr stringr rlang purrr
+#' @import dplyr tidyr readr stringr rlang
 #' @importFrom utils read.table
+#' @importFrom purrr map reduce
 #' @examples
 #' \dontrun{
 #' read_ko("C:/Users/bins")
