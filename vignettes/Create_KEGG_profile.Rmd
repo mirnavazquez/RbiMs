@@ -20,23 +20,23 @@ First, load the rbims package.
 library(rbims)
 ```
 
-The second thing to do would be read the [KofamKOALA/KofamScan](https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/KEGG_bins.txt) output. 
+The second thing to do would be to read the [KofamKOALA/KofamScan](https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/KEGG_bins.txt) output. 
 
 ## Read the KEGG results
 
-The function that rbims use to read the input table is [read_ko](https://mirnavazquez.github.io/RbiMs/reference/read_ko.html). And it reads the raw output from the  KofamKOALA/KofamScan programs.
+The function that rbims uses to read the raw output from the KofamKOALA/KofamScan data and make a table is [read_ko](https://mirnavazquez.github.io/RbiMs/reference/read_ko.html).
 
 ```{r eval=FALSE}
 ?read_ko
 ```
 
-`rbims` contains a test dataset that allow us to test this function. This data are loaded when you install the package and are saved in the objects `ko_bin_table`, `ko_bin_mapp`, and `metadata`. You can download the [KofamKOALA/KofamScan](https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/KEGG_bins.txt) example file and try. 
+`rbims` contains a test dataset that allow us to test this function. This dataset is saved in objects: `ko_bin_table`, `ko_bin_mapp`, and `metadata`. First download the [KofamKOALA/KofamScan](https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/KEGG_bins.txt) example file. It is recommended that you save this file in a folder since this function will read all the text files in your path and concatenate them. An example of a path input is shown below: 
 
 ```{r eval=FALSE}
-ko_bin_table<-read_ko(data_kofam ="KEGG_bins.txt")
+ko_bin_table<-read_ko(data_kofam ="C:/Users/Bins")
 ```
 
-The read_ko function will create a table that contains the abundance of each KO within each bin. 
+The read_ko function will create a table that contains the abundance of each KO within each bin.  
 
 ```{r}
 head(ko_bin_table)
@@ -44,7 +44,7 @@ head(ko_bin_table)
 
 ## Map to the KEGG database
 
-The function [mapping_ko](https://mirnavazquez.github.io/RbiMs/reference/mapping_ko.html) can be now used to map the KO and their abundance to the rest of the features of KEGG and rbims database.
+The function [mapping_ko](https://mirnavazquez.github.io/RbiMs/reference/mapping_ko.html) can now be used to map the KO and their abundance to the rest of the features of KEGG and rbims database.
 
 ```{r eval=FALSE}
 ko_bin_mapp<-mapping_ko(ko_bin_table)
@@ -54,7 +54,7 @@ ko_bin_mapp<-mapping_ko(ko_bin_table)
 head(ko_bin_mapp)
 ```
 
-You can export this table in a table like this.
+You can export this table like this.
 
 ```{r}
 write.table(ko_bin_mapp, "KEGG_mapped.tsv", quote = F, sep = "\t", row.names = F, col.names = T)

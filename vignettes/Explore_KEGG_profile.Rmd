@@ -44,10 +44,10 @@ If you followed the create KEGG profile tutorial, you could go directly to a [ca
 
 # Read the KEGG results
 
-[read_ko](https://mirnavazquez.github.io/RbiMs/reference/read_ko.html) can read as input file the files obtained from [KofamKOALA/KofamScan](https://www.genome.jp/tools/kofamkoala/) or [KAAS](https://www.genome.jp/kegg/kaas/). If you use both and there are different hits for a KO in both searches, it will take the hit from KofamKOALA/KofamScan.
+[read_ko](https://mirnavazquez.github.io/RbiMs/reference/read_ko.html) can read multiple text files obtained from [KofamKOALA/KofamScan](https://www.genome.jp/tools/kofamkoala/) or [KAAS](https://www.genome.jp/kegg/kaas/), as long as they are all in the same path in your working directory. If you use both and there are different hits for a KO in both searches, it will take the hit from KofamKOALA/KofamScan.
 
 ```{r, eval=FALSE}
-ko_bin_table<-read_ko(data_kofam ="KEGG_bins.txt")
+ko_bin_table<-read_ko(data_kofam ="C:/Users/bins")
 ```
 
 # Map to the KEGG database
@@ -60,7 +60,7 @@ ko_bin_mapp<-mapping_ko(ko_bin_table)
 
 # Metabolism subsetting
 
-To explore the metabolism table rbims has three functions to subset the table:
+To explore the metabolism table, rbims has three functions to subset the table:
 
 - [get_subset_pathway](https://mirnavazquez.github.io/RbiMs/reference/get_subset_pathway.html)
 - [get_subset_pca](https://mirnavazquez.github.io/RbiMs/reference/get_subset_pca.html)
