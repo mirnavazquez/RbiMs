@@ -126,11 +126,11 @@
 <span class="co">#&gt; # A tibble: 6 x 8</span>
 <span class="co">#&gt;   PFAM    domain_name                   Bin_10 Bin_12 Bin_56 Bin_113 Bin_1 Bin_2</span>
 <span class="co">#&gt;   &lt;chr&gt;   &lt;chr&gt;                          &lt;int&gt;  &lt;int&gt;  &lt;int&gt;   &lt;int&gt; &lt;int&gt; &lt;int&gt;</span>
-<span class="co">#&gt; 1 PF03595 Voltage-dependent anion chan~      1      1      1       0     0     0</span>
-<span class="co">#&gt; 2 PF00440 Bacterial regulatory protein~      0      0      0       1     1     0</span>
+<span class="co">#&gt; 1 PF03595 Voltage-dependent anion chan…      1      1      1       0     0     0</span>
+<span class="co">#&gt; 2 PF00440 Bacterial regulatory protein…      0      0      0       1     1     0</span>
 <span class="co">#&gt; 3 PF13305 WHG domain                         0      0      0       1     1     0</span>
 <span class="co">#&gt; 4 PF01131 DNA topoisomerase                  1      0      0       0     0     1</span>
-<span class="co">#&gt; 5 PF08272 Topoisomerase I zinc-ribbon-~      1      0      0       0     0     1</span>
+<span class="co">#&gt; 5 PF08272 Topoisomerase I zinc-ribbon-…      1      0      0       0     0     1</span>
 <span class="co">#&gt; 6 PF01751 Toprim domain                      1      0      0       0     0     1</span></code></pre></div>
 <p>Or print a long table <strong>profile = F</strong>.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
@@ -140,12 +140,12 @@
 <span class="co">#&gt; # A tibble: 6 x 5</span>
 <span class="co">#&gt;   Bin_name Scaffold_name     PFAM    domain_name                       Abundance</span>
 <span class="co">#&gt;   &lt;chr&gt;    &lt;chr&gt;             &lt;chr&gt;   &lt;chr&gt;                                 &lt;int&gt;</span>
-<span class="co">#&gt; 1 Bin_10   scaffold_441_c1_~ PF03595 Voltage-dependent anion channel           1</span>
-<span class="co">#&gt; 2 Bin_12   scaffold_69_c1_1~ PF03595 Voltage-dependent anion channel           1</span>
+<span class="co">#&gt; 1 Bin_10   scaffold_441_c1_… PF03595 Voltage-dependent anion channel           1</span>
+<span class="co">#&gt; 2 Bin_12   scaffold_69_c1_1… PF03595 Voltage-dependent anion channel           1</span>
 <span class="co">#&gt; 3 Bin_56   scaffold_71_c1_69 PF03595 Voltage-dependent anion channel           1</span>
-<span class="co">#&gt; 4 Bin_113  scaffold_145_c1_~ PF00440 Bacterial regulatory proteins, t~         1</span>
-<span class="co">#&gt; 5 Bin_113  scaffold_145_c1_~ PF13305 WHG domain                                1</span>
-<span class="co">#&gt; 6 Bin_1    scaffold_146_c1_1 PF00440 Bacterial regulatory proteins, t~         1</span></code></pre></div>
+<span class="co">#&gt; 4 Bin_113  scaffold_145_c1_… PF00440 Bacterial regulatory proteins, t…         1</span>
+<span class="co">#&gt; 5 Bin_113  scaffold_145_c1_… PF13305 WHG domain                                1</span>
+<span class="co">#&gt; 6 Bin_1    scaffold_146_c1_1 PF00440 Bacterial regulatory proteins, t…         1</span></code></pre></div>
 <p>You can export this table in a table like this.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/write.table.html">write.table</a></span><span class="op">(</span><span class="va">interpro_pfam_long</span>, <span class="st">"Interpro.tsv"</span>, quote <span class="op">=</span> <span class="cn">F</span>, sep <span class="op">=</span> <span class="st">"\t"</span>, row.names <span class="op">=</span> <span class="cn">F</span>, col.names <span class="op">=</span> <span class="cn">T</span><span class="op">)</span></code></pre></div>

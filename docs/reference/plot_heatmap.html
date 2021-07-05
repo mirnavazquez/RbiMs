@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Metabolism PCA. — get_subset_pca • rbims</title>
+<title>Heatmap — plot_heatmap • rbims</title>
 
 
 <!-- jquery -->
@@ -39,10 +39,8 @@
 
 
 
-<meta property="og:title" content="Metabolism PCA. — get_subset_pca" />
-<meta property="og:description" content="Identifies the most important KO pathways or protein
-domains in the whole database. And print back a profile of the protein
-domains that have higher contributions." />
+<meta property="og:title" content="Heatmap — plot_heatmap" />
+<meta property="og:description" content="Creates a heatmap of KEGG and InterProScan data." />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@MirnaVRL" />
 <meta name="twitter:site" content="@MirnaVRL" />
@@ -147,38 +145,83 @@ domains that have higher contributions." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Metabolism PCA.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/mirnavazquez/RbiMs/blob/master/R/2021_02_26-GET-get_pca.R'><code>R/2021_02_26-GET-get_pca.R</code></a></small>
-    <div class="hidden name"><code>get_subset_pca.Rd</code></div>
+    <h1>Heatmap</h1>
+    <small class="dont-index">Source: <a href='https://github.com/mirnavazquez/RbiMs/blob/master/R/2021_04_28-PLOT-plot_heatmap.R'><code>R/2021_04_28-PLOT-plot_heatmap.R</code></a></small>
+    <div class="hidden name"><code>plot_heatmap.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Identifies the most important KO pathways or protein
-domains in the whole database. And print back a profile of the protein
-domains that have higher contributions.</p>
+    <p>Creates a heatmap of KEGG and InterProScan data.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>get_subset_pca</span><span class='op'>(</span><span class='va'>tibble_rbims</span>, cos2_val<span class='op'>=</span><span class='cn'>NULL</span>, 
-analysis<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"KEGG"</span>, <span class='st'>"PFAM"</span>, <span class='st'>"INTERPRO"</span><span class='op'>)</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>plot_heatmap</span><span class='op'>(</span><span class='va'>tibble_ko</span>, <span class='va'>y_axis</span>, analysis<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"KEGG"</span>,<span class='st'>"INTERPRO"</span><span class='op'>)</span>, 
+data_experiment<span class='op'>=</span><span class='cn'>NULL</span>, calc<span class='op'>=</span><span class='cn'>NULL</span>, scale_option<span class='op'>=</span><span class='cn'>NULL</span>, order_y<span class='op'>=</span><span class='cn'>NULL</span>, order_x<span class='op'>=</span><span class='cn'>NULL</span>,
+split_y<span class='op'>=</span><span class='cn'>FALSE</span>, color_pallet<span class='op'>=</span><span class='cn'>NULL</span>, distance<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>tibble_rbims</th>
-      <td><p>a tibble object, created with
-the read_interpro, mapping_ko or get_subset_* functions.</p></td>
+      <th>tibble_ko</th>
+      <td><p>a data frame object. It could have been
+created with the mapping_ko or get_subset_* functions. If that is the case
+you will have to choose which type of analysis do you want to show, "binary",
+"abundance" or "percentage". You can also include a table with the counts that
+you want to use.</p></td>
     </tr>
     <tr>
-      <th>cos2_val</th>
-      <td><p>a numeric vector from 0 to 1 indicating the proportion of
-contribution used as cut off. Default is 0.98.
-See <a href='https://rdrr.io/pkg/factoextra/man/get_pca.html'>get_pca</a>.</p></td>
+      <th>y_axis</th>
+      <td><p>a string. A column name of the tibble_ko of a
+feature to plot (i.e. KO/Pathways/Modules/PFAM/INTERPRO).</p></td>
     </tr>
     <tr>
       <th>analysis</th>
-      <td><p>a character, indicating from which input do you want to
-get the abundance profile. Valid options are "KEGG", "PFAM" or "INTERPRO".</p></td>
+      <td><p>a character indicating the input file. Valid arguments "KEGG" or
+"INTERPRO".</p></td>
+    </tr>
+    <tr>
+      <th>data_experiment</th>
+      <td><p>optional. a data frame object containing metadata information.</p></td>
+    </tr>
+    <tr>
+      <th>calc</th>
+      <td><p>optional. This option is only valid for "KEGG" analysis.
+Is a character indicating with type of calc should
+be done to plot the results. Valid values are "Abundance", "Binary",
+"Percentage", and "None". If you chose none you are spected to use a
+tibble table obtained from calc_binary or calc_percentage.</p></td>
+    </tr>
+    <tr>
+      <th>scale_option</th>
+      <td><p>a character indicating if rows or columns should be
+scale. Valid options "none", "row" or "column".</p></td>
+    </tr>
+    <tr>
+      <th>order_y</th>
+      <td><p>optional. This option is only valid for "KEGG" analysis.
+Is a column name indicating the annotation if rows.
+This column name comes from the mapping_ko or get_subset_* object.</p></td>
+    </tr>
+    <tr>
+      <th>order_x</th>
+      <td><p>optional. This option is only valid for "KEGG" analysis.
+Is a column name indicating the annotation if cols.
+This column name comes from the metadata object.</p></td>
+    </tr>
+    <tr>
+      <th>split_y</th>
+      <td><p>optional. This option is only valid for "KEGG" analysis.
+A logical character indicating if you want to split y axis,
+based on order_y character.</p></td>
+    </tr>
+    <tr>
+      <th>color_pallet</th>
+      <td><p>optional. a character vector of colors to use.</p></td>
+    </tr>
+    <tr>
+      <th>distance</th>
+      <td><p>optional. If TRUE it will calculate a distance matrix and
+show how similar are the different genomes.</p></td>
     </tr>
     </table>
 
@@ -188,13 +231,12 @@ get the abundance profile. Valid options are "KEGG", "PFAM" or "INTERPRO".</p></
 the analysis of bins metabolism.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>get_subset_pca</span><span class='op'>(</span><span class='va'>ko_bin_mapp</span>, analysis<span class='op'>=</span><span class='st'>"KEGG"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='warning'>Warning: Contribution of the first dimention is less or equal to 0.97</span></div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 0 x 19</span>
-#&gt; <span style='color: #949494;'># … with 19 variables: Module &lt;chr&gt;, Module_description &lt;chr&gt;, Pathway &lt;chr&gt;,</span>
-#&gt; <span style='color: #949494;'>#   Pathway_description &lt;chr&gt;, Cycle &lt;chr&gt;, Pathway_cycle &lt;chr&gt;,</span>
-#&gt; <span style='color: #949494;'>#   Detail_cycle &lt;chr&gt;, Genes &lt;chr&gt;, Gene_description &lt;chr&gt;, Enzyme &lt;chr&gt;,</span>
-#&gt; <span style='color: #949494;'>#   KO &lt;chr&gt;, rbims_pathway &lt;chr&gt;, rbims_sub_pathway &lt;chr&gt;, Bin_10 &lt;int&gt;,</span>
-#&gt; <span style='color: #949494;'>#   Bin_12 &lt;int&gt;, Bin_56 &lt;int&gt;, Bin_113 &lt;int&gt;, Bin_1 &lt;int&gt;, Bin_2 &lt;int&gt;</span></div></pre>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'>plot_heatmap</span><span class='op'>(</span>tibble_ko<span class='op'>=</span><span class='va'>ko_bin_mapp</span>, y_axis<span class='op'>=</span><span class='va'>Pathway</span>,
+analysis<span class='op'>=</span><span class='st'>"INTERPRO"</span>, data_experiment <span class='op'>=</span> <span class='va'>metadata</span>, 
+calc<span class='op'>=</span><span class='st'>"Binary"</span>, order_y<span class='op'>=</span><span class='va'>Module</span>, order_x<span class='op'>=</span><span class='va'>Clades</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

@@ -127,12 +127,12 @@
 <span class="co">#&gt; # A tibble: 6 x 10</span>
 <span class="co">#&gt;   Bin_name Sample_site  Clades  Domain  Phylum  Class Order Family Genus Species</span>
 <span class="co">#&gt;   &lt;chr&gt;    &lt;chr&gt;        &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;  </span>
-<span class="co">#&gt; 1 Bin_10   Sediment     Clade_1 d__Bac~ p__Pro~ c__G~ o__P~ f__Sa~ g__O~ s__Ole~</span>
-<span class="co">#&gt; 2 Bin_12   Sediment     Clade_2 d__Bac~ p__Pro~ c__G~ o__P~ f__Ol~ g__M~ s__Mar~</span>
-<span class="co">#&gt; 3 Bin_56   Sediment     Clade_3 d__Bac~ p__Pro~ c__G~ o__P~ f__Sa~ g__T~ s__Tha~</span>
-<span class="co">#&gt; 4 Bin_113  Water_column Clade_1 d__Bac~ p__Pro~ c__A~ o__R~ f__Rh~ g__P~ s__Par~</span>
-<span class="co">#&gt; 5 Bin_1    Water_column Clade_2 d__Bac~ p__Pro~ c__G~ o__E~ f__Al~ g__A~ s__Alt~</span>
-<span class="co">#&gt; 6 Bin_2    Water_column Clade_3 d__Bac~ p__Pro~ c__G~ o__E~ f__Al~ g__A~ s__Alt~</span></code></pre></div>
+<span class="co">#&gt; 1 Bin_10   Sediment     Clade_1 d__Bac… p__Pro… c__G… o__P… f__Sa… g__O… s__Ole…</span>
+<span class="co">#&gt; 2 Bin_12   Sediment     Clade_2 d__Bac… p__Pro… c__G… o__P… f__Ol… g__M… s__Mar…</span>
+<span class="co">#&gt; 3 Bin_56   Sediment     Clade_3 d__Bac… p__Pro… c__G… o__P… f__Sa… g__T… s__Tha…</span>
+<span class="co">#&gt; 4 Bin_113  Water_column Clade_1 d__Bac… p__Pro… c__A… o__R… f__Rh… g__P… s__Par…</span>
+<span class="co">#&gt; 5 Bin_1    Water_column Clade_2 d__Bac… p__Pro… c__G… o__E… f__Al… g__A… s__Alt…</span>
+<span class="co">#&gt; 6 Bin_2    Water_column Clade_3 d__Bac… p__Pro… c__G… o__E… f__Al… g__A… s__Alt…</span></code></pre></div>
 <p>If you followed the create KEGG profile tutorial, you could go directly to a <a href="https://mirnavazquez.github.io/RbiMs/articles/Explore_KEGG_profile.html#example-of-exploring-an-specific-kegg-pathway-1">case example of exploring and specific pathway</a>.</p>
 </div>
 <div id="read-the-kegg-results" class="section level1">
@@ -179,15 +179,15 @@
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">Biofilm_Vibrio_subset</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 6 x 19</span>
-<span class="co">#&gt;   Module Module_description      Pathway  Pathway_descripti~ Cycle Pathway_cycle</span>
+<span class="co">#&gt;   Module Module_description      Pathway  Pathway_descripti… Cycle Pathway_cycle</span>
 <span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;                   &lt;chr&gt;    &lt;chr&gt;              &lt;chr&gt; &lt;chr&gt;        </span>
-<span class="co">#&gt; 1 &lt;NA&gt;   &lt;NA&gt;                    map05111 Biofilm formation~ &lt;NA&gt;  &lt;NA&gt;         </span>
-<span class="co">#&gt; 2 &lt;NA&gt;   &lt;NA&gt;                    map05111 Biofilm formation~ &lt;NA&gt;  &lt;NA&gt;         </span>
-<span class="co">#&gt; 3 &lt;NA&gt;   &lt;NA&gt;                    map05111 Biofilm formation~ &lt;NA&gt;  &lt;NA&gt;         </span>
-<span class="co">#&gt; 4 M00878 Phenylacetate degradat~ map05111 Biofilm formation~ &lt;NA&gt;  &lt;NA&gt;         </span>
-<span class="co">#&gt; 5 &lt;NA&gt;   &lt;NA&gt;                    map05111 Biofilm formation~ Other Flagellar as~</span>
-<span class="co">#&gt; 6 &lt;NA&gt;   &lt;NA&gt;                    map05111 Biofilm formation~ &lt;NA&gt;  &lt;NA&gt;         </span>
-<span class="co">#&gt; # ... with 13 more variables: Detail_cycle &lt;chr&gt;, Genes &lt;chr&gt;,</span>
+<span class="co">#&gt; 1 &lt;NA&gt;   &lt;NA&gt;                    map05111 Biofilm formation… &lt;NA&gt;  &lt;NA&gt;         </span>
+<span class="co">#&gt; 2 &lt;NA&gt;   &lt;NA&gt;                    map05111 Biofilm formation… &lt;NA&gt;  &lt;NA&gt;         </span>
+<span class="co">#&gt; 3 &lt;NA&gt;   &lt;NA&gt;                    map05111 Biofilm formation… &lt;NA&gt;  &lt;NA&gt;         </span>
+<span class="co">#&gt; 4 M00878 Phenylacetate degradat… map05111 Biofilm formation… &lt;NA&gt;  &lt;NA&gt;         </span>
+<span class="co">#&gt; 5 &lt;NA&gt;   &lt;NA&gt;                    map05111 Biofilm formation… Other Flagellar as…</span>
+<span class="co">#&gt; 6 &lt;NA&gt;   &lt;NA&gt;                    map05111 Biofilm formation… &lt;NA&gt;  &lt;NA&gt;         </span>
+<span class="co">#&gt; # … with 13 more variables: Detail_cycle &lt;chr&gt;, Genes &lt;chr&gt;,</span>
 <span class="co">#&gt; #   Gene_description &lt;chr&gt;, Enzyme &lt;chr&gt;, KO &lt;chr&gt;, rbims_pathway &lt;chr&gt;,</span>
 <span class="co">#&gt; #   rbims_sub_pathway &lt;chr&gt;, Bin_10 &lt;int&gt;, Bin_12 &lt;int&gt;, Bin_56 &lt;int&gt;,</span>
 <span class="co">#&gt; #   Bin_113 &lt;int&gt;, Bin_1 &lt;int&gt;, Bin_2 &lt;int&gt;</span></code></pre></div>
@@ -246,15 +246,15 @@
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">Carbon_fixation_subset</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 6 x 19</span>
-<span class="co">#&gt;   Module Module_description   Pathway  Pathway_descripti~ Cycle  Pathway_cycle  </span>
+<span class="co">#&gt;   Module Module_description   Pathway  Pathway_descripti… Cycle  Pathway_cycle  </span>
 <span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;                &lt;chr&gt;    &lt;chr&gt;              &lt;chr&gt;  &lt;chr&gt;          </span>
-<span class="co">#&gt; 1 M00173 Reductive citrate c~ map00010 Glycolysis / Gluc~ Carbo~ Reductive citr~</span>
-<span class="co">#&gt; 2 M00173 Reductive citrate c~ map00010 Glycolysis / Gluc~ Carbo~ Dicarboxylate-~</span>
-<span class="co">#&gt; 3 M00374 Dicarboxylate-hydro~ map00010 Glycolysis / Gluc~ Carbo~ Reductive citr~</span>
-<span class="co">#&gt; 4 M00374 Dicarboxylate-hydro~ map00010 Glycolysis / Gluc~ Carbo~ Dicarboxylate-~</span>
-<span class="co">#&gt; 5 M00173 Reductive citrate c~ map00620 Pyruvate metaboli~ Carbo~ Reductive citr~</span>
-<span class="co">#&gt; 6 M00173 Reductive citrate c~ map00620 Pyruvate metaboli~ Carbo~ Dicarboxylate-~</span>
-<span class="co">#&gt; # ... with 13 more variables: Detail_cycle &lt;chr&gt;, Genes &lt;chr&gt;,</span>
+<span class="co">#&gt; 1 M00173 Reductive citrate c… map00010 Glycolysis / Gluc… Carbo… Reductive citr…</span>
+<span class="co">#&gt; 2 M00173 Reductive citrate c… map00010 Glycolysis / Gluc… Carbo… Dicarboxylate-…</span>
+<span class="co">#&gt; 3 M00374 Dicarboxylate-hydro… map00010 Glycolysis / Gluc… Carbo… Reductive citr…</span>
+<span class="co">#&gt; 4 M00374 Dicarboxylate-hydro… map00010 Glycolysis / Gluc… Carbo… Dicarboxylate-…</span>
+<span class="co">#&gt; 5 M00173 Reductive citrate c… map00620 Pyruvate metaboli… Carbo… Reductive citr…</span>
+<span class="co">#&gt; 6 M00173 Reductive citrate c… map00620 Pyruvate metaboli… Carbo… Dicarboxylate-…</span>
+<span class="co">#&gt; # … with 13 more variables: Detail_cycle &lt;chr&gt;, Genes &lt;chr&gt;,</span>
 <span class="co">#&gt; #   Gene_description &lt;chr&gt;, Enzyme &lt;chr&gt;, KO &lt;chr&gt;, rbims_pathway &lt;chr&gt;,</span>
 <span class="co">#&gt; #   rbims_sub_pathway &lt;chr&gt;, Bin_10 &lt;int&gt;, Bin_12 &lt;int&gt;, Bin_56 &lt;int&gt;,</span>
 <span class="co">#&gt; #   Bin_113 &lt;int&gt;, Bin_1 &lt;int&gt;, Bin_2 &lt;int&gt;</span></code></pre></div>
@@ -264,7 +264,7 @@
              y_axis<span class="op">=</span><span class="va">Genes</span>,
              analysis <span class="op">=</span> <span class="st">"KEGG"</span>,
              calc<span class="op">=</span><span class="st">"Binary"</span><span class="op">)</span></code></pre></div>
-<p><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-15-1.png" width="672"><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-15-2.png" width="672"></p>
+<p><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-15-1.png" width="672"></p>
 </div>
 <div id="the-calc-argument" class="section level2">
 <h2 class="hasAnchor">
@@ -287,15 +287,15 @@
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">Energy_metabolisms</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 6 x 19</span>
-<span class="co">#&gt;   Module Module_description   Pathway  Pathway_descripti~ Cycle  Pathway_cycle  </span>
+<span class="co">#&gt;   Module Module_description   Pathway  Pathway_descripti… Cycle  Pathway_cycle  </span>
 <span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;                &lt;chr&gt;    &lt;chr&gt;              &lt;chr&gt;  &lt;chr&gt;          </span>
-<span class="co">#&gt; 1 M00173 Reductive citrate c~ map00010 Glycolysis / Gluc~ Carbo~ Reductive citr~</span>
-<span class="co">#&gt; 2 M00173 Reductive citrate c~ map00010 Glycolysis / Gluc~ Carbo~ Dicarboxylate-~</span>
-<span class="co">#&gt; 3 M00374 Dicarboxylate-hydro~ map00010 Glycolysis / Gluc~ Carbo~ Reductive citr~</span>
-<span class="co">#&gt; 4 M00374 Dicarboxylate-hydro~ map00010 Glycolysis / Gluc~ Carbo~ Dicarboxylate-~</span>
-<span class="co">#&gt; 5 M00173 Reductive citrate c~ map00620 Pyruvate metaboli~ Carbo~ Reductive citr~</span>
-<span class="co">#&gt; 6 M00173 Reductive citrate c~ map00620 Pyruvate metaboli~ Carbo~ Dicarboxylate-~</span>
-<span class="co">#&gt; # ... with 13 more variables: Detail_cycle &lt;chr&gt;, Genes &lt;chr&gt;,</span>
+<span class="co">#&gt; 1 M00173 Reductive citrate c… map00010 Glycolysis / Gluc… Carbo… Reductive citr…</span>
+<span class="co">#&gt; 2 M00173 Reductive citrate c… map00010 Glycolysis / Gluc… Carbo… Dicarboxylate-…</span>
+<span class="co">#&gt; 3 M00374 Dicarboxylate-hydro… map00010 Glycolysis / Gluc… Carbo… Reductive citr…</span>
+<span class="co">#&gt; 4 M00374 Dicarboxylate-hydro… map00010 Glycolysis / Gluc… Carbo… Dicarboxylate-…</span>
+<span class="co">#&gt; 5 M00173 Reductive citrate c… map00620 Pyruvate metaboli… Carbo… Reductive citr…</span>
+<span class="co">#&gt; 6 M00173 Reductive citrate c… map00620 Pyruvate metaboli… Carbo… Dicarboxylate-…</span>
+<span class="co">#&gt; # … with 13 more variables: Detail_cycle &lt;chr&gt;, Genes &lt;chr&gt;,</span>
 <span class="co">#&gt; #   Gene_description &lt;chr&gt;, Enzyme &lt;chr&gt;, KO &lt;chr&gt;, rbims_pathway &lt;chr&gt;,</span>
 <span class="co">#&gt; #   rbims_sub_pathway &lt;chr&gt;, Bin_10 &lt;int&gt;, Bin_12 &lt;int&gt;, Bin_56 &lt;int&gt;,</span>
 <span class="co">#&gt; #   Bin_113 &lt;int&gt;, Bin_1 &lt;int&gt;, Bin_2 &lt;int&gt;</span></code></pre></div>
@@ -308,7 +308,7 @@
              order_y <span class="op">=</span> <span class="va">Cycle</span>,
              analysis <span class="op">=</span> <span class="st">"KEGG"</span>,
              calc<span class="op">=</span><span class="st">"Percentage"</span><span class="op">)</span></code></pre></div>
-<p><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-19-1.png" width="672"><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-19-2.png" width="672"></p>
+<p><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-19-1.png" width="672"></p>
 <ul>
 <li>The argument order_x will order the rows according to a metadata feature; in this case, we order the bins according to sample site.</li>
 </ul>
@@ -319,7 +319,7 @@
              order_x <span class="op">=</span> <span class="va">Sample_site</span>,
              analysis <span class="op">=</span> <span class="st">"KEGG"</span>,
              calc<span class="op">=</span><span class="st">"Percentage"</span><span class="op">)</span></code></pre></div>
-<p><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-20-1.png" width="672"><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-20-2.png" width="672"></p>
+<p><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-20-1.png" width="672"></p>
 <ul>
 <li>The split argument allows dividing the rows according to a specific value of the metadata.</li>
 </ul>
@@ -330,7 +330,7 @@
              split_y <span class="op">=</span> <span class="cn">TRUE</span>,
              analysis <span class="op">=</span> <span class="st">"KEGG"</span>,
              calc<span class="op">=</span><span class="st">"Percentage"</span><span class="op">)</span></code></pre></div>
-<p><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-21-1.png" width="672"><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-21-2.png" width="672"></p>
+<p><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-21-1.png" width="672"></p>
 <ul>
 <li>The order_x argument allows you to add annotation info from the metadata for the columns.</li>
 </ul>
@@ -343,7 +343,7 @@
              split_y <span class="op">=</span> <span class="cn">TRUE</span>,
              analysis <span class="op">=</span> <span class="st">"KEGG"</span>,
              calc<span class="op">=</span><span class="st">"Percentage"</span><span class="op">)</span></code></pre></div>
-<p><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-22-1.png" width="672"><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-22-2.png" width="672"></p>
+<p><img src="Explore_KEGG_profile_files/figure-html/unnamed-chunk-22-1.png" width="672"></p>
 </div>
 </div>
   </div>

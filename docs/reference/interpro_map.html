@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Metabolism PCA. — get_subset_pca • rbims</title>
+<title>interpro_map — interpro_map • rbims</title>
 
 
 <!-- jquery -->
@@ -39,10 +39,8 @@
 
 
 
-<meta property="og:title" content="Metabolism PCA. — get_subset_pca" />
-<meta property="og:description" content="Identifies the most important KO pathways or protein
-domains in the whole database. And print back a profile of the protein
-domains that have higher contributions." />
+<meta property="og:title" content="interpro_map — interpro_map" />
+<meta property="og:description" content="The output of mapping for KEGG from read_interpro." />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@MirnaVRL" />
 <meta name="twitter:site" content="@MirnaVRL" />
@@ -147,54 +145,25 @@ domains that have higher contributions." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Metabolism PCA.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/mirnavazquez/RbiMs/blob/master/R/2021_02_26-GET-get_pca.R'><code>R/2021_02_26-GET-get_pca.R</code></a></small>
-    <div class="hidden name"><code>get_subset_pca.Rd</code></div>
+    <h1>interpro_map</h1>
+    <small class="dont-index">Source: <a href='https://github.com/mirnavazquez/RbiMs/blob/master/R/data.R'><code>R/data.R</code></a></small>
+    <div class="hidden name"><code>interpro_map.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Identifies the most important KO pathways or protein
-domains in the whole database. And print back a profile of the protein
-domains that have higher contributions.</p>
+    <p>The output of mapping for KEGG from read_interpro.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>get_subset_pca</span><span class='op'>(</span><span class='va'>tibble_rbims</span>, cos2_val<span class='op'>=</span><span class='cn'>NULL</span>, 
-analysis<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"KEGG"</span>, <span class='st'>"PFAM"</span>, <span class='st'>"INTERPRO"</span><span class='op'>)</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='va'>interpro_map</span></pre>
 
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>tibble_rbims</th>
-      <td><p>a tibble object, created with
-the read_interpro, mapping_ko or get_subset_* functions.</p></td>
-    </tr>
-    <tr>
-      <th>cos2_val</th>
-      <td><p>a numeric vector from 0 to 1 indicating the proportion of
-contribution used as cut off. Default is 0.98.
-See <a href='https://rdrr.io/pkg/factoextra/man/get_pca.html'>get_pca</a>.</p></td>
-    </tr>
-    <tr>
-      <th>analysis</th>
-      <td><p>a character, indicating from which input do you want to
-get the abundance profile. Valid options are "KEGG", "PFAM" or "INTERPRO".</p></td>
-    </tr>
-    </table>
 
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>This function is part of a package used for
-the analysis of bins metabolism.</p>
+    <p>A tiible of extra data of the bins.</p>
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>get_subset_pca</span><span class='op'>(</span><span class='va'>ko_bin_mapp</span>, analysis<span class='op'>=</span><span class='st'>"KEGG"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='warning'>Warning: Contribution of the first dimention is less or equal to 0.97</span></div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 0 x 19</span>
-#&gt; <span style='color: #949494;'># … with 19 variables: Module &lt;chr&gt;, Module_description &lt;chr&gt;, Pathway &lt;chr&gt;,</span>
-#&gt; <span style='color: #949494;'>#   Pathway_description &lt;chr&gt;, Cycle &lt;chr&gt;, Pathway_cycle &lt;chr&gt;,</span>
-#&gt; <span style='color: #949494;'>#   Detail_cycle &lt;chr&gt;, Genes &lt;chr&gt;, Gene_description &lt;chr&gt;, Enzyme &lt;chr&gt;,</span>
-#&gt; <span style='color: #949494;'>#   KO &lt;chr&gt;, rbims_pathway &lt;chr&gt;, rbims_sub_pathway &lt;chr&gt;, Bin_10 &lt;int&gt;,</span>
-#&gt; <span style='color: #949494;'>#   Bin_12 &lt;int&gt;, Bin_56 &lt;int&gt;, Bin_113 &lt;int&gt;, Bin_1 &lt;int&gt;, Bin_2 &lt;int&gt;</span></div></pre>
+    <p><a href='https://sites.utexas.edu/baker-lab/'>https://sites.utexas.edu/baker-lab/</a></p>
+
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
