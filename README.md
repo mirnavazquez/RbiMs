@@ -39,14 +39,15 @@ library(rbims)
 
 ## Overview
 
-<img src="man/figures/rRbiMs-3.png"  width="800" height="400" align="center" />
+<img src="man/figures/rRbiMs-3.png"  width="900" height="400" align="center" />
 
 ## Visit the [website](https://mirnavazquez.github.io/RbiMs/) for more detail.
 
 ## Contributions
 
 -   Mirna Vázquez Rosas Landa - wrote the code.
--   Valerie De Anda and Pedro Leão - Cuarted the rbims database of metabolism.
+-   Valerie De Anda and Pedro Leão - Cuarted the rbims database of
+    metabolism.
 -   Sahil Shah - Helped with function documentation.
 
 ## References
