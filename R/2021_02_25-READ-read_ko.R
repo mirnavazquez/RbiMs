@@ -15,7 +15,7 @@
 #' of bins metabolism.
 #' @import dplyr tidyr readr stringr rlang
 #' @importFrom utils read.table
-#' @importFrom purrr map reduce
+#' @importFrom purrr map_dfr 
 #' @examples
 #' \dontrun{
 #' read_ko("C:/Users/bins")
@@ -28,11 +28,11 @@ read_ko<-function(data_kofam=NULL,
   if( is.null(data_kofam) == F && is.null(data_kaas) == F || 
       is.null(data_kofam) == F){
     files <- dir(path = data_kofam ,pattern ="*.txt")
+    final_files<-paste0(data_kofam, files)
     table_Kofam<-suppressWarnings(
       suppressMessages( 
-        files %>%
-      map(read_table2, col_names = F) %>%
-      reduce(rbind)  %>%
+        final_files %>%
+          map_dfr(read_table2, col_names = F) %>%
       filter(str_detect(.data$X1, '\\*')) %>%
       select(.data$X2, .data$X3) %>%
       rename(Bin_name = .data$X2) %>%
