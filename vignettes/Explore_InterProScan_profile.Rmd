@@ -25,6 +25,8 @@ library(rbims)
 
 First I will read the InterProScan output in a long format and extract the PFAM abundance information.
 
+If you want to follow the example you can download the use rbims [test](https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/Interpro_test.tsv) file. 
+
 ```{r, eval=FALSE}
 interpro_pfam_long<-read_interpro(data_interpro = "Interpro_test.tsv", database="PFAM", profile = F)
 ```
