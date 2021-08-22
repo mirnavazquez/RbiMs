@@ -30,7 +30,7 @@ The function that rbims uses to read the raw output from the KofamKOALA/KofamSca
 ?read_ko
 ```
 
-`rbims` contains a test dataset that allow us to test this function. This dataset is saved in objects: `ko_bin_table`, `ko_bin_mapp`, and `metadata`. First download the [KofamKOALA/KofamScan](https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/KEGG_bins.txt) example file. It is recommended that you save this file in a folder since this function will read all the text files in your path and concatenate them. An example of a path input is shown below: 
+`rbims` contains a test dataset that allow us to test this function. This dataset is saved in objects: `ko_bin_table`, `ko_bin_mapp`, and `metadata`. First download the [KofamKOALA/KofamScan](https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/KEGG_bins.txt) example file. It is recommended that you save this file in its own folder since this function will read all the text files in your path and concatenate them. An example of a path input is shown below: 
 
 ```{r eval=FALSE}
 ko_bin_table<-read_ko(data_kofam ="C:/Users/Bins")
@@ -54,7 +54,7 @@ ko_bin_mapp<-mapping_ko(ko_bin_table)
 head(ko_bin_mapp)
 ```
 
-You can export this table like this.
+You can export this to a table like this:
 
 ```{r}
 write.table(ko_bin_mapp, "KEGG_mapped.tsv", quote = F, sep = "\t", row.names = F, col.names = T)

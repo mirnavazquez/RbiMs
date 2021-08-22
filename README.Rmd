@@ -27,7 +27,7 @@ R tools for reconstructing bin metabolisms.
 
 ## Quick install
 
-We are actively developing rbims, so for now it is not available at CRAN or Bioconductor, however you can access to the development version from [GitHub](https://github.com/mirnavazquez/RbiMs).
+We are actively developing rbims, so for now it is not available at CRAN or Bioconductor, however you can access the development version from [GitHub](https://github.com/mirnavazquez/RbiMs).
 
 In R terminal:
 
@@ -52,8 +52,9 @@ library(rbims)
 ## Contributions
 
 - Mirna Vázquez Rosas Landa - wrote the code. 
-- Valerie De Anda and Pedro Leão  - Cuarted the rbims database of metabolism. 
+- Valerie De Anda and Pedro Leão  - Curated the rbims database of metabolism. 
 - Sahil Shah - Helped with function documentation.
+- Bryan Vernon - Editor.
 
 
 ##  References

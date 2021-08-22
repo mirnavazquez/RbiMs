@@ -44,7 +44,7 @@ If you followed the create KEGG profile tutorial, you could go directly to a [ca
 
 # Read the KEGG results
 
-[read_ko](https://mirnavazquez.github.io/RbiMs/reference/read_ko.html) can read multiple text files obtained from [KofamKOALA/KofamScan](https://www.genome.jp/tools/kofamkoala/) or [KAAS](https://www.genome.jp/kegg/kaas/), as long as they are all in the same path in your working directory. If you use both and there are different hits for a KO in both searches, it will take the hit from KofamKOALA/KofamScan.
+[read_ko](https://mirnavazquez.github.io/RbiMs/reference/read_ko.html) can read multiple text files obtained from [KofamKOALA/KofamScan](https://www.genome.jp/tools/kofamkoala/) or [KAAS](https://www.genome.jp/kegg/kaas/), as long as they are all in the same path in your working directory. If you use both, and there are different hits for a KO in both searches, it will take the hit from KofamKOALA/KofamScan.
 
 ```{r, eval=FALSE}
 ko_bin_table<-read_ko(data_kofam ="C:/Users/bins")
@@ -132,9 +132,9 @@ plot_bubble(tibble_ko = Biofilm_Vibrio_subset,
             range_size = c(5,6))
 ```
 
--   In the same way, we created a vector with the KEGG pathway ID of interest; we can create a vector of specific KOs IDs or KEGG modules.
+-   In the same way we created a vector with the KEGG pathway ID of interest, we can create a vector of specific KOs IDs or KEGG modules.
 
-Here I will extract the information of some KO related to Carbon fixation metabolism.
+Here, I will extract the information of some KO related to Carbon fixation metabolism.
 
 ```{r}
 Carbon_fixation<-c("K01007", "K00626", "K01902", "K01595", "K01903", "K00170", "K00169", "K00171", "K00172", "K00241")
