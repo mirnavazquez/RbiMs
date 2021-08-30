@@ -120,7 +120,7 @@
 <p>The function that rbims uses to read the raw output from the KofamKOALA/KofamScan data and make a table is <a href="https://mirnavazquez.github.io/RbiMs/reference/read_ko.html">read_ko</a>.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="op">?</span><span class="va">read_ko</span></code></pre></div>
-<p><code>rbims</code> contains a test dataset that allow us to test this function. This dataset is saved in objects: <code>ko_bin_table</code>, <code>ko_bin_mapp</code>, and <code>metadata</code>. First download the <a href="https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/KEGG_bins.txt">KofamKOALA/KofamScan</a> example file. It is recommended that you save this file in a folder since this function will read all the text files in your path and concatenate them. An example of a path input is shown below:</p>
+<p><code>rbims</code> contains a test dataset that allow us to test this function. This dataset is saved in objects: <code>ko_bin_table</code>, <code>ko_bin_mapp</code>, and <code>metadata</code>. First download the <a href="https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/KEGG_bins.txt">KofamKOALA/KofamScan</a> example file. It is recommended that you save this file in its own folder since this function will read all the text files in your path and concatenate them. An example of a path input is shown below:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">ko_bin_table</span><span class="op">&lt;-</span><span class="fu"><a href="../reference/read_ko.html">read_ko</a></span><span class="op">(</span>data_kofam <span class="op">=</span><span class="st">"C:/Users/Bins"</span><span class="op">)</span></code></pre></div>
 <p>The read_ko function will create a table that contains the abundance of each KO within each bin.</p>
@@ -145,19 +145,19 @@
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">ko_bin_mapp</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 6 x 19</span>
-<span class="co">#&gt;   Module Module_description       Pathway  Pathway_descript… Cycle Pathway_cycle</span>
+<span class="co">#&gt;   Module Module_description       Pathway  Pathway_descript~ Cycle Pathway_cycle</span>
 <span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;                    &lt;chr&gt;    &lt;chr&gt;             &lt;chr&gt; &lt;chr&gt;        </span>
 <span class="co">#&gt; 1 &lt;NA&gt;   &lt;NA&gt;                     &lt;NA&gt;     &lt;NA&gt;              &lt;NA&gt;  &lt;NA&gt;         </span>
-<span class="co">#&gt; 2 &lt;NA&gt;   &lt;NA&gt;                     map00564 Glycerophospholi… &lt;NA&gt;  &lt;NA&gt;         </span>
-<span class="co">#&gt; 3 M00004 Pentose phosphate pathw… map00030 Pentose phosphat… &lt;NA&gt;  &lt;NA&gt;         </span>
-<span class="co">#&gt; 4 M00007 Pentose phosphate pathw… map00030 Pentose phosphat… &lt;NA&gt;  &lt;NA&gt;         </span>
-<span class="co">#&gt; 5 M00004 Pentose phosphate pathw… map01100 Metabolic pathwa… &lt;NA&gt;  &lt;NA&gt;         </span>
-<span class="co">#&gt; 6 M00007 Pentose phosphate pathw… map01100 Metabolic pathwa… &lt;NA&gt;  &lt;NA&gt;         </span>
-<span class="co">#&gt; # … with 13 more variables: Detail_cycle &lt;chr&gt;, Genes &lt;chr&gt;,</span>
+<span class="co">#&gt; 2 &lt;NA&gt;   &lt;NA&gt;                     map00564 Glycerophospholi~ &lt;NA&gt;  &lt;NA&gt;         </span>
+<span class="co">#&gt; 3 M00004 Pentose phosphate pathw~ map00030 Pentose phosphat~ &lt;NA&gt;  &lt;NA&gt;         </span>
+<span class="co">#&gt; 4 M00007 Pentose phosphate pathw~ map00030 Pentose phosphat~ &lt;NA&gt;  &lt;NA&gt;         </span>
+<span class="co">#&gt; 5 M00004 Pentose phosphate pathw~ map01100 Metabolic pathwa~ &lt;NA&gt;  &lt;NA&gt;         </span>
+<span class="co">#&gt; 6 M00007 Pentose phosphate pathw~ map01100 Metabolic pathwa~ &lt;NA&gt;  &lt;NA&gt;         </span>
+<span class="co">#&gt; # ... with 13 more variables: Detail_cycle &lt;chr&gt;, Genes &lt;chr&gt;,</span>
 <span class="co">#&gt; #   Gene_description &lt;chr&gt;, Enzyme &lt;chr&gt;, KO &lt;chr&gt;, rbims_pathway &lt;chr&gt;,</span>
 <span class="co">#&gt; #   rbims_sub_pathway &lt;chr&gt;, Bin_10 &lt;int&gt;, Bin_12 &lt;int&gt;, Bin_56 &lt;int&gt;,</span>
 <span class="co">#&gt; #   Bin_113 &lt;int&gt;, Bin_1 &lt;int&gt;, Bin_2 &lt;int&gt;</span></code></pre></div>
-<p>You can export this table like this.</p>
+<p>You can export this to a table like this:</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/write.table.html">write.table</a></span><span class="op">(</span><span class="va">ko_bin_mapp</span>, <span class="st">"KEGG_mapped.tsv"</span>, quote <span class="op">=</span> <span class="cn">F</span>, sep <span class="op">=</span> <span class="st">"\t"</span>, row.names <span class="op">=</span> <span class="cn">F</span>, col.names <span class="op">=</span> <span class="cn">T</span><span class="op">)</span></code></pre></div>
 </div>
