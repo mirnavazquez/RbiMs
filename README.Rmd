@@ -49,6 +49,17 @@ library(rbims)
 
 ## Visit the [website](https://mirnavazquez.github.io/RbiMs/) for more detail. 
 
+## New function to write a metabolism workbook
+
+If you want to create a metabolism table in excel that includes KEGG and interproscan outputs you can use this new function.
+
+```
+library(rbims)
+write_metabolism("Interpro_test.tsv", 
+                 "path/to/KEGG/output/")
+```
+
+
 ## Contributions
 
 - Mirna Vázquez Rosas Landa - wrote the code. 

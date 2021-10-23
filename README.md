@@ -15,7 +15,7 @@ R tools for reconstructing bin metabolisms.
 ## Quick install
 
 We are actively developing rbims, so for now it is not available at CRAN
-or Bioconductor, however you can access to the development version from
+or Bioconductor, however you can access the development version from
 [GitHub](https://github.com/mirnavazquez/RbiMs).
 
 In R terminal:
@@ -43,12 +43,22 @@ library(rbims)
 
 ## Visit the [website](https://mirnavazquez.github.io/RbiMs/) for more detail.
 
+## New function to write a metabolism workbook
+
+If you want to create a metabolism table in excel that includes KEGG and
+interproscan outputs you can use this new function.
+
+    library(rbims)
+    write_metabolism("Interpro_test.tsv", 
+                     "path/to/KEGG/output/")
+
 ## Contributions
 
 -   Mirna Vázquez Rosas Landa - wrote the code.
--   Valerie De Anda and Pedro Leão - Cuarted the rbims database of
+-   Valerie De Anda and Pedro Leão - Curated the rbims database of
     metabolism.
 -   Sahil Shah - Helped with function documentation.
+-   Bryan Vernon - Editor.
 
 ## References
 
