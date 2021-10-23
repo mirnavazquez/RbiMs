@@ -22,11 +22,11 @@ First, load the rbims package.
 library(rbims)
 ```
 
-The function to use that information is `read_interpro`. This function can parse the information of the PFAM, INTERPRO, and KEGG ids. The KEGG analysis is just possible if [InterProScan](https://interproscan-docs.readthedocs.io/en/latest/) was run with the -pa option. As well tow output options are possible a wide profile or a long table. 
+The function to use that information is `read_interpro`. This function can parse the information of the PFAM, INTERPRO, and KEGG ids. The KEGG analysis is just possible if [InterProScan](https://interproscan-docs.readthedocs.io/en/latest/) was run with the -pa option. Two output options are also possible: a wide profile, or a long table. 
 
 - The `database` argument will parse the database. In this example, I will explore the PFAM output. 
 
-- The output format is chosen with the `profile` argument. When **profile = T**, then a wide output is obtained.
+- The output format is chosen with the `profile` argument. When **profile = T**, a wide output is obtained.
 
 If you want to follow the example you can download the use rbims [test](https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/Interpro_test.tsv) file. 
 
@@ -48,7 +48,7 @@ interpro_pfam_long<-read_interpro("Interpro_test.tsv", database="PFAM", profile 
 head(interpro_pfam_long)
 ```
 
-You can export this table in a table like this.
+You can export this to a table like this:
 
 ```{r}
 write.table(interpro_pfam_long, "Interpro.tsv", quote = F, sep = "\t", row.names = F, col.names = T)

@@ -3,12 +3,12 @@
 #' bins based on the KofamScan or KofamKoala output.
 #' @usage read_ko(data_kofam=NULL, data_kaas=NULL, data_interpro=NULL)
 #' @param data_kofam a path where KofamScan/KofamKoala output data are. They 
-#' should have the extension .txt and it is recommended all files in the path 
-#' are the ones that need to be read. Output data should have 5 columns with the
-#' bin names followed by the scaffold name divided by an “_”: bin_scaffoldXX.
+#' should have the extension .txt and all files in the path are the ones that
+#' need to be read. Output data should have 5 columns with the bin names 
+#' followed by the scaffold name divided by a '-' or '_': bin_scaffoldXX.
 #' @param data_kaas a data frame with 2 columns. Contigs are expected to 
 #' indicate in their names the bin name followed by the scaffold name 
-#' divided by an "_": bin_scaffoldXX. 
+#' divided by a '-' or '_': bin_scaffoldXX. 
 #' @param data_interpro a data frame output of read_interpro. This
 #' argument is used within mapping_KO.
 #' @details This function is part of a package used for the analysis 
@@ -18,7 +18,7 @@
 #' @importFrom purrr map_dfr 
 #' @examples
 #' \dontrun{
-#' read_ko("C:/Users/bins")
+#' read_ko("C:/Users/bins/")
 #' }
 #' @export
 read_ko<-function(data_kofam=NULL, 
@@ -33,22 +33,43 @@ read_ko<-function(data_kofam=NULL,
       suppressMessages( 
         final_files %>%
           map_dfr(read_table2, col_names = F) %>%
-      filter(str_detect(.data$X1, '\\*')) %>%
-      select(.data$X2, .data$X3) %>%
-      rename(Bin_name = .data$X2) %>%
-      rename(KO = .data$X3)
-    ))
+          filter(str_detect(.data$X1, '\\*')) %>%
+          select(.data$X2, .data$X3) %>%
+          rename(Bin_name = .data$X2) %>%
+          rename(KO = .data$X3)
+      ))
+    if (length(grep("[S|s]caffold", table_Kofam$Bin_name, invert = TRUE)) != 0){
+      stop("Must label scaffolds with the name 'Scaffold' or 'scaffold' after 
+  the bin name followed by a '-' or '_'.")
+    }
+    before<- sub("scaffold.*", "",table_Kofam$Bin_name)
+    extract<- substr(before, nchar(before)-1+1, nchar(before))
+    if (all(str_detect(extract, "[-|_]"))){
+    } else{
+      stop("Bin name and scaffold is not separated by '-' or '_'.")
+    }
   }
-  
   # Kaas_fun --------------------------------------------------------------####
   if(is.null(data_kofam) == F && is.null(data_kaas) == F || 
      is.null(data_kaas) == F){
+    files <- dir(path = data_kaas ,pattern ="*.txt")
+    final_files<-paste0(data_kaas, files)
     table_KAAS<-read.table(data_kaas, sep ="\t", header = F, fill=T) %>%
       as_tibble() %>%
       na_if("") %>%
       drop_na() %>%
       rename(Bin_name = .data$V1) %>%
       rename(KO = .data$V2)
+    if (length(grep("[S|s]caffold", table_Kofam$Bin_name, invert = TRUE)) != 0){
+      stop("Must label scaffolds with the name 'Scaffold' or 'scaffold' after 
+  the bin name followed by a '-' or '_'.")
+    }
+    before<- sub("scaffold.*", "",table_Kofam$Bin_name)
+    extract<- substr(before, nchar(before)-1+1, nchar(before))
+    if (all(str_detect(extract, "[-|_]"))){
+    } else{
+      stop("Bin name and scaffold is not separated by '-' or '_'.")
+    }
   }
   # Interpro --------------------------------------------------------------####
   if (is.null(data_interpro) == F){
@@ -70,5 +91,6 @@ read_ko<-function(data_kofam=NULL,
   if( is.null(data_kaas) == F){
     tabla_to_print<-calc_abundance(table_KAAS, analysis="KEGG")
   }
+  
   return(tabla_to_print)
 }

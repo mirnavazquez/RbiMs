@@ -23,17 +23,17 @@ library(rbims)
 
 # Example with PFAM database
 
-First I will read the InterProScan output in a long format and extract the PFAM abundance information.
+First, I will read the InterProScan output in a long format and extract the PFAM abundance information.
 
-If you want to follow the example you can download the use rbims [test](https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/Interpro_test.tsv) file. 
+If you want to follow this example, you can download the use rbims [test](https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/Interpro_test.tsv) file. 
 
 ```{r, eval=FALSE}
 interpro_pfam_long<-read_interpro(data_interpro = "Interpro_test.tsv", database="PFAM", profile = F)
 ```
 
-You can use the [subsetting functions](https://mirnavazquez.github.io/RbiMs/articles/Explore_KEGG_profile.html#metabolism-subsetting-1) to create subsets of the InterPro profile table. Here we will extract the most important PFAMs, and we need to use them as input the not profile output from read_interpro. 
+You can use the [subsetting functions](https://mirnavazquez.github.io/RbiMs/articles/Explore_KEGG_profile.html#metabolism-subsetting-1) to create subsets of the InterPro profile table. Here, we will extract the most important PFAMs, and we need to use them as an input, not the profile output from read_interpro. 
 
-The function [get_subset_pca](https://mirnavazquez.github.io/RbiMs/reference/get_subset_pca.html) calculates a PCA over the data to find the PFAM that explains variation within the data.
+The function [get_subset_pca](https://mirnavazquez.github.io/RbiMs/reference/get_subset_pca.html) calculates a PCA over the data to find the PFAM that explains the variation within the data.
 
 ```{r}
 important_PFAMs<-get_subset_pca(tibble_rbims=interpro_pfam_profile, 
@@ -49,7 +49,7 @@ head(important_PFAMs)
 
 Let's plot the results.
 
-[plot_heatmap](https://mirnavazquez.github.io/RbiMs/reference/plot_heatmap.html) can help to explore the results. We can perform two types of analysis; if we set the distance option as **TRUE**, we can plot to show how the samples could cluster based on the protein domains.
+[plot_heatmap](https://mirnavazquez.github.io/RbiMs/reference/plot_heatmap.html) can help explore the results. We can perform two types of analyses; if we set the distance option as **TRUE**, we can plot to show how the samples could cluster based on the protein domains.
 
 ```{r}
 plot_heatmap(important_PFAMs, y_axis=PFAM, analysis = "INTERPRO", distance = T)
@@ -77,9 +77,9 @@ plot_bubble(important_PFAMs,
             color_character = Clades)
 ```
 
-# Example the INTERPRO database
+# Example with INTERPRO database
 
-First I will read the InterProScan output in a wide format and extract the PFAM abundance information.
+First, I will read the InterProScan output in a wide format and extract the PFAM abundance information.
 
 ```{r, eval=FALSE}
 interpro_INTERPRO_profile<-read_interpro(data_interpro = "Interpro_test.tsv", database="INTERPRO", profile = F)
@@ -90,13 +90,13 @@ interpro_INTERPRO_profile<-read_interpro(data_interpro = "Interpro_test.tsv", da
 head(interpro_INTERPRO_profile)
 ```
 
-We are going to look for the InterProScan IDs that conform the `DNA topoisomerase 1`. For that we will create a vector of the IDs associated to that enzyme.
+We are going to look for the InterProScan IDs that conform the `DNA topoisomerase 1`. To do this, we will create a vector of the IDs associated to that enzyme.
 
 ```{r}
 DNA_topoisomerase_1<-c("IPR013497", "IPR023406", "IPR013824")
 ```
 
-With the function [get_subset_pathway](https://mirnavazquez.github.io/RbiMs/reference/get_subset_pathway.html) we can crate a subset of the INTERPRO table.
+With the function [get_subset_pathway](https://mirnavazquez.github.io/RbiMs/reference/get_subset_pathway.html) we can create a subset of the INTERPRO table.
 
 ```{r}
 DNA_tipo_INTERPRO<-get_subset_pathway(interpro_INTERPRO_profile, type_of_interest_feature=INTERPRO,
@@ -118,7 +118,7 @@ plot_bubble(DNA_tipo_INTERPRO,
             color_character = Sample_site)
 ```
 
-# Example the KEGG database
+# Example with KEGG database
 
 First, I will read the InterProScan output in a long format and extract the KEGG information. When you use the `KEGG` option, the profile option is disabled. 
 
@@ -132,7 +132,7 @@ head(interpro_KEGG_long)
 
 ## Mapping INTERPRO to KEGG database
 
-We can use the [mapping_ko](https://mirnavazquez.github.io/RbiMs/reference/mapping_ko.html) function here to get the extended KEGG table.
+We can use the [mapping_ko](https://mirnavazquez.github.io/RbiMs/reference/mapping_ko.html) function here, to get the extended KEGG table.
 
 ```{r, eval=FALSE}
 interpro_map<-mapping_ko(tibble_interpro = interpro_KEGG_long)
