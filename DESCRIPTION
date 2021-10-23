@@ -12,7 +12,7 @@ License: GPL (>= 3) + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 Suggests: 
     knitr,
     rmarkdown,
@@ -38,7 +38,8 @@ Imports:
     ComplexHeatmap,
     stats,
     Cairo,
-    purrr
+    purrr,
+    writexl
 Language: en-US
 URL: https://github.com/mirnavazquez/RbiMs
 BugReports: https://github.com/mirnavazquez/RbiMs/issues

@@ -3,8 +3,11 @@
 #' a profile table of abundance with the hits of the KEGG, PFAM or 
 #' INTERPRO databases. The output of KEGG database can be used within 
 #' mapping_ko.
-#' @usage read_interpro(data_interpro, database=c("KEGG", "PFAM", 
-#' "INTERPRO"), profile = TRUE)
+#' @usage read_interpro(data_interpro, 
+#' database=c("KEGG", "Pfam", "INTERPRO",
+#' "TIGRFAM", "SUPERFAMILY", "SMART", "SFLD", "ProSiteProfiles",
+#' "ProSitePatterns", "ProDom", "PRINTS", "PIRSF", 
+#' "MobiDBLite","Hamap", "Gene3D", "Coils", "CDD"), profile = TRUE)
 #' @param data_interpro a table, output of InterProScan on tsv format.
 #' InterProScan should have been run with -pa option to be able to use the 
 #' KEGG option, in the database argument.
@@ -17,13 +20,19 @@
 #' @import tibble dplyr stringr tidyr janitor rlang
 #' @examples
 #' \dontrun{
-#' read_interpro(data_interpro="InterProScan.tsv", database="PFAM", 
+#' read_interpro(data_interpro="inst/extdata/Interpro_test.tsv", database="INTERPRO", 
 #' profile = F)
 #' }
 #' @export
 read_interpro<-function(data_interpro, 
-                        database=c("KEGG", "PFAM", "INTERPRO"),
+                        database=c("KEGG", "Pfam", "INTERPRO", "TIGRFAM", 
+                                   "SUPERFAMILY", "SMART", "SFLD", "ProSiteProfiles",
+                                   "ProSitePatterns", "ProDom", "PRINTS", "PIRSF", 
+                                   "MobiDBLite","Hamap", "Gene3D", "Coils", "CDD"),
                         profile=TRUE){
+  possible_databases<-c("TIGRFAM", "SUPERFAMILY", "SMART", "SFLD", "ProSiteProfiles",
+                        "ProSitePatterns", "ProDom", "PRINTS", "PIRSF", "MobiDBLite",
+                        "Hamap", "Gene3D", "Coils", "CDD", "Pfam")
   if(database == "KEGG") {
     # Extract KEGG----------------------------------------------####
     table_interpro<-suppressWarnings(
@@ -43,6 +52,7 @@ read_interpro<-function(data_interpro,
                          distinct() %>%
                          rename(Scaffold_full_name = .data$X1)
       ))
+    
     # Check enzymes -------------------------------------------------------####
     while(any(str_detect(table_interpro$Enzyme, pattern = "\\+")) == T){
       table_interpro<-table_interpro %>%
@@ -51,26 +61,26 @@ read_interpro<-function(data_interpro,
     } 
     interpro<- table_interpro %>%
       mutate(Enzyme=str_replace_all(.data$Enzyme, "^", "ec:"))
-  } else if (database == "PFAM") {
-    # Extract PFAM -------------------------------------------------------####
+  } else if (database  %in% possible_databases) {
+    # Extract other databases ---------------------------------------------####
     table_interpro_1<-suppressWarnings(
       suppressMessages(read_delim(data_interpro,
                                   delim="\t", col_names = F) %>%
                          drop_na(.data$X12) %>%
-                         filter(.data$X4 == "Pfam" ) %>%
+                         filter(.data$X4 == database ) %>%
                          select(.data$X1, .data$X5, .data$X6) %>%
                          distinct() %>%
                          rename(Bin_name = .data$X1) %>%
-                         rename(pfam = .data$X5) %>%
+                         rename(!!database := .data$X5) %>%
                          rename(domain_name = .data$X6) 
       ))
     
     table_interpro<-table_interpro_1 %>%
-      calc_abundance(analysis = "PFAM")
+      calc_abundance(analysis = database)
     
     if(isTRUE(profile)){
       interpro<-table_interpro %>%
-      select(-.data$Scaffold_name) %>%
+        select(-.data$Scaffold_name) %>%
         distinct() %>%
         pivot_wider(names_from= "Bin_name", values_from="Abundance", 
                     values_fill = 0)
