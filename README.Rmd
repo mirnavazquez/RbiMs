@@ -27,7 +27,7 @@ R tools for reconstructing bin metabolisms.
 
 ## Quick install
 
-We are actively developing rbims, so for now it is not available at CRAN or Bioconductor, however you can access the development version from [GitHub](https://github.com/mirnavazquez/RbiMs).
+We are actively developing rbims, for now it is not available at CRAN or Bioconductor, however you can access the development version from [GitHub](https://github.com/mirnavazquez/RbiMs).
 
 In R terminal:
 
