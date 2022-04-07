@@ -1,7 +1,7 @@
 #' @title Read the output of KofamScan/KofamKoala or KAAS.
-#' @description read_ko calculates the abundance of each KO within the 
+#' @description read_ko_shiny calculates the abundance of each KO within the 
 #' bins based on the KofamScan or KofamKoala output.
-#' @usage read_ko(data_kofam=NULL, data_kaas=NULL, data_interpro=NULL)
+#' @usage read_ko_shiny(data_kofam=NULL, data_kaas=NULL, data_interpro=NULL)
 #' @param data_kofam a file output of KofamScan/KofamKoala. They 
 #' should have the extension .txt and all files in the path are the ones that
 #' need to be read. Output data should have 5 columns with the bin names 
@@ -18,9 +18,9 @@
 #' @importFrom purrr map_dfr 
 #' @examples
 #' \dontrun{
-#' read_ko("C:/Users/bins/")
+#' read_ko_shiny("Kofam_output")
 #' }
-#' @noRd
+#' @export
 read_ko_shiny<-function(data_kofam=NULL, 
                   data_kaas=NULL, 
                   data_interpro=NULL){
