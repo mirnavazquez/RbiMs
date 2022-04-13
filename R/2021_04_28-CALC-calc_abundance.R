@@ -15,7 +15,7 @@ calc_abundance<-function(tabla_toabundance,
   # Read table ------------------------------------------------------------####
   KO_raw<-tabla_toabundance %>%
     separate(.data$Bin_name, c("Bin_name", "Scaffold_name"),
-             sep = "[_|-][s|S]caffold|-S") %>%
+             sep = "[_|-][s|S]caffold") %>%
     mutate(Scaffold_name = paste0( "scaffold", .data$Scaffold_name),
            .data$Scaffold_name) %>%
     unite("Scaffold_name", c("Bin_name", "Scaffold_name"), remove=FALSE)
