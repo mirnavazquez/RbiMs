@@ -31,7 +31,7 @@ The function to use that information is `read_interpro`. This function can parse
 If you want to follow the example you can download the use rbims [test](https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/Interpro_test.tsv) file. 
 
 ```{r, eval=FALSE}
-interpro_pfam_profile<-read_interpro(data_interpro = "Interpro_test.tsv", database="PFAM", profile = T)
+interpro_pfam_profile<-read_interpro(data_interpro = "Interpro_test.tsv", database="Pfam", profile = T)
 ```
 
 ```{r}
@@ -41,7 +41,7 @@ head(interpro_pfam_profile)
 Or print a long table **profile = F**. 
 
 ```{r, eval=FALSE}
-interpro_pfam_long<-read_interpro("Interpro_test.tsv", database="PFAM", profile = F)
+interpro_pfam_long<-read_interpro("Interpro_test.tsv", database="Pfam", profile = F)
 ```
 
 ```{r}
@@ -50,7 +50,7 @@ head(interpro_pfam_long)
 
 You can export this to a table like this:
 
-```{r}
+```{r, eval=FALSE}
 write.table(interpro_pfam_long, "Interpro.tsv", quote = F, sep = "\t", row.names = F, col.names = T)
 ```
 

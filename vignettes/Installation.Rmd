@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 ## Quick install
 
-We are actively developing rbims, so for now it is not available at CRAN or Biocondiuctor, however you can access the development version from
+We are actively developing rbims, so for now it is not available at CRAN or Bioconductor, however you can access the development version from
 [GitHub](https://github.com/mirnavazquez/RbiMs) like this:
 
 Install devtools in the case you dont have it.

@@ -54,11 +54,10 @@ interproscan outputs you can use this new function.
 
 ## Contributions
 
--   Mirna Vázquez Rosas Landa - wrote the code.
--   Valerie De Anda and Pedro Leão - Curated the rbims database of
-    metabolism.
--   Sahil Shah - Helped with function documentation.
--   Bryan Vernon - Editor.
+- Mirna Vázquez Rosas Landa - wrote the code. 
+- Kathryn Appler, Valerie De Anda and Pedro Leão  - Curated the rbims database of metabolism. 
+- Sahil Shah - Helped with function documentation.
+- Bryan Vernon - Editor and shiny app developer.
 
 ## References
 

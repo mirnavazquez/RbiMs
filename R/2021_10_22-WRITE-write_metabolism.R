@@ -85,18 +85,21 @@ write_metabolism<-function(
   message("Creating the Metabolism book")
   Pfam<-read_interpro(data_interpro, database="Pfam", profile = F) %>%
     rename(pfam_domain_name = .data$domain_name)   %>%
+    mutate(Abundance=as.character(.data$Abundance))  %>%
     mutate(
       across(everything(), ~replace_na(.x, "---"))
     ) %>%
     mutate_at('Abundance', as.integer)
   INTERPRO<-read_interpro(data_interpro, database="INTERPRO", profile = F)%>%
     rename(INTERPRO_domain_name = .data$domain_name)  %>%
+    mutate(Abundance=as.character(.data$Abundance))  %>%
     mutate(
       across(everything(), ~replace_na(.x, "---"))
     ) %>%
     mutate_at('Abundance', as.integer)
   TIGRFAM<-read_interpro(data_interpro, database="TIGRFAM", profile = F)%>%
     rename(TIGRFAM_domain_name = .data$domain_name)  %>%
+    mutate(Abundance=as.character(.data$Abundance))  %>%
     mutate(
       across(everything(), ~replace_na(.x, "---"))
     ) %>%
@@ -104,18 +107,21 @@ write_metabolism<-function(
   SUPERFAMILY<-read_interpro(data_interpro, database="SUPERFAMILY", 
                              profile = F) %>%
     rename(SUPERFAMILY_domain_name = .data$domain_name)  %>%
+    mutate(Abundance=as.character(.data$Abundance))  %>%
     mutate(
       across(everything(), ~replace_na(.x, "---"))
     ) %>%
     mutate_at('Abundance', as.integer)
   SMART<-read_interpro(data_interpro, database="SMART", profile = F)%>%
     rename(SMART_domain_name = .data$domain_name)  %>%
+    mutate(Abundance=as.character(.data$Abundance))  %>%
     mutate(
       across(everything(), ~replace_na(.x, "---"))
     ) %>%
     mutate_at('Abundance', as.integer)
   SFLD<-read_interpro(data_interpro, database="SFLD", profile = F)%>%
     rename(SFLD_domain_name = .data$domain_name)  %>%
+    mutate(Abundance=as.character(.data$Abundance))  %>%
     mutate(
       across(everything(), ~replace_na(.x, "---"))
     ) %>%
@@ -123,6 +129,7 @@ write_metabolism<-function(
   ProSiteProfiles<-read_interpro(data_interpro, database="ProSiteProfiles", 
                                  profile = F)%>%
     rename(ProSiteProfiles_domain_name = .data$domain_name)  %>%
+    mutate(Abundance=as.character(.data$Abundance))  %>%
     mutate(
       across(everything(), ~replace_na(.x, "---"))
     ) %>%
@@ -130,24 +137,28 @@ write_metabolism<-function(
   ProSitePatterns<-read_interpro(data_interpro, database="ProSitePatterns", 
                                  profile = F)%>%
     rename(ProSitePatterns_domain_name = .data$domain_name)  %>%
+    mutate(Abundance=as.character(.data$Abundance))  %>%
     mutate(
       across(everything(), ~replace_na(.x, "---"))
     ) %>%
     mutate_at('Abundance', as.integer)
   ProDom<-read_interpro(data_interpro, database="ProDom", profile = F)%>%
     rename(ProDom_domain_name = .data$domain_name)   %>%
+    mutate(Abundance=as.character(.data$Abundance))  %>%
     mutate(
       across(everything(), ~replace_na(.x, "---"))
     ) %>%
     mutate_at('Abundance', as.integer)
   PRINTS<-read_interpro(data_interpro, database="PRINTS", profile = F)%>%
     rename(PRINTS_domain_name = .data$domain_name)   %>%
+    mutate(Abundance=as.character(.data$Abundance))  %>%
     mutate(
       across(everything(), ~replace_na(.x, "---"))
     ) %>%
     mutate_at('Abundance', as.integer)
   PIRSF<-read_interpro(data_interpro, database="PIRSF", profile = F)%>%
     rename(PIRSF_domain_name = .data$domain_name)  %>%
+    mutate(Abundance=as.character(.data$Abundance))  %>%
     mutate(
       across(everything(), ~replace_na(.x, "---"))
     ) %>%
@@ -155,30 +166,35 @@ write_metabolism<-function(
   MobiDBLite<-read_interpro(data_interpro, database="MobiDBLite", 
                             profile = F)%>%
     rename(MobiDBLite_domain_name = .data$domain_name)  %>%
+    mutate(Abundance=as.character(.data$Abundance))  %>%
     mutate(
       across(everything(), ~replace_na(.x, "---"))
     ) %>%
     mutate_at('Abundance', as.integer)
   Hamap<-read_interpro(data_interpro, database="Hamap", profile = F)%>%
     rename(Hamap_domain_name = .data$domain_name)  %>%
+    mutate(Abundance=as.character(.data$Abundance))  %>%
     mutate(
       across(everything(), ~replace_na(.x, "---"))
     ) %>%
     mutate_at('Abundance', as.integer)
   Gene3D<-read_interpro(data_interpro, database="Gene3D", profile = F)%>%
     rename(Gene3D_domain_name = .data$domain_name)  %>%
+    mutate(Abundance=as.character(.data$Abundance))  %>%
     mutate(
       across(everything(), ~replace_na(.x, "---"))
     ) %>%
     mutate_at('Abundance', as.integer)
   Coils<-read_interpro(data_interpro, database="Coils", profile = F)%>%
     rename(Coils_domain_name = .data$domain_name)  %>%
+    mutate(Abundance=as.character(.data$Abundance))  %>%
     mutate(
       across(everything(), ~replace_na(.x, "---"))
     ) %>%
     mutate_at('Abundance', as.integer)
   CDD<-read_interpro(data_interpro, database="CDD", profile = F)%>%
     rename(CDD_domain_name = .data$domain_name)  %>%
+    mutate(Abundance=as.character(.data$Abundance))  %>%
     mutate(
       across(everything(), ~replace_na(.x, "---"))
     ) %>%

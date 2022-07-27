@@ -38,7 +38,7 @@ The function [get_subset_pca](https://mirnavazquez.github.io/RbiMs/reference/get
 ```{r}
 important_PFAMs<-get_subset_pca(tibble_rbims=interpro_pfam_profile, 
                cos2_val=0.95,
-               analysis="Pfam")
+               analysis="PFAM")
 ```
 
 ```{r}
