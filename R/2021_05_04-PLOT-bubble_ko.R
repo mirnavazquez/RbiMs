@@ -27,6 +27,8 @@
 #' @param color_pallet optional. a character vector of colors to use.
 #' @param range_size optional. a numeric vector indicating 
 #' the range size of the dots.
+#' @param name_size optional. If True it calculate abundance, if false calculate
+#' any calc valid values.
 #' @param x_labs optional. If FALSE it will set the x lab to NULL. 
 #' @param y_labs optional. If FALSE it will set the y lab to NULL. 
 #' @param text_x optional. A numeric vector indicating the size
@@ -54,7 +56,8 @@ bubble_ko<-function(tibble_ko,
                     x_labs=TRUE,
                     y_labs=TRUE,
                     text_x=NULL,
-                    text_y=NULL){
+                    text_y=NULL,
+                    name_size=NULL){
   # Enquoting -------------------------------------------------------------####
   x_axis_enquo <- enquo(x_axis)
   y_axis_enquo <- enquo(y_axis)
@@ -97,7 +100,11 @@ bubble_ko<-function(tibble_ko,
     text_y<-7
   }
   # Check calc --------------------------------------------------------####
-  if(calc == "Abundance"){
+  
+  if(is.null(calc) == T){
+    tibble_ko_mod<-calc_binary(tibble_ko, !!y_axis_enquo, binary=FALSE) %>%
+      rename(tmp = Abundance)
+  } else if (calc == "Abundance"){
     tibble_ko_mod<-calc_binary(tibble_ko, !!y_axis_enquo, binary=FALSE) %>%
       rename(tmp = Abundance)
   } else if (calc == "Binary") {
@@ -115,6 +122,9 @@ bubble_ko<-function(tibble_ko,
       tibble_ko_mod <-rename(tibble_ko, tmp = Percentage)
     }
   }
+  
+  
+  
   # Transform interger ----------------------------------------------------####
   Table_with_percentage<-tibble_ko_mod %>%
     select({{y_axis_enquo}}, Bin_name, tmp) %>%
@@ -125,6 +135,7 @@ bubble_ko<-function(tibble_ko,
       tmp == 0 ~ NA_integer_,
       TRUE ~ as.integer(tmp)
     )) 
+  
   # Join data experiment --------------------------------------------------####
   if(is.null(data_experiment) == F){
     Table_with_percentage<-Table_with_percentage %>%
@@ -152,6 +163,12 @@ bubble_ko<-function(tibble_ko,
   y_axis_enquo <- enquo(y_axis)
   x_axis_label <- as_label(x_axis_enquo)
   y_axis_label <- as_label(y_axis_enquo)
+  # Name size -------------------------------------------------------------####
+  if(is.null(name_size) == T){
+    name_size = "Abundance"
+  } else if (is.null(name_size) == F) {
+    name_size = calc
+  }
   # Plot ------------------------------------------------------------------####
   if(x_axis_label == "Bin_name") {
     plot_bubble<-ggplot(Table_with_percentage,
@@ -171,7 +188,9 @@ bubble_ko<-function(tibble_ko,
                                        vjust = 1),
             axis.text.y = element_text(size=text_y))+
       xlab(x_labs) + 
-      ylab(y_axis_enquo)
+      ylab(y_axis_enquo) +
+      labs(size=name_size)
+    
   } else if (x_axis_label != "Bin_name" ) {
     plot_bubble<-ggplot(Table_with_percentage,
                         aes(x= factor(!!x_axis_enquo, 
@@ -190,8 +209,10 @@ bubble_ko<-function(tibble_ko,
                                        vjust = 1),
             axis.text.y = element_text(size=text_y))+
       xlab(x_labs) + 
-      ylab(y_labs)
+      ylab(y_labs) +
+      labs(size=name_size)
   }
   
   return(plot_bubble)
 }
+
