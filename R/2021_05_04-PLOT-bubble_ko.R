@@ -103,23 +103,23 @@ bubble_ko<-function(tibble_ko,
   
   if(is.null(calc) == T){
     tibble_ko_mod<-calc_binary(tibble_ko, !!y_axis_enquo, binary=FALSE) %>%
-      rename(tmp = Abundance)
+      rename(tmp = .data$Abundance)
   } else if (calc == "Abundance"){
     tibble_ko_mod<-calc_binary(tibble_ko, !!y_axis_enquo, binary=FALSE) %>%
-      rename(tmp = Abundance)
+      rename(tmp = .data$Abundance)
   } else if (calc == "Binary") {
     tibble_ko_mod<-calc_binary(tibble_ko, !!y_axis_enquo) %>%
-      rename(tmp = Presence_absence)
+      rename(tmp = .data$Presence_absence)
   } else if (calc == "Percentage") {
     tibble_ko_mod<-calc_percentage(tibble_ko, !!y_axis_enquo) %>%
-      rename(tmp = Percentage)
+      rename(tmp = .data$Percentage)
   } else if (calc == "None") {
     if( "Presence_absence" %in% colnames(tibble_ko)){
-      tibble_ko_mod <-rename(tibble_ko, tmp = Presence_absence)
+      tibble_ko_mod <-rename(tibble_ko, tmp = .data$Presence_absence)
     } else if ( "Abundance" %in% colnames(tibble_ko)){
-      tibble_ko_mod <-rename(tibble_ko, tmp = Abundance)
+      tibble_ko_mod <-rename(tibble_ko, tmp = .data$Abundance)
     } else if ( "Percentage" %in% colnames(tibble_ko)){
-      tibble_ko_mod <-rename(tibble_ko, tmp = Percentage)
+      tibble_ko_mod <-rename(tibble_ko, tmp = .data$Percentage)
     }
   }
   
@@ -127,13 +127,13 @@ bubble_ko<-function(tibble_ko,
   
   # Transform interger ----------------------------------------------------####
   Table_with_percentage<-tibble_ko_mod %>%
-    select({{y_axis_enquo}}, Bin_name, tmp) %>%
+    select({{y_axis_enquo}}, .data$Bin_name, .data$tmp) %>%
     drop_na() %>%
     distinct()  %>%
     mutate_at('tmp', as.integer) %>%
     mutate(tmp = case_when(
-      tmp == 0 ~ NA_integer_,
-      TRUE ~ as.integer(tmp)
+      .data$tmp == 0 ~ NA_integer_,
+      TRUE ~ as.integer(.data$tmp)
     )) 
   
   # Join data experiment --------------------------------------------------####
@@ -176,7 +176,7 @@ bubble_ko<-function(tibble_ko,
                                       levels = !!order_bins),
                             y= factor(!!y_axis_enquo, 
                                       levels = !!order_metabolism),
-                            size= tmp,
+                            size= .data$tmp,
                             color= !!color_character_enquo)) +
       geom_point(alpha=0.5) +
       scale_size(range =range_size) +
@@ -197,7 +197,7 @@ bubble_ko<-function(tibble_ko,
                                       levels = !!order_metabolism),
                             y= factor(!!y_axis_enquo, 
                                       levels = !!order_bins),
-                            size= tmp,
+                            size= .data$tmp,
                             color= !!color_character_enquo)) +
       geom_point(alpha=0.5) +
       scale_size(range = c(1,5)) +
