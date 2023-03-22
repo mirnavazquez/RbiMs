@@ -16,7 +16,7 @@
 #' @param calc a character indicating with type of calc should 
 #' be done to plot the results. Valid values are "Abundance", "Binary", 
 #' "Percentage", and "None". If you chose none you are spected to use a
-#' tibble table obtained from calc_binary or calc_percentage. 
+#' tibble table obtained from c |alc_binary or calc_percentage. 
 #' @param data_experiment optional. a data frame object 
 #' containing metadata information.
 #' @param color_character optional. a string column name of the metadata 
@@ -99,30 +99,30 @@ bubble_ko<-function(tibble_ko,
   # Check calc --------------------------------------------------------####
   if(calc == "Abundance"){
     tibble_ko_mod<-calc_binary(tibble_ko, !!y_axis_enquo, binary=FALSE) %>%
-      rename(tmp = .data$Abundance)
+      rename(tmp = Abundance)
   } else if (calc == "Binary") {
     tibble_ko_mod<-calc_binary(tibble_ko, !!y_axis_enquo) %>%
-      rename(tmp = .data$Presence_absence)
+      rename(tmp = Presence_absence)
   } else if (calc == "Percentage") {
     tibble_ko_mod<-calc_percentage(tibble_ko, !!y_axis_enquo) %>%
-      rename(tmp = .data$Percentage)
+      rename(tmp = Percentage)
   } else if (calc == "None") {
     if( "Presence_absence" %in% colnames(tibble_ko)){
-      tibble_ko_mod <-rename(tibble_ko, tmp = .data$Presence_absence)
+      tibble_ko_mod <-rename(tibble_ko, tmp = Presence_absence)
     } else if ( "Abundance" %in% colnames(tibble_ko)){
-      tibble_ko_mod <-rename(tibble_ko, tmp = .data$Abundance)
+      tibble_ko_mod <-rename(tibble_ko, tmp = Abundance)
     } else if ( "Percentage" %in% colnames(tibble_ko)){
-      tibble_ko_mod <-rename(tibble_ko, tmp = .data$Percentage)
+      tibble_ko_mod <-rename(tibble_ko, tmp = Percentage)
     }
   }
   # Transform interger ----------------------------------------------------####
   Table_with_percentage<-tibble_ko_mod %>%
-    select({{y_axis_enquo}}, .data$Bin_name, .data$tmp) %>%
+    select({{y_axis_enquo}}, Bin_name, tmp) %>%
     drop_na() %>%
     distinct()  %>%
     mutate_at('tmp', as.integer) %>%
     mutate(tmp = case_when(
-      .data$tmp == 0 ~ NA_integer_,
+      tmp == 0 ~ NA_integer_,
       TRUE ~ as.integer(tmp)
     )) 
   # Join data experiment --------------------------------------------------####
@@ -159,7 +159,7 @@ bubble_ko<-function(tibble_ko,
                                       levels = !!order_bins),
                             y= factor(!!y_axis_enquo, 
                                       levels = !!order_metabolism),
-                            size= .data$tmp,
+                            size= tmp,
                             color= !!color_character_enquo)) +
       geom_point(alpha=0.5) +
       scale_size(range =range_size) +
@@ -178,7 +178,7 @@ bubble_ko<-function(tibble_ko,
                                       levels = !!order_metabolism),
                             y= factor(!!y_axis_enquo, 
                                       levels = !!order_bins),
-                            size= .data$tmp,
+                            size= tmp,
                             color= !!color_character_enquo)) +
       geom_point(alpha=0.5) +
       scale_size(range = c(1,5)) +
