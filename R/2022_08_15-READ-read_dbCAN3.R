@@ -57,7 +57,7 @@ read_dbcan3<-function(dbcan_path, write=FALSE, profile=TRUE){
       dplyr::select(.data$Bin_name, .data$dbCAN_names, domain_name=.data$dbCAN, .data$Signalp ) %>%
       calc_abundance(analysis = "dbCAN") %>% 
       dplyr::select(-.data$Scaffold_name)) %>% group_by(
-        Bin_name,dbCAN,  domain_name, Signalp) %>% summarise_if(is.numeric, sum) #juntando
+        .data$Bin_name,.data$dbCAN,  .data$domain_name, .data$Signalp) %>% summarise_if(is.numeric, sum) #juntando
   
   # Reformating data ----------------------------------------------------------####
   
@@ -73,7 +73,7 @@ read_dbcan3<-function(dbcan_path, write=FALSE, profile=TRUE){
                                      "glycosyltransferases [GTs]",
                                    str_detect(.data$dbCAN, "PL") ~ 
                                      "polysaccharide lyases [PLs]")) %>% group_by(
-                                       dbCAN, Bin_name, domain_name) %>% summarize_if(
+                                       .data$dbCAN, data$Bin_name, .data$domain_name) %>% summarize_if(
                                          is.numeric, sum) %>%   pivot_wider(
                                            names_from = "Bin_name", values_from = "Abundance") %>% ungroup() %>% mutate_if(
                                              is.numeric, ~replace(., is.na(.), 0)) 

@@ -1,7 +1,7 @@
 #' @title Read the output of KofamScan/KofamKoala or KAAS.
 #' @description read_ko calculates the abundance of each KO within the 
 #' bins based on the KofamScan or KofamKoala output.
-#' @usage read_ko(data_kofam=NULL, data_kaas=NULL, data_interpro=NULL)
+#' @usage read_ko(data_kofam=NULL, data_kaas=NULL, data_interpro=NULL, write=FALSE)
 #' @param data_kofam a path where KofamScan/KofamKoala output data are. They 
 #' should have the extension .txt and all files in the path are the ones that
 #' need to be read. Output data should have 5 columns with the bin names 
@@ -11,6 +11,9 @@
 #' divided by a '-' or '_': bin_scaffoldXX. 
 #' @param data_interpro a data frame output of read_interpro. This
 #' argument is used within mapping_KO.
+#' @param write  a logical value indicating to save the data imported 
+#' as a formatted table with .tsv extension with a time stamp and it will be 
+#' located in your current workin directory
 #' @details This function is part of a package used for the analysis 
 #' of bins metabolism.
 #' @import dplyr tidyr readr stringr rlang
@@ -18,12 +21,12 @@
 #' @importFrom purrr map_dfr 
 #' @examples
 #' \dontrun{
-#' read_ko("C:/Users/bins/")
+#' read_ko("C:/Users/bins/", write=FALSE)
 #' }
 #' @export
 read_ko<-function(data_kofam=NULL, 
                   data_kaas=NULL, 
-                  data_interpro=NULL){
+                  data_interpro=NULL, write=FALSE){
   # Kofam_fun -------------------------------------------------------------####
   if( is.null(data_kofam) == F && is.null(data_kaas) == F || 
       is.null(data_kofam) == F){
@@ -42,7 +45,7 @@ read_ko<-function(data_kofam=NULL,
       stop("Must label scaffolds with the name 'Scaffold' or 'scaffold' after 
   the bin name followed by a '-' or '_'.")
     }
-    before<- sub("[S|s]caffold.*", "",table_Kofam$Bin_name)
+    before<- sub("scaffold.*", "",table_Kofam$Bin_name)
     extract<- substr(before, nchar(before)-1+1, nchar(before))
     if (all(str_detect(extract, "[-|_]"))){
     } else{
@@ -91,6 +94,20 @@ read_ko<-function(data_kofam=NULL,
   if( is.null(data_kaas) == F){
     tabla_to_print<-calc_abundance(table_KAAS, analysis="KEGG")
   }
+
+  # Write data or not --------------------------------------------------------------####
   
+  if(isTRUE(write)){
+    write_tsv(tabla_to_print, paste0("ko_output_", format(Sys.time(), "%b_%d_%X"), ".tsv"))
+  }
+  else{
+    return(tabla_to_print)
+  }
+  
+  # Return ----------------------------------------------------------------####
   return(tabla_to_print)
 }
+
+
+
+
