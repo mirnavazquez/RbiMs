@@ -26,7 +26,8 @@
 #' @export
 read_ko<-function(data_kofam=NULL, 
                   data_kaas=NULL, 
-                  data_interpro=NULL, write=FALSE){
+                  data_interpro=NULL, 
+                  write=FALSE){
   # Kofam_fun -------------------------------------------------------------####
   if( is.null(data_kofam) == F && is.null(data_kaas) == F || 
       is.null(data_kofam) == F){
