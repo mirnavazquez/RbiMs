@@ -2,7 +2,7 @@
 #' @description Calculate the abundance of certain entry, based on the
 #' number of times it appears.
 #' @usage calc_abundance(tabla_toabundance, 
-#' analysis=c("KEGG", "PFAM", "INTERPRO"))
+#' analysis=c("KEGG", "PFAM", "INTERPRO", "dbCAN"))
 #' @param tabla_toabundance a data frame object with the values to be 
 #' calculated.
 #' @param analysis a character, indicating which analysis it is doing.
@@ -11,7 +11,7 @@
 #' @import  tibble dplyr stringr tidyr  rlang
 #' @noRd
 calc_abundance<-function(tabla_toabundance,
-                         analysis=c("KEGG", "Pfam", "INTERPRO")){
+                         analysis=c("KEGG", "Pfam", "INTERPRO", "dbCAN")){
   # Read table ------------------------------------------------------------####
   KO_raw<-tabla_toabundance %>%
     separate(.data$Bin_name, c("Bin_name", "Scaffold_name"),
@@ -87,6 +87,10 @@ calc_abundance<-function(tabla_toabundance,
     KO_raw <- KO_raw %>% 
       rename(tmp = .data$CDD) %>%
       distinct()
+  } else if ( analysis == "dbCAN"){
+    KO_raw <- KO_raw %>% 
+      rename(tmp = .data$dbCAN_names) %>%
+      distinct()
   }
   # Calculate abundance ---------------------------------------------------####
   KO_abundance<-KO_raw %>%
@@ -151,7 +155,12 @@ calc_abundance<-function(tabla_toabundance,
   } else if ( analysis == "CDD"){
     final_table <- final_table_1 %>% 
       rename(CDD = .data$tmp)
+  } else if ( analysis == "dbCAN"){
+    final_table <- final_table_1 %>% 
+      rename(dbCAN = .data$tmp)
   } 
+  
   
   return(final_table)
 } 
+
