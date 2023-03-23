@@ -8,15 +8,15 @@
 #' order_metabolism=NULL, color_pallet=NULL, range_size=NULL, 
 #' x_labs=TRUE, y_labs=TRUE, text_x=NULL, text_y=NULL)
 #' @param tibble_ko a tibble object, created with the mapping_ko 
-#' or get_subset_* functions. 
+#' get_subset_* functions or with importing functions. 
 #' @param x_axis a string, a column name of the metabolism table. 
 #' It determined the x axis label.
 #' @param y_axis a string, a column name of the metabolism table. 
 #' It determined the y axis label.
 #' @param calc a character indicating with type of calc should 
 #' be done to plot the results. Valid values are "Abundance", "Binary", 
-#' "Percentage", and "None". If you chose none you are spected to use a
-#' tibble table obtained from c |alc_binary or calc_percentage. 
+#' "Percentage", and "None". If you chose none you are expected to use a
+#' tibble table obtained from calc_binary or calc_percentage. 
 #' @param data_experiment optional. a data frame object 
 #' containing metadata information.
 #' @param color_character optional. a string column name of the metadata 
@@ -27,8 +27,6 @@
 #' @param color_pallet optional. a character vector of colors to use.
 #' @param range_size optional. a numeric vector indicating 
 #' the range size of the dots.
-#' @param name_size optional. If True it calculate abundance, if false calculate
-#' any calc valid values.
 #' @param x_labs optional. If FALSE it will set the x lab to NULL. 
 #' @param y_labs optional. If FALSE it will set the y lab to NULL. 
 #' @param text_x optional. A numeric vector indicating the size
@@ -56,8 +54,7 @@ bubble_ko<-function(tibble_ko,
                     x_labs=TRUE,
                     y_labs=TRUE,
                     text_x=NULL,
-                    text_y=NULL,
-                    name_size=NULL){
+                    text_y=NULL){
   # Enquoting -------------------------------------------------------------####
   x_axis_enquo <- enquo(x_axis)
   y_axis_enquo <- enquo(y_axis)
@@ -100,18 +97,14 @@ bubble_ko<-function(tibble_ko,
     text_y<-7
   }
   # Check calc --------------------------------------------------------####
-  
-  if(is.null(calc) == T){
-    tibble_ko_mod<-calc_binary(tibble_ko, !!y_axis_enquo, binary=FALSE) %>%
-      rename(tmp = .data$Abundance)
-  } else if (calc == "Abundance"){
+  if(calc == "Abundance"){
     tibble_ko_mod<-calc_binary(tibble_ko, !!y_axis_enquo, binary=FALSE) %>%
       rename(tmp = .data$Abundance)
   } else if (calc == "Binary") {
     tibble_ko_mod<-calc_binary(tibble_ko, !!y_axis_enquo) %>%
       rename(tmp = .data$Presence_absence)
   } else if (calc == "Percentage") {
-    tibble_ko_mod<-calc_percentage(tibble_ko, !!y_axis_enquo) %>%
+    tibble_ko_mod<-calc_percentage2(tibble_ko, !!y_axis_enquo) %>%
       rename(tmp = .data$Percentage)
   } else if (calc == "None") {
     if( "Presence_absence" %in% colnames(tibble_ko)){
@@ -122,9 +115,6 @@ bubble_ko<-function(tibble_ko,
       tibble_ko_mod <-rename(tibble_ko, tmp = .data$Percentage)
     }
   }
-  
-  
-  
   # Transform interger ----------------------------------------------------####
   Table_with_percentage<-tibble_ko_mod %>%
     select({{y_axis_enquo}}, .data$Bin_name, .data$tmp) %>%
@@ -133,9 +123,8 @@ bubble_ko<-function(tibble_ko,
     mutate_at('tmp', as.integer) %>%
     mutate(tmp = case_when(
       .data$tmp == 0 ~ NA_integer_,
-      TRUE ~ as.integer(.data$tmp)
+      TRUE ~ as.integer(tmp)
     )) 
-  
   # Join data experiment --------------------------------------------------####
   if(is.null(data_experiment) == F){
     Table_with_percentage<-Table_with_percentage %>%
@@ -163,12 +152,6 @@ bubble_ko<-function(tibble_ko,
   y_axis_enquo <- enquo(y_axis)
   x_axis_label <- as_label(x_axis_enquo)
   y_axis_label <- as_label(y_axis_enquo)
-  # Name size -------------------------------------------------------------####
-  if(is.null(name_size) == T){
-    name_size = "Abundance"
-  } else if (is.null(name_size) == F) {
-    name_size = calc
-  }
   # Plot ------------------------------------------------------------------####
   if(x_axis_label == "Bin_name") {
     plot_bubble<-ggplot(Table_with_percentage,
@@ -188,9 +171,7 @@ bubble_ko<-function(tibble_ko,
                                        vjust = 1),
             axis.text.y = element_text(size=text_y))+
       xlab(x_labs) + 
-      ylab(y_axis_enquo) +
-      labs(size=name_size)
-    
+      ylab(y_axis_enquo)
   } else if (x_axis_label != "Bin_name" ) {
     plot_bubble<-ggplot(Table_with_percentage,
                         aes(x= factor(!!x_axis_enquo, 
@@ -209,10 +190,25 @@ bubble_ko<-function(tibble_ko,
                                        vjust = 1),
             axis.text.y = element_text(size=text_y))+
       xlab(x_labs) + 
-      ylab(y_labs) +
-      labs(size=name_size)
+      ylab(y_labs)
+    
   }
   
-  return(plot_bubble)
+  # Check calc plot --------------------------------------------------------####
+  if(calc == "Abundance"){
+    Table_with_percentage<-Table_with_percentage %>%
+      rename(Abundance = tmp)
+    plot_bubble <- suppressMessages(plot_bubble + guides(size=guide_legend(title="Abundance")))
+  } else if (calc == "Binary") {
+    Table_with_percentage<-Table_with_percentage %>%
+      rename("Presence/Absence" = tmp)
+    plot_bubble <- suppressMessages(plot_bubble + scale_size_continuous(name="", labels = "Present"))
+  } else if (calc == "Percentage") {
+    Table_with_percentage<-Table_with_percentage %>%
+      rename(Percentage = tmp)
+    plot_bubble <- suppressMessages(plot_bubble + guides(size=guide_legend(title="Percentage")))
+  } else if (calc == "None") {
+    plot_bubble<- plot_bubble
+    }
+  suppressWarnings(return(plot_bubble))
 }
-
