@@ -15,7 +15,7 @@ calc_percentage(tibble_ko, y_axis, data_experiment=NULL)
 containing metadata information.}
 }
 \description{
-Calculate the percentage of KO in certain pathway.
+Calculate the percentage of data in certain pathway.
 }
 \details{
 This function is part of a package used for the analysis of bins

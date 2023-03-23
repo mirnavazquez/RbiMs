@@ -4,14 +4,14 @@
 \alias{plot_bubble}
 \title{Bubble plot.}
 \usage{
-plot_bubble(tibble_ko, x_axis, y_axis, analysis=c("KEGG","INTERPRO"),
+plot_bubble(tibble_ko, x_axis, y_axis, analysis=c("KEGG","INTERPRO", "DBCAN"),
 data_experiment=NULL, calc=NULL, color_character=NULL, order_bins=NULL, 
 order_metabolism=NULL, color_pallet=NULL, range_size=NULL, x_labs=TRUE,
 y_labs=TRUE, text_x=NULL, text_y=NULL)
 }
 \arguments{
-\item{tibble_ko}{a tibble object, created with the mapping_ko
-or get_subset_* functions.}
+\item{tibble_ko}{a tibble object, created with the read_*
+mapping_ko and get_subset_* functions.}
 
 \item{x_axis}{a string, a column name of the metabolism table.
 It determined the x axis label.}
@@ -20,7 +20,7 @@ It determined the x axis label.}
 It determined the y axis label.}
 
 \item{analysis}{a character indicating if your input data are from
-KEGG or INTERPRO.}
+KEGG, INTERPRO or DBCAN}
 
 \item{data_experiment}{optional. a data frame object
 containing metadata information.}
@@ -54,7 +54,7 @@ of the x text letters.}
 of the y text letters.}
 }
 \description{
-Creates a bubble plot of KEGG or InterProScan data.
+Creates a bubble plot of the data of bins metabolism
 }
 \details{
 This function is part of a package used for

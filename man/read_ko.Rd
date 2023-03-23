@@ -4,7 +4,7 @@
 \alias{read_ko}
 \title{Read the output of KofamScan/KofamKoala or KAAS.}
 \usage{
-read_ko(data_kofam=NULL, data_kaas=NULL, data_interpro=NULL)
+read_ko(data_kofam=NULL, data_kaas=NULL, data_interpro=NULL, write=FALSE)
 }
 \arguments{
 \item{data_kofam}{a path where KofamScan/KofamKoala output data are. They
@@ -18,6 +18,10 @@ divided by a '-' or '_': bin_scaffoldXX.}
 
 \item{data_interpro}{a data frame output of read_interpro. This
 argument is used within mapping_KO.}
+
+\item{write}{a logical value indicating to save the data imported
+as a formatted table with .tsv extension with a time stamp and it will be
+located in your current workin directory}
 }
 \description{
 read_ko calculates the abundance of each KO within the
@@ -29,6 +33,6 @@ of bins metabolism.
 }
 \examples{
 \dontrun{
-read_ko("C:/Users/bins/")
+read_ko("C:/Users/bins/", write=FALSE)
 }
 }
