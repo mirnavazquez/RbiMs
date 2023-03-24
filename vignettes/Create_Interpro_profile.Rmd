@@ -7,6 +7,9 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+
+# Create Interpro profile
+
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -22,23 +25,25 @@ First, load the rbims package.
 library(rbims)
 ```
 
-The function to use that information is `read_interpro`. This function can parse the information of the PFAM, INTERPRO, and KEGG ids. The KEGG analysis is just possible if [InterProScan](https://interproscan-docs.readthedocs.io/en/latest/) was run with the -pa option. Two output options are also possible: a wide profile, or a long table. 
+The function to use that information is `read_interpro`. This function can parse the information of the PFAM, INTERPRO, and KEGG ids. The KEGG analysis is just possible if [InterProScan](https://interproscan-docs.readthedocs.io/en/latest/) was run with the -pa option. Two output options are also possible: a wide profile, or a long table.
 
-- The `database` argument will parse the database. In this example, I will explore the PFAM output. 
+-   The `database` argument will parse the database. In this example, I will explore the PFAM output.
 
-- The output format is chosen with the `profile` argument. When **profile = T**, a wide output is obtained.
+-   The output format is chosen with the `profile` argument. When **profile = T**, a wide output is obtained.
 
-If you want to follow the example you can download the use rbims [test](https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/Interpro_test.tsv) file. 
+-   The `write` argument saves the formatted table generated in .tsv extension. When **write = F** gives you the output but not saves the table in your current directory. 
+
+If you want to follow the example you can download the use rbims [test](https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/Interpro_test.tsv) file.
 
 ```{r, eval=FALSE}
-interpro_pfam_profile<-read_interpro(data_interpro = "Interpro_test.tsv", database="Pfam", profile = T)
+interpro_pfam_profile<-read_interpro(data_interpro = "Interpro_test.tsv", database="Pfam", profile = T, write = F)
 ```
 
 ```{r}
 head(interpro_pfam_profile)
 ```
 
-Or print a long table **profile = F**. 
+Or print a long table **profile = F**.
 
 ```{r, eval=FALSE}
 interpro_pfam_long<-read_interpro("Interpro_test.tsv", database="Pfam", profile = F)
@@ -54,11 +59,4 @@ You can export this to a table like this:
 write.table(interpro_pfam_long, "Interpro.tsv", quote = F, sep = "\t", row.names = F, col.names = T)
 ```
 
-
-
-
-
-
-
-
-
+Or setting write  **write = T**. 

@@ -73,7 +73,7 @@ read_dbcan3<-function(dbcan_path, write=FALSE, profile=TRUE){
                                      "glycosyltransferases [GTs]",
                                    str_detect(.data$dbCAN, "PL") ~ 
                                      "polysaccharide lyases [PLs]")) %>% group_by(
-                                       .data$dbCAN, data$Bin_name, .data$domain_name) %>% summarize_if(
+                                       .data$dbCAN, .data$Bin_name, .data$domain_name) %>% summarize_if(
                                          is.numeric, sum) %>%   pivot_wider(
                                            names_from = "Bin_name", values_from = "Abundance") %>% ungroup() %>% mutate_if(
                                              is.numeric, ~replace(., is.na(.), 0)) 
