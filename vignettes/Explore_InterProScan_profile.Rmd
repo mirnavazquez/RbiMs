@@ -28,7 +28,7 @@ First, I will read the InterProScan output in a long format and extract the PFAM
 If you want to follow this example, you can download the use rbims [test](https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/Interpro_test.tsv) file. 
 
 ```{r, eval=FALSE}
-interpro_pfam_long<-read_interpro(data_interpro = "Interpro_test.tsv", database="Pfam", profile = F)
+interpro_pfam_long<-read_interpro(data_interpro = "../inst/extdata/Interpro_test.tsv", database="Pfam", profile = F)
 ```
 
 You can use the [subsetting functions](https://mirnavazquez.github.io/RbiMs/articles/Explore_KEGG_profile.html#metabolism-subsetting-1) to create subsets of the InterPro profile table. Here, we will extract the most important PFAMs, and we need to use them as an input, not the profile output from read_interpro. 
@@ -68,10 +68,11 @@ plot_heatmap(important_PFAMs, y_axis=PFAM, analysis = "INTERPRO", distance = F)
 
 We can also visualize using a bubble plot. 
 
-```{r}
+```{r, message=FALSE, warning=FALSE}
 plot_bubble(important_PFAMs, 
             y_axis=PFAM, 
             x_axis=Bin_name, 
+            calc = "Binary",
             analysis = "INTERPRO", 
             data_experiment = metadata, 
             color_character = Clades)
@@ -113,6 +114,7 @@ We can create a bubble plot to visualize the distribution of these enzymes acros
 plot_bubble(DNA_tipo_INTERPRO, 
             y_axis=INTERPRO,
             x_axis=Bin_name,
+            calc = "Binary",
             analysis = "INTERPRO", 
             data_experiment = metadata, 
             color_character = Sample_site)

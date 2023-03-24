@@ -29,7 +29,7 @@ calc_binary<-function(tibble_ko,
                     "Pathway_description", "Genes", 
                     "Gene_description", "Enzyme", "Cycle", "Pathway_cycle",
                     "Detail_cycle", "rbims_pathway", "rbims_sub_pathway",
-                    "KO", "dbCAN", "domain_name", "Pfam")
+                    "KO", "dbCAN", "domain_name", "Pfam", "PFAM", "INTERPRO")
   # Transform from wide to long -------------------------------------------####
   Kegg_long<- tibble_ko %>%
     pivot_longer(cols = -any_of(data_to_select), 
