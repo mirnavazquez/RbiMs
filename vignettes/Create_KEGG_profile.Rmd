@@ -37,6 +37,8 @@ ko_bin_table<-read_ko(data_kofam ="C:/Users/Bins")
 ```
 
 The read_ko function will create a table that contains the abundance of each KO within each bin.  
+The `write` argument saves the formatted table generated in .tsv extension. When **write = F** gives you the output but not saves the table in your current directory. 
+
 
 ```{r}
 head(ko_bin_table)
@@ -60,5 +62,5 @@ You can export this to a table like this:
 write.table(ko_bin_mapp, "KEGG_mapped.tsv", quote = F, sep = "\t", row.names = F, col.names = T)
 ```
 
-
+Or setting write  **write = T**. 
 

@@ -1,7 +1,10 @@
-#' @title Read the output of KofamScan/KofamKoala or KAAS.
+#' @title Read the output of 
+#' KofamScan/[KofamKoala](https://www.genome.jp/tools/kofamkoala/) or 
+#' [KAAS](https://www.genome.jp/kegg/kaas/).
 #' @description read_ko calculates the abundance of each KO within the 
 #' bins based on the KofamScan or KofamKoala output.
-#' @usage read_ko(data_kofam=NULL, data_kaas=NULL, data_interpro=NULL, write=FALSE)
+#' @usage read_ko(data_kofam=NULL, data_kaas=NULL, data_interpro=NULL, 
+#' write=FALSE)
 #' @param data_kofam a path where KofamScan/KofamKoala output data are. They 
 #' should have the extension .txt and all files in the path are the ones that
 #' need to be read. Output data should have 5 columns with the bin names 
@@ -13,12 +16,12 @@
 #' argument is used within mapping_KO.
 #' @param write  a logical value indicating to save the data imported 
 #' as a formatted table with .tsv extension with a time stamp and it will be 
-#' located in your current workin directory
+#' located in your current working directory
 #' @details This function is part of a package used for the analysis 
 #' of bins metabolism.
 #' @import dplyr tidyr readr stringr rlang
 #' @importFrom utils read.table
-#' @importFrom purrr map_dfr 
+#' @importFrom purrr map_dfr
 #' @examples
 #' \dontrun{
 #' read_ko("C:/Users/bins/", write=FALSE)
@@ -96,10 +99,11 @@ read_ko<-function(data_kofam=NULL,
     tabla_to_print<-calc_abundance(table_KAAS, analysis="KEGG")
   }
 
-  # Write data or not --------------------------------------------------------------####
+  # Write data or not -----------------------------------------------------####
   
   if(isTRUE(write)){
-    write_tsv(tabla_to_print, paste0("ko_output_", format(Sys.time(), "%b_%d_%X"), ".tsv"))
+    write_tsv(tabla_to_print, paste0("ko_output_", 
+                                     format(Sys.time(), "%b_%d_%X"), ".tsv"))
   }
   else{
     return(tabla_to_print)

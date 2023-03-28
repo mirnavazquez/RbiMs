@@ -106,7 +106,7 @@ bubble_ko<-function(tibble_ko,
     tibble_ko_mod<-calc_binary(tibble_ko, !!y_axis_enquo) %>%
       rename(tmp = .data$Presence_absence)
   } else if (calc == "Percentage") {
-    tibble_ko_mod<-calc_percentage2(tibble_ko, !!y_axis_enquo) %>%
+    tibble_ko_mod<-calc_percentage(tibble_ko, !!y_axis_enquo) %>%
       rename(tmp = .data$Percentage)
   } else if (calc == "None") {
     if( "Presence_absence" %in% colnames(tibble_ko)){
@@ -122,10 +122,10 @@ bubble_ko<-function(tibble_ko,
     select({{y_axis_enquo}}, .data$Bin_name, .data$tmp) %>%
     drop_na() %>%
     distinct()  %>%
-    mutate_at('tmp', as.integer) %>%
+    mutate_at("tmp", as.integer) %>%
     mutate(tmp = case_when(
       .data$tmp == 0 ~ NA_integer_,
-      TRUE ~ as.integer(tmp)
+      TRUE ~ as.integer(.data$tmp)
     )) 
   # Join data experiment --------------------------------------------------####
   if(is.null(data_experiment) == F){
@@ -199,15 +199,15 @@ bubble_ko<-function(tibble_ko,
   # Check calc plot --------------------------------------------------------####
   if(calc == "Abundance"){
     Table_with_percentage<-Table_with_percentage %>%
-      rename(Abundance = tmp)
+      rename(Abundance = .data$tmp)
     plot_bubble <- suppressMessages(plot_bubble + guides(size=guide_legend(title="Abundance")))
   } else if (calc == "Binary") {
     Table_with_percentage<-Table_with_percentage %>%
-      rename("Presence/Absence" = tmp)
+      rename("Presence/Absence" = .data$tmp)
     plot_bubble <- suppressMessages(plot_bubble + scale_size_continuous(name="", labels = "Present"))
   } else if (calc == "Percentage") {
     Table_with_percentage<-Table_with_percentage %>%
-      rename(Percentage = tmp)
+      rename(Percentage = .data$tmp)
     plot_bubble <- suppressMessages(plot_bubble + guides(size=guide_legend(title="Percentage")))
   } else if (calc == "None") {
     plot_bubble<- plot_bubble

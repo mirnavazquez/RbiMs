@@ -22,7 +22,7 @@ calculate presence/absence or abundance of KOs per pathway.}
 the metabolism table.}
 }
 \description{
-Calculate the  presence/absence of KO in certain pathway.
+Calculate the  presence/absence of data in certain pathway.
 }
 \details{
 This function is part of a package used for the analysis of bins

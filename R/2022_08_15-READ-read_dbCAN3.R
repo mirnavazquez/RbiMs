@@ -62,7 +62,7 @@ read_dbcan3<-function(dbcan_path, write=FALSE, profile=TRUE){
   # Reformating data ----------------------------------------------------------####
   
   dbcan_df_reformat <-dbcan_df_format %>%dplyr::select(
-    -Signalp) %>%
+    -.data$Signalp) %>%
     mutate(domain_name = case_when(str_detect(.data$dbCAN, "CBM") ~ 
                                      "carbohydrate-binding module [CBM]",
                                    str_detect(.data$dbCAN, "CE") ~ 
@@ -73,7 +73,7 @@ read_dbcan3<-function(dbcan_path, write=FALSE, profile=TRUE){
                                      "glycosyltransferases [GTs]",
                                    str_detect(.data$dbCAN, "PL") ~ 
                                      "polysaccharide lyases [PLs]")) %>% group_by(
-                                       .data$dbCAN, data$Bin_name, .data$domain_name) %>% summarize_if(
+                                       .data$dbCAN, .data$Bin_name, .data$domain_name) %>% summarize_if(
                                          is.numeric, sum) %>%   pivot_wider(
                                            names_from = "Bin_name", values_from = "Abundance") %>% ungroup() %>% mutate_if(
                                              is.numeric, ~replace(., is.na(.), 0)) 
