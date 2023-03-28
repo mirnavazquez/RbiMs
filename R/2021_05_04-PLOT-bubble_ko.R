@@ -54,7 +54,7 @@ bubble_ko<-function(tibble_ko,
                     x_labs=TRUE,
                     y_labs=TRUE,
                     text_x=NULL,
-                    text_y=NULL)
+                    text_y=NULL){
   # Enquoting -------------------------------------------------------------####
   x_axis_enquo <- enquo(x_axis)
   y_axis_enquo <- enquo(y_axis)
@@ -99,6 +99,7 @@ bubble_ko<-function(tibble_ko,
   # Check calc --------------------------------------------------------####
   if(is.null(calc) == T){
     calc<-NULL
+  }
   if(calc == "Abundance"){
     tibble_ko_mod<-calc_binary(tibble_ko, !!y_axis_enquo, binary=FALSE) %>%
       rename(tmp = .data$Abundance)

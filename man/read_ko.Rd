@@ -2,9 +2,12 @@
 % Please edit documentation in R/2021_02_25-READ-read_ko.R
 \name{read_ko}
 \alias{read_ko}
-\title{Read the output of KofamScan/KofamKoala or KAAS.}
+\title{Read the output of
+KofamScan/\href{https://www.genome.jp/tools/kofamkoala/}{KofamKoala} or
+\href{https://www.genome.jp/kegg/kaas/}{KAAS}.}
 \usage{
-read_ko(data_kofam=NULL, data_kaas=NULL, data_interpro=NULL, write=FALSE)
+read_ko(data_kofam=NULL, data_kaas=NULL, data_interpro=NULL, 
+write=FALSE)
 }
 \arguments{
 \item{data_kofam}{a path where KofamScan/KofamKoala output data are. They
@@ -21,7 +24,7 @@ argument is used within mapping_KO.}
 
 \item{write}{a logical value indicating to save the data imported
 as a formatted table with .tsv extension with a time stamp and it will be
-located in your current workin directory}
+located in your current working directory}
 }
 \description{
 read_ko calculates the abundance of each KO within the
