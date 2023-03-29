@@ -71,6 +71,7 @@ bubble_ko<-function(tibble_ko,
   # Checking the color ----------------------------------------------------####
   if(is.null(color_pallet) == T){
     color_pallet<-as.vector(cols25(20))
+    warning("if your vector is >25, choose another color pallet")
   }
   # Checking the size -----------------------------------------------------####
   if(is.null(range_size) == T){
