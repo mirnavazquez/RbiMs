@@ -1,4 +1,4 @@
-#' @title Calculate abundance.
+#' @title Calculate abundance
 #' @description Calculate the abundance of certain entry, based on the
 #' number of times it appears.
 #' @usage calc_abundance(tabla_toabundance, 
