@@ -12,6 +12,8 @@ reference:
     contents:
       - '`read_ko`'
       - '`mapping_ko`'
+      - '`read_picrust2`'
+      - '`write_metabolism`'
   - title: InterProScan analysis
     desc: Functions used for InterProScan analysis
     contents:
@@ -29,6 +31,10 @@ reference:
     contents:
       - '`plot_bubble`'
       - '`plot_heatmap`'
+  - title: dbCAN analysis
+    desc: Functions used for dbCAN analysis
+    contents:
+      - '`read_dbcan3`'
 left:
     - icon: fa-home
       href: index.html
