@@ -76,7 +76,7 @@ read_interpro<-function(data_interpro,
       ))
     
     table_interpro<-table_interpro_1 %>%
-      calc_abundance(analysis = database)
+      calc_abundance(analysis = database, col_rename = database)
     
     if(isTRUE(profile)){
       interpro<-table_interpro %>%
@@ -101,7 +101,7 @@ read_interpro<-function(data_interpro,
       ))
     
     table_interpro<-table_interpro_1 %>%
-      calc_abundance(analysis = "INTERPRO")
+      calc_abundance(analysis = "INTERPRO", col_rename = "INTERPRO")
     
     if(isTRUE(profile)){
       interpro<-table_interpro %>%

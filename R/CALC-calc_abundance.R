@@ -1,166 +1,68 @@
-#' @title Calculate abundance
-#' @description Calculate the abundance of certain entry, based on the
-#' number of times it appears.
-#' @usage calc_abundance(tabla_toabundance, 
-#' analysis=c("KEGG", "PFAM", "INTERPRO", "dbCAN"))
-#' @param tabla_toabundance a data frame object with the values to be 
-#' calculated.
-#' @param analysis a character, indicating which analysis it is doing.
-#' @details This function is part of a package used for the analysis of bins 
-#' metabolism.
-#' @import  tibble dplyr stringr tidyr  rlang
+#' @title Calculate Abundance
+#' @description This function calculates the abundance of a certain feature, 
+#' based on the number of times it appears in a dataset.
+#' @usage calc_abundance(dataset, analysis=c("KEGG", "PFAM", "INTERPRO", "dbCAN"))
+#' @param dataset A data frame with two columns: the gene name
+#'  and the associated ID.
+#' @param analysis A character vector indicating which type of analysis 
+#' is being performed.
+#' @param col_rename  A character vector indicating which type of analysis 
+#' is being performed, same as analysis.
+#' @details This function calculates the abundance of a feature by summing 
+#' the number of times it appears in the dataset. The formula used is Σx, 
+#' where x represents the number of times the feature appears.
+#' @import tibble dplyr stringr tidyr rlang
+#' @return A data frame with four columns: the gene ID, the genome name, 
+#' the KEGG ID (or other feature ID), and the number of times the feature appears 
+#' in the genome.
 #' @noRd
-calc_abundance<-function(tabla_toabundance,
-                         analysis=c("KEGG", "Pfam", "INTERPRO", "dbCAN")){
+calc_abundance <- function(dataset, 
+                           analysis = c("KEGG", "Pfam", "INTERPRO", "TIGRFAM", 
+                                        "SUPERFAMILY", "SMART", "SFLD",
+                                        "ProSiteProfiles", "ProSitePatterns", 
+                                        "ProDom", "PRINTS", "PIRSF", 
+                                        "MobiDBLite", "Hamap", "Gene3D", 
+                                        "Coils", "CDD", "dbCAN"), 
+                           col_rename = NULL) {
+  # Asign colum names -----------------------------------------------------####
+  col_analysis <- c(KEGG = "KO", Pfam = "Pfam", INTERPRO = "Interpro", 
+                    dbCAN = "dbCAN_names", TIGRFAM = "TIGRFAM",
+                    SUPERFAMILY = "SUPERFAMILY", SMART = "SMART", SFLD = "SFLD",
+                    ProSiteProfiles = "ProSiteProfiles", 
+                    ProSitePatterns = "ProSitePatterns", ProDom = "ProDom", 
+                    PRINTS = "PRINTS", PIRSF = "PIRSF", 
+                    MobiDBLite = "MobiDBLite",  Hamap = "Hamap", 
+                    Gene3D = "Gene3D",  Coils = "Coils", CDD = "CDD")
+  if (!analysis %in% names(col_analysis)) stop("Unknown analysis")
   # Read table ------------------------------------------------------------####
-  KO_raw<-tabla_toabundance %>%
-    separate(.data$Bin_name, c("Bin_name", "Scaffold_name"),
+  KO_raw <- dataset %>%
+    separate(Bin_name, c("Bin_name", "Scaffold_name"), 
              sep = "[_|-][s|S]caffold") %>%
-    mutate(Scaffold_name = paste0( "scaffold", .data$Scaffold_name),
-           .data$Scaffold_name) %>%
-    unite("Scaffold_name", c("Bin_name", "Scaffold_name"), remove=FALSE)
+    mutate(Scaffold_name = paste0("scaffold", Scaffold_name),
+           Scaffold_name) %>%
+    unite("Scaffold_name", c("Bin_name", "Scaffold_name"), remove = FALSE)
   # Selecting analysis ----------------------------------------------------####
-  if( analysis == "Pfam") {
-    KO_raw <- KO_raw %>% 
-      rename(tmp = .data$Pfam) %>%
-      distinct()
-  } else if ( analysis == "KEGG") {
-    KO_raw <- KO_raw %>% 
-      rename(tmp = .data$KO)
-  } else if ( analysis == "INTERPRO"){
-    KO_raw <- KO_raw %>% 
-      rename(tmp = .data$Interpro) %>%
-      distinct()
-  } else if ( analysis == "TIGRFAM"){
-    KO_raw <- KO_raw %>% 
-      rename(tmp = .data$TIGRFAM) %>%
-      distinct()
-  } else if ( analysis == "SUPERFAMILY"){
-    KO_raw <- KO_raw %>% 
-      rename(tmp = .data$SUPERFAMILY) %>%
-      distinct()
-  } else if ( analysis == "SMART"){
-    KO_raw <- KO_raw %>% 
-      rename(tmp = .data$SMART) %>%
-      distinct()
-  } else if ( analysis == "SFLD"){
-    KO_raw <- KO_raw %>% 
-      rename(tmp = .data$SFLD) %>%
-      distinct()
-  } else if ( analysis == "ProSiteProfiles"){
-    KO_raw <- KO_raw %>% 
-      rename(tmp = .data$ProSiteProfiles) %>%
-      distinct()
-  } else if ( analysis == "ProSitePatterns"){
-    KO_raw <- KO_raw %>% 
-      rename(tmp = .data$ProSitePatterns) %>%
-      distinct()
-  } else if ( analysis == "ProDom"){
-    KO_raw <- KO_raw %>% 
-      rename(tmp = .data$ProDom) %>%
-      distinct()
-  } else if ( analysis == "PRINTS"){
-    KO_raw <- KO_raw %>% 
-      rename(tmp = .data$PRINTS) %>%
-      distinct()
-  } else if ( analysis == "PIRSF"){
-    KO_raw <- KO_raw %>% 
-      rename(tmp = .data$PIRSF) %>%
-      distinct()
-  } else if ( analysis == "MobiDBLite"){
-    KO_raw <- KO_raw %>% 
-      rename(tmp = .data$MobiDBLite) %>%
-      distinct()
-  } else if ( analysis == "Hamap"){
-    KO_raw <- KO_raw %>% 
-      rename(tmp = .data$Hamap) %>%
-      distinct()
-  } else if ( analysis == "Gene3D"){
-    KO_raw <- KO_raw %>% 
-      rename(tmp = .data$Gene3D) %>%
-      distinct()
-  } else if ( analysis == "Coils"){
-    KO_raw <- KO_raw %>% 
-      rename(tmp = .data$Coils) %>%
-      distinct()
-  } else if ( analysis == "CDD"){
-    KO_raw <- KO_raw %>% 
-      rename(tmp = .data$CDD) %>%
-      distinct()
-  } else if ( analysis == "dbCAN"){
-    KO_raw <- KO_raw %>% 
-      rename(tmp = .data$dbCAN_names) %>%
-      distinct()
-  }
+  KO_raw <- KO_raw %>%
+    rename(tmp = .data[[col_analysis[analysis]]]) %>%
+    distinct()
   # Calculate abundance ---------------------------------------------------####
-  KO_abundance<-KO_raw %>%
-    group_by(.data$Bin_name) %>%
+  KO_abundance <- KO_raw %>%
+    group_by(Bin_name) %>%
     distinct() %>%
-    count(.data$tmp) %>%
-    rename(Abundance = .data$n)%>%
+    count(tmp) %>%
+    rename(Abundance = n) %>%
     ungroup()
   # Write tibble -----------------------------------------------------------####
   final_table_1 <- left_join(KO_raw, KO_abundance, 
-                             by=c("Bin_name", "tmp")) %>%
-    distinct() 
+                             by = c("Bin_name", "tmp")) %>%
+    distinct()
   
-  if( analysis == "Pfam") {
-    final_table <- final_table_1 %>% 
-      rename(Pfam = .data$tmp) 
-  } else if ( analysis == "KEGG")  {
-    final_table <- final_table_1 %>% 
-      rename(KO = .data$tmp)
-  } else if ( analysis == "INTERPRO"){
-    final_table <- final_table_1 %>% 
-      rename(INTERPRO = .data$tmp)
-  } else if ( analysis == "TIGRFAM"){
-    final_table <- final_table_1 %>% 
-      rename(TIGRFAM = .data$tmp)
-  } else if ( analysis == "SUPERFAMILY"){
-    final_table <- final_table_1 %>% 
-      rename(SUPERFAMILY = .data$tmp)
-  } else if ( analysis == "SMART"){
-    final_table <- final_table_1 %>% 
-      rename(SMART = .data$tmp)
-  } else if ( analysis == "SFLD"){
-    final_table <- final_table_1 %>% 
-      rename(SFLD = .data$tmp)
-  } else if ( analysis == "ProSiteProfiles"){
-    final_table <- final_table_1 %>% 
-      rename(ProSiteProfiles = .data$tmp)
-  } else if ( analysis == "ProSitePatterns"){
-    final_table <- final_table_1 %>% 
-      rename(ProSitePatterns = .data$tmp)
-  } else if ( analysis == "ProDom"){
-    final_table <- final_table_1 %>% 
-      rename(ProDom = .data$tmp)
-  } else if ( analysis == "PRINTS"){
-    final_table <- final_table_1 %>% 
-      rename(PRINTS = .data$tmp)
-  } else if ( analysis == "PIRSF"){
-    final_table <- final_table_1 %>% 
-      rename(PIRSF = .data$tmp)
-  } else if ( analysis == "MobiDBLite"){
-    final_table <- final_table_1 %>% 
-      rename(MobiDBLite = .data$tmp)
-  } else if ( analysis == "Hamap"){
-    final_table <- final_table_1 %>% 
-      rename(Hamap = .data$tmp)
-  } else if ( analysis == "Gene3D"){
-    final_table <- final_table_1 %>% 
-      rename(Gene3D = .data$tmp)
-  } else if ( analysis == "Coils"){
-    final_table <- final_table_1 %>% 
-      rename(Coils = .data$tmp)
-  } else if ( analysis == "CDD"){
-    final_table <- final_table_1 %>% 
-      rename(CDD = .data$tmp)
-  } else if ( analysis == "dbCAN"){
-    final_table <- final_table_1 %>% 
-      rename(dbCAN = .data$tmp)
-  } 
-  
+  if (!is.null(col_rename)) {
+    final_table <- final_table_1 %>% rename_with(~ col_rename, tmp)
+  } else {
+    final_table <- final_table_1
+  }
   
   return(final_table)
-} 
+}
 
