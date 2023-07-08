@@ -24,23 +24,27 @@
 #' get_subset_unique(ko_bin_mapp, metadata, Sample_site, 
 #' "Water_column", analysis="KEGG")
 #' @export
-get_subset_unique<-function(tibble_rbims, 
+
+get_subset_unique <- function(tibble_rbims, 
                             data_experiment,
                             experiment_col, 
                             experiment_col_element,
                             analysis=c("KEGG", "PFAM", "INTERPRO")){
+
   # Variable quoting ------------------------------------------------------####
   experiment_col_enquo <- enquo(experiment_col)
   experiment_col_label <- as_label(experiment_col_enquo)
+
   # Remove columns, create df_unique ------------------------------------####
-  if(analysis=="KEGG") {
-    data_to_select<-c("Module", "Module_description", "Pathway", 
+  if(analysis == "KEGG") {
+    data_to_select <- c("Module", "Module_description", "Pathway", 
                       "Pathway_description", "Genes", 
                       "Gene_description", "Enzyme", "Cycle", "Pathway_cycle",
                       "Detail_cycle",  "rbims_pathway", "rbims_sub_pathway")
-  } else if (analysis=="PFAM" || analysis=="INTERPRO") {
+  } else if (analysis == "PFAM" || analysis == "INTERPRO") {
     data_to_select<-"domain_name"
   } 
+
   # Remove columns, create df_unique ------------------------------------####
   if( analysis == "PFAM") {
     tibble_rbims <- tibble_rbims %>% 
@@ -57,26 +61,32 @@ get_subset_unique<-function(tibble_rbims,
     select(-all_of(data_to_select)) %>%
     distinct() %>%
     column_to_rownames("tmp")
+
   # Columns to variables, merge with experiment ---------------------------####
-  df_unique_t<-as.data.frame(t(df_unique)) %>%  
+  df_unique_t <- as.data.frame(t(df_unique)) %>%  
     rownames_to_column("Bin_name") %>%
     left_join(data_experiment, by="Bin_name")
+
   # Extract experiment names ----------------------------------------------####
-  experiment_names<-colnames(data_experiment)
-  experiment_names<-experiment_names[-1]
+  experiment_names <- colnames(data_experiment)
+  experiment_names <- experiment_names[-1]
+
   # Extract bins based on experiment_col_element --------------------------####
   df_exp_col_element<-df_unique_t%>%
     filter( !!experiment_col_enquo  == experiment_col_element) %>%
     select(-any_of(experiment_names))
+
   # Extract bins based not in experiment_col_element ----------------------####
   vector_all_exp_col_val <- df_unique_t %>%
     select(all_of(experiment_col_label)) %>%
     distinct() %>%
     filter(!!experiment_col_enquo != experiment_col_element) %>%
     pull()
+
   df_no_exp_col_element <- df_unique_t %>%
     filter( !!experiment_col_enquo %in% vector_all_exp_col_val) %>%
     select(-all_of(experiment_names))
+
   # Loop data -------------------------------------------------------------####
   list_unique <- c()
   for(i in 2:(length(df_exp_col_element))){
@@ -85,6 +95,7 @@ get_subset_unique<-function(tibble_rbims,
       list_unique <- c(list_unique, colnames(df_exp_col_element[i]))
     }
   }
+
   # Write tibble ----------------------------------------------------------####
   final_table_1 <- tibble_rbims %>%
     filter(.data$tmp %in% list_unique)
@@ -99,5 +110,6 @@ get_subset_unique<-function(tibble_rbims,
     final_table <- final_table_1 %>% 
       rename(INTERPRO = .data$tmp)
   }
+
   return(final_table)
 }

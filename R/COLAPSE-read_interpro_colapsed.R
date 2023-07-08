@@ -11,13 +11,16 @@
 #' metabolism.
 #' @import  tibble dplyr stringr tidyr  rlang
 #' @noRd
-read_interpro_colapsed<- function(
+
+read_interpro_colapsed <- function(
   data_interpro,
   database_1){
+
   # Quote the database ----------------------------------------------------####
-  database_quote<-enquo(database_1)
+  database_quote <- enquo(database_1)
+
   # Make the table --------------------------------------------------------####
-  Pfam<-read_interpro(data_interpro=data_interpro, database=database_1, 
+  Pfam <- read_interpro(data_interpro=data_interpro, database=database_1, 
                       profile = F) %>%
     rename(pfam_domain_name = .data$domain_name)  %>%
     group_by(.data$Bin_name, .data$Scaffold_name) %>%
@@ -26,6 +29,7 @@ read_interpro_colapsed<- function(
     summarise(!!database_quote := paste0(.data[[database_1]], collapse = ", "), 
               .groups = 'drop') %>%
     ungroup()
+
   # Print -----------------------------------------------------------------####
   return(Pfam)
 }

@@ -42,6 +42,7 @@
 #' calc="Binary", order_y=Module, order_x=Clades)
 #' }
 #' @export
+
 plot_heatmap<-function(tibble_ko,
                        y_axis,
                        analysis=c("KEGG","INTERPRO"),
@@ -53,25 +54,28 @@ plot_heatmap<-function(tibble_ko,
                        split_y=FALSE,
                        color_pallet=NULL,
                        distance=FALSE){
+
   # Enquoting -------------------------------------------------------------####
   y_axis_enquo <- enquo(y_axis)
   order_x_enquo <- enquo(order_x)
   order_y_enquo <- enquo(order_y)
   order_y_label <- as_label(order_y_enquo)
   y_axis_label <- as_label(y_axis_enquo)
+
   # Check analysis --------------------------------------------------------####
   if(analysis == "KEGG"){
-    plot_heat<-heatmap_ko(tibble_ko, !!y_axis_enquo, 
+    plot_heat <- heatmap_ko(tibble_ko, !!y_axis_enquo, 
                           data_experiment=data_experiment, 
                           calc=calc,scale_option=scale_option, 
                           order_y=!!order_y_enquo, 
                           order_x=!!order_x_enquo, split_y=split_y, 
                           color_pallet=color_pallet)
   }else if (analysis == "INTERPRO") {
-    plot_heat<-heatmap_domain(tibble_ko, !!y_axis_enquo, 
+    plot_heat <- heatmap_domain(tibble_ko, !!y_axis_enquo, 
                               scale_option=scale_option, 
                               color_pallet=color_pallet, distance=distance)
     
   }
+
   return(plot_heat)
 }

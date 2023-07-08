@@ -9,14 +9,17 @@
 #' metabolism.
 #' @import  tibble dplyr stringr tidyr  rlang
 #' @noRd
-separate_kegg<- function(
+
+separate_kegg <- function(
   kegg_data,
   metabolism_data,
   database){
+
   # Quote the database ----------------------------------------------------####
   database_quote<-enquo(database)
+
   # Make the table --------------------------------------------------------####
-  Module<-kegg_data %>%
+  Module <- kegg_data %>%
     left_join(metabolism_data, by =c("Bin_name", "KO"))  %>%
     group_by(.data$Bin_name, .data$Scaffold_name) %>%
     select(.data$Bin_name, .data$Scaffold_name, {{database_quote}}) %>%
@@ -24,6 +27,7 @@ separate_kegg<- function(
     summarise(!!database_quote := paste0(.data[[database]], collapse = ", "), 
               .groups = 'drop') %>%
     ungroup()
+
   # Print -----------------------------------------------------------------####
   return(Module)
 }

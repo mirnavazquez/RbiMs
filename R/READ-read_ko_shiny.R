@@ -21,9 +21,11 @@
 #' read_ko_shiny("Kofam_output")
 #' }
 #' @export
-read_ko_shiny<-function(data_kofam=NULL, 
+
+read_ko_shiny <- function(data_kofam=NULL, 
                   data_kaas=NULL, 
                   data_interpro=NULL){
+
   # Kofam_fun -------------------------------------------------------------####
   if( is.null(data_kofam) == F && is.null(data_kaas) == F || 
       is.null(data_kofam) == F){
@@ -39,13 +41,14 @@ read_ko_shiny<-function(data_kofam=NULL,
       stop("Must label scaffolds with the name 'Scaffold' or 'scaffold' after 
   the bin name followed by a '-' or '_'.")
     }
-    before<- sub("scaffold.*", "",table_Kofam$Bin_name)
-    extract<- substr(before, nchar(before)-1+1, nchar(before))
+    before <- sub("scaffold.*", "",table_Kofam$Bin_name)
+    extract <- substr(before, nchar(before)-1+1, nchar(before))
     if (all(str_detect(extract, "[-|_]"))){
     } else{
       stop("Bin name and scaffold is not separated by '-' or '_'.")
     }
   }
+
   # Kaas_fun --------------------------------------------------------------####
   if(is.null(data_kofam) == F && is.null(data_kaas) == F || 
      is.null(data_kaas) == F){
@@ -59,33 +62,35 @@ read_ko_shiny<-function(data_kofam=NULL,
       stop("Must label scaffolds with the name 'Scaffold' or 'scaffold' after 
   the bin name followed by a '-' or '_'.")
     }
-    before<- sub("scaffold.*", "",table_Kofam$Bin_name)
-    extract<- substr(before, nchar(before)-1+1, nchar(before))
+    before <- sub("scaffold.*", "",table_Kofam$Bin_name)
+    extract <- substr(before, nchar(before)-1+1, nchar(before))
     if (all(str_detect(extract, "[-|_]"))){
     } else{
       stop("Bin name and scaffold is not separated by '-' or '_'.")
     }
   }
+
   # Interpro --------------------------------------------------------------####
   if (is.null(data_interpro) == F){
-    tabla_to_print <- data_interpro %>%
+    table_to_print <- data_interpro %>%
       select(.data$Scaffold_full_name, .data$KO) %>%
       drop_na() %>%
       rename(Bin_name = .data$Scaffold_full_name) %>%
       calc_abundance(analysis="KEGG")
   }
+
   # Calc ------------------------------------------------------------------####
   if(is.null(data_kofam) == F && is.null(data_kaas) == F ){
-    tabla_to_print<-bind_rows(table_Kofam, table_KAAS) %>%
+    table_to_print<-bind_rows(table_Kofam, table_KAAS) %>%
       distinct() %>%
-      calc_abundance(analysis="KEGG")
+      calc_abundance(analysis = "KEGG")
   }
   if( is.null(data_kofam) == F){
-    tabla_to_print<-calc_abundance(table_Kofam, analysis="KEGG")
+    table_to_print <- calc_abundance(table_Kofam, analysis = "KEGG")
   }
   if( is.null(data_kaas) == F){
-    tabla_to_print<-calc_abundance(table_KAAS, analysis="KEGG")
+    table_to_print <- calc_abundance(table_KAAS, analysis = "KEGG")
   }
   
-  return(tabla_to_print)
+  return(table_to_print)
 }

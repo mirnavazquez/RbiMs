@@ -40,7 +40,8 @@
 #' analysis="KEGG", data_experiment=metadata, calc="Binary",
 #' color_character=Clades)
 #' @export
-plot_bubble<-function(tibble_ko,
+
+plot_bubble <- function(tibble_ko,
                       x_axis, 
                       y_axis,
                       analysis=c("KEGG","INTERPRO", "DBCAN"),
@@ -55,15 +56,17 @@ plot_bubble<-function(tibble_ko,
                       y_labs=TRUE,
                       text_x=NULL,
                       text_y=NULL){
+
   # Enquoting -------------------------------------------------------------####
   x_axis_enquo <- enquo(x_axis)
   y_axis_enquo <- enquo(y_axis)
   x_axis_label <- as_label(x_axis_enquo)
   y_axis_label <- as_label(y_axis_enquo)
   color_character_enquo <- enquo(color_character)
+
   # Check analysis --------------------------------------------------------####
   if(analysis == "KEGG"){
-    bubble<-bubble_ko(tibble_ko=tibble_ko, x_axis=!!x_axis_enquo, 
+    bubble <- bubble_ko(tibble_ko=tibble_ko, x_axis=!!x_axis_enquo, 
                       y_axis=!!y_axis_enquo, calc=calc,
                       data_experiment=data_experiment, 
                       color_character=!!color_character_enquo, 
@@ -73,7 +76,7 @@ plot_bubble<-function(tibble_ko,
                       x_labs=x_labs, y_labs=y_labs, text_x=text_x, 
                       text_y=text_y)
   }else if (analysis == "INTERPRO") {
-    bubble<-bubble_ko(tibble_ko=tibble_ko, x_axis=!!x_axis_enquo, 
+    bubble <- bubble_ko(tibble_ko=tibble_ko, x_axis=!!x_axis_enquo, 
                           y_axis=!!y_axis_enquo, calc=calc,
                           data_experiment=data_experiment, 
                           color_character=!!color_character_enquo, 
@@ -84,7 +87,7 @@ plot_bubble<-function(tibble_ko,
                           y_labs=y_labs, text_x=text_x, text_y=text_y)
     
   }else if (analysis == "DBCAN") {
-    bubble<-bubble_ko(tibble_ko=tibble_ko, x_axis=!!x_axis_enquo, 
+    bubble <- bubble_ko(tibble_ko=tibble_ko, x_axis=!!x_axis_enquo, 
                           y_axis=!!y_axis_enquo, calc=calc,
                           data_experiment=data_experiment, 
                           color_character=!!color_character_enquo, 
@@ -95,5 +98,6 @@ plot_bubble<-function(tibble_ko,
                           y_labs=y_labs, text_x=text_x, text_y=text_y)
     
   }
+
   return(bubble)
 }

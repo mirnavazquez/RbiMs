@@ -24,18 +24,21 @@
 #' profile = F)
 #' }
 #' @export
-read_interpro<-function(data_interpro, 
+
+read_interpro <- function(data_interpro, 
                         database=c("KEGG", "Pfam", "INTERPRO", "TIGRFAM", 
                                    "SUPERFAMILY", "SMART", "SFLD", "ProSiteProfiles",
                                    "ProSitePatterns", "ProDom", "PRINTS", "PIRSF", 
                                    "MobiDBLite","Hamap", "Gene3D", "Coils", "CDD"),
                         profile=TRUE){
-  possible_databases<-c("TIGRFAM", "SUPERFAMILY", "SMART", "SFLD", "ProSiteProfiles",
+
+  possible_databases <- c("TIGRFAM", "SUPERFAMILY", "SMART", "SFLD", "ProSiteProfiles",
                         "ProSitePatterns", "ProDom", "PRINTS", "PIRSF", "MobiDBLite",
                         "Hamap", "Gene3D", "Coils", "CDD", "Pfam")
-  if(database == "KEGG") {
+
     # Extract KEGG----------------------------------------------####
-    table_interpro<-suppressWarnings(
+  if(database == "KEGG") {
+    table_interpro <- suppressWarnings(
       suppressMessages(read_delim(data_interpro,
                                   delim="\t", col_names = F) %>%
                          drop_na(.data$X12) %>%
@@ -55,15 +58,16 @@ read_interpro<-function(data_interpro,
     
     # Check enzymes -------------------------------------------------------####
     while(any(str_detect(table_interpro$Enzyme, pattern = "\\+")) == T){
-      table_interpro<-table_interpro %>%
+      table_interpro <- table_interpro %>%
         separate_rows(.data$Enzyme, sep="\\+") %>%
         distinct()
     } 
-    interpro<- table_interpro %>%
+    interpro <- table_interpro %>%
       mutate(Enzyme=str_replace_all(.data$Enzyme, "^", "ec:"))
   } else if (database  %in% possible_databases) {
+
     # Extract other databases ---------------------------------------------####
-    table_interpro_1<-suppressWarnings(
+    table_interpro_1 <- suppressWarnings(
       suppressMessages(read_delim(data_interpro,
                                   delim="\t", col_names = F) %>%
                          drop_na(.data$X12) %>%
@@ -75,21 +79,21 @@ read_interpro<-function(data_interpro,
                          rename(domain_name = .data$X6) 
       ))
     
-    table_interpro<-table_interpro_1 %>%
+    table_interpro <- table_interpro_1 %>%
       calc_abundance(analysis = database, col_rename = database)
     
     if(isTRUE(profile)){
-      interpro<-table_interpro %>%
+      interpro <- table_interpro %>%
         select(-.data$Scaffold_name) %>%
         distinct() %>%
         pivot_wider(names_from= "Bin_name", values_from="Abundance", 
                     values_fill = 0)
     } else{
-      interpro<-table_interpro
+      interpro <- table_interpro
     }
   } else if (database == "INTERPRO") {
     # Extract Interpro ----------------------------------------------------####
-    table_interpro_1<-suppressWarnings(
+    table_interpro_1 <- suppressWarnings(
       suppressMessages(read_delim(data_interpro,
                                   delim="\t", col_names = F) %>%
                          drop_na(.data$X12) %>%
@@ -100,17 +104,17 @@ read_interpro<-function(data_interpro,
                          rename(domain_name = .data$X13) 
       ))
     
-    table_interpro<-table_interpro_1 %>%
+    table_interpro <- table_interpro_1 %>%
       calc_abundance(analysis = "INTERPRO", col_rename = "INTERPRO")
     
     if(isTRUE(profile)){
-      interpro<-table_interpro %>%
+      interpro <- table_interpro %>%
         select(-.data$Scaffold_name) %>%
         distinct() %>%
         pivot_wider(names_from= "Bin_name", values_from="Abundance", 
                     values_fill = 0)
     } else{
-      interpro<-table_interpro
+      interpro <- table_interpro
     }
   }
   # Return ----------------------------------------------------------------####

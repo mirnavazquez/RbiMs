@@ -38,7 +38,8 @@
 #' data_experiment=metadata, color_character=Genus)
 #' }
 #' @noRd
-bubble_domain<-function(tibble_ko,
+
+bubble_domain <- function(tibble_ko,
                         x_axis, 
                         y_axis,
                         data_experiment=NULL,
@@ -51,65 +52,76 @@ bubble_domain<-function(tibble_ko,
                         y_labs=TRUE,
                         text_x=NULL,
                         text_y=NULL){
+
   # Enquoting -------------------------------------------------------------####
   x_axis_enquo <- enquo(x_axis)
   y_axis_enquo <- enquo(y_axis)
   x_axis_label <- as_label(x_axis_enquo)
   y_axis_label <- as_label(y_axis_enquo)
   color_character_enquo <- enquo(color_character)
+
   # Checking axis ---------------------------------------------------------####
   if( x_axis_label  != "Bin_name") {
-    y_axis_enquo<-enquo(x_axis) 
-    x_axis_enquo<-enquo(y_axis)
-    x_axis_label<-as_label(x_axis_enquo)
-    y_axis_label<-as_label(y_axis_enquo)
+    y_axis_enquo <- enquo(x_axis) 
+    x_axis_enquo <- enquo(y_axis)
+    x_axis_label <- as_label(x_axis_enquo)
+    y_axis_label <- as_label(y_axis_enquo)
   } 
+
   # Checking the color ----------------------------------------------------####
   if(is.null(color_pallet) == T){
-    color_pallet<-as.vector(cols25(20))
+    color_pallet <- as.vector(cols25(20))
   }
+
   # Checking the size -----------------------------------------------------####
   if(is.null(range_size) == T){
-    range_size<-c(1,10)
+    range_size <- c(1,10)
   }
+
   # Checking the xlabs ----------------------------------------------------####
   if(isTRUE(x_labs) == T){
-    x_labs<-x_axis_enquo
+    x_labs <- x_axis_enquo
   } else if (isTRUE(x_labs) == F) {
-    x_labs<-NULL
+    x_labs <- NULL
   }
+
   # Checking the ylabs ----------------------------------------------------####
   if(isTRUE(y_labs) == T){
-    y_labs<-y_axis_enquo
+    y_labs <- y_axis_enquo
   } else if (isTRUE(y_labs) == F) {
-    y_labs<-NULL
+    y_labs <- NULL
   }
+
   # Checking the text_x ----------------------------------------------------####
   if(is.null(text_x) == T){
-    text_x<-7
+    text_x <- 7
   }
+
   # Checking the text_x ----------------------------------------------------####
   if(is.null(text_y) == T){
-    text_y<-7
+    text_y <- 7
   }
+
   # Table -----------------------------------------------------------------####
-  bubble<-tibble_ko %>%
+  bubble <- tibble_ko %>%
     select(-.data$domain_name) %>%
-    pivot_longer(cols = -{{y_axis_enquo}}, names_to="Bin_name", 
+    pivot_longer(cols = -{{y_axis_enquo}}, names_to = "Bin_name", 
                  values_to = "Abundance") %>%
     mutate_at('Abundance', as.integer) %>%
     mutate(Abundance = case_when(
       .data$Abundance == 0 ~ NA_integer_,
       TRUE ~ as.integer(Abundance)
     )) 
+
   # Join data experiment --------------------------------------------------####
   if(is.null(data_experiment) == F){
-    bubble<-bubble %>%
-      left_join(data_experiment, by="Bin_name")
+    bubble <- bubble %>%
+      left_join(data_experiment, by = "Bin_name")
   }
+
   # Checking the order ---------------------------------------------------####
   if(is.null(order_metabolism) == T){
-    order_metabolism<-bubble %>%
+    order_metabolism <- bubble %>%
       ungroup() %>%
       select({{y_axis_enquo}}) %>%
       distinct() %>%
@@ -117,32 +129,35 @@ bubble_domain<-function(tibble_ko,
   }
   # Checking the order ---------------------------------------------------####
   if(is.null(order_bins) == T){
-    order_bins<-sort(unique(bubble$Bin_name))
+    order_bins <- sort(unique(bubble$Bin_name))
   }
+
   # Checking experiment ---------------------------------------------------####
   if(is.null(data_experiment) == T){
     data_experiment <- NULL
   }
+
   # Normal / upside -------------------------------------------------------####
   rm(x_axis_enquo, y_axis_enquo, x_axis_label, y_axis_label)
   x_axis_enquo <- enquo(x_axis)
   y_axis_enquo <- enquo(y_axis)
   x_axis_label <- as_label(x_axis_enquo)
   y_axis_label <- as_label(y_axis_enquo)
+
   # Plot ------------------------------------------------------------------####
   if(x_axis_label == "Bin_name") {
-    plot_bubble<-ggplot(bubble,
-                        aes(x= factor(!!x_axis_enquo, 
+    plot_bubble <- ggplot(bubble,
+                        aes(x = factor(!!x_axis_enquo, 
                                       levels = !!order_bins),
-                            y= factor(!!y_axis_enquo, 
+                            y = factor(!!y_axis_enquo, 
                                       levels = !!order_metabolism),
-                            size= .data$Abundance,
-                            color= !!color_character_enquo)) +
-      geom_point(alpha=0.5) +
-      scale_size(range =range_size) +
+                            size = .data$Abundance,
+                            color = !!color_character_enquo)) +
+      geom_point(alpha = 0.5) +
+      scale_size(range = range_size) +
       scale_color_manual(values = color_pallet) +
       theme_linedraw() +
-      theme(axis.text.x = element_text(size=text_x, 
+      theme(axis.text.x = element_text(size = text_x, 
                                        angle = 45, 
                                        hjust = 1, 
                                        vjust = 1),
@@ -150,13 +165,13 @@ bubble_domain<-function(tibble_ko,
       xlab(x_labs) + 
       ylab(y_labs)
   } else if (x_axis_label != "Bin_name" ) {
-    plot_bubble<-ggplot(bubble,
-                        aes(x= factor(!!x_axis_enquo, 
+    plot_bubble <- ggplot(bubble,
+                        aes(x = factor(!!x_axis_enquo, 
                                       levels = !!order_metabolism),
-                            y= factor(!!y_axis_enquo, 
+                            y = factor(!!y_axis_enquo, 
                                       levels = !!order_bins),
-                            size= .data$Abundance,
-                            color= !!color_character_enquo)) +
+                            size = .data$Abundance,
+                            color = !!color_character_enquo)) +
       geom_point(alpha=0.5) +
       scale_size(range = range_size) +
       scale_color_manual(values = color_pallet) +

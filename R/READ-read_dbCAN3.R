@@ -20,16 +20,19 @@
 #' }
 #' @export
 
-read_dbcan3<-function(dbcan_path, write=FALSE, profile=TRUE){
-  ruta_dbcan<-dbcan_path
+read_dbcan3 <- function(dbcan_path, write=FALSE, profile=TRUE){
+
+  ruta_dbcan <- dbcan_path
+
   # Load all the data tables results ---------------------------------------####
   lapply_read_delim_bind_rows <- function(path, pattern = "*overview.txt"){
     files = list.files(path, pattern, full.names = TRUE)
     lapply(files, read.delim, check.names=F) %>% bind_rows()
   }
-  dbcan_df<-suppressWarnings(lapply_read_delim_bind_rows(ruta_dbcan))
+  dbcan_df <- suppressWarnings(lapply_read_delim_bind_rows(ruta_dbcan))
+
   # Reading data ----------------------------------------------------------####
-  dbcan_df_format<- suppressWarnings(
+  dbcan_df_format <- suppressWarnings(
     dbcan_df %>%
       filter( .data$`#ofTools` >1) %>%
       rename(Bin_name=.data$`Gene ID`) %>%
@@ -57,11 +60,11 @@ read_dbcan3<-function(dbcan_path, write=FALSE, profile=TRUE){
       dplyr::select(.data$Bin_name, .data$dbCAN_names, domain_name=.data$dbCAN, .data$Signalp ) %>%
       calc_abundance(analysis = "dbCAN") %>% 
       dplyr::select(-.data$Scaffold_name)) %>% group_by(
-        .data$Bin_name,.data$dbCAN,  .data$domain_name, .data$Signalp) %>% summarise_if(is.numeric, sum) #juntando
+        .data$Bin_name,.data$dbCAN,  .data$domain_name, .data$Signalp) %>% summarise_if(is.numeric, sum) #joining data
   
-  # Reformating data ----------------------------------------------------------####
+  # Reformatting data ----------------------------------------------------------####
   
-  dbcan_df_reformat <-dbcan_df_format %>%dplyr::select(
+  dbcan_df_reformat <-d bcan_df_format %>%dplyr::select(
     -.data$Signalp) %>%
     mutate(domain_name = case_when(str_detect(.data$dbCAN, "CBM") ~ 
                                      "carbohydrate-binding module [CBM]",
@@ -79,11 +82,11 @@ read_dbcan3<-function(dbcan_path, write=FALSE, profile=TRUE){
                                              is.numeric, ~replace(., is.na(.), 0)) 
   
   # Messages --------------------------------------------------------------####
-  initial<-dim(dbcan_df)
-  final<-dim(dbcan_df %>%
+  initial <- dim(dbcan_df)
+  final <- dim(dbcan_df %>%
                filter( .data$`#ofTools` >1))
-  signals<- dbcan_df %>% group_by(.data$Signalp) %>% count() 
-  signals2<- dbcan_df_format %>% group_by(.data$Signalp) %>% count() 
+  signals <- dbcan_df %>% group_by(.data$Signalp) %>% count() 
+  signals2 <- dbcan_df_format %>% group_by(.data$Signalp) %>% count() 
   
   
   print(paste0("Input Genes = " , initial[1]))
@@ -95,9 +98,9 @@ read_dbcan3<-function(dbcan_path, write=FALSE, profile=TRUE){
 # Profile or not --------------------------------------------------------------####
   
   if(isTRUE(profile)){
-    output<-dbcan_df_reformat
+    output <- dbcan_df_reformat
   } else{
-    output<-dbcan_df_format
+    output <- dbcan_df_format
   }
 
 

@@ -21,44 +21,51 @@
 #' scale_option="none", distance=T)
 #' }
 #' @noRd
-heatmap_domain<-function(tibble_ko, 
+
+heatmap_domain <- function(tibble_ko, 
                          y_axis,
                          scale_option=NULL, 
                          color_pallet=NULL,
                          distance=FALSE){
+
   # Enquoting -------------------------------------------------------------####
   y_axis_enquo <- enquo(y_axis)
   y_axis_label <- as_label(y_axis_enquo)
+
   # Checking the scale ----------------------------------------------------####
   if(is.null(scale_option) == T){
-    scale_option<-"none"
+    scale_option <- "none"
   } else if (is.null(scale_option) == "row"){
-    scale_option<-"row"
+    scale_option <- "row"
   }else if (is.null(scale_option) == "column"){
-    scale_option<-"column"
+    scale_option <- "column"
   }
+
   # Checking the color ----------------------------------------------------####
   if(is.null(color_pallet) == T){
-    color_pallet<-viridis(n=100)
+    color_pallet <- viridis(n=100)
   }
+
   # Preparing dataframe ---------------------------------------------------####
-  heatmap_domain_table<-tibble_ko %>%
+  heatmap_domain_table <- tibble_ko %>%
     select(-.data$domain_name) %>%
     column_to_rownames({{y_axis_label}})
+
   # Checking distance -----------------------------------------------------####
   if(isTRUE(distance) == T) {
-    heatmap_domain_table_2<-tibble_ko %>%
+    heatmap_domain_table_2 <- tibble_ko %>%
       select(-.data$domain_name) %>%
-      pivot_longer(cols = -{{y_axis_enquo}}, names_to="Bin_name", 
+      pivot_longer(cols = -{{y_axis_enquo}}, names_to = "Bin_name", 
                    values_to = "count") %>%
       pivot_wider(names_from = {{y_axis_enquo}}, values_from = count, 
                   values_fill = 0) %>%
       column_to_rownames("Bin_name")
-    distance_domains<-stats::dist(heatmap_domain_table_2)
-    heatmap_domain_table<-as.matrix(distance_domains, method="euclidean")
+    distance_domains <- stats::dist(heatmap_domain_table_2)
+    heatmap_domain_table <- as.matrix(distance_domains, method = "euclidean")
   }
+
   # Plot ------------------------------------------------------------------####
-  plot_heat<-pheatmap::pheatmap(heatmap_domain_table, 
+  plot_heat <- pheatmap::pheatmap(heatmap_domain_table, 
                                 angle_col="45", 
                                 scale = scale_option,
                                 main = "Protein domain heatmap",

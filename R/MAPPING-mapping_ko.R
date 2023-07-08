@@ -16,39 +16,41 @@
 #' @examples
 #' mapping_ko(ko_bin_table)
 #' @export
-mapping_ko<-function(tibble_ko=NULL, 
+
+mapping_ko <- function(tibble_ko=NULL, 
                      tibble_interpro=NULL ){
   # KEGG links ------------------------------------------------------------####
-  module_link<- KEGGREST::keggLink("ko", "module") %>%
+  module_link <- KEGGREST::keggLink("ko", "module") %>%
     enframe() %>%
     rename(KO = .data$value) %>%
     rename(Module = .data$name) %>%
-    mutate(Module=str_remove_all(.data$Module, "md:")) %>%
-    mutate(KO=str_remove_all(.data$KO, "ko:")) 
+    mutate(Module = str_remove_all(.data$Module, "md:")) %>%
+    mutate(KO = str_remove_all(.data$KO, "ko:")) 
   pathway_link <- keggLink("ko", "pathway") %>%
     enframe() %>%
     rename(KO = .data$value) %>%
     rename(Pathway = .data$name) %>%
     filter(!str_detect(.data$Pathway, "ko")) %>%
-    mutate(Pathway=str_remove_all(.data$Pathway, "path:")) %>%
-    mutate(KO=str_remove_all(.data$KO, "ko:"))  
-  enzyme_link<-keggLink("ko", "enzyme") %>%
+    mutate(Pathway = str_remove_all(.data$Pathway, "path:")) %>%
+    mutate(KO = str_remove_all(.data$KO, "ko:"))  
+  enzyme_link <- keggLink("ko", "enzyme") %>%
     enframe() %>%
     rename(KO = .data$value) %>%
     rename(Enzyme = .data$name ) %>%
     mutate(KO=str_remove_all(.data$KO, "ko:")) 
+
   # KEGG lists ------------------------------------------------------------####
-  modules_list<-KEGGREST::keggList("module") %>%
+  modules_list <- KEGGREST::keggList("module") %>%
     enframe() %>%
     rename(Module_description = .data$value) %>%
     rename(Module = .data$name ) %>%
-    mutate(Module=str_remove_all(.data$Module, "md:")) 
-  pathway_list<-KEGGREST::keggList("pathway")%>%
+    mutate(Module = str_remove_all(.data$Module, "md:")) 
+  pathway_list <- KEGGREST::keggList("pathway")%>%
     enframe() %>%
     rename(Pathway_description = .data$value) %>%
     rename(Pathway = .data$name ) %>%
-    mutate(Pathway=str_remove_all(.data$Pathway, "path:"))
-  ko_list<-suppressMessages(suppressWarnings(
+    mutate(Pathway = str_remove_all(.data$Pathway, "path:"))
+  ko_list <- suppressMessages(suppressWarnings(
     read_delim("http://rest.kegg.jp/list/ko",  
                delim="\t", col_names = F) %>%
     rename(KO_description = .data$X2) %>%
@@ -67,21 +69,23 @@ mapping_ko<-function(tibble_ko=NULL,
         #                               sep="; ") %>%
          #                     mutate(KO=str_remove_all(.data$KO, "ko:")))
   # KO master -------------------------------------------------------------####
-  data_to_select<-c("Module", "Module_description", "Pathway", 
+  data_to_select <- c("Module", "Module_description", "Pathway", 
                     "Pathway_description", "KO", "Genes", 
                     "Gene_description", "Enzyme") 
-  KO_master<-left_join(ko_list, pathway_link, by="KO") %>%
+  KO_master<-left_join(ko_list, pathway_link, by = "KO") %>%
     left_join(pathway_list, by="Pathway") %>%
     left_join(module_link, by="KO") %>%
     left_join(modules_list, by="Module") %>%
     left_join(enzyme_link, by="KO") %>%
     select(all_of(data_to_select)) %>%
     distinct()
+
   # Remove data -----------------------------------------------------------####
   rm(module_link, pathway_link, enzyme_link, modules_list, 
      pathway_list, ko_list, data_to_select)
+
   # Add DiTing ------------------------------------------------------------####
-  DiTing_cycles<-suppressMessages(read_delim(
+  DiTing_cycles <- suppressMessages(read_delim(
     "https://raw.githubusercontent.com/xuechunxu/DiTing/master/table/KO_affilated_to_biogeochemical_cycle.tab", 
     delim="\t") %>%
       fill(.data$Cycle) %>%
@@ -89,18 +93,22 @@ mapping_ko<-function(tibble_ko=NULL,
       rename(Pathway_cycle = .data$Pathway) %>%
       rename(KO = .data$k_number) %>%
       rename(Detail_cycle = .data$Detail))
+
   # Combine data-sets -----------------------------------------------------####
-  KO_master_DiTing<-left_join(KO_master, DiTing_cycles, by="KO")
+  KO_master_DiTing <- left_join(KO_master, DiTing_cycles, by="KO")
+
   # Read RbiMs ------------------------------------------------------------####
-  rbims<-rbims
+  rbims <- rbims
+
   # Combine data-sets -----------------------------------------------------####
-  KO_master_DiTing_rbims<-left_join(KO_master_DiTing, rbims, by="KO") %>%
+  KO_master_DiTing_rbims <- left_join(KO_master_DiTing, rbims, by="KO") %>%
     mutate(Genes = case_when(
       Genes == "alkT" ~ "rubB, alkT",
       TRUE ~ as.character(Genes)
     ))
+
   # Data to select --------------------------------------------------------####
-  data_to_select<-c("Module", "Module_description", "Pathway", 
+  data_to_select <- c("Module", "Module_description", "Pathway", 
                     "Pathway_description", "Cycle", "Pathway_cycle",
                     "Detail_cycle", "Genes", "Gene_description", 
                     "Enzyme", "Bin_name", "Abundance", "KO",
@@ -115,6 +123,7 @@ mapping_ko<-function(tibble_ko=NULL,
   if(is.null(tibble_ko) == F){
     table_to_ko<- tibble_ko
   }
+
   # Write tibble ----------------------------------------------------------####
   final_table <- table_to_ko %>%
     left_join(KO_master_DiTing_rbims, by="KO") %>%

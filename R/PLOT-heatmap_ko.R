@@ -33,6 +33,7 @@
 #' order_x=Clades)
 #' }
 #' @noRd
+
 heatmap_ko<-function(tibble_ko,
                      y_axis,
                      data_experiment=NULL,
@@ -42,63 +43,67 @@ heatmap_ko<-function(tibble_ko,
                      order_x=NULL,
                      split_y=FALSE,
                      color_pallet=NULL){
+
   # Enquoting -------------------------------------------------------------####
   y_axis_enquo <- enquo(y_axis)
   order_x_enquo <- enquo(order_x)
   order_y_enquo <- enquo(order_y)
   order_y_label <- as_label(order_y_enquo)
   y_axis_label <- as_label(y_axis_enquo)
+
   # Checking the scale ----------------------------------------------------####
   if(is.null(scale_option) == T){
-    scale_option<-"none"
+    scale_option <- "none"
   } else if (is.null(scale_option) == "row"){
-    scale_option<-"row"
+    scale_option <- "row"
   }else if (is.null(scale_option) == "column"){
-    scale_option<-"column"
+    scale_option <- "column"
   }
+
   # Checking the color ----------------------------------------------------####
   if(is.null(color_pallet) == T){
-    color_pallet<-viridis(n=100)
+    color_pallet <- viridis(n=100)
   }
+
   # Check calc --------------------------------------------------------####
   if(calc == "Abundance"){
-    tibble_ko_mod<-calc_binary(tibble_ko, !!y_axis_enquo, 
+    tibble_ko_mod <- calc_binary(tibble_ko, !!y_axis_enquo, 
                                binary=FALSE) %>%
       rename(tmp = .data$Abundance)
   } else if (calc == "Binary") {
-    tibble_ko_mod<-calc_binary(tibble_ko, !!y_axis_enquo) %>%
+    tibble_ko_mod <- calc_binary(tibble_ko, !!y_axis_enquo) %>%
       rename(tmp = .data$Presence_absence)
   } else if (calc == "Percentage") {
-    tibble_ko_mod<-calc_percentage(tibble_ko, !!y_axis_enquo) %>%
+    tibble_ko_mod <- calc_percentage(tibble_ko, !!y_axis_enquo) %>%
       rename(tmp = .data$Percentage) %>%
       select(-.data$Pathway_number_of_total_elements)
   }  else if (calc == "None") {
     if( "Presence_absence" %in% colnames(tibble_ko)){
-      tibble_ko_mod <-rename(tibble_ko, tmp = .data$Presence_absence) %>%
+      tibble_ko_mod <- rename(tibble_ko, tmp = .data$Presence_absence) %>%
         select({{y_axis_enquo}}, .data$Bin_name, .data$tmp) %>%
         distinct()
-      tibble_ko <-rename(tibble_ko, tmp = .data$Presence_absence)
+      tibble_ko <- rename(tibble_ko, tmp = .data$Presence_absence)
     } else if ( "Abundance" %in% colnames(tibble_ko)){
-      tibble_ko_mod <-rename(tibble_ko, tmp = .data$Abundance)%>%
+      tibble_ko_mod <- rename(tibble_ko, tmp = .data$Abundance)%>%
         select({{y_axis_enquo}}, .data$Bin_name, .data$tmp)%>%
         distinct()
-      tibble_ko <-rename(tibble_ko, tmp = .data$Abundance)
+      tibble_ko <- rename(tibble_ko, tmp = .data$Abundance)
     } else if ( "Percentage" %in% colnames(tibble_ko)){
-      tibble_ko_mod <-rename(tibble_ko, tmp = .data$Percentage)%>%
+      tibble_ko_mod <- rename(tibble_ko, tmp = .data$Percentage)%>%
         select({{y_axis_enquo}}, .data$Bin_name, .data$tmp)%>%
         distinct()
-      tibble_ko <-rename(tibble_ko, tmp = .data$Percentage)
+      tibble_ko <- rename(tibble_ko, tmp = .data$Percentage)
     }
   }
   
   # Sorting col names -----------------------------------------------------####
   tibble_ko_colnames<-colnames(tibble_ko)
-  paths<-c("Module", "Module_description", "Pathway", 
+  paths <- c("Module", "Module_description", "Pathway", 
            "Pathway_description", "Genes", 
            "Gene_description", "Enzyme", "KO", "Cycle", "Pathway_cycle",
            "Detail_cycle", "rbims_pathway", "rbims_sub_pathway")
   if(calc == "None"){
-    paths<-c("Module", "Module_description", "Pathway", 
+    paths <- c("Module", "Module_description", "Pathway", 
              "Pathway_description", "Genes", 
              "Gene_description", "Enzyme", "KO", "Cycle", "Pathway_cycle",
              "Detail_cycle", "rbims_pathway", "rbims_sub_pathway",
@@ -108,6 +113,7 @@ heatmap_ko<-function(tibble_ko,
                                                paths]
   tibble_ko_colnames_3 <- tibble_ko_colnames_2[!tibble_ko_colnames_2 %in%
                                                  y_axis_label]
+
   # Join ------------------------------------------------------------------####
   table_final<-tibble_ko_mod %>%
     pivot_wider(names_from = .data$Bin_name, 
@@ -115,7 +121,7 @@ heatmap_ko<-function(tibble_ko,
                 values_fill = 0) %>%
     distinct() %>%
     left_join(tibble_ko, 
-              by= y_axis_label)%>%
+              by = y_axis_label)%>%
     select(-all_of(tibble_ko_colnames_3)) %>%
     select(-contains(".y")) %>%
     distinct() %>%
@@ -123,31 +129,32 @@ heatmap_ko<-function(tibble_ko,
       list( ~ stringr::str_replace_all(., ".x", ""))
     ) %>%
     column_to_rownames(y_axis_label)
+
   # Extracting metabolism -------------------------------------------------####
   if(quo_is_null(order_y_enquo) == F){
-    metabolism_order<- tibble_ko %>%
+    metabolism_order <- tibble_ko %>%
       select({{y_axis_enquo}}, {{order_y_enquo}}) %>%
       drop_na() %>%
       distinct(.data[[y_axis_enquo]], .keep_all = T) %>%
       column_to_rownames(y_axis_label) %>%
-      arrange(!!order_y_enquo)
-    
+      arrange(!!order_y_enquo)  
   } 
+
   # Checking the split ----------------------------------------------------####
   if(split_y == FALSE){
-    split_y<-NULL
+    split_y <- NULL
   } else if (split_y == TRUE){
-    split_y<-select(metabolism_order, 
+    split_y <- select(metabolism_order, 
                     {{order_y_enquo}})
   }
   # Extracting experiment -------------------------------------------------####
   if(quo_is_null(order_x_enquo) == F && calc != "None"){
-    data_to_select<-c("Module", "Module_description", "Pathway", 
+    data_to_select <- c("Module", "Module_description", "Pathway", 
                       "Pathway_description", "Genes", 
                       "Gene_description", "Enzyme", "KO", "Cycle", 
                       "Pathway_cycle",
                       "Detail_cycle", "rbims_pathway", "rbims_sub_pathway")
-    experiment_order<- tibble_ko %>% 
+    experiment_order <- tibble_ko %>% 
       pivot_longer(cols = -all_of(data_to_select), 
                    values_to = "Abundance",
                    names_to="Bin_name") %>%
@@ -169,16 +176,17 @@ heatmap_ko<-function(tibble_ko,
   } 
   
   # Order table -----------------------------------------------------------####
-  if(quo_is_null(order_x_enquo) == F && quo_is_null(order_y_enquo)== F ){
+  if(quo_is_null(order_x_enquo) == F && quo_is_null(order_y_enquo) == F ){
     sub_samp_ordered <- table_final[rownames(metabolism_order),]
     sub_samp_ordered_2 <- sub_samp_ordered[,rownames(experiment_order)]
   } 
-  if(quo_is_null(order_x_enquo) == T && quo_is_null(order_y_enquo)== F ){
+  if(quo_is_null(order_x_enquo) == T && quo_is_null(order_y_enquo) == F ){
     sub_samp_ordered <- table_final[rownames(metabolism_order),]
   }
-  if(quo_is_null(order_x_enquo) == F && quo_is_null(order_y_enquo)== T ){
+  if(quo_is_null(order_x_enquo) == F && quo_is_null(order_y_enquo) == T ){
     sub_samp_ordered_2 <- table_final[,rownames(experiment_order)]
   } 
+
   # Plot ------------------------------------------------------------------####
   if(quo_is_null(order_x_enquo) == F && quo_is_null(order_y_enquo)== F ) {
     plot_heat<-suppressWarnings(
@@ -197,6 +205,7 @@ heatmap_ko<-function(tibble_ko,
                                col = color_pallet)
     )
   }
+
   # Plot ------------------------------------------------------------------####
   if(quo_is_null(order_x_enquo) == T && quo_is_null(order_y_enquo)== F ) {
     plot_heat<-suppressWarnings(
@@ -212,6 +221,7 @@ heatmap_ko<-function(tibble_ko,
                                col = color_pallet)
     )
   }
+
   # Plot ------------------------------------------------------------------####
   if(quo_is_null(order_x_enquo) == F && quo_is_null(order_y_enquo)== T ) {
     plot_heat<-suppressWarnings(
@@ -228,6 +238,7 @@ heatmap_ko<-function(tibble_ko,
                                col = color_pallet)
     )
   }
+
   # Plot ------------------------------------------------------------------####
   if(quo_is_null(order_x_enquo) == T && quo_is_null(order_y_enquo)== T ) {
     plot_heat<-suppressWarnings(ComplexHeatmap::pheatmap(table_final, 
@@ -236,7 +247,7 @@ heatmap_ko<-function(tibble_ko,
                                                          cluster_cols = T,
                                                          main = "Pathway heatmap",
                                                          fontsize=7,
-                                                         angle_col="45",
+                                                         angle_col = "45",
                                                          col = color_pallet)
     )
     

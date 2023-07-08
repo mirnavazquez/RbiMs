@@ -18,7 +18,8 @@
 #' database="KO", profile = F, write=F)
 #' }
 #' @export
-read_picrust2<-function(data_picrust2, 
+
+read_picrust2 <- function(data_picrust2, 
                         profile=TRUE, write=FALSE,
                         database= c("KO", "EC", "pathway")){
 # Extract functions or gene----------------------------------------------####
@@ -28,11 +29,11 @@ read_picrust2<-function(data_picrust2,
                                   col_names = T)  )) 
 # Choosing database----------------------------------------------####
     
-if(database=="KO"){
+if(database == "KO"){
           colnames(table_picrust)[1] <- "KO"}
-if(database=="EC"){
+if(database == "EC"){
       colnames(table_picrust)[1] <- "EC"}   
-if(database=="pathway"){
+if(database == "pathway"){
      colnames(table_picrust)[1] <- "pathway"}   
     
 # Profile or not ----------------------------------------------####

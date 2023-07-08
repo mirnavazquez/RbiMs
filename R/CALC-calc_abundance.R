@@ -16,6 +16,7 @@
 #' the KEGG ID (or other feature ID), and the number of times the feature appears 
 #' in the genome.
 #' @noRd
+
 calc_abundance <- function(dataset, 
                            analysis = c("KEGG", "Pfam", "INTERPRO", "TIGRFAM", 
                                         "SUPERFAMILY", "SMART", "SFLD",
@@ -24,6 +25,7 @@ calc_abundance <- function(dataset,
                                         "MobiDBLite", "Hamap", "Gene3D", 
                                         "Coils", "CDD", "dbCAN"), 
                            col_rename = NULL) {
+
   # Asign colum names -----------------------------------------------------####
   col_analysis <- c(KEGG = "KO", Pfam = "Pfam", INTERPRO = "Interpro", 
                     dbCAN = "dbCAN_names", TIGRFAM = "TIGRFAM",
@@ -34,28 +36,32 @@ calc_abundance <- function(dataset,
                     MobiDBLite = "MobiDBLite",  Hamap = "Hamap", 
                     Gene3D = "Gene3D",  Coils = "Coils", CDD = "CDD")
   if (!analysis %in% names(col_analysis)) stop("Unknown analysis")
+
   # Read table ------------------------------------------------------------####
   KO_raw <- dataset %>%
-    separate(Bin_name, c("Bin_name", "Scaffold_name"), 
-             sep = "[_|-][s|S]caffold") %>%
-    mutate(Scaffold_name = paste0("scaffold", Scaffold_name),
-           Scaffold_name) %>%
-    unite("Scaffold_name", c("Bin_name", "Scaffold_name"), remove = FALSE)
+            separate(Bin_name, c("Bin_name", "Scaffold_name"), 
+                     sep = "[_|-][s|S]caffold") %>%
+            mutate(Scaffold_name = paste0("scaffold", Scaffold_name),
+                   Scaffold_name) %>%
+            unite("Scaffold_name", c("Bin_name", "Scaffold_name"), remove = FALSE)
+
   # Selecting analysis ----------------------------------------------------####
   KO_raw <- KO_raw %>%
-    rename(tmp = .data[[col_analysis[analysis]]]) %>%
-    distinct()
+            rename(tmp = .data[[col_analysis[analysis]]]) %>%
+            distinct()
+
   # Calculate abundance ---------------------------------------------------####
   KO_abundance <- KO_raw %>%
-    group_by(Bin_name) %>%
-    distinct() %>%
-    count(tmp) %>%
-    rename(Abundance = n) %>%
-    ungroup()
+                    group_by(Bin_name) %>%
+                    distinct() %>%
+                    count(tmp) %>%
+                    rename(Abundance = n) %>%
+                    ungroup()
+
   # Write tibble -----------------------------------------------------------####
   final_table_1 <- left_join(KO_raw, KO_abundance, 
-                             by = c("Bin_name", "tmp")) %>%
-    distinct()
+                    by = c("Bin_name", "tmp")) %>%
+                    distinct()
   
   if (!is.null(col_rename)) {
     final_table <- final_table_1 %>% rename_with(~ col_rename, tmp)

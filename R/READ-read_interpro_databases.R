@@ -10,18 +10,22 @@
 #' metabolism.
 #' @import  tibble dplyr stringr tidyr  rlang
 #' @noRd
-read_interpro_databases<- function(
+
+read_interpro_databases <- function(
   data_interpro,
   database_1){
+
   # Quote the database ----------------------------------------------------####
-  database_quote<-enquo(database_1)
+  database_quote <- enquo(database_1)
+
   # Make the table --------------------------------------------------------####
-  Pfam<-read_interpro(data_interpro=data_interpro, database=database_1, 
+  Pfam <- read_interpro(data_interpro = data_interpro, database = database_1, 
                       profile = F) %>%
     mutate(
       across(everything(), ~replace_na(.x, "---"))
     ) %>%
     mutate_at('Abundance', as.integer)
+
   # Print -----------------------------------------------------------------####
   return(Pfam)
 }

@@ -16,29 +16,34 @@
 #' @examples
 #' calc_binary(ko_bin_mapp, Pathway)    
 #' @export
-calc_binary<-function(tibble_ko,
+
+calc_binary <- function(tibble_ko,
                       y_axis,
                       data_experiment=NULL,
                       binary=TRUE,
                       metabolism=FALSE){
+
   # Enquoting -------------------------------------------------------------####
   y_axis_enquo <- enquo(y_axis)
   y_axis_label <- as_label(y_axis_enquo)
+
   # Select data -----------------------------------------------------------####
-  data_to_select<-c("Module", "Module_description", "Pathway", 
+  data_to_select <- c("Module", "Module_description", "Pathway", 
                     "Pathway_description", "Genes", 
                     "Gene_description", "Enzyme", "Cycle", "Pathway_cycle",
                     "Detail_cycle", "rbims_pathway", "rbims_sub_pathway",
                     "KO", "dbCAN", "domain_name", "Pfam", "PFAM", "INTERPRO")
+
   # Transform from wide to long -------------------------------------------####
-  Kegg_long<- tibble_ko %>%
+  Kegg_long <- tibble_ko %>%
     pivot_longer(cols = -any_of(data_to_select), 
                  values_to = "Abundance",
                  names_to="Bin_name") %>%
     distinct()
+
   # Calc binary -----------------------------------------------------------####
   if(binary == TRUE){
-    Table_binary<-suppressMessages(Kegg_long %>%
+    Table_binary <- suppressMessages(Kegg_long %>%
                                      rename(tmp = .data$Abundance)  %>%
                                      select({{y_axis_enquo}}, .data$Bin_name, 
                                             .data$tmp) %>%
@@ -55,7 +60,7 @@ calc_binary<-function(tibble_ko,
                                      )) %>%
                                      mutate_at('Presence_absence', as.integer)) 
   } else if (binary == FALSE) {
-    Table_binary<-suppressMessages(Kegg_long  %>%
+    Table_binary <- suppressMessages(Kegg_long  %>%
                                      select({{y_axis_enquo}}, .data$Bin_name, 
                                             .data$Abundance) %>%
                                      distinct() %>%
@@ -67,14 +72,16 @@ calc_binary<-function(tibble_ko,
                                      drop_na())
   }
   # Join data experiment --------------------------------------------------####
+
   if(is.null(data_experiment) == F){
     Table_binary<-Kegg_long %>%
-      left_join(Table_binary, by="Bin_name")
+      left_join(Table_binary, by = "Bin_name")
   }
   # Full table ----------------------------------------------------------- ####
+
   if(metabolism == T){
-    Kegg_long<-select(Kegg_long, -.data$Abundance)
-    Table_binary<-Table_binary %>%
+    Kegg_long <- select(Kegg_long, -.data$Abundance)
+    Table_binary <- Table_binary %>%
       left_join(Kegg_long, by=c(y_axis_label, "Bin_name"))
   }
   return(Table_binary)
