@@ -221,7 +221,7 @@ bubble_ko <- function(tibble_ko,
       rename(Abundance = .data$tmp)
     plot_bubble <- suppressMessages(plot_bubble + guides(size = guide_legend(title = "Abundance")))
   } else if (calc == "Binary") {
-    Table_with_percentage <-T able_with_percentage %>%
+    Table_with_percentage <-Table_with_percentage %>%
       rename("Presence/Absence" = .data$tmp)
     plot_bubble <- suppressMessages(plot_bubble + scale_size_continuous(name = "", labels = "Present"))
   } else if (calc == "Percentage") {
