@@ -64,7 +64,7 @@ read_dbcan3 <- function(dbcan_path, write=FALSE, profile=TRUE){
   
   # Reformatting data ----------------------------------------------------------####
   
-  dbcan_df_reformat <-d bcan_df_format %>%dplyr::select(
+  dbcan_df_reformat <- dbcan_df_format %>%dplyr::select(
     -.data$Signalp) %>%
     mutate(domain_name = case_when(str_detect(.data$dbCAN, "CBM") ~ 
                                      "carbohydrate-binding module [CBM]",
