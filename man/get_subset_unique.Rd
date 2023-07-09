@@ -4,7 +4,7 @@
 \alias{get_subset_unique}
 \title{Unique abundance profile.}
 \usage{
-get_subset_unique(tibble_rbims, data_experiment, experiment_col, 
+get_subset_unique(tibble_rbims, data_experiment, experiment_col,
 experiment_col_element, analysis=c("KEGG", "PFAM", "INTERPRO"))
 }
 \arguments{
@@ -36,6 +36,6 @@ This function is part of a package used for the analysis
 of bins metabolism.
 }
 \examples{
-get_subset_unique(ko_bin_mapp, metadata, Sample_site, 
+get_subset_unique(ko_bin_mapp, metadata, Sample_site,
 "Water_column", analysis="KEGG")
 }

@@ -22,5 +22,5 @@ This function is part of a package used for the analysis of bins
 metabolism.
 }
 \examples{
-calc_percentage(ko_bin_mapp, Pathway)    
+calc_percentage(ko_bin_mapp, Pathway)
 }

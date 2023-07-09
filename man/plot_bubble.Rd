@@ -5,7 +5,7 @@
 \title{Bubble plot.}
 \usage{
 plot_bubble(tibble_ko, x_axis, y_axis, analysis=c("KEGG","INTERPRO", "DBCAN"),
-data_experiment=NULL, calc=NULL, color_character=NULL, order_bins=NULL, 
+data_experiment=NULL, calc=NULL, color_character=NULL, order_bins=NULL,
 order_metabolism=NULL, color_pallet=NULL, range_size=NULL, x_labs=TRUE,
 y_labs=TRUE, text_x=NULL, text_y=NULL)
 }
@@ -61,7 +61,7 @@ This function is part of a package used for
 the analysis of bins metabolism.
 }
 \examples{
-plot_bubble(tibble_ko=ko_bin_mapp, x_axis=Bin_name, y_axis=Module, 
+plot_bubble(tibble_ko=ko_bin_mapp, x_axis=Bin_name, y_axis=Module,
 analysis="KEGG", data_experiment=metadata, calc="Binary",
 color_character=Clades)
 }

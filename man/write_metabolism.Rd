@@ -23,7 +23,7 @@ metabolism.
 }
 \examples{
 \dontrun{
-write_metabolism("inst/extdata/Interpro_test.tsv", 
+write_metabolism("inst/extdata/Interpro_test.tsv",
 "inst/extdata/")
 }
 }

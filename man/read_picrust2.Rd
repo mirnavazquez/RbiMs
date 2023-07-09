@@ -4,7 +4,7 @@
 \alias{read_picrust2}
 \title{Read the output of PICRUSt2}
 \usage{
-read_picrust2(data_picrust2, profile=TRUE, write=FALSE, 
+read_picrust2(data_picrust2, profile=TRUE, write=FALSE,
 database= c("KO", "EC", "pathway"))
 }
 \arguments{
@@ -28,7 +28,7 @@ metabolism.
 }
 \examples{
 \dontrun{
-read_picrust2(data_picrust2="inst/extdata/pred_metagenome_unstrat.tsv", 
+read_picrust2(data_picrust2="inst/extdata/pred_metagenome_unstrat.tsv",
 database="KO", profile = F, write=F)
 }
 }

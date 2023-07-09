@@ -6,7 +6,7 @@
 KofamScan/\href{https://www.genome.jp/tools/kofamkoala/}{KofamKoala} or
 \href{https://www.genome.jp/kegg/kaas/}{KAAS}.}
 \usage{
-read_ko(data_kofam=NULL, data_kaas=NULL, data_interpro=NULL, 
+read_ko(data_kofam=NULL, data_kaas=NULL, data_interpro=NULL,
 write=FALSE)
 }
 \arguments{

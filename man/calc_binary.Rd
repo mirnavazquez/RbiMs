@@ -29,5 +29,5 @@ This function is part of a package used for the analysis of bins
 metabolism.
 }
 \examples{
-calc_binary(ko_bin_mapp, Pathway)    
+calc_binary(ko_bin_mapp, Pathway)
 }

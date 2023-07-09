@@ -4,7 +4,7 @@
 \alias{get_subset_pca}
 \title{Metabolism PCA.}
 \usage{
-get_subset_pca(tibble_rbims, cos2_val=NULL, 
+get_subset_pca(tibble_rbims, cos2_val=NULL,
 analysis=c("KEGG", "PFAM", "INTERPRO"))
 }
 \arguments{

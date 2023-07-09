@@ -4,7 +4,7 @@
 \alias{plot_heatmap}
 \title{Heatmap}
 \usage{
-plot_heatmap(tibble_ko, y_axis, analysis=c("KEGG","INTERPRO"), 
+plot_heatmap(tibble_ko, y_axis, analysis=c("KEGG","INTERPRO"),
 data_experiment=NULL, calc=NULL, scale_option=NULL, order_y=NULL, order_x=NULL,
 split_y=FALSE, color_pallet=NULL, distance=FALSE)
 }
@@ -59,7 +59,7 @@ the analysis of bins metabolism.
 \examples{
 \dontrun{
 plot_heatmap(tibble_ko=ko_bin_mapp, y_axis=Pathway,
-analysis="INTERPRO", data_experiment = metadata, 
+analysis="INTERPRO", data_experiment = metadata,
 calc="Binary", order_y=Module, order_x=Clades)
 }
 }

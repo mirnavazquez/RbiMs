@@ -4,10 +4,10 @@
 \alias{read_interpro}
 \title{Extract abundance profile of InterProScan output.}
 \usage{
-read_interpro(data_interpro, 
+read_interpro(data_interpro,
 database=c("KEGG", "Pfam", "INTERPRO",
 "TIGRFAM", "SUPERFAMILY", "SMART", "SFLD", "ProSiteProfiles",
-"ProSitePatterns", "ProDom", "PRINTS", "PIRSF", 
+"ProSitePatterns", "ProDom", "PRINTS", "PIRSF",
 "MobiDBLite","Hamap", "Gene3D", "Coils", "CDD"), profile = TRUE)
 }
 \arguments{
@@ -33,7 +33,7 @@ metabolism.
 }
 \examples{
 \dontrun{
-read_interpro(data_interpro="inst/extdata/Interpro_test.tsv", database="INTERPRO", 
+read_interpro(data_interpro="inst/extdata/Interpro_test.tsv", database="INTERPRO",
 profile = F)
 }
 }
