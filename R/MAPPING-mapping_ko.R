@@ -49,7 +49,7 @@ mapping_ko<-function(tibble_ko=NULL,
     rename(Pathway = .data$name ) %>%
     mutate(Pathway=str_remove_all(.data$Pathway, "path:"))
   ko_list<-suppressMessages(suppressWarnings(
-    read_delim("http://rest.kegg.jp/list/ko",  
+    read_delim("https://rest.kegg.jp/list/ko",  
                delim="\t", col_names = F) %>%
     rename(KO_description = .data$X2) %>%
     rename(KO = .data$X1 ) %>%
