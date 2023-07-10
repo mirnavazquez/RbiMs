@@ -1,6 +1,6 @@
 #' Main Rbims
 #'
-#' @format Home made database of intresting pathways
+#' @format Home made database of interesting pathways
 #' @source \url{https://sites.utexas.edu/baker-lab/}
 "rbims"
 

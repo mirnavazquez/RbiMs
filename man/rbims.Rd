@@ -5,7 +5,7 @@
 \alias{rbims}
 \title{Main Rbims}
 \format{
-Home made database of intresting pathways
+Home made database of interesting pathways
 }
 \source{
 \url{https://sites.utexas.edu/baker-lab/}
