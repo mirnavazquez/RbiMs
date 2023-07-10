@@ -76,7 +76,7 @@ read_dbcan3 <- function(dbcan_path,
         domain_name = .data$dbCAN,
         .data$Signalp
       ) %>%
-      calc_abundance(analysis = "dbCAN") %>%
+      calc_abundance(analysis = "dbCAN", col_rename="dbCAN") %>%
       dplyr::select(-.data$Scaffold_name)
   ) %>% group_by(.data$Bin_name,
                  .data$dbCAN,
