@@ -36,10 +36,10 @@ calc_abundance <- function(dataset,
   if (!analysis %in% names(col_analysis)) stop("Unknown analysis")
   # Read table ------------------------------------------------------------####
   KO_raw <- dataset %>%
-    separate(Bin_name, c("Bin_name", "Scaffold_name"), 
+    separate(.data$Bin_name, c("Bin_name", "Scaffold_name"), 
              sep = "[_|-][s|S]caffold") %>%
-    mutate(Scaffold_name = paste0("scaffold", Scaffold_name),
-           Scaffold_name) %>%
+    mutate(Scaffold_name = paste0("scaffold", .data$Scaffold_name),
+           .data$Scaffold_name) %>%
     unite("Scaffold_name", c("Bin_name", "Scaffold_name"), remove = FALSE)
   # Selecting analysis ----------------------------------------------------####
   KO_raw <- KO_raw %>%
@@ -47,9 +47,9 @@ calc_abundance <- function(dataset,
     distinct()
   # Calculate abundance ---------------------------------------------------####
   KO_abundance <- KO_raw %>%
-    group_by(Bin_name) %>%
+    group_by(.data$Bin_name) %>%
     distinct() %>%
-    count(tmp) %>%
+    count(.data$tmp) %>%
     rename(Abundance = n) %>%
     ungroup()
   # Write tibble -----------------------------------------------------------####
@@ -58,7 +58,7 @@ calc_abundance <- function(dataset,
     distinct()
   
   if (!is.null(col_rename)) {
-    final_table <- final_table_1 %>% rename_with(~ col_rename, tmp)
+    final_table <- final_table_1 %>% rename_with(~ col_rename, .data$tmp)
   } else {
     final_table <- final_table_1
   }
