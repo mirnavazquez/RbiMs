@@ -49,7 +49,7 @@ read_ko<-function(data_kofam=NULL,
       stop("Must label scaffolds with the name 'Scaffold' or 'scaffold' after 
   the bin name followed by a '-' or '_'.")
     }
-    before<- sub("scaffold.*", "",table_Kofam$Bin_name)
+    before<- sub("[S|s]caffold.*", "",table_Kofam$Bin_name)
     extract<- substr(before, nchar(before)-1+1, nchar(before))
     if (all(str_detect(extract, "[-|_]"))){
     } else{
