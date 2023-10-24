@@ -3,36 +3,39 @@
 #' domains in the whole database. And print back a profile of the protein 
 #' domains that have higher contributions.
 #' @usage get_subset_pca(tibble_rbims, cos2_val=NULL, 
-#' analysis=c("KEGG", "PFAM", "INTERPRO"))
+#' analysis=c("KEGG", "Pfam", "INTERPRO"))
 #' @param tibble_rbims a tibble object, created with 
 #' the read_interpro, mapping_ko or get_subset_* functions. 
 #' @param cos2_val a numeric vector from 0 to 1 indicating the proportion of
 #' contribution used as cut off. Default is 0.98.
 #' See \link[factoextra]{get_pca}.
 #' @param analysis a character, indicating from which input do you want to
-#' get the abundance profile. Valid options are "KEGG", "PFAM" or "INTERPRO". 
+#' get the abundance profile. Valid options are "KEGG", "Pfam" or "INTERPRO". 
 #' @details This function is part of a package used for
 #' the analysis of bins metabolism.
 #' @import dplyr factoextra rlang tibble
 #' @examples
-#' get_subset_pca(ko_bin_mapp, analysis="KEGG")
+#' #get_subset_pca(ko_bin_mapp, analysis="KEGG")
 #' @export
 get_subset_pca<-function(tibble_rbims,
                          cos2_val=NULL,
-                         analysis=c("KEGG", "PFAM", "INTERPRO")){
+                         analysis=c("KEGG", "Pfam", "INTERPRO"))
+  if(analysis == "PFAM"){
+    stop("P letter must be in capital followed by lower-case letters 'Pfam'")
+  
   # Select data -------------------------------------------------------####
   if(analysis=="KEGG") {
     data_to_select<-c("Module", "Module_description", "Pathway", 
                       "Pathway_description", "Genes", 
                       "Gene_description", "Enzyme", "Cycle", "Pathway_cycle",
                       "Detail_cycle", "rbims_pathway", "rbims_sub_pathway")
-  } else if (analysis=="PFAM" || analysis=="INTERPRO") {
+  } else if (analysis=="Pfam" || analysis=="INTERPRO") {
     data_to_select<-"domain_name"
   }
   # Rename ----------------------------------------------------------------####
-  if( analysis == "PFAM") {
+  if( analysis == "Pfam") {
     tibble_rbims <- tibble_rbims %>% 
-      rename(tmp = .data$PFAM) 
+      rename(tmp = .data$Pfam) 
   } else if ( analysis == "KEGG") {
     tibble_rbims <- tibble_rbims %>% 
       rename(tmp = .data$KO)
@@ -72,9 +75,9 @@ get_subset_pca<-function(tibble_rbims,
   final_table_1<-tibble_rbims %>%
     filter(.data$tmp %in% subset1)
   
-  if( analysis == "PFAM") {
+  if( analysis == "Pfam") {
     final_table <- final_table_1 %>% 
-      rename(PFAM = .data$tmp) 
+      rename(Pfam = .data$tmp) 
   } else if ( analysis == "KEGG")  {
     final_table <- final_table_1 %>% 
       rename(KO = .data$tmp)
