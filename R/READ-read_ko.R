@@ -13,7 +13,7 @@
 #' indicate in their names the bin name followed by the scaffold name 
 #' divided by a '-' or '_': bin_scaffoldXX. 
 #' @param data_interpro a data frame output of read_interpro. This
-#' argument is used within mapping_KO.
+#' argument is used within mapping_ko.
 #' @param write  a logical value indicating to save the data imported 
 #' as a formatted table with .tsv extension with a time stamp and it will be 
 #' located in your current working directory
@@ -23,9 +23,7 @@
 #' @importFrom utils read.table
 #' @importFrom purrr map_dfr
 #' @examples
-#' \dontrun{
-#' read_ko("C:/Users/bins/", write=FALSE)
-#' }
+#' read_ko ("C:/Users/bins/", write = FALSE)
 #' @export
 read_ko<-function(data_kofam=NULL, 
                   data_kaas=NULL, 
@@ -84,7 +82,7 @@ read_ko<-function(data_kofam=NULL,
       select(.data$Scaffold_full_name, .data$KO) %>%
       drop_na() %>%
       rename(Bin_name = .data$Scaffold_full_name) %>%
-      calc_abundance(analysis="KEGG")
+      calc_abundance(analysis="KEGG", col_rename = "KO")
   }
   # Calc ------------------------------------------------------------------####
   if(is.null(data_kofam) == F && is.null(data_kaas) == F ){
