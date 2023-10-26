@@ -22,7 +22,7 @@ get_subset_pca<-function(tibble_rbims,
                          analysis=c("KEGG", "Pfam", "INTERPRO")) {
   if(analysis == "PFAM"){
     stop("P letter must be in capital followed by lower-case letters e.g 'Pfam'")
-  }
+   }
   
   # Select data -------------------------------------------------------####
   if(analysis=="KEGG") {
