@@ -19,9 +19,10 @@
 #' @export
 get_subset_pca<-function(tibble_rbims,
                          cos2_val=NULL,
-                         analysis=c("KEGG", "Pfam", "INTERPRO"))
+                         analysis=c("KEGG", "Pfam", "INTERPRO")) {
   if(analysis == "PFAM"){
-    stop("P letter must be in capital followed by lower-case letters 'Pfam'")
+    stop("P letter must be in capital followed by lower-case letters e.g 'Pfam'")
+  }
   
   # Select data -------------------------------------------------------####
   if(analysis=="KEGG") {
@@ -87,6 +88,5 @@ get_subset_pca<-function(tibble_rbims,
   }
   return(final_table)
 }
-
 
 
