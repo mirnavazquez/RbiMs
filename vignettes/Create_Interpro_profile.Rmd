@@ -22,6 +22,7 @@ A common practice to annotate the genes of a new genome or reconstructed genome 
 First, load the rbims package.
 
 ```{r setup}
+install_github("mirnavazquez/RbiMs", force = T)
 library(rbims)
 ```
 
@@ -36,7 +37,7 @@ The function to use that information is `read_interpro`. This function can parse
 If you want to follow the example you can download the use rbims [test](https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/Interpro_test.tsv) file.
 
 ```{r, eval=FALSE}
-interpro_pfam_profile<-read_interpro(data_interpro = "Interpro_test.tsv", database="Pfam", profile = T, write = F)
+interpro_pfam_profile<-read_interpro(data_interpro = "Interpro_test.tsv", database="Pfam", profile = T)
 ```
 
 ```{r}
