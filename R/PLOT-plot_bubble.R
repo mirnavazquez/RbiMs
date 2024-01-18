@@ -55,6 +55,9 @@ plot_bubble<-function(tibble_ko,
                       y_labs=TRUE,
                       text_x=NULL,
                       text_y=NULL){
+  if(is.null(calc) == T){
+    stop("calc must have a value between Abundance, Binary or Percentage")
+  }
   # Enquoting -------------------------------------------------------------####
   x_axis_enquo <- enquo(x_axis)
   y_axis_enquo <- enquo(y_axis)
@@ -73,8 +76,8 @@ plot_bubble<-function(tibble_ko,
                       x_labs=x_labs, y_labs=y_labs, text_x=text_x, 
                       text_y=text_y)
   }else if (analysis == "INTERPRO") {
-    bubble<-bubble_ko(tibble_ko=tibble_ko, x_axis=!!x_axis_enquo, 
-                          y_axis=!!y_axis_enquo, calc=calc,
+    bubble<-bubble_domain(tibble_ko=tibble_ko, x_axis=!!x_axis_enquo, 
+                          y_axis=!!y_axis_enquo,
                           data_experiment=data_experiment, 
                           color_character=!!color_character_enquo, 
                           order_bins=order_bins, 
