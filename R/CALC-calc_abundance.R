@@ -12,10 +12,14 @@
 #' the number of times it appears in the dataset. The formula used is Σx, 
 #' where x represents the number of times the feature appears.
 #' @import tibble dplyr stringr tidyr rlang
+#' @examples
+#' # calc_abundance (ko_bin_table, analysis = KEGG)
 #' @return A data frame with four columns: the gene ID, the genome name, 
 #' the KEGG ID (or other feature ID), and the number of times the feature appears 
 #' in the genome.
 #' @noRd
+
+# Sets the syntax of the function------------------------------------------####
 calc_abundance <- function(dataset, 
                            analysis = c("KEGG", "Pfam", "INTERPRO", "TIGRFAM", 
                                         "SUPERFAMILY", "SMART", "SFLD",
@@ -24,7 +28,7 @@ calc_abundance <- function(dataset,
                                         "MobiDBLite", "Hamap", "Gene3D", 
                                         "Coils", "CDD", "dbCAN"), 
                            col_rename = NULL) {
-  # Asign colum names -----------------------------------------------------####
+# Asign column names -------------------------------------------------------####
   col_analysis <- c(KEGG = "KO", Pfam = "Pfam", INTERPRO = "Interpro", 
                     dbCAN = "dbCAN_names", TIGRFAM = "TIGRFAM",
                     SUPERFAMILY = "SUPERFAMILY", SMART = "SMART", SFLD = "SFLD",
@@ -34,25 +38,25 @@ calc_abundance <- function(dataset,
                     MobiDBLite = "MobiDBLite",  Hamap = "Hamap", 
                     Gene3D = "Gene3D",  Coils = "Coils", CDD = "CDD")
   if (!analysis %in% names(col_analysis)) stop("Unknown analysis")
-  # Read table ------------------------------------------------------------####
+# Read table --------------------------------------------------------------####
   KO_raw <- dataset %>%
     separate(.data$Bin_name, c("Bin_name", "Scaffold_name"), 
              sep = "[_|-][s|S]caffold") %>%
     mutate(Scaffold_name = paste0("scaffold", .data$Scaffold_name),
            .data$Scaffold_name) %>%
     unite("Scaffold_name", c("Bin_name", "Scaffold_name"), remove = FALSE)
-  # Selecting analysis ----------------------------------------------------####
+# Selecting analysis ------------------------------------------------------####
   KO_raw <- KO_raw %>%
     rename(tmp = .data[[col_analysis[analysis]]]) %>%
     distinct()
-  # Calculate abundance ---------------------------------------------------####
+# Calculate abundance -----------------------------------------------------####
   KO_abundance <- KO_raw %>%
     group_by(.data$Bin_name) %>%
     distinct() %>%
     count(.data$tmp) %>%
     rename(Abundance = n) %>%
     ungroup()
-  # Write tibble -----------------------------------------------------------####
+# Write tibble ------------------------------------------------------------####
   final_table_1 <- left_join(KO_raw, KO_abundance, 
                              by = c("Bin_name", "tmp")) %>%
     distinct()
