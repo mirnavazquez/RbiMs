@@ -71,7 +71,8 @@ bubble_ko<-function(tibble_ko,
   # Checking the color ----------------------------------------------------####
   if(is.null(color_pallet) == T){
     color_pallet<-as.vector(cols25(20))
-    warning("if your vector is >25, choose another color pallet")
+    warning("if your vector is >25, choose another color pallet. Make sure you 
+            are renaming your variables correctly.")
   }
   # Checking the size -----------------------------------------------------####
   if(is.null(range_size) == T){
@@ -119,7 +120,7 @@ bubble_ko<-function(tibble_ko,
       tibble_ko_mod <-rename(tibble_ko, tmp = .data$Percentage)
     }
   }
-  # Transform interger ----------------------------------------------------####
+  # Transform integer ----------------------------------------------------####
   Table_with_percentage<-tibble_ko_mod %>%
     select({{y_axis_enquo}}, .data$Bin_name, .data$tmp) %>%
     drop_na() %>%
