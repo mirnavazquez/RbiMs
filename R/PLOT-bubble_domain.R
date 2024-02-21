@@ -41,6 +41,7 @@
 bubble_domain<-function(tibble_ko,
                         x_axis, 
                         y_axis,
+                        calc=NULL,
                         data_experiment=NULL,
                         color_character=NULL,
                         order_bins=NULL,
@@ -50,7 +51,8 @@ bubble_domain<-function(tibble_ko,
                         x_labs=TRUE,
                         y_labs=TRUE,
                         text_x=NULL,
-                        text_y=NULL){
+                        text_y=NULL
+                        ){
   # Enquoting -------------------------------------------------------------####
   x_axis_enquo <- enquo(x_axis)
   y_axis_enquo <- enquo(y_axis)
@@ -92,16 +94,30 @@ bubble_domain<-function(tibble_ko,
   if(is.null(text_y) == T){
     text_y<-7
   }
+  
+  #Check calc --------------------------------------------------------------####
+  if(is.null(calc) == T){
+    calc<-NULL
+  }
+  if(calc == "Abundance"){
+    tibble_ko_mod<-calc_binary(tibble_ko, !!y_axis_enquo, binary=FALSE) %>%
+      rename(tmp = .data$Abundance)
+  } else if (calc == "Binary") {
+    tibble_ko_mod<-calc_binary(tibble_ko, !!y_axis_enquo, binary=TRUE) %>%
+      rename(tmp = .data$Presence_absence)
+  }
+
   # Table -----------------------------------------------------------------####
-  bubble<-tibble_ko %>%
-    select(-.data$domain_name) %>%
-    pivot_longer(cols = -{{y_axis_enquo}}, names_to="Bin_name", 
-                 values_to = "Abundance") %>%
-    mutate_at('Abundance', as.integer) %>%
-    mutate(Abundance = case_when(
-      .data$Abundance == 0 ~ NA_integer_,
-      TRUE ~ as.integer(Abundance)
+  bubble<-tibble_ko_mod %>%
+    select({{y_axis_enquo}}, .data$Bin_name, .data$tmp) %>%
+    drop_na() %>%
+    distinct()  %>%
+    mutate_at('tmp', as.integer) %>%
+    mutate(tmp = case_when(
+      .data$tmp == 0 ~ NA_integer_,
+      TRUE ~ as.integer(.data$tmp)
     )) 
+  
   # Join data experiment --------------------------------------------------####
   if(is.null(data_experiment) == F){
     bubble<-bubble %>%
@@ -136,7 +152,7 @@ bubble_domain<-function(tibble_ko,
                                       levels = !!order_bins),
                             y= factor(!!y_axis_enquo, 
                                       levels = !!order_metabolism),
-                            size= .data$Abundance,
+                            size= .data$tmp,
                             color= !!color_character_enquo)) +
       geom_point(alpha=0.5) +
       scale_size(range =range_size) +
@@ -155,7 +171,7 @@ bubble_domain<-function(tibble_ko,
                                       levels = !!order_metabolism),
                             y= factor(!!y_axis_enquo, 
                                       levels = !!order_bins),
-                            size= .data$Abundance,
+                            size= .data$tmp,
                             color= !!color_character_enquo)) +
       geom_point(alpha=0.5) +
       scale_size(range = range_size) +
@@ -170,5 +186,15 @@ bubble_domain<-function(tibble_ko,
       ylab(y_labs) 
   }
   
+  #check calc plot ---------------------------------------------------------####
+  if(calc == "Abundance"){
+    bubble<-bubble %>%
+      rename(Abundance = .data$tmp)
+    plot_bubble <- suppressMessages(plot_bubble + guides(size=guide_legend(title="Abundance")))
+  } else if (calc == "Binary") {
+    bubble<-bubble %>%
+      rename("Presence/Absence" = .data$tmp)
+    plot_bubble <- suppressMessages(plot_bubble + scale_size_continuous(name="", labels = "Present"))
   return(plot_bubble)
+  }
 }
