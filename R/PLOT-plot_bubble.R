@@ -14,7 +14,7 @@
 #' KEGG, INTERPRO or DBCAN
 #' @param calc a character indicating with type of calc should 
 #' be done to plot the results. Valid values are "Abundance", "Binary", 
-#' "Percentage", and "None". If you chose none you are expected to use a
+#' "Percentage", and "None". If you choose none you are expected to use a
 #' tibble table obtained from calc_binary or calc_percentage. 
 #' @param data_experiment optional. a data frame object 
 #' containing metadata information.
@@ -77,7 +77,7 @@ plot_bubble<-function(tibble_ko,
                       text_y=text_y)
   }else if (analysis == "INTERPRO") {
     bubble<-bubble_domain(tibble_ko=tibble_ko, x_axis=!!x_axis_enquo, 
-                          y_axis=!!y_axis_enquo,
+                          y_axis=!!y_axis_enquo,calc=calc,
                           data_experiment=data_experiment, 
                           color_character=!!color_character_enquo, 
                           order_bins=order_bins, 
@@ -87,8 +87,8 @@ plot_bubble<-function(tibble_ko,
                           y_labs=y_labs, text_x=text_x, text_y=text_y)
     
   }else if (analysis == "DBCAN") {
-    bubble<-bubble_ko(tibble_ko=tibble_ko, x_axis=!!x_axis_enquo, 
-                          y_axis=!!y_axis_enquo, calc=calc,
+    bubble<-bubble_dbcan(tibble_ko=tibble_ko, x_axis=!!x_axis_enquo, 
+                          y_axis=!!y_axis_enquo,calc=calc,
                           data_experiment=data_experiment, 
                           color_character=!!color_character_enquo, 
                           order_bins=order_bins, 
