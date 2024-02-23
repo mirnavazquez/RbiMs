@@ -107,6 +107,7 @@ bubble_domain<-function(tibble_ko,
       rename(tmp = .data$Presence_absence)
   }
 
+
   # Table -----------------------------------------------------------------####
   bubble<-tibble_ko_mod %>%
     select({{y_axis_enquo}}, .data$Bin_name, .data$tmp) %>%
@@ -195,6 +196,8 @@ bubble_domain<-function(tibble_ko,
     bubble<-bubble %>%
       rename("Presence/Absence" = .data$tmp)
     plot_bubble <- suppressMessages(plot_bubble + scale_size_continuous(name="", labels = "Present"))
-  return(plot_bubble)
+
   }
+    suppressWarnings(return(plot_bubble))
+
 }
