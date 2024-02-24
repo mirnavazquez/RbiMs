@@ -24,8 +24,8 @@ read_dbcan3<-function(dbcan_path, write=FALSE, profile=TRUE){
   ruta_dbcan<-dbcan_path
   
   # Load all the data tables results ---------------------------------------####
-  lapply_read_delim_bind_rows <- function(path, pattern = "*overview.txt"){
-    files = list.files(path, pattern, full.names = TRUE)
+  lapply_read_delim_bind_rows <- function(path, pattern = "overview.txt"){
+    files = list.files(path, pattern ="overview.txt", full.names = TRUE, recursive = T)
     lapply(files, read.delim, check.names=F) %>% 
       bind_rows()
   }
@@ -36,13 +36,13 @@ read_dbcan3<-function(dbcan_path, write=FALSE, profile=TRUE){
   dbcan_df_format<- suppressWarnings(
     dbcan_df %>%
       clean_names() %>%
-      rename(Number_of_Tools = number_of_tools)  %>%
-      filter(Number_of_Tools > 1)  %>%
-      rename(Bin_name = gene_id) %>%
-      mutate( hmmer2=str_replace_all(.data$hmmer, "[[:punct:]]",  "\t")) %>%
-      separate(.data$hmmer2, c("dbNamesHMM"),  sep="\t") %>%
-      mutate(diamond2=str_replace_all(.data$diamond, "[[:punct:]]", "\t")) %>%
-      separate(.data$diamond2, c("dbNamesdiamond"), sep="\t"))
+        rename(Number_of_Tools = number_of_tools)  %>%
+        filter(Number_of_Tools > 1)  %>%
+        rename(Bin_name = gene_id) %>%
+        mutate( hmmer2=str_replace_all(.data$hmmer, "[[:punct:]]",  "\t")) %>%
+        separate(.data$hmmer2, c("dbNamesHMM"),  sep="\t") %>%
+        mutate(diamond2=str_replace_all(.data$diamond, "[[:punct:]]", "\t")) %>%
+        separate(.data$diamond2, c("dbNamesdiamond"), sep="\t"))
 
   ###################################### e_cami ##################################  
   if (is.null(dbcan_df_format$e_cami)) { 
