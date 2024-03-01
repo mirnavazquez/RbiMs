@@ -38,23 +38,27 @@ read_interpro<-function(data_interpro = NULL,
   }
   if(database == "KEGG") {
     # Extract KEGG----------------------------------------------#### Aquí también 
-     table_interpro<-suppressWarnings(
-      suppressMessages(read_delim(ruta_interpro, #41 y 42 es donde esta leyendo una sola tabla 
-                                  delim="\t", col_names = F) %>%
-                         drop_na(.data$X12) %>%
-                         select(.data$X1, .data$X15) %>%
-                         drop_na() %>%
-                         distinct() %>%
-                         separate_rows(.data$X15, sep="\\|") %>%
-                         filter(str_detect(.data$X15, "KEGG")) %>%
-                         mutate(X15=str_replace_all(.data$X15, 
-                                                    "KEGG: ", "map")) %>%
-                         separate(.data$X15, into=c("Pathway", "Enzyme"), 
-                                  sep="\\+", 
+    lapply_read_delim_bind_rows <- function(path, pattern = "*.tsv"){
+      files <- list.files(path, pattern ="*.tsv", full.names = TRUE, recursive = T)
+      lapply(files, read_tsv, col_names=F) %>% 
+        bind_rows()
+    }
+    final_files <- suppressWarnings(lapply_read_delim_bind_rows(ruta_interpro)) %>%
+        suppressWarnings() %>%
+        suppressMessages() %>%
+        drop_na(.data$X12) %>%
+        select(.data$X1, .data$X15) %>%
+        drop_na() %>%
+        distinct() %>%
+        separate_rows(.data$X15, sep="\\|") %>%
+        filter(str_detect(.data$X15, "KEGG")) %>%
+        mutate(X15=str_replace_all(.data$X15, "KEGG: ", "map")) %>%
+        separate(.data$X15, into=c("Pathway", "Enzyme"), sep="\\+", 
                                   remove=T, extra ="merge") %>%
-                         distinct() %>%
-                         rename(Scaffold_full_name = .data$X1)
-      ))
+        distinct() %>%
+        rename(Scaffold_full_name = .data$X1)
+    table_interpro <- final_files 
+
     
     # Check enzymes -------------------------------------------------------####
     while(any(str_detect(table_interpro$Enzyme, pattern = "\\+")) == T){
@@ -65,6 +69,7 @@ read_interpro<-function(data_interpro = NULL,
     interpro<- table_interpro %>%
       mutate(Enzyme=str_replace_all(.data$Enzyme, "^", "ec:"))
   } else if (database  %in% possible_databases) { 
+    
     # Extract other databases ---------------------------------------------#### Mas o menos por aqui
     lapply_read_delim_bind_rows <- function(path, pattern = "*.tsv"){
       files <- list.files(path, pattern ="*.tsv", full.names = TRUE, recursive = T)
@@ -118,7 +123,7 @@ read_interpro<-function(data_interpro = NULL,
       interpro<-table_interpro_1 %>%
         select(-.data$Scaffold_name) %>%
         distinct() %>%
-        pivot_wider(names_from= "Bin_name", values_from="Abundance", 
+        pivot_wider(names_from= "Bin_name", values_from = "Abundance", 
                     values_fill = 0)
     } else{
       
