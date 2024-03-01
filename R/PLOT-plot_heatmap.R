@@ -44,7 +44,7 @@
 #' @export
 plot_heatmap<-function(tibble_ko,
                        y_axis,
-                       analysis=c("KEGG","INTERPRO"),
+                       analysis=c("KEGG","INTERPRO", "dbCAN", "MEROPS"),
                        data_experiment=NULL,
                        calc=NULL,
                        scale_option=NULL,
@@ -69,6 +69,11 @@ plot_heatmap<-function(tibble_ko,
                           color_pallet=color_pallet)
   }else if (analysis == "INTERPRO") {
     plot_heat<-heatmap_domain(tibble_ko, !!y_axis_enquo, 
+                              scale_option=scale_option, 
+                              color_pallet=color_pallet, distance=distance)
+    
+  }else if (analysis == "dbCAN") {
+    plot_heat<-heatmap_dbcan(tibble_ko, !!y_axis_enquo, 
                               scale_option=scale_option, 
                               color_pallet=color_pallet, distance=distance)
     
