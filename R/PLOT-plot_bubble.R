@@ -43,7 +43,7 @@
 plot_bubble<-function(tibble_ko,
                       x_axis, 
                       y_axis,
-                      analysis=c("KEGG","INTERPRO", "DBCAN"),
+                      analysis=c("KEGG","INTERPRO", "dbCAN"),
                       data_experiment=NULL,
                       calc=NULL,
                       color_character=NULL,
@@ -56,7 +56,7 @@ plot_bubble<-function(tibble_ko,
                       text_x=NULL,
                       text_y=NULL){
   if(is.null(calc) == T){
-    stop("calc must have a value between Abundance, Binary or Percentage")
+    stop("calc must have a value between Abundance or Binary")
   }
   # Enquoting -------------------------------------------------------------####
   x_axis_enquo <- enquo(x_axis)
@@ -86,7 +86,7 @@ plot_bubble<-function(tibble_ko,
                           x_labs=x_labs,
                           y_labs=y_labs, text_x=text_x, text_y=text_y)
     
-  }else if (analysis == "DBCAN") {
+  }else if (analysis == "dbCAN") {
     bubble<-bubble_dbcan(tibble_ko=tibble_ko, x_axis=!!x_axis_enquo, 
                           y_axis=!!y_axis_enquo,calc=calc,
                           data_experiment=data_experiment, 
