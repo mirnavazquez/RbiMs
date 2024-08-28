@@ -62,12 +62,9 @@ get_subset_pca<-function(tibble_rbims,
   df_pca <- stats::prcomp(wider_dist, center = T, scale = T)
   # Extract PCA contribution depending on which argument is used for contribution
   #it could be based on variables or individuals --------------------------####
-  if (pca == "Both") {
-       suppressMessages(pca_information_both <- factoextra::get_pca(df_pca))
-       pca_information <- pca_information_both
-   } else if (pca == "Variable"){
-       pca_information_var <- factoextra::get_pca_var(df_pca)
-       pca_information <- pca_information_var
+  if (pca == "Variable") {
+       suppressMessages(pca_information_var <- factoextra::get_pca_var(df_pca)
+                        pca_information <- pca_information_var
    } else if (pca == "Individual"){
        pca_information_ind <- factoextra::get_pca_ind(df_pca)
        pca_information <- pca_information_ind
