@@ -58,10 +58,11 @@ heatmap_dbcan<-function(tibble_ko,
     heatmap_domain_table<-as.matrix(distance_domains, method="euclidean")
   }
   # Plot ------------------------------------------------------------------####
-  plot_heat<-pheatmap::pheatmap(heatmap_domain_table, 
+  plot_heat<-ComplexHeatmap::pheatmap(heatmap_domain_table, 
                                 angle_col="45", 
+                                name = "Abundance",
                                 scale = scale_option,
-                                main = "dbCAN domain heatmap",
+                                main = "dbCAN families heatmap",
                                 col = color_pallet,
                                 cluster_rows = T,
                                 cluster_cols = T)
