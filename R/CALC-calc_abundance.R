@@ -26,11 +26,11 @@ calc_abundance <- function(dataset,
                                         "ProSiteProfiles", "ProSitePatterns", 
                                         "ProDom", "PRINTS", "PIRSF", 
                                         "MobiDBLite", "Hamap", "Gene3D", 
-                                        "Coils", "CDD", "dbCAN"), 
+                                        "Coils", "CDD", "dbCAN_family","PFAM"), 
                            col_rename = NULL) {
 # Asign column names -------------------------------------------------------####
   col_analysis <- c(KEGG = "KO", Pfam = "Pfam", INTERPRO = "Interpro", 
-                    dbCAN = "dbCAN_names", TIGRFAM = "TIGRFAM",
+                    dbCAN = "dbCAN_family", TIGRFAM = "TIGRFAM",
                     SUPERFAMILY = "SUPERFAMILY", SMART = "SMART", SFLD = "SFLD",
                     ProSiteProfiles = "ProSiteProfiles", 
                     ProSitePatterns = "ProSitePatterns", ProDom = "ProDom", 
