@@ -107,7 +107,6 @@ bubble_domain<-function(tibble_ko,
       rename(tmp = .data$Presence_absence)
   }
 
-
   # Table -----------------------------------------------------------------####
   bubble<-tibble_ko_mod %>%
     select({{y_axis_enquo}}, .data$Bin_name, .data$tmp) %>%

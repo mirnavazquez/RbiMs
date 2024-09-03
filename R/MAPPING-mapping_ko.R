@@ -64,8 +64,8 @@ mapping_ko<-function(tibble_ko=NULL,
      #                         rename(KO = .data$name ) %>%
       #                        separate(.data$KO_description, 
        #                                c("Genes", "Gene_description"), 
-        #                               sep="; ") %>%
-         #                     mutate(KO=str_remove_all(.data$KO, "ko:")))
+       #                                sep="; ") %>%
+        #                      mutate(KO=str_remove_all(.data$KO, "ko:")))
   # KO master -------------------------------------------------------------####
   data_to_select<-c("Module", "Module_description", "Pathway", 
                     "Pathway_description", "KO", "Genes", 

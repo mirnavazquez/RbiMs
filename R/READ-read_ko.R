@@ -91,7 +91,8 @@ read_ko<-function(data_kofam=NULL,
       calc_abundance(analysis="KEGG")
   }
   if( is.null(data_kofam) == F){
-    tabla_to_print<-calc_abundance(table_Kofam, analysis="KEGG", col_rename = "KO")
+    tabla_to_print<-calc_abundance(table_Kofam, analysis="KEGG",
+                                   col_rename = "KO")
   }
   if( is.null(data_kaas) == F){
     tabla_to_print<-calc_abundance(table_KAAS, analysis="KEGG")

@@ -66,7 +66,7 @@ heatmap_ko<-function(tibble_ko,
                                binary=FALSE) %>%
       rename(tmp = .data$Abundance)
   } else if (calc == "Binary") {
-    tibble_ko_mod<-calc_binary(tibble_ko, !!y_axis_enquo) %>%
+    tibble_ko_mod<-calc_binary(tibble_ko, !!y_axis_enquo, binary = TRUE) %>%
       rename(tmp = .data$Presence_absence)
   } else if (calc == "Percentage") {
     tibble_ko_mod<-calc_percentage(tibble_ko, !!y_axis_enquo) %>%
@@ -179,15 +179,20 @@ heatmap_ko<-function(tibble_ko,
   if(quo_is_null(order_x_enquo) == F && quo_is_null(order_y_enquo)== T ){
     sub_samp_ordered_2 <- table_final[,rownames(experiment_order)]
   } 
+
+
+  
   # Plot ------------------------------------------------------------------####
   if(quo_is_null(order_x_enquo) == F && quo_is_null(order_y_enquo)== F ) {
     plot_heat<-suppressWarnings(
       ComplexHeatmap::pheatmap(sub_samp_ordered_2, 
                                scale = scale_option,
+                               name = "Calculation used",
                                annotation_row = metabolism_order,
                                annotation_col = experiment_order,
                                cluster_rows = F,
                                cluster_cols = F,
+                               clustering_method = "complete",
                                row_split = split_y,
                                column_split = select(experiment_order, 
                                                      {{order_x_enquo}}),
@@ -201,6 +206,7 @@ heatmap_ko<-function(tibble_ko,
   if(quo_is_null(order_x_enquo) == T && quo_is_null(order_y_enquo)== F ) {
     plot_heat<-suppressWarnings(
       ComplexHeatmap::pheatmap(sub_samp_ordered, 
+                               name = "Calculation used",
                                scale = scale_option,
                                annotation_row = metabolism_order,
                                cluster_rows = F,
@@ -216,6 +222,7 @@ heatmap_ko<-function(tibble_ko,
   if(quo_is_null(order_x_enquo) == F && quo_is_null(order_y_enquo)== T ) {
     plot_heat<-suppressWarnings(
       ComplexHeatmap::pheatmap(sub_samp_ordered_2, 
+                               name = "Calculation used",
                                scale = scale_option,
                                annotation_col = experiment_order,
                                cluster_rows = T,
@@ -231,6 +238,7 @@ heatmap_ko<-function(tibble_ko,
   # Plot ------------------------------------------------------------------####
   if(quo_is_null(order_x_enquo) == T && quo_is_null(order_y_enquo)== T ) {
     plot_heat<-suppressWarnings(ComplexHeatmap::pheatmap(table_final, 
+                                                         name = "Calculation used",
                                                          scale = NULL,
                                                          cluster_rows = T,
                                                          cluster_cols = T,
@@ -241,8 +249,7 @@ heatmap_ko<-function(tibble_ko,
     )
     
   }
-  
-  return(plot_heat)
+return(plot_heat)
 }
 
 
