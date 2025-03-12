@@ -187,7 +187,7 @@ heatmap_ko<-function(tibble_ko,
     plot_heat<-suppressWarnings(
       ComplexHeatmap::pheatmap(sub_samp_ordered_2, 
                                scale = scale_option,
-                               name = "Calculation used",
+                               name = "Estimation",
                                annotation_row = metabolism_order,
                                annotation_col = experiment_order,
                                cluster_rows = F,
@@ -198,7 +198,7 @@ heatmap_ko<-function(tibble_ko,
                                                      {{order_x_enquo}}),
                                main = "Pathway heatmap",
                                fontsize=7,
-                               angle_col="0",
+                               angle_col= "90",
                                col = color_pallet)
     )
   }
@@ -206,7 +206,7 @@ heatmap_ko<-function(tibble_ko,
   if(quo_is_null(order_x_enquo) == T && quo_is_null(order_y_enquo)== F ) {
     plot_heat<-suppressWarnings(
       ComplexHeatmap::pheatmap(sub_samp_ordered, 
-                               name = "Calculation used",
+                               name = "Estimation",
                                scale = scale_option,
                                annotation_row = metabolism_order,
                                cluster_rows = F,
@@ -214,7 +214,7 @@ heatmap_ko<-function(tibble_ko,
                                row_split = split_y,
                                main = "Pathway heatmap",
                                fontsize=7,
-                               angle_col="0",
+                               angle_col="90",
                                col = color_pallet)
     )
   }
@@ -222,7 +222,7 @@ heatmap_ko<-function(tibble_ko,
   if(quo_is_null(order_x_enquo) == F && quo_is_null(order_y_enquo)== T ) {
     plot_heat<-suppressWarnings(
       ComplexHeatmap::pheatmap(sub_samp_ordered_2, 
-                               name = "Calculation used",
+                               name = "Estimation",
                                scale = scale_option,
                                annotation_col = experiment_order,
                                cluster_rows = T,
@@ -231,20 +231,20 @@ heatmap_ko<-function(tibble_ko,
                                                      {{order_x_enquo}}),
                                main = "Pathway heatmap",
                                fontsize=7,
-                               angle_col="45",
+                               angle_col="90",
                                col = color_pallet)
     )
   }
   # Plot ------------------------------------------------------------------####
   if(quo_is_null(order_x_enquo) == T && quo_is_null(order_y_enquo)== T ) {
     plot_heat<-suppressWarnings(ComplexHeatmap::pheatmap(table_final, 
-                                                         name = "Calculation used",
+                                                         name = "Estimation",
                                                          scale = NULL,
                                                          cluster_rows = T,
                                                          cluster_cols = T,
                                                          main = "Pathway heatmap",
                                                          fontsize=7,
-                                                         angle_col="45",
+                                                         angle_col="90",
                                                          col = color_pallet)
     )
     
