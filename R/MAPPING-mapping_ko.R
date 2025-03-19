@@ -48,24 +48,24 @@ mapping_ko<-function(tibble_ko=NULL,
     rename(Pathway_description = .data$value) %>%
     rename(Pathway = .data$name ) %>%
     mutate(Pathway=str_remove_all(.data$Pathway, "path:"))
-  ko_list<-suppressMessages(suppressWarnings(
-    read_delim("http://rest.kegg.jp/list/ko",  
-               delim="\t", col_names = F) %>%
-    rename(KO_description = .data$X2) %>%
-    rename(KO = .data$X1 ) %>%
-    separate(.data$KO_description, 
-             c("Genes", "Gene_description"), 
-             sep="; ",  extra = "merge") %>%
-    mutate(KO=str_remove_all(.data$KO, "ko:")))) 
+  #ko_list<-suppressMessages(suppressWarnings(
+   # read_delim("http://rest.kegg.jp/list/ko",  
+    #           delim="\t", col_names = F) %>%
+    #rename(KO_description = .data$X2) %>%
+    #rename(KO = .data$X1 ) %>%
+    #separate(.data$KO_description, 
+     #        c("Genes", "Gene_description"), 
+      #       sep="; ",  extra = "merge") %>%
+    #mutate(KO=str_remove_all(.data$KO, "ko:")))) 
   
-  #ko_list<-suppressWarnings(keggList("ko") %>%
-   #                           enframe() %>%
-    #                          rename(KO_description = .data$value) %>%
-     #                         rename(KO = .data$name ) %>%
-      #                        separate(.data$KO_description, 
-       #                                c("Genes", "Gene_description"), 
-       #                                sep="; ") %>%
-        #                      mutate(KO=str_remove_all(.data$KO, "ko:")))
+  ko_list<-suppressWarnings(keggList("ko") %>%
+                              enframe() %>%
+                              rename(KO_description = .data$value) %>%
+                              rename(KO = .data$name ) %>%
+                              separate(.data$KO_description, 
+                                       c("Genes", "Gene_description"), 
+                                       sep="; ") %>%
+                              mutate(KO=str_remove_all(.data$KO, "ko:")))
   # KO master -------------------------------------------------------------####
   data_to_select<-c("Module", "Module_description", "Pathway", 
                     "Pathway_description", "KO", "Genes", 
