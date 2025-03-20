@@ -1,0 +1,155 @@
+---
+title: "Explore_picrust2_profile"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Explore_picrust2_profile}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+First, load the rbims package.
+
+```{r setup}
+library(rbims)
+```
+
+The second thing to do would be to read the
+*KO_picrust2_data*. The meta file is a tab-separated file containing the name of your ids (bins or sites) and any extra information you would like to use for visualization.
+
+# Read metadata
+
+The metadata table can be read in various formats (csv, tsv, txt, xlsx); you will need to use the corresponding function to read the type of file you have. [meta](https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/Metadatos-MANGLAR) and try.
+
+The example data is from an article already published [link](https://www.biorxiv.org/content/10.1101/2024.07.24.604998v1.abstract) and were sediment core samples that were collected from three zones of mangrove ecosystem: Basin, Fringe and Impaired. The samples were taken during two seasonal conditions, dry and flood seasons, at three sediment depths: surface (5), mid-layer(20), and deeper sediment layers (40), to assess the impact of degradation level or zone, seasonal variation, and sediment depth on microbial communities.
+
+
+```{r}
+library(readr)
+meta<-read_tsv("../inst/extdata/Metadatos-MANGLAR")
+```
+
+```{r}
+head(meta)
+```
+
+Let's chaghe the names of ids for visualization purposes:
+
+```{r}
+library(dplyr)
+library(stringr)
+meta <- meta %>%
+  mutate(
+    Bin_name = str_extract(Bin_name, "(?<=zr2502_)(\\d+)(?=_R1)") 
+  )
+
+```
+
+```{r}
+head(meta)
+```
+
+
+Let's read again the KO_picrust2 data setting *profile=F*.
+
+```{r}
+KO_picrust2_profile_long <- read_picrust2("../inst/extdata/KO_metagenome_out/KO_pred_metagenome_unstrat.tsv", database = "KO", profile = F)
+```
+
+```{r}
+head(KO_picrust2_profile_long)
+```
+The same change in Bin names:
+
+```{r}
+KO_picrust2_profile_long <- KO_picrust2_profile_long %>%
+  mutate(
+    Bin_name = str_extract(Bin_name, "(?<=zr2502_)(\\d+)(?=_R1)")
+  )
+head(KO_picrust2_profile_long)
+```
+
+
+# Map to the KEGG database
+
+Then map the KO to the rest of the features of the KEGG and rbims database.
+
+```{r}
+ko_bin_mapp<-mapping_ko(KO_picrust2_profile_long)
+```
+
+# Metabolism subsetting
+
+In this example, we will use energy metabolism to explore the rest of the functions.
+
+- Create a vector with the metabolism of interest.
+
+```{r}
+Other_energy<-c("Fermentation", "Carbon fixation", "Methane metabolism", 
+                "Sulfur metabolism", "Nitrogen metabolism")
+```
+
+- Use [get_subset_pathway](https://mirnavazquez.github.io/RbiMs/reference/get_subset_pathway.html) to subset the table using the cycles and the information of the energy metabolism.
+
+```{r}
+library(tidyr)
+Energy_metabolisms<-ko_bin_mapp %>%
+  drop_na(Cycle, Pathway_cycle) %>%
+  get_subset_pathway(Cycle, Other_energy)
+```
+
+
+- Plot the information using the [plot_heatmap](https://mirnavazquez.github.io/RbiMs/reference/plot_heatmap.html) function. The argument order_y will order the rows according to a metabolic feature; in this case, we order the pathways_cycle according to cycle.
+
+```{r, fig.width=20, fig.height=10}
+plot_heatmap(tibble_ko=Energy_metabolisms, 
+             y_axis=Pathway_cycle,
+             order_y = Cycle,
+             split_y = TRUE,
+            data_experiment = meta,
+             order_x = "zone",
+             analysis = "KEGG",
+             calc="Percentage")
+```
+
+
+# Example of exploring a specific KEGG pathway
+
+```{r}
+specific<-c("map05416", "map00363", "map00604", "map00908", "map00941")
+```
+
+-   Now, let’s extract the profile associated with that metabolic
+    pathway.
+
+```{r}
+library(tidyr)
+specific_subset<-ko_bin_mapp%>%
+  drop_na(Pathway) %>%
+  get_subset_pathway(Pathway, specific) 
+```
+
+```{r}
+head(specific_subset)
+```
+
+-   Now, let’s create a plot of the presence and absence of the different KO associated with that pathway. Besides presence and absence, it is
+possible to plot abundance or the percentage of genes within certain
+pathways (See [plot_bubble](https://mirnavazquez.github.io/RbiMs/reference/plot_bubble.html), calc argument).
+    
+```{r, fig.width=7, fig.height=7}
+plot_bubble(tibble_ko = specific_subset,
+            x_axis = Bin_name, 
+            y_axis = KO,
+            analysis="KEGG",
+            data_experiment = meta,
+            color_character = zone,
+            calc="Binary",
+            range_size = c(1,10)) 
+```
