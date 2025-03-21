@@ -59,7 +59,7 @@ heatmap_domain<-function(tibble_ko,
   }
   # Plot ------------------------------------------------------------------####
   plot_heat<-ComplexHeatmap::pheatmap(heatmap_domain_table, 
-                                angle_col="45", 
+                                angle_col="90", 
                                 name = "Abundance",
                                 scale = scale_option,
                                 main = "Protein families heatmap",
