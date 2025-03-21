@@ -1,0 +1,78 @@
+---
+title: "Create_picrust2_profile"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Create_picrust2_profile}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Create picrust2 profile
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+[*PICRUSt2*](https://github.com/picrust/picrust2/wiki) (Phylogenetic Investigation of Communities by Reconstruction of Unobserved States) is software that predicts functional abundances from marker gene sequences. It typically focuses on gene families like KEGG orthologs and Enzyme Classification numbers, but can predict any trait. While commonly used with 16S rRNA data, it also supports other marker genes.
+
+The example data is from an article already published [link](https://www.biorxiv.org/content/10.1101/2024.07.24.604998v1.abstract) and were sediment core samples that were collected from three zones of mangrove ecosystem: Basin, Fringe and Impaired. The samples were taken during two seasonal conditions, dry and flood seasons, at three sediment depths: surface, mid-layer, and deeper sediment layers, to assess the impact of degradation level or zone, seasonal variation, and sediment depth on microbial communities.
+
+First, load the rbims package.
+
+```{r setup}
+library(rbims)
+```
+
+The function to use that information is `read_picrust2`. This function can parse the information of the KO, EC and pathways data from picrust2. The KEGG analysis is just possible if KO table is used.
+
+```{r}
+KO_picrust2_profile <- read_picrust2("../inst/extdata/KO_metagenome_out/KO_pred_metagenome_unstrat.tsv", database = "KO", profile = T)
+```
+
+
+
+-   The `database` argument will parse the database. In this example, I will explore the KO output.
+
+-   The output format is chosen with the `profile` argument. When **profile = T**, a wide output is obtained.
+
+-   The `write` argument saves the formatted table generated in .tsv extension. When **write = F** gives you the output but not saves the table in your current directory. 
+
+If you want to follow the example you can download the use rbims [test](https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/KO_metagenome_out/KO_pred_metagenome_unstrat.tsv) file.
+
+
+```{r}
+head(KO_picrust2_profile)
+```
+
+Or print a long table **profile = F**.
+
+```{r}
+KO_picrust2_profile_long <- read_picrust2("../inst/extdata/KO_metagenome_out/KO_pred_metagenome_unstrat.tsv", database = "KO", profile = F)
+```
+
+```{r}
+head(KO_picrust2_profile_long)
+```
+
+You can export this to a table like this:
+
+```{r}
+write.table(KO_picrust2_profile_long, "KO_picrust2.tsv", quote = F, sep = "\t", row.names = F, col.names = T)
+```
+
+Or setting write  **write = T**. 
+
+Other databases optiones are: "EC" and "pathway":
+
+```{r}
+EC_picrust2_profile <- read_picrust2("../inst/extdata/EC_metagenome_out/EC_pred_metagenome_unstrat.tsv", database = "EC", profile = T)
+head(EC_picrust2_profile)
+```
+
+```{r}
+pathways_picrust2_profile <- read_picrust2("../inst/extdata/pathways_out/path_abun_unstrat.tsv", database = "pathway", profile = T)
+head(pathways_picrust2_profile)
+```
