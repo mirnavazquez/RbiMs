@@ -70,10 +70,10 @@ bubble_domain<-function(tibble_ko,
   if(is.null(color_pallet) == T){
     color_pallet<-as.vector(cols25(20))
   }
-  # Checking the size -----------------------------------------------------####
-  if(is.null(range_size) == T){
-    range_size<-c(1,10)
-  }
+  # # Checking the size -----------------------------------------------------####
+   if(is.null(range_size) == T){
+     range_size<-c(1,10)
+   }
   # Checking the xlabs ----------------------------------------------------####
   if(isTRUE(x_labs) == T){
     x_labs<-x_axis_enquo
@@ -194,7 +194,10 @@ bubble_domain<-function(tibble_ko,
   } else if (calc == "Binary") {
     bubble<-bubble %>%
       rename("Presence/Absence" = .data$tmp)
-    plot_bubble <- suppressMessages(plot_bubble + scale_size_continuous(name="", labels = "Present"))
+    plot_bubble <- suppressMessages(plot_bubble + 
+                                    scale_size_continuous(name="", 
+                                                          labels = "Present",
+                                                          range=range_size))
 
   }
     suppressWarnings(return(plot_bubble))
