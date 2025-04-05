@@ -190,14 +190,21 @@ bubble_domain<-function(tibble_ko,
   if(calc == "Abundance"){
     bubble<-bubble %>%
       rename(Abundance = .data$tmp)
-    plot_bubble <- suppressMessages(plot_bubble + guides(size=guide_legend(title="Abundance")))
+    plot_bubble <- suppressMessages(plot_bubble + 
+                                    guides(size=guide_legend(title="Abundance"))+ 
+                                      theme(
+                                        legend.title = element_text(size = 16),
+                                        legend.text = element_text(size = 14)))
   } else if (calc == "Binary") {
     bubble<-bubble %>%
       rename("Presence/Absence" = .data$tmp)
     plot_bubble <- suppressMessages(plot_bubble + 
                                     scale_size_continuous(name="", 
                                                           labels = "Present",
-                                                          range=range_size))
+                                                          range=range_size) +
+                                      theme(
+                                        legend.title = element_text(size = 16), 
+                                        legend.text = element_text(size = 14)))
 
   }
     suppressWarnings(return(plot_bubble))
