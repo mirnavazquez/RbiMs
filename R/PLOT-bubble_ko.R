@@ -203,15 +203,25 @@ bubble_ko<-function(tibble_ko,
   if(calc == "Abundance"){
     Table_with_percentage<-Table_with_percentage %>%
       rename(Abundance = .data$tmp)
-    plot_bubble <- suppressMessages(plot_bubble + guides(size=guide_legend(title="Abundance")))
+    plot_bubble <- suppressMessages(plot_bubble + guides(size=guide_legend(title="Abundance"))
+                                    +
+                                      theme(
+                                        legend.title = element_text(size = 16), 
+                                        legend.text = element_text(size = 14)))
   } else if (calc == "Binary") {
     Table_with_percentage<-Table_with_percentage %>%
       rename("Presence/Absence" = .data$tmp)
-    plot_bubble <- suppressMessages(plot_bubble + scale_size_continuous(name="", labels = "Present"))
+    plot_bubble <- suppressMessages(plot_bubble + scale_size_continuous(name="", labels = "Present")+
+                                      theme(
+                                        legend.title = element_text(size = 16), 
+                                        legend.text = element_text(size = 14)))
   } else if (calc == "Percentage") {
     Table_with_percentage<-Table_with_percentage %>%
       rename(Percentage = .data$tmp)
-    plot_bubble <- suppressMessages(plot_bubble + guides(size=guide_legend(title="Percentage")))
+    plot_bubble <- suppressMessages(plot_bubble + guides(size=guide_legend(title="Percentage"))
+                                    + theme(
+                                        legend.title = element_text(size = 16), 
+                                        legend.text = element_text(size = 14)))
   } else if (calc == "None") {
     plot_bubble<- plot_bubble
     }
