@@ -7,6 +7,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -14,6 +15,12 @@ knitr::opts_chunk$set(
   fig.width=7, fig.height=7
 )
 ```
+
+
+```{r, echo=FALSE}
+load("../data/Rbims.RData")
+```
+
 
 First, load the rbims package.
 
@@ -28,8 +35,15 @@ First, I will read the InterProScan output in a long format and extract the PFAM
 If you want to follow this example, you can download the use rbims [test](https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/Interpro_test.tsv) file. 
 
 ```{r, eval=FALSE}
-interpro_pfam_long<-read_interpro(data_interpro = "../inst/extdata/Interpro_test.tsv", database="Pfam", profile = F)
+interpro_pfam_profile<-read_interpro(data_interpro = "../inst/extdata/Interpro_test.tsv", database="Pfam", profile = F)
 ```
+
+Let's change de column name "PFAM" to "Pfam" to agree with *´Rbims´*:
+```{r, warning=FALSE, message=FALSE}
+library(dplyr)
+interpro_pfam_profile <- interpro_pfam_profile %>% rename(Pfam=PFAM)
+```
+
 
 You can use the [subsetting functions](https://mirnavazquez.github.io/RbiMs/articles/Explore_KEGG_profile.html#metabolism-subsetting-1) to create subsets of the InterPro profile table. Here, we will extract the most important PFAMs, and we need to use them as an input, not the profile output from read_interpro. 
 
@@ -38,7 +52,8 @@ The function [get_subset_pca](https://mirnavazquez.github.io/RbiMs/reference/get
 ```{r}
 important_PFAMs<-get_subset_pca(tibble_rbims=interpro_pfam_profile, 
                cos2_val=0.95,
-               analysis="PFAM")
+               analysis="Pfam",
+               pca = "Individual")
 ```
 
 ```{r}
@@ -51,26 +66,23 @@ Let's plot the results.
 
 [plot_heatmap](https://mirnavazquez.github.io/RbiMs/reference/plot_heatmap.html) can help explore the results. We can perform two types of analyses; if we set the distance option as **TRUE**, we can plot to show how the samples could cluster based on the protein domains.
 
-```{r}
-plot_heatmap(important_PFAMs, y_axis=PFAM, analysis = "INTERPRO", distance = T)
+```{r, fig.alt="Protein families Heatmap with distance"}
+plot_heatmap(important_PFAMs, y_axis=Pfam, analysis = "INTERPRO", distance = T)
 ```
 
 If we set that to **FALSE**, we observed the presence and absence of the domains across the genome samples.
 
-```{r}
-plot_heatmap(important_PFAMs, y_axis=PFAM, analysis = "INTERPRO", distance = F)
+```{r, fig.alt="Protein families Heatmap with no distance"}
+plot_heatmap(important_PFAMs, y_axis=Pfam, analysis = "INTERPRO", distance = F)
 ```
 
 
-```{r}
-plot_heatmap(important_PFAMs, y_axis=PFAM, analysis = "INTERPRO", distance = F)
-```
 
 We can also visualize using a bubble plot. 
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, fig.alt="Bubble plot Binary"}
 plot_bubble(important_PFAMs, 
-            y_axis=PFAM, 
+            y_axis=Pfam, 
             x_axis=Bin_name, 
             calc = "Binary",
             analysis = "INTERPRO", 
@@ -110,7 +122,7 @@ head(DNA_tipo_INTERPRO)
 
 We can create a bubble plot to visualize the distribution of these enzymes across the bins.
 
-```{r}
+```{r, warning=FALSE, fig.alt="Bubble plot binary with DNA topoisomerase 1 IDS "}
 plot_bubble(DNA_tipo_INTERPRO, 
             y_axis=INTERPRO,
             x_axis=Bin_name,
@@ -147,7 +159,7 @@ head(interpro_map)
 
 We can plot all the KOs and the Modules to which they belong. An important thing here is that we will set `analysis = "KEGG"` despite this workflow started with the InterProScan output in analysis. 
 
-```{r}
+```{r, fig.alt="Heatmap with metadata"}
 plot_heatmap(tibble_ko=interpro_map,
              data_experiment = metadata,
              y_axis=KO,

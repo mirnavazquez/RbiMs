@@ -1,6 +1,6 @@
 #' @title Bubble plot.
 #' @description Creates a bubble plot of the data of bins metabolism
-#' @usage plot_bubble(tibble_ko, x_axis, y_axis, analysis=c("KEGG","INTERPRO", "DBCAN"),
+#' @usage plot_bubble(tibble_ko, x_axis, y_axis, analysis=c("KEGG","INTERPRO", "dbCAN"),
 #' data_experiment=NULL, calc=NULL, color_character=NULL, order_bins=NULL, 
 #' order_metabolism=NULL, color_pallet=NULL, range_size=NULL, x_labs=TRUE,
 #' y_labs=TRUE, text_x=NULL, text_y=NULL)
@@ -11,7 +11,7 @@
 #' @param y_axis a string, a column name of the metabolism table. 
 #' It determined the y axis label.
 #' @param analysis a character indicating if your input data are from 
-#' KEGG, INTERPRO or DBCAN
+#' KEGG, INTERPRO or dbCAN.
 #' @param calc a character indicating with type of calc should 
 #' be done to plot the results. Valid values are "Abundance", "Binary", 
 #' "Percentage", and "None". If you choose none you are expected to use a

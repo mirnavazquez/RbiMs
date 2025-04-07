@@ -16,7 +16,7 @@
 #' @import dplyr tidyr readr stringr rlang tidyselect utils 
 #' @examples
 #' \dontrun{
-#' read_dbcan3("C:/Users/bins/")
+#' read_merops("C:/Users/bins/")
 #' }
 #' @export
 

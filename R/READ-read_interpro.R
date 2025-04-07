@@ -19,9 +19,9 @@
 #' metabolism.
 #' @import tibble dplyr stringr tidyr janitor rlang
 #' @examples
-#' # read_interpro (data_interpro = "inst/extdata/Interpro_test.tsv", database = "INTERPRO", 
-#' profile = F)
-#' }
+#' read_interpro(data_interpro = "inst/extdata/Interpro_test.tsv", 
+#'               database = "INTERPRO", profile = FALSE)
+
 #' @export
 read_interpro<-function(data_interpro = NULL, 
                         database=c("KEGG", "Pfam", "INTERPRO", "TIGRFAM", 
@@ -39,10 +39,14 @@ read_interpro<-function(data_interpro = NULL,
   if(database == "KEGG") {
     # Extract KEGG----------------------------------------------#### Aquí también 
     lapply_read_delim_bind_rows <- function(path, pattern = "*.tsv"){
-      files <- list.files(path, pattern ="*.tsv", full.names = TRUE, recursive = T)
-      lapply(files, read_tsv, col_names=F) %>% 
+      if (file.exists(path) && grepl("\\.tsv$", path)) {
+        return(read_tsv(path, col_names = FALSE))
+      }
+      files <- list.files(path, pattern = "*.tsv", full.names = TRUE, recursive = TRUE)
+      lapply(files, read_tsv, col_names = FALSE) %>%
         bind_rows()
     }
+    
     final_files <- suppressWarnings(lapply_read_delim_bind_rows(ruta_interpro)) %>%
         suppressWarnings() %>%
         suppressMessages() %>%
@@ -72,10 +76,14 @@ read_interpro<-function(data_interpro = NULL,
     
     # Extract other databases ---------------------------------------------#### Mas o menos por aqui
     lapply_read_delim_bind_rows <- function(path, pattern = "*.tsv"){
-      files <- list.files(path, pattern ="*.tsv", full.names = TRUE, recursive = T)
-      lapply(files, read_tsv, col_names=F) %>% 
+      if (file.exists(path) && grepl("\\.tsv$", path)) {
+        return(read_tsv(path, col_names = FALSE))
+      }
+      files <- list.files(path, pattern = "*.tsv", full.names = TRUE, recursive = TRUE)
+      lapply(files, read_tsv, col_names = FALSE) %>%
         bind_rows()
     }
+    
     final_files <- suppressWarnings(lapply_read_delim_bind_rows(ruta_interpro)) %>%
         suppressWarnings() %>%
         suppressMessages() %>%
@@ -102,8 +110,11 @@ read_interpro<-function(data_interpro = NULL,
   } else if (database == "INTERPRO") {
     # Extract Interpro ----------------------------------------------------####
     lapply_read_delim_bind_rows <- function(path, pattern = "*.tsv"){
-      files <- list.files(path, pattern ="*.tsv", full.names = TRUE, recursive = T)
-      lapply(files, read_tsv, col_names=F) %>% 
+      if (file.exists(path) && grepl("\\.tsv$", path)) {
+        return(read_tsv(path, col_names = FALSE))
+      }
+      files <- list.files(path, pattern = "*.tsv", full.names = TRUE, recursive = TRUE)
+      lapply(files, read_tsv, col_names = FALSE) %>%
         bind_rows()
     }
     final_files <- suppressWarnings(lapply_read_delim_bind_rows(ruta_interpro)) %>%

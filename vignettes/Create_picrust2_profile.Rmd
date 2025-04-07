@@ -1,5 +1,5 @@
 ---
-title: "Create_picrust2_profile"
+title: "Create picrust2 profile"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Create_picrust2_profile}
@@ -7,7 +7,6 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-# Create picrust2 profile
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
@@ -59,7 +58,7 @@ head(KO_picrust2_profile_long)
 
 You can export this to a table like this:
 
-```{r}
+```{r, eval=FALSE}
 write.table(KO_picrust2_profile_long, "KO_picrust2.tsv", quote = F, sep = "\t", row.names = F, col.names = T)
 ```
 

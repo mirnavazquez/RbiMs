@@ -15,6 +15,10 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{r, echo=FALSE}
+load("../data/Rbims.RData")
+```
+
 First, load the rbims package.
 
 ```{r setup}
@@ -97,7 +101,7 @@ head(Biofilm_Vibrio_subset)
 possible to plot abundance or the percentage of genes within certain
 pathways (See [plot_bubble](https://mirnavazquez.github.io/RbiMs/reference/plot_bubble.html), calc argument).
     
-```{r}
+```{r, fig.alt="Bubble plot with Vibrio subset", warning=FALSE}
 plot_bubble(tibble_ko = Biofilm_Vibrio_subset,
             x_axis = Bin_name, 
             y_axis = KO,
@@ -120,7 +124,7 @@ order_taxa<-c("Bin_1", "Bin_2", "Bin_10", "Bin_113", "Bin_12", "Bin_56")
 
 -   Now plot, using the order\_bins argument.
 
-```{r}
+```{r,  fig.alt="Bubble plot with Vibrio subset ordering taxa", warning=FALSE}
 plot_bubble(tibble_ko = Biofilm_Vibrio_subset,
             data_experiment = metadata,
             x_axis = Bin_name,
@@ -156,7 +160,7 @@ head(Carbon_fixation_subset)
 
 We can visualize the data with a [heatmap](https://mirnavazquez.github.io/RbiMs/reference/plot_heatmap.html).
 
-```{r}
+```{r,  fig.alt="Heatmap with Carbon fixation subset", warning=FALSE}
 plot_heatmap(tibble_ko=Carbon_fixation_subset, 
              y_axis=Genes,
              analysis = "KEGG",
@@ -189,7 +193,7 @@ head(Energy_metabolisms)
 
 - Plot the information using the [plot_heatmap](https://mirnavazquez.github.io/RbiMs/reference/plot_heatmap.html) function. The argument order_y will order the rows according to a metabolic feature; in this case, we order the pathways_cycle according to cycle.
 
-```{r}
+```{r,  fig.alt="Heatmap with Energy metabolisms subset", warning=FALSE}
 plot_heatmap(tibble_ko=Energy_metabolisms, 
              y_axis=Pathway_cycle,
              order_y = Cycle,
@@ -199,7 +203,7 @@ plot_heatmap(tibble_ko=Energy_metabolisms,
 
 - The argument order_x will order the rows according to a metadata feature; in this case, we order the bins according to sample site.
 
-```{r}
+```{r, fig.alt="Heatmap with Energy metabolisms subset and metadata", warning=FALSE}
 plot_heatmap(tibble_ko=Energy_metabolisms, 
              y_axis=Pathway_cycle,
              data_experiment=metadata,
@@ -211,7 +215,7 @@ plot_heatmap(tibble_ko=Energy_metabolisms,
 
 - The split argument allows dividing the rows according to a specific value of the metadata. 
 
-```{r}
+```{r, fig.alt="Heatmap with Energy metabolisms subset with split argument", warning=FALSE, fig.height=13, fig.width=7}
 plot_heatmap(tibble_ko=Energy_metabolisms, 
              y_axis=Pathway_cycle,
              order_y = Cycle,
@@ -222,7 +226,7 @@ plot_heatmap(tibble_ko=Energy_metabolisms,
 
 - The order_x argument allows you to add annotation info from the metadata for the columns. 
 
-```{r}
+```{r, fig.alt="Heatmap with Energy metabolisms subset with annotantion columns", warning=FALSE,fig.width=7, fig.height=10}
 plot_heatmap(tibble_ko=Energy_metabolisms,
              data_experiment = metadata,
              y_axis=Pathway_cycle,

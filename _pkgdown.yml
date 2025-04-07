@@ -6,7 +6,22 @@ template:
     twitter:
       creator: "@MirnaVRL"
       card: summary_large_image
+
 reference:
+  - title: Internal
+    desc: Objetos usados solo en las viñetas.
+    contents:
+      - '`interpro_INTERPRO_long`'
+      - '`interpro_INTERPRO_profile`'
+      - '`interpro_KEGG_long`'
+      - '`interpro_map`'
+      - '`interpro_pfam_long`'
+      - '`interpro_pfam_profile`'
+      - '`ko_bin_mapp`'
+      - '`ko_bin_table`'
+      - '`metadata`'
+      - '`rbims`'
+      - '`read_ko_shiny`'
   - title: KEGG analysis
     desc: Functions used for KEGG
     contents:
@@ -18,6 +33,14 @@ reference:
     desc: Functions used for InterProScan analysis
     contents:
       - '`read_interpro`'
+  - title: MEROPS analysis
+    desc: Functions used for MEROPS analysis
+    contents:
+      - '`read_merops`'
+  - title: dbCAN analysis
+    desc: Functions used for dbCAN analysis
+    contents:
+      - '`read_dbcan3`'
   - title: Manipulate KEGG/InterproScan profile
     desc: Functions used to manipulate the KEGG/InterproScan profile
     contents:
@@ -31,23 +54,29 @@ reference:
     contents:
       - '`plot_bubble`'
       - '`plot_heatmap`'
-  - title: dbCAN analysis
-    desc: Functions used for dbCAN analysis
-    contents:
-      - '`read_dbcan3`'
+
 left:
-    - icon: fa-home
-      href: index.html
-    - text: "How To"
-      menu: 
-      -  text: Installation
-         href: articles/Installation.html
-      -  text: Create KEGG profile
-         href: articles/Create_KEGG_profile.html
-      -  text: Create InterProScan profile
-         href: articles/Create_Interpro_profile.html
-      -  text: Explore KEGG profile
-         href: articles/Explore_KEGG_profile.html
-      -  text: Explore InterProScan profile
-         href: articles/Explore_InterProScan_profile.html
-         
+  - icon: fa-home
+    href: index.html
+  - text: "How To"
+    menu: 
+      - text: Installation
+        href: articles/Installation.html
+      - text: Create KEGG profile
+        href: articles/Create_KEGG_profile.html
+      - text: Create InterProScan profile
+        href: articles/Create_Interpro_profile.html
+      - text: Explore KEGG profile
+        href: articles/Explore_KEGG_profile.html
+      - text: Explore InterProScan profile
+        href: articles/Explore_InterProScan_profile.html
+      - text: Create Picrust2 profile
+        href: articles/Create_picrust2_profile.html
+      - text: Explore Picrust2 profile
+        href: articles/Explore_picrust2_profile.html
+      - text: Create dbCAN3 profile
+        href: articles/create_dbcan_profile.html
+      - text: Explore dbCAN3 profile
+        href: articles/Explore_dbcan_profile.html
+
+# <- ¡LÍNEA VACÍA AL FINAL!

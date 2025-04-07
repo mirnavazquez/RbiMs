@@ -4,8 +4,8 @@
 \alias{read_interpro}
 \title{Extract abundance profile of InterProScan output.}
 \usage{
-read_interpro(data_interpro, 
-database=c("KEGG", "Pfam", "INTERPRO",
+read_interpro (data_interpro, 
+database = c("KEGG", "Pfam", "INTERPRO",
 "TIGRFAM", "SUPERFAMILY", "SMART", "SFLD", "ProSiteProfiles",
 "ProSitePatterns", "ProDom", "PRINTS", "PIRSF", 
 "MobiDBLite","Hamap", "Gene3D", "Coils", "CDD"), profile = TRUE)
@@ -23,7 +23,7 @@ or not. This option is valid for "PFAM" and "INTERPRO" database.}
 }
 \description{
 Reads a table object created with InterProScan and generates
-a profile table of abundance with the hits of the KEGG, PFAM or
+a profile table of abundance with the hits of the KEGG, Pfam or
 INTERPRO databases. The output of KEGG database can be used within
 mapping_ko.
 }
@@ -32,8 +32,6 @@ This function is part of a package used for the analysis of bins
 metabolism.
 }
 \examples{
-\dontrun{
-read_interpro(data_interpro="inst/extdata/Interpro_test.tsv", database="INTERPRO", 
-profile = F)
-}
+read_interpro(data_interpro = "inst/extdata/Interpro_test.tsv", 
+              database = "INTERPRO", profile = FALSE)
 }

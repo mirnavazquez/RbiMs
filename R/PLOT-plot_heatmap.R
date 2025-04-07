@@ -1,6 +1,6 @@
 #' @title Heatmap
 #' @description Creates a heatmap of KEGG and InterProScan data.
-#' @usage plot_heatmap(tibble_ko, y_axis, analysis=c("KEGG","INTERPRO"), 
+#' @usage plot_heatmap(tibble_ko, y_axis, analysis=c("KEGG","INTERPRO", "dbCAN", "MEROPS"), 
 #' data_experiment=NULL, calc=NULL, scale_option=NULL, order_y=NULL, order_x=NULL,
 #' split_y=FALSE, color_pallet=NULL, distance=FALSE)
 #' @param tibble_ko a data frame object. It could have been
@@ -10,8 +10,7 @@
 #' you want to use.
 #' @param y_axis a string. A column name of the tibble_ko of a 
 #' feature to plot (i.e. KO/Pathways/Modules/PFAM/INTERPRO).
-#' @param analysis a character indicating the input file. Valid arguments "KEGG" or
-#' "INTERPRO".
+#' @param analysis a character indicating the input file. Valid arguments KEGG","INTERPRO", "dbCAN", "MEROPS".
 #' @param data_experiment optional. a data frame object containing metadata information.
 #' @param calc optional. This option is only valid for "KEGG" analysis. 
 #' Is a character indicating with type of calc should 

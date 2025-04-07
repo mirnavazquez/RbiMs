@@ -1,17 +1,16 @@
-pandoc: 2.19.2
-pkgdown: 2.0.7
+pandoc: '3.2'
+pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
+  Create_dbcan_profile: Create_dbcan_profile.html
   Create_Interpro_profile: Create_Interpro_profile.html
   Create_KEGG_profile: Create_KEGG_profile.html
-  Create_dbcan_profile: Create_dbcan_profile.html
+  Create_merops_profile: Create_merops_profile.html
   Create_picrust2_profile: Create_picrust2_profile.html
+  Explore_dbcan_profile: Explore_dbcan_profile.html
   Explore_InterProScan_profile: Explore_InterProScan_profile.html
   Explore_KEGG_profile: Explore_KEGG_profile.html
+  Explore_merops_profile: Explore_merops_profile.html
+  Explore_picrust2_profile: Explore_picrust2_profile.html
   Installation: Installation.html
-<<<<<<< HEAD
-last_built: 2023-03-28T00:55Z
-=======
-last_built: 2023-03-23T21:09Z
->>>>>>> 1042c760e15199da6df8ced530fdf3b9368e59f2
-
+last_built: 2025-04-07T21:48Z

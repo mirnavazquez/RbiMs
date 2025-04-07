@@ -46,53 +46,46 @@ read_dbcan3<-function(dbcan_path, write=FALSE, profile=TRUE){
 
   ###################################### e_cami ##################################  
   if (is.null(dbcan_df_format$e_cami)) { 
-    df_format <-dbcan_df_format %>%
-      unite("dbCAN_names", dbNamesHMM, dbNamesdiamond, sep="_", remove = F) %>%  
-      mutate(dbCAN_names=str_replace_all(.data$dbCAN_names, "^_", "")) %>%
-      separate(.data$dbCAN_names, c("dbCAN_names"), sep="_") %>%
+    df_format <- dbcan_df_format %>%
+      unite("dbCAN_names", dbNamesHMM, dbNamesdiamond, sep = "_", remove = FALSE) %>%  
+      mutate(dbCAN_names = str_replace_all(dbCAN_names, "^_", "")) %>%
+      separate(dbCAN_names, c("dbCAN_names"), sep = "_") %>%
       mutate(dbCAN = case_when(
-        str_detect(.data$dbCAN_names, "CBM") ~ "carbohydrate-binding module [CBM]",
-        str_detect(.data$dbCAN_names, "CE") ~  "carbohydrate esterases [CEs]",
-        str_detect(.data$dbCAN_names, "GH") ~  "glycoside hydrolases [GHs]",
-        str_detect(.data$dbCAN_names, "GT") ~ "glycosyltransferases [GTs]",
-        str_detect(.data$dbCAN_names, "PL") ~ "polysaccharide lyases [PLs]",
-        str_detect(.data$dbCAN_names, "AA") ~ "auxiliary ativities [AAs]")
-        )  %>%
+        str_detect(dbCAN_names, "CBM") ~ "carbohydrate-binding module [CBM]",
+        str_detect(dbCAN_names, "CE") ~ "carbohydrate esterases [CEs]",
+        str_detect(dbCAN_names, "GH") ~ "glycoside hydrolases [GHs]",
+        str_detect(dbCAN_names, "GT") ~ "glycosyltransferases [GTs]",
+        str_detect(dbCAN_names, "PL") ~ "polysaccharide lyases [PLs]",
+        str_detect(dbCAN_names, "AA") ~ "auxiliary activities [AAs]"
+      )) %>%
       mutate_if(is.character, str_trim) %>%
-      dplyr::select(.data$Bin_name, .data$dbCAN_names, domain_name = .data$dbCAN, 
-                    .data$signalp) %>%
-      calc_abundance(analysis = "dbCAN", col_rename = "dbCAN_names")  %>% 
-      dplyr::select(-.data$Scaffold_name, .data$dbCAN_names) %>% 
-      group_by(.data$Bin_name, dbCAN_family = .data$dbCAN_names, 
-               .data$domain_name, .data$signalp) %>% 
+      select(Bin_name, dbCAN_names, domain_name = dbCAN, signalp) %>%
+      calc_abundance(analysis = "dbCAN", col_rename = "dbCAN_names") %>%
+      select(-Scaffold_name, dbCAN_names) %>%
+      group_by(Bin_name, dbCAN_family = dbCAN_names, domain_name, signalp) %>%
       summarise_if(is.numeric, sum)
-    
   } else {
-    df_format <-dbcan_df_format %/%
-      mutate(ecami2=str_replace_all(.data$e_cami, "[[:punct:]]", "\t")) %>%
-      separate(.data$ecami2, c("dbNameseCAMI"), sep="\t") %>%
-      unite("dbCAN_names", dbNamesHMM, dbNamesdiamond, dbNameseCAMI, 
-            sep="_", remove = F) %>%  
-      mutate(dbCAN_names=str_replace_all(.data$dbCAN_names, "^_", "")) %>%
-      separate(.data$dbCAN_names, c("dbCAN_names"), sep="_") %>%
+    df_format <- dbcan_df_format %>%
+      mutate(ecami2 = str_replace_all(e_cami, "[[:punct:]]", "\t")) %>%
+      separate(ecami2, c("dbNameseCAMI"), sep = "\t") %>%
+      unite("dbCAN_names", dbNamesHMM, dbNamesdiamond, dbNameseCAMI, sep = "_", remove = FALSE) %>%
+      mutate(dbCAN_names = str_replace_all(dbCAN_names, "^_", "")) %>%
+      separate(dbCAN_names, c("dbCAN_names"), sep = "_") %>%
       mutate(dbCAN = case_when(
-        str_detect(.data$dbCAN_names, "CBM") ~ "carbohydrate-binding module [CBM]",
-        str_detect(.data$dbCAN_names, "CE") ~  "carbohydrate esterases [CEs]",
-        str_detect(.data$dbCAN_names, "GH") ~  "glycoside hydrolases [GHs]",
-        str_detect(.data$dbCAN_names, "GT") ~ "glycosyltransferases [GTs]",
-        str_detect(.data$dbCAN_names, "PL") ~ "polysaccharide lyases [PLs]",
-        str_detect(.data$dbCAN_names, "AA") ~ "auxiliary ativities [AAs]")
-        )  %>%
+        str_detect(dbCAN_names, "CBM") ~ "carbohydrate-binding module [CBM]",
+        str_detect(dbCAN_names, "CE") ~ "carbohydrate esterases [CEs]",
+        str_detect(dbCAN_names, "GH") ~ "glycoside hydrolases [GHs]",
+        str_detect(dbCAN_names, "GT") ~ "glycosyltransferases [GTs]",
+        str_detect(dbCAN_names, "PL") ~ "polysaccharide lyases [PLs]",
+        str_detect(dbCAN_names, "AA") ~ "auxiliary activities [AAs]"
+      )) %>%
       mutate_if(is.character, str_trim) %>%
-      dplyr::select(.data$Bin_name, .data$dbCAN_names, 
-                    domain_name = .data$dbCAN, .data$signalp) %>%
-      calc_abundance(analysis = "dbCAN", col_rename = "dbCAN_names")  %>% 
-      dplyr::select(-.data$Scaffold_name, .data$dbCAN_names) %>% 
-      group_by(.data$Bin_name, dbCAN_family = .data$dbCAN_names, 
-               .data$domain_name, .data$signalp) %>% 
+      select(Bin_name, dbCAN_names, domain_name = dbCAN, signalp) %>%
+      calc_abundance(analysis = "dbCAN", col_rename = "dbCAN_names") %>%
+      select(-Scaffold_name, dbCAN_names) %>%
+      group_by(Bin_name, dbCAN_family = dbCAN_names, domain_name, signalp) %>%
       summarise_if(is.numeric, sum)
-
-    }
+  }
 
   # Reformating data ----------------------------------------------------------####
   

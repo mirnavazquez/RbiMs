@@ -1,0 +1,51 @@
+---
+title: "Explore dbcan profile"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Explore_dbcan_profile}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, eval=F}
+library(rbims)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+devtools::load_all()
+```
+
+
+Let's load the dbcan3 data:
+
+```{r, eval=TRUE}
+dbcan_profile <-read_dbcan3(dbcan_path = "../inst/extdata/test_data/", 
+                            profile = T, 
+                            write = F)
+```
+
+For *dbCAN* the functions [plot_heatmap](https://mirnavazquez.github.io/RbiMs/reference/plot_heatmap.html) and [plot_bubble](https://mirnavazquez.github.io/RbiMs/reference/plot_bubble.html) can be used as well. 
+
+
+```{r, fig.alt="dbCAN heatmap"}
+plot_heatmap(dbcan_profile, 
+             y_axis=dbCAN_family, 
+             analysis = "dbCAN", 
+             distance = T)
+
+```
+```{r, fig.alt="dbCAN bubbleplot"}
+plot_bubble(dbcan_profile, 
+            y_axis=dbCAN_family, 
+            x_axis=Bin_name, 
+            calc = "Binary",
+            analysis = "dbCAN")
+```
+

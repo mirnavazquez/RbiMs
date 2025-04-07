@@ -1,11 +1,13 @@
 ---
-title: "Explore_picrust2_profile"
+title: "Explore picrust2 profile"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Explore_picrust2_profile}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
+
+
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -59,7 +61,9 @@ head(meta)
 Let's read again the KO_picrust2 data setting *profile=F*.
 
 ```{r}
-KO_picrust2_profile_long <- read_picrust2("../inst/extdata/KO_metagenome_out/KO_pred_metagenome_unstrat.tsv", database = "KO", profile = F)
+KO_picrust2_profile_long <- read_picrust2("../inst/extdata/KO_metagenome_out/KO_pred_metagenome_unstrat.tsv",
+                                          database = "KO",
+                                          profile = F)
 ```
 
 ```{r}
@@ -107,7 +111,7 @@ Energy_metabolisms<-ko_bin_mapp %>%
 
 - Plot the information using the [plot_heatmap](https://mirnavazquez.github.io/RbiMs/reference/plot_heatmap.html) function. The argument order_y will order the rows according to a metabolic feature; in this case, we order the pathways_cycle according to cycle.
 
-```{r, fig.width=20, fig.height=10}
+```{r, fig.width=20, fig.height=10, fig.alt="Heatmap with Energy metabolisms subset"}
 plot_heatmap(tibble_ko=Energy_metabolisms, 
              y_axis=Pathway_cycle,
              order_y = Cycle,
@@ -143,7 +147,7 @@ head(specific_subset)
 possible to plot abundance or the percentage of genes within certain
 pathways (See [plot_bubble](https://mirnavazquez.github.io/RbiMs/reference/plot_bubble.html), calc argument).
     
-```{r, fig.width=7, fig.height=7}
+```{r, fig.width=7, fig.height=7, warning=FALSE, fig.alt="Bubble plot with specific subset"}
 plot_bubble(tibble_ko = specific_subset,
             x_axis = Bin_name, 
             y_axis = KO,

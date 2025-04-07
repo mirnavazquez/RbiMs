@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
   [![R-CMD-check](https://github.com/mirnavazquez/RbiMs/workflows/R-CMD-check/badge.svg)](https://github.com/mirnavazquez/RbiMs/actions)
   <!-- badges: end -->
 
-# **Rbims**  <img src="man/figures/Logo-rRbiMs.png"  width="150" height="150" align="right" />
+# **Rbims**  <img src="man/figures/Logo-rRbiMs.png"  alt="Logo Rbims" width="150" height="150" align="right" />
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -45,7 +45,7 @@ library(rbims)
 
 ## Overview
 
-<img src="man/figures/rRbiMs-3.png"  width="900" height="400" align="center" />
+<img src="man/figures/rRbiMs-3.png" alt="Logo Rbims 3"  width="900" height="400" align="center" />
 
 ## Visit the [website](https://mirnavazquez.github.io/RbiMs/) for more detail. 
 
@@ -63,9 +63,13 @@ write_metabolism("Interpro_test.tsv",
 ## Contributions
 
 - Mirna Vázquez Rosas Landa - wrote the code. 
+- Karla López - wrote codes and manuscript, helped with documentation.
 - Kathryn Appler, Valerie De Anda and Pedro Leão  - Curated the rbims database of metabolism. 
 - Sahil Shah - Helped with function documentation.
 - Bryan Vernon - Editor and shiny app developer.
+- Stephanie Hereira -  Helped with functions and documentation.
+- Diana Oaxaca - Set the conda environment.
+- Frida Ruiz - Heleped with testing and documentation.
 
 
 ##  References

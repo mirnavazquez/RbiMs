@@ -14,6 +14,9 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{r, echo=FALSE}
+load("../data/Rbims.RData")
+```
 First, load the rbims package.
 
 ```{r setup}
@@ -58,7 +61,7 @@ head(ko_bin_mapp)
 
 You can export this to a table like this:
 
-```{r}
+```{r, eval=FALSE}
 write.table(ko_bin_mapp, "KEGG_mapped.tsv", quote = F, sep = "\t", row.names = F, col.names = T)
 ```
 

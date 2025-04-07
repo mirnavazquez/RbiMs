@@ -1,0 +1,55 @@
+---
+title: "Explore merops profile"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Explore_dbcan_profile}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(rbims)
+```
+
+Let's load the merops data:
+
+```{r, eval=FALSE}
+merops_profile <- read_merops("../inst/extdata/peptidase_2/", 
+                              profile = T)
+
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(readr)
+merops_profile <- read.delim("../inst/extdata/merops_profile.tsv")
+```
+
+For *MEROPS* the functions [plot_heatmap](https://mirnavazquez.github.io/RbiMs/reference/plot_heatmap.html) and [plot_bubble](https://mirnavazquez.github.io/RbiMs/reference/plot_bubble.html) can be used as well as the other data.
+
+
+```{r, fig.alt="merops heatmap", eval=FALSE}
+plot_heatmap(
+  merops_profile,
+  y_axis = MEROPS_family,
+  analysis = "MEROPS",
+  distance = T
+)
+
+```
+
+For bubble plot:
+
+```{r, fig.alt="merops bubble", eval=FALSE}
+plot_bubble(dbcan_profile,
+            y_axis = MEROPS_family,
+            analysis = "MEROPS",
+            calc = "Binary")
+
+```

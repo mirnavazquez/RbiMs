@@ -1,0 +1,72 @@
+---
+title: "Create merops profile"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Create_picrust2_profile}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+The [MEROPS](https://www.ebi.ac.uk/merops/) database classifies peptidases (proteases) and their inhibitors using a hierarchical, structure-based system. Peptidases are grouped into Families based on significant sequence similarities, and related families are further grouped into Clans, indicating evolutionary relationships. This classification helps researchers understand enzyme function, structure, and evolution. The database provides sequence identifiers, structural data (if available), and literature references for deeper exploration.
+
+First, load the rbims package.
+
+```{r setup}
+library(rbims)
+```
+
+The function that allow us to load merops data is `read_merops`.
+
+```{r, eval=FALSE}
+merops_profile <- read_merops("../inst/extdata/peptidase_2/", profile = T)
+
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(readr)
+merops_profile <- read.delim("../inst/extdata/merops_profile.tsv")
+```
+
+
+-   The `database` argument will parse the database. In this example, I will explore the KO output.
+
+-   The output format is chosen with the `profile` argument. When **profile = T**, a wide output is obtained.
+
+-   The `write` argument saves the formatted table generated in .tsv extension. When **write = F** gives you the output but not saves the table in your current directory. 
+
+
+
+```{r}
+head(merops_profile)
+```
+
+Or print a long table **profile = F**.
+
+```{r, eval=FALSE}
+merops_profile_long <- read_merops("../inst/extdata/peptidase_2/", profile = F)
+
+```
+
+```{r, echo=FALSE}
+merops_profile_long <- read.delim("../inst/extdata/merops_profile_long.tsv")
+```
+
+```{r}
+head(merops_profile_long)
+```
+
+You can export this to a table like this:
+
+```{r, eval=FALSE}
+write.table(merops_profile_long, "KO_picrust2.tsv", quote = F, sep = "\t", row.names = F, col.names = T)
+```
+
+Or setting write  **write = T**. 
+

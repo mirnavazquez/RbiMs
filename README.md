@@ -5,7 +5,7 @@
 [![R-CMD-check](https://github.com/mirnavazquez/RbiMs/workflows/R-CMD-check/badge.svg)](https://github.com/mirnavazquez/RbiMs/actions)
 <!-- badges: end -->
 
-# **Rbims** <img src="man/figures/Logo-rRbiMs.png"  width="150" height="150" align="right" />
+# **Rbims** <img src="man/figures/Logo-rRbiMs.png"  alt="Logo Rbims" width="150" height="150" align="right" />
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -14,8 +14,8 @@ R tools for reconstructing bin metabolisms.
 
 ## Quick install
 
-We are actively developing rbims, so for now it is not available at CRAN
-or Bioconductor, however you can access the development version from
+We are actively developing rbims, for now it is not available at CRAN or
+Bioconductor, however you can access the development version from
 [GitHub](https://github.com/mirnavazquez/RbiMs).
 
 In R terminal:
@@ -39,7 +39,7 @@ library(rbims)
 
 ## Overview
 
-<img src="man/figures/rRbiMs-3.png"  width="900" height="400" align="center" />
+<img src="man/figures/rRbiMs-3.png" alt="Logo Rbims 3"  width="900" height="400" align="center" />
 
 ## Visit the [website](https://mirnavazquez.github.io/RbiMs/) for more detail.
 
@@ -54,18 +54,19 @@ interproscan outputs you can use this new function.
 
 ## Contributions
 
-- Mirna Vázquez Rosas Landa - wrote the code. 
-- Kathryn Appler, Valerie De Anda and Pedro Leão  - Curated the rbims database of metabolism. 
-- Sahil Shah - Helped with function documentation.
-- Bryan Vernon - Editor and shiny app developer.
+- Mirna Vázquez Rosas Landa - wrote the code.
+- Karla López - wrote codes and manuscript, helped with documentation.
+- Stephanie Hereira - Helped with functions and documentation.
+- Diana Oaxaca - Set the conda environment.
+- Frida Ruiz - Heleped with testing and documentation.
 
 ## References
 
--   Kanehisa, M. and Goto, S.; KEGG: Kyoto Encyclopedia of Genes and
-    Genomes. Nucleic Acids Res. 28, 27-30 (2000).
--   Kanehisa, M; Toward understanding the origin and evolution of
-    cellular organisms. Protein Sci. 28, 1947-1951 (2019).
--   Kanehisa, M., Furumichi, M., Sato, Y., Ishiguro-Watanabe, M., and
-    Tanabe, M.; KEGG: integrating viruses and cellular organisms.
-    Nucleic Acids Res. 49, D545-D551 (2021).
--   [DiTing](https://github.com/xuechunxu/DiTing) cycles definition.
+- Kanehisa, M. and Goto, S.; KEGG: Kyoto Encyclopedia of Genes and
+  Genomes. Nucleic Acids Res. 28, 27-30 (2000).
+- Kanehisa, M; Toward understanding the origin and evolution of cellular
+  organisms. Protein Sci. 28, 1947-1951 (2019).
+- Kanehisa, M., Furumichi, M., Sato, Y., Ishiguro-Watanabe, M., and
+  Tanabe, M.; KEGG: integrating viruses and cellular organisms. Nucleic
+  Acids Res. 49, D545-D551 (2021).
+- [DiTing](https://github.com/xuechunxu/DiTing) cycles definition.
