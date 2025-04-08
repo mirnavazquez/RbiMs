@@ -2,7 +2,7 @@
 title: "Explore merops profile"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Explore_dbcan_profile}
+  %\VignetteIndexEntry{Explore_merops_profile}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -16,6 +16,10 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(rbims)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+devtools::load_all()
 ```
 
 Let's load the merops data:
@@ -34,14 +38,15 @@ For *MEROPS* the functions [plot_heatmap](https://mirnavazquez.github.io/RbiMs/r
 
 
 Let's choose the top 10 most abundant pathways:
-```{r}
+```{r, warning=FALSE, message=FALSE}
+library(tidyverse)
 merops_profile_100 <- merops_profile %>% mutate(
     avg = rowMeans(across(where(is.numeric)), na.rm = TRUE)) %>% top_n(100,avg) %>% dplyr::select(-avg)
 ```
 
 The bubble plot:
 
-```{r, fig.alt="merops bubble", eval=FALSE, fig.align='center', fig.width=10, fig.height=4}
+```{r, fig.alt="merops bubble", fig.align='center', fig.width=10, fig.height=4}
 plot_bubble(merops_profile_100,
             y_axis = MEROPS_family,
             range_size= c(0,1.5),
@@ -61,7 +66,7 @@ merops_profile_100_distinct <- merops_profile_100 %>%   group_by(MEROPS_family) 
 ```
 
 
-```{r, fig.alt="merops heatmap", eval=FALSE, fig.width=16, fig.height=7}
+```{r, fig.alt="merops heatmap", fig.width=16, fig.height=7}
 plot_heatmap(
   merops_profile_100_distinct,
   y_axis = MEROPS_family,
