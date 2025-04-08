@@ -33,7 +33,7 @@
 #' show how similar are the different genomes.
 #' @details This function is part of a package used for 
 #' the analysis of bins metabolism.
-#' @import pheatmap rlang dplyr tidyr tibble
+#' @import ComplexHeatmap rlang dplyr tidyr tibble
 #' @examples
 #' \dontrun{
 #' plot_heatmap(tibble_ko=ko_bin_mapp, y_axis=Pathway,
@@ -73,6 +73,11 @@ plot_heatmap<-function(tibble_ko,
                               color_pallet=color_pallet, distance=distance)
     
   }else if (analysis == "dbCAN") {
+    plot_heat<- heatmap_dbcan(tibble_ko, !!y_axis_enquo, 
+                              scale_option=scale_option, 
+                              color_pallet=color_pallet, distance=distance)
+    
+  }else if (analysis == "MEROPS") {
     plot_heat<- heatmap_dbcan(tibble_ko, !!y_axis_enquo, 
                               scale_option=scale_option, 
                               color_pallet=color_pallet, distance=distance)

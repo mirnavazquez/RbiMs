@@ -14,7 +14,7 @@
 #' show how similar are the different genomes.
 #' @details This function is part of a package used for 
 #' the analysis of bins metabolism.
-#' @import pheatmap rlang dplyr tidyr tibble
+#' @import ComplexHeatmap rlang dplyr tidyr tibble
 #' @examples
 #' \dontrun{
 #' heatmap_domain(input_data_profile, y_axis=PFAM, 

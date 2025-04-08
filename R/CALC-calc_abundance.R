@@ -27,11 +27,11 @@ calc_abundance <- function(dataset,
                                         "ProDom", "PRINTS", "PIRSF", 
                                         "MobiDBLite", "Hamap", "Gene3D", 
                                         "Coils", "CDD", "dbCAN_names","PFAM",
-                                        "MEROPS_names"), 
+                                        "MEROPS_family"), 
                            col_rename = NULL) {
 # Asign column names -------------------------------------------------------####
   col_analysis <- c(KEGG = "KO", Pfam = "Pfam", INTERPRO = "Interpro", 
-                    dbCAN = "dbCAN_names", MEROPS = "MEROPS_names", 
+                    dbCAN = "dbCAN_names", MEROPS = "MEROPS_family", 
                     TIGRFAM = "TIGRFAM",
                     SUPERFAMILY = "SUPERFAMILY", SMART = "SMART", SFLD = "SFLD",
                     ProSiteProfiles = "ProSiteProfiles", 

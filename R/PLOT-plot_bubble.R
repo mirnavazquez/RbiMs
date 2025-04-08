@@ -1,6 +1,6 @@
 #' @title Bubble plot.
 #' @description Creates a bubble plot of the data of bins metabolism
-#' @usage plot_bubble(tibble_ko, x_axis, y_axis, analysis=c("KEGG","INTERPRO", "dbCAN"),
+#' @usage plot_bubble(tibble_ko, x_axis, y_axis, analysis=c("KEGG","INTERPRO", "dbCAN", "MEROPS"),
 #' data_experiment=NULL, calc=NULL, color_character=NULL, order_bins=NULL, 
 #' order_metabolism=NULL, color_pallet=NULL, range_size=NULL, x_labs=TRUE,
 #' y_labs=TRUE, text_x=NULL, text_y=NULL)
@@ -11,7 +11,7 @@
 #' @param y_axis a string, a column name of the metabolism table. 
 #' It determined the y axis label.
 #' @param analysis a character indicating if your input data are from 
-#' KEGG, INTERPRO or dbCAN.
+#' KEGG, INTERPRO, dbCAN or MEROPS.
 #' @param calc a character indicating with type of calc should 
 #' be done to plot the results. Valid values are "Abundance", "Binary", 
 #' "Percentage", and "None". If you choose none you are expected to use a
@@ -43,7 +43,7 @@
 plot_bubble<-function(tibble_ko,
                       x_axis, 
                       y_axis,
-                      analysis=c("KEGG","INTERPRO", "dbCAN"),
+                      analysis=c("KEGG","INTERPRO", "dbCAN", "MEROPS"),
                       data_experiment=NULL,
                       calc=NULL,
                       color_character=NULL,
@@ -96,6 +96,17 @@ plot_bubble<-function(tibble_ko,
                           color_pallet=color_pallet, range_size=range_size, 
                           x_labs=x_labs,
                           y_labs=y_labs, text_x=text_x, text_y=text_y)
+    
+  }else if (analysis == "MEROPS") {
+    bubble<-bubble_merops(tibble_ko=tibble_ko, x_axis=!!x_axis_enquo, 
+                         y_axis=!!y_axis_enquo,calc=calc,
+                         data_experiment=data_experiment, 
+                         color_character=!!color_character_enquo, 
+                         order_bins=order_bins, 
+                         order_metabolism=order_metabolism, 
+                         color_pallet=color_pallet, range_size=range_size, 
+                         x_labs=x_labs,
+                         y_labs=y_labs, text_x=text_x, text_y=text_y)
     
   }
   return(bubble)

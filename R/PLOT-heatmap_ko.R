@@ -25,7 +25,7 @@
 #' @param color_pallet optional. a character vector of colors to use.
 #' @details This function is part of a package used for 
 #' the calc of bins metabolism.
-#' @import pheatmap rlang dplyr tidyr tibble
+#' @import ComplexHeatmap rlang dplyr tidyr tibble
 #' @examples
 #' \dontrun{
 #' heatmap_ko(tibble_ko=ko_bin_mapp, y_axis=Pathway, 

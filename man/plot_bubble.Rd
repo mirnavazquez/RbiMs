@@ -4,7 +4,7 @@
 \alias{plot_bubble}
 \title{Bubble plot.}
 \usage{
-plot_bubble(tibble_ko, x_axis, y_axis, analysis=c("KEGG","INTERPRO", "dbCAN"),
+plot_bubble(tibble_ko, x_axis, y_axis, analysis=c("KEGG","INTERPRO", "dbCAN", "MEROPS"),
 data_experiment=NULL, calc=NULL, color_character=NULL, order_bins=NULL, 
 order_metabolism=NULL, color_pallet=NULL, range_size=NULL, x_labs=TRUE,
 y_labs=TRUE, text_x=NULL, text_y=NULL)
@@ -20,7 +20,7 @@ It determined the x axis label.}
 It determined the y axis label.}
 
 \item{analysis}{a character indicating if your input data are from
-KEGG, INTERPRO or dbCAN.}
+KEGG, INTERPRO, dbCAN or MEROPS.}
 
 \item{data_experiment}{optional. a data frame object
 containing metadata information.}

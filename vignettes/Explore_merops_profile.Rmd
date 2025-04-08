@@ -27,29 +27,47 @@ merops_profile <- read_merops("../inst/extdata/peptidase_2/",
 ```
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-library(readr)
-merops_profile <- read.delim("../inst/extdata/merops_profile.tsv")
+merops_profile <- read.delim("../inst/extdata/KO_merops_profile.tsv", check.names = F)
 ```
 
 For *MEROPS* the functions [plot_heatmap](https://mirnavazquez.github.io/RbiMs/reference/plot_heatmap.html) and [plot_bubble](https://mirnavazquez.github.io/RbiMs/reference/plot_bubble.html) can be used as well as the other data.
 
 
-```{r, fig.alt="merops heatmap", eval=FALSE}
-plot_heatmap(
-  merops_profile,
-  y_axis = MEROPS_family,
-  analysis = "MEROPS",
-  distance = T
-)
-
+Let's choose the top 10 most abundant pathways:
+```{r}
+merops_profile_100 <- merops_profile %>% mutate(
+    avg = rowMeans(across(where(is.numeric)), na.rm = TRUE)) %>% top_n(100,avg) %>% dplyr::select(-avg)
 ```
 
-For bubble plot:
+The bubble plot:
 
-```{r, fig.alt="merops bubble", eval=FALSE}
-plot_bubble(dbcan_profile,
+```{r, fig.alt="merops bubble", eval=FALSE, fig.align='center', fig.width=10, fig.height=4}
+plot_bubble(merops_profile_100,
             y_axis = MEROPS_family,
+            range_size= c(0,1.5),
+            x_axis= Bin_name,
             analysis = "MEROPS",
             calc = "Binary")
 
 ```
+
+Now let's group for avoiding repetitions in row.names for heatmap:
+```{r}
+merops_profile_100_distinct <- merops_profile_100 %>%   group_by(MEROPS_family) %>%
+  summarise(
+    domain_name = first(domain_name),  
+    across(where(is.numeric), sum)
+  )
+```
+
+
+```{r, fig.alt="merops heatmap", eval=FALSE, fig.width=16, fig.height=7}
+plot_heatmap(
+  merops_profile_100_distinct,
+  y_axis = MEROPS_family,
+  analysis = "MEROPS",
+  distance = F
+)
+
+```
+

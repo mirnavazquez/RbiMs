@@ -25,7 +25,6 @@ Imports:
     factoextra,
     ggplot2,
     janitor,
-    pheatmap,
     readr,
     stringr,
     tibble,

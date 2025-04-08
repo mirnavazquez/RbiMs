@@ -39,7 +39,7 @@
 #' }
 #' @noRd
 bubble_dbcan<-function(tibble_ko,
-                        x_axis, 
+                        x_axis=Bin_name, 
                         y_axis,
                         calc = NULL,
                         data_experiment=NULL,
