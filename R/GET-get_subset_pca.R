@@ -20,8 +20,7 @@
 get_subset_pca<-function(tibble_rbims,
                          cos2_val=NULL,
                          analysis=c("KEGG", "Pfam", "INTERPRO", "dbCAN", 
-                                    "MEROPS"),
-                         pca = c("Both", "Variable", "Individual")){
+                                    "MEROPS")){
                          
                       
   if(analysis == "PFAM"){
@@ -60,15 +59,7 @@ get_subset_pca<-function(tibble_rbims,
   wider_dist<-stats::dist(wide_ko)
   # PCA -------------------------------------------------------------------####
   df_pca <- stats::prcomp(wider_dist, center = T, scale = T)
-  # Extract PCA contribution depending on which argument is used for contribution
-  #it could be based on variables or individuals --------------------------####
-  if (pca == "Variable") {
-       suppressMessages(pca_information_var <- factoextra::get_pca_var(df_pca))
-       pca_information <- pca_information_var
-   } else if (pca == "Individual"){
-       pca_information_ind <- factoextra::get_pca_ind(df_pca)
-       pca_information <- pca_information_ind
-   }
+  pca_information <- df_pca
   contribution_Metabolism<-as.data.frame(pca_information$cos2)
   
   # Warning if the contribution <=0.98 ------------------------------------####
