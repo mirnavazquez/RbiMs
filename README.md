@@ -20,6 +20,8 @@ The package includes a curated database for hydrocarbon degradation pathways (ae
 - Export data frames and visualizations for publication
 - Curated database for hydrocarbon degradation not covered in KEGG
 
+![image](https://github.com/user-attachments/assets/3a1eff08-00b9-4901-ab18-d1e4c1c6f0d0)
+
 ---
 
 ## 🚀 Quick Install
