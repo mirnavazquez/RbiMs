@@ -59,7 +59,7 @@ get_subset_pca<-function(tibble_rbims,
   wider_dist<-stats::dist(wide_ko)
   # PCA -------------------------------------------------------------------####
   df_pca <- stats::prcomp(wider_dist, center = T, scale = T)
-  pca_information <- df_pca
+  pca_information <- factoextra::get_pca(df_pca)
   contribution_Metabolism<-as.data.frame(pca_information$cos2)
   
   # Warning if the contribution <=0.98 ------------------------------------####
