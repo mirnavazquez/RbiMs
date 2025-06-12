@@ -20,7 +20,8 @@
 get_subset_pca<-function(tibble_rbims,
                          cos2_val=NULL,
                          analysis=c("KEGG", "Pfam", "INTERPRO", "dbCAN", 
-                                    "MEROPS")){
+                                    "MEROPS"),
+                         pca = c("Individual", "Variable", "Both")) {
                          
                       
   if(analysis == "PFAM"){
@@ -59,7 +60,16 @@ get_subset_pca<-function(tibble_rbims,
   wider_dist<-stats::dist(wide_ko)
   # PCA -------------------------------------------------------------------####
   df_pca <- stats::prcomp(wider_dist, center = T, scale = T)
-  pca_information <- factoextra::get_pca(df_pca)
+  
+#To choose between the contributions made by protein families or by the MAGs ####
+  if (pca = "Individual") {
+    pca_information <- factoextra::get_pca_ind(df_pca)
+  } else if (pca = "Variable") 
+    pca_information <- factoextra::get_pca_var(df_pca)
+  } else if (pca = "Both") 
+    pca_information <- factoextra::get_pca(df_pca)
+  }
+  return(pca_information)
   contribution_Metabolism<-as.data.frame(pca_information$cos2)
   
   # Warning if the contribution <=0.98 ------------------------------------####
