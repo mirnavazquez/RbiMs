@@ -120,7 +120,7 @@ heatmap_ko<-function(tibble_ko,
     select(-contains(".y")) %>%
     distinct() %>%
     rename_all(
-      list( ~ stringr::str_replace_all(., ".x", ""))
+      list( ~ stringr::str_replace_all(., "\\.x", ""))
     ) %>%
     column_to_rownames(y_axis_label)
   # Extracting metabolism -------------------------------------------------####
