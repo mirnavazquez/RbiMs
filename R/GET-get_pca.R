@@ -54,7 +54,7 @@ get_subset_pca<-function(tibble_rbims,
   # PCA -------------------------------------------------------------------####
   df_pca <- stats::prcomp(wider_dist, center = T, scale = T)
   # Extract PCA contribution ----------------------------------------------####
-  pca_information<-factoextra::get_pca_ind(df_pca)
+  pca_information<-factoextra::get_pca_var(df_pca)
   contribution_Metabolism<-as.data.frame(pca_information$cos2)
   # Warning if the contribution <=0.98 ------------------------------------####
   if (all(contribution_Metabolism$Dim.1 <= 0.97)){
