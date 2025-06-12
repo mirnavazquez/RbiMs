@@ -64,9 +64,9 @@ get_subset_pca<-function(tibble_rbims,
 #To choose between the contributions made by protein families or by the MAGs ####
   if (pca = "Individual") {
     pca_information <- factoextra::get_pca_ind(df_pca)
-  } else if (pca = "Variable") 
+  } else if (pca = "Variable") {
     pca_information <- factoextra::get_pca_var(df_pca)
-  } else if (pca = "Both") 
+  } else if (pca = "Both") {
     pca_information <- factoextra::get_pca(df_pca)
   }
   return(pca_information)
