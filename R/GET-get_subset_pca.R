@@ -57,7 +57,7 @@ get_subset_pca<-function(tibble_rbims,
     tibble::column_to_rownames("tmp") 
 
   # PCA -------------------------------------------------------------------####
-  df_pca <- PCA(wide_ko, scale.unit = TRUE, graph = FALSE)
+  df_pca <- FactoMineR::PCA(wide_ko, scale.unit = TRUE, graph = FALSE)
   contribution_Metabolism<-as.data.frame(df_pca$ind$cos2)
   
   # Warning if the contribution <=0.98 ------------------------------------####
