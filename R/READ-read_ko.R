@@ -23,7 +23,8 @@
 #' @importFrom utils read.table
 #' @importFrom purrr map_dfr
 #' @examples
-#' read_ko ("C:/Users/bins/", write = FALSE)
+#' kofam_dir <- system.file("extdata", package = "rbims")
+#' read_ko(data_kofam = kofam_dir, write = FALSE)
 #' @export
 read_ko<-function(data_kofam=NULL, 
                   data_kaas=NULL, 
@@ -33,7 +34,7 @@ read_ko<-function(data_kofam=NULL,
   if( is.null(data_kofam) == F && is.null(data_kaas) == F || 
       is.null(data_kofam) == F){
     files <- dir(path = data_kofam ,pattern ="*.txt")
-    final_files<-paste0(data_kofam, files)
+    final_files <- file.path(data_kofam, files)
     table_Kofam<-suppressWarnings(
       suppressMessages( 
         final_files %>%
@@ -58,7 +59,7 @@ read_ko<-function(data_kofam=NULL,
   if(is.null(data_kofam) == F && is.null(data_kaas) == F || 
      is.null(data_kaas) == F){
     files <- dir(path = data_kaas ,pattern ="*.txt")
-    final_files<-paste0(data_kaas, files)
+    final_files <- file.path(data_kofam, files)
     table_KAAS<-read.table(data_kaas, sep ="\t", header = F, fill=T) %>%
       as_tibble() %>%
       na_if("") %>%

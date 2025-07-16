@@ -35,5 +35,6 @@ This function is part of a package used for the analysis
 of bins metabolism.
 }
 \examples{
-read_ko ("C:/Users/bins/", write = FALSE)
+kofam_dir <- system.file("extdata", package = "rbims")
+read_ko(data_kofam = kofam_dir, write = FALSE)
 }
