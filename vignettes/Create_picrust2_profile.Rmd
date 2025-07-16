@@ -1,8 +1,8 @@
 ---
-title: "Create picrust2 profile"
+title: "PICRUSt2 KO profile generation"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Create_picrust2_profile}
+  %\VignetteIndexEntry{PICRUSt2 KO profile generation}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

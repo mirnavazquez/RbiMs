@@ -1,8 +1,8 @@
 ---
-title: "Create Interpro profile"
+title: "InterProScan profile creation"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Create Interpro profile}
+  %\VignetteIndexEntry{InterProScan profile creation}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
