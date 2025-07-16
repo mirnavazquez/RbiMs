@@ -2,15 +2,16 @@
 #' @description Identifies the most important KO pathways or protein 
 #' domains in the whole database. And print back a profile of the protein 
 #' domains that have higher contributions.
-#' @usage get_subset_pca(tibble_rbims, cos2_val=NULL, 
-#' analysis=c("KEGG", "Pfam", "INTERPRO"))
+#' @usage get_subset_pca(tibble_rbims, cos2_val = NULL, 
+#' analysis = c("KEGG", "Pfam", "INTERPRO", "dbCAN", "MEROPS"))
 #' @param tibble_rbims a tibble object, created with 
 #' the read_interpro, mapping_ko or get_subset_* functions. 
 #' @param cos2_val a numeric vector from 0 to 1 indicating the proportion of
 #' contribution used as cut off. Default is 0.98.
 #' See \link[factoextra]{get_pca}.
-#' @param analysis a character, indicating from which input do you want to
-#' get the abundance profile. Valid options are "KEGG", "Pfam", "MEROPS", "dbCAN" or "INTERPRO". 
+#' @param analysis a character string indicating the annotation database to use.
+#' Valid options are: "KEGG", "Pfam", "INTERPRO", "dbCAN", or "MEROPS".
+#' Default: c("KEGG", "Pfam", "INTERPRO", "dbCAN", "MEROPS")
 #' @details This function is part of a package used for
 #' the analysis of bins metabolism.
 #' @import dplyr factoextra rlang tibble
