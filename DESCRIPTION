@@ -15,7 +15,12 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat,
+    devtools,
+    tidyverse,
+    FactoMineR,
+    viridis
 VignetteBuilder: knitr
 biocViews:
     KEGGREST

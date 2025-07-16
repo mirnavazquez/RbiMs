@@ -34,15 +34,10 @@ First, I will read the InterProScan output in a long format and extract the PFAM
 
 If you want to follow this example, you can download the use rbims [test](https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/Interpro_test.tsv) file. 
 
-```{r, eval=FALSE}
-interpro_pfam_profile<-read_interpro(data_interpro = "../inst/extdata/Interpro_test.tsv", database="Pfam", profile = F)
+```{r, eval=TRUE}
+interpro_pfam_profile<-read_interpro(data_interpro = "../inst/extdata/Interpro_test.tsv", database="Pfam", profile = T)
 ```
 
-Let's change de column name "PFAM" to "Pfam" to agree with *´Rbims´*:
-```{r, warning=FALSE, message=FALSE}
-library(dplyr)
-interpro_pfam_profile <- interpro_pfam_profile %>% rename(Pfam=PFAM)
-```
 
 
 You can use the [subsetting functions](https://mirnavazquez.github.io/RbiMs/articles/Explore_KEGG_profile.html#metabolism-subsetting-1) to create subsets of the InterPro profile table. Here, we will extract the most important PFAMs, and we need to use them as an input, not the profile output from read_interpro. 
@@ -51,9 +46,8 @@ The function [get_subset_pca](https://mirnavazquez.github.io/RbiMs/reference/get
 
 ```{r}
 important_PFAMs<-get_subset_pca(tibble_rbims=interpro_pfam_profile, 
-               cos2_val=0.95,
-               analysis="Pfam",
-               pca = "Individual")
+               cos2_val=0.9,
+               analysis="Pfam")
 ```
 
 ```{r}
@@ -92,12 +86,11 @@ plot_bubble(important_PFAMs,
 
 # Example with INTERPRO database
 
-First, I will read the InterProScan output in a wide format and extract the PFAM abundance information.
+First, I will reload the InterProScan output in a wide format and extract the PFAM abundance information.
 
 ```{r, eval=FALSE}
-interpro_INTERPRO_profile<-read_interpro(data_interpro = "Interpro_test.tsv", database="INTERPRO", profile = F)
+interpro_INTERPRO_profile<-interpro_INTERPRO_profile
 ```
-
 
 ```{r, eval=FALSE}
 head(interpro_INTERPRO_profile)

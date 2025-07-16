@@ -10,7 +10,7 @@
 #' contribution used as cut off. Default is 0.98.
 #' See \link[factoextra]{get_pca}.
 #' @param analysis a character, indicating from which input do you want to
-#' get the abundance profile. Valid options are "KEGG", "Pfam" or "INTERPRO". 
+#' get the abundance profile. Valid options are "KEGG", "Pfam", "MEROPS", "dbCAN" or "INTERPRO". 
 #' @details This function is part of a package used for
 #' the analysis of bins metabolism.
 #' @import dplyr factoextra rlang tibble
@@ -51,6 +51,8 @@ get_subset_pca<-function(tibble_rbims,
       rename(tmp = .data$dbCAN_family)
  }
   # Read data -------------------------------------------------------------####
+  tibble_rbims$tmp <- make.unique(as.character(tibble_rbims$tmp))
+  
   wide_ko<-tibble_rbims %>%
     dplyr::select(-all_of(data_to_select)) %>%
     dplyr::distinct() %>%

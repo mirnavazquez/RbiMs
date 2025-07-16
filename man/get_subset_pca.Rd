@@ -19,7 +19,7 @@ contribution used as cut off. Default is 0.98.
 See \link[factoextra]{get_pca}.}
 
 \item{analysis}{a character, indicating from which input do you want to
-get the abundance profile. Valid options are "KEGG", "Pfam" or "INTERPRO".}
+get the abundance profile. Valid options are "KEGG", "Pfam", "MEROPS", "dbCAN" or "INTERPRO".}
 }
 \description{
 Identifies the most important KO pathways or protein

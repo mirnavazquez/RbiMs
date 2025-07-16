@@ -83,3 +83,30 @@
 #' 
 #' @source \url{https://sites.utexas.edu/baker-lab/}
 "interpro_map"
+#' KO abundances predicted with PICRUSt2
+#'
+#' This dataset contains KO (KEGG Orthology) predicted abundances from PICRUSt2 output.
+#' @format A data frame with X rows and Y columns (describe briefly).
+#' @source Generated with PICRUSt2 using X sample set.
+#' @docType data
+#' @name KO_picrust2
+"KO_picrust2"
+
+#' EC abundances predicted with PICRUSt2
+#'
+#' Dataset with EC number abundances predicted from functional profiling.
+#' @format A data frame with X rows and Y columns.
+#' @source Generated from PICRUSt2.
+#' @docType data
+#' @name EC_picrust2
+"EC_picrust2"
+
+#' Pathway-level predictions with PICRUSt2
+#'
+#' Pathway predictions from MetaCyc using PICRUSt2 output.
+#' @format A data frame with X rows and Y columns.
+#' @source PICRUSt2 results.
+#' @docType data
+#' @name pathway_picrust2
+"pathway_picrust2"
+
