@@ -42,7 +42,7 @@ bins based on the KofamScan or KofamKoala output."><meta name="twitter:card" con
       <a href="../articles/Create_dbcan_profile.html">Create dbcan profile</a>
     </li>
     <li>
-      <a href="../articles/Create_Interpro_profile.html">Create Interpro profile</a>
+      <a href="../articles/Create_Interpro_profile.html">InterProScan profile creation</a>
     </li>
     <li>
       <a href="../articles/Create_KEGG_profile.html">Create KEGG profile</a>
@@ -51,7 +51,7 @@ bins based on the KofamScan or KofamKoala output."><meta name="twitter:card" con
       <a href="../articles/Create_merops_profile.html">Create merops profile</a>
     </li>
     <li>
-      <a href="../articles/Create_picrust2_profile.html">Create picrust2 profile</a>
+      <a href="../articles/Create_picrust2_profile.html">PICRUSt2 KO profile generation</a>
     </li>
     <li>
       <a href="../articles/Explore_dbcan_profile.html">Explore dbcan profile</a>
@@ -138,10 +138,22 @@ of bins metabolism.</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">read_ko</span> <span class="op">(</span><span class="st">"C:/Users/bins/"</span>, write <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in map(.x, .f, ...):</span> <span style="color: #00BBBB;">ℹ</span> In index: 1.</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Caused by error:</span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #BBBB00;">!</span> 'C:/Users/bins/' does not exist.</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">kofam_dir</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, package <span class="op">=</span> <span class="st">"rbims"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">read_ko</span><span class="op">(</span>data_kofam <span class="op">=</span> <span class="va">kofam_dir</span>, write <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1,800 × 4</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    Scaffold_name             Bin_name KO     Abundance</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> Bin_10_scaffold_10_c1_10  Bin_10   K09800         1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> Bin_10_scaffold_10_c1_100 Bin_10   K01126         2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> Bin_10_scaffold_10_c1_103 Bin_10   K00616         1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> Bin_10_scaffold_10_c1_104 Bin_10   K05539         1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> Bin_10_scaffold_10_c1_107 Bin_10   K13936         1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> Bin_10_scaffold_10_c1_109 Bin_10   K01885         1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> Bin_10_scaffold_10_c1_11  Bin_10   K09807         1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> Bin_10_scaffold_10_c1_110 Bin_10   K01737         2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> Bin_10_scaffold_10_c1_111 Bin_10   K07141         1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> Bin_10_scaffold_10_c1_116 Bin_10   K06972         1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 1,790 more rows</span></span>
 </code></pre></div>
     </div>
   </div>

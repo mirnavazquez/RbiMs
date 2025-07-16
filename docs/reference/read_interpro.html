@@ -44,7 +44,7 @@ mapping_ko."><meta name="twitter:card" content="summary_large_image"><meta name=
       <a href="../articles/Create_dbcan_profile.html">Create dbcan profile</a>
     </li>
     <li>
-      <a href="../articles/Create_Interpro_profile.html">Create Interpro profile</a>
+      <a href="../articles/Create_Interpro_profile.html">InterProScan profile creation</a>
     </li>
     <li>
       <a href="../articles/Create_KEGG_profile.html">Create KEGG profile</a>
@@ -53,7 +53,7 @@ mapping_ko."><meta name="twitter:card" content="summary_large_image"><meta name=
       <a href="../articles/Create_merops_profile.html">Create merops profile</a>
     </li>
     <li>
-      <a href="../articles/Create_picrust2_profile.html">Create picrust2 profile</a>
+      <a href="../articles/Create_picrust2_profile.html">PICRUSt2 KO profile generation</a>
     </li>
     <li>
       <a href="../articles/Explore_dbcan_profile.html">Explore dbcan profile</a>
@@ -137,9 +137,22 @@ metabolism.</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">read_interpro</span><span class="op">(</span>data_interpro <span class="op">=</span> <span class="st">"inst/extdata/Interpro_test.tsv"</span>, </span></span>
-<span class="r-in"><span>              database <span class="op">=</span> <span class="st">"INTERPRO"</span>, profile <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in .data$X12:</span> Column `X12` not found in `.data`.</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">filepath</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"Interpro_test.tsv"</span>, package <span class="op">=</span> <span class="st">"rbims"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">read_interpro</span><span class="op">(</span>data_interpro <span class="op">=</span> <span class="va">filepath</span>, database <span class="op">=</span> <span class="st">"INTERPRO"</span>, profile <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 217 × 5</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    Scaffold_name              Bin_name INTERPRO  domain_name           Abundance</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> Bin_10_scaffold_441_c1_24  Bin_10   IPR004695 Voltage-dependent an…         1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> Bin_10_scaffold_441_c1_24  Bin_10   IPR038665 Voltage-dependent an…         1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> Bin_12_scaffold_69_c1_124  Bin_12   IPR004695 Voltage-dependent an…         1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> Bin_12_scaffold_69_c1_124  Bin_12   IPR038665 Voltage-dependent an…         1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> Bin_56_scaffold_71_c1_69   Bin_56   IPR004695 Voltage-dependent an…         1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> Bin_56_scaffold_71_c1_69   Bin_56   IPR038665 Voltage-dependent an…         1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> Bin_113_scaffold_145_c1_85 Bin_113  IPR001647 DNA-binding HTH doma…         1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> Bin_113_scaffold_145_c1_85 Bin_113  IPR025996 WHG domain                    1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> Bin_113_scaffold_145_c1_85 Bin_113  IPR009057 Homeobox-like domain…         1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> Bin_113_scaffold_145_c1_85 Bin_113  IPR036271 Tetracyclin represso…         1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 207 more rows</span></span>
 </code></pre></div>
     </div>
   </div>
