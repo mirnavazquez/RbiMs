@@ -22,6 +22,9 @@ reference:
       - '`metadata`'
       - '`rbims`'
       - '`read_ko_shiny`'
+      - '`EC_picrust2`'
+      - '`KO_picrust2`'
+      - '`pathway_picrust2`'
   - title: KEGG analysis
     desc: Functions used for KEGG
     contents:

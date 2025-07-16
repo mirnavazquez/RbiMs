@@ -113,69 +113,89 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-
-<p><a href="https://github.com/mirnavazquez/RbiMs/actions" class="external-link"><img src="https://github.com/mirnavazquez/RbiMs/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a> <!-- badges: end --></p>
 <div class="section level1">
-<div class="page-header"><h1 id="rbims-">
-<strong>Rbims</strong> <img src="reference/figures/Logo-rRbiMs.png" alt="Logo Rbims" width="150" height="150" align="right"><a class="anchor" aria-label="anchor" href="#rbims-"></a>
+<div class="page-header"><h1 id="rbims-">rbims <img src="reference/figures/Logo-rRbiMs.png" alt="Logo Rbims" width="150" align="right"><a class="anchor" aria-label="anchor" href="#rbims-"></a>
 </h1></div>
-<!-- badges: start -->
-<!-- badges: end -->
-<p>R tools for reconstructing bin metabolisms.</p>
+<p><a href="https://github.com/mirnavazquez/RbiMs/actions" class="external-link"><img src="https://github.com/mirnavazquez/RbiMs/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></p>
+<p><strong>rbims</strong> (Reconstruction of Bin Metabolisms) is an R package designed to streamline the functional analysis and visualization of metagenome-assembled genomes (MAGs). It supports annotation integration from KEGG, InterProScan, dbCAN, and MEROPS, allowing researchers to quantify gene presence, abundance, and pathway coverage across microbial genomes.</p>
+<p>The package includes a curated database for hydrocarbon degradation pathways (aerobic and anaerobic) and provides tools to generate publication-ready visualizations such as heatmaps and bubble plots. It is designed to assist in exploratory trait analysis and early-stage hypothesis generation in genome-resolved metagenomics.</p>
+<hr>
 <div class="section level2">
-<h2 id="quick-install">Quick install<a class="anchor" aria-label="anchor" href="#quick-install"></a>
+<h2 id="id_-features">✨ Features<a class="anchor" aria-label="anchor" href="#id_-features"></a>
 </h2>
-<p>We are actively developing rbims, for now it is not available at CRAN or Bioconductor, however you can access the development version from <a href="https://github.com/mirnavazquez/RbiMs" class="external-link">GitHub</a>.</p>
-<p>In R terminal:</p>
+<ul>
+<li>Import functional annotations from KEGG, InterProScan, dbCAN, MEROPS, and PICRUSt2</li>
+<li>Calculate presence, abundance, and pathway coverage per MAG</li>
+<li>Subset data by gene, enzyme, pathway, or domain</li>
+<li>Visualize functional traits with customizable bubble plots and heatmaps</li>
+<li>Integrate sample or genome metadata</li>
+<li>Export data frames and visualizations for publication</li>
+<li>Curated database for hydrocarbon degradation not covered in KEGG</li>
+</ul>
+<div class="float">
+<img src="https://github.com/user-attachments/assets/3a1eff08-00b9-4901-ab18-d1e4c1c6f0d0" alt="image"><div class="figcaption">image</div>
+</div>
+<hr>
+</div>
+<div class="section level2">
+<h2 id="id_-quick-install">🚀 Quick Install<a class="anchor" aria-label="anchor" href="#id_-quick-install"></a>
+</h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span></code></pre></div>
-<p>If you are in a MAC system, you will need to download <a href="https://www.xquartz.org/" class="external-link">XQuartz</a>, you can read more about it <a href="https://stackoverflow.com/questions/38952427/include-cairo-r-on-a-mac" class="external-link">here</a>. As well if you are in ubuntu you need to install libcairo2-dev, you can read more about it <a href="https://stackoverflow.com/questions/51940792/r-cairo-package-installation-failed-in-ubuntu-18-04" class="external-link">here</a>.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/" class="external-link">devtools</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/" class="external-link">devtools</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"mirnavazquez/RbiMs"</span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/mirnavazquez/RbiMs" class="external-link">rbims</a></span><span class="op">)</span></span></code></pre></div>
+<p>If you are on <strong>macOS</strong>, install <a href="https://www.xquartz.org/" class="external-link">XQuartz</a>.<br>
+If using <strong>Ubuntu</strong>, install system dependency: <code>libcairo2-dev</code>.</p>
+<hr>
 </div>
 <div class="section level2">
-<h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
+<h2 id="id_-case-study-oil-enriched-marine-mags">🧬 Case Study: Oil-Enriched Marine MAGs<a class="anchor" aria-label="anchor" href="#id_-case-study-oil-enriched-marine-mags"></a>
 </h2>
-<p><img src="reference/figures/rRbiMs-3.png" alt="Logo Rbims 3" width="900" height="400" align="center"></p>
+<p>A complete example using MAGs from a hydrocarbon enrichment experiment is available in the folder <a href="https://github.com/mirnavazquez/RbiMs/tree/main/Hidrocarburos" class="external-link"><code>/Hidrocarburos</code></a>, including annotation files and code to reproduce the figures in our manuscript.</p>
+<hr>
 </div>
 <div class="section level2">
-<h2 id="visit-the-website-for-more-detail">Visit the <a href="https://mirnavazquez.github.io/RbiMs/" class="external-link">website</a> for more detail.<a class="anchor" aria-label="anchor" href="#visit-the-website-for-more-detail"></a>
-</h2>
-</div>
-<div class="section level2">
-<h2 id="new-function-to-write-a-metabolism-workbook">New function to write a metabolism workbook<a class="anchor" aria-label="anchor" href="#new-function-to-write-a-metabolism-workbook"></a>
-</h2>
-<p>If you want to create a metabolism table in excel that includes KEGG and interproscan outputs you can use this new function.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">library</span>(rbims)</span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="fu">write_metabolism</span>(<span class="st">"Interpro_test.tsv"</span>, </span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>                 <span class="st">"path/to/KEGG/output/"</span>)</span></code></pre></div>
-</div>
-<div class="section level2">
-<h2 id="contributions">Contributions<a class="anchor" aria-label="anchor" href="#contributions"></a>
+<h2 id="id_-contributors">👩‍💻 Contributors<a class="anchor" aria-label="anchor" href="#id_-contributors"></a>
 </h2>
 <ul>
-<li>Mirna Vázquez Rosas Landa - wrote the code.</li>
-<li>Karla López - wrote codes and manuscript, helped with documentation.</li>
-<li>Stephanie Hereira - Helped with functions and documentation.</li>
-<li>Diana Oaxaca - Set the conda environment.</li>
-<li>Frida Ruiz - Heleped with testing and documentation.</li>
-</ul>
-</div>
-<div class="section level2">
-<h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
-</h2>
-<ul>
-<li>Kanehisa, M. and Goto, S.; KEGG: Kyoto Encyclopedia of Genes and Genomes. Nucleic Acids Res. 28, 27-30 (2000).</li>
-<li>Kanehisa, M; Toward understanding the origin and evolution of cellular organisms. Protein Sci. 28, 1947-1951 (2019).</li>
-<li>Kanehisa, M., Furumichi, M., Sato, Y., Ishiguro-Watanabe, M., and Tanabe, M.; KEGG: integrating viruses and cellular organisms. Nucleic Acids Res. 49, D545-D551 (2021).</li>
 <li>
-<a href="https://github.com/xuechunxu/DiTing" class="external-link">DiTing</a> cycles definition.</li>
+<strong>Mirna Vázquez-Rosas-Landa</strong> – lead developer<br>
+</li>
+<li>
+<strong>Karla P. López-Martínez</strong> – co-developer, documentation, manuscript<br>
+</li>
+<li>
+<strong>Stephanie Hereira-Pacheco</strong> – functions and documentation<br>
+</li>
+<li>
+<strong>Diana Hernández-Oaxaca</strong> – conda environment setup<br>
+</li>
+<li>
+<strong>Frida López-Ruiz</strong> – testing and documentation</li>
 </ul>
+<hr>
+</div>
+<div class="section level2">
+<h2 id="id_-references">📚 References<a class="anchor" aria-label="anchor" href="#id_-references"></a>
+</h2>
+<ul>
+<li>Kanehisa M. and Goto S., Nucleic Acids Res. (2000)<br>
+</li>
+<li>Kanehisa M. et al., Protein Sci. (2019)<br>
+</li>
+<li>Kanehisa M. et al., Nucleic Acids Res. (2021)<br>
+</li>
+<li><a href="https://github.com/xuechunxu/DiTing" class="external-link">DiTing – hydrocarbon cycles definitions</a></li>
+</ul>
+<hr>
+</div>
+<div class="section level2">
+<h2 id="id_-website">🌐 Website<a class="anchor" aria-label="anchor" href="#id_-website"></a>
+</h2>
+<p>Full documentation: <a href="https://mirnavazquez.github.io/RbiMs" class="external-link">https://mirnavazquez.github.io/RbiMs</a></p>
 </div>
 </div>
-
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

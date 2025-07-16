@@ -18,6 +18,7 @@
 <url><loc>/LICENSE.html</loc></url>
 <url><loc>/reference/calc_binary.html</loc></url>
 <url><loc>/reference/calc_percentage.html</loc></url>
+<url><loc>/reference/EC_picrust2.html</loc></url>
 <url><loc>/reference/get_subset_pathway.html</loc></url>
 <url><loc>/reference/get_subset_pca.html</loc></url>
 <url><loc>/reference/get_subset_unique.html</loc></url>
@@ -30,8 +31,10 @@
 <url><loc>/reference/interpro_pfam_profile.html</loc></url>
 <url><loc>/reference/ko_bin_mapp.html</loc></url>
 <url><loc>/reference/ko_bin_table.html</loc></url>
+<url><loc>/reference/KO_picrust2.html</loc></url>
 <url><loc>/reference/mapping_ko.html</loc></url>
 <url><loc>/reference/metadata.html</loc></url>
+<url><loc>/reference/pathway_picrust2.html</loc></url>
 <url><loc>/reference/pipe.html</loc></url>
 <url><loc>/reference/plot_bubble.html</loc></url>
 <url><loc>/reference/plot_heatmap.html</loc></url>
