@@ -32,6 +32,6 @@ This function is part of a package used for the analysis of bins
 metabolism.
 }
 \examples{
-read_interpro(data_interpro = "inst/extdata/Interpro_test.tsv", 
-              database = "INTERPRO", profile = FALSE)
+filepath <- system.file("extdata", "Interpro_test.tsv", package = "rbims")
+read_interpro(data_interpro = filepath, database = "INTERPRO", profile = FALSE)
 }
