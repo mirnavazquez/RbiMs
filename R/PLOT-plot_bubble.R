@@ -56,7 +56,7 @@ plot_bubble<-function(tibble_ko,
                       text_x=NULL,
                       text_y=NULL){
   if(is.null(calc) == T){
-    stop("calc must have a value between Abundance or Binary")
+    stop("calc must have a value between Abundance, Binary or Percentage")
   }
   # Enquoting -------------------------------------------------------------####
   x_axis_enquo <- enquo(x_axis)
