@@ -49,8 +49,8 @@ calc_abundance <- function(dataset,
     unite("Scaffold_name", c("Bin_name", "Scaffold_name"), remove = FALSE)
 # Selecting analysis ------------------------------------------------------####
   KO_raw <- KO_raw %>%
-    rename(tmp = .data[[col_analysis[analysis]]]) %>%
-    distinct()
+    dplyr::rename(tmp = !!rlang::sym(col_analysis[analysis])) %>%
+    dplyr::distinct()
 # Calculate abundance -----------------------------------------------------####
   KO_abundance <- KO_raw %>%
     group_by(.data$Bin_name) %>%
@@ -59,12 +59,11 @@ calc_abundance <- function(dataset,
     rename(Abundance = n) %>%
     ungroup()
 # Write tibble ------------------------------------------------------------####
-  final_table_1 <- left_join(KO_raw, KO_abundance, 
-                             by = c("Bin_name", "tmp")) %>%
-    distinct()
+  final_table_1 <- dplyr::left_join(KO_raw, KO_abundance, by = c("Bin_name", "tmp")) %>%
+    dplyr::distinct()
   
   if (!is.null(col_rename)) {
-    final_table <- final_table_1 %>% rename_with(~ col_rename, .data$tmp)
+    final_table <- final_table_1 %>% dplyr::rename(!!col_rename := tmp)
   } else {
     final_table <- final_table_1
   }

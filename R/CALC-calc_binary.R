@@ -72,15 +72,24 @@ calc_binary <- function(tibble_ko,
                                        ungroup() %>%
                                        drop_na())
   }
-# Join data experiment ----------------------------------------------------####
-  if(is.null(data_experiment) == F){
-    Table_binary <- Kegg_long %>% left_join(Table_binary, by = "Bin_name")
-  }
-# Full table ------------------------------------------------------------- ####
-  if(metabolism == T){
-    Kegg_long <- select(Kegg_long, -.data$Abundance)
+  # Join data experiment ----------------------------------------------------####
+  if (!is.null(data_experiment)) {
     Table_binary <- Table_binary %>%
-    left_join(Kegg_long, by = c(y_axis_label, "Bin_name"))
+      dplyr::left_join(data_experiment, by = "Bin_name")
+  }
+  
+  # Full table --------------------------------------------------------------####
+  if (isTRUE(metabolism)) {
+    # limpiamos la tabla larga quitando Abundance y asegurando unicidad
+    Kegg_long_clean <- Kegg_long %>%
+      dplyr::select(Bin_name, !!y_axis_enquo, tidyselect::everything(), -Abundance) %>%
+      dplyr::distinct()
+    
+    Table_binary <- Table_binary %>%
+      dplyr::left_join(
+        Kegg_long_clean,
+        by = rlang::set_names(c(y_axis_label, "Bin_name"), c(y_axis_label, "Bin_name"))
+      )
   }
   return(Table_binary)
 }
