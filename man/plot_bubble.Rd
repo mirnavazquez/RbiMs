@@ -2,66 +2,63 @@
 % Please edit documentation in R/PLOT-plot_bubble.R
 \name{plot_bubble}
 \alias{plot_bubble}
-\title{Bubble plot.}
+\title{Bubble plot of features (KO/pathways/modules) per bin}
 \usage{
-plot_bubble(tibble_ko, x_axis, y_axis, analysis=c("KEGG","INTERPRO", "dbCAN", "MEROPS"),
-data_experiment=NULL, calc=NULL, color_character=NULL, order_bins=NULL, 
-order_metabolism=NULL, color_pallet=NULL, range_size=NULL, x_labs=TRUE,
-y_labs=TRUE, text_x=NULL, text_y=NULL)
+plot_bubble(
+  tibble_ko,
+  x_axis,
+  y_axis,
+  analysis = NULL,
+  calc = NULL,
+  data_experiment = NULL,
+  color_character = NULL,
+  order_bins = NULL,
+  order_metabolism = NULL,
+  color_pallet = NULL,
+  range_size = NULL,
+  x_labs = TRUE,
+  y_labs = TRUE,
+  text_x = NULL,
+  text_y = NULL,
+  ...
+)
 }
 \arguments{
-\item{tibble_ko}{a tibble object, created with the read_*
-mapping_ko and get_subset_* functions.}
+\item{tibble_ko}{Tibble produced by mapping/get_subset/import functions.}
 
-\item{x_axis}{a string, a column name of the metabolism table.
-It determined the x axis label.}
+\item{x_axis}{Bare column (usually Bin_name).}
 
-\item{y_axis}{a string, a column name of the metabolism table.
-It determined the y axis label.}
+\item{y_axis}{Bare column (KO/pathway/module/etc.).}
 
-\item{analysis}{a character indicating if your input data are from
-KEGG, INTERPRO, dbCAN or MEROPS.}
+\item{analysis}{Optional string ("KEGG", "InterPro", etc.). Informative only.}
 
-\item{data_experiment}{optional. a data frame object
-containing metadata information.}
+\item{calc}{"Abundance", "Binary", "Percentage", or "None".}
 
-\item{calc}{a character indicating with type of calc should
-be done to plot the results. Valid values are "Abundance", "Binary",
-"Percentage", and "None". If you choose none you are expected to use a
-tibble table obtained from calc_binary or calc_percentage.}
+\item{data_experiment}{Optional metadata (joined by "Bin_name").}
 
-\item{color_character}{optional. a string column name of the metadata
-or metabolism object, used for color.}
+\item{color_character}{Bare column for color (metadata or tibble_ko).}
 
-\item{order_bins}{optional. a character vector indicating the bin order.}
+\item{order_bins}{Optional character vector with desired bin order.}
 
-\item{order_metabolism}{optional. a character vector
-indicating metabolism order.}
+\item{order_metabolism}{Optional character vector with desired y order.}
 
-\item{color_pallet}{optional. a character vector of colors to use.}
+\item{color_pallet}{Optional character vector for manual color scale.}
 
-\item{range_size}{optional. a numeric vector indicating
-the range size of the dots.}
+\item{range_size}{Numeric length-2 for point size range (default c(1,5)).}
 
-\item{x_labs}{optional. If FALSE it will set the x lab to NULL.}
+\item{x_labs}{TRUE uses x name, FALSE uses NULL, character sets label.}
 
-\item{y_labs}{optional. If FALSE it will set the y lab to NULL.}
+\item{y_labs}{TRUE uses y name, FALSE uses NULL, character sets label.}
 
-\item{text_x}{optional. A numeric vector indicating the size
-of the x text letters.}
+\item{text_x}{Numeric axis text size (default 7).}
 
-\item{text_y}{optional. A numeric vector indicating the size
-of the y text letters.}
+\item{text_y}{Numeric axis text size (default 7).}
+
+\item{...}{Extra ggplot2 layers (e.g., theme(...), guides(...)).}
 }
 \description{
-Creates a bubble plot of the data of bins metabolism
-}
-\details{
-This function is part of a package used for
-the analysis of bins metabolism.
-}
-\examples{
-plot_bubble(tibble_ko=ko_bin_mapp, x_axis=Bin_name, y_axis=Module, 
-analysis="KEGG", data_experiment=metadata, calc="Binary",
-color_character=Clades)
+Generic bubble plot for RBIMS tables (KEGG/InterPro/Pfam/...).
+Supports "Abundance", "Binary", "Percentage", or "None" (precomputed).
+You can set axis labels via x_labs/y_labs directly (TRUE/FALSE/character).
+Extra ggplot2 layers can be passed via \code{...} (theme(), guides(), etc.).
 }
