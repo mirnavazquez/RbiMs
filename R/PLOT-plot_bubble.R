@@ -98,13 +98,15 @@ plot_bubble <- function(tibble_ko,
   }
   
   Table_with_percentage <- tibble_ko_mod |>
-    dplyr::select({{ y_axis_enquo }}, .data$Bin_name, .data$tmp) |>
+    dplyr::select({{ y_axis_enquo }}, Bin_name, tmp) |>
     tidyr::drop_na() |>
     dplyr::distinct() |>
     dplyr::mutate(
-      tmp = as.integer(.data$tmp),
-      tmp = dplyr::if_else(.data$tmp == 0L, NA_integer_, .data$tmp)
+      tmp = as.numeric(tmp),
+      tmp = dplyr::if_else(tmp == 0, NA_real_, tmp)
     )
+  
+  
   
   # ---- Join metadata if provided ---------------------------------------
   if (!is.null(data_experiment)) {
@@ -167,15 +169,20 @@ plot_bubble <- function(tibble_ko,
     p <- p + ggplot2::scale_color_manual(values = color_pallet)
   }
   
-  # ---- Extra ggplot2 layers from `...` ---------------------------------
   dots <- rlang::list2(...)
   if (length(dots)) {
-    for (lay in dots) {
-      # be conservative: add only common ggplot components (omit 'labels' to avoid <labels> trap)
+    is_labels <- vapply(dots, function(x) inherits(x, "labels"), logical(1))
+    lbls      <- dots[is_labels]
+    layers    <- dots[!is_labels]
+    
+    for (lay in layers) {
       if (inherits(lay, c("gg", "ggplot", "LayerInstance", "Scale", "Coord", "Facet", "theme"))) {
         p <- p + lay
       }
-      # silently ignore anything else (including 'labels')
+    }
+    if (length(lbls)) {
+      lab_list <- Reduce(function(a, b) utils::modifyList(a, b), lapply(lbls, as.list))
+      p <- p + do.call(ggplot2::labs, lab_list)
     }
   }
   

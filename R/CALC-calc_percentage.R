@@ -28,30 +28,33 @@ calc_percentage <- function(tibble_ko,
                       "KO", "dbCAN", "domain_name", "Pfam", "PFAM", "INTERPRO")
   
 # Transform from wide to long ---------------------------------------------####
-  Kegg_long<- tibble_ko %>%
-    pivot_longer(cols = -any_of(data_to_select), 
-                 values_to = "Abundance",
-                 names_to = "Bin_name") %>%
-    distinct()
-# Count the total number of genes per metabolism---------------------------####
+  Kegg_long <- tibble_ko %>%
+    tidyr::pivot_longer(
+      cols = tidyselect::where(is.numeric) | tidyselect::starts_with("Bin_"),
+      values_to = "Abundance",
+      names_to  = "Bin_name"
+    ) %>%
+    dplyr::distinct()
+  # Count the total number of genes per metabolism---------------------------####
   metabolism_counts_totals <- Kegg_long %>%
-    select({{y_axis_enquo}}, .data$KO) %>%
-    distinct() %>%
-    count(!!y_axis_enquo, sort = T) %>%
-    rename(Abundance_metabolism = .data$n) %>%
-    mutate(new2 = str_replace(.data$Abundance_metabolism, "$", "\\)")) %>%
-    mutate(new2 = str_replace(.data$new2, "^", "\\(")) %>%
-    unite("New", {{y_axis_enquo}}, .data$new2, sep = " ", remove=F) %>%
-    select(.data$New, {{y_axis_enquo}}, .data$Abundance_metabolism)
-# Count the total number of genes per metabolism in genome-----------------####
+    dplyr::select(!!y_axis_enquo, KO) %>%           # KO sin .data$
+    dplyr::distinct() %>%
+    dplyr::count(!!y_axis_enquo, sort = TRUE) %>%
+    dplyr::rename(Abundance_metabolism = n) %>%     # n sin .data$
+    dplyr::mutate(new2 = stringr::str_replace(Abundance_metabolism, "$", "\\)")) %>%
+    dplyr::mutate(new2 = stringr::str_replace(new2, "^", "\\(")) %>%
+    tidyr::unite("New", !!y_axis_enquo, new2, sep = " ", remove = FALSE) %>%  # nombres crudos
+    dplyr::select(New, !!y_axis_enquo, Abundance_metabolism)
+  
+  # Count per genome --------------------------------------------------------####
   metabolism_counts_genome <- Kegg_long %>%
-    select({{y_axis_enquo}}, .data$Bin_name, .data$KO, 
-           .data$Abundance) %>%
-    distinct() %>%
-    filter(.data$Abundance != "0") %>%
-    group_by(.data$Bin_name) %>%
-    count(!!y_axis_enquo) %>%
-    rename(Abundance_metabolism_genome = n)
+    dplyr::select(!!y_axis_enquo, Bin_name, KO, Abundance) %>%  # nombres crudos
+    dplyr::distinct() %>%
+    dplyr::filter(Abundance != 0) %>%                           # numérico, no "0"
+    dplyr::group_by(Bin_name) %>%
+    dplyr::count(!!y_axis_enquo) %>%
+    dplyr::rename(Abundance_metabolism_genome = n)
+  
 # Calculate the percentage-------------------------------------------------####
   Table_with_percentage <- left_join(
     metabolism_counts_genome, metabolism_counts_totals, 
