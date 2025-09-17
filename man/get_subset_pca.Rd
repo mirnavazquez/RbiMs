@@ -2,32 +2,30 @@
 % Please edit documentation in R/GET-get_subset_pca.R
 \name{get_subset_pca}
 \alias{get_subset_pca}
-\title{Metabolism PCA.}
+\title{Metabolism PCA}
 \usage{
 get_subset_pca(tibble_rbims, cos2_val = NULL, 
 analysis = c("KEGG", "Pfam", "INTERPRO", "dbCAN", "MEROPS"))
 }
 \arguments{
-\item{tibble_rbims}{a tibble object, created with
-the read_interpro, mapping_ko or get_subset_* functions.}
+\item{tibble_rbims}{A tibble created with functions such as
+read_interpro(), mapping_ko(), or get_subset_*().}
 
-\item{cos2_val}{a numeric vector from 0 to 1 indicating the proportion of
-contribution used as cut off. Default is 0.98.
-See \link[factoextra]{get_pca}.}
+\item{cos2_val}{Numeric value between 0 and 1 indicating the cutoff
+for contribution. Defaults to 0.98. See \link[factoextra]{get_pca}.}
 
-\item{analysis}{a character string indicating the annotation database to use.
-Valid options are: "KEGG", "Pfam", "INTERPRO", "dbCAN", or "MEROPS".
-Default: c("KEGG", "Pfam", "INTERPRO", "dbCAN", "MEROPS")}
+\item{analysis}{Character string specifying the annotation database.
+Options: "KEGG", "Pfam", "INTERPRO", "dbCAN", "MEROPS".}
 }
 \description{
-Identifies the most important KO pathways or protein
-domains in the whole database. And print back a profile of the protein
-domains that have higher contributions.
+Identifies the most important KEGG pathways or protein
+domains in the entire database and returns a profile of those with
+the highest contributions to PCA dimensions.
 }
 \details{
-This function is part of a package used for
-the analysis of bins metabolism.
+This function is part of the rbims package for analyzing
+metabolic potential in metagenome-assembled genomes (MAGs).
 }
 \examples{
-#get_subset_pca(ko_bin_mapp, analysis="KEGG")
+# get_subset_pca(ko_bin_mapp, analysis = "KEGG")
 }
