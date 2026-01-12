@@ -34,7 +34,8 @@ The example data is from an article already published [link](https://www.biorxiv
 
 ```{r}
 library(readr)
-meta<-read_tsv("../inst/extdata/Metadatos-MANGLAR")
+meta_path <- system.file("extdata", "Metadatos-MANGLAR.tsv", package = "rbims")
+meta <- readr::read_tsv(meta_path)
 ```
 
 ```{r}
@@ -61,9 +62,9 @@ head(meta)
 Let's read again the KO_picrust2 data setting *profile=F*.
 
 ```{r}
-KO_picrust2_profile_long <- read_picrust2("../inst/extdata/KO_metagenome_out/KO_pred_metagenome_unstrat.tsv",
-                                          database = "KO",
-                                          profile = F)
+ko_path <- system.file("extdata", "KO_metagenome_out", "KO_pred_metagenome_unstrat.tsv", package = "rbims")
+stopifnot(ko_path != "")
+KO_picrust2_profile_long <- read_picrust2(ko_path, database = "KO", profile = FALSE)
 ```
 
 ```{r}
@@ -85,7 +86,7 @@ head(KO_picrust2_profile_long)
 Then map the KO to the rest of the features of the KEGG and rbims database.
 
 ```{r}
-ko_bin_mapp<-mapping_ko(KO_picrust2_profile_long)
+ko_picrust2_pathway_map<-mapping_ko(KO_picrust2_profile_long)
 ```
 
 # Metabolism subsetting
@@ -103,7 +104,7 @@ Other_energy<-c("Fermentation", "Carbon fixation", "Methane metabolism",
 
 ```{r}
 library(tidyr)
-Energy_metabolisms<-ko_bin_mapp %>%
+Energy_metabolisms<-ko_picrust2_pathway_map %>%
   drop_na(Cycle, Pathway_cycle) %>%
   get_subset_pathway(Cycle, Other_energy)
 ```
@@ -134,7 +135,7 @@ specific<-c("map05416", "map00363", "map00604", "map00908", "map00941")
 
 ```{r}
 library(tidyr)
-specific_subset<-ko_bin_mapp%>%
+specific_subset<-ko_picrust2_pathway_map%>%
   drop_na(Pathway) %>%
   get_subset_pathway(Pathway, specific) 
 ```
