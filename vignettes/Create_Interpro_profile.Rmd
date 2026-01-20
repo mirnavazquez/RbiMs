@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 ```
 
 ```{r, echo=FALSE}
-load("../data/Rbims.RData")
+rbims::rbims
 ```
 
 A common practice to annotate the genes of a new genome or reconstructed genome is to use [InterProScan](https://interproscan-docs.readthedocs.io/en/latest/). Here are some functions to explore that information.
