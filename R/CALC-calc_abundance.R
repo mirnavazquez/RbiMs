@@ -31,7 +31,7 @@ calc_abundance <- function(dataset,
                            col_rename = NULL) {
 # Asign column names -------------------------------------------------------####
   col_analysis <- c(KEGG = "KO", Pfam = "Pfam", INTERPRO = "Interpro", 
-                    dbCAN = "dbCAN_names", MEROPS = "MEROPS_family", 
+                    dbCAN = "dbCAN_names", MEROPS = "MEROPS_names", 
                     TIGRFAM = "TIGRFAM",
                     SUPERFAMILY = "SUPERFAMILY", SMART = "SMART", SFLD = "SFLD",
                     ProSiteProfiles = "ProSiteProfiles", 
