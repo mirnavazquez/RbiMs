@@ -78,7 +78,7 @@ plot_heatmap<-function(tibble_ko,
                               color_pallet=color_pallet, distance=distance)
     
   }else if (analysis == "MEROPS") {
-    plot_heat<- heatmap_dbcan(tibble_ko, !!y_axis_enquo, 
+    plot_heat<- heatmap_merops(tibble_ko, !!y_axis_enquo, 
                               scale_option=scale_option, 
                               color_pallet=color_pallet, distance=distance)
     
