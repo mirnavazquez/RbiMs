@@ -29,6 +29,8 @@ heatmap_dbcan<-function(tibble_ko,
   # Enquoting -------------------------------------------------------------####
   y_axis_enquo <- enquo(y_axis)
   y_axis_label <- as_label(y_axis_enquo)
+  
+  
   # Checking the scale ----------------------------------------------------####
   if(is.null(scale_option) == T){
     scale_option<-"none"
@@ -45,15 +47,17 @@ heatmap_dbcan<-function(tibble_ko,
   heatmap_domain_table<-tibble_ko %>%
     select(-.data$domain_name) %>%
     column_to_rownames({{y_axis_label}})
+  
   # Checking distance -----------------------------------------------------####
   if(isTRUE(distance) == T) {
     heatmap_domain_table_2<-tibble_ko %>%
       select(-.data$domain_name) %>%
-      pivot_longer(cols = -{{y_axis_enquo}}, names_to="Bin_name", 
+      pivot_longer(cols = -{{y_axis_enquo}}, names_to = "Bin_name", 
                    values_to = "count") %>%
       pivot_wider(names_from = {{y_axis_enquo}}, values_from = count, 
                   values_fill = 0) %>%
       column_to_rownames("Bin_name")
+    
     distance_domains<-stats::dist(heatmap_domain_table_2)
     heatmap_domain_table<-as.matrix(distance_domains, method="euclidean")
   }
