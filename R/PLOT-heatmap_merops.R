@@ -32,47 +32,46 @@ heatmap_merops <- function(tibble_ko,
   y_axis_label <- as_label(y_axis_enquo)
   
   # Checking the scale ----------------------------------------------------####
-  if (is.null(scale_option)) {
-    scale_option <- "none"
-  } else if (scale_option == "row") {
-    scale_option <- "row"
-  } else if (scale_option == "column") {
-    scale_option <- "column"
+  if(is.null(scale_option) == T){
+    scale_option<-"none"
+  } else if (is.null(scale_option) == "row"){
+    scale_option<-"row"
+  }else if (is.null(scale_option) == "column"){
+    scale_option<-"column"
   }
-  
   # Checking the color ----------------------------------------------------####
-  if (is.null(color_pallet)) {
-    color_pallet <- viridis::viridis(n = 100)
-  }
-  
+  if(is.null(color_pallet) == T){
+    color_pallet<-viridis(n=100)
+  } 
   # Preparing dataframe ---------------------------------------------------####
-  heatmap_merops_table <- tibble_ko %>%
-    select(-domain_name) %>%
+  heatmap_domain_table <- tibble_ko %>%
+    select(-.data$domain_name) %>%
     column_to_rownames({{y_axis_label}})
   
   # Checking distance -----------------------------------------------------####
-  if (isTRUE(distance)) {
-    heatmap_merops_table_2 <- tibble_ko %>%
-      select(-domain_name) %>%
+  if (isTRUE(distance) == T) {
+    heatmap_domain_table_2 <- tibble_ko %>%
+      select(-.data$domain_name) %>%
       pivot_longer(cols = -{{y_axis_enquo}}, names_to = "Bin_name", 
                    values_to = "count") %>%
       pivot_wider(names_from = {{y_axis_enquo}}, values_from = count, 
                   values_fill = 0) %>%
       column_to_rownames("Bin_name")
     
-    distance_domains <- stats::dist(heatmap_merops_table_2)
-    heatmap_merops_table <- as.matrix(distance_domains, method = "euclidean")
+    distance_domains <- stats::dist(heatmap_domain_table_2)
+    heatmap_domain_table <- as.matrix(distance_domains, method = "euclidean")
   }
   
+  
   # Plot ------------------------------------------------------------------####
-  plot_heat <- ComplexHeatmap::pheatmap(heatmap_merops_table, 
-                                        angle_col = 45, 
+  plot_heat <- ComplexHeatmap::pheatmap(heatmap_domain_table, 
+                                        angle_col = "45", 
                                         name = "Abundance",
                                         scale = scale_option,
                                         main = "MEROPS Families Heatmap",
                                         col = color_pallet,
-                                        cluster_rows = TRUE,
-                                        cluster_cols = TRUE)
+                                        cluster_rows = T,
+                                        cluster_cols = T)
   
   return(plot_heat)
 }
