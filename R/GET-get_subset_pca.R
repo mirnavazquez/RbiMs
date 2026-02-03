@@ -31,7 +31,7 @@ get_subset_pca <- function(tibble_rbims,
                         "Pathway_description", "Genes", "Gene_description", 
                         "Enzyme", "Cycle", "Pathway_cycle", "Detail_cycle", 
                         "rbims_pathway", "rbims_sub_pathway")
-  } else if (analysis %in% c("Pfam", "INTERPRO", "dbCAN")) {
+  } else if (analysis %in% c("Pfam", "INTERPRO", "dbCAN", "MEROPS")) {
     data_to_select <- "domain_name"
   }
   
@@ -48,6 +48,9 @@ get_subset_pca <- function(tibble_rbims,
   } else if (analysis == "dbCAN") {
     tibble_rbims <- tibble_rbims %>% 
       rename(tmp = .data$dbCAN_family)
+  } else if (analysis == "MEROPS") {
+    tibble_rbims <- tibble_rbims %>% 
+      rename(tmp = .data$MEROPS_family)
   }
   
   # Ensure unique rownames -----------------------------------------------------
@@ -96,6 +99,8 @@ get_subset_pca <- function(tibble_rbims,
     final_table <- final_table %>% rename(INTERPRO = .data$tmp)
   } else if (analysis == "dbCAN") {
     final_table <- final_table %>% rename(dbCAN_family = .data$tmp)
+  } else if (analysis == "MEROPS") {
+    final_table <- final_table %>% rename(MEROPS_family = .data$tmp)
   }
   
   return(final_table)
