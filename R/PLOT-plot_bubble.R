@@ -65,7 +65,7 @@ plot_bubble <- function(tibble_ko,
   }
   
   # ---- Defaults ---------------------------------------------------------
-  if (is.null(range_size)) range_size <- c(1, 5)
+  if (is.null(range_size)) range_size <- c(1, 7)
   if (is.null(text_x)) text_x <- 7
   if (is.null(text_y)) text_y <- 7
   
