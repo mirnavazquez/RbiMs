@@ -1,5 +1,5 @@
 ---
-title: "Create dbcan profile"
+title: "3. Creating dbCAN profile"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Create Interpro profile}
@@ -15,6 +15,16 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{r include=FALSE}
+library(kableExtra)
+library(tidyverse)
+library(readxl)
+library(DT)
+```
+
+Another tool to use is [dbCAN](https://bcb.unl.edu/dbCAN2/). Here is the function to explore these type of files:
+
+First, load the rbims package.
 
 ```{r, eval=FALSE}
 library(rbims)
@@ -25,39 +35,65 @@ library(rbims)
 devtools::load_all()
 ```
 
-Another tool to use is [dbCAN](https://bcb.unl.edu/dbCAN2/). Here is the function to explore these type of files:
+## `read_dbcan3()`: Parse dbCAN3 Outputs
+The `read_dbcan3` function is designed to parse and format raw output files from the dbCAN3 annotation tool.
 
-First, load the rbims package.
+### Input Requirements
+- File Path: Provide the path to the directory containing your dbCAN files.
 
+- File Extension: The function specifically looks for files ending in `.overview.txt`.
 
+### Data Structure
+The processed output contains 6 key columns:
 
-The function to use that information is `read_dbcan3`. This function can parse the information of the dbCAN3 files.
+- Bin Name: Identifier of the bin/genome.
 
--   The input should be a path where dbCAN output files should be stored and should have the extension overview.txt. Output data should have 6 columns with the bin names followed by the Genes obtained in every algorithm (HMMER,Hotpep,DIAMOND), column 'Signalp' indcating if a Peptide signal is found and a column '#ofTools" indicating the number of algorithms that found this Gene.
+- HMMER / Hotpep / DIAMOND: Genes identified by each specific algorithm.
 
--   The output format is chosen with the `profile` argument. When **profile = T**, a wide output is obtained.
+- SignalP: Indicates if a signal peptide was detected.
 
--   The `write` argument saves the formatted table generated in .tsv extension. When **write = F** gives you the output but not saves the table in your current directory. 
+- #ofTools: Total count of algorithms that identified the gene.
 
 If you want to follow the example you can download the use rbims [test](https://github.com/Steph0522/Rbims_workflow/tree/main/inst/extdata_new) file.
 
 ```{r, eval=TRUE}
-dbcan_profile <-read_dbcan3(dbcan_path = "../inst/extdata/test_data/",  profile = T, write = F)
+dbcan_profile_T <-read_dbcan3(dbcan_path = "../inst/extdata/dbCAN",  profile = T, write = F)
 ```
 
-```{r}
-head(dbcan_profile)
+```{r eval = FALSE}
+head(dbcan_profile_T)
 ```
 
-Or print a long table **profile = F**.
+```{r echo=FALSE}
+knitr::kable(head(dbcan_profile_T, 10)) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "bordered", "condensed"),
+                full_width = TRUE, 
+                position = "left") %>%
+  column_spec(1:ncol(dbcan_profile_T), border_right = "1px solid #ddd", border_left = "1px solid #ddd") %>%
+  row_spec(0, extra_css = "border-right: 1px solid #ddd; border-top: 1px solid #ddd;") %>%
+  scroll_box(height = "300px", width = "100%", fixed_thead = TRUE)
+```
+
+
+Or print a long table `profile = F`.
 
 ```{r, eval=TRUE}
-dbcan_profile<-read_dbcan3(dbcan_path = "../inst/extdata/test_data/",  
+dbcan_profile_F <-read_dbcan3(dbcan_path = "../inst/extdata/dbCAN",  
                            profile = F, write = F)
 ```
 
-```{r}
-head(dbcan_profile)
+```{r eval = FALSE}
+head(dbcan_profile_F)
+```
+
+```{r echo=FALSE}
+knitr::kable(head(dbcan_profile_F, 25)) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "bordered", "condensed"),
+                full_width = FALSE, 
+                position = "left") %>%
+  column_spec(1:ncol(dbcan_profile_F), border_right = "1px solid #ddd", border_left = "1px solid #ddd") %>%
+  row_spec(0, extra_css = "border-right: 1px solid #ddd; border-top: 1px solid #ddd;") %>%
+  scroll_box(height = "300px", width = "100%", fixed_thead = TRUE)
 ```
 
 Notice that in both cases, some lines are showed that gives the information recovered from the files input as the total number of genes, remaining genes after the the filtered, and the number of genes that have signals and passed the filtered. 
@@ -68,4 +104,4 @@ You can export this to a table like this:
 write.table(dbcan_profile, "dbcan.tsv", quote = F, sep = "\t", row.names = F, col.names = T)
 ```
 
-Or setting write  **write = T**. 
+Or setting write  `write = T`. 
