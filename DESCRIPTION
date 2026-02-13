@@ -20,7 +20,10 @@ Suggests:
     devtools,
     tidyverse,
     FactoMineR,
-    viridis
+    viridis,
+    kableExtra,
+    DT,
+    readxl
 VignetteBuilder: knitr
 biocViews:
     KEGGREST
@@ -41,7 +44,14 @@ Imports:
     stats,
     purrr,
     tidyselect,
-    writexl
+    writexl,
+    vegan,
+    permute,
+    randomForest,
+    indicspecies,
+    cluster,
+    compositions,
+    forcats
 Language: en-US
 URL: https://github.com/mirnavazquez/RbiMs
 BugReports: https://github.com/mirnavazquez/RbiMs/issues
