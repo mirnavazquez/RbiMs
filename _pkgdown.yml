@@ -57,6 +57,19 @@ reference:
     contents:
       - '`plot_bubble`'
       - '`plot_heatmap`'
+  - title: Pathway Analysis
+    contents:
+      - '`calc_pathway_directional_bias`'
+      - '`plot_pathway_directional_bias`'
+  - title: Discriminant Features
+    contents:
+      - '`get_discriminant_features`'
+      - '`get_subset_discriminant`'
+      - '`plot_disc_effect`'
+      - '`plot_disc_heatmap`'
+  - title: Utilities
+    contents:
+      -  '`make_ko_dictionary`'
 
 left:
   - icon: fa-home

@@ -1,16 +1,18 @@
 pandoc: '3.2'
-pkgdown: 2.1.1
+pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
-  Create_dbcan_profile: Create_dbcan_profile.html
-  Create_Interpro_profile: Create_Interpro_profile.html
-  Create_KEGG_profile: Create_KEGG_profile.html
-  Create_merops_profile: Create_merops_profile.html
-  Create_picrust2_profile: Create_picrust2_profile.html
-  Explore_dbcan_profile: Explore_dbcan_profile.html
-  Explore_InterProScan_profile: Explore_InterProScan_profile.html
-  Explore_KEGG_profile: Explore_KEGG_profile.html
-  Explore_merops_profile: Explore_merops_profile.html
-  Explore_picrust2_profile: Explore_picrust2_profile.html
-  Installation: Installation.html
-last_built: 2025-07-16T19:04Z
+  01_Installation: 01_Installation.html
+  02_Install_conda_environment: 02_Install_conda_environment.html
+  03_Create_KEGG_profile: 03_Create_KEGG_profile.html
+  04_Create_Interpro_profile: 04_Create_Interpro_profile.html
+  05_Create_dbcan_profile: 05_Create_dbcan_profile.html
+  06_Create_merops_profile: 06_Create_merops_profile.html
+  07_Create_picrust2_profile: 07_Create_picrust2_profile.html
+  08_Explore_KEGG_profile: 08_Explore_KEGG_profile.html
+  09_Explore_InterProScan_profile: 09_Explore_InterProScan_profile.html
+  10_Explore_dbcan_profile: 10_Explore_dbcan_profile.html
+  11_Explore_merops_profile: 11_Explore_merops_profile.html
+  12_Explore_picrust2_profile: 12_Explore_picrust2_profile.html
+  13_Discriminant_analysis: 13_Discriminant_analysis.html
+last_built: 2026-05-13T09:04Z

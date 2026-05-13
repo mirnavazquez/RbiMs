@@ -1,12 +1,30 @@
 Package: rbims
 Title: R Tools for Reconstruncting Bin Metabolisms
 Version: 0.0.0.9000
-Authors@R: 
+Authors@R: c(
     person(given = "Mirna",
            family = "Vázquez-Rosas-Landa",
            role = c("aut", "cre"),
            email = "mirnavrl@gmail.com",
-           comment = c(ORCID = "0000-0002-6928-7930"))
+           comment = c(ORCID = "0000-0002-6928-7930")),
+    person(given = "Karla P.",
+           family = "López-Martínez",
+           role = "aut",
+           email = "klopez.msc@gmail.com",
+           comment = c(ORCID = "0009-0008-2484-3615")),
+    person(given = "Stephanie",
+           family = "Hereira-Pacheco",
+           role = "aut",
+           email = "shereirap@gmail.com"),
+    person(given = "Diana",
+           family = "Hernández-Oaxaca",
+           role = "ctb",
+           email = "HOaxacaDiana@gmail.com"),
+    person(given = "Frida",
+           family = "López-Ruiz",
+           role = "ctb",
+           email = "fridalopez108e@gmail.com")
+  )
 Description: This package is meant to be used for the analysis of microbial metabolism. rbims reads different database outputs and includes a new custom-curated database that the user can easily access. Its module-based design allows the user to choose between running the whole pipeline or just part of it. Finally, a key feature is that it facilitates the incorporation of metadata such as taxonomy and sampling data, allowing the user to answer specific questions of biological relevance.
 License: GPL (>= 3) + file LICENSE
 Encoding: UTF-8
