@@ -35,15 +35,15 @@ read_merops <- function(merops_path, write = FALSE, profile = TRUE) {
   # Reading data ----------------------------------------------------------####
   merops_df_format <- suppressWarnings(
     merops_df %>%
-      filter(.data$V4 > 90) %>%
+      filter(.data$V4 > 80) %>%
       rename(Bin_name = .data$V1)) %>%
       mutate(
         after_hyphen = str_extract(.data$V3, "(?<=-\\s).*?(?= \\()"),
         species_name = str_extract(.data$V3, "(?<=\\().*?(?=\\))"),
         peptidase_code = str_extract(.data$V3, "(?<=\\[).*?(?=\\])"),
-      MEROPS_names = paste(after_hyphen, species_name, peptidase_code, sep = " | ")
+        domain_name = paste(after_hyphen, peptidase_code, sep = " | ")
       ) %>%
-      rename(domain_name = .data$V2)%>%
+      rename(MEROPS_names = .data$V2)%>%
       calc_abundance(analysis = "MEROPS", col_rename = "MEROPS_names") %>%
       dplyr::select(-.data$Scaffold_name, .data$MEROPS_names) %>% 
       group_by(.data$Bin_name, MEROPS_family = .data$MEROPS_names, 
