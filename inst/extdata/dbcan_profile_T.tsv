@@ -1,0 +1,111 @@
+dbCAN_family	domain_name	5mSIPHEX1_0	5mSIPHEX1_1	5mSIPHEX1_10	5mSIPHEX1_11	5mSIPHEX1_13	5mSIPHEX1_15	5mSIPHEX1_18	5mSIPHEX1_19	5mSIPHEX1_2	5mSIPHEX1_25	5mSIPHEX1_26	5mSIPHEX1_32	5mSIPHEX1_33	5mSIPHEX1_37	5mSIPHEX1_8	5mSIPHEX1_9	5mSIPHEX2_10	5mSIPHEX2_14	5mSIPHEX2_16	5mSIPHEX2_18	5mSIPHEX2_25	5mSIPHEX2_3	5mSIPHEX2_5	5mSIPHEX2_7	700mSIPHEX1_0	700mSIPHEX1_1	700mSIPHEX1_12	700mSIPHEX1_15	700mSIPHEX1_17	700mSIPHEX1_18	700mSIPHEX1_2	700mSIPHEX1_20	700mSIPHEX1_3	700mSIPHEX1_8	700mSIPHEX2_13	700mSIPHEX2_14	700mSIPHEX2_16	700mSIPHEX2_21	700mSIPHEX2_22	700mSIPHEX2_23	700mSIPHEX2_24	700mSIPHEX2_9
+AA1	auxiliary activities [AAs]	4	0	9	1	1	4	0	0	0	16	0	4	0	0	4	1	4	9	0	25	16	0	0	1	1	0	1	1	4	1	0	1	9	0	0	4	1	1	1	0	4	0
+AA4	auxiliary activities [AAs]	4	0	0	1	1	0	1	0	1	0	1	0	0	1	1	0	4	0	1	0	4	1	0	1	1	0	0	1	0	0	1	1	0	1	1	0	0	1	1	0	0	0
+CBM48	carbohydrate-binding module [CBM]	9	0	0	0	0	0	0	0	0	0	0	0	0	0	4	1	9	0	0	0	4	0	0	0	0	16	1	0	1	1	1	0	0	0	0	1	1	0	1	1	0	9
+CBM50	carbohydrate-binding module [CBM]	4	4	1	9	1	0	0	4	4	9	9	0	0	4	4	9	4	1	9	9	4	4	4	1	4	4	1	1	1	9	9	9	1	1	1	1	9	1	9	1	0	4
+CE11	carbohydrate esterases [CEs]	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+CE14	carbohydrate esterases [CEs]	9	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	4	0	1	0	0	0	0	0	0	1	1	1	1	0	0	0	0	0	0	1	0	1	0	1	0	1
+CE4	carbohydrate esterases [CEs]	1	1	25	0	1	1	1	4	4	0	1	0	0	4	1	1	1	25	1	0	1	4	1	1	0	4	1	1	4	4	9	0	25	4	4	4	4	1	9	1	9	4
+GH1	glycoside hydrolases [GHs]	1	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	1
+GH102	glycoside hydrolases [GHs]	1	1	0	0	1	1	0	0	0	0	0	1	1	1	1	0	1	0	0	0	1	1	0	1	1	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0
+GH103	glycoside hydrolases [GHs]	9	1	4	4	16	1	1	1	1	4	0	1	1	16	16	4	9	4	0	4	16	16	1	16	16	1	0	1	0	4	4	4	4	4	4	0	4	1	4	0	1	1
+GH108	glycoside hydrolases [GHs]	1	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	1	0	0	1	0	1	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	1
+GH13	glycoside hydrolases [GHs]	49	1	16	0	0	0	9	4	25	0	0	1	0	1	9	9	49	16	0	0	9	1	1	0	0	49	9	9	16	100	64	0	16	1	1	16	100	9	64	9	9	25
+GH23	glycoside hydrolases [GHs]	25	0	25	36	16	1	25	16	9	36	4	1	4	16	25	16	25	49	4	36	25	25	16	9	9	25	4	25	4	16	25	36	25	16	16	4	16	25	25	4	16	25
+GH3	glycoside hydrolases [GHs]	1	1	0	1	1	9	0	1	1	1	0	49	4	1	1	9	4	0	1	1	1	1	0	1	0	1	4	1	9	16	9	1	0	1	1	9	16	1	9	4	0	1
+GT107	glycosyltransferases [GTs]	1	0	0	0	4	0	0	0	0	0	0	0	0	1	1	0	1	0	0	0	1	1	0	4	1	1	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	1
+GT14	glycosyltransferases [GTs]	4	0	0	0	4	0	0	0	0	0	0	0	0	4	4	0	4	0	0	0	4	4	0	4	1	4	0	0	0	1	0	0	0	4	4	0	1	0	0	0	0	4
+GT19	glycosyltransferases [GTs]	1	0	1	1	1	1	4	0	1	1	0	1	0	1	1	0	1	1	1	1	1	1	1	1	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+GT2	glycosyltransferases [GTs]	169	16	121	9	49	81	9	1	1	36	196	225	144	529	81	1	169	144	196	144	100	484	1	49	36	196	900	9	625	16	25	36	121	256	256	625	16	9	16	900	100	144
+GT20	glycosyltransferases [GTs]	1	0	0	0	0	0	1	1	0	0	0	4	1	0	0	0	1	0	0	0	0	0	1	0	0	1	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	1
+GT28	glycosyltransferases [GTs]	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+GT30	glycosyltransferases [GTs]	4	9	1	1	1	1	1	1	1	1	1	1	1	4	9	1	4	1	1	0	9	4	1	1	1	4	1	1	1	1	1	1	1	4	4	1	1	1	1	1	1	4
+GT32	glycosyltransferases [GTs]	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+GT35	glycosyltransferases [GTs]	1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	1	0	1	1	0	0	0	0	0	1	1	1	0	0	1
+GT4	glycosyltransferases [GTs]	49	0	196	25	25	25	16	9	9	36	36	36	25	100	121	1	16	196	49	100	100	100	9	25	9	256	196	36	225	49	81	36	196	49	49	225	49	36	36	196	144	144
+GT5	glycosyltransferases [GTs]	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	1	0	1	0	1	0	0	0	0	1	4	0	4	1	1	0	0	0	0	4	1	0	4	4	0	1
+GT51	glycosyltransferases [GTs]	9	4	9	16	16	16	4	9	4	16	4	16	16	16	16	16	9	9	4	9	16	16	4	16	4	9	4	4	16	9	4	16	9	16	16	16	9	4	4	4	4	9
+GT8	glycosyltransferases [GTs]	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+GT81	glycosyltransferases [GTs]	1	0	1	0	0	0	1	1	1	0	0	4	1	1	1	0	1	1	0	0	1	1	0	0	0	0	0	1	0	1	1	0	1	1	1	0	1	1	1	0	1	0
+GT83	glycosyltransferases [GTs]	1	0	0	0	0	4	1	1	0	0	0	9	4	0	0	0	1	0	0	0	0	0	1	0	0	0	1	1	1	1	0	0	0	0	0	1	1	1	0	1	0	0
+AA0	auxiliary activities [AAs]	0	1	1	0	0	0	0	1	0	0	1	0	0	0	1	1	0	1	1	0	1	0	1	0	0	0	1	1	0	1	1	1	1	0	0	0	1	1	1	1	1	0
+AA3	auxiliary activities [AAs]	0	16	9	16	4	16	4	0	1	25	0	1	4	16	9	0	0	9	0	16	9	16	0	4	1	4	0	1	0	1	4	36	9	16	16	0	1	1	4	0	1	4
+GH109	glycoside hydrolases [GHs]	0	1	0	0	0	1	0	0	0	0	0	4	4	0	4	0	0	0	0	0	4	0	0	0	0	1	1	0	0	0	1	0	0	0	0	0	0	0	1	1	0	1
+GH36	glycoside hydrolases [GHs]	0	1	0	0	0	1	0	0	0	0	0	0	0	0	1	4	0	0	0	0	1	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	1
+GH42	glycoside hydrolases [GHs]	0	1	0	0	0	1	0	0	0	0	0	0	0	0	1	1	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+AA6	auxiliary activities [AAs]	0	0	4	1	0	0	4	1	1	1	0	1	1	0	1	1	0	4	0	1	0	0	4	0	0	0	0	1	0	1	1	1	4	0	0	0	1	1	1	0	1	0
+CBM41	carbohydrate-binding module [CBM]	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	1	0	1	0
+CBM57	carbohydrate-binding module [CBM]	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0
+CE1	carbohydrate esterases [CEs]	0	0	1	0	0	0	0	0	0	0	0	1	0	0	4	0	0	1	0	0	4	0	0	0	0	9	0	0	1	0	0	0	1	0	0	1	0	0	0	0	1	4
+GH114	glycoside hydrolases [GHs]	0	0	1	1	0	0	0	1	0	1	0	0	0	0	0	0	0	1	0	4	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+GH166	glycoside hydrolases [GHs]	0	0	1	1	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0
+GH73	glycoside hydrolases [GHs]	0	0	4	0	0	0	4	4	1	0	1	0	0	0	0	1	0	4	1	0	0	0	4	0	0	0	1	4	1	4	9	0	4	0	0	1	4	4	9	1	4	0
+GH84	glycoside hydrolases [GHs]	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0
+GT25	glycosyltransferases [GTs]	0	0	1	0	0	0	0	0	1	0	0	0	0	1	0	1	0	1	0	0	0	1	0	0	1	1	0	0	0	1	1	0	1	1	1	0	1	0	1	0	1	1
+GT9	glycosyltransferases [GTs]	0	0	1	9	0	0	1	1	0	9	4	1	1	0	0	4	0	1	1	4	0	0	1	0	0	0	4	1	4	1	1	9	1	0	0	4	1	1	1	4	1	0
+GT90	glycosyltransferases [GTs]	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	1
+PL5	polysaccharide lyases [PLs]	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	4	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0
+AA2	auxiliary activities [AAs]	0	0	0	4	1	1	0	0	0	0	0	1	0	1	0	1	0	0	0	0	0	1	0	1	0	0	1	0	1	1	9	0	0	1	1	1	1	0	9	0	0	0
+GH31	glycoside hydrolases [GHs]	0	0	0	1	0	0	0	0	4	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	1	1	1	0	0	0	0	1	1	0	1	1	0	0
+GH33	glycoside hydrolases [GHs]	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+GH25	glycoside hydrolases [GHs]	0	0	0	0	1	0	0	0	0	0	0	1	1	1	1	0	0	0	1	0	1	1	0	1	1	1	0	1	0	0	0	0	0	1	1	0	0	1	0	0	0	1
+CBM85	carbohydrate-binding module [CBM]	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+CE15	carbohydrate esterases [CEs]	0	0	0	0	0	1	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+CE2	carbohydrate esterases [CEs]	0	0	0	0	0	1	0	0	4	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+GH10	glycoside hydrolases [GHs]	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+GH16	glycoside hydrolases [GHs]	0	0	0	0	0	1	0	0	0	0	0	9	4	0	0	1	0	0	0	0	0	0	0	0	0	1	1	0	4	4	4	0	0	0	0	4	4	0	4	1	0	1
+GH24	glycoside hydrolases [GHs]	0	0	0	0	0	1	1	0	0	0	0	1	1	25	0	0	0	0	0	0	0	16	0	0	0	0	0	1	0	0	0	0	0	25	25	0	0	1	0	0	0	0
+GH5	glycoside hydrolases [GHs]	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	1	1	1	1	0	0	0	0	0	1	1	1	0	1	0	0
+GH63	glycoside hydrolases [GHs]	0	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0
+GT26	glycosyltransferases [GTs]	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	1	1	0	0	0	1	0	0	0	1	1	0	1	0	0	0	0	1
+GH19	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+GT0	glycosyltransferases [GTs]	0	0	0	0	0	0	0	1	0	9	9	0	0	0	0	0	0	0	4	9	0	0	1	0	0	1	4	0	4	0	0	0	0	0	0	4	0	0	0	4	0	1
+GT104	glycosyltransferases [GTs]	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+CE6	carbohydrate esterases [CEs]	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+CE9	carbohydrate esterases [CEs]	0	0	0	0	0	0	0	0	1	0	0	0	0	1	1	1	0	0	0	0	0	1	0	0	1	1	0	0	0	1	1	0	0	1	1	0	1	0	1	0	0	1
+GH2	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	4	0	4	0	0	0	1	4	0	0	1	0	1	0	0	0	0	1	0	0	0	4	4	0	0	0	0	0	4	0	9	0	0	1
+GH20	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0
+GT1	glycosyltransferases [GTs]	0	0	0	0	0	0	0	0	4	0	0	0	0	4	25	1	0	0	0	0	4	4	0	0	0	4	0	0	0	1	1	0	0	4	4	0	1	0	1	0	0	1
+GH171	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	1	0	1	0	0	0	0	1	0	0	1	1	0	0
+GH92	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0	1	0	0	0	1	0	0
+AA7	auxiliary activities [AAs]	0	0	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+CE20	carbohydrate esterases [CEs]	0	0	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+GH15	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+GH28	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	0	0	0	4	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+GH29	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	0	0	0	4	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+GH37	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	1	1	0	0
+GH43	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	0	0	0	9	4	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	1	1	0	0	0	0	0
+GH51	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+GH67	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+GH9	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	0	0	0	4	1	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+CBM66	carbohydrate-binding module [CBM]	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+PL1	polysaccharide lyases [PLs]	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+PL17	polysaccharide lyases [PLs]	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	1	1	0	1	0	0	0
+PL6	polysaccharide lyases [PLs]	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	1	1	0	1	0	0	0
+GH0	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0
+GT11	glycosyltransferases [GTs]	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0
+GT41	glycosyltransferases [GTs]	0	0	0	0	0	0	0	0	0	0	0	0	0	4	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0
+CBM32	carbohydrate-binding module [CBM]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	1	0	1	0	0	0
+CBM41+CBM48+GH13	carbohydrate-binding module [CBM]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+GH105	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+GH77	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	1	1	0	0	0	0	0	1	0	1	0	0	0
+GH94	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	4	0	0	0	0	0	0	4	0	0	0	0	0
+GT113	glycosyltransferases [GTs]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+PL29	polysaccharide lyases [PLs]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+PL38	polysaccharide lyases [PLs]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+PL7	polysaccharide lyases [PLs]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	9	4	1	0	0	0	0	9	4	0	1	0	0	0
+CBM9	carbohydrate-binding module [CBM]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	1	1	1	0	0	0	0	1	1	0	1	1	0	0
+GH100	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0
+GH113	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0	1	0	0	0	1	0	0
+GH18	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	4	0	0	0	0	0	0	0	0	0	0	0	0	4	0	0
+GH32	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0
+GH65	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	4	0	1	0	0	0	0	0	0	1	0	0	0	4	0	0
+GT105	glycosyltransferases [GTs]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	4	0	0	0	0	0	0	0	0	0	0	0	0	4	0	0
+CBM4	carbohydrate-binding module [CBM]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0
+GH144	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	4	0	0	0	0	0	0	4	0	0	0	0	0	0
+GH97	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0
+GT10	glycosyltransferases [GTs]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0
+PL12	polysaccharide lyases [PLs]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0
+GT99	glycosyltransferases [GTs]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0
+GH158	glycoside hydrolases [GHs]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0
+CBM48+GH13	carbohydrate-binding module [CBM]	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1

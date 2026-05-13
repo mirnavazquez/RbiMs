@@ -1,0 +1,7 @@
+﻿rbims_pathway,rbims_sub_pathway,KO,Genes,g_Celeribacter_5m_0,g_Alcanivorax_5m_25
+Phenanthrene,"3-oxoadipate CoA-transferase, beta subunit",K01032,pcaJ,1,0
+Hexadecane,Acetyl-CoA acyltransferase,K00632,"fadA, fadI",1,1
+Phenanthrene,3-hydroxyacyl-CoA dehydrogenase / enoyl-CoA hydratase / 3-hydroxybutyryl-CoA epimerase,K01782,fadJ,1,1
+Hexadecane,Enoyl-CoA hydratase,K01692,"paaF, echA",1,1
+Hexadecane,Long-chain fatty acid transport protein,K06076,fadL,1,1
+Hexadecane,Alkane 1-monooxygenase,K00496,"alkB1_2, alkM",2,2

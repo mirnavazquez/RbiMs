@@ -1,0 +1,1595 @@
+Bin_name	dbCAN_family	domain_name	signalp	Abundance
+5mSIPHEX1_0	AA1	auxiliary activities [AAs]	Y(1-27)	4
+5mSIPHEX1_0	AA4	auxiliary activities [AAs]	N	4
+5mSIPHEX1_0	CBM48	carbohydrate-binding module [CBM]	N	9
+5mSIPHEX1_0	CBM50	carbohydrate-binding module [CBM]	N	4
+5mSIPHEX1_0	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_0	CE14	carbohydrate esterases [CEs]	N	6
+5mSIPHEX1_0	CE14	carbohydrate esterases [CEs]	Y(1-23)	3
+5mSIPHEX1_0	CE4	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_0	GH1	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_0	GH102	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_0	GH103	glycoside hydrolases [GHs]	N	3
+5mSIPHEX1_0	GH103	glycoside hydrolases [GHs]	Y(1-25)	3
+5mSIPHEX1_0	GH103	glycoside hydrolases [GHs]	Y(1-26)	3
+5mSIPHEX1_0	GH108	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_0	GH13	glycoside hydrolases [GHs]	N	49
+5mSIPHEX1_0	GH23	glycoside hydrolases [GHs]	Y(1-21)	5
+5mSIPHEX1_0	GH23	glycoside hydrolases [GHs]	Y(1-22)	5
+5mSIPHEX1_0	GH23	glycoside hydrolases [GHs]	Y(1-24)	5
+5mSIPHEX1_0	GH23	glycoside hydrolases [GHs]	Y(1-34)	5
+5mSIPHEX1_0	GH23	glycoside hydrolases [GHs]	Y(1-43)	5
+5mSIPHEX1_0	GH3	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_0	GT107	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_0	GT14	glycosyltransferases [GTs]	N	2
+5mSIPHEX1_0	GT14	glycosyltransferases [GTs]	Y(1-17)	2
+5mSIPHEX1_0	GT19	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_0	GT2	glycosyltransferases [GTs]	N	156
+5mSIPHEX1_0	GT2	glycosyltransferases [GTs]	Y(1-19)	13
+5mSIPHEX1_0	GT20	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_0	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_0	GT30	glycosyltransferases [GTs]	N	4
+5mSIPHEX1_0	GT32	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_0	GT35	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_0	GT4	glycosyltransferases [GTs]	N	49
+5mSIPHEX1_0	GT5	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_0	GT51	glycosyltransferases [GTs]	N	9
+5mSIPHEX1_0	GT8	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_0	GT81	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_0	GT83	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_1	AA0	auxiliary activities [AAs]	N	1
+5mSIPHEX1_1	AA3	auxiliary activities [AAs]	N	16
+5mSIPHEX1_1	CBM50	carbohydrate-binding module [CBM]	N	2
+5mSIPHEX1_1	CBM50	carbohydrate-binding module [CBM]	Y(1-21)	2
+5mSIPHEX1_1	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_1	CE4	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_1	GH1	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_1	GH102	glycoside hydrolases [GHs]	Y(1-22)	1
+5mSIPHEX1_1	GH103	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_1	GH109	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_1	GH13	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_1	GH3	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_1	GH36	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_1	GH42	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_1	GT2	glycosyltransferases [GTs]	N	16
+5mSIPHEX1_1	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_1	GT30	glycosyltransferases [GTs]	N	9
+5mSIPHEX1_1	GT51	glycosyltransferases [GTs]	N	4
+5mSIPHEX1_10	AA0	auxiliary activities [AAs]	N	1
+5mSIPHEX1_10	AA1	auxiliary activities [AAs]	N	6
+5mSIPHEX1_10	AA1	auxiliary activities [AAs]	Y(1-41)	3
+5mSIPHEX1_10	AA3	auxiliary activities [AAs]	N	9
+5mSIPHEX1_10	AA6	auxiliary activities [AAs]	N	4
+5mSIPHEX1_10	CBM41	carbohydrate-binding module [CBM]	Y(1-19)	1
+5mSIPHEX1_10	CBM50	carbohydrate-binding module [CBM]	Y(1-22)	1
+5mSIPHEX1_10	CBM57	carbohydrate-binding module [CBM]	Y(1-27)	1
+5mSIPHEX1_10	CE1	carbohydrate esterases [CEs]	Y(1-33)	1
+5mSIPHEX1_10	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_10	CE4	carbohydrate esterases [CEs]	N	20
+5mSIPHEX1_10	CE4	carbohydrate esterases [CEs]	Y(1-25)	5
+5mSIPHEX1_10	GH103	glycoside hydrolases [GHs]	N	2
+5mSIPHEX1_10	GH103	glycoside hydrolases [GHs]	Y(1-34)	2
+5mSIPHEX1_10	GH114	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_10	GH13	glycoside hydrolases [GHs]	N	8
+5mSIPHEX1_10	GH13	glycoside hydrolases [GHs]	Y(1-27)	8
+5mSIPHEX1_10	GH166	glycoside hydrolases [GHs]	Y(1-25)	1
+5mSIPHEX1_10	GH23	glycoside hydrolases [GHs]	N	5
+5mSIPHEX1_10	GH23	glycoside hydrolases [GHs]	Y(1-22)	5
+5mSIPHEX1_10	GH23	glycoside hydrolases [GHs]	Y(1-23)	5
+5mSIPHEX1_10	GH23	glycoside hydrolases [GHs]	Y(1-26)	5
+5mSIPHEX1_10	GH23	glycoside hydrolases [GHs]	Y(1-28)	5
+5mSIPHEX1_10	GH73	glycoside hydrolases [GHs]	N	2
+5mSIPHEX1_10	GH73	glycoside hydrolases [GHs]	Y(1-22)	2
+5mSIPHEX1_10	GH84	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_10	GT19	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_10	GT2	glycosyltransferases [GTs]	N	121
+5mSIPHEX1_10	GT25	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_10	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_10	GT30	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_10	GT4	glycosyltransferases [GTs]	N	196
+5mSIPHEX1_10	GT51	glycosyltransferases [GTs]	N	9
+5mSIPHEX1_10	GT81	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_10	GT9	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_10	GT90	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_10	PL5	polysaccharide lyases [PLs]	N	1
+5mSIPHEX1_11	AA1	auxiliary activities [AAs]	N	1
+5mSIPHEX1_11	AA2	auxiliary activities [AAs]	N	2
+5mSIPHEX1_11	AA2	auxiliary activities [AAs]	Y(1-23)	2
+5mSIPHEX1_11	AA3	auxiliary activities [AAs]	N	16
+5mSIPHEX1_11	AA4	auxiliary activities [AAs]	N	1
+5mSIPHEX1_11	AA6	auxiliary activities [AAs]	N	1
+5mSIPHEX1_11	CBM50	carbohydrate-binding module [CBM]	Y(1-19)	3
+5mSIPHEX1_11	CBM50	carbohydrate-binding module [CBM]	Y(1-25)	3
+5mSIPHEX1_11	CBM50	carbohydrate-binding module [CBM]	Y(1-29)	3
+5mSIPHEX1_11	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_11	GH103	glycoside hydrolases [GHs]	Y(1-21)	2
+5mSIPHEX1_11	GH103	glycoside hydrolases [GHs]	Y(1-23)	2
+5mSIPHEX1_11	GH114	glycoside hydrolases [GHs]	Y(1-20)	1
+5mSIPHEX1_11	GH166	glycoside hydrolases [GHs]	Y(1-19)	1
+5mSIPHEX1_11	GH23	glycoside hydrolases [GHs]	Y(1-20)	6
+5mSIPHEX1_11	GH23	glycoside hydrolases [GHs]	Y(1-21)	6
+5mSIPHEX1_11	GH23	glycoside hydrolases [GHs]	Y(1-22)	6
+5mSIPHEX1_11	GH23	glycoside hydrolases [GHs]	Y(1-24)	6
+5mSIPHEX1_11	GH23	glycoside hydrolases [GHs]	Y(1-27)	6
+5mSIPHEX1_11	GH23	glycoside hydrolases [GHs]	Y(1-32)	6
+5mSIPHEX1_11	GH3	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_11	GH31	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_11	GH33	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_11	GT19	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_11	GT2	glycosyltransferases [GTs]	N	9
+5mSIPHEX1_11	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_11	GT30	glycosyltransferases [GTs]	Y(1-27)	1
+5mSIPHEX1_11	GT4	glycosyltransferases [GTs]	N	25
+5mSIPHEX1_11	GT51	glycosyltransferases [GTs]	N	16
+5mSIPHEX1_11	GT9	glycosyltransferases [GTs]	N	9
+5mSIPHEX1_13	AA1	auxiliary activities [AAs]	Y(1-23)	1
+5mSIPHEX1_13	AA2	auxiliary activities [AAs]	N	1
+5mSIPHEX1_13	AA3	auxiliary activities [AAs]	N	4
+5mSIPHEX1_13	AA4	auxiliary activities [AAs]	N	1
+5mSIPHEX1_13	CBM50	carbohydrate-binding module [CBM]	Y(1-21)	1
+5mSIPHEX1_13	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_13	CE4	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_13	GH102	glycoside hydrolases [GHs]	Y(1-22)	1
+5mSIPHEX1_13	GH103	glycoside hydrolases [GHs]	N	4
+5mSIPHEX1_13	GH103	glycoside hydrolases [GHs]	Y(1-21)	4
+5mSIPHEX1_13	GH103	glycoside hydrolases [GHs]	Y(1-23)	8
+5mSIPHEX1_13	GH108	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_13	GH23	glycoside hydrolases [GHs]	Y(1-19)	4
+5mSIPHEX1_13	GH23	glycoside hydrolases [GHs]	Y(1-21)	8
+5mSIPHEX1_13	GH23	glycoside hydrolases [GHs]	Y(1-22)	4
+5mSIPHEX1_13	GH25	glycoside hydrolases [GHs]	Y(1-19)	1
+5mSIPHEX1_13	GH3	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_13	GT107	glycosyltransferases [GTs]	N	4
+5mSIPHEX1_13	GT14	glycosyltransferases [GTs]	N	4
+5mSIPHEX1_13	GT19	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_13	GT2	glycosyltransferases [GTs]	N	49
+5mSIPHEX1_13	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_13	GT30	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_13	GT4	glycosyltransferases [GTs]	N	25
+5mSIPHEX1_13	GT51	glycosyltransferases [GTs]	N	16
+5mSIPHEX1_15	AA1	auxiliary activities [AAs]	Y(1-25)	2
+5mSIPHEX1_15	AA1	auxiliary activities [AAs]	Y(1-29)	2
+5mSIPHEX1_15	AA2	auxiliary activities [AAs]	N	1
+5mSIPHEX1_15	AA3	auxiliary activities [AAs]	N	16
+5mSIPHEX1_15	CBM85	carbohydrate-binding module [CBM]	Y(1-26)	1
+5mSIPHEX1_15	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_15	CE15	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_15	CE2	carbohydrate esterases [CEs]	Y(1-30)	1
+5mSIPHEX1_15	CE4	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_15	GH10	glycoside hydrolases [GHs]	Y(1-22)	1
+5mSIPHEX1_15	GH102	glycoside hydrolases [GHs]	Y(1-20)	1
+5mSIPHEX1_15	GH103	glycoside hydrolases [GHs]	Y(1-27)	1
+5mSIPHEX1_15	GH109	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_15	GH16	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_15	GH23	glycoside hydrolases [GHs]	Y(1-25)	1
+5mSIPHEX1_15	GH24	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_15	GH3	glycoside hydrolases [GHs]	N	3
+5mSIPHEX1_15	GH3	glycoside hydrolases [GHs]	Y(1-26)	3
+5mSIPHEX1_15	GH3	glycoside hydrolases [GHs]	Y(1-31)	3
+5mSIPHEX1_15	GH36	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_15	GH42	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_15	GH5	glycoside hydrolases [GHs]	Y(1-25)	1
+5mSIPHEX1_15	GH63	glycoside hydrolases [GHs]	Y(1-22)	1
+5mSIPHEX1_15	GT19	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_15	GT2	glycosyltransferases [GTs]	N	81
+5mSIPHEX1_15	GT26	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_15	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_15	GT30	glycosyltransferases [GTs]	Y(1-21)	1
+5mSIPHEX1_15	GT4	glycosyltransferases [GTs]	N	25
+5mSIPHEX1_15	GT51	glycosyltransferases [GTs]	N	12
+5mSIPHEX1_15	GT51	glycosyltransferases [GTs]	Y(1-27)	4
+5mSIPHEX1_15	GT83	glycosyltransferases [GTs]	N	4
+5mSIPHEX1_18	AA3	auxiliary activities [AAs]	N	4
+5mSIPHEX1_18	AA4	auxiliary activities [AAs]	N	1
+5mSIPHEX1_18	AA6	auxiliary activities [AAs]	N	4
+5mSIPHEX1_18	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_18	CE4	carbohydrate esterases [CEs]	Y(1-18)	1
+5mSIPHEX1_18	GH103	glycoside hydrolases [GHs]	Y(1-22)	1
+5mSIPHEX1_18	GH13	glycoside hydrolases [GHs]	N	9
+5mSIPHEX1_18	GH23	glycoside hydrolases [GHs]	N	10
+5mSIPHEX1_18	GH23	glycoside hydrolases [GHs]	Y(1-19)	5
+5mSIPHEX1_18	GH23	glycoside hydrolases [GHs]	Y(1-21)	5
+5mSIPHEX1_18	GH23	glycoside hydrolases [GHs]	Y(1-41)	5
+5mSIPHEX1_18	GH24	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_18	GH73	glycoside hydrolases [GHs]	N	2
+5mSIPHEX1_18	GH73	glycoside hydrolases [GHs]	Y(1-23)	2
+5mSIPHEX1_18	GT19	glycosyltransferases [GTs]	N	4
+5mSIPHEX1_18	GT2	glycosyltransferases [GTs]	N	6
+5mSIPHEX1_18	GT2	glycosyltransferases [GTs]	Y(1-20)	3
+5mSIPHEX1_18	GT20	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_18	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_18	GT30	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_18	GT35	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_18	GT4	glycosyltransferases [GTs]	N	16
+5mSIPHEX1_18	GT51	glycosyltransferases [GTs]	N	4
+5mSIPHEX1_18	GT81	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_18	GT83	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_18	GT9	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_19	AA0	auxiliary activities [AAs]	N	1
+5mSIPHEX1_19	AA6	auxiliary activities [AAs]	N	1
+5mSIPHEX1_19	CBM50	carbohydrate-binding module [CBM]	Y(1-19)	2
+5mSIPHEX1_19	CBM50	carbohydrate-binding module [CBM]	Y(1-23)	2
+5mSIPHEX1_19	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_19	CE4	carbohydrate esterases [CEs]	N	2
+5mSIPHEX1_19	CE4	carbohydrate esterases [CEs]	Y(1-28)	2
+5mSIPHEX1_19	GH103	glycoside hydrolases [GHs]	Y(1-19)	1
+5mSIPHEX1_19	GH114	glycoside hydrolases [GHs]	Y(1-26)	1
+5mSIPHEX1_19	GH13	glycoside hydrolases [GHs]	N	4
+5mSIPHEX1_19	GH19	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_19	GH23	glycoside hydrolases [GHs]	Y(1-20)	4
+5mSIPHEX1_19	GH23	glycoside hydrolases [GHs]	Y(1-24)	8
+5mSIPHEX1_19	GH23	glycoside hydrolases [GHs]	Y(1-28)	4
+5mSIPHEX1_19	GH3	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_19	GH73	glycoside hydrolases [GHs]	N	2
+5mSIPHEX1_19	GH73	glycoside hydrolases [GHs]	Y(1-19)	2
+5mSIPHEX1_19	GT0	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_19	GT104	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_19	GT2	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_19	GT20	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_19	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_19	GT30	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_19	GT4	glycosyltransferases [GTs]	N	9
+5mSIPHEX1_19	GT51	glycosyltransferases [GTs]	N	9
+5mSIPHEX1_19	GT81	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_19	GT83	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_19	GT9	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_2	AA3	auxiliary activities [AAs]	N	1
+5mSIPHEX1_2	AA4	auxiliary activities [AAs]	N	1
+5mSIPHEX1_2	AA6	auxiliary activities [AAs]	N	1
+5mSIPHEX1_2	CBM50	carbohydrate-binding module [CBM]	Y(1-19)	2
+5mSIPHEX1_2	CBM50	carbohydrate-binding module [CBM]	Y(1-27)	2
+5mSIPHEX1_2	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_2	CE2	carbohydrate esterases [CEs]	Y(1-23)	2
+5mSIPHEX1_2	CE2	carbohydrate esterases [CEs]	Y(1-31)	2
+5mSIPHEX1_2	CE4	carbohydrate esterases [CEs]	N	2
+5mSIPHEX1_2	CE4	carbohydrate esterases [CEs]	Y(1-20)	2
+5mSIPHEX1_2	CE6	carbohydrate esterases [CEs]	Y(1-23)	1
+5mSIPHEX1_2	CE9	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_2	GH103	glycoside hydrolases [GHs]	Y(1-22)	1
+5mSIPHEX1_2	GH13	glycoside hydrolases [GHs]	N	10
+5mSIPHEX1_2	GH13	glycoside hydrolases [GHs]	Y(1-20)	5
+5mSIPHEX1_2	GH13	glycoside hydrolases [GHs]	Y(1-23)	5
+5mSIPHEX1_2	GH13	glycoside hydrolases [GHs]	Y(1-25)	5
+5mSIPHEX1_2	GH2	glycoside hydrolases [GHs]	Y(1-20)	2
+5mSIPHEX1_2	GH2	glycoside hydrolases [GHs]	Y(1-21)	2
+5mSIPHEX1_2	GH20	glycoside hydrolases [GHs]	Y(1-28)	1
+5mSIPHEX1_2	GH23	glycoside hydrolases [GHs]	Y(1-20)	3
+5mSIPHEX1_2	GH23	glycoside hydrolases [GHs]	Y(1-25)	3
+5mSIPHEX1_2	GH23	glycoside hydrolases [GHs]	Y(1-26)	3
+5mSIPHEX1_2	GH3	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_2	GH31	glycoside hydrolases [GHs]	N	2
+5mSIPHEX1_2	GH31	glycoside hydrolases [GHs]	Y(1-24)	2
+5mSIPHEX1_2	GH73	glycoside hydrolases [GHs]	Y(1-20)	1
+5mSIPHEX1_2	GT1	glycosyltransferases [GTs]	N	4
+5mSIPHEX1_2	GT19	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_2	GT2	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_2	GT25	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_2	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_2	GT30	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_2	GT4	glycosyltransferases [GTs]	N	9
+5mSIPHEX1_2	GT51	glycosyltransferases [GTs]	N	4
+5mSIPHEX1_2	GT81	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_25	AA1	auxiliary activities [AAs]	N	8
+5mSIPHEX1_25	AA1	auxiliary activities [AAs]	Y(1-32)	4
+5mSIPHEX1_25	AA1	auxiliary activities [AAs]	Y(1-39)	4
+5mSIPHEX1_25	AA3	auxiliary activities [AAs]	N	25
+5mSIPHEX1_25	AA6	auxiliary activities [AAs]	N	1
+5mSIPHEX1_25	CBM50	carbohydrate-binding module [CBM]	Y(1-19)	3
+5mSIPHEX1_25	CBM50	carbohydrate-binding module [CBM]	Y(1-24)	3
+5mSIPHEX1_25	CBM50	carbohydrate-binding module [CBM]	Y(1-30)	3
+5mSIPHEX1_25	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_25	GH103	glycoside hydrolases [GHs]	Y(1-22)	2
+5mSIPHEX1_25	GH103	glycoside hydrolases [GHs]	Y(1-36)	2
+5mSIPHEX1_25	GH114	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_25	GH166	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_25	GH23	glycoside hydrolases [GHs]	Y(1-21)	6
+5mSIPHEX1_25	GH23	glycoside hydrolases [GHs]	Y(1-22)	6
+5mSIPHEX1_25	GH23	glycoside hydrolases [GHs]	Y(1-25)	6
+5mSIPHEX1_25	GH23	glycoside hydrolases [GHs]	Y(1-26)	6
+5mSIPHEX1_25	GH23	glycoside hydrolases [GHs]	Y(1-27)	6
+5mSIPHEX1_25	GH23	glycoside hydrolases [GHs]	Y(1-28)	6
+5mSIPHEX1_25	GH3	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_25	GH33	glycoside hydrolases [GHs]	Y(1-21)	1
+5mSIPHEX1_25	GT0	glycosyltransferases [GTs]	N	9
+5mSIPHEX1_25	GT19	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_25	GT2	glycosyltransferases [GTs]	N	30
+5mSIPHEX1_25	GT2	glycosyltransferases [GTs]	Y(1-21)	6
+5mSIPHEX1_25	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_25	GT30	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_25	GT4	glycosyltransferases [GTs]	N	36
+5mSIPHEX1_25	GT51	glycosyltransferases [GTs]	N	12
+5mSIPHEX1_25	GT51	glycosyltransferases [GTs]	Y(1-22)	4
+5mSIPHEX1_25	GT9	glycosyltransferases [GTs]	N	6
+5mSIPHEX1_25	GT9	glycosyltransferases [GTs]	Y(1-26)	3
+5mSIPHEX1_25	PL5	polysaccharide lyases [PLs]	Y(1-19)	1
+5mSIPHEX1_26	AA0	auxiliary activities [AAs]	N	1
+5mSIPHEX1_26	AA4	auxiliary activities [AAs]	N	1
+5mSIPHEX1_26	CBM50	carbohydrate-binding module [CBM]	N	3
+5mSIPHEX1_26	CBM50	carbohydrate-binding module [CBM]	Y(1-19)	3
+5mSIPHEX1_26	CBM50	carbohydrate-binding module [CBM]	Y(1-21)	3
+5mSIPHEX1_26	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_26	CE14	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_26	CE4	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_26	GH171	glycoside hydrolases [GHs]	Y(1-26)	1
+5mSIPHEX1_26	GH2	glycoside hydrolases [GHs]	N	4
+5mSIPHEX1_26	GH20	glycoside hydrolases [GHs]	Y(1-19)	1
+5mSIPHEX1_26	GH23	glycoside hydrolases [GHs]	N	2
+5mSIPHEX1_26	GH23	glycoside hydrolases [GHs]	Y(1-20)	2
+5mSIPHEX1_26	GH73	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_26	GH92	glycoside hydrolases [GHs]	Y(1-18)	1
+5mSIPHEX1_26	GT0	glycosyltransferases [GTs]	N	9
+5mSIPHEX1_26	GT2	glycosyltransferases [GTs]	N	196
+5mSIPHEX1_26	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_26	GT30	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_26	GT4	glycosyltransferases [GTs]	N	36
+5mSIPHEX1_26	GT51	glycosyltransferases [GTs]	N	4
+5mSIPHEX1_26	GT9	glycosyltransferases [GTs]	N	4
+5mSIPHEX1_32	AA1	auxiliary activities [AAs]	N	4
+5mSIPHEX1_32	AA2	auxiliary activities [AAs]	N	1
+5mSIPHEX1_32	AA3	auxiliary activities [AAs]	N	1
+5mSIPHEX1_32	AA6	auxiliary activities [AAs]	N	1
+5mSIPHEX1_32	AA7	auxiliary activities [AAs]	N	1
+5mSIPHEX1_32	CE1	carbohydrate esterases [CEs]	Y(1-22)	1
+5mSIPHEX1_32	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_32	CE14	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_32	CE15	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_32	CE20	carbohydrate esterases [CEs]	Y(1-23)	1
+5mSIPHEX1_32	GH10	glycoside hydrolases [GHs]	Y(1-29)	1
+5mSIPHEX1_32	GH102	glycoside hydrolases [GHs]	Y(1-18)	1
+5mSIPHEX1_32	GH103	glycoside hydrolases [GHs]	Y(1-32)	1
+5mSIPHEX1_32	GH109	glycoside hydrolases [GHs]	N	2
+5mSIPHEX1_32	GH109	glycoside hydrolases [GHs]	Y(1-32)	2
+5mSIPHEX1_32	GH13	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_32	GH15	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_32	GH16	glycoside hydrolases [GHs]	Y(1-23)	3
+5mSIPHEX1_32	GH16	glycoside hydrolases [GHs]	Y(1-25)	6
+5mSIPHEX1_32	GH23	glycoside hydrolases [GHs]	Y(1-21)	1
+5mSIPHEX1_32	GH24	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_32	GH25	glycoside hydrolases [GHs]	Y(1-19)	1
+5mSIPHEX1_32	GH28	glycoside hydrolases [GHs]	N	2
+5mSIPHEX1_32	GH28	glycoside hydrolases [GHs]	Y(1-32)	2
+5mSIPHEX1_32	GH29	glycoside hydrolases [GHs]	N	4
+5mSIPHEX1_32	GH3	glycoside hydrolases [GHs]	N	28
+5mSIPHEX1_32	GH3	glycoside hydrolases [GHs]	Y(1-26)	7
+5mSIPHEX1_32	GH3	glycoside hydrolases [GHs]	Y(1-28)	7
+5mSIPHEX1_32	GH3	glycoside hydrolases [GHs]	Y(1-36)	7
+5mSIPHEX1_32	GH37	glycoside hydrolases [GHs]	Y(1-24)	1
+5mSIPHEX1_32	GH43	glycoside hydrolases [GHs]	Y(1-21)	3
+5mSIPHEX1_32	GH43	glycoside hydrolases [GHs]	Y(1-28)	3
+5mSIPHEX1_32	GH43	glycoside hydrolases [GHs]	Y(1-38)	3
+5mSIPHEX1_32	GH51	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_32	GH67	glycoside hydrolases [GHs]	Y(1-40)	1
+5mSIPHEX1_32	GH9	glycoside hydrolases [GHs]	N	2
+5mSIPHEX1_32	GH9	glycoside hydrolases [GHs]	Y(1-26)	2
+5mSIPHEX1_32	GT19	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_32	GT2	glycosyltransferases [GTs]	N	225
+5mSIPHEX1_32	GT20	glycosyltransferases [GTs]	N	4
+5mSIPHEX1_32	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_32	GT30	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_32	GT4	glycosyltransferases [GTs]	N	36
+5mSIPHEX1_32	GT51	glycosyltransferases [GTs]	N	16
+5mSIPHEX1_32	GT81	glycosyltransferases [GTs]	N	4
+5mSIPHEX1_32	GT83	glycosyltransferases [GTs]	N	9
+5mSIPHEX1_32	GT9	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_33	AA3	auxiliary activities [AAs]	N	4
+5mSIPHEX1_33	AA6	auxiliary activities [AAs]	N	1
+5mSIPHEX1_33	AA7	auxiliary activities [AAs]	N	1
+5mSIPHEX1_33	CBM66	carbohydrate-binding module [CBM]	Y(1-20)	1
+5mSIPHEX1_33	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_33	CE15	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_33	CE20	carbohydrate esterases [CEs]	Y(1-23)	1
+5mSIPHEX1_33	GH102	glycoside hydrolases [GHs]	Y(1-20)	1
+5mSIPHEX1_33	GH103	glycoside hydrolases [GHs]	Y(1-32)	1
+5mSIPHEX1_33	GH109	glycoside hydrolases [GHs]	N	2
+5mSIPHEX1_33	GH109	glycoside hydrolases [GHs]	Y(1-32)	2
+5mSIPHEX1_33	GH15	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_33	GH16	glycoside hydrolases [GHs]	Y(1-20)	2
+5mSIPHEX1_33	GH16	glycoside hydrolases [GHs]	Y(1-48)	2
+5mSIPHEX1_33	GH23	glycoside hydrolases [GHs]	Y(1-21)	2
+5mSIPHEX1_33	GH23	glycoside hydrolases [GHs]	Y(1-34)	2
+5mSIPHEX1_33	GH24	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_33	GH25	glycoside hydrolases [GHs]	Y(1-28)	1
+5mSIPHEX1_33	GH3	glycoside hydrolases [GHs]	N	4
+5mSIPHEX1_33	GH43	glycoside hydrolases [GHs]	Y(1-31)	4
+5mSIPHEX1_33	GH9	glycoside hydrolases [GHs]	Y(1-24)	1
+5mSIPHEX1_33	GT2	glycosyltransferases [GTs]	N	144
+5mSIPHEX1_33	GT20	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_33	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_33	GT30	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_33	GT4	glycosyltransferases [GTs]	N	25
+5mSIPHEX1_33	GT51	glycosyltransferases [GTs]	N	16
+5mSIPHEX1_33	GT81	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_33	GT83	glycosyltransferases [GTs]	N	4
+5mSIPHEX1_33	GT9	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_33	PL1	polysaccharide lyases [PLs]	Y(1-28)	1
+5mSIPHEX1_33	PL17	polysaccharide lyases [PLs]	Y(1-21)	1
+5mSIPHEX1_33	PL6	polysaccharide lyases [PLs]	Y(1-21)	1
+5mSIPHEX1_37	AA2	auxiliary activities [AAs]	N	1
+5mSIPHEX1_37	AA3	auxiliary activities [AAs]	N	16
+5mSIPHEX1_37	AA4	auxiliary activities [AAs]	N	1
+5mSIPHEX1_37	CBM50	carbohydrate-binding module [CBM]	Y(1-23)	2
+5mSIPHEX1_37	CBM50	carbohydrate-binding module [CBM]	Y(1-36)	2
+5mSIPHEX1_37	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_37	CE4	carbohydrate esterases [CEs]	N	4
+5mSIPHEX1_37	CE9	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_37	GH0	glycoside hydrolases [GHs]	Y(1-25)	1
+5mSIPHEX1_37	GH102	glycoside hydrolases [GHs]	Y(1-27)	1
+5mSIPHEX1_37	GH103	glycoside hydrolases [GHs]	Y(1-20)	4
+5mSIPHEX1_37	GH103	glycoside hydrolases [GHs]	Y(1-22)	4
+5mSIPHEX1_37	GH103	glycoside hydrolases [GHs]	Y(1-25)	4
+5mSIPHEX1_37	GH103	glycoside hydrolases [GHs]	Y(1-36)	4
+5mSIPHEX1_37	GH13	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_37	GH23	glycoside hydrolases [GHs]	Y(1-20)	4
+5mSIPHEX1_37	GH23	glycoside hydrolases [GHs]	Y(1-21)	4
+5mSIPHEX1_37	GH23	glycoside hydrolases [GHs]	Y(1-28)	4
+5mSIPHEX1_37	GH23	glycoside hydrolases [GHs]	Y(1-30)	4
+5mSIPHEX1_37	GH24	glycoside hydrolases [GHs]	N	25
+5mSIPHEX1_37	GH25	glycoside hydrolases [GHs]	Y(1-30)	1
+5mSIPHEX1_37	GH3	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_37	GT1	glycosyltransferases [GTs]	N	2
+5mSIPHEX1_37	GT1	glycosyltransferases [GTs]	Y(1-20)	2
+5mSIPHEX1_37	GT107	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_37	GT11	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_37	GT14	glycosyltransferases [GTs]	N	4
+5mSIPHEX1_37	GT19	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_37	GT2	glycosyltransferases [GTs]	N	529
+5mSIPHEX1_37	GT25	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_37	GT26	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_37	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_37	GT30	glycosyltransferases [GTs]	N	4
+5mSIPHEX1_37	GT4	glycosyltransferases [GTs]	N	100
+5mSIPHEX1_37	GT41	glycosyltransferases [GTs]	N	4
+5mSIPHEX1_37	GT51	glycosyltransferases [GTs]	N	16
+5mSIPHEX1_37	GT81	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_8	AA0	auxiliary activities [AAs]	N	1
+5mSIPHEX1_8	AA1	auxiliary activities [AAs]	Y(1-21)	2
+5mSIPHEX1_8	AA1	auxiliary activities [AAs]	Y(1-29)	2
+5mSIPHEX1_8	AA3	auxiliary activities [AAs]	N	9
+5mSIPHEX1_8	AA4	auxiliary activities [AAs]	N	1
+5mSIPHEX1_8	AA6	auxiliary activities [AAs]	N	1
+5mSIPHEX1_8	CBM48	carbohydrate-binding module [CBM]	N	4
+5mSIPHEX1_8	CBM50	carbohydrate-binding module [CBM]	N	2
+5mSIPHEX1_8	CBM50	carbohydrate-binding module [CBM]	Y(1-27)	2
+5mSIPHEX1_8	CE1	carbohydrate esterases [CEs]	Y(1-18)	2
+5mSIPHEX1_8	CE1	carbohydrate esterases [CEs]	Y(1-19)	2
+5mSIPHEX1_8	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_8	CE4	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_8	CE9	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_8	GH1	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_8	GH102	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_8	GH103	glycoside hydrolases [GHs]	Y(1-22)	4
+5mSIPHEX1_8	GH103	glycoside hydrolases [GHs]	Y(1-23)	8
+5mSIPHEX1_8	GH103	glycoside hydrolases [GHs]	Y(1-31)	4
+5mSIPHEX1_8	GH108	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_8	GH109	glycoside hydrolases [GHs]	N	4
+5mSIPHEX1_8	GH13	glycoside hydrolases [GHs]	N	9
+5mSIPHEX1_8	GH2	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_8	GH23	glycoside hydrolases [GHs]	N	5
+5mSIPHEX1_8	GH23	glycoside hydrolases [GHs]	Y(1-21)	10
+5mSIPHEX1_8	GH23	glycoside hydrolases [GHs]	Y(1-23)	10
+5mSIPHEX1_8	GH25	glycoside hydrolases [GHs]	Y(1-19)	1
+5mSIPHEX1_8	GH3	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_8	GH36	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_8	GH42	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_8	GH63	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_8	GT1	glycosyltransferases [GTs]	N	10
+5mSIPHEX1_8	GT1	glycosyltransferases [GTs]	Y(1-19)	5
+5mSIPHEX1_8	GT1	glycosyltransferases [GTs]	Y(1-20)	10
+5mSIPHEX1_8	GT107	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_8	GT14	glycosyltransferases [GTs]	N	4
+5mSIPHEX1_8	GT19	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_8	GT2	glycosyltransferases [GTs]	N	81
+5mSIPHEX1_8	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_8	GT30	glycosyltransferases [GTs]	N	9
+5mSIPHEX1_8	GT4	glycosyltransferases [GTs]	N	110
+5mSIPHEX1_8	GT4	glycosyltransferases [GTs]	Y(1-22)	11
+5mSIPHEX1_8	GT5	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_8	GT51	glycosyltransferases [GTs]	N	12
+5mSIPHEX1_8	GT51	glycosyltransferases [GTs]	Y(1-24)	4
+5mSIPHEX1_8	GT81	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_9	AA0	auxiliary activities [AAs]	N	1
+5mSIPHEX1_9	AA1	auxiliary activities [AAs]	N	1
+5mSIPHEX1_9	AA2	auxiliary activities [AAs]	Y(1-30)	1
+5mSIPHEX1_9	AA6	auxiliary activities [AAs]	N	1
+5mSIPHEX1_9	CBM32	carbohydrate-binding module [CBM]	Y(1-24)	1
+5mSIPHEX1_9	CBM41+CBM48+GH13	carbohydrate-binding module [CBM]	N	1
+5mSIPHEX1_9	CBM48	carbohydrate-binding module [CBM]	N	1
+5mSIPHEX1_9	CBM50	carbohydrate-binding module [CBM]	Y(1-26)	6
+5mSIPHEX1_9	CBM50	carbohydrate-binding module [CBM]	Y(1-28)	3
+5mSIPHEX1_9	CBM85	carbohydrate-binding module [CBM]	Y(1-26)	1
+5mSIPHEX1_9	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_9	CE4	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_9	CE9	carbohydrate esterases [CEs]	N	1
+5mSIPHEX1_9	GH10	glycoside hydrolases [GHs]	Y(1-28)	1
+5mSIPHEX1_9	GH103	glycoside hydrolases [GHs]	Y(1-26)	2
+5mSIPHEX1_9	GH103	glycoside hydrolases [GHs]	Y(1-32)	2
+5mSIPHEX1_9	GH105	glycoside hydrolases [GHs]	Y(1-33)	1
+5mSIPHEX1_9	GH13	glycoside hydrolases [GHs]	N	3
+5mSIPHEX1_9	GH13	glycoside hydrolases [GHs]	Y(1-32)	3
+5mSIPHEX1_9	GH13	glycoside hydrolases [GHs]	Y(1-39)	3
+5mSIPHEX1_9	GH16	glycoside hydrolases [GHs]	Y(1-21)	1
+5mSIPHEX1_9	GH2	glycoside hydrolases [GHs]	N	2
+5mSIPHEX1_9	GH2	glycoside hydrolases [GHs]	Y(1-47)	2
+5mSIPHEX1_9	GH23	glycoside hydrolases [GHs]	N	4
+5mSIPHEX1_9	GH23	glycoside hydrolases [GHs]	Y(1-21)	4
+5mSIPHEX1_9	GH23	glycoside hydrolases [GHs]	Y(1-24)	4
+5mSIPHEX1_9	GH23	glycoside hydrolases [GHs]	Y(1-26)	4
+5mSIPHEX1_9	GH3	glycoside hydrolases [GHs]	N	3
+5mSIPHEX1_9	GH3	glycoside hydrolases [GHs]	Y(1-20)	3
+5mSIPHEX1_9	GH3	glycoside hydrolases [GHs]	Y(1-24)	3
+5mSIPHEX1_9	GH36	glycoside hydrolases [GHs]	N	4
+5mSIPHEX1_9	GH42	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_9	GH43	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_9	GH5	glycoside hydrolases [GHs]	Y(1-28)	1
+5mSIPHEX1_9	GH73	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_9	GH77	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_9	GH9	glycoside hydrolases [GHs]	Y(1-25)	1
+5mSIPHEX1_9	GH94	glycoside hydrolases [GHs]	N	1
+5mSIPHEX1_9	GT1	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_9	GT113	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_9	GT2	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_9	GT25	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_9	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_9	GT30	glycosyltransferases [GTs]	Y(1-32)	1
+5mSIPHEX1_9	GT4	glycosyltransferases [GTs]	N	1
+5mSIPHEX1_9	GT51	glycosyltransferases [GTs]	N	16
+5mSIPHEX1_9	GT9	glycosyltransferases [GTs]	N	2
+5mSIPHEX1_9	GT9	glycosyltransferases [GTs]	Y(1-22)	2
+5mSIPHEX1_9	PL17	polysaccharide lyases [PLs]	Y(1-21)	1
+5mSIPHEX1_9	PL29	polysaccharide lyases [PLs]	Y(1-30)	1
+5mSIPHEX1_9	PL38	polysaccharide lyases [PLs]	Y(1-27)	1
+5mSIPHEX1_9	PL7	polysaccharide lyases [PLs]	Y(1-42)	1
+5mSIPHEX2_10	AA1	auxiliary activities [AAs]	Y(1-27)	4
+5mSIPHEX2_10	AA4	auxiliary activities [AAs]	N	4
+5mSIPHEX2_10	CBM48	carbohydrate-binding module [CBM]	N	9
+5mSIPHEX2_10	CBM50	carbohydrate-binding module [CBM]	N	4
+5mSIPHEX2_10	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX2_10	CE14	carbohydrate esterases [CEs]	N	2
+5mSIPHEX2_10	CE14	carbohydrate esterases [CEs]	Y(1-23)	2
+5mSIPHEX2_10	CE4	carbohydrate esterases [CEs]	N	1
+5mSIPHEX2_10	GH1	glycoside hydrolases [GHs]	N	1
+5mSIPHEX2_10	GH102	glycoside hydrolases [GHs]	N	1
+5mSIPHEX2_10	GH103	glycoside hydrolases [GHs]	Y(1-25)	3
+5mSIPHEX2_10	GH103	glycoside hydrolases [GHs]	Y(1-26)	6
+5mSIPHEX2_10	GH108	glycoside hydrolases [GHs]	N	1
+5mSIPHEX2_10	GH13	glycoside hydrolases [GHs]	N	49
+5mSIPHEX2_10	GH23	glycoside hydrolases [GHs]	Y(1-21)	5
+5mSIPHEX2_10	GH23	glycoside hydrolases [GHs]	Y(1-22)	5
+5mSIPHEX2_10	GH23	glycoside hydrolases [GHs]	Y(1-24)	5
+5mSIPHEX2_10	GH23	glycoside hydrolases [GHs]	Y(1-34)	5
+5mSIPHEX2_10	GH23	glycoside hydrolases [GHs]	Y(1-43)	5
+5mSIPHEX2_10	GH3	glycoside hydrolases [GHs]	N	2
+5mSIPHEX2_10	GH3	glycoside hydrolases [GHs]	Y(1-28)	2
+5mSIPHEX2_10	GT107	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_10	GT14	glycosyltransferases [GTs]	N	2
+5mSIPHEX2_10	GT14	glycosyltransferases [GTs]	Y(1-17)	2
+5mSIPHEX2_10	GT19	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_10	GT2	glycosyltransferases [GTs]	N	156
+5mSIPHEX2_10	GT2	glycosyltransferases [GTs]	Y(1-19)	13
+5mSIPHEX2_10	GT20	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_10	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_10	GT30	glycosyltransferases [GTs]	N	4
+5mSIPHEX2_10	GT32	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_10	GT35	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_10	GT4	glycosyltransferases [GTs]	N	16
+5mSIPHEX2_10	GT5	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_10	GT51	glycosyltransferases [GTs]	N	9
+5mSIPHEX2_10	GT8	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_10	GT81	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_10	GT83	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_14	AA0	auxiliary activities [AAs]	N	1
+5mSIPHEX2_14	AA1	auxiliary activities [AAs]	N	6
+5mSIPHEX2_14	AA1	auxiliary activities [AAs]	Y(1-41)	3
+5mSIPHEX2_14	AA3	auxiliary activities [AAs]	N	9
+5mSIPHEX2_14	AA6	auxiliary activities [AAs]	N	4
+5mSIPHEX2_14	CBM41	carbohydrate-binding module [CBM]	Y(1-19)	1
+5mSIPHEX2_14	CBM50	carbohydrate-binding module [CBM]	Y(1-22)	1
+5mSIPHEX2_14	CBM57	carbohydrate-binding module [CBM]	Y(1-27)	1
+5mSIPHEX2_14	CE1	carbohydrate esterases [CEs]	Y(1-33)	1
+5mSIPHEX2_14	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX2_14	CE4	carbohydrate esterases [CEs]	N	20
+5mSIPHEX2_14	CE4	carbohydrate esterases [CEs]	Y(1-25)	5
+5mSIPHEX2_14	GH103	glycoside hydrolases [GHs]	N	2
+5mSIPHEX2_14	GH103	glycoside hydrolases [GHs]	Y(1-34)	2
+5mSIPHEX2_14	GH114	glycoside hydrolases [GHs]	Y(1-20)	1
+5mSIPHEX2_14	GH13	glycoside hydrolases [GHs]	N	8
+5mSIPHEX2_14	GH13	glycoside hydrolases [GHs]	Y(1-27)	8
+5mSIPHEX2_14	GH166	glycoside hydrolases [GHs]	Y(1-25)	1
+5mSIPHEX2_14	GH23	glycoside hydrolases [GHs]	N	14
+5mSIPHEX2_14	GH23	glycoside hydrolases [GHs]	Y(1-22)	7
+5mSIPHEX2_14	GH23	glycoside hydrolases [GHs]	Y(1-23)	14
+5mSIPHEX2_14	GH23	glycoside hydrolases [GHs]	Y(1-26)	7
+5mSIPHEX2_14	GH23	glycoside hydrolases [GHs]	Y(1-28)	7
+5mSIPHEX2_14	GH31	glycoside hydrolases [GHs]	Y(1-22)	1
+5mSIPHEX2_14	GH73	glycoside hydrolases [GHs]	N	2
+5mSIPHEX2_14	GH73	glycoside hydrolases [GHs]	Y(1-22)	2
+5mSIPHEX2_14	GH84	glycoside hydrolases [GHs]	N	1
+5mSIPHEX2_14	GT19	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_14	GT2	glycosyltransferases [GTs]	N	144
+5mSIPHEX2_14	GT25	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_14	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_14	GT30	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_14	GT4	glycosyltransferases [GTs]	N	196
+5mSIPHEX2_14	GT51	glycosyltransferases [GTs]	N	9
+5mSIPHEX2_14	GT81	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_14	GT9	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_14	GT90	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_14	PL5	polysaccharide lyases [PLs]	N	2
+5mSIPHEX2_14	PL5	polysaccharide lyases [PLs]	Y(1-24)	2
+5mSIPHEX2_16	AA0	auxiliary activities [AAs]	N	1
+5mSIPHEX2_16	AA4	auxiliary activities [AAs]	N	1
+5mSIPHEX2_16	CBM50	carbohydrate-binding module [CBM]	Y(1-19)	6
+5mSIPHEX2_16	CBM50	carbohydrate-binding module [CBM]	Y(1-21)	3
+5mSIPHEX2_16	CBM9	carbohydrate-binding module [CBM]	Y(1-21)	1
+5mSIPHEX2_16	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX2_16	CE14	carbohydrate esterases [CEs]	N	1
+5mSIPHEX2_16	CE4	carbohydrate esterases [CEs]	N	1
+5mSIPHEX2_16	GH171	glycoside hydrolases [GHs]	Y(1-26)	1
+5mSIPHEX2_16	GH2	glycoside hydrolases [GHs]	Y(1-20)	1
+5mSIPHEX2_16	GH20	glycoside hydrolases [GHs]	Y(1-19)	1
+5mSIPHEX2_16	GH23	glycoside hydrolases [GHs]	N	2
+5mSIPHEX2_16	GH23	glycoside hydrolases [GHs]	Y(1-20)	2
+5mSIPHEX2_16	GH25	glycoside hydrolases [GHs]	N	1
+5mSIPHEX2_16	GH3	glycoside hydrolases [GHs]	Y(1-17)	1
+5mSIPHEX2_16	GH73	glycoside hydrolases [GHs]	Y(1-21)	1
+5mSIPHEX2_16	GH92	glycoside hydrolases [GHs]	Y(1-18)	1
+5mSIPHEX2_16	GT0	glycosyltransferases [GTs]	N	4
+5mSIPHEX2_16	GT19	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_16	GT2	glycosyltransferases [GTs]	N	196
+5mSIPHEX2_16	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_16	GT30	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_16	GT4	glycosyltransferases [GTs]	N	49
+5mSIPHEX2_16	GT5	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_16	GT51	glycosyltransferases [GTs]	N	4
+5mSIPHEX2_16	GT9	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_18	AA1	auxiliary activities [AAs]	N	15
+5mSIPHEX2_18	AA1	auxiliary activities [AAs]	Y(1-31)	5
+5mSIPHEX2_18	AA1	auxiliary activities [AAs]	Y(1-39)	5
+5mSIPHEX2_18	AA3	auxiliary activities [AAs]	N	16
+5mSIPHEX2_18	AA6	auxiliary activities [AAs]	N	1
+5mSIPHEX2_18	CBM50	carbohydrate-binding module [CBM]	Y(1-19)	3
+5mSIPHEX2_18	CBM50	carbohydrate-binding module [CBM]	Y(1-24)	3
+5mSIPHEX2_18	CBM50	carbohydrate-binding module [CBM]	Y(1-30)	3
+5mSIPHEX2_18	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX2_18	GH103	glycoside hydrolases [GHs]	Y(1-22)	2
+5mSIPHEX2_18	GH103	glycoside hydrolases [GHs]	Y(1-36)	2
+5mSIPHEX2_18	GH114	glycoside hydrolases [GHs]	N	4
+5mSIPHEX2_18	GH166	glycoside hydrolases [GHs]	N	1
+5mSIPHEX2_18	GH23	glycoside hydrolases [GHs]	Y(1-21)	6
+5mSIPHEX2_18	GH23	glycoside hydrolases [GHs]	Y(1-22)	6
+5mSIPHEX2_18	GH23	glycoside hydrolases [GHs]	Y(1-25)	6
+5mSIPHEX2_18	GH23	glycoside hydrolases [GHs]	Y(1-26)	6
+5mSIPHEX2_18	GH23	glycoside hydrolases [GHs]	Y(1-27)	6
+5mSIPHEX2_18	GH23	glycoside hydrolases [GHs]	Y(1-28)	6
+5mSIPHEX2_18	GH3	glycoside hydrolases [GHs]	N	1
+5mSIPHEX2_18	GH33	glycoside hydrolases [GHs]	Y(1-21)	1
+5mSIPHEX2_18	GT0	glycosyltransferases [GTs]	N	9
+5mSIPHEX2_18	GT19	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_18	GT2	glycosyltransferases [GTs]	N	132
+5mSIPHEX2_18	GT2	glycosyltransferases [GTs]	Y(1-21)	12
+5mSIPHEX2_18	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_18	GT4	glycosyltransferases [GTs]	N	100
+5mSIPHEX2_18	GT51	glycosyltransferases [GTs]	N	6
+5mSIPHEX2_18	GT51	glycosyltransferases [GTs]	Y(1-22)	3
+5mSIPHEX2_18	GT9	glycosyltransferases [GTs]	N	2
+5mSIPHEX2_18	GT9	glycosyltransferases [GTs]	Y(1-26)	2
+5mSIPHEX2_18	PL5	polysaccharide lyases [PLs]	Y(1-19)	1
+5mSIPHEX2_25	AA0	auxiliary activities [AAs]	N	1
+5mSIPHEX2_25	AA1	auxiliary activities [AAs]	Y(1-21)	4
+5mSIPHEX2_25	AA1	auxiliary activities [AAs]	Y(1-23)	4
+5mSIPHEX2_25	AA1	auxiliary activities [AAs]	Y(1-27)	4
+5mSIPHEX2_25	AA1	auxiliary activities [AAs]	Y(1-29)	4
+5mSIPHEX2_25	AA3	auxiliary activities [AAs]	N	9
+5mSIPHEX2_25	AA4	auxiliary activities [AAs]	N	4
+5mSIPHEX2_25	CBM48	carbohydrate-binding module [CBM]	N	4
+5mSIPHEX2_25	CBM50	carbohydrate-binding module [CBM]	N	2
+5mSIPHEX2_25	CBM50	carbohydrate-binding module [CBM]	Y(1-27)	2
+5mSIPHEX2_25	CE1	carbohydrate esterases [CEs]	Y(1-18)	2
+5mSIPHEX2_25	CE1	carbohydrate esterases [CEs]	Y(1-19)	2
+5mSIPHEX2_25	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX2_25	CE4	carbohydrate esterases [CEs]	N	1
+5mSIPHEX2_25	GH1	glycoside hydrolases [GHs]	N	1
+5mSIPHEX2_25	GH102	glycoside hydrolases [GHs]	N	1
+5mSIPHEX2_25	GH103	glycoside hydrolases [GHs]	N	4
+5mSIPHEX2_25	GH103	glycoside hydrolases [GHs]	Y(1-22)	4
+5mSIPHEX2_25	GH103	glycoside hydrolases [GHs]	Y(1-23)	8
+5mSIPHEX2_25	GH108	glycoside hydrolases [GHs]	N	1
+5mSIPHEX2_25	GH109	glycoside hydrolases [GHs]	N	4
+5mSIPHEX2_25	GH13	glycoside hydrolases [GHs]	N	9
+5mSIPHEX2_25	GH2	glycoside hydrolases [GHs]	N	1
+5mSIPHEX2_25	GH23	glycoside hydrolases [GHs]	N	5
+5mSIPHEX2_25	GH23	glycoside hydrolases [GHs]	Y(1-21)	10
+5mSIPHEX2_25	GH23	glycoside hydrolases [GHs]	Y(1-23)	10
+5mSIPHEX2_25	GH25	glycoside hydrolases [GHs]	Y(1-19)	1
+5mSIPHEX2_25	GH3	glycoside hydrolases [GHs]	N	1
+5mSIPHEX2_25	GH36	glycoside hydrolases [GHs]	N	1
+5mSIPHEX2_25	GH42	glycoside hydrolases [GHs]	N	1
+5mSIPHEX2_25	GH63	glycoside hydrolases [GHs]	N	1
+5mSIPHEX2_25	GT1	glycosyltransferases [GTs]	N	2
+5mSIPHEX2_25	GT1	glycosyltransferases [GTs]	Y(1-20)	2
+5mSIPHEX2_25	GT107	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_25	GT14	glycosyltransferases [GTs]	N	4
+5mSIPHEX2_25	GT19	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_25	GT2	glycosyltransferases [GTs]	N	90
+5mSIPHEX2_25	GT2	glycosyltransferases [GTs]	Y(1-23)	10
+5mSIPHEX2_25	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_25	GT30	glycosyltransferases [GTs]	N	9
+5mSIPHEX2_25	GT4	glycosyltransferases [GTs]	N	90
+5mSIPHEX2_25	GT4	glycosyltransferases [GTs]	Y(1-22)	10
+5mSIPHEX2_25	GT5	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_25	GT51	glycosyltransferases [GTs]	N	12
+5mSIPHEX2_25	GT51	glycosyltransferases [GTs]	Y(1-24)	4
+5mSIPHEX2_25	GT81	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_3	AA2	auxiliary activities [AAs]	N	1
+5mSIPHEX2_3	AA3	auxiliary activities [AAs]	N	16
+5mSIPHEX2_3	AA4	auxiliary activities [AAs]	N	1
+5mSIPHEX2_3	CBM50	carbohydrate-binding module [CBM]	Y(1-23)	2
+5mSIPHEX2_3	CBM50	carbohydrate-binding module [CBM]	Y(1-36)	2
+5mSIPHEX2_3	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX2_3	CE4	carbohydrate esterases [CEs]	N	4
+5mSIPHEX2_3	CE9	carbohydrate esterases [CEs]	N	1
+5mSIPHEX2_3	GH0	glycoside hydrolases [GHs]	Y(1-25)	1
+5mSIPHEX2_3	GH102	glycoside hydrolases [GHs]	Y(1-27)	1
+5mSIPHEX2_3	GH103	glycoside hydrolases [GHs]	Y(1-20)	4
+5mSIPHEX2_3	GH103	glycoside hydrolases [GHs]	Y(1-22)	4
+5mSIPHEX2_3	GH103	glycoside hydrolases [GHs]	Y(1-25)	4
+5mSIPHEX2_3	GH103	glycoside hydrolases [GHs]	Y(1-36)	4
+5mSIPHEX2_3	GH13	glycoside hydrolases [GHs]	N	1
+5mSIPHEX2_3	GH23	glycoside hydrolases [GHs]	N	5
+5mSIPHEX2_3	GH23	glycoside hydrolases [GHs]	Y(1-20)	5
+5mSIPHEX2_3	GH23	glycoside hydrolases [GHs]	Y(1-21)	5
+5mSIPHEX2_3	GH23	glycoside hydrolases [GHs]	Y(1-28)	5
+5mSIPHEX2_3	GH23	glycoside hydrolases [GHs]	Y(1-30)	5
+5mSIPHEX2_3	GH24	glycoside hydrolases [GHs]	N	16
+5mSIPHEX2_3	GH25	glycoside hydrolases [GHs]	Y(1-30)	1
+5mSIPHEX2_3	GH3	glycoside hydrolases [GHs]	N	1
+5mSIPHEX2_3	GT1	glycosyltransferases [GTs]	N	2
+5mSIPHEX2_3	GT1	glycosyltransferases [GTs]	Y(1-20)	2
+5mSIPHEX2_3	GT107	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_3	GT11	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_3	GT14	glycosyltransferases [GTs]	N	4
+5mSIPHEX2_3	GT19	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_3	GT2	glycosyltransferases [GTs]	N	484
+5mSIPHEX2_3	GT25	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_3	GT26	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_3	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_3	GT30	glycosyltransferases [GTs]	N	4
+5mSIPHEX2_3	GT4	glycosyltransferases [GTs]	N	100
+5mSIPHEX2_3	GT41	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_3	GT51	glycosyltransferases [GTs]	N	16
+5mSIPHEX2_3	GT81	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_5	AA0	auxiliary activities [AAs]	N	1
+5mSIPHEX2_5	AA6	auxiliary activities [AAs]	N	4
+5mSIPHEX2_5	CBM50	carbohydrate-binding module [CBM]	Y(1-19)	2
+5mSIPHEX2_5	CBM50	carbohydrate-binding module [CBM]	Y(1-23)	2
+5mSIPHEX2_5	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX2_5	CE4	carbohydrate esterases [CEs]	N	1
+5mSIPHEX2_5	GH103	glycoside hydrolases [GHs]	Y(1-19)	1
+5mSIPHEX2_5	GH114	glycoside hydrolases [GHs]	Y(1-26)	1
+5mSIPHEX2_5	GH13	glycoside hydrolases [GHs]	N	1
+5mSIPHEX2_5	GH23	glycoside hydrolases [GHs]	Y(1-20)	4
+5mSIPHEX2_5	GH23	glycoside hydrolases [GHs]	Y(1-24)	8
+5mSIPHEX2_5	GH23	glycoside hydrolases [GHs]	Y(1-28)	4
+5mSIPHEX2_5	GH73	glycoside hydrolases [GHs]	N	2
+5mSIPHEX2_5	GH73	glycoside hydrolases [GHs]	Y(1-19)	2
+5mSIPHEX2_5	GT0	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_5	GT104	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_5	GT19	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_5	GT2	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_5	GT20	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_5	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_5	GT30	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_5	GT4	glycosyltransferases [GTs]	N	9
+5mSIPHEX2_5	GT51	glycosyltransferases [GTs]	N	4
+5mSIPHEX2_5	GT83	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_5	GT9	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_7	AA1	auxiliary activities [AAs]	Y(1-23)	1
+5mSIPHEX2_7	AA2	auxiliary activities [AAs]	N	1
+5mSIPHEX2_7	AA3	auxiliary activities [AAs]	N	4
+5mSIPHEX2_7	AA4	auxiliary activities [AAs]	N	1
+5mSIPHEX2_7	CBM50	carbohydrate-binding module [CBM]	Y(1-21)	1
+5mSIPHEX2_7	CE11	carbohydrate esterases [CEs]	N	1
+5mSIPHEX2_7	CE4	carbohydrate esterases [CEs]	N	1
+5mSIPHEX2_7	GH102	glycoside hydrolases [GHs]	Y(1-22)	1
+5mSIPHEX2_7	GH103	glycoside hydrolases [GHs]	N	4
+5mSIPHEX2_7	GH103	glycoside hydrolases [GHs]	Y(1-21)	4
+5mSIPHEX2_7	GH103	glycoside hydrolases [GHs]	Y(1-23)	8
+5mSIPHEX2_7	GH108	glycoside hydrolases [GHs]	N	1
+5mSIPHEX2_7	GH23	glycoside hydrolases [GHs]	Y(1-21)	6
+5mSIPHEX2_7	GH23	glycoside hydrolases [GHs]	Y(1-22)	3
+5mSIPHEX2_7	GH25	glycoside hydrolases [GHs]	Y(1-19)	1
+5mSIPHEX2_7	GH3	glycoside hydrolases [GHs]	N	1
+5mSIPHEX2_7	GT107	glycosyltransferases [GTs]	N	4
+5mSIPHEX2_7	GT14	glycosyltransferases [GTs]	N	4
+5mSIPHEX2_7	GT19	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_7	GT2	glycosyltransferases [GTs]	N	49
+5mSIPHEX2_7	GT28	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_7	GT30	glycosyltransferases [GTs]	N	1
+5mSIPHEX2_7	GT4	glycosyltransferases [GTs]	N	25
+5mSIPHEX2_7	GT51	glycosyltransferases [GTs]	N	16
+700mSIPHEX1_0	AA1	auxiliary activities [AAs]	Y(1-23)	1
+700mSIPHEX1_0	AA3	auxiliary activities [AAs]	N	1
+700mSIPHEX1_0	AA4	auxiliary activities [AAs]	N	1
+700mSIPHEX1_0	CBM50	carbohydrate-binding module [CBM]	N	2
+700mSIPHEX1_0	CBM50	carbohydrate-binding module [CBM]	Y(1-29)	2
+700mSIPHEX1_0	CE9	carbohydrate esterases [CEs]	N	1
+700mSIPHEX1_0	GH0	glycoside hydrolases [GHs]	Y(1-24)	1
+700mSIPHEX1_0	GH102	glycoside hydrolases [GHs]	Y(1-30)	1
+700mSIPHEX1_0	GH103	glycoside hydrolases [GHs]	Y(1-22)	8
+700mSIPHEX1_0	GH103	glycoside hydrolases [GHs]	Y(1-26)	4
+700mSIPHEX1_0	GH103	glycoside hydrolases [GHs]	Y(1-34)	4
+700mSIPHEX1_0	GH23	glycoside hydrolases [GHs]	Y(1-21)	6
+700mSIPHEX1_0	GH23	glycoside hydrolases [GHs]	Y(1-24)	3
+700mSIPHEX1_0	GH25	glycoside hydrolases [GHs]	Y(1-22)	1
+700mSIPHEX1_0	GT107	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_0	GT14	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_0	GT2	glycosyltransferases [GTs]	N	30
+700mSIPHEX1_0	GT2	glycosyltransferases [GTs]	Y(1-29)	6
+700mSIPHEX1_0	GT25	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_0	GT26	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_0	GT28	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_0	GT30	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_0	GT4	glycosyltransferases [GTs]	N	9
+700mSIPHEX1_0	GT51	glycosyltransferases [GTs]	N	4
+700mSIPHEX1_1	AA3	auxiliary activities [AAs]	N	4
+700mSIPHEX1_1	CBM48	carbohydrate-binding module [CBM]	N	16
+700mSIPHEX1_1	CBM50	carbohydrate-binding module [CBM]	N	2
+700mSIPHEX1_1	CBM50	carbohydrate-binding module [CBM]	Y(1-26)	2
+700mSIPHEX1_1	CE1	carbohydrate esterases [CEs]	N	3
+700mSIPHEX1_1	CE1	carbohydrate esterases [CEs]	Y(1-24)	3
+700mSIPHEX1_1	CE1	carbohydrate esterases [CEs]	Y(1-26)	3
+700mSIPHEX1_1	CE11	carbohydrate esterases [CEs]	N	1
+700mSIPHEX1_1	CE14	carbohydrate esterases [CEs]	N	1
+700mSIPHEX1_1	CE4	carbohydrate esterases [CEs]	N	4
+700mSIPHEX1_1	CE9	carbohydrate esterases [CEs]	N	1
+700mSIPHEX1_1	GH1	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_1	GH103	glycoside hydrolases [GHs]	Y(1-21)	1
+700mSIPHEX1_1	GH108	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_1	GH109	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_1	GH13	glycoside hydrolases [GHs]	N	49
+700mSIPHEX1_1	GH15	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_1	GH16	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_1	GH19	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_1	GH2	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_1	GH23	glycoside hydrolases [GHs]	N	5
+700mSIPHEX1_1	GH23	glycoside hydrolases [GHs]	Y(1-20)	5
+700mSIPHEX1_1	GH23	glycoside hydrolases [GHs]	Y(1-24)	5
+700mSIPHEX1_1	GH23	glycoside hydrolases [GHs]	Y(1-25)	5
+700mSIPHEX1_1	GH23	glycoside hydrolases [GHs]	Y(1-26)	5
+700mSIPHEX1_1	GH25	glycoside hydrolases [GHs]	Y(1-30)	1
+700mSIPHEX1_1	GH3	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_1	GH36	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_1	GH77	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_1	GT0	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_1	GT1	glycosyltransferases [GTs]	N	4
+700mSIPHEX1_1	GT107	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_1	GT14	glycosyltransferases [GTs]	N	4
+700mSIPHEX1_1	GT19	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_1	GT2	glycosyltransferases [GTs]	N	196
+700mSIPHEX1_1	GT20	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_1	GT25	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_1	GT26	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_1	GT28	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_1	GT30	glycosyltransferases [GTs]	N	4
+700mSIPHEX1_1	GT35	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_1	GT4	glycosyltransferases [GTs]	N	256
+700mSIPHEX1_1	GT5	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_1	GT51	glycosyltransferases [GTs]	N	9
+700mSIPHEX1_1	GT8	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_1	GT90	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_12	AA0	auxiliary activities [AAs]	N	1
+700mSIPHEX1_12	AA1	auxiliary activities [AAs]	Y(1-20)	1
+700mSIPHEX1_12	AA2	auxiliary activities [AAs]	N	1
+700mSIPHEX1_12	CBM48	carbohydrate-binding module [CBM]	N	1
+700mSIPHEX1_12	CBM50	carbohydrate-binding module [CBM]	Y(1-20)	1
+700mSIPHEX1_12	CBM9	carbohydrate-binding module [CBM]	Y(1-19)	1
+700mSIPHEX1_12	CE11	carbohydrate esterases [CEs]	N	1
+700mSIPHEX1_12	CE14	carbohydrate esterases [CEs]	N	1
+700mSIPHEX1_12	CE4	carbohydrate esterases [CEs]	N	1
+700mSIPHEX1_12	GH100	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_12	GH109	glycoside hydrolases [GHs]	Y(1-28)	1
+700mSIPHEX1_12	GH113	glycoside hydrolases [GHs]	Y(1-26)	1
+700mSIPHEX1_12	GH13	glycoside hydrolases [GHs]	N	3
+700mSIPHEX1_12	GH13	glycoside hydrolases [GHs]	Y(1-20)	3
+700mSIPHEX1_12	GH13	glycoside hydrolases [GHs]	Y(1-23)	3
+700mSIPHEX1_12	GH16	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_12	GH171	glycoside hydrolases [GHs]	Y(1-24)	1
+700mSIPHEX1_12	GH18	glycoside hydrolases [GHs]	N	2
+700mSIPHEX1_12	GH18	glycoside hydrolases [GHs]	Y(1-23)	2
+700mSIPHEX1_12	GH20	glycoside hydrolases [GHs]	Y(1-31)	1
+700mSIPHEX1_12	GH23	glycoside hydrolases [GHs]	N	2
+700mSIPHEX1_12	GH23	glycoside hydrolases [GHs]	Y(1-27)	2
+700mSIPHEX1_12	GH3	glycoside hydrolases [GHs]	Y(1-22)	2
+700mSIPHEX1_12	GH3	glycoside hydrolases [GHs]	Y(1-24)	2
+700mSIPHEX1_12	GH31	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_12	GH32	glycoside hydrolases [GHs]	Y(1-23)	1
+700mSIPHEX1_12	GH37	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_12	GH5	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_12	GH65	glycoside hydrolases [GHs]	N	2
+700mSIPHEX1_12	GH65	glycoside hydrolases [GHs]	Y(1-31)	2
+700mSIPHEX1_12	GH73	glycoside hydrolases [GHs]	Y(1-22)	1
+700mSIPHEX1_12	GH92	glycoside hydrolases [GHs]	Y(1-28)	1
+700mSIPHEX1_12	GT0	glycosyltransferases [GTs]	N	4
+700mSIPHEX1_12	GT105	glycosyltransferases [GTs]	N	4
+700mSIPHEX1_12	GT19	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_12	GT2	glycosyltransferases [GTs]	N	900
+700mSIPHEX1_12	GT28	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_12	GT30	glycosyltransferases [GTs]	Y(1-23)	1
+700mSIPHEX1_12	GT4	glycosyltransferases [GTs]	N	196
+700mSIPHEX1_12	GT5	glycosyltransferases [GTs]	N	4
+700mSIPHEX1_12	GT51	glycosyltransferases [GTs]	N	4
+700mSIPHEX1_12	GT83	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_12	GT9	glycosyltransferases [GTs]	N	4
+700mSIPHEX1_15	AA0	auxiliary activities [AAs]	N	1
+700mSIPHEX1_15	AA1	auxiliary activities [AAs]	N	1
+700mSIPHEX1_15	AA3	auxiliary activities [AAs]	N	1
+700mSIPHEX1_15	AA4	auxiliary activities [AAs]	N	1
+700mSIPHEX1_15	AA6	auxiliary activities [AAs]	N	1
+700mSIPHEX1_15	CBM50	carbohydrate-binding module [CBM]	Y(1-23)	1
+700mSIPHEX1_15	CE11	carbohydrate esterases [CEs]	N	1
+700mSIPHEX1_15	CE14	carbohydrate esterases [CEs]	N	1
+700mSIPHEX1_15	CE4	carbohydrate esterases [CEs]	Y(1-18)	1
+700mSIPHEX1_15	GH103	glycoside hydrolases [GHs]	Y(1-22)	1
+700mSIPHEX1_15	GH108	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_15	GH13	glycoside hydrolases [GHs]	N	9
+700mSIPHEX1_15	GH23	glycoside hydrolases [GHs]	N	10
+700mSIPHEX1_15	GH23	glycoside hydrolases [GHs]	Y(1-19)	5
+700mSIPHEX1_15	GH23	glycoside hydrolases [GHs]	Y(1-21)	5
+700mSIPHEX1_15	GH23	glycoside hydrolases [GHs]	Y(1-41)	5
+700mSIPHEX1_15	GH24	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_15	GH25	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_15	GH3	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_15	GH5	glycoside hydrolases [GHs]	Y(1-36)	1
+700mSIPHEX1_15	GH73	glycoside hydrolases [GHs]	N	2
+700mSIPHEX1_15	GH73	glycoside hydrolases [GHs]	Y(1-23)	2
+700mSIPHEX1_15	GT19	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_15	GT2	glycosyltransferases [GTs]	N	9
+700mSIPHEX1_15	GT20	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_15	GT28	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_15	GT30	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_15	GT35	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_15	GT4	glycosyltransferases [GTs]	N	36
+700mSIPHEX1_15	GT51	glycosyltransferases [GTs]	N	4
+700mSIPHEX1_15	GT81	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_15	GT83	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_15	GT9	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_17	AA1	auxiliary activities [AAs]	N	2
+700mSIPHEX1_17	AA1	auxiliary activities [AAs]	Y(1-20)	2
+700mSIPHEX1_17	AA2	auxiliary activities [AAs]	N	1
+700mSIPHEX1_17	CBM4	carbohydrate-binding module [CBM]	Y(1-28)	1
+700mSIPHEX1_17	CBM48	carbohydrate-binding module [CBM]	N	1
+700mSIPHEX1_17	CBM50	carbohydrate-binding module [CBM]	Y(1-22)	1
+700mSIPHEX1_17	CBM9	carbohydrate-binding module [CBM]	Y(1-20)	1
+700mSIPHEX1_17	CE1	carbohydrate esterases [CEs]	Y(1-19)	1
+700mSIPHEX1_17	CE11	carbohydrate esterases [CEs]	N	1
+700mSIPHEX1_17	CE14	carbohydrate esterases [CEs]	N	1
+700mSIPHEX1_17	CE4	carbohydrate esterases [CEs]	N	4
+700mSIPHEX1_17	GH113	glycoside hydrolases [GHs]	Y(1-19)	1
+700mSIPHEX1_17	GH13	glycoside hydrolases [GHs]	Y(1-16)	4
+700mSIPHEX1_17	GH13	glycoside hydrolases [GHs]	Y(1-20)	4
+700mSIPHEX1_17	GH13	glycoside hydrolases [GHs]	Y(1-22)	4
+700mSIPHEX1_17	GH13	glycoside hydrolases [GHs]	Y(1-24)	4
+700mSIPHEX1_17	GH144	glycoside hydrolases [GHs]	Y(1-20)	2
+700mSIPHEX1_17	GH144	glycoside hydrolases [GHs]	Y(1-24)	2
+700mSIPHEX1_17	GH16	glycoside hydrolases [GHs]	Y(1-23)	2
+700mSIPHEX1_17	GH16	glycoside hydrolases [GHs]	Y(1-28)	2
+700mSIPHEX1_17	GH171	glycoside hydrolases [GHs]	Y(1-27)	1
+700mSIPHEX1_17	GH23	glycoside hydrolases [GHs]	N	2
+700mSIPHEX1_17	GH23	glycoside hydrolases [GHs]	Y(1-23)	2
+700mSIPHEX1_17	GH3	glycoside hydrolases [GHs]	N	3
+700mSIPHEX1_17	GH3	glycoside hydrolases [GHs]	Y(1-22)	3
+700mSIPHEX1_17	GH3	glycoside hydrolases [GHs]	Y(1-29)	3
+700mSIPHEX1_17	GH31	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_17	GH43	glycoside hydrolases [GHs]	Y(1-23)	1
+700mSIPHEX1_17	GH5	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_17	GH63	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_17	GH65	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_17	GH73	glycoside hydrolases [GHs]	Y(1-20)	1
+700mSIPHEX1_17	GH92	glycoside hydrolases [GHs]	Y(1-21)	1
+700mSIPHEX1_17	GH97	glycoside hydrolases [GHs]	Y(1-20)	1
+700mSIPHEX1_17	GT0	glycosyltransferases [GTs]	N	4
+700mSIPHEX1_17	GT10	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_17	GT19	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_17	GT2	glycosyltransferases [GTs]	N	600
+700mSIPHEX1_17	GT2	glycosyltransferases [GTs]	Y(1-25)	25
+700mSIPHEX1_17	GT28	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_17	GT30	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_17	GT4	glycosyltransferases [GTs]	N	225
+700mSIPHEX1_17	GT5	glycosyltransferases [GTs]	N	4
+700mSIPHEX1_17	GT51	glycosyltransferases [GTs]	N	16
+700mSIPHEX1_17	GT83	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_17	GT9	glycosyltransferases [GTs]	N	4
+700mSIPHEX1_17	PL12	polysaccharide lyases [PLs]	Y(1-21)	1
+700mSIPHEX1_17	PL17	polysaccharide lyases [PLs]	Y(1-29)	1
+700mSIPHEX1_17	PL6	polysaccharide lyases [PLs]	Y(1-18)	1
+700mSIPHEX1_17	PL7	polysaccharide lyases [PLs]	Y(1-22)	3
+700mSIPHEX1_17	PL7	polysaccharide lyases [PLs]	Y(1-31)	3
+700mSIPHEX1_17	PL7	polysaccharide lyases [PLs]	Y(1-40)	3
+700mSIPHEX1_18	AA0	auxiliary activities [AAs]	N	1
+700mSIPHEX1_18	AA1	auxiliary activities [AAs]	N	1
+700mSIPHEX1_18	AA2	auxiliary activities [AAs]	Y(1-30)	1
+700mSIPHEX1_18	AA3	auxiliary activities [AAs]	N	1
+700mSIPHEX1_18	AA6	auxiliary activities [AAs]	N	1
+700mSIPHEX1_18	AA7	auxiliary activities [AAs]	N	1
+700mSIPHEX1_18	CBM32	carbohydrate-binding module [CBM]	Y(1-24)	1
+700mSIPHEX1_18	CBM48	carbohydrate-binding module [CBM]	N	1
+700mSIPHEX1_18	CBM50	carbohydrate-binding module [CBM]	Y(1-26)	6
+700mSIPHEX1_18	CBM50	carbohydrate-binding module [CBM]	Y(1-28)	3
+700mSIPHEX1_18	CBM85	carbohydrate-binding module [CBM]	Y(1-26)	1
+700mSIPHEX1_18	CBM9	carbohydrate-binding module [CBM]	Y(1-24)	1
+700mSIPHEX1_18	CE11	carbohydrate esterases [CEs]	N	1
+700mSIPHEX1_18	CE4	carbohydrate esterases [CEs]	N	4
+700mSIPHEX1_18	CE9	carbohydrate esterases [CEs]	N	1
+700mSIPHEX1_18	GH10	glycoside hydrolases [GHs]	Y(1-28)	1
+700mSIPHEX1_18	GH103	glycoside hydrolases [GHs]	Y(1-26)	2
+700mSIPHEX1_18	GH103	glycoside hydrolases [GHs]	Y(1-32)	2
+700mSIPHEX1_18	GH105	glycoside hydrolases [GHs]	Y(1-33)	1
+700mSIPHEX1_18	GH13	glycoside hydrolases [GHs]	N	60
+700mSIPHEX1_18	GH13	glycoside hydrolases [GHs]	Y(1-24)	10
+700mSIPHEX1_18	GH13	glycoside hydrolases [GHs]	Y(1-32)	10
+700mSIPHEX1_18	GH13	glycoside hydrolases [GHs]	Y(1-39)	10
+700mSIPHEX1_18	GH13	glycoside hydrolases [GHs]	Y(1-40)	10
+700mSIPHEX1_18	GH16	glycoside hydrolases [GHs]	Y(1-21)	2
+700mSIPHEX1_18	GH16	glycoside hydrolases [GHs]	Y(1-29)	2
+700mSIPHEX1_18	GH2	glycoside hydrolases [GHs]	Y(1-22)	2
+700mSIPHEX1_18	GH2	glycoside hydrolases [GHs]	Y(1-47)	2
+700mSIPHEX1_18	GH23	glycoside hydrolases [GHs]	N	4
+700mSIPHEX1_18	GH23	glycoside hydrolases [GHs]	Y(1-21)	4
+700mSIPHEX1_18	GH23	glycoside hydrolases [GHs]	Y(1-24)	4
+700mSIPHEX1_18	GH23	glycoside hydrolases [GHs]	Y(1-26)	4
+700mSIPHEX1_18	GH3	glycoside hydrolases [GHs]	N	8
+700mSIPHEX1_18	GH3	glycoside hydrolases [GHs]	Y(1-20)	4
+700mSIPHEX1_18	GH3	glycoside hydrolases [GHs]	Y(1-24)	4
+700mSIPHEX1_18	GH31	glycoside hydrolases [GHs]	Y(1-32)	1
+700mSIPHEX1_18	GH36	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_18	GH42	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_18	GH43	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_18	GH5	glycoside hydrolases [GHs]	Y(1-28)	1
+700mSIPHEX1_18	GH73	glycoside hydrolases [GHs]	N	4
+700mSIPHEX1_18	GH77	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_18	GH9	glycoside hydrolases [GHs]	Y(1-25)	1
+700mSIPHEX1_18	GH94	glycoside hydrolases [GHs]	N	4
+700mSIPHEX1_18	GT1	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_18	GT113	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_18	GT14	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_18	GT19	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_18	GT2	glycosyltransferases [GTs]	N	16
+700mSIPHEX1_18	GT25	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_18	GT26	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_18	GT28	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_18	GT30	glycosyltransferases [GTs]	Y(1-32)	1
+700mSIPHEX1_18	GT35	glycosyltransferases [GTs]	Y(1-12)	1
+700mSIPHEX1_18	GT4	glycosyltransferases [GTs]	N	42
+700mSIPHEX1_18	GT4	glycosyltransferases [GTs]	Y(1-17)	7
+700mSIPHEX1_18	GT5	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_18	GT51	glycosyltransferases [GTs]	N	9
+700mSIPHEX1_18	GT81	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_18	GT83	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_18	GT9	glycosyltransferases [GTs]	Y(1-22)	1
+700mSIPHEX1_18	GT99	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_18	PL17	polysaccharide lyases [PLs]	Y(1-21)	1
+700mSIPHEX1_18	PL29	polysaccharide lyases [PLs]	Y(1-30)	1
+700mSIPHEX1_18	PL38	polysaccharide lyases [PLs]	Y(1-27)	1
+700mSIPHEX1_18	PL6	polysaccharide lyases [PLs]	Y(1-29)	1
+700mSIPHEX1_18	PL7	polysaccharide lyases [PLs]	Y(1-28)	2
+700mSIPHEX1_18	PL7	polysaccharide lyases [PLs]	Y(1-42)	2
+700mSIPHEX1_2	AA0	auxiliary activities [AAs]	N	1
+700mSIPHEX1_2	AA2	auxiliary activities [AAs]	N	3
+700mSIPHEX1_2	AA2	auxiliary activities [AAs]	Y(1-27)	3
+700mSIPHEX1_2	AA2	auxiliary activities [AAs]	Y(1-28)	3
+700mSIPHEX1_2	AA3	auxiliary activities [AAs]	N	4
+700mSIPHEX1_2	AA4	auxiliary activities [AAs]	N	1
+700mSIPHEX1_2	AA6	auxiliary activities [AAs]	N	1
+700mSIPHEX1_2	CBM32	carbohydrate-binding module [CBM]	Y(1-44)	1
+700mSIPHEX1_2	CBM41	carbohydrate-binding module [CBM]	Y(1-26)	1
+700mSIPHEX1_2	CBM48	carbohydrate-binding module [CBM]	N	1
+700mSIPHEX1_2	CBM50	carbohydrate-binding module [CBM]	Y(1-16)	3
+700mSIPHEX1_2	CBM50	carbohydrate-binding module [CBM]	Y(1-21)	3
+700mSIPHEX1_2	CBM50	carbohydrate-binding module [CBM]	Y(1-24)	3
+700mSIPHEX1_2	CBM9	carbohydrate-binding module [CBM]	Y(1-19)	1
+700mSIPHEX1_2	CE11	carbohydrate esterases [CEs]	N	1
+700mSIPHEX1_2	CE4	carbohydrate esterases [CEs]	N	6
+700mSIPHEX1_2	CE4	carbohydrate esterases [CEs]	Y(1-39)	3
+700mSIPHEX1_2	CE9	carbohydrate esterases [CEs]	N	1
+700mSIPHEX1_2	GH1	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_2	GH103	glycoside hydrolases [GHs]	Y(1-22)	2
+700mSIPHEX1_2	GH103	glycoside hydrolases [GHs]	Y(1-49)	2
+700mSIPHEX1_2	GH109	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_2	GH13	glycoside hydrolases [GHs]	N	56
+700mSIPHEX1_2	GH13	glycoside hydrolases [GHs]	Y(1-27)	8
+700mSIPHEX1_2	GH158	glycoside hydrolases [GHs]	Y(1-26)	1
+700mSIPHEX1_2	GH16	glycoside hydrolases [GHs]	N	2
+700mSIPHEX1_2	GH16	glycoside hydrolases [GHs]	Y(1-28)	2
+700mSIPHEX1_2	GH171	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_2	GH2	glycoside hydrolases [GHs]	N	2
+700mSIPHEX1_2	GH2	glycoside hydrolases [GHs]	Y(1-28)	2
+700mSIPHEX1_2	GH23	glycoside hydrolases [GHs]	N	5
+700mSIPHEX1_2	GH23	glycoside hydrolases [GHs]	Y(1-23)	5
+700mSIPHEX1_2	GH23	glycoside hydrolases [GHs]	Y(1-25)	5
+700mSIPHEX1_2	GH23	glycoside hydrolases [GHs]	Y(1-30)	5
+700mSIPHEX1_2	GH23	glycoside hydrolases [GHs]	Y(1-34)	5
+700mSIPHEX1_2	GH3	glycoside hydrolases [GHs]	N	3
+700mSIPHEX1_2	GH3	glycoside hydrolases [GHs]	Y(1-22)	3
+700mSIPHEX1_2	GH3	glycoside hydrolases [GHs]	Y(1-47)	3
+700mSIPHEX1_2	GH31	glycoside hydrolases [GHs]	Y(1-27)	1
+700mSIPHEX1_2	GH37	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_2	GH73	glycoside hydrolases [GHs]	N	6
+700mSIPHEX1_2	GH73	glycoside hydrolases [GHs]	Y(1-27)	3
+700mSIPHEX1_2	GH77	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_2	GT1	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_2	GT19	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_2	GT2	glycosyltransferases [GTs]	N	20
+700mSIPHEX1_2	GT2	glycosyltransferases [GTs]	Y(1-18)	5
+700mSIPHEX1_2	GT25	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_2	GT28	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_2	GT30	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_2	GT35	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_2	GT4	glycosyltransferases [GTs]	N	81
+700mSIPHEX1_2	GT5	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_2	GT51	glycosyltransferases [GTs]	N	4
+700mSIPHEX1_2	GT81	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_2	GT9	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_2	PL17	polysaccharide lyases [PLs]	Y(1-28)	1
+700mSIPHEX1_2	PL6	polysaccharide lyases [PLs]	Y(1-26)	1
+700mSIPHEX1_2	PL7	polysaccharide lyases [PLs]	Y(1-26)	1
+700mSIPHEX1_20	AA0	auxiliary activities [AAs]	N	1
+700mSIPHEX1_20	AA1	auxiliary activities [AAs]	N	1
+700mSIPHEX1_20	AA3	auxiliary activities [AAs]	N	36
+700mSIPHEX1_20	AA4	auxiliary activities [AAs]	N	1
+700mSIPHEX1_20	AA6	auxiliary activities [AAs]	N	1
+700mSIPHEX1_20	CBM50	carbohydrate-binding module [CBM]	Y(1-19)	3
+700mSIPHEX1_20	CBM50	carbohydrate-binding module [CBM]	Y(1-25)	3
+700mSIPHEX1_20	CBM50	carbohydrate-binding module [CBM]	Y(1-30)	3
+700mSIPHEX1_20	CE11	carbohydrate esterases [CEs]	N	1
+700mSIPHEX1_20	GH103	glycoside hydrolases [GHs]	Y(1-23)	2
+700mSIPHEX1_20	GH103	glycoside hydrolases [GHs]	Y(1-33)	2
+700mSIPHEX1_20	GH114	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_20	GH166	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_20	GH23	glycoside hydrolases [GHs]	Y(1-20)	12
+700mSIPHEX1_20	GH23	glycoside hydrolases [GHs]	Y(1-23)	6
+700mSIPHEX1_20	GH23	glycoside hydrolases [GHs]	Y(1-26)	6
+700mSIPHEX1_20	GH23	glycoside hydrolases [GHs]	Y(1-27)	6
+700mSIPHEX1_20	GH23	glycoside hydrolases [GHs]	Y(1-29)	6
+700mSIPHEX1_20	GH3	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_20	GH33	glycoside hydrolases [GHs]	Y(1-21)	1
+700mSIPHEX1_20	GT19	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_20	GT2	glycosyltransferases [GTs]	N	36
+700mSIPHEX1_20	GT28	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_20	GT30	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_20	GT4	glycosyltransferases [GTs]	N	36
+700mSIPHEX1_20	GT51	glycosyltransferases [GTs]	N	8
+700mSIPHEX1_20	GT51	glycosyltransferases [GTs]	Y(1-11)	4
+700mSIPHEX1_20	GT51	glycosyltransferases [GTs]	Y(1-21)	4
+700mSIPHEX1_20	GT9	glycosyltransferases [GTs]	N	9
+700mSIPHEX1_3	AA0	auxiliary activities [AAs]	N	1
+700mSIPHEX1_3	AA1	auxiliary activities [AAs]	N	6
+700mSIPHEX1_3	AA1	auxiliary activities [AAs]	Y(1-41)	3
+700mSIPHEX1_3	AA3	auxiliary activities [AAs]	N	9
+700mSIPHEX1_3	AA6	auxiliary activities [AAs]	N	4
+700mSIPHEX1_3	CBM41	carbohydrate-binding module [CBM]	Y(1-19)	1
+700mSIPHEX1_3	CBM50	carbohydrate-binding module [CBM]	Y(1-22)	1
+700mSIPHEX1_3	CBM57	carbohydrate-binding module [CBM]	Y(1-27)	1
+700mSIPHEX1_3	CE1	carbohydrate esterases [CEs]	Y(1-33)	1
+700mSIPHEX1_3	CE11	carbohydrate esterases [CEs]	N	1
+700mSIPHEX1_3	CE4	carbohydrate esterases [CEs]	N	20
+700mSIPHEX1_3	CE4	carbohydrate esterases [CEs]	Y(1-25)	5
+700mSIPHEX1_3	GH103	glycoside hydrolases [GHs]	N	2
+700mSIPHEX1_3	GH103	glycoside hydrolases [GHs]	Y(1-34)	2
+700mSIPHEX1_3	GH13	glycoside hydrolases [GHs]	N	8
+700mSIPHEX1_3	GH13	glycoside hydrolases [GHs]	Y(1-27)	8
+700mSIPHEX1_3	GH166	glycoside hydrolases [GHs]	Y(1-25)	1
+700mSIPHEX1_3	GH23	glycoside hydrolases [GHs]	N	5
+700mSIPHEX1_3	GH23	glycoside hydrolases [GHs]	Y(1-22)	5
+700mSIPHEX1_3	GH23	glycoside hydrolases [GHs]	Y(1-23)	5
+700mSIPHEX1_3	GH23	glycoside hydrolases [GHs]	Y(1-26)	5
+700mSIPHEX1_3	GH23	glycoside hydrolases [GHs]	Y(1-28)	5
+700mSIPHEX1_3	GH73	glycoside hydrolases [GHs]	N	2
+700mSIPHEX1_3	GH73	glycoside hydrolases [GHs]	Y(1-22)	2
+700mSIPHEX1_3	GH84	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_3	GT19	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_3	GT2	glycosyltransferases [GTs]	N	121
+700mSIPHEX1_3	GT25	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_3	GT28	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_3	GT30	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_3	GT4	glycosyltransferases [GTs]	N	196
+700mSIPHEX1_3	GT51	glycosyltransferases [GTs]	N	9
+700mSIPHEX1_3	GT81	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_3	GT9	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_3	GT90	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_3	PL5	polysaccharide lyases [PLs]	N	1
+700mSIPHEX1_8	AA2	auxiliary activities [AAs]	N	1
+700mSIPHEX1_8	AA3	auxiliary activities [AAs]	N	16
+700mSIPHEX1_8	AA4	auxiliary activities [AAs]	N	1
+700mSIPHEX1_8	CBM50	carbohydrate-binding module [CBM]	Y(1-36)	1
+700mSIPHEX1_8	CE11	carbohydrate esterases [CEs]	N	1
+700mSIPHEX1_8	CE4	carbohydrate esterases [CEs]	N	4
+700mSIPHEX1_8	CE9	carbohydrate esterases [CEs]	N	1
+700mSIPHEX1_8	GH0	glycoside hydrolases [GHs]	Y(1-25)	1
+700mSIPHEX1_8	GH102	glycoside hydrolases [GHs]	Y(1-27)	1
+700mSIPHEX1_8	GH103	glycoside hydrolases [GHs]	Y(1-20)	2
+700mSIPHEX1_8	GH103	glycoside hydrolases [GHs]	Y(1-25)	2
+700mSIPHEX1_8	GH13	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_8	GH23	glycoside hydrolases [GHs]	Y(1-20)	4
+700mSIPHEX1_8	GH23	glycoside hydrolases [GHs]	Y(1-21)	4
+700mSIPHEX1_8	GH23	glycoside hydrolases [GHs]	Y(1-28)	4
+700mSIPHEX1_8	GH23	glycoside hydrolases [GHs]	Y(1-30)	4
+700mSIPHEX1_8	GH24	glycoside hydrolases [GHs]	N	25
+700mSIPHEX1_8	GH25	glycoside hydrolases [GHs]	Y(1-30)	1
+700mSIPHEX1_8	GH3	glycoside hydrolases [GHs]	N	1
+700mSIPHEX1_8	GT1	glycosyltransferases [GTs]	N	2
+700mSIPHEX1_8	GT1	glycosyltransferases [GTs]	Y(1-20)	2
+700mSIPHEX1_8	GT107	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_8	GT11	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_8	GT14	glycosyltransferases [GTs]	N	4
+700mSIPHEX1_8	GT19	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_8	GT2	glycosyltransferases [GTs]	N	256
+700mSIPHEX1_8	GT25	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_8	GT26	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_8	GT28	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_8	GT30	glycosyltransferases [GTs]	N	4
+700mSIPHEX1_8	GT4	glycosyltransferases [GTs]	N	49
+700mSIPHEX1_8	GT41	glycosyltransferases [GTs]	N	1
+700mSIPHEX1_8	GT51	glycosyltransferases [GTs]	N	16
+700mSIPHEX1_8	GT81	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_13	AA2	auxiliary activities [AAs]	N	1
+700mSIPHEX2_13	AA3	auxiliary activities [AAs]	N	16
+700mSIPHEX2_13	AA4	auxiliary activities [AAs]	N	1
+700mSIPHEX2_13	CBM50	carbohydrate-binding module [CBM]	Y(1-36)	1
+700mSIPHEX2_13	CE11	carbohydrate esterases [CEs]	N	1
+700mSIPHEX2_13	CE4	carbohydrate esterases [CEs]	N	4
+700mSIPHEX2_13	CE9	carbohydrate esterases [CEs]	N	1
+700mSIPHEX2_13	GH0	glycoside hydrolases [GHs]	Y(1-25)	1
+700mSIPHEX2_13	GH102	glycoside hydrolases [GHs]	Y(1-27)	1
+700mSIPHEX2_13	GH103	glycoside hydrolases [GHs]	Y(1-20)	2
+700mSIPHEX2_13	GH103	glycoside hydrolases [GHs]	Y(1-25)	2
+700mSIPHEX2_13	GH13	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_13	GH23	glycoside hydrolases [GHs]	Y(1-20)	4
+700mSIPHEX2_13	GH23	glycoside hydrolases [GHs]	Y(1-21)	4
+700mSIPHEX2_13	GH23	glycoside hydrolases [GHs]	Y(1-28)	4
+700mSIPHEX2_13	GH23	glycoside hydrolases [GHs]	Y(1-30)	4
+700mSIPHEX2_13	GH24	glycoside hydrolases [GHs]	N	25
+700mSIPHEX2_13	GH25	glycoside hydrolases [GHs]	Y(1-30)	1
+700mSIPHEX2_13	GH3	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_13	GT1	glycosyltransferases [GTs]	N	2
+700mSIPHEX2_13	GT1	glycosyltransferases [GTs]	Y(1-20)	2
+700mSIPHEX2_13	GT107	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_13	GT11	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_13	GT14	glycosyltransferases [GTs]	N	4
+700mSIPHEX2_13	GT19	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_13	GT2	glycosyltransferases [GTs]	N	256
+700mSIPHEX2_13	GT25	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_13	GT26	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_13	GT28	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_13	GT30	glycosyltransferases [GTs]	N	4
+700mSIPHEX2_13	GT4	glycosyltransferases [GTs]	N	49
+700mSIPHEX2_13	GT41	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_13	GT51	glycosyltransferases [GTs]	N	16
+700mSIPHEX2_13	GT81	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_14	AA1	auxiliary activities [AAs]	N	2
+700mSIPHEX2_14	AA1	auxiliary activities [AAs]	Y(1-20)	2
+700mSIPHEX2_14	AA2	auxiliary activities [AAs]	N	1
+700mSIPHEX2_14	CBM4	carbohydrate-binding module [CBM]	Y(1-28)	1
+700mSIPHEX2_14	CBM48	carbohydrate-binding module [CBM]	N	1
+700mSIPHEX2_14	CBM50	carbohydrate-binding module [CBM]	Y(1-22)	1
+700mSIPHEX2_14	CBM9	carbohydrate-binding module [CBM]	Y(1-20)	1
+700mSIPHEX2_14	CE1	carbohydrate esterases [CEs]	Y(1-19)	1
+700mSIPHEX2_14	CE11	carbohydrate esterases [CEs]	N	1
+700mSIPHEX2_14	CE14	carbohydrate esterases [CEs]	N	1
+700mSIPHEX2_14	CE4	carbohydrate esterases [CEs]	N	4
+700mSIPHEX2_14	GH113	glycoside hydrolases [GHs]	Y(1-19)	1
+700mSIPHEX2_14	GH13	glycoside hydrolases [GHs]	Y(1-16)	4
+700mSIPHEX2_14	GH13	glycoside hydrolases [GHs]	Y(1-20)	4
+700mSIPHEX2_14	GH13	glycoside hydrolases [GHs]	Y(1-22)	4
+700mSIPHEX2_14	GH13	glycoside hydrolases [GHs]	Y(1-24)	4
+700mSIPHEX2_14	GH144	glycoside hydrolases [GHs]	Y(1-20)	2
+700mSIPHEX2_14	GH144	glycoside hydrolases [GHs]	Y(1-24)	2
+700mSIPHEX2_14	GH16	glycoside hydrolases [GHs]	Y(1-23)	2
+700mSIPHEX2_14	GH16	glycoside hydrolases [GHs]	Y(1-28)	2
+700mSIPHEX2_14	GH171	glycoside hydrolases [GHs]	Y(1-27)	1
+700mSIPHEX2_14	GH23	glycoside hydrolases [GHs]	N	2
+700mSIPHEX2_14	GH23	glycoside hydrolases [GHs]	Y(1-23)	2
+700mSIPHEX2_14	GH3	glycoside hydrolases [GHs]	N	3
+700mSIPHEX2_14	GH3	glycoside hydrolases [GHs]	Y(1-22)	3
+700mSIPHEX2_14	GH3	glycoside hydrolases [GHs]	Y(1-29)	3
+700mSIPHEX2_14	GH31	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_14	GH43	glycoside hydrolases [GHs]	Y(1-23)	1
+700mSIPHEX2_14	GH5	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_14	GH63	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_14	GH65	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_14	GH73	glycoside hydrolases [GHs]	Y(1-20)	1
+700mSIPHEX2_14	GH92	glycoside hydrolases [GHs]	Y(1-21)	1
+700mSIPHEX2_14	GH97	glycoside hydrolases [GHs]	Y(1-20)	1
+700mSIPHEX2_14	GT0	glycosyltransferases [GTs]	N	4
+700mSIPHEX2_14	GT10	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_14	GT19	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_14	GT2	glycosyltransferases [GTs]	N	600
+700mSIPHEX2_14	GT2	glycosyltransferases [GTs]	Y(1-25)	25
+700mSIPHEX2_14	GT28	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_14	GT30	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_14	GT4	glycosyltransferases [GTs]	N	225
+700mSIPHEX2_14	GT5	glycosyltransferases [GTs]	N	4
+700mSIPHEX2_14	GT51	glycosyltransferases [GTs]	N	16
+700mSIPHEX2_14	GT83	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_14	GT9	glycosyltransferases [GTs]	N	4
+700mSIPHEX2_14	PL12	polysaccharide lyases [PLs]	Y(1-21)	1
+700mSIPHEX2_14	PL17	polysaccharide lyases [PLs]	Y(1-29)	1
+700mSIPHEX2_14	PL6	polysaccharide lyases [PLs]	Y(1-18)	1
+700mSIPHEX2_14	PL7	polysaccharide lyases [PLs]	Y(1-22)	3
+700mSIPHEX2_14	PL7	polysaccharide lyases [PLs]	Y(1-31)	3
+700mSIPHEX2_14	PL7	polysaccharide lyases [PLs]	Y(1-40)	3
+700mSIPHEX2_16	AA0	auxiliary activities [AAs]	N	1
+700mSIPHEX2_16	AA1	auxiliary activities [AAs]	N	1
+700mSIPHEX2_16	AA2	auxiliary activities [AAs]	Y(1-30)	1
+700mSIPHEX2_16	AA3	auxiliary activities [AAs]	N	1
+700mSIPHEX2_16	AA6	auxiliary activities [AAs]	N	1
+700mSIPHEX2_16	AA7	auxiliary activities [AAs]	N	1
+700mSIPHEX2_16	CBM32	carbohydrate-binding module [CBM]	Y(1-24)	1
+700mSIPHEX2_16	CBM48	carbohydrate-binding module [CBM]	N	1
+700mSIPHEX2_16	CBM50	carbohydrate-binding module [CBM]	Y(1-26)	6
+700mSIPHEX2_16	CBM50	carbohydrate-binding module [CBM]	Y(1-28)	3
+700mSIPHEX2_16	CBM85	carbohydrate-binding module [CBM]	Y(1-26)	1
+700mSIPHEX2_16	CBM9	carbohydrate-binding module [CBM]	Y(1-24)	1
+700mSIPHEX2_16	CE11	carbohydrate esterases [CEs]	N	1
+700mSIPHEX2_16	CE4	carbohydrate esterases [CEs]	N	4
+700mSIPHEX2_16	CE9	carbohydrate esterases [CEs]	N	1
+700mSIPHEX2_16	GH10	glycoside hydrolases [GHs]	Y(1-28)	1
+700mSIPHEX2_16	GH103	glycoside hydrolases [GHs]	Y(1-26)	2
+700mSIPHEX2_16	GH103	glycoside hydrolases [GHs]	Y(1-32)	2
+700mSIPHEX2_16	GH105	glycoside hydrolases [GHs]	Y(1-33)	1
+700mSIPHEX2_16	GH13	glycoside hydrolases [GHs]	N	60
+700mSIPHEX2_16	GH13	glycoside hydrolases [GHs]	Y(1-24)	10
+700mSIPHEX2_16	GH13	glycoside hydrolases [GHs]	Y(1-32)	10
+700mSIPHEX2_16	GH13	glycoside hydrolases [GHs]	Y(1-39)	10
+700mSIPHEX2_16	GH13	glycoside hydrolases [GHs]	Y(1-40)	10
+700mSIPHEX2_16	GH16	glycoside hydrolases [GHs]	Y(1-21)	2
+700mSIPHEX2_16	GH16	glycoside hydrolases [GHs]	Y(1-29)	2
+700mSIPHEX2_16	GH2	glycoside hydrolases [GHs]	Y(1-22)	2
+700mSIPHEX2_16	GH2	glycoside hydrolases [GHs]	Y(1-47)	2
+700mSIPHEX2_16	GH23	glycoside hydrolases [GHs]	N	4
+700mSIPHEX2_16	GH23	glycoside hydrolases [GHs]	Y(1-21)	4
+700mSIPHEX2_16	GH23	glycoside hydrolases [GHs]	Y(1-24)	4
+700mSIPHEX2_16	GH23	glycoside hydrolases [GHs]	Y(1-26)	4
+700mSIPHEX2_16	GH3	glycoside hydrolases [GHs]	N	8
+700mSIPHEX2_16	GH3	glycoside hydrolases [GHs]	Y(1-20)	4
+700mSIPHEX2_16	GH3	glycoside hydrolases [GHs]	Y(1-24)	4
+700mSIPHEX2_16	GH31	glycoside hydrolases [GHs]	Y(1-32)	1
+700mSIPHEX2_16	GH36	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_16	GH42	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_16	GH43	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_16	GH5	glycoside hydrolases [GHs]	Y(1-28)	1
+700mSIPHEX2_16	GH73	glycoside hydrolases [GHs]	N	4
+700mSIPHEX2_16	GH77	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_16	GH9	glycoside hydrolases [GHs]	Y(1-25)	1
+700mSIPHEX2_16	GH94	glycoside hydrolases [GHs]	N	4
+700mSIPHEX2_16	GT1	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_16	GT113	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_16	GT14	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_16	GT19	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_16	GT2	glycosyltransferases [GTs]	N	16
+700mSIPHEX2_16	GT25	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_16	GT26	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_16	GT28	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_16	GT30	glycosyltransferases [GTs]	Y(1-32)	1
+700mSIPHEX2_16	GT35	glycosyltransferases [GTs]	Y(1-12)	1
+700mSIPHEX2_16	GT4	glycosyltransferases [GTs]	N	42
+700mSIPHEX2_16	GT4	glycosyltransferases [GTs]	Y(1-17)	7
+700mSIPHEX2_16	GT5	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_16	GT51	glycosyltransferases [GTs]	N	9
+700mSIPHEX2_16	GT81	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_16	GT83	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_16	GT9	glycosyltransferases [GTs]	Y(1-22)	1
+700mSIPHEX2_16	GT99	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_16	PL17	polysaccharide lyases [PLs]	Y(1-21)	1
+700mSIPHEX2_16	PL29	polysaccharide lyases [PLs]	Y(1-30)	1
+700mSIPHEX2_16	PL38	polysaccharide lyases [PLs]	Y(1-27)	1
+700mSIPHEX2_16	PL6	polysaccharide lyases [PLs]	Y(1-29)	1
+700mSIPHEX2_16	PL7	polysaccharide lyases [PLs]	Y(1-28)	2
+700mSIPHEX2_16	PL7	polysaccharide lyases [PLs]	Y(1-42)	2
+700mSIPHEX2_21	AA0	auxiliary activities [AAs]	N	1
+700mSIPHEX2_21	AA1	auxiliary activities [AAs]	N	1
+700mSIPHEX2_21	AA3	auxiliary activities [AAs]	N	1
+700mSIPHEX2_21	AA4	auxiliary activities [AAs]	N	1
+700mSIPHEX2_21	AA6	auxiliary activities [AAs]	N	1
+700mSIPHEX2_21	CBM50	carbohydrate-binding module [CBM]	Y(1-23)	1
+700mSIPHEX2_21	CE11	carbohydrate esterases [CEs]	N	1
+700mSIPHEX2_21	CE14	carbohydrate esterases [CEs]	N	1
+700mSIPHEX2_21	CE4	carbohydrate esterases [CEs]	Y(1-18)	1
+700mSIPHEX2_21	GH103	glycoside hydrolases [GHs]	Y(1-22)	1
+700mSIPHEX2_21	GH108	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_21	GH13	glycoside hydrolases [GHs]	N	9
+700mSIPHEX2_21	GH23	glycoside hydrolases [GHs]	N	10
+700mSIPHEX2_21	GH23	glycoside hydrolases [GHs]	Y(1-19)	5
+700mSIPHEX2_21	GH23	glycoside hydrolases [GHs]	Y(1-21)	5
+700mSIPHEX2_21	GH23	glycoside hydrolases [GHs]	Y(1-41)	5
+700mSIPHEX2_21	GH24	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_21	GH25	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_21	GH3	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_21	GH5	glycoside hydrolases [GHs]	Y(1-36)	1
+700mSIPHEX2_21	GH73	glycoside hydrolases [GHs]	N	2
+700mSIPHEX2_21	GH73	glycoside hydrolases [GHs]	Y(1-23)	2
+700mSIPHEX2_21	GT19	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_21	GT2	glycosyltransferases [GTs]	N	9
+700mSIPHEX2_21	GT20	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_21	GT28	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_21	GT30	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_21	GT35	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_21	GT4	glycosyltransferases [GTs]	N	36
+700mSIPHEX2_21	GT51	glycosyltransferases [GTs]	N	4
+700mSIPHEX2_21	GT81	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_21	GT83	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_21	GT9	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_22	AA0	auxiliary activities [AAs]	N	1
+700mSIPHEX2_22	AA1	auxiliary activities [AAs]	Y(1-37)	1
+700mSIPHEX2_22	AA2	auxiliary activities [AAs]	N	3
+700mSIPHEX2_22	AA2	auxiliary activities [AAs]	Y(1-27)	3
+700mSIPHEX2_22	AA2	auxiliary activities [AAs]	Y(1-28)	3
+700mSIPHEX2_22	AA3	auxiliary activities [AAs]	N	4
+700mSIPHEX2_22	AA4	auxiliary activities [AAs]	N	1
+700mSIPHEX2_22	AA6	auxiliary activities [AAs]	N	1
+700mSIPHEX2_22	CBM32	carbohydrate-binding module [CBM]	Y(1-44)	1
+700mSIPHEX2_22	CBM41	carbohydrate-binding module [CBM]	Y(1-26)	1
+700mSIPHEX2_22	CBM48	carbohydrate-binding module [CBM]	N	1
+700mSIPHEX2_22	CBM50	carbohydrate-binding module [CBM]	Y(1-16)	3
+700mSIPHEX2_22	CBM50	carbohydrate-binding module [CBM]	Y(1-21)	3
+700mSIPHEX2_22	CBM50	carbohydrate-binding module [CBM]	Y(1-24)	3
+700mSIPHEX2_22	CBM9	carbohydrate-binding module [CBM]	Y(1-19)	1
+700mSIPHEX2_22	CE11	carbohydrate esterases [CEs]	N	1
+700mSIPHEX2_22	CE4	carbohydrate esterases [CEs]	N	6
+700mSIPHEX2_22	CE4	carbohydrate esterases [CEs]	Y(1-39)	3
+700mSIPHEX2_22	CE9	carbohydrate esterases [CEs]	N	1
+700mSIPHEX2_22	GH1	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_22	GH103	glycoside hydrolases [GHs]	Y(1-22)	2
+700mSIPHEX2_22	GH103	glycoside hydrolases [GHs]	Y(1-49)	2
+700mSIPHEX2_22	GH109	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_22	GH13	glycoside hydrolases [GHs]	N	56
+700mSIPHEX2_22	GH13	glycoside hydrolases [GHs]	Y(1-27)	8
+700mSIPHEX2_22	GH158	glycoside hydrolases [GHs]	Y(1-26)	1
+700mSIPHEX2_22	GH16	glycoside hydrolases [GHs]	N	2
+700mSIPHEX2_22	GH16	glycoside hydrolases [GHs]	Y(1-28)	2
+700mSIPHEX2_22	GH171	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_22	GH2	glycoside hydrolases [GHs]	N	6
+700mSIPHEX2_22	GH2	glycoside hydrolases [GHs]	Y(1-28)	3
+700mSIPHEX2_22	GH23	glycoside hydrolases [GHs]	N	5
+700mSIPHEX2_22	GH23	glycoside hydrolases [GHs]	Y(1-23)	5
+700mSIPHEX2_22	GH23	glycoside hydrolases [GHs]	Y(1-25)	5
+700mSIPHEX2_22	GH23	glycoside hydrolases [GHs]	Y(1-30)	5
+700mSIPHEX2_22	GH23	glycoside hydrolases [GHs]	Y(1-34)	5
+700mSIPHEX2_22	GH3	glycoside hydrolases [GHs]	N	3
+700mSIPHEX2_22	GH3	glycoside hydrolases [GHs]	Y(1-22)	3
+700mSIPHEX2_22	GH3	glycoside hydrolases [GHs]	Y(1-47)	3
+700mSIPHEX2_22	GH31	glycoside hydrolases [GHs]	Y(1-27)	1
+700mSIPHEX2_22	GH37	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_22	GH73	glycoside hydrolases [GHs]	N	6
+700mSIPHEX2_22	GH73	glycoside hydrolases [GHs]	Y(1-27)	3
+700mSIPHEX2_22	GH77	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_22	GT1	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_22	GT19	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_22	GT2	glycosyltransferases [GTs]	N	12
+700mSIPHEX2_22	GT2	glycosyltransferases [GTs]	Y(1-18)	4
+700mSIPHEX2_22	GT25	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_22	GT28	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_22	GT30	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_22	GT35	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_22	GT4	glycosyltransferases [GTs]	N	36
+700mSIPHEX2_22	GT5	glycosyltransferases [GTs]	N	4
+700mSIPHEX2_22	GT51	glycosyltransferases [GTs]	N	4
+700mSIPHEX2_22	GT81	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_22	GT9	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_22	PL17	polysaccharide lyases [PLs]	Y(1-28)	1
+700mSIPHEX2_22	PL6	polysaccharide lyases [PLs]	Y(1-26)	1
+700mSIPHEX2_22	PL7	polysaccharide lyases [PLs]	Y(1-26)	1
+700mSIPHEX2_23	AA0	auxiliary activities [AAs]	N	1
+700mSIPHEX2_23	CBM48	carbohydrate-binding module [CBM]	N	1
+700mSIPHEX2_23	CBM50	carbohydrate-binding module [CBM]	Y(1-20)	1
+700mSIPHEX2_23	CBM9	carbohydrate-binding module [CBM]	Y(1-19)	1
+700mSIPHEX2_23	CE11	carbohydrate esterases [CEs]	N	1
+700mSIPHEX2_23	CE14	carbohydrate esterases [CEs]	N	1
+700mSIPHEX2_23	CE4	carbohydrate esterases [CEs]	N	1
+700mSIPHEX2_23	GH100	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_23	GH109	glycoside hydrolases [GHs]	Y(1-28)	1
+700mSIPHEX2_23	GH113	glycoside hydrolases [GHs]	Y(1-26)	1
+700mSIPHEX2_23	GH13	glycoside hydrolases [GHs]	N	3
+700mSIPHEX2_23	GH13	glycoside hydrolases [GHs]	Y(1-20)	3
+700mSIPHEX2_23	GH13	glycoside hydrolases [GHs]	Y(1-23)	3
+700mSIPHEX2_23	GH16	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_23	GH171	glycoside hydrolases [GHs]	Y(1-24)	1
+700mSIPHEX2_23	GH18	glycoside hydrolases [GHs]	Y(1-23)	4
+700mSIPHEX2_23	GH20	glycoside hydrolases [GHs]	Y(1-31)	1
+700mSIPHEX2_23	GH23	glycoside hydrolases [GHs]	N	2
+700mSIPHEX2_23	GH23	glycoside hydrolases [GHs]	Y(1-27)	2
+700mSIPHEX2_23	GH3	glycoside hydrolases [GHs]	Y(1-22)	2
+700mSIPHEX2_23	GH3	glycoside hydrolases [GHs]	Y(1-24)	2
+700mSIPHEX2_23	GH31	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_23	GH32	glycoside hydrolases [GHs]	Y(1-23)	1
+700mSIPHEX2_23	GH37	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_23	GH5	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_23	GH65	glycoside hydrolases [GHs]	N	2
+700mSIPHEX2_23	GH65	glycoside hydrolases [GHs]	Y(1-31)	2
+700mSIPHEX2_23	GH73	glycoside hydrolases [GHs]	Y(1-22)	1
+700mSIPHEX2_23	GH92	glycoside hydrolases [GHs]	Y(1-28)	1
+700mSIPHEX2_23	GT0	glycosyltransferases [GTs]	N	4
+700mSIPHEX2_23	GT105	glycosyltransferases [GTs]	N	4
+700mSIPHEX2_23	GT19	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_23	GT2	glycosyltransferases [GTs]	N	900
+700mSIPHEX2_23	GT28	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_23	GT30	glycosyltransferases [GTs]	Y(1-23)	1
+700mSIPHEX2_23	GT4	glycosyltransferases [GTs]	N	196
+700mSIPHEX2_23	GT5	glycosyltransferases [GTs]	N	4
+700mSIPHEX2_23	GT51	glycosyltransferases [GTs]	N	4
+700mSIPHEX2_23	GT83	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_23	GT9	glycosyltransferases [GTs]	N	4
+700mSIPHEX2_24	AA0	auxiliary activities [AAs]	N	1
+700mSIPHEX2_24	AA1	auxiliary activities [AAs]	N	2
+700mSIPHEX2_24	AA1	auxiliary activities [AAs]	Y(1-41)	2
+700mSIPHEX2_24	AA3	auxiliary activities [AAs]	N	1
+700mSIPHEX2_24	AA6	auxiliary activities [AAs]	N	1
+700mSIPHEX2_24	CBM41	carbohydrate-binding module [CBM]	Y(1-19)	1
+700mSIPHEX2_24	CBM57	carbohydrate-binding module [CBM]	Y(1-27)	1
+700mSIPHEX2_24	CE1	carbohydrate esterases [CEs]	Y(1-33)	1
+700mSIPHEX2_24	CE11	carbohydrate esterases [CEs]	N	1
+700mSIPHEX2_24	CE4	carbohydrate esterases [CEs]	N	6
+700mSIPHEX2_24	CE4	carbohydrate esterases [CEs]	Y(1-25)	3
+700mSIPHEX2_24	GH103	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_24	GH13	glycoside hydrolases [GHs]	N	6
+700mSIPHEX2_24	GH13	glycoside hydrolases [GHs]	Y(1-27)	3
+700mSIPHEX2_24	GH23	glycoside hydrolases [GHs]	N	4
+700mSIPHEX2_24	GH23	glycoside hydrolases [GHs]	Y(1-22)	4
+700mSIPHEX2_24	GH23	glycoside hydrolases [GHs]	Y(1-26)	4
+700mSIPHEX2_24	GH23	glycoside hydrolases [GHs]	Y(1-28)	4
+700mSIPHEX2_24	GH73	glycoside hydrolases [GHs]	N	2
+700mSIPHEX2_24	GH73	glycoside hydrolases [GHs]	Y(1-22)	2
+700mSIPHEX2_24	GT19	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_24	GT2	glycosyltransferases [GTs]	N	100
+700mSIPHEX2_24	GT25	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_24	GT28	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_24	GT30	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_24	GT4	glycosyltransferases [GTs]	N	144
+700mSIPHEX2_24	GT51	glycosyltransferases [GTs]	N	4
+700mSIPHEX2_24	GT81	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_24	GT9	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_24	GT90	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_9	AA3	auxiliary activities [AAs]	N	4
+700mSIPHEX2_9	CBM48	carbohydrate-binding module [CBM]	N	9
+700mSIPHEX2_9	CBM48+GH13	carbohydrate-binding module [CBM]	N	1
+700mSIPHEX2_9	CBM50	carbohydrate-binding module [CBM]	N	2
+700mSIPHEX2_9	CBM50	carbohydrate-binding module [CBM]	Y(1-26)	2
+700mSIPHEX2_9	CE1	carbohydrate esterases [CEs]	Y(1-24)	2
+700mSIPHEX2_9	CE1	carbohydrate esterases [CEs]	Y(1-26)	2
+700mSIPHEX2_9	CE11	carbohydrate esterases [CEs]	N	1
+700mSIPHEX2_9	CE14	carbohydrate esterases [CEs]	N	1
+700mSIPHEX2_9	CE4	carbohydrate esterases [CEs]	N	4
+700mSIPHEX2_9	CE9	carbohydrate esterases [CEs]	N	1
+700mSIPHEX2_9	GH1	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_9	GH103	glycoside hydrolases [GHs]	Y(1-21)	1
+700mSIPHEX2_9	GH108	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_9	GH109	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_9	GH13	glycoside hydrolases [GHs]	N	25
+700mSIPHEX2_9	GH15	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_9	GH16	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_9	GH19	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_9	GH2	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_9	GH23	glycoside hydrolases [GHs]	N	5
+700mSIPHEX2_9	GH23	glycoside hydrolases [GHs]	Y(1-20)	5
+700mSIPHEX2_9	GH23	glycoside hydrolases [GHs]	Y(1-24)	5
+700mSIPHEX2_9	GH23	glycoside hydrolases [GHs]	Y(1-25)	5
+700mSIPHEX2_9	GH23	glycoside hydrolases [GHs]	Y(1-26)	5
+700mSIPHEX2_9	GH25	glycoside hydrolases [GHs]	Y(1-30)	1
+700mSIPHEX2_9	GH3	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_9	GH36	glycoside hydrolases [GHs]	N	1
+700mSIPHEX2_9	GT0	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_9	GT1	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_9	GT107	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_9	GT14	glycosyltransferases [GTs]	N	4
+700mSIPHEX2_9	GT19	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_9	GT2	glycosyltransferases [GTs]	N	144
+700mSIPHEX2_9	GT20	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_9	GT25	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_9	GT26	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_9	GT28	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_9	GT30	glycosyltransferases [GTs]	N	4
+700mSIPHEX2_9	GT35	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_9	GT4	glycosyltransferases [GTs]	N	144
+700mSIPHEX2_9	GT5	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_9	GT51	glycosyltransferases [GTs]	N	9
+700mSIPHEX2_9	GT8	glycosyltransferases [GTs]	N	1
+700mSIPHEX2_9	GT90	glycosyltransferases [GTs]	N	1
