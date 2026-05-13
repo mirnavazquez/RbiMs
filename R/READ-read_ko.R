@@ -23,7 +23,7 @@
 #' @importFrom utils read.table
 #' @importFrom purrr map_dfr
 #' @examples
-#' kofam_dir <- system.file("extdata", package = "rbims")
+#' kofam_dir <- system.file("extdata", "KEGG_bins", package = "rbims")
 #' read_ko(data_kofam = kofam_dir, write = FALSE)
 #' @export
 read_ko<-function(data_kofam=NULL, 
@@ -38,7 +38,7 @@ read_ko<-function(data_kofam=NULL,
     table_Kofam<-suppressWarnings(
       suppressMessages( 
         final_files %>%
-          map_dfr(read_table2, col_names = F) %>%
+          map_dfr(read_table, col_names = F) %>%
           filter(str_detect(.data$X1, '\\*')) %>%
           select(.data$X2, .data$X3) %>%
           rename(Bin_name = .data$X2) %>%
