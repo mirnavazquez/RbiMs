@@ -1,0 +1,151 @@
+---
+title: "5. Create dbCAN profile"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{5. Create dbCAN profile}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r include=FALSE}
+library(kableExtra)
+library(tidyverse)
+library(readxl)
+library(DT)
+```
+
+Rbims also includes functions to read and explore [dbCAN](https://bcb.unl.edu/dbCAN2/) annotations. To learn how to to this; 
+
+First, load the rbims package.
+
+```{r, eval=FALSE}
+library(rbims)
+```
+
+
+```{r, echo=FALSE, warning=F, message=FALSE}
+devtools::load_all()
+```
+
+## `read_dbcan3()`: Parse dbCAN3 Outputs
+The `read_dbcan3` function is designed to parse and format raw output files from the dbCAN3 annotation tool.
+
+### Input Requirements
+
+- File Path: Provide the path to the directory containing your dbCAN files.
+
+- File Extension: The function specifically looks for files ending in `*.overview.txt`.
+
+### Data Structure
+
+The processed input contains 6 key columns:
+
+- Bin Name: Identifier of the bin/genome.
+
+- HMMER / Hotpep / DIAMOND: Genes identified by each specific algorithm.
+
+- SignalP: Indicates if a signal peptide was detected.
+
+- #ofTools: Total count of algorithms that identified the gene.
+
+If you want to follow this example, you can download the raw data [here](https://github.com/mirnavazquez/RbiMs/tree/main/inst/extdata/dbCAN).
+
+To obtain a wide output, the argument `profile = T`.
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+dbcan_profile_T <-read_dbcan3(dbcan_path = "/Users/karliz/Desktop/Estancia_ICMyL_Mirna/Hidrocarburos/dbCAN_hidro",  profile = T, write = F)
+```
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+dbcan_profile_T <- read_tsv("~/Documents/Rbims/inst/extdata/dbcan_profile_T.tsv", col_names = T)
+```
+
+```{r eval=FALSE, warning=FALSE}
+dbcan_profile_T <-read_dbcan3(dbcan_path = "../test/results/03.dbcan",  
+                              profile = T, 
+                              write = F)
+```
+
+Some extra information is recovered from the input files, such as:
+
+- Total number of genes.
+
+- Remaining genes after the the filtered.
+
+- Number of genes that have signals and passed the filtered. 
+
+```{r eval = FALSE}
+head(dbcan_profile_T)
+```
+
+
+```{r echo=FALSE}
+dbcan_profile_T %>%
+  head(10) %>%
+  knitr::kable(
+    caption = "<span style='display: block; text-align: left; width: 100%; font-weight: bold;'>Table 1. dbCAN Profile Overview ( `profile = T` )</span>",
+    align = "c",
+    format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "bordered", "condensed"),
+                full_width = FALSE, 
+                position = "left") %>%
+  column_spec(1:ncol(dbcan_profile_T), border_right = "1px solid #ddd", border_left = "1px solid #ddd", extra_css = "text-align: center;") %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  scroll_box(height = "300px", width = "100%", fixed_thead = TRUE)
+```
+
+
+Or print a long table `profile = F`.
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+dbcan_profile_F <-read_dbcan3(dbcan_path = "/Users/karliz/Desktop/Estancia_ICMyL_Mirna/Hidrocarburos/dbCAN",  profile = F, write = F)
+```
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+dbcan_profile_F <- read_tsv("~/Documents/Rbims/inst/extdata/dbcan_profile_F.tsv", col_names = T)
+```
+
+
+```{r eval=FALSE, warning=FALSE}
+dbcan_profile_F <-read_dbcan3(dbcan_path = "../test/results/03.dbcan",  
+                              profile = F, 
+                              write = F)
+```
+
+
+```{r eval = FALSE}
+head(dbcan_profile_F)
+```
+
+
+```{r echo=FALSE}
+dbcan_profile_F %>%
+  head(15) %>%
+  knitr::kable(
+    caption = "<span style='display: block; text-align: left; width: 100%; font-weight: bold;'>Table 2. dbCAN Profile Overview (`profile = F`)</span>",
+    align = "c",
+    format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "bordered", "condensed"),
+                full_width = TRUE, 
+                position = "left") %>%
+  column_spec(1:ncol(dbcan_profile_F), border_right = "1px solid #ddd", border_left = "1px solid #ddd", extra_css = "text-align: center;") %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  scroll_box(height = "300px", width = "100%", fixed_thead = TRUE)
+```
+
+
+You can export this profile with: 
+
+```{r, eval=FALSE}
+write.table(dbcan_profile_T, "dbcan.tsv", quote = F, sep = "\t", row.names = F, col.names = T)
+```
+
+Or setting write  `write = T` in the function `read_dbcan3()`

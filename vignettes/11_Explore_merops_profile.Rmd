@@ -1,0 +1,264 @@
+---
+title: "11. Explore MEROPS profile"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{11. Explore_MEROPS_profile}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+devtools::load_all()
+```
+
+
+```{r include=FALSE}
+library(kableExtra)
+library(tidyverse)
+library(readxl)
+library(DT)
+```
+
+# How to explore the MEROPS profile? 
+
+First, make sure the library is loaded 
+
+```{r setup, eval=F}
+library(rbims)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+devtools::load_all()
+```
+
+## Now let's load the MEROPS profile:
+
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+merops_profile_T <- read_tsv("~/Documents/Rbims/inst/extdata/merops_profile_T.tsv", col_names = T)
+```
+
+```{r eval=FALSE, warning=FALSE}
+merops_profile_T <- read_merops(merops_path = "../inst/extdata/MEROPS", profile = T, write = F )
+```
+
+```{r eval = FALSE}
+head(merops_profile_T)
+```
+
+```{r echo=FALSE}
+merops_profile_T %>%
+  head(10) %>%
+  knitr::kable(
+    caption = "<span style='display: block; text-align: left; width: 100%; font-weight: bold;'>Table 1. MEROPS Profile Overview ( `profile = T` )</span>",
+    align = "c",
+    format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "bordered", "condensed"),
+                full_width = FALSE, 
+                position = "left") %>%
+  column_spec(1:ncol(merops_profile_T), border_right = "1px solid #ddd", border_left = "1px solid #ddd", extra_css = "text-align: center;") %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  scroll_box(height = "300px", width = "100%", fixed_thead = TRUE)
+```
+
+## To explore the *MEROPS* profiles we can use the following function:
+
+- `get_subset_pca`: which performs a PCA analysis to reduce the dimensions of the contributing families, resulting in a new table with the most represented MEROPS families of the bins/genome samples. 
+
+### Some considerations:
+
+* To better visualize the results we recommend the loading of metadata, which essentially could include:
+
+  * The clean names of the bins
+
+  * Type of sampling
+
+  * Environment 
+
+  * Hierarchical order
+
+```{r}
+metadata <- read_excel("../inst/extdata/metadata_SIPH.xlsx")
+```
+
+```{r eval=FALSE}
+head(metadata)
+```
+
+```{r echo=FALSE}
+metadata %>%
+  head(10) %>%
+  knitr::kable(
+    caption = "<span style='display: block; text-align: left; width: 100%; font-weight: bold;'>Table 2. Metadata overview </span>",
+    align = "c",
+    format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "bordered", "condensed"),
+                full_width = FALSE, 
+                position = "left") %>%
+  column_spec(1:ncol(metadata), border_right = "1px solid #ddd", border_left = "1px solid #ddd", extra_css = "text-align: center;") %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  scroll_box(height = "300px", width = "100%", fixed_thead = TRUE)
+```
+
+
+```{r echo=TRUE}
+#Extra commands to clean the bin names 
+
+lookup <- setNames(metadata$Bin_name, metadata$Clean_name)
+
+MEROPS_Hidro_T_renamed <- merops_profile_T %>% 
+  rename(!!!lookup) 
+
+```
+
+### Running `get_subset_pca`: 
+
+```{r warning=FALSE}
+important_merops_FAMs<-get_subset_pca(tibble_rbims=MEROPS_Hidro_T_renamed, 
+                                     cos2_val=0.85,
+                                     analysis="MEROPS")
+```
+
+```{r eval=FALSE}
+head(important_merops_FAMs)
+```
+
+```{r include=FALSE}
+important_merops_FAMs %>%
+  head(10) %>%
+  knitr::kable(
+    caption = "<span style='display: block; text-align: left; width: 100%; font-weight: bold;'>Table 3. Most contributing MEROPS families </span>",
+    align = "c",
+    format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "bordered", "condensed"),
+                full_width = FALSE, 
+                position = "left") %>%
+  column_spec(1:ncol(important_merops_FAMs), border_right = "1px solid #ddd", border_left = "1px solid #ddd", extra_css = "text-align: center;") %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  scroll_box(height = "300px", width = "100%", fixed_thead = TRUE)
+```
+
+## To visualize the *MEROPS* subset we can use the following functions:
+
+- [plot_heatmap](https://mirnavazquez.github.io/RbiMs/reference/plot_heatmap.html) 
+- [plot_bubble](https://mirnavazquez.github.io/RbiMs/reference/plot_bubble.html) 
+
+Use `plot_heatmap` with the argument `distance = T` to visualize the clustering of the bins/genome samples based on the MEROPS domains. 
+ 
+```{r fig.cap="Figure 1. Clustering of MEROPS families across bins.", warning=FALSE, fig.width=9.7, fig.height=11, fig.align='center'}
+
+plot_heatmap(important_merops_FAMs, 
+             y_axis=MEROPS_family, 
+             analysis = "MEROPS", 
+             distance = T)
+
+```
+
+Use `plot_heatmap` with the argument `distance = F` to visualize the presence/absence of MEROPS domains across the bins/genome samples. 
+
+```{r fig.cap="Figure 2. Presence/Absence of MEROPS families across bins.", warning=FALSE, fig.width=9, fig.height=11, fig.align='center'}
+
+plot_heatmap(important_merops_FAMs, 
+             y_axis=MEROPS_family, 
+             analysis = "MEROPS", 
+             distance = F)
+```
+
+
+```{r include=FALSE}
+metadata_renamed <- read_excel("../inst/extdata/metadata_SIPH_renamed.xlsx")
+
+#Calc argument to show presence/absence
+ordered <- c("g_Flavobacterium_5m_16",
+             "g_Flavobacterium_5m_26",
+             "g_Henriciella_5m_15",
+             "g_Hyphomonas_5m_32",
+             "g_Hyphomonas_5m_33",
+             "g_Celeribacter_5m_10",
+             "g_Celeribacter_5m_0",
+             "s_Planktomarina_temperata_5m_1",
+             "s_Lentibacter_algarum_5m_13",
+             "s_Lentibacter_algarum_5m_7",
+             "g_Tateyamaria_5m_25", 
+             "g_Tateyamaria_5m_8",
+             "o_Pseudomonadales_5m_2",
+             "s_Thalassolituus_oleivorans_5m_5",
+             "s_Thalassolituus_oleivorans_5m_19",
+             "g_Pseudophaeobacter_5m_3",
+             "g_Pseudophaeobacter_5m_37",
+             "g_Glaciecola_5m_9",
+             "s_Alcanivorax_jadensis_5m_11",
+             "g_Alcanivorax_5m_25",
+             "g_Alcanivorax_5m_18",
+             "s_Marinobacter_salarius_5m_14",
+             "s_Marinobacter_salarius_5m_10",
+             "g_Oleibacter_5m_18",
+             "g_Pseudophaeobacter_700m_8",
+             "g_Pseudophaeobacter_700m_13",
+             "g_Glaciecola_700m_16",
+             "g_Glaciecola_700m_18",
+             "g_Alcanivorax_700m_20",
+             "s_Marinobacter_salarius_700m_3",
+             "s_Marinobacter_salarius_700m_24",
+             "g_Oleibacter_700m_21",
+             "g_Oleibacter_700m_15",
+             "g_Olleya_700m_17",
+             "g_Olleya_700m_14",
+             "g_Dokdonia_700m_23",
+             "g_Dokdonia_700m_12",
+             "g_Paracoccus_700m_9",
+             "g_Paracoccus_700m_1",
+             "g_Sulfitobacter_700m_0",
+             "g_Alteromonas_700m_22",
+             "g_Alteromonas_700m_2")
+```
+
+For `plot_bubble`, the user has two options for the argument `calc`:
+
+- Binary
+
+```{r fig.align='center', fig.cap="Figure 3. Presence of MEROPS families across bins.", fig.width=9.8, fig.height=11, warning=FALSE}
+
+plot_bubble(important_merops_FAMs, 
+            y_axis=MEROPS_family, 
+            x_axis=Bin_name, 
+            calc = "Binary",
+            analysis = "MEROPS", 
+            data_experiment = metadata_renamed, 
+            color_character = Depth,
+            order_bins = ordered,
+            y_labs = "Most contributing MEROPS families",
+            text_y = 10,
+            x_labs = "Bins",
+            text_x = 9)
+```
+ 
+ Or 
+ 
+ - Abundance 
+ 
+```{r fig.cap="Figure 4. Abundance of MEROPS families across bins.", warning=FALSE, fig.width=9.8, fig.height=7, fig.align='center'}
+
+
+plot_bubble(important_merops_FAMs, 
+            y_axis=domain_name, 
+            x_axis=Bin_name, 
+            calc = "Abundance",
+            analysis = "MEROPS", 
+            data_experiment = metadata_renamed, 
+            color_character = Class,
+            y_labs = "Most contributing MEROPS families",
+            text_y = 10,
+            x_labs = "Bins",
+            text_x = 9,
+            range_size = c(1,5))
+
+```
+

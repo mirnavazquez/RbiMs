@@ -1,0 +1,37 @@
+---
+title: "1. Installation"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{1. Installation}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Quick install
+
+We are actively developing rbims, so for now it is not available at CRAN or Bioconductor, however you can access the development version from
+[GitHub](https://github.com/mirnavazquez/RbiMs) like this:
+
+Install devtools in the case you dont have it.
+
+```{r install devtools, eval=FALSE}
+install.packages("devtools")
+```
+
+If you are in a MAC system, you would need to download [XQuartz](https://www.xquartz.org/), you can read more about it [here](https://stackoverflow.com/questions/38952427/include-cairo-r-on-a-mac). 
+
+Install rbims.
+
+```{r install rbims, eval=FALSE}
+library(devtools)
+install_github("mirnavazquez/RbiMs")
+library(rbims)
+```
+

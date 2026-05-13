@@ -1,0 +1,745 @@
+---
+title: "8. Explore KEGG profile"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{8. Explore KEGG profile}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width=7, fig.height=7
+)
+```
+
+```{r include=FALSE}
+library(kableExtra)
+library(tidyverse)
+library(readxl)
+library(DT)
+```
+
+
+First, make sure the library is loaded 
+
+```{r setup, eval=F}
+library(rbims)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+devtools::load_all()
+```
+
+If you want to follow this example, you can download the files from [here](https://github.com/KarlaaPLM/rbims_hydrocarbon/tree/main/Functional%20annotation/KEGG).
+
+Now, let's load the profile and the mapped table with the KEGG database:
+
+# Read the KEGG output annotation files
+
+The function [read_ko](https://mirnavazquez.github.io/RbiMs/reference/read_ko.html) can read multiple text files obtained from [KofamKOALA/KofamScan](https://www.genome.jp/tools/kofamkoala/) or [KAAS](https://www.genome.jp/kegg/kaas/), as long as they are all in the same path in your working directory. If you use both, and there are different hits for a KO in both searches, it will take the hit from KofamKOALA/KofamScan.
+
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+ko_bin_table <- read_tsv("~/Documents/Rbims/inst/extdata/ko_bin_table.tsv", col_names = T)
+```
+
+
+```{r eval=FALSE}
+ko_bin_table<-read_ko(data_kofam ="../test/results/02.kofam")
+```
+
+
+```{r eval=FALSE}
+head(ko_bin_table)
+```
+
+
+```{r echo=FALSE}
+ko_bin_table %>%
+  head(10) %>%
+  knitr::kable(
+    caption = "<span style='display: block; text-align: left; width: 100%; font-weight: bold;'>Table 1. KEGG Profile Overview </span>",
+    align = "c",
+    format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "bordered", "condensed"),
+                full_width = FALSE, 
+                position = "left") %>%
+  column_spec(1:ncol(ko_bin_table), border_right = "1px solid #ddd", border_left = "1px solid #ddd", extra_css = "text-align: center;") %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  scroll_box(height = "300px", width = "100%", fixed_thead = TRUE)
+```
+
+# Map to the KEGG database
+
+Then map the KO to the rest of the features of the KEGG and rbims database.
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+ko_bin_mapp <- read_tsv("~/Documents/Rbims/inst/extdata/ko_bin_mapp.tsv", col_names = T)
+```
+
+
+```{r, eval=FALSE}
+ko_bin_mapp<-mapping_ko(ko_bin_table)
+```
+
+
+```{r eval=FALSE}
+head(ko_bin_mapp)
+```
+
+
+```{r echo=FALSE}
+ko_bin_mapp %>%
+  head(10) %>%
+  knitr::kable(
+    caption = "<span style='display: block; text-align: left; width: 100%; font-weight: bold;'>Table 2. Mapped KEGG Profile Overview </span>",
+    align = "c",
+    format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "bordered", "condensed"),
+                full_width = FALSE, 
+                position = "left") %>%
+  column_spec(1:ncol(ko_bin_mapp), border_right = "1px solid #ddd", border_left = "1px solid #ddd", extra_css = "text-align: center;") %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  scroll_box(height = "300px", width = "100%", fixed_thead = TRUE)
+```
+
+# Some considerations before exploring the profile: 
+
+## Read metadata
+  
+To better visualize the results we recommend the loading of metadata, which essentially could include:
+
+  * The clean names of the bins
+
+  * Type of sampling
+
+  * Environment 
+
+  * Taxonomic classification
+
+The column name of the bins MUST be named as "Bin_name" to work properly with this workflow. 
+
+The metadata table can be read in various formats (csv, tsv, txt, xlsx); you will need to use the corresponding function to read the type of file you have. In this case, the example table of rbims is in excel format; therefore, to read the metadata, we will use the function `read_excel` from the package `readxl`. You can download the metadata example file [metadata](https://github.com/mirnavazquez/RbiMs/blob/main/inst/extdata/metadata_SIPH.xlsx) and try.
+
+
+```{r}
+metadata <- read_excel("../inst/extdata/metadata_SIPH.xlsx")
+```
+
+```{r eval=FALSE}
+head(metadata)
+```
+
+```{r echo=FALSE}
+metadata %>%
+  head(10) %>%
+  knitr::kable(
+    caption = "<span style='display: block; text-align: left; width: 100%; font-weight: bold;'>Table 3. Metadata overview </span>",
+    align = "c",
+    format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "bordered", "condensed"),
+                full_width = FALSE, 
+                position = "left") %>%
+  column_spec(1:ncol(metadata), border_right = "1px solid #ddd", border_left = "1px solid #ddd", extra_css = "text-align: center;") %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  scroll_box(height = "300px", width = "100%", fixed_thead = TRUE)
+```
+
+```{r echo=TRUE}
+#Extra commands to clean the bin names 
+
+lookup <- setNames(metadata$Bin_name, metadata$Clean_name)
+
+ko_bin_mapp_renamed <- ko_bin_mapp %>% 
+  rename(!!!lookup) 
+```
+
+
+# To explore the *KEGG* profiles we can use the following functions:
+
+- [get_subset_pathway](https://mirnavazquez.github.io/RbiMs/reference/get_subset_pathway.html)
+- [get_subset_unique](https://mirnavazquez.github.io/RbiMs/reference/get_subset_unique.html)
+- [get_subset_pca](https://mirnavazquez.github.io/RbiMs/reference/get_subset_pca.html)
+- [get_subset_discriminant](https://github.com/mirnavazquez/RbiMs/blob/main/R/GET_subset_discriminant.R)
+
+## Exploring a specific pathway with `get_subset_pathway`
+
+Let’s say that you are interested in the genes associated with the hydrocarbon degradation metabolism in MAGs from an enriched hydrocarbon environment.
+Rbims includes a curated internal database of aerobic and anaerobic hydrocarbon degradation pathways. These include pathways for compounds such as hexadecane, naphthalene, and phenanthrene, which are not covered in KEGG or DiTing Cycles.
+
+            
+```{r}
+Overview<-c("Naphthalene", "Phenanthrene", "Hexadecane")
+        
+Energy_metabolisms_hydro <- ko_bin_mapp_renamed %>%
+  drop_na(rbims_pathway) %>%
+  get_subset_pathway(rbims_pathway, Overview) 
+```
+        
+
+```{r eval=FALSE}
+head(Energy_metabolisms_hydro)
+```
+
+
+```{r echo=FALSE}
+Energy_metabolisms_hydro %>%
+  head(10) %>%
+  knitr::kable(
+    caption = "<span style='display: block; text-align: left; width: 100%; font-weight: bold;'>Table 4. Subset of selected pathways Overview </span>",
+    align = "c",
+    format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "bordered", "condensed"),
+                full_width = FALSE, 
+                position = "left") %>%
+  column_spec(1:ncol(Energy_metabolisms_hydro), border_right = "1px solid #ddd", border_left = "1px solid #ddd", extra_css = "text-align: center;") %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  scroll_box(height = "300px", width = "100%", fixed_thead = TRUE)
+```
+
+# To visualize the *KEGG* subset we can use the following functions:
+
+- [plot_heatmap](https://mirnavazquez.github.io/RbiMs/reference/plot_heatmap.html) 
+- [plot_bubble](https://mirnavazquez.github.io/RbiMs/reference/plot_bubble.html) 
+
+ 
+```{r include=FALSE}
+metadata_renamed <- read_excel("../inst/extdata/metadata_SIPH_renamed.xlsx")
+```
+
+## The function `plot_heatmap` can have multiple arguments:
+
+* `tibble_ko`: a tibble object. It could have been created with the mapping_ko or get_subset_* functions. If that is the case you will have to choose which type of calc do you want to show, "binary", "abundance" or "percentage".
+
+* `y_axis`: a column name of the tibble_ko, a feature to plot (i.e. KO/Pathways/Modules).
+
+* `data_experiment`: a data frame object containing metadata information.
+
+* `calc`: a character indicating with type of calculation should be done to plot the results. Valid values are *"Abundance"*, *"Binary"*, *"Percentage"*, and "None". 
+
+* `scale_option`: a character indicating if rows or columns should be scaled. Valid options "none", "row" or "column".
+
+* `order_y`: is a column name of the tibble_ko that groups the objects from `y_axis`.
+
+* `order_x` is a column name of the tibble_ko or the metadata table that groups the Bins according to a specific trait.
+
+* `split_y`: a logical character indicating if you want to split y axis, based on order_y character.
+
+* `color_pallet`: optional. A character vector of colors to use.
+
+* `analysis`: a character string to select the database that is being used. Valid options are *"KEGG"*,*"INTERPRO"*, *"dbCAN"*, *"MEROPS"*. 
+
+```{r fig.cap="Figure 1. Abundance of hydrocarbon degradation pathways across bins.", warning=FALSE, fig.width=9.7, fig.height=7.5, fig.align='center'}
+
+plot_heatmap(tibble_ko=Energy_metabolisms_hydro,
+             y_axis = Genes,
+             data_experiment = metadata_renamed,
+             calc="Abundance",
+             scale_option = "none",
+             order_y = rbims_pathway,
+             order_x = Class,
+             split_y = T,
+             analysis = "KEGG"
+             )
+```
+
+## The function `plot_bubble` can have multiple arguments:
+
+* `tibble_ko`: tibble created by mapping_ko/get_subset_*. 
+
+* `x_axis`: bare column name (metabolism table) for the X axis (typically Bin_name).
+
+* `y_axis`: bare column name (metabolism table) for the Y axis (KO/pathway/module).
+
+* `calc`: Calculation to be performed. Valid values are "Abundance", "Binary", "Percentage", or "None".
+
+* `data_experiment`: optional data. Frame with metadata (joined by "Bin_name").
+
+* `color_character`: bare column name in metadata/tibble_ko for point color.
+
+* `order_bins`: optional character vector with desired bin order.
+
+* `order_metabolism`: optional character vector with desired metabolism order.
+
+* `color_pallet`: optional character vector of colors for the color scale.
+
+* `range_size`: numeric length-2 vector for point size range (default c(1,5)).
+
+* `x_labs`: logical; if TRUE uses x column name as x label, else NULL.
+
+* `y_labs`: logical; if TRUE uses y column name as y label, else NULL.
+
+* `text_x`: numeric size for x text; default 7.
+
+* `text_y`: numeric size for y text; default 7.
+
+```{r fig.cap="Figure 2. Coverage of hydrocarbon degradation pathways across bins.", warning=FALSE, fig.width=9.7, fig.height=7.5, fig.align='center'}
+
+plot_bubble(tibble_ko = Energy_metabolisms_hydro,
+                            x_axis = Bin_name,
+                            y_axis = rbims_pathway,
+                            analysis="KEGG",
+                            calc="Percentage",
+                            data_experiment = metadata_renamed,
+                            text_x = 11,
+                            text_y = 11,
+                            color_character = Class,
+                            range_size = c(1,15),
+                            y_labs=TRUE,
+                            x_labs=TRUE)
+```
+
+
+## Other subsets to explore different metabolic pathways: 
+
+In the same way we created a vector with the hydrocarbon degradation pathways from the internal rbims curated database, we can create a vector of specific KOs IDs or KEGG modules.
+
+### Here, let's extract the information of some KO related to Carbon fixation metabolism.
+
+```{r}
+Carbon_fixation<-c("K01007", "K00626", "K01902", "K01595", "K01903", "K00170", "K00169", "K00171", "K00172", "K00241")
+```
+
+-   Now, let’s extract the profile associated with that metabolic
+    pathway.
+
+```{r}
+library(tidyr)
+Carbon_fixation_subset<-ko_bin_mapp_renamed %>%
+  drop_na(KO) %>%
+  get_subset_pathway(KO, Carbon_fixation) 
+```
+
+```{r eval=FALSE}
+head(Carbon_fixation_subset)
+```
+
+
+```{r echo=FALSE}
+Carbon_fixation_subset %>%
+  head(10) %>%
+  knitr::kable(
+    caption = "<span style='display: block; text-align: left; width: 100%; font-weight: bold;'>Table 5. Overview of the selected pathways </span>",
+    align = "c",
+    format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "bordered", "condensed"),
+                full_width = FALSE, 
+                position = "left") %>%
+  column_spec(1:ncol(Carbon_fixation_subset), border_right = "1px solid #ddd", border_left = "1px solid #ddd", extra_css = "text-align: center;") %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  scroll_box(height = "300px", width = "100%", fixed_thead = TRUE)
+```
+
+## Visualize with `plot_heatmap`
+
+```{r fig.cap="Figure 3. Abundance of the Carbon fixation pathways across bins.", warning=FALSE, fig.width=9.7, fig.height=5.5, fig.align='center'}
+
+plot_heatmap(tibble_ko=Carbon_fixation_subset, 
+             y_axis=Genes,
+             analysis = "KEGG",
+             calc="Abundance")
+```
+
+## Exploring big metabolic routes
+
+In this example, we will use energy metabolism to explore the rest of the functions.
+
+- Create a vector with the metabolism of interest.
+
+```{r}
+Other_energy<-c("Fermentation", "Sulfur metabolism", "Methane metabolism")
+```
+
+
+```{r}
+library(tidyr)
+Energy_metabolisms<-ko_bin_mapp_renamed %>%
+  drop_na(Cycle) %>%
+  get_subset_pathway(Cycle, Other_energy)
+```
+
+```{r eval=FALSE}
+head(Energy_metabolisms)
+```
+
+```{r echo=FALSE}
+Energy_metabolisms %>%
+  head(10) %>%
+  knitr::kable(
+    caption = "<span style='display: block; text-align: left; width: 100%; font-weight: bold;'>Table 5. Overview of the selected pathways </span>",
+    align = "c",
+    format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "bordered", "condensed"),
+                full_width = FALSE, 
+                position = "left") %>%
+  column_spec(1:ncol(Energy_metabolisms), border_right = "1px solid #ddd", border_left = "1px solid #ddd", extra_css = "text-align: center;") %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  scroll_box(height = "300px", width = "100%", fixed_thead = TRUE)
+```
+
+## Viasualize with `plot_heatmap`
+
+```{r fig.cap="Figure 4. Coverage of mayor metabolic pathways across bins.", warning=FALSE, fig.width=9.7, fig.height=7.5, fig.align='center'}
+
+plot_heatmap(tibble_ko=Energy_metabolisms, 
+             y_axis=Pathway_cycle,
+             order_y = Cycle,
+             analysis = "KEGG",
+             calc="Percentage")
+```
+
+- The argument order_x will order the rows according to a metadata feature; in this case, we order the bins according to the sample site depth.
+
+```{r fig.cap="Figure 5. Coverage of mayor metabolic pathways across bins in different depths.", warning=FALSE, fig.width=9.7, fig.height=7.5, fig.align='center'}
+
+plot_heatmap(tibble_ko=Energy_metabolisms, 
+             y_axis=Pathway_cycle,
+             data_experiment=metadata_renamed,
+             order_x = Depth,
+             analysis = "KEGG",
+             calc="Percentage")
+```
+
+
+- The split argument allows dividing the rows according to a specific value of the metadata. 
+
+```{r fig.cap="Figure 6. Coverage of mayor metabolic pathways across bins.", warning=FALSE, fig.width=9.7, fig.height=8, fig.align='center'}
+
+plot_heatmap(tibble_ko=Energy_metabolisms, 
+             y_axis=Pathway_cycle,
+             order_y = Cycle,
+             split_y = TRUE,
+             analysis = "KEGG",
+             calc="Percentage")
+```
+
+- The order_x argument allows you to add annotation info from the metadata for the columns. 
+
+```{r fig.cap="Figure 7. Coverage of mayor metabolic pathways across taxonomic class.", warning=FALSE, fig.width=9.7, fig.height=7.5, fig.align='center'}
+
+plot_heatmap(tibble_ko=Energy_metabolisms,
+             data_experiment = metadata_renamed,
+             y_axis=Pathway_cycle,
+             order_y = Cycle,
+             order_x = Class,
+             split_y = TRUE,
+             analysis = "KEGG",
+             calc="Percentage")
+```
+
+# Exploring the metabolic profile from a specific group with `get_subset_unique`
+
+This function identifies the IDs that are only present in a particular metadata group (i.e. KOs only present in environment "a" and absent in the rest of the environments).
+
+```{r}
+five_meters <- get_subset_unique(tibble_rbims = ko_bin_mapp_renamed, 
+                                     data_experiment = metadata_renamed,
+                                     experiment_col = Depth, 
+                                     experiment_col_element = "5 meters",
+                                     analysis= "KEGG") 
+unique_5_meters <- five_meters %>%
+  select(where(~ any(. != 0)))
+
+
+```
+
+
+```{r eval=FALSE}
+head(unique_5_meters)
+```
+
+```{r echo=FALSE}
+unique_5_meters %>%
+  head(10) %>%
+  knitr::kable(
+    caption = "<span style='display: block; text-align: left; width: 100%; font-weight: bold;'>Table 6. Overview of the pathways present only in the 5 meters sampling site </span>",
+    align = "c",
+    format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "bordered", "condensed"),
+                full_width = FALSE, 
+                position = "left") %>%
+  column_spec(1:ncol(unique_5_meters), border_right = "1px solid #ddd", border_left = "1px solid #ddd", extra_css = "text-align: center;") %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  scroll_box(height = "300px", width = "100%", fixed_thead = TRUE)
+```
+
+The output can be plot using `plot_heatmap` or `plor_bubble` as previously explained. 
+
+```{r fig.cap="Figure 8. Metabolic pathways across bins from the five meters sampling site.", warning=FALSE, fig.width=9.7, fig.height=7.5, fig.align='center'}
+
+plot_heatmap(tibble_ko=unique_5_meters,
+             data_experiment = metadata_renamed,
+             y_axis=Genes,
+             order_y = Cycle,
+             order_x = Class,
+             split_y = TRUE,
+             analysis = "KEGG",
+             calc="Abundance")
+```
+
+
+# Reducing the dimensions of the metabolic profile with `get_subset_pca`
+- `get_subset_pca`: performs a PCA analysis to reduce the dimensions of the most contributing KEGG pathways, resulting in a new table with the most represented KEGG pathways of the bins/genome samples. 
+
+```{r message=FALSE, warning=FALSE}
+important_pathways <- get_subset_pca(tibble_rbims=ko_bin_mapp_renamed,
+                                     cos2_val=0.96,
+                                     analysis="KEGG")
+```
+
+```{r eval=FALSE}
+head(important_pathways)
+```
+
+```{r echo=FALSE}
+important_pathways %>%
+  head(10) %>%
+  knitr::kable(
+    caption = "<span style='display: block; text-align: left; width: 100%; font-weight: bold;'>Table 3. Most contributing InterproScan families </span>",
+    align = "c",
+    format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "bordered", "condensed"),
+                full_width = FALSE, 
+                position = "left") %>%
+  column_spec(1:ncol(important_pathways), border_right = "1px solid #ddd", border_left = "1px solid #ddd", extra_css = "text-align: center;") %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  scroll_box(height = "300px", width = "100%", fixed_thead = TRUE)
+```
+
+The output can be plot using `plot_heatmap` or `plor_bubble` as previously explained. 
+
+```{r fig.align='center', fig.cap="Figure 9. Presence of KEGG families across bins.", fig.width=9.8, fig.height=6, warning=FALSE}
+
+plot_bubble(important_pathways, 
+            y_axis=Pathway_cycle, 
+            x_axis=Bin_name, 
+            calc = "Abundance",
+            analysis = "KEGG", 
+            data_experiment = metadata_renamed, 
+            color_character = Depth,
+            y_labs = "Most contributing KEGG pathways",
+            text_y = 10,
+            x_labs = "Bins",
+            text_x = 9,
+            range_size = c(1,15))
+```
+ 
+# Getting a more robust discriminant analysis `get_subset_discriminant`
+
+## 1. Overview
+
+This vignette demonstrates how to:
+
+1. Run KO-level discriminant analysis using `get_subset_discriminant()`.
+2. Inspect consensus statistics and effect sizes.
+3. Visualize discriminant features.
+4. Quantify pathway-level directional bias using a binomial framework.
+
+The goal is to move from **feature-level statistics** to **ecologically interpretable pathway-level patterns**.
+
+---
+
+## 2. Required data structure
+
+The KO table must:
+
+- Contain a feature column (e.g., `"KO"`).
+- Contain numeric columns corresponding to MAG abundances.
+- Optionally include annotation columns such as `rbims_pathway`.
+
+The metadata must:
+
+- Contain a `Bin_name` column matching MAG column names.
+- Contain a grouping variable (e.g., `"Depth"`).
+
+---
+
+## 3. Load libraries
+
+```{r}
+library(rbims)
+library(dplyr)
+library(tidyr)
+library(tibble)
+library(ggplot2)
+library(forcats)
+```
+
+---
+
+## 4. Sanity checks
+
+This step is to check that the feature selected from the input table has no empty values and that the bin_names match perfectly with your metadata table.  
+
+```{r message=FALSE, warning=FALSE}
+stopifnot("KO" %in% names(ko_bin_mapp_renamed))
+
+mag_cols <- ko_bin_mapp_renamed %>%
+  select(where(is.numeric)) %>%
+  names()
+
+stopifnot(length(mag_cols) > 1)
+
+stopifnot(all(c("Bin_name", "Depth") %in% names(metadata_renamed)))
+
+metadata_use <- metadata_renamed %>%
+  select(Bin_name, Depth)
+
+stopifnot(all(mag_cols %in% metadata_use$Bin_name))
+stopifnot(nlevels(factor(metadata_use$Depth)) == 2)
+```
+
+---
+
+## 5. Run discriminant analysis 
+
+The `get_subset_discriminant` function processes your feature matrix (**KO x MAG**) and associated metadata (**MAG → Group**). It executes various discriminant analysis methods—such as **ALDEx2**, **Random Forest**, and **Indicator Species**—to build a robust statistical consensus in `disc_obj$consensus`.
+
+### **Key Benefits:**
+
+-  **Multi-method Consensus:** Reduces bias by combining frequentist and machine learning approaches.
+
+- **Feature Selection:** Highlights the specific KOs or MAGs driving the differences between your experimental groups.
+
+### 5.1) [Optional & Recommended] Define Factor Levels for Sign Interpretation
+
+In the ALDEx2 analysis, the sign of the effect size (positive vs. negative) is determined by the order of your factor levels. To ensure your results remain reproducible and easy to interpret, you should explicitly define your reference levels.
+
+*Note*: Uncomment and adjust the order below to match your experimental convention (e.g., placing the "5m" group first as the baseline).
+
+```{r eval=FALSE}
+
+metadata_use <- metadata_use %>%
+  mutate(Depth = factor(Depth, levels = c("Depth_5_meters", "Depth_700_meters")))
+```
+
+
+### Run the discriminant analysis 
+
+```{r eval=FALSE, message=FALSE, warning=FALSE}
+tibble_disc <- get_subset_discriminant(
+  tibble_rbims = ko_bin_mapp_renamed,
+  metadata     = metadata_use,
+  analysis     = "KEGG",
+  group_col    = "Depth",
+  feature_col  = "KO",
+  min_presence = 3,
+  score_min    = 1
+)
+```
+
+```{r eval=FALSE, include=FALSE}
+saveRDS(tibble_disc, "~/Documents/Rbims/inst/extdata/tibble_disc.rds")
+```
+
+```{r include=FALSE}
+tibble_disc <- readRDS("~/Documents/Rbims/inst/extdata/tibble_disc.rds")
+```
+
+
+```{r}
+disc_obj <- attr(tibble_disc, "rbims_disc")
+```
+
+Inspect score distribution:
+
+```{r}
+disc_obj$consensus %>%
+  count(score)
+```
+
+---
+
+## 6. Visualizing discriminant features
+
+### 6.1 Heatmap (Depth × Feature)
+
+This allows to explore which are the specific features that are enriched in both experimental groups. 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+plot_disc_heatmap(
+  disc_obj  = disc_obj,
+  metadata  = metadata_use,
+  group_col = "Depth",
+  top_n     = 20
+)
+```
+
+### 6.2 Effect size plot
+
+This allows to identify which features are significantly enriched in the second group. In this example, the top 3 KOs are the ones more abundant in the deep environment (700 m). 
+
+
+
+```{r}
+plot_disc_effect(disc_obj, top_n = 20)
+```
+
+---
+
+## 7. Pathway-level directional bias
+
+### **Problem Statement**
+Individual **KOs** (KEGG Orthologs) may not always reach statistical significance on their own. However, an entire **metabolic pathway** can reveal a consistent biological signal when a large proportion of its constituent KOs shift in the same direction.
+
+### **Analytical Strategy**
+1.  **Functional Annotation:** Map each KO to its corresponding `rbims_pathway` (e.g., Hexadecane, Naphthalene, or Phenanthrene degradation).
+2.  **Directional Consistency Calculation:** For each pathway, we perform the following:
+    * **Count ($x_{pos}$):** Identify the number of KOs with a positive effect ($effect > 0$) out of the total ($n$).
+    * **Proportion ($prop_{pos}$):** Calculate the ratio $x_{pos} / n$.
+    * **Confidence Interval (CI):** Compute a 95% two-sided **Clopper–Pearson** exact CI for the proportion.
+    * **Statistical Testing:** Execute a **directional Binomial Test** ($greater$) against a null hypothesis ($p_{null} = 0.5$).
+    * **Multiple Testing Correction:** Adjust p-values using **FDR** to account for the number of pathways compared.
+
+**Note:** The **two-sided CI** is utilized for standard visual representation in figures, while the **directional p-value** specifically addresses the hypothesis: *"Is this specific pathway significantly biased toward a positive effect?"*
+
+### 7.1 Build KO dictionary
+
+```{r}
+ko_dictionary <- make_ko_dictionary(
+  tibble_rbims = ko_bin_mapp_renamed,
+  feature_col  = "KO"
+)
+```
+
+### 7.2 Calculate pathway-level directional bias
+
+```{r}
+pathways <- c("Hexadecane", "Naphthalene", "Phenanthrene")
+
+pathway_tbl <- calc_pathway_directional_bias(
+  disc_obj      = disc_obj,
+  ko_dictionary = ko_dictionary,
+  pathways      = pathways,
+  p_null        = 0.5,
+  p_alternative = "greater",
+  ci_two_sided  = TRUE
+)
+
+pathway_tbl
+```
+
+### 7.3 Visualize pathway-level bias
+
+```{r}
+plot_pathway_directional_bias(
+  pathway_tbl,
+  reorder = TRUE,
+  show_fdr_label = TRUE
+)
+```
+
+---
+
+## 8. Interpretation
+
+A pathway shows directional bias when:
+
+- A large fraction of its KOs share the same effect direction.
+- The binomial test indicates the proportion exceeds 0.5.
+- The result remains significant after FDR correction.
+
+---

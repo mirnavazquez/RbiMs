@@ -1,0 +1,153 @@
+---
+title: "3. Create KEGG profile"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{3. Create KEGG profile}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+```{r include=FALSE}
+library(kableExtra)
+library(tidyverse)
+library(readxl)
+library(DT)
+```
+
+Rbims also includes functions to read and explore [KEGG](https://www.genome.jp/kegg/) annotations. To learn how to to this; 
+
+Make sure the library is loaded 
+
+```{r setup, eval=F}
+library(rbims)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+devtools::load_all()
+```
+
+## `read_ko()`: Parse KEGG Outputs
+
+The [`read_ko`](https://mirnavazquez.github.io/RbiMs/reference/read_ko.html). function is designed to parse and format raw output files from the InterProScan annotation tool.
+
+
+```{r eval=FALSE}
+?read_ko
+```
+ 
+
+### Input Requirements
+
+- File Path: Provide the path to the directory containing your KEGG files (outputs from the KofamKOALA/KofamScan annotation). Even if its just one, the path needs to be explicitly defined for the directory only. 
+
+- File Extension: The function specifically looks for files ending in `*.txt`.
+
+### Data Structure
+
+The processed input contains 6 key columns:
+
+* gene name: the unique identifier for the sequence that was annotated.                    
+* KO: KEGG ortholog identifier. The "ID number" for the functional group.
+
+* thrshld: the minimum score requirement set by the annotation tool to consider a match "real."
+
+* score: the bit-score from the sequence alignment.
+
+* E-value: the number of hits one can "expect" to see by chance when searching a database of a particular size.
+
+* KO definition: description of the functional group. 
+
+
+If you want to follow this example, you can download the files from [here](https://github.com/KarlaaPLM/rbims_hydrocarbon/tree/main/Functional%20annotation/KEGG).
+
+```{r eval=FALSE, warning=FALSE, include=FALSE}
+ko_bin_table <-read_ko(data_kofam = "/Users/karliz/Desktop/Estancia_ICMyL_Mirna/Hidrocarburos/KEGG_hidro",
+                                   write = F)
+```
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+ko_bin_table <- read_tsv("~/Documents/Rbims/inst/extdata/ko_bin_table.tsv", col_names = T)
+```
+
+
+```{r eval=FALSE}
+ko_bin_table<-read_ko(data_kofam ="../test/results/02.kofam")
+```
+
+The read_ko function will create a table that contains the abundance of each KO within each bin.
+
+```{r eval = F}
+head(ko_bin_table)
+```
+
+
+```{r echo=FALSE}
+ko_bin_table %>%
+  head(10) %>%
+  knitr::kable(
+    caption = "<span style='display: block; text-align: left; width: 100%; font-weight: bold;'>Table 1. KEGG Profile Overview ( `profile = T` )</span>",
+    align = "c",
+    format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "bordered", "condensed"),
+                full_width = FALSE, 
+                position = "left") %>%
+  column_spec(1:ncol(ko_bin_table), border_right = "1px solid #ddd", border_left = "1px solid #ddd", extra_css = "text-align: center;") %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  scroll_box(height = "300px", width = "100%", fixed_thead = TRUE)
+```
+
+
+## Map to the KEGG database
+
+The function [mapping_ko](https://mirnavazquez.github.io/RbiMs/reference/mapping_ko.html) can now be used to map the KO and their abundance to the rest of the features of KEGG and rbims database.
+
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+ko_bin_mapp <- read_tsv("~/Documents/Rbims/inst/extdata/ko_bin_mapp.tsv", col_names = T)
+```
+
+```{r eval=FALSE}
+ko_bin_mapp<-mapping_ko(ko_bin_table)
+```
+
+```{r eval=FALSE}
+head(ko_bin_mapp)
+```
+
+
+```{r echo=FALSE}
+ko_bin_mapp %>%
+  head(10) %>%
+  knitr::kable(
+    caption = "<span style='display: block; text-align: left; width: 100%; font-weight: bold;'>Table 1. KEGG Profile Overview ( `profile = T` )</span>",
+    align = "c",
+    format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "bordered", "condensed"),
+                full_width = FALSE, 
+                position = "left") %>%
+  column_spec(1:ncol(ko_bin_mapp), border_right = "1px solid #ddd", border_left = "1px solid #ddd", extra_css = "text-align: center;") %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  scroll_box(height = "300px", width = "100%", fixed_thead = TRUE)
+```
+
+
+You can export this profile like this:
+
+```{r, eval=FALSE}
+write.table(ko_bin_mapp, "ko_bin_mapp.tsv", 
+            quote = F, 
+            sep = "\t", 
+            row.names = F, 
+            col.names = T)
+```
+
+Or setting write  `write = T` in the function `read_ko()`
+
+
+

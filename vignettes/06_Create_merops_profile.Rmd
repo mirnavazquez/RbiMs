@@ -1,0 +1,157 @@
+---
+title: "6. Create MEROPS profile"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{6. Create MEROPS profile}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r include=FALSE}
+library(kableExtra)
+library(tidyverse)
+library(readxl)
+library(DT)
+```
+
+ 
+The [MEROPS](https://www.ebi.ac.uk/merops/) database classifies peptidases (proteases) and their inhibitors using a hierarchical, structure-based system. Peptidases are grouped into Families based on significant sequence similarities, and related families are further grouped into Clans, indicating evolutionary relationships. This classification helps researchers understand enzyme function, structure, and evolution. The database provides sequence identifiers, structural data (if available), and literature references for deeper exploration.
+
+
+Rbims also includes functions to read and explore [MEROPS](https://www.ebi.ac.uk/merops/) annotations.
+
+To learn how to to this; 
+
+First, load the rbims package.
+
+```{r, eval=FALSE}
+library(rbims)
+```
+
+
+```{r, echo=FALSE, warning=F, message=FALSE}
+devtools::load_all()
+```
+
+## `read_merops()`: Parse MEROPS Outputs
+The `read_merops` function is designed to parse and format raw output files from the MEROPS blast annotation tool.
+
+### Input Requirements
+
+- File Path: Provide the path to the directory containing your MEROPS files.
+
+- File Extension: The function specifically looks for files ending in `*.txt`.
+
+### Data Structure
+
+The processed input contains 6 key columns:
+
+* qseqid: Query Sequence ID.
+
+* sseqid: Subject Sequence ID.
+
+* stitle: Subject Title.
+
+* pident: Percentage of identical matches.
+
+* evalue: Expect value.
+
+* bitscore: Bit score.
+
+If you want to follow this example, you can download the raw data [here](https://github.com/mirnavazquez/RbiMs/tree/main/inst/extdata/MEROPS).
+
+
+To obtain a wide output, the argument `profile = T`.
+
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+merops_profile_T <-read_merops(dbcan_path = "/Users/karliz/Desktop/Estancia_ICMyL_Mirna/Hidrocarburos/MEROPS",  profile = T, write = F)
+```
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+merops_profile_T <- read_tsv("~/Documents/Rbims/inst/extdata/merops_profile_T.tsv", col_names = T)
+```
+
+```{r eval = FALSE, echo=TRUE}
+merops_profile_T <- read_merops(merops_path = "../test/results/04.merops", 
+                                profile = T, 
+                                write = F )
+
+```
+
+```{r eval = FALSE}
+head(merops_profile_T)
+```
+
+
+```{r echo=FALSE}
+merops_profile_T %>%
+  head(10) %>%
+  knitr::kable(
+    caption = "<span style='display: block; text-align: left; width: 100%; font-weight: bold;'>Table 2. MEROPS Profile Overview ( `profile = T` )</span>",
+    align = "c",
+    format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "bordered", "condensed"),
+                full_width = FALSE, 
+                position = "left") %>%
+  column_spec(1:ncol(merops_profile_T), border_right = "1px solid #ddd", border_left = "1px solid #ddd", extra_css = "text-align: center;") %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  scroll_box(height = "300px", width = "100%", fixed_thead = TRUE)
+```
+
+Or print a long table `profile = F`.
+
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+merops_profile_F <-read_merops(dbcan_path = "/Users/karliz/Desktop/Estancia_ICMyL_Mirna/Hidrocarburos/MEROPS",  profile = F, write = F)
+```
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+merops_profile_F <- read_tsv("~/Documents/Rbims/inst/extdata/merops_profile_F.tsv", col_names = T)
+```
+
+
+```{r eval=FALSE, warning=FALSE}
+merops_profile_F <-read_merops(merops_path = "../test/results/04.merops", 
+                               profile = F, 
+                               write = F)
+```
+
+
+```{r eval = FALSE}
+head(merops_profile_F)
+```
+
+
+```{r echo=FALSE}
+merops_profile_F %>%
+  head(15) %>%
+  knitr::kable(
+    caption = "<span style='display: block; text-align: left; width: 100%; font-weight: bold;'>Table 2. MEROPS Profile Overview (`profile = F`)</span>",
+    align = "c",
+    format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "bordered", "condensed"),
+                full_width = TRUE, 
+                position = "left") %>%
+  column_spec(1:ncol(merops_profile_F), border_right = "1px solid #ddd", border_left = "1px solid #ddd", extra_css = "text-align: center;") %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  scroll_box(height = "300px", width = "100%", fixed_thead = TRUE)
+```
+
+
+You can export this profile with: 
+
+```{r, eval=FALSE}
+write.table(merops_profile_T, "merops.tsv", quote = F, sep = "\t", row.names = F, col.names = T)
+```
+
+Or setting write  `write = T` in the function `read_merops()`
+

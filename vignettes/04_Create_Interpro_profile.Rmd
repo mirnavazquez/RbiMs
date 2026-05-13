@@ -1,0 +1,207 @@
+---
+title: "4. Create InterProScan profile"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{4. Create InterProScan profile}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r include=FALSE}
+library(kableExtra)
+library(tidyverse)
+library(readxl)
+library(DT)
+```
+
+Rbims also includes functions to read and explore [InterProScan](https://interproscan-docs.readthedocs.io/en/latest/) annotations. To learn how to to this; 
+
+First, load the rbims package.
+
+```{r, eval=FALSE}
+library(rbims)
+```
+
+
+```{r, echo=FALSE, warning=F, message=FALSE}
+devtools::load_all()
+```
+
+## `read_interpro()`: Parse InterProScan Outputs
+The `read_interpro` function is designed to parse and format raw output files from the InterProScan annotation tool. Aditionally, this function can parse the information of the KEGG IDs but, the KEGG analysis is just possible if [InterProScan](https://interproscan-docs.readthedocs.io/en/latest/) was run with the -pa option. 
+
+### Input Requirements
+
+- File Path: Provide the path to the directory containing your InterProScan files. Even if its just one, the path needs to be explicitly defined for the directory only. 
+
+- File Extension: The function specifically looks for files ending in `*.tsv`.
+
+### Data Structure
+
+The processed input contains 15 key columns:
+
+* Protein accession (e.g. P51587)
+
+* Sequence MD5 digest (e.g. 14086411a2cdf1c4cba63020e1622579)
+
+* Sequence length (e.g. 3418)
+
+* Analysis (e.g. Pfam / PRINTS / Gene3D)
+
+* Signature accession (e.g. PF09103 / G3DSA:2.40.50.140)
+
+* Signature description (e.g. BRCA2 repeat profile)
+
+* Start location
+
+* Stop location
+
+* Score - is the e-value (or score) of the match reported by member database method (e.g. 3.1E-52)
+
+* Status - is the status of the match (T: true)
+
+* Date - is the date of the run
+
+* InterPro annotations - accession (e.g. IPR002093)
+
+* InterPro annotations - description (e.g. BRCA2 repeat)
+
+* GO annotations with their source(s), e.g. GO:0005515(InterPro)|GO:0006302(PANTHER)|GO:0007195(InterPro,PANTHER). This is an optional column; only displayed if the --goterms option is switched on
+
+* Pathways annotations, e.g. REACT_71. This is an optional column; only displayed if the --pathways option is switched on
+
+If you want to follow this example, you can download the raw data [here](https://github.com/mirnavazquez/RbiMs/tree/main/inst/extdata/Interpro).
+
+
+To obtain a wide output, use the argument `profile = T`.
+To explore more databases, the argument `database` can include the following options: 
+
+* "INTERPRO"
+
+* "TIGRFAM"
+
+* "SUPERFAMILY"
+
+* "SMART"
+
+* "SFLD"
+
+* "ProSiteProfiles"                        
+
+* "ProSitePatterns"
+
+* "ProDom" 
+
+* "PRINTS" 
+
+* "PIRSF"
+
+* "MobiDBLite"
+
+* "Hamap"
+
+* "Gene3D"
+
+* "Coils"
+
+* "CDD"
+
+```{r eval=FALSE, warning=FALSE, include=FALSE}
+interpro_profile_T <-read_interpro(data_interpro = "/Users/karliz/Desktop/Estancia_ICMyL_Mirna/Hidrocarburos/Interpro",
+                                   database= "Pfam", 
+                                   profile = T, 
+                                   write = T)
+```
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+interpro_profile_T <- read_tsv("~/Documents/Rbims/inst/extdata/interpro_profile_T.tsv", col_names = T)
+```
+
+```{r eval=FALSE, warning=FALSE}
+interpro_profile_T <-read_interpro(data_interpro = "../test/results/01.iprscan",
+                                   database= "Pfam", 
+                                   profile = T, 
+                                   write = F)
+```
+
+
+```{r eval = F}
+head(interpro_profile_T)
+```
+
+
+```{r echo=FALSE}
+interpro_profile_T %>%
+  head(10) %>%
+  knitr::kable(
+    caption = "<span style='display: block; text-align: left; width: 100%; font-weight: bold;'>Table 1. InterProScan Profile Overview ( `profile = T` )</span>",
+    align = "c",
+    format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "bordered", "condensed"),
+                full_width = FALSE, 
+                position = "left") %>%
+  column_spec(1:ncol(interpro_profile_T), border_right = "1px solid #ddd", border_left = "1px solid #ddd", extra_css = "text-align: center;") %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  scroll_box(height = "300px", width = "100%", fixed_thead = TRUE)
+```
+
+Or print a long table **profile = F**.
+
+```{r eval=FALSE, warning=FALSE, include=FALSE}
+interpro_profile_F <-read_interpro(data_interpro = "/Users/karliz/Desktop/Estancia_ICMyL_Mirna/Hidrocarburos/Interpro",
+                                   database= "Pfam", 
+                                   profile = F, 
+                                   write = F)
+```
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+interpro_profile_F <- read_tsv("~/Documents/Rbims/inst/extdata/interpro_profile_F.tsv", col_names = T)
+```
+
+```{r eval=FALSE, warning=FALSE}
+interpro_profile_T <-read_interpro(data_interpro = "../test/results/01.iprscan",
+                                   database= "Pfam", 
+                                   profile = T, 
+                                   write = F)
+```
+
+```{r, eval = F}
+head(interpro_profile_F)
+```
+
+
+```{r echo=FALSE}
+interpro_profile_F %>%
+  head(10) %>%
+  knitr::kable(
+    caption = "<span style='display: block; text-align: left; width: 100%; font-weight: bold;'>Table 1. InterProScan Profile Overview ( `profile = F` )</span>",
+    align = "c",
+    format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "bordered", "condensed"),
+                full_width = FALSE, 
+                position = "left") %>%
+  column_spec(1:ncol(interpro_profile_F), border_right = "1px solid #ddd", border_left = "1px solid #ddd", extra_css = "text-align: center;") %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  scroll_box(height = "300px", width = "100%", fixed_thead = TRUE)
+```
+
+You can export this profile like this:
+
+```{r, eval=FALSE}
+write.table(interpro_profile_T, "Interpro_profile_T.tsv", 
+            quote = F, 
+            sep = "\t", 
+            row.names = F, 
+            col.names = T)
+```
+
+Or setting write  `write = T` in the function `read_interpro()`
