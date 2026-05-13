@@ -4,11 +4,11 @@
 \alias{read_interpro}
 \title{Extract abundance profile of InterProScan output.}
 \usage{
-read_interpro (data_interpro, 
+read_interpro (data_interpro = NULL, 
 database = c("KEGG", "Pfam", "INTERPRO",
 "TIGRFAM", "SUPERFAMILY", "SMART", "SFLD", "ProSiteProfiles",
 "ProSitePatterns", "ProDom", "PRINTS", "PIRSF", 
-"MobiDBLite","Hamap", "Gene3D", "Coils", "CDD"), profile = TRUE)
+"MobiDBLite","Hamap", "Gene3D", "Coils", "CDD"), profile = TRUE, write = FALSE)
 }
 \arguments{
 \item{data_interpro}{a table, output of InterProScan on tsv format.
@@ -20,6 +20,10 @@ get the abundance profile. Valid options are "KEGG", "PFAM" or "INTERPRO".}
 
 \item{profile}{a logical value indicating if you want to print a profile
 or not. This option is valid for "PFAM" and "INTERPRO" database.}
+
+\item{write}{a logical value indicating to save the data imported
+as a formatted table with .tsv extension with a time stamp and it will be
+located in your current working directory}
 }
 \description{
 Reads a table object created with InterProScan and generates
